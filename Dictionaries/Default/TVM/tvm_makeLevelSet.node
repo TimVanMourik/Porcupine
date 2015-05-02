@@ -1,0 +1,9 @@
+<node>
+    <title>tvm_makeLevelSet</title>
+    <input name="Reference Volume" class="3D NifTI"/>
+    <input name="White Matter OBJ" class="OBJ file"/>
+    <input name="Pial OBJ" class="OBJ file"/>
+    <input name="Transformation matrix" class="Matrix44"/>
+    <output name="White Matter SDF" class="3D NifTI"/>
+    <output name="Pial SDF" class="3D NifTI"/>
+</node>
