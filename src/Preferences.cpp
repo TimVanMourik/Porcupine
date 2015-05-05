@@ -26,9 +26,9 @@ Preferences::Preferences() :
     m_linkPenSelected     = QPen(QColor(170, 110, 110), 2);
 
     m_portBrushUnselected = QColor(200, 160, 160);
-    m_portBrushSelected   = QColor(200, 160, 160);
+    m_portBrushSelected   = QColor(160, 200, 160);
     m_portPenUnselected   = QPen(QColor(200, 130, 130));
-    m_portPenSelected     = QPen(QColor(200, 130, 130));
+    m_portPenSelected     = QPen(QColor(130, 130, 200));
 
     m_portTextColor       = QColor(230, 230, 230);
 

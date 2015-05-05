@@ -43,7 +43,8 @@ SOURCES +=          $$ROOT/main.cpp \
                     $$ROOT/src/Preferences.cpp \
                     $$ROOT/src/NodeListView.cpp \
                     $$ROOT/src/NodeTreeModel.cpp \
-    src/PortPair.cpp
+                    $$ROOT/src/PortPair.cpp \
+                    $$ROOT/src/FileNameItem.cpp
 
 HEADERS  +=         $$ROOT/include/Link.hpp \
                     $$ROOT/include/MainWindow.hpp \
@@ -58,7 +59,8 @@ HEADERS  +=         $$ROOT/include/Link.hpp \
                     $$ROOT/include/Preferences.hpp \
                     $$ROOT/include/NodeListView.hpp \
                     $$ROOT/include/NodeTreeModel.hpp \
-    include/PortPair.hpp
+                    $$ROOT/include/PortPair.hpp \
+                    $$ROOT/include/FileNameItem.hpp
 
 RESOURCES   =       $$ROOT/Dictionaries/schema.qrc
 

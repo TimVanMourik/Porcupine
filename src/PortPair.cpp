@@ -10,22 +10,25 @@ PortPair::PortPair(
     QGraphicsTextItem(_parent),
     m_node((Node*)_parent),
     m_input(0),
-    m_output(0)
+    m_output(0),
+    m_hasFileName(false)
 {
 }
 
-void PortPair::createPorts(
-        )
-{
-    createInputPort();
-    createOutputPort();
-}
+//void PortPair::createPorts(
+//        )
+//{
+//    createInputPort();
+//    createOutputPort();
+//}
 
 void PortPair::createInputPort(
         )
 {
     m_input = new Port((QGraphicsItem*) m_node);
     m_input->setPortType(Port::PortType::INPUT);
+    m_input->setOther(m_output);
+    if(m_output) m_output->setOther(m_input);
 }
 
 void PortPair::createOutputPort(
@@ -33,6 +36,8 @@ void PortPair::createOutputPort(
 {
     m_output = new Port((QGraphicsItem*) m_node);
     m_output->setPortType(Port::PortType::OUTPUT);
+    m_output->setOther(m_input);
+    if(m_input) m_input->setOther(m_output);
 }
 
 Port* PortPair::getInputPort(
@@ -98,14 +103,10 @@ void PortPair::loadFromXml(
         QDomElement portElement = portNode.toElement();
         if(portElement.attribute("type").compare("input") == 0)
         {
-//            m_input = new Port((QGraphicsItem*) m_node);
-//            m_input->setPortType(Port::PortType::INPUT);
             o_portMap[(quint64) portElement.attribute("identifier").toULongLong(0, 16)] = m_input;
         }
         else if(portElement.attribute("type").compare("output") == 0)
         {
-//            m_output = new Port((QGraphicsItem*) m_node);
-//            m_output->setPortType(Port::PortType::OUTPUT);
             o_portMap[(quint64) portElement.attribute("identifier").toULongLong(0, 16)] = m_output;
         }
 //        DataType* d = new DataType("");
@@ -113,6 +114,23 @@ void PortPair::loadFromXml(
         portNode = portNode.nextSibling();
     }
 }
+
+void PortPair::hasFileName(
+        bool _bool
+        )
+{
+    m_hasFileName = _bool;
+    if(m_input)
+    {
+        m_input->hasFileName(_bool);
+
+    }
+    if(m_output)
+    {
+        m_output->hasFileName(_bool);
+    }
+}
+
 
 PortPair::~PortPair()
 {

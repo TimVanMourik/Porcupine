@@ -7,6 +7,7 @@
 
 class NodeTreeModel : public QStandardItemModel
 {
+    Q_OBJECT
 public:
     //
     NodeTreeModel(
@@ -17,6 +18,11 @@ public:
             );
     //
     ~NodeTreeModel(
+            );
+public slots:
+    //
+    void fileNameFieldChanged(
+            QStandardItem* _item
             );
 };
 

@@ -28,8 +28,8 @@ public:
     void createOutputPort(
             );
     //
-    void createPorts(
-            );
+//    void createPorts(
+//            );
     //
     Port* getInputPort(
             ) const;
@@ -56,6 +56,10 @@ public:
             QMap<quint64, Port*>& o_portMap
             );
     //
+    void hasFileName(
+            bool _bool
+            );
+    //
     ~PortPair(
             );
 private:
@@ -69,6 +73,8 @@ private:
     Port* m_input;
     //
     Port* m_output;
+    //
+    bool m_hasFileName;
 };
 
 #endif // PORTPAIR_H

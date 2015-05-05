@@ -1,11 +1,38 @@
-#include "include/TreeItem.hpp"
+#include "FileNameItem.hpp"
+#include "PortPair.hpp"
 
-TreeItem::TreeItem()
+FileNameItem::FileNameItem(
+        const QString& _name
+        ) :
+    QStandardItem(_name)
 {
-
 }
 
-TreeItem::~TreeItem()
+void FileNameItem::hasFileName(
+        bool _bool
+        )
+{
+    if(m_port)
+    {
+        m_port->hasFileName(_bool, true);
+    }
+}
+
+void FileNameItem::setPort(
+        PortPair* _port
+        )
+{
+    m_port = _port;
+}
+
+int FileNameItem::type(
+        ) const
+{
+    return Type;
+}
+
+FileNameItem::~FileNameItem(
+        )
 {
 
 }

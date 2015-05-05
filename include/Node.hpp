@@ -14,8 +14,6 @@
 
 #include <QGraphicsPathItem>
 
-//#include "Port.hpp"
-
 class QDomElement;
 
 class Argument;

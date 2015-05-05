@@ -4,7 +4,9 @@
 
 #include <QDomDocument>
 #include <QFont>
+#include <QGraphicsItem>
 #include <QGraphicsScene>
+#include <QPainter>
 #include <QPen>
 
 #include "Link.hpp"
@@ -16,7 +18,9 @@ qreal Port::s_radius = 4;
 Port::Port(
         QGraphicsItem* _parent
         ) :
-    QGraphicsPathItem(_parent)
+    QGraphicsPathItem(_parent),
+    m_other(0),
+    m_hasFileName(false)
 {
     Preferences& preferences = Preferences::getInstance();
     setNode((Node*) _parent);
@@ -142,6 +146,60 @@ int Port::type(
         ) const
 {
     return Type;
+}
+
+void Port::paint(
+        QPainter* _painter,
+        const QStyleOptionGraphicsItem* _option,
+        QWidget* _widget
+        )
+{
+    Q_UNUSED(_option);
+    Q_UNUSED(_widget);
+
+    Preferences& preferences = Preferences::getInstance();
+    if(m_hasFileName)
+    {
+        _painter->setPen(preferences.getPortPenSelected());
+        _painter->setBrush(preferences.getPortBrushSelected());
+
+    }
+    else
+    {
+        _painter->setPen(preferences.getPortPenUnselected());
+        _painter->setBrush(preferences.getPortBrushUnselected());
+    }
+    _painter->drawPath(path());
+}
+
+void Port::setOther(
+        Port* _other
+        )
+{
+    m_other = _other;
+}
+
+void Port::hasFileName(
+        bool _bool,
+        bool _cascade
+        )
+{
+    m_hasFileName = _bool;
+    update();
+
+
+//    if(PortType::INPUT == getPortType())
+//    {
+//        foreach (Link* link, getConnections())
+//        {
+//            link->getPortFrom()->hasFileName(_bool, false);
+//        }
+//    }
+//    else
+//    {
+
+//    }
+
 }
 
 Port::~Port(

@@ -53,6 +53,9 @@ public:
             Port*
             );
     //
+    Port* other(
+            ) const;
+    //
     const QString& getName(
             ) const;
     //
@@ -75,13 +78,24 @@ public:
     void saveToXml(
             QDomElement& _xmlElement
             );
+    //
+    void paint(
+            QPainter* _painter,
+            const QStyleOptionGraphicsItem* _option,
+            QWidget* _widget
+            );
     // For when the port is clicked
     int type(
             ) const;
-//    void loadFromXml(
-//            QDomElement& _xmlNode,
-//            QMap<quint64, Port*>& o_portMap
-//            );
+    //
+    void hasFileName(
+            bool _bool,
+            bool _cascade = false
+            );
+    //
+    void setOther(
+            Port* _other
+            );
     //
     ~Port(
             );
@@ -94,6 +108,9 @@ private:
 
     // A pointer to the Node to which the Port belongs
     Node* m_node;
+    // If this is an input port, m_other point to the output and vice versa.
+    // m_other = 0 when the output does not have an input.
+    Port* m_other;
     // The list of Links that end or start at this Port
     QVector<Link*> m_connections;
     // A boolean value that states if the Port is input or output
@@ -102,6 +119,8 @@ private:
     static qreal s_margin;
     // The size of the Port being displayed
     static qreal s_radius;
+    //
+    bool m_hasFileName;
 };
 
 #endif // PORT_HPP
