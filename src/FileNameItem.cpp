@@ -14,7 +14,7 @@ void FileNameItem::hasFileName(
 {
     if(m_port)
     {
-        m_port->hasFileName(_bool, true);
+        m_port->hasFileName(_bool);
     }
 }
 

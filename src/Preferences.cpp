@@ -12,8 +12,8 @@ Preferences::Preferences() :
     m_sceneBackgroundBrush = QBrush(QColor(50, 50, 50), Qt::SolidPattern);
 
     QLinearGradient gradient(0.0, 0.0, 0.0, 30);
-    gradient.setColorAt(1, QColor(80, 80, 80));
-    gradient.setColorAt(0, QColor(100, 100, 100));
+    gradient.setColorAt(1, QColor(130, 5, 0));
+    gradient.setColorAt(0, QColor(110, 5, 0));
 
     m_nodeBrushUnselected = QBrush(gradient);
     m_nodeBrushSelected   = QBrush(gradient);
@@ -22,10 +22,10 @@ Preferences::Preferences() :
 
     m_linkBrushUnselected = QBrush(Qt::NoBrush);
     m_linkBrushSelected   = QBrush(Qt::NoBrush);
-    m_linkPenUnselected   = QPen(QColor(110, 170, 110), 2);
-    m_linkPenSelected     = QPen(QColor(170, 110, 110), 2);
+    m_linkPenUnselected   = QPen(QColor(170, 110, 110), 2);
+    m_linkPenSelected     = QPen(QColor(110, 110, 170), 2);
 
-    m_portBrushUnselected = QColor(200, 160, 160);
+    m_portBrushUnselected = QColor(213, 74, 67);
     m_portBrushSelected   = QColor(160, 200, 160);
     m_portPenUnselected   = QPen(QColor(200, 130, 130));
     m_portPenSelected     = QPen(QColor(130, 130, 200));
