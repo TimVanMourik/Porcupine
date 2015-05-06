@@ -1,0 +1,448 @@
+<?xml version="1.0"?>
+<pipeline>
+ <node name="tvm_dicomSort">
+  <position x="-971" y="-115"/>
+  <pairs>
+   <pair name="Dicom Directory">
+    <port type="input" identifier="7fb964c99680"/>
+    <port type="output" identifier="7fb964c9b250"/>
+   </pair>
+   <pair name="Move Option">
+    <port type="input" identifier="7fb964c9c250"/>
+    <port type="output" identifier="7fb964c9c710"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="tvm_dicomsToNifti">
+  <position x="-552" y="53"/>
+  <pairs>
+   <pair name="Dicom Directory">
+    <port type="input" identifier="7fb9627a95d0"/>
+    <port type="output" identifier="7fb9627a9a90"/>
+   </pair>
+   <pair name="Characteristic">
+    <port type="input" identifier="7fb964dd1d40"/>
+    <port type="output" identifier="7fb964dcfda0"/>
+   </pair>
+   <pair name="NifTI Directory">
+    <port type="output" identifier="7fb964dd3550"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="tvm_registerVolumes">
+  <position x="-14" y="-88"/>
+  <pairs>
+   <pair name="Reference Volume">
+    <port type="input" identifier="7fb962797110"/>
+    <port type="output" identifier="7fb9627975d0"/>
+   </pair>
+   <pair name="FreeSurfer Folder">
+    <port type="input" identifier="7fb962799ca0"/>
+    <port type="output" identifier="7fb96279a160"/>
+   </pair>
+   <pair name="Coregistration Matrix">
+    <port type="input" identifier="7fb96279ef10"/>
+    <port type="output" identifier="7fb96279f3d0"/>
+   </pair>
+   <pair name="Coregistration Matrix">
+    <port type="output" identifier="7fb9627a1790"/>
+   </pair>
+   <pair name="Boundaries">
+    <port type="output" identifier="7fb9627a3b00"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="tvm_realignFunctionals">
+  <position x="-357" y="164"/>
+  <pairs>
+   <pair name="Functional Folder">
+    <port type="input" identifier="7fb96278d330"/>
+    <port type="output" identifier="7fb96278d7f0"/>
+   </pair>
+   <pair name="Realignment Folder">
+    <port type="output" identifier="7fb96278fbd0"/>
+   </pair>
+   <pair name="Mean Volume">
+    <port type="output" identifier="7fb962791f80"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="tvm_modifyMp2rage">
+  <position x="-527" y="-146"/>
+  <pairs>
+   <pair name="UNI Folder">
+    <port type="input" identifier="7fb96279b860"/>
+    <port type="output" identifier="7fb96279cbc0"/>
+   </pair>
+   <pair name="INV2 Folder">
+    <port type="input" identifier="7fb962782b30"/>
+    <port type="output" identifier="7fb96279e2b0"/>
+   </pair>
+   <pair name="Threshold">
+    <port type="input" identifier="7fb962785b40"/>
+    <port type="output" identifier="7fb962786220"/>
+   </pair>
+   <pair name="MP2RAGE">
+    <port type="output" identifier="7fb962787cd0"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="tvm_boundariesToObj">
+  <position x="795" y="36"/>
+  <pairs>
+   <pair name="Boundaries">
+    <port type="input" identifier="7fb9627562a0"/>
+    <port type="output" identifier="7fb96274aa10"/>
+   </pair>
+   <pair name="OBJ white matter surface">
+    <port type="output" identifier="7fb96277fc30"/>
+   </pair>
+   <pair name="OBJ pial surface">
+    <port type="output" identifier="7fb9627457b0"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="tvm_boundaryBasedRegistration">
+  <position x="248" y="-36"/>
+  <pairs>
+   <pair name="Reference Volume">
+    <port type="input" identifier="7fb964dbf370"/>
+    <port type="output" identifier="7fb964dc0a90"/>
+   </pair>
+   <pair name="Input Coregistration Matrix">
+    <port type="input" identifier="7fb964dc1a80"/>
+    <port type="output" identifier="7fb964dc2ec0"/>
+   </pair>
+   <pair name="Input Boundaries">
+    <port type="input" identifier="7fb964dc4370"/>
+    <port type="output" identifier="7fb964dc4830"/>
+   </pair>
+   <pair name="Mask file">
+    <port type="input" identifier="7fb964dc6eb0"/>
+    <port type="output" identifier="7fb964dc5e40"/>
+   </pair>
+   <pair name="Output Coregistration Matrix">
+    <port type="output" identifier="7fb964dc99d0"/>
+   </pair>
+   <pair name="Output Boundaries">
+    <port type="output" identifier="7fb964dcbdf0"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="tvm_computeCurvature">
+  <position x="1260" y="187"/>
+  <pairs>
+   <pair name="White Matter SDF">
+    <port type="input" identifier="7fb964dad4b0"/>
+    <port type="output" identifier="7fb964daee30"/>
+   </pair>
+   <pair name="Pial SDF">
+    <port type="input" identifier="7fb964dafe00"/>
+    <port type="output" identifier="7fb964db1850"/>
+   </pair>
+   <pair name="White Matter Primary Curvature">
+    <port type="output" identifier="7fb964db2800"/>
+   </pair>
+   <pair name="Pial Primary Curvature">
+    <port type="output" identifier="7fb964db4b80"/>
+   </pair>
+   <pair name="White Matter Secondary Curvature">
+    <port type="output" identifier="7fb964db6ef0"/>
+   </pair>
+   <pair name="Pial Secondary Curvature">
+    <port type="output" identifier="7fb964db9270"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="tvm_reconAll">
+  <position x="-289" y="-99"/>
+  <pairs>
+   <pair name="Structural">
+    <port type="input" identifier="7fb964d9dba0"/>
+    <port type="output" identifier="7fb964d9dd50"/>
+   </pair>
+   <pair name="FreeSurfer Folder">
+    <port type="input" identifier="7fb964da0710"/>
+    <port type="output" identifier="7fb964da0f70"/>
+   </pair>
+   <pair name="orig.nii">
+    <port type="output" identifier="7fb964da2f80"/>
+   </pair>
+   <pair name="White Matter Surface">
+    <port type="output" identifier="7fb964da5410"/>
+   </pair>
+   <pair name="Pial Surface">
+    <port type="output" identifier="7fb964da7c30"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="tvm_glm">
+  <position x="-114" y="267"/>
+  <pairs>
+   <pair name="Reference File">
+    <port type="input" identifier="7fb964d88370"/>
+    <port type="output" identifier="7fb964d88830"/>
+   </pair>
+   <pair name="Design Matrix">
+    <port type="input" identifier="7fb964d8af10"/>
+    <port type="output" identifier="7fb964d8b3d0"/>
+   </pair>
+   <pair name="Functional Folder">
+    <port type="input" identifier="7fb964d8da80"/>
+    <port type="output" identifier="7fb964d8df40"/>
+   </pair>
+   <pair name="Mask File">
+    <port type="input" identifier="7fb964d902c0"/>
+    <port type="output" identifier="7fb964d8f6d0"/>
+   </pair>
+   <pair name="Betas">
+    <port type="output" identifier="7fb964d92dd0"/>
+   </pair>
+   <pair name="Residual Sum of Squares">
+    <port type="output" identifier="7fb964d95300"/>
+   </pair>
+   <pair name="Selection">
+    <port type="output" identifier="7fb964d976b0"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="tvm_glmToTMap">
+  <position x="189" y="289"/>
+  <pairs>
+   <pair name="Design Matrix">
+    <port type="input" identifier="7fb964d7afd0"/>
+    <port type="output" identifier="7fb964d7b490"/>
+   </pair>
+   <pair name="Betas">
+    <port type="input" identifier="7fb964d7d940"/>
+    <port type="output" identifier="7fb964d7ca80"/>
+   </pair>
+   <pair name="Residual Sum of Squares">
+    <port type="input" identifier="7fb964d80350"/>
+    <port type="output" identifier="7fb964d80810"/>
+   </pair>
+   <pair name="T-Map">
+    <port type="output" identifier="7fb964d82be0"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="tvm_recursiveBoundaryRegistration">
+  <position x="535" y="-43"/>
+  <pairs>
+   <pair name="Original Boundaries">
+    <port type="input" identifier="7fb964d6e320"/>
+    <port type="output" identifier="7fb964d6eb80"/>
+   </pair>
+   <pair name="Reference Volume">
+    <port type="input" identifier="7fb964d70c00"/>
+    <port type="output" identifier="7fb964d710c0"/>
+   </pair>
+   <pair name="Transform stack">
+    <port type="output" identifier="7fb964d74010"/>
+   </pair>
+   <pair name="Registered Boundaries">
+    <port type="output" identifier="7fb964d75810"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="tvm_makeLevelSet">
+  <position x="1007" y="42"/>
+  <pairs>
+   <pair name="Reference Volume">
+    <port type="input" identifier="7fb964d5b590"/>
+    <port type="output" identifier="7fb964d5ba50"/>
+   </pair>
+   <pair name="White Matter OBJ">
+    <port type="input" identifier="7fb964d5e140"/>
+    <port type="output" identifier="7fb964d5e600"/>
+   </pair>
+   <pair name="Pial OBJ">
+    <port type="input" identifier="7fb964d60cc0"/>
+    <port type="output" identifier="7fb964d5fc10"/>
+   </pair>
+   <pair name="Transformation matrix">
+    <port type="input" identifier="7fb964d63690"/>
+    <port type="output" identifier="7fb964d63b50"/>
+   </pair>
+   <pair name="White Matter SDF">
+    <port type="output" identifier="7fb964d65f10"/>
+   </pair>
+   <pair name="Pial SDF">
+    <port type="output" identifier="7fb964d685e0"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="tvm_volumetricLayering">
+  <position x="1544" y="236"/>
+  <pairs>
+   <pair name="White Matter SDF">
+    <port type="input" identifier="7fb964d40400"/>
+    <port type="output" identifier="7fb964d41e50"/>
+   </pair>
+   <pair name="Pial SDF">
+    <port type="input" identifier="7fb964d42e00"/>
+    <port type="output" identifier="7fb964d41d30"/>
+   </pair>
+   <pair name="White Matter Primary Curvature">
+    <port type="input" identifier="7fb964d45900"/>
+    <port type="output" identifier="7fb964d46d40"/>
+   </pair>
+   <pair name="Pial Primary Curvature">
+    <port type="input" identifier="7fb964d481b0"/>
+    <port type="output" identifier="7fb964d48670"/>
+   </pair>
+   <pair name="White Matter Secondary Curvature">
+    <port type="input" identifier="7fb964d4aa40"/>
+    <port type="output" identifier="7fb964d4af00"/>
+   </pair>
+   <pair name="Pial Secondary Curvature">
+    <port type="input" identifier="7fb964d4d380"/>
+    <port type="output" identifier="7fb964d4d840"/>
+   </pair>
+   <pair name="Levels">
+    <port type="input" identifier="7fb964d4fc50"/>
+    <port type="output" identifier="7fb964d4ba00"/>
+   </pair>
+   <pair name="Level Set">
+    <port type="output" identifier="7fb964d52610"/>
+   </pair>
+   <pair name="Layers">
+    <port type="output" identifier="7fb964d54bf0"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="tvm_moveNiftis">
+  <position x="-773" y="-70"/>
+  <pairs>
+   <pair name="Source Folder">
+    <port type="input" identifier="7fb964d35ea0"/>
+    <port type="output" identifier="7fb964d36360"/>
+   </pair>
+   <pair name="Destination Anatomicals">
+    <port type="input" identifier="7fb964d38a40"/>
+    <port type="output" identifier="7fb964d38f00"/>
+   </pair>
+   <pair name="Destination Functionals">
+    <port type="output" identifier="7fb964d3af20"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="tvm_designMatrixToTimeCourse">
+  <position x="2137" y="455"/>
+  <pairs>
+   <pair name="Design Matrix">
+    <port type="input" identifier="7fb964b154a0"/>
+    <port type="output" identifier="7fb964b3b680"/>
+   </pair>
+   <pair name="Functional Folder">
+    <port type="input" identifier="7fb964b376a0"/>
+    <port type="output" identifier="7fb964b28cf0"/>
+   </pair>
+   <pair name="Functional Files">
+    <port type="input" identifier="7fb964b2de60"/>
+    <port type="output" identifier="7fb964b02380"/>
+   </pair>
+   <pair name="Regression Approach">
+    <port type="input" identifier="7fb964d2b3d0"/>
+    <port type="output" identifier="7fb964b07ec0"/>
+   </pair>
+   <pair name="Selection">
+    <port type="input" identifier="7fb964d2d820"/>
+    <port type="output" identifier="7fb964b35120"/>
+   </pair>
+   <pair name="Time course">
+    <port type="output" identifier="7fb964d30030"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="tvm_makeRegistrationMovie">
+  <position x="918" y="-233"/>
+  <pairs>
+   <pair name="Reference Volume">
+    <port type="input" identifier="7fb964971f00"/>
+    <port type="output" identifier="7fb96491b070"/>
+   </pair>
+   <pair name="Boundaries">
+    <port type="input" identifier="7fb964970b70"/>
+    <port type="output" identifier="7fb964974780"/>
+   </pair>
+   <pair name="Axis">
+    <port type="input" identifier="7fb9649767b0"/>
+    <port type="output" identifier="7fb9649f6630"/>
+   </pair>
+   <pair name="Frames per Second">
+    <port type="input" identifier="7fb9649ab3a0"/>
+    <port type="output" identifier="7fb964986040"/>
+   </pair>
+   <pair name="Movie file">
+    <port type="output" identifier="7fb964b2f3e0"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="tvm_roiToDesignMatrix">
+  <position x="1836" y="479"/>
+  <pairs>
+   <pair name="Region of Interest">
+    <port type="input" identifier="7fb964c87c90"/>
+    <port type="output" identifier="7fb964c8b310"/>
+   </pair>
+   <pair name="Layers">
+    <port type="input" identifier="7fb964c8c300"/>
+    <port type="output" identifier="7fb964c8b050"/>
+   </pair>
+   <pair name="Design Matrix">
+    <port type="output" identifier="7fb964c8ed10"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="tvm_thresholdVolume">
+  <position x="438" y="352"/>
+  <pairs>
+   <pair name="Volume">
+    <port type="input" identifier="7fb964c7ef20"/>
+    <port type="output" identifier="7fb964c80470"/>
+   </pair>
+   <pair name="Threshold">
+    <port type="input" identifier="7fb964c81590"/>
+    <port type="output" identifier="7fb964c82af0"/>
+   </pair>
+   <pair name="Threshold Volume">
+    <port type="output" identifier="7fb964c84140"/>
+   </pair>
+  </pairs>
+ </node>
+ <link to="7fb964dc4370" from="7fb9627a3b00"/>
+ <link to="7fb964dc1a80" from="7fb9627a1790"/>
+ <link to="7fb964d6e320" from="7fb964dcbdf0"/>
+ <link to="7fb964971f00" from="7fb964d710c0"/>
+ <link to="7fb964970b70" from="7fb964d6eb80"/>
+ <link to="7fb964d70c00" from="7fb964dc0a90"/>
+ <link to="7fb964dbf370" from="7fb9627975d0"/>
+ <link to="7fb962797110" from="7fb962791f80"/>
+ <link to="7fb962799ca0" from="7fb964da0f70"/>
+ <link to="7fb964d9dba0" from="7fb962787cd0"/>
+ <link to="7fb964d35ea0" from="7fb964c9b250"/>
+ <link to="7fb9627a95d0" from="7fb964d3af20"/>
+ <link to="7fb96278d330" from="7fb964dd3550"/>
+ <link to="7fb964d88370" from="7fb962791f80"/>
+ <link to="7fb964d8da80" from="7fb96278fbd0"/>
+ <link to="7fb964d80350" from="7fb964d95300"/>
+ <link to="7fb964d7d940" from="7fb964d92dd0"/>
+ <link to="7fb964d7afd0" from="7fb964d8b3d0"/>
+ <link to="7fb9627562a0" from="7fb964d75810"/>
+ <link to="7fb964d60cc0" from="7fb9627457b0"/>
+ <link to="7fb964d5e140" from="7fb96277fc30"/>
+ <link to="7fb964dad4b0" from="7fb964d65f10"/>
+ <link to="7fb964dafe00" from="7fb964d685e0"/>
+ <link to="7fb964d4d380" from="7fb964db9270"/>
+ <link to="7fb964d4aa40" from="7fb964db6ef0"/>
+ <link to="7fb964d481b0" from="7fb964db4b80"/>
+ <link to="7fb964d45900" from="7fb964db2800"/>
+ <link to="7fb964d42e00" from="7fb964db1850"/>
+ <link to="7fb964d40400" from="7fb964daee30"/>
+ <link to="7fb962782b30" from="7fb964d38f00"/>
+ <link to="7fb964c8c300" from="7fb964d54bf0"/>
+ <link to="7fb964b154a0" from="7fb964c8ed10"/>
+ <link to="7fb964c7ef20" from="7fb964d82be0"/>
+ <link to="7fb964c87c90" from="7fb964c84140"/>
+</pipeline>
