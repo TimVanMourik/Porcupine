@@ -179,27 +179,12 @@ void Port::setOther(
     m_other = _other;
 }
 
-void Port::hasFileName(
-        bool _bool,
-        bool _cascade
+void Port::setHasFileName(
+        bool _bool
         )
 {
     m_hasFileName = _bool;
     update();
-
-
-//    if(PortType::INPUT == getPortType())
-//    {
-//        foreach (Link* link, getConnections())
-//        {
-//            link->getPortFrom()->hasFileName(_bool, false);
-//        }
-//    }
-//    else
-//    {
-
-//    }
-
 }
 
 Port::~Port(

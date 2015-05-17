@@ -1,5 +1,6 @@
 #include <QDomDocument>
 
+#include "Link.hpp"
 #include "Node.hpp"
 #include "Port.hpp"
 #include "PortPair.hpp"
@@ -73,6 +74,22 @@ const QVector<const DataType*>& PortPair::getType(
     return m_dataType;
 }
 
+QVector<PortPair*> PortPair::getAncestors(
+        )
+{
+    QVector<PortPair*> ports;
+
+    return ports;
+}
+
+QVector<PortPair*> PortPair::getDescendants(
+        )
+{
+    QVector<PortPair*> ports;
+
+    return ports;
+}
+
 void PortPair::saveToXml(
         QDomElement& _xmlElement
         )
@@ -115,19 +132,33 @@ void PortPair::loadFromXml(
     }
 }
 
-void PortPair::hasFileName(
-        bool _bool
+void PortPair::setFileName(
+        bool _bool,
+        const QString& _fileName,
+        bool _cascade
         )
 {
     m_hasFileName = _bool;
+    m_fileName = _fileName;
     if(m_input)
     {
-        m_input->hasFileName(_bool);
+        m_input->setHasFileName(_bool);
 
     }
     if(m_output)
     {
-        m_output->hasFileName(_bool);
+        m_output->setHasFileName(_bool);
+    }
+    if(_cascade)
+    {
+        foreach (PortPair* port, getAncestors())
+        {
+            port->setFileName(_bool, _fileName, false);
+        }
+        foreach (PortPair* port, getDescendants())
+        {
+            port->setFileName(_bool, _fileName, false);
+        }
     }
 }
 

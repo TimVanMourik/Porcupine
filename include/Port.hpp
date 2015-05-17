@@ -88,9 +88,8 @@ public:
     int type(
             ) const;
     //
-    void hasFileName(
-            bool _bool,
-            bool _cascade = false
+    void setHasFileName(
+            bool _bool
             );
     //
     void setOther(

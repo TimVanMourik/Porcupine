@@ -1,5 +1,5 @@
-#ifndef NODETREEITEM_H
-#define NODETREEITEM_H
+#ifndef NODETREEMODEL_H
+#define NODETREEMODEL_H
 
 #include <QStandardItemModel>
 
@@ -17,6 +17,10 @@ public:
             const Node* _node
             );
     //
+    void removeNode(
+            const Node* _node
+            );
+    //
     ~NodeTreeModel(
             );
 public slots:
@@ -24,6 +28,9 @@ public slots:
     void fileNameFieldChanged(
             QStandardItem* _item
             );
+//private:
+    //
+//    QVector<const Node*> m_nodes;
 };
 
-#endif // NODETREEITEM_H
+#endif // NODETREEMODEL_H

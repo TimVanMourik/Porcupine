@@ -178,12 +178,17 @@ void NodeEditor::keyPressEvent(
     {
     case Qt::Key_Backspace:
     {
-        foreach (QGraphicsItem* eachItem, scene()->items())
+        foreach (QGraphicsItem* item, scene()->items())
         {
-            if(eachItem->isSelected())
+            if(item->isSelected())
             {
-                delete eachItem;
-                //if no break, crashes when deleted item deletes next, because it doesn't exist anymore
+                if(item->type() == Node::Type)
+                {
+                    //remove node from list view
+                    m_treeModel->removeNode((const Node*) item);
+                }
+                delete item;
+                //if no break, program may crash when second deleted item was already deletted by first on cascade
                 break;
             }
         }

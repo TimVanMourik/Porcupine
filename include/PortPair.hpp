@@ -28,15 +28,6 @@ public:
     void createOutputPort(
             );
     //
-//    void createPorts(
-//            );
-    //
-    Port* getInputPort(
-            ) const;
-    //
-    Port* getOutputPort(
-            ) const;
-    //
     void setArgument(
             const Argument* _argument
             );
@@ -44,8 +35,20 @@ public:
     const QString& getName(
             ) const;
     //
+    Port* getInputPort(
+            ) const;
+    //
+    Port* getOutputPort(
+            ) const;
+    //
     const QVector<const DataType*>& getType(
             ) const;
+    //
+    QVector<PortPair*> getAncestors(
+            );
+    //
+    QVector<PortPair*> getDescendants(
+            );
     //
     void saveToXml(
             QDomElement& _xmlElement
@@ -56,8 +59,10 @@ public:
             QMap<quint64, Port*>& o_portMap
             );
     //
-    void hasFileName(
-            bool _bool
+    void setFileName(
+            bool _bool,
+            const QString& _fileName = "",
+            bool _cascade = false
             );
     //
     ~PortPair(
@@ -73,6 +78,8 @@ private:
     Port* m_input;
     //
     Port* m_output;
+    //
+    QString m_fileName;
     //
     bool m_hasFileName;
 };

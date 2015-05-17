@@ -1,4 +1,4 @@
-#include "FileNameItem.hpp"
+#include "NodeTreeItem.hpp"
 #include "NodeTreeModel.hpp"
 #include "PortPair.hpp"
 
@@ -10,6 +10,7 @@ NodeTreeModel::NodeTreeModel(
     setHorizontalHeaderItem(1, new QStandardItem( "File name" ));
     setHorizontalHeaderItem(2, new QStandardItem( "Data type" ));
 
+    //The only editable item is the file name item, but it's also called when the other QStandardItems are constructed
     connect(this, SIGNAL(itemChanged(QStandardItem*)), this, SLOT(fileNameFieldChanged(QStandardItem*)));
 }
 
@@ -17,17 +18,20 @@ void NodeTreeModel::fileNameFieldChanged(
         QStandardItem* _item
         )
 {
-    if(_item->type() == FileNameItem::Type)
+    if(_item->parent())
     {
-        FileNameItem* field = (FileNameItem*) _item;
-        if(field->text().compare("<file name>") == 0 || field->text().compare("") == 0)
+        NodeTreeItem* nodeItem = (NodeTreeItem*) _item->parent();
+
+        if(_item->text().compare("<file name>") == 0 || _item->text().compare("") == 0)
         {
-            field->setText("<file name>");
-            field->hasFileName(false);
+            _item->setText("<file name>");
+            nodeItem->setHasFilName((QStandardItem*) _item, false);
+//            _item->hasFileName(false);
         }
         else
         {
-            field->hasFileName(true);
+            nodeItem->setHasFilName((QStandardItem*) _item, true);
+//            _item->hasFileName(true);
         }
     }
 }
@@ -36,29 +40,23 @@ void NodeTreeModel::addNode(
         const Node* _node
         )
 {
-    QStandardItem* item = new QStandardItem(_node->getName());
-    item->setEditable(false);
-    foreach(PortPair* pair, _node->getPorts())
-    {
-        QList<QStandardItem*> ports;
-
-        QStandardItem* nameItem = new QStandardItem(pair->getName());
-        nameItem->setEditable(false);
-        ports.append(nameItem);
-
-        FileNameItem* fileItem = new FileNameItem("<file name>");
-        fileItem->setEditable(true);
-        fileItem->setPort(pair);
-//        ports.append((QStandardItem*) fileItem);
-        ports.append((FileNameItem*) fileItem);
-
-        QStandardItem* dataItem = new QStandardItem(pair->getType()[0]->getName());
-        dataItem->setEditable(false);
-        ports.append(dataItem);
-
-        item->appendRow(ports);
-    }
+//    m_nodes.append(_node);
+    NodeTreeItem* item = new NodeTreeItem(_node);
     setItem(this->rowCount(), 0, item);
+}
+
+void NodeTreeModel::removeNode(
+        const Node* _node
+        )
+{
+    for(int i = 0; i < rowCount(); ++i)
+    {
+        if(((NodeTreeItem*) item(i))->hasNode(_node))
+        {
+            removeRow(i);
+            break;
+        }
+    }
 }
 
 
