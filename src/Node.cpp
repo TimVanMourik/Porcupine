@@ -10,6 +10,7 @@
 #include <QGraphicsScene>
 #include <QLinearGradient>
 
+#include "Argument.hpp"
 #include "DataType.hpp"
 #include "Link.hpp"
 #include "Node.hpp"
@@ -272,6 +273,7 @@ void Node::loadFromXml(
     }
 }
 
+///@todo this is the only Node::function in which Link and Port are used. If that gets removed, that would greatly clean up the class diagram
 bool Node::isOffspringOf(
         const Node* _node
         ) const

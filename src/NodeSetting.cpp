@@ -5,6 +5,7 @@
 #include "QXmlSchema"
 #include "QXmlSchemaValidator"
 
+#include "Argument.hpp"
 #include "NodeSetting.hpp"
 
 NodeSetting::NodeSetting(

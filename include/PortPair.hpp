@@ -3,9 +3,8 @@
 
 #include <QGraphicsTextItem>
 
-#include "Argument.hpp"
-#include "DataType.hpp"
-
+class Argument;
+class DataType;
 class Node;
 class Port;
 class QDomElement;

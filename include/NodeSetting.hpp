@@ -15,8 +15,7 @@
 #include <QStringList>
 #include <QColor>
 
-#include "Argument.hpp"
-#include "Port.hpp"
+class Argument;
 
 class NodeSetting
 {

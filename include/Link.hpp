@@ -15,8 +15,6 @@
 #include <QGraphicsItem>
 #include <QGraphicsPathItem>
 
-#include "Preferences.hpp"
-
 class QDomElement;
 
 class Port;

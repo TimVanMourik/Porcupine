@@ -8,6 +8,7 @@
 
 #include "Link.hpp"
 #include "Port.hpp"
+#include "Preferences.hpp"
 
 Link::Link(
         QGraphicsScene* _scene

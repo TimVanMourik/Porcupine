@@ -3,7 +3,7 @@
 
 #include <QStandardItemModel>
 
-#include <Node.hpp>
+class Node;
 
 class NodeTreeModel : public QStandardItemModel
 {

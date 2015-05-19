@@ -1,5 +1,8 @@
 #include <QDomDocument>
 
+
+#include "Argument.hpp"
+//#include "DataType.hpp"
 #include "Link.hpp"
 #include "Node.hpp"
 #include "Port.hpp"
@@ -16,19 +19,13 @@ PortPair::PortPair(
 {
 }
 
-//void PortPair::createPorts(
-//        )
-//{
-//    createInputPort();
-//    createOutputPort();
-//}
-
 void PortPair::createInputPort(
         )
 {
     m_input = new Port((QGraphicsItem*) m_node);
     m_input->setPortType(Port::PortType::INPUT);
     m_input->setOther(m_output);
+    m_input->setPortPair(this);
     if(m_output) m_output->setOther(m_input);
 }
 
@@ -38,6 +35,7 @@ void PortPair::createOutputPort(
     m_output = new Port((QGraphicsItem*) m_node);
     m_output->setPortType(Port::PortType::OUTPUT);
     m_output->setOther(m_input);
+    m_output->setPortPair(this);
     if(m_input) m_input->setOther(m_output);
 }
 
@@ -78,7 +76,15 @@ QVector<PortPair*> PortPair::getAncestors(
         )
 {
     QVector<PortPair*> ports;
-
+    foreach(Link* link, m_input->getConnections())
+    {
+        PortPair* previous = link->getPortFrom()->getPortPair();
+        ports.append(previous);
+        foreach(PortPair* pair, previous->getAncestors())
+        {
+            ports.append(pair);
+        }
+    }
     return ports;
 }
 
@@ -86,7 +92,15 @@ QVector<PortPair*> PortPair::getDescendants(
         )
 {
     QVector<PortPair*> ports;
-
+    foreach(Link* link, m_output->getConnections())
+    {
+        PortPair* previous = link->getPortTo()->getPortPair();
+        ports.append(previous);
+        foreach(PortPair* pair, previous->getDescendants())
+        {
+            ports.append(pair);
+        }
+    }
     return ports;
 }
 

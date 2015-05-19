@@ -16,6 +16,7 @@
 
 class Link;
 class Node;
+class PortPair;
 class QDomElement;
 
 class Port : public QGraphicsPathItem
@@ -41,6 +42,10 @@ public:
             Node*
             );
     //
+    void setPortPair(
+            PortPair* _pair
+            );
+    //
     void setPortType(
             PortType _type
             );
@@ -60,6 +65,9 @@ public:
             ) const;
     //
     const Node* getNode(
+            ) const;
+    //
+    PortPair* getPortPair(
             ) const;
     //
     const QVector<Link*>& getConnections(
@@ -110,6 +118,8 @@ private:
     // If this is an input port, m_other point to the output and vice versa.
     // m_other = 0 when the output does not have an input.
     Port* m_other;
+    //
+    PortPair* m_pair;
     // The list of Links that end or start at this Port
     QVector<Link*> m_connections;
     // A boolean value that states if the Port is input or output

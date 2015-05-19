@@ -10,6 +10,7 @@
 #include <QPen>
 
 #include "Link.hpp"
+#include "Preferences.hpp"
 #include "Port.hpp"
 
 qreal Port::s_margin = 0;
@@ -45,6 +46,13 @@ void Port::setNode(
     m_node = _node;
 }
 
+void Port::setPortPair(
+        PortPair* _pair
+        )
+{
+    m_pair = _pair;
+}
+
 void Port::setPortType(
         PortType _type
         )
@@ -63,6 +71,12 @@ Port::PortType Port::getPortType(
         ) const
 {
     return m_type;
+}
+
+PortPair* Port::getPortPair(
+        ) const
+{
+    return m_pair;
 }
 
 bool Port::isConnectedTo(

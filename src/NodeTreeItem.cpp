@@ -1,3 +1,4 @@
+#include "DataType.hpp"
 #include "Node.hpp"
 #include "NodeTreeItem.hpp"
 #include "PortPair.hpp"
