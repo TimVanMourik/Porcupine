@@ -104,6 +104,31 @@ QVector<PortPair*> PortPair::getDescendants(
     return ports;
 }
 
+bool PortPair::hasAncestor(
+        const Node* _node
+        ) const
+{
+    if(m_node == _node)
+    {
+        return true;
+    }
+    if(m_input)
+    {
+        foreach(const Link* link, m_input->getConnections())
+        {
+            Port* p = link->getPortFrom();
+            if(p)
+            {
+                if(p->getNode()->hasAncestor(_node))
+                {
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
+}
+
 void PortPair::saveToXml(
         QDomElement& _xmlElement
         )

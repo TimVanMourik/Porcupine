@@ -122,7 +122,7 @@ bool NodeEditor::eventFilter(
                     if(startAtBeginning)
                     {
 //                        m_newLink->setPortTo(newPort);
-                        if(!portExisting->getNode()->isOffspringOf(portCreated->getNode()))
+                        if(!portExisting->getNode()->hasAncestor(portCreated->getNode()))
                         {
                             m_newLink->setPortTo(portCreated);
                         }
@@ -138,7 +138,7 @@ bool NodeEditor::eventFilter(
                     else
                     {
 //                        m_newLink->setPortFrom(newPort);
-                        if(!portCreated->getNode()->isOffspringOf(portExisting->getNode()))
+                        if(!portCreated->getNode()->hasAncestor(portExisting->getNode()))
                         {
                             m_newLink->setPortFrom(portCreated);
                         }

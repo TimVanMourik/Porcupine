@@ -12,7 +12,7 @@
 
 #include "Argument.hpp"
 #include "DataType.hpp"
-#include "Link.hpp"
+//#include "Link.hpp"
 #include "Node.hpp"
 #include "NodeEditor.hpp"
 #include "NodeLibrary.hpp"
@@ -273,8 +273,7 @@ void Node::loadFromXml(
     }
 }
 
-///@todo this is the only Node::function in which Link and Port are used. If that gets removed, that would greatly clean up the class diagram
-bool Node::isOffspringOf(
+bool Node::hasAncestor(
         const Node* _node
         ) const
 {
@@ -282,22 +281,11 @@ bool Node::isOffspringOf(
     {
         return true;
     }
-    foreach(const PortPair* port, getPorts())
+    foreach(const PortPair* port, m_ports)
     {
-        const Port* inputPort = port->getInputPort();
-        if(inputPort)
+        if(port->hasAncestor(_node))
         {
-            foreach(const Link* link, inputPort->getConnections())
-            {
-                Port* p = link->getPortFrom();
-                if(p)
-                {
-                    if(p->getNode()->isOffspringOf(_node))
-                    {
-                        return true;
-                    }
-                }
-            }
+            return true;
         }
     }
     return false;

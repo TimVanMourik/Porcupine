@@ -105,7 +105,7 @@ public:
             QMap<quint64, Port*>& o_portMap
             );
     //
-    bool isOffspringOf(
+    bool hasAncestor(
             const Node*
             ) const;
     //

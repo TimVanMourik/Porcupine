@@ -42,12 +42,16 @@ public:
     //
     const QVector<const DataType*>& getType(
             ) const;
-    //
+    // returns the ancestors that are input-output connected via Links. Ancestry does not go via the parent Node.
     QVector<PortPair*> getAncestors(
             );
-    //
+    // returns the descendants that are input-output connected via Links. Descendance does not go via the parent Node.
     QVector<PortPair*> getDescendants(
             );
+    //
+    bool hasAncestor(
+            const Node* _node
+            ) const;
     //
     void saveToXml(
             QDomElement& _xmlElement
