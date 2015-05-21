@@ -14,6 +14,7 @@
 #include "Node.hpp"
 #include "NodeEditor.hpp"
 #include "Port.hpp"
+#include "Preferences.hpp"
 
 NodeEditor::NodeEditor(
         QWidget* _parent
@@ -25,16 +26,19 @@ NodeEditor::NodeEditor(
 }
 
 void NodeEditor::install(
-        QGraphicsScene* _scene
+//        QGraphicsScene* _scene
         )
 {
-    if(!_scene)
+    Preferences& preferences = Preferences::getInstance();
+    QGraphicsScene* scene = new QGraphicsScene();
+    scene->setBackgroundBrush(preferences.getSceneBackgroundBrush());
+    if(!scene)
     {
-        _scene = new QGraphicsScene();
+        scene = new QGraphicsScene();
     }
-    setScene(_scene);
+    setScene(scene);
     //makes sure that all events from the scene are passed on to the editor
-    _scene->installEventFilter(this);
+    scene->installEventFilter(this);
 }
 
 QGraphicsScene* NodeEditor::getScene(
@@ -280,6 +284,15 @@ NodeTreeModel* NodeEditor::getTreeModel(
         ) const
 {
     return m_treeModel;
+}
+
+Node* NodeEditor::addNode(
+        NodeSetting* _setting
+        )
+{
+    Node* node = new Node(this, _setting);
+    m_treeModel->addNode(node);
+    return node;
 }
 
 NodeEditor::~NodeEditor(

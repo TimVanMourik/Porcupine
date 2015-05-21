@@ -20,6 +20,7 @@ class Link;
 class QGraphicsScene;
 class QKeyEvent;
 class QDomDocument;
+class NodeSetting;
 
 class NodeEditor : public QGraphicsView
 {
@@ -30,7 +31,7 @@ public:
             );
     //
     void install(
-            QGraphicsScene* _scene = 0
+//            QGraphicsScene* _scene = 0
             );
     //
     bool eventFilter(
@@ -67,6 +68,10 @@ public:
     //
     NodeTreeModel* getTreeModel(
             ) const;
+    //
+    Node* addNode(
+            NodeSetting* _setting = 0
+            );
     //
     ~NodeEditor(
             );

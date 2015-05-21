@@ -11,7 +11,6 @@
 #include <QLinearGradient>
 
 #include "Argument.hpp"
-#include "DataType.hpp"
 #include "Node.hpp"
 #include "NodeEditor.hpp"
 #include "NodeLibrary.hpp"

@@ -19,12 +19,10 @@
 #include <QTabWidget>
 
 #include "MainWindow.hpp"
-#include "Node.hpp"
 #include "NodeEditor.hpp"
 #include "NodeLibrary.hpp"
 #include "NodeListView.hpp"
-#include "NodeTreeModel.hpp"
-#include "Preferences.hpp"
+//#include "NodeTreeModel.hpp"
 
 MainWindow::MainWindow(
         QWidget* parent
@@ -35,7 +33,6 @@ MainWindow::MainWindow(
 {
     //Create an instance of the NodeLibrary
     NodeLibrary& nodeLibrary = NodeLibrary::getInstance();
-    Preferences& preferences = Preferences::getInstance();
     Q_UNUSED(nodeLibrary);
 
     //Make the MainWindow and its layout for the central widget
@@ -63,10 +60,11 @@ MainWindow::MainWindow(
     m_nodeEditors[0]->setTreeModel(m_nodeListView->modelAt(0));
 
     //Install an empty tab
-    QGraphicsScene* scene = new QGraphicsScene();
-    scene->setBackgroundBrush(preferences.getSceneBackgroundBrush());
+//    QGraphicsScene* scene = new QGraphicsScene();
+//    scene->setBackgroundBrush(preferences.getSceneBackgroundBrush());
+//    m_nodeEditors[m_tabLayout->currentIndex()]->install(scene);
 
-    m_nodeEditors[m_tabLayout->currentIndex()]->install(scene);
+    m_nodeEditors[m_tabLayout->currentIndex()]->install();
 
     createActions();
     createMenus();
@@ -244,7 +242,7 @@ void MainWindow::newFile(
         )
 {
     m_nodeListView->addNodeModel();
-    Preferences& preferences = Preferences::getInstance();
+//    Preferences& preferences = Preferences::getInstance();
 
     //Create a node editor
     m_nodeEditors.append(new NodeEditor(this));
@@ -256,10 +254,11 @@ void MainWindow::newFile(
     m_nodeEditors.last()->setTreeModel(m_nodeListView->modelAt(tabNumber));
 
     //Install an empty scene in the tab
-    QGraphicsScene* scene = new QGraphicsScene();
-    scene->setBackgroundBrush(preferences.getSceneBackgroundBrush());
+//    QGraphicsScene* scene = new QGraphicsScene();
+//    scene->setBackgroundBrush(preferences.getSceneBackgroundBrush());
+//    m_nodeEditors.last()->install(scene);
 
-    m_nodeEditors.last()->install(scene);
+    m_nodeEditors.last()->install();
 }
 
 void MainWindow::undoEdit(
@@ -292,8 +291,8 @@ void MainWindow::addNode(
         )
 {
     unsigned int tabIndex = m_tabLayout->currentIndex();
-    Node* node = new Node(m_nodeEditors[tabIndex], _setting);
-    m_nodeEditors[tabIndex]->getTreeModel()->addNode(node);
+    m_nodeEditors[tabIndex]->addNode(_setting);
+//    m_nodeEditors[tabIndex]->getTreeModel()->addNode(node);
 }
 
 void MainWindow::createMenus()

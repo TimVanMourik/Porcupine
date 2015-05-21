@@ -17,6 +17,7 @@
 class QDomElement;
 
 class Argument;
+class DataType;
 class NodeEditor;
 class NodeSetting;
 class Port;

@@ -1,7 +1,5 @@
-#include "Node.hpp"
 #include "NodeTreeItem.hpp"
 #include "NodeTreeModel.hpp"
-#include "PortPair.hpp"
 
 NodeTreeModel::NodeTreeModel(
         ) :
@@ -41,7 +39,6 @@ void NodeTreeModel::addNode(
         const Node* _node
         )
 {
-//    m_nodes.append(_node);
     NodeTreeItem* item = new NodeTreeItem(_node);
     setItem(this->rowCount(), 0, item);
 }
