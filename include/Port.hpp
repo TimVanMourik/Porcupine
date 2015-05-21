@@ -73,6 +73,9 @@ public:
     const QVector<Link*>& getConnections(
             ) const;
     //
+    QVector<Port*> getConnectedPorts(
+            ) const;
+    //
     bool removeLink(
             Link* _link
             );

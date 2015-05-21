@@ -12,13 +12,11 @@
 
 #include "Argument.hpp"
 #include "DataType.hpp"
-//#include "Link.hpp"
 #include "Node.hpp"
 #include "NodeEditor.hpp"
 #include "NodeLibrary.hpp"
 #include "NodeSetting.hpp"
 #include "Preferences.hpp"
-#include "Port.hpp"
 #include "PortPair.hpp"
 
 qreal Node::s_horizontalMargin  = 5;
@@ -159,8 +157,7 @@ void Node::repositionPorts(
     for(int i = 0; i < m_ports.length(); ++i)
     {
         m_ports[i]->setPos(-m_ports[i]->boundingRect().width() / 2, y - _height / 2);
-        if(m_ports[i]->getInputPort()) m_ports[i]->getInputPort()->setPos(-m_width / 2 - Port::getRadius(), y);
-        if(m_ports[i]->getOutputPort()) m_ports[i]->getOutputPort()->setPos(m_width / 2 + Port::getRadius(), y);
+        m_ports[i]->repositionPorts(m_width, y);
         y += _height + s_textSpacing;
     }
 }

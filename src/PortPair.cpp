@@ -1,9 +1,7 @@
 #include <QDomDocument>
 
-
 #include "Argument.hpp"
-//#include "DataType.hpp"
-#include "Link.hpp"
+//#include "Link.hpp"
 #include "Node.hpp"
 #include "Port.hpp"
 #include "PortPair.hpp"
@@ -76,9 +74,9 @@ QVector<PortPair*> PortPair::getAncestors(
         )
 {
     QVector<PortPair*> ports;
-    foreach(Link* link, m_input->getConnections())
+    foreach(Port* port, m_input->getConnectedPorts())
     {
-        PortPair* previous = link->getPortFrom()->getPortPair();
+        PortPair* previous = port->getPortPair();
         ports.append(previous);
         foreach(PortPair* pair, previous->getAncestors())
         {
@@ -92,9 +90,9 @@ QVector<PortPair*> PortPair::getDescendants(
         )
 {
     QVector<PortPair*> ports;
-    foreach(Link* link, m_output->getConnections())
+    foreach(Port* port, m_output->getConnectedPorts())
     {
-        PortPair* previous = link->getPortTo()->getPortPair();
+        PortPair* previous = port->getPortPair();
         ports.append(previous);
         foreach(PortPair* pair, previous->getDescendants())
         {
@@ -102,6 +100,21 @@ QVector<PortPair*> PortPair::getDescendants(
         }
     }
     return ports;
+}
+
+void PortPair::repositionPorts(
+        qreal _width,
+        qreal _height
+        )
+{
+    if(m_input)
+    {
+        m_input->setPos(-_width / 2 - Port::getRadius(), _height);
+    }
+    if(m_output)
+    {
+        m_output->setPos(_width / 2 + Port::getRadius(), _height);
+    }
 }
 
 bool PortPair::hasAncestor(
@@ -114,12 +127,11 @@ bool PortPair::hasAncestor(
     }
     if(m_input)
     {
-        foreach(const Link* link, m_input->getConnections())
+        foreach(const Port* port, m_input->getConnectedPorts())
         {
-            Port* p = link->getPortFrom();
-            if(p)
+            if(port)
             {
-                if(p->getNode()->hasAncestor(_node))
+                if(port->getNode()->hasAncestor(_node))
                 {
                     return true;
                 }

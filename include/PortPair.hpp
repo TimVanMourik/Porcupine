@@ -53,6 +53,11 @@ public:
             const Node* _node
             ) const;
     //
+    void repositionPorts(
+            qreal _width,
+            qreal _height
+            );
+    //
     void saveToXml(
             QDomElement& _xmlElement
             );

@@ -129,6 +129,24 @@ const QVector<Link*>& Port::getConnections(
     return m_connections;
 }
 
+QVector<Port*> Port::getConnectedPorts(
+        ) const
+{
+    QVector<Port*> connectedPorts;
+    foreach(Link* link, m_connections)
+    {
+        if(m_type == PortType::INPUT)
+        {
+            connectedPorts.append(link->getPortFrom());
+        }
+        if(m_type == PortType::OUTPUT)
+        {
+            connectedPorts.append(link->getPortTo());
+        }
+    }
+    return connectedPorts;
+}
+
 bool Port::removeLink(
         Link* _link
         )
