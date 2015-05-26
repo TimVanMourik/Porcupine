@@ -2,11 +2,12 @@
 #define NODETREEITEM_H
 
 #include <QStandardItem>
+#include <QVBoxLayout>
 
 class Node;
 class PortPair;
 
-class NodeTreeItem : public QStandardItem
+class NodeTreeItem : public QVBoxLayout
 {
 public:
     //

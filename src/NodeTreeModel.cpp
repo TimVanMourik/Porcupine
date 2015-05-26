@@ -3,14 +3,15 @@
 
 NodeTreeModel::NodeTreeModel(
         ) :
-    QStandardItemModel()
+    QVBoxLayout()
 {
-    setHorizontalHeaderItem(0, new QStandardItem( "Node" ));
-    setHorizontalHeaderItem(1, new QStandardItem( "File name" ));
-    setHorizontalHeaderItem(2, new QStandardItem( "Data type" ));
+    setAlignment(Qt::AlignTop);
+//    setHorizontalHeaderItem(0, new QStandardItem( "Node" ));
+//    setHorizontalHeaderItem(1, new QStandardItem( "File name" ));
+//    setHorizontalHeaderItem(2, new QStandardItem( "Data type" ));
 
     //The only editable item is the file name item, but it's also called when the other QStandardItems are constructed
-    connect(this, SIGNAL(itemChanged(QStandardItem*)), this, SLOT(fileNameFieldChanged(QStandardItem*)));
+//    connect(this, SIGNAL(itemChanged(QStandardItem*)), this, SLOT(fileNameFieldChanged(QStandardItem*)));
 }
 
 void NodeTreeModel::fileNameFieldChanged(
@@ -35,26 +36,30 @@ void NodeTreeModel::fileNameFieldChanged(
     }
 }
 
+#include <QPushButton>
 void NodeTreeModel::addNode(
         const Node* _node
         )
 {
+    QWidget* _widget = new QWidget();
     NodeTreeItem* item = new NodeTreeItem(_node);
-    setItem(this->rowCount(), 0, item);
+    _widget->setLayout(item);
+    addWidget(_widget);
+//    setItem(this->rowCount(), 0, item);
 }
 
 void NodeTreeModel::removeNode(
         const Node* _node
         )
 {
-    for(int i = 0; i < rowCount(); ++i)
-    {
-        if(((NodeTreeItem*) item(i))->hasNode(_node))
-        {
-            removeRow(i);
-            break;
-        }
-    }
+//    for(int i = 0; i < rowCount(); ++i)
+//    {
+//        if(((NodeTreeItem*) item(i))->hasNode(_node))
+//        {
+//            removeRow(i);
+//            break;
+//        }
+//    }
 }
 
 

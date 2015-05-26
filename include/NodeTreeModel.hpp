@@ -2,10 +2,12 @@
 #define NODETREEMODEL_H
 
 #include <QStandardItemModel>
+#include <QVBoxLayout>
 
 class Node;
 
-class NodeTreeModel : public QStandardItemModel
+//class NodeTreeModel : public QStandardItemModel
+class NodeTreeModel : public QVBoxLayout
 {
     Q_OBJECT
 public:
