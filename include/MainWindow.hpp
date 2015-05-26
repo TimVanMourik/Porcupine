@@ -21,7 +21,7 @@ class MainWindow;
 
 class NodeEditor;
 class NodeSetting;
-class NodeListView;
+class NodeListWidget;
 
 class MainWindow : public QMainWindow
 {
@@ -87,7 +87,7 @@ private:
 
     QTabWidget* m_tabLayout;
     QVector<NodeEditor*> m_nodeEditors;
-    NodeListView* m_nodeListView;
+    NodeListWidget* m_nodeListView;
 
     QMenu* m_fileMenu;
     QMenu* m_editMenu;

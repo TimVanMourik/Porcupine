@@ -1,11 +1,15 @@
+#include <QVBoxLayout>
+
 #include "NodeTreeItem.hpp"
 #include "NodeTreeModel.hpp"
 
 NodeTreeModel::NodeTreeModel(
         ) :
-    QVBoxLayout()
+    QWidget(),
+    m_layout(new QVBoxLayout())
 {
-    setAlignment(Qt::AlignTop);
+    m_layout->setAlignment(Qt::AlignTop);
+    setLayout(m_layout);
 //    setHorizontalHeaderItem(0, new QStandardItem( "Node" ));
 //    setHorizontalHeaderItem(1, new QStandardItem( "File name" ));
 //    setHorizontalHeaderItem(2, new QStandardItem( "Data type" ));
@@ -44,7 +48,7 @@ void NodeTreeModel::addNode(
     QWidget* _widget = new QWidget();
     NodeTreeItem* item = new NodeTreeItem(_node);
     _widget->setLayout(item);
-    addWidget(_widget);
+    m_layout->addWidget(_widget);
 //    setItem(this->rowCount(), 0, item);
 }
 

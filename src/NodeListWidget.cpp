@@ -1,15 +1,17 @@
 #include <QStandardItemModel>
 
-#include "NodeListView.hpp"
+#include "NodeListWidget.hpp"
 #include "NodeTreeModel.hpp"
 
-NodeListView::NodeListView(
+NodeListWidget::NodeListWidget(
         QWidget* _parent
         ) :
 //    QTreeView(_parent)
     QWidget(_parent),
-    m_current(0)
+    m_layout(new QVBoxLayout(this)),
+    m_currentModel(0)
 {
+    setLayout(m_layout);
 //    setDragEnabled(true);
 //    viewport()->setAcceptDrops(true);
 //    setDropIndicatorShown(true);
@@ -36,34 +38,40 @@ NodeListView::NodeListView(
 //    }
 //}
 
-void NodeListView::addNodeModel(
+void NodeListWidget::addNodeModel(
         )
 {
     m_nodeTreeModels.append(new NodeTreeModel());
-//    this->setModel(m_nodeTreeModels.last());
+    setModelAt(m_nodeTreeModels.length() - 1);
+//    setModel(m_nodeTreeModels.last());
 //    removeItem();
-    m_current = m_nodeTreeModels.length() - 1;
-    setLayout(m_nodeTreeModels[m_current]);
 }
 
-NodeTreeModel* NodeListView::modelAt(
+NodeTreeModel* NodeListWidget::modelAt(
         unsigned int _i
         )
 {
     return m_nodeTreeModels[_i];
 }
 
-void NodeListView::setModelAt(
+void NodeListWidget::setModelAt(
         int _i
         )
 {
-    setLayout(m_nodeTreeModels[_i]);
+    std::cerr << m_nodeTreeModels[m_currentModel] << "\n";
+//    m_layout->removeWidget((QWidget*) m_nodeTreeModels[m_currentModel]);
+//    m_currentModel = _i;
+    m_layout->addWidget((QWidget*) m_nodeTreeModels[m_currentModel]);
+
+    m_layout->replaceWidget(m_nodeTreeModels[m_currentModel], m_nodeTreeModels[_i]);
+    m_currentModel = _i;
+//    setLayout(m_nodeTreeModels[_i]);
 //    removeItem(m_nodeTreeModels[m_current]);
 //    m_current = _i;
 //    addItem(m_nodeTreeModels[m_current]);
 }
 
-NodeListView::~NodeListView(
+NodeListWidget::~NodeListWidget(
         )
 {
 

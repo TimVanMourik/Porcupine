@@ -21,7 +21,7 @@
 #include "MainWindow.hpp"
 #include "NodeEditor.hpp"
 #include "NodeLibrary.hpp"
-#include "NodeListView.hpp"
+#include "NodeListWidget.hpp"
 //#include "NodeTreeModel.hpp"
 
 MainWindow::MainWindow(
@@ -29,7 +29,7 @@ MainWindow::MainWindow(
         ) :
     QMainWindow(parent),
     m_tabLayout(new QTabWidget(this)),
-    m_nodeListView(new NodeListView(this))
+    m_nodeListView(new NodeListWidget(this))
 {
     //Create an instance of the NodeLibrary
     NodeLibrary& nodeLibrary = NodeLibrary::getInstance();

@@ -2,12 +2,12 @@
 #define NODETREEMODEL_H
 
 #include <QStandardItemModel>
-#include <QVBoxLayout>
+#include <QWidget>
 
 class Node;
-
+class QVBoxLayout;
 //class NodeTreeModel : public QStandardItemModel
-class NodeTreeModel : public QVBoxLayout
+class NodeTreeModel : public QWidget
 {
     Q_OBJECT
 public:
@@ -30,7 +30,9 @@ public slots:
     void fileNameFieldChanged(
             QStandardItem* _item
             );
-//private:
+private:
+    //
+    QVBoxLayout* m_layout;
     //
 //    QVector<const Node*> m_nodes;
 };

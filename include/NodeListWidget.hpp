@@ -9,11 +9,11 @@
 class NodeTreeModel;
 
 //class NodeListView : public QTreeView
-class NodeListView : public QWidget
+class NodeListWidget : public QWidget
 {
 public:
     //
-    NodeListView(
+    NodeListWidget(
             QWidget* _parent = 0
             );
     //
@@ -32,12 +32,16 @@ public:
 //            QDropEvent* _event
 //            );
     //
-    ~NodeListView(
+    ~NodeListWidget(
             );
 
 private:
+    //
+    QVBoxLayout* m_layout;
+    //
     QVector<NodeTreeModel*> m_nodeTreeModels;
-    int m_current;
+    //
+    int m_currentModel;
 };
 
 #endif // TREEVIEW_H
