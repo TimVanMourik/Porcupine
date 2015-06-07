@@ -8,8 +8,7 @@ NodeListWidget::NodeListWidget(
         ) :
 //    QTreeView(_parent)
     QWidget(_parent),
-    m_layout(new QVBoxLayout(this)),
-    m_currentModel(0)
+    m_layout(new QVBoxLayout(this))
 {
     setLayout(m_layout);
 //    setDragEnabled(true);
@@ -42,9 +41,8 @@ void NodeListWidget::addNodeModel(
         )
 {
     m_nodeTreeModels.append(new NodeTreeModel());
+    m_layout->addWidget(m_nodeTreeModels.last());
     setModelAt(m_nodeTreeModels.length() - 1);
-//    setModel(m_nodeTreeModels.last());
-//    removeItem();
 }
 
 NodeTreeModel* NodeListWidget::modelAt(
@@ -58,17 +56,17 @@ void NodeListWidget::setModelAt(
         int _i
         )
 {
-    std::cerr << m_nodeTreeModels[m_currentModel] << "\n";
-//    m_layout->removeWidget((QWidget*) m_nodeTreeModels[m_currentModel]);
-//    m_currentModel = _i;
-    m_layout->addWidget((QWidget*) m_nodeTreeModels[m_currentModel]);
-
-    m_layout->replaceWidget(m_nodeTreeModels[m_currentModel], m_nodeTreeModels[_i]);
-    m_currentModel = _i;
-//    setLayout(m_nodeTreeModels[_i]);
-//    removeItem(m_nodeTreeModels[m_current]);
-//    m_current = _i;
-//    addItem(m_nodeTreeModels[m_current]);
+    for (int i = 0; i < m_layout->count(); ++i)
+    {
+        if(i == _i)
+        {
+            m_layout->itemAt(i)->widget()->setVisible(true);
+        }
+        else
+        {
+            m_layout->itemAt(i)->widget()->setVisible(false);
+        }
+    }
 }
 
 NodeListWidget::~NodeListWidget(

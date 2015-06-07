@@ -40,8 +40,6 @@ private:
     QVBoxLayout* m_layout;
     //
     QVector<NodeTreeModel*> m_nodeTreeModels;
-    //
-    int m_currentModel;
 };
 
 #endif // TREEVIEW_H
