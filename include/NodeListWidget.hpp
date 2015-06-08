@@ -8,7 +8,6 @@
 
 class NodeTreeModel;
 
-//class NodeListView : public QTreeView
 class NodeListWidget : public QWidget
 {
 public:

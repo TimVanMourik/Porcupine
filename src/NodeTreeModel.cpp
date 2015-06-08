@@ -40,16 +40,12 @@ void NodeTreeModel::fileNameFieldChanged(
     }
 }
 
-#include <QPushButton>
 void NodeTreeModel::addNode(
         const Node* _node
         )
 {
-    QWidget* _widget = new QWidget();
     NodeTreeItem* item = new NodeTreeItem(_node);
-    _widget->setLayout(item);
-    m_layout->addWidget(_widget);
-//    setItem(this->rowCount(), 0, item);
+    m_layout->addWidget(item);
 }
 
 void NodeTreeModel::removeNode(

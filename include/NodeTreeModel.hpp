@@ -6,7 +6,7 @@
 
 class Node;
 class QVBoxLayout;
-//class NodeTreeModel : public QStandardItemModel
+
 class NodeTreeModel : public QWidget
 {
     Q_OBJECT

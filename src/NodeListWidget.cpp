@@ -11,6 +11,7 @@ NodeListWidget::NodeListWidget(
     m_layout(new QVBoxLayout(this))
 {
     setLayout(m_layout);
+
 //    setDragEnabled(true);
 //    viewport()->setAcceptDrops(true);
 //    setDropIndicatorShown(true);
@@ -18,9 +19,9 @@ NodeListWidget::NodeListWidget(
 //    setDragDropMode(QAbstractItemView::DragOnly);
 }
 
-#include <iostream>
-#include <QDropEvent>
-#include <QMimeData>
+//#include <iostream>
+//#include <QDropEvent>
+//#include <QMimeData>
 //void NodeListView::dropEvent(
 //        QDropEvent* _event
 //        )
@@ -72,6 +73,10 @@ void NodeListWidget::setModelAt(
 NodeListWidget::~NodeListWidget(
         )
 {
-
+    delete m_layout;
+    foreach (NodeTreeModel* model, m_nodeTreeModels)
+    {
+        delete model;
+    }
 }
 

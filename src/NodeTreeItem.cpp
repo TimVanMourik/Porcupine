@@ -1,4 +1,6 @@
 #include <QPushButton>
+#include <QComboBox>
+#include <QVBoxLayout>
 
 #include "DataType.hpp"
 #include "Node.hpp"
@@ -8,34 +10,62 @@
 NodeTreeItem::NodeTreeItem(
         const Node* _node
         ) :
-//    QVBoxLayout(_node->getName()),
-    QVBoxLayout(),
+    QWidget(),
+    m_layout(new QVBoxLayout(this)),
     m_node(_node)
 {
-    QPushButton* button = new QPushButton();
-    button->setText(_node->getName());
+    setLayout(m_layout);
+    QWidget* widget1 = new QWidget(this);
+    QHBoxLayout* layout1 = new QHBoxLayout(widget1);
+    widget1->setLayout(layout1);
 
-    this->addWidget(button);
-//    setEditable(false);
-//    foreach(PortPair* pair, _node->getPorts())
-//    {
+    QPushButton* button1 = new QPushButton();
+    layout1->addWidget(button1);
+    button1->setText(_node->getName());
+    button1->setDisabled(true);
+
+    QPushButton* button2 = new QPushButton();
+    layout1->addWidget(button2);
+    button2->setText("\\/");
+    button2->setCheckable(false);
+
+    m_layout->addWidget(widget1);
+
+    QPalette palette = QPalette();
+    palette.setColor(QPalette::Background, palette.window().color().darker(110));
+    setAutoFillBackground(true);
+    setPalette(palette);
+    show();
+
+    QWidget* widget2 = new QWidget(this);
+    QVBoxLayout* layout2 = new QVBoxLayout(widget2);
+    widget2->setLayout(layout2);
+
+    foreach(PortPair* pair, _node->getPorts())
+    {
+        QPushButton* button = new QPushButton();
+        layout2->addWidget(button);
+        button->setText(pair->getName());
 //        QList<QStandardItem*> ports;
 
 //        QStandardItem* nameItem = new QStandardItem(pair->getName());
 //        nameItem->setEditable(false);
-//        ports.append(nameItem);
 
 //        QStandardItem* fileItem = new QStandardItem("<file name>");
 //        fileItem->setEditable(true);
-//        ports.append(fileItem);
 //        m_ports[fileItem] = pair;
 
-//        QStandardItem* dataItem = new QStandardItem(pair->getType()[0]->getName());
-//        dataItem->setEditable(false);
-//        ports.append(dataItem);
+        QComboBox* comboBox = new QComboBox();
+        layout2->addWidget(comboBox);
+        foreach(const DataType* type, pair->getType())
+        {
+            comboBox->addItem(type->getName());
+        }
+
 
 //        appendRow(ports);
-//    }
+    }
+    m_layout->addWidget(widget2);
 }
 
 void NodeTreeItem::setHasFilName(
