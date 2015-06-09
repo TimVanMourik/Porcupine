@@ -1,5 +1,6 @@
 #include <QPushButton>
 #include <QComboBox>
+#include <QLabel>
 #include <QVBoxLayout>
 
 #include "DataType.hpp"
@@ -7,6 +8,7 @@
 #include "NodeTreeItem.hpp"
 #include "PortPair.hpp"
 
+#include <iostream>
 NodeTreeItem::NodeTreeItem(
         const Node* _node
         ) :
@@ -19,10 +21,9 @@ NodeTreeItem::NodeTreeItem(
     QHBoxLayout* layout1 = new QHBoxLayout(widget1);
     widget1->setLayout(layout1);
 
-    QPushButton* button1 = new QPushButton();
+    QLabel* button1 = new QLabel();
     layout1->addWidget(button1);
     button1->setText(_node->getName());
-    button1->setDisabled(true);
 
     QPushButton* button2 = new QPushButton();
     layout1->addWidget(button2);
@@ -43,27 +44,26 @@ NodeTreeItem::NodeTreeItem(
 
     foreach(PortPair* pair, _node->getPorts())
     {
-        QPushButton* button = new QPushButton();
-        layout2->addWidget(button);
-        button->setText(pair->getName());
-//        QList<QStandardItem*> ports;
+        QWidget* widget3 = new QWidget(widget2);
+        QHBoxLayout* layout3 = new QHBoxLayout();
+//        std::cerr << "Layout2: x = " << layout2->geometry().x() << ", y = " << layout3->geometry().y() << "\n";
+//        std::cerr << "Layout3: x = " << layout3->geometry().x() << ", y = " << layout3->geometry().y() << "\n";
+//        layout3->setGeometry(QRect(0, 0, 100, 10));
+        widget3->setLayout(layout3);
 
-//        QStandardItem* nameItem = new QStandardItem(pair->getName());
-//        nameItem->setEditable(false);
+        QLabel* portName = new QLabel(pair->getName());
+        layout3->addWidget(portName);
 
-//        QStandardItem* fileItem = new QStandardItem("<file name>");
-//        fileItem->setEditable(true);
-//        m_ports[fileItem] = pair;
+        QLabel* fileName = new QLabel("<file name>");
+        layout3->addWidget(fileName);
 
-        QComboBox* comboBox = new QComboBox();
-        layout2->addWidget(comboBox);
+        QComboBox* dataType = new QComboBox();
         foreach(const DataType* type, pair->getType())
         {
-            comboBox->addItem(type->getName());
+            dataType->addItem(type->getName());
         }
-
-
-//        appendRow(ports);
+        layout3->addWidget(dataType);
+        layout2->addWidget(widget3);
     }
     m_layout->addWidget(widget2);
 }
