@@ -29,15 +29,24 @@ public:
             const Node* _node
             );
     //
+    void paintEvent(
+            QPaintEvent* _event
+            );
+    //
     ~NodeTreeItem(
+            );
+public slots:
+    //
+    void setPortsVisible(
+            bool _visibility
             );
 private:
     //
-    QVBoxLayout* m_layout;
-    //
     const Node* m_node;
     //
-    QMap<QStandardItem*, PortPair*> m_ports;
+    QWidget* m_portBlock;
+    //
+    QMap<QWidget*, PortPair*> m_ports;
 };
 
 #endif // NODETREEITEM_H

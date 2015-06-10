@@ -13,24 +13,27 @@ NodeTreeItem::NodeTreeItem(
         const Node* _node
         ) :
     QWidget(),
-    m_layout(new QVBoxLayout(this)),
+    m_portBlock(new QWidget(this)),
     m_node(_node)
 {
-    setLayout(m_layout);
+    QVBoxLayout* mainLayout = new QVBoxLayout(this);
+    setLayout(mainLayout);
     QWidget* widget1 = new QWidget(this);
     QHBoxLayout* layout1 = new QHBoxLayout(widget1);
+    layout1->setSpacing(0);
     widget1->setLayout(layout1);
+    m_portBlock->setParent(widget1);
 
-    QLabel* button1 = new QLabel();
-    layout1->addWidget(button1);
-    button1->setText(_node->getName());
+    QLabel* nameTag = new QLabel();
+    layout1->addWidget(nameTag);
+    nameTag->setText(_node->getName());
 
-    QPushButton* button2 = new QPushButton();
-    layout1->addWidget(button2);
-    button2->setText("\\/");
-    button2->setCheckable(false);
+    QPushButton* visibilityButton = new QPushButton();
+    layout1->addWidget(visibilityButton);
+    visibilityButton->setText("\\/");
+    visibilityButton->setCheckable(true);
 
-    m_layout->addWidget(widget1);
+    mainLayout->addWidget(widget1);
 
     QPalette palette = QPalette();
     palette.setColor(QPalette::Background, palette.window().color().darker(110));
@@ -38,15 +41,19 @@ NodeTreeItem::NodeTreeItem(
     setPalette(palette);
     show();
 
-    QWidget* widget2 = new QWidget(this);
-    QVBoxLayout* layout2 = new QVBoxLayout(widget2);
-    widget2->setLayout(layout2);
+//    QWidget* widget2 = new QWidget(this);
+    QVBoxLayout* layout2 = new QVBoxLayout(m_portBlock);
+    layout2->setSpacing(0);
+    m_portBlock->setLayout(layout2);
+    m_portBlock->setVisible(false);
 
     foreach(PortPair* pair, _node->getPorts())
     {
-        QWidget* widget3 = new QWidget(widget2);
+        QWidget* widget3 = new QWidget(m_portBlock);
         QHBoxLayout* layout3 = new QHBoxLayout();
-//        std::cerr << "Layout2: x = " << layout2->geometry().x() << ", y = " << layout3->geometry().y() << "\n";
+        layout3->setSpacing(0);
+        layout3->setContentsMargins(0, 0, 0, 0);
+//        std::cerr << "Widget 3: top = " << widget3->contentsMargins().top() << ", bottom = " << widget3->contentsMargins().bottom() << "\n";
 //        std::cerr << "Layout3: x = " << layout3->geometry().x() << ", y = " << layout3->geometry().y() << "\n";
 //        layout3->setGeometry(QRect(0, 0, 100, 10));
         widget3->setLayout(layout3);
@@ -64,8 +71,23 @@ NodeTreeItem::NodeTreeItem(
         }
         layout3->addWidget(dataType);
         layout2->addWidget(widget3);
+        m_ports[widget3] = pair;
     }
-    m_layout->addWidget(widget2);
+    mainLayout->addWidget(m_portBlock);
+
+    connect(visibilityButton, SIGNAL(toggled(bool)), m_portBlock, SLOT(setVisible(bool)));
+}
+
+void NodeTreeItem::paintEvent(
+        QPaintEvent* _event
+        )
+{
+    Q_UNUSED(_event);
+    foreach(QWidget* port, m_ports.keys())
+    {
+//        std::cerr << "Port: x = " << port->geometry().x() << ", y = " << port->geometry().y() << "\n";
+//        std::cerr << "Port: top = " << ((QWidget*) port->parent())->contentsMargins().top() << ", bottom = " << ((QWidget*) port->parent())->contentsMargins().bottom() << "\n";
+    }
 }
 
 void NodeTreeItem::setHasFilName(
@@ -101,9 +123,20 @@ bool NodeTreeItem::hasNode(
 //    }
 }
 
-NodeTreeItem::~NodeTreeItem(
+void NodeTreeItem::setPortsVisible(
+        bool _visibility
         )
 {
 
+}
+
+NodeTreeItem::~NodeTreeItem(
+        )
+{
+    foreach(QWidget* port, m_ports.keys())
+    {
+        ///@todo delete its children first
+        delete port;
+    }
 }
 
