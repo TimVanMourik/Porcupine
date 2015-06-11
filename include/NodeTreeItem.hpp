@@ -29,9 +29,9 @@ public:
             const Node* _node
             );
     //
-    void paintEvent(
-            QPaintEvent* _event
-            );
+//    void paintEvent(
+//            QPaintEvent* _event
+//            );
     //
     ~NodeTreeItem(
             );

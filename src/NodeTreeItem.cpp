@@ -17,16 +17,20 @@ NodeTreeItem::NodeTreeItem(
     m_node(_node)
 {
     QVBoxLayout* mainLayout = new QVBoxLayout(this);
+    mainLayout->setSpacing(0);
+    mainLayout->setContentsMargins(2, 2, 2, 2);
+
     setLayout(mainLayout);
     QWidget* widget1 = new QWidget(this);
     QHBoxLayout* layout1 = new QHBoxLayout(widget1);
     layout1->setSpacing(0);
+    layout1->setContentsMargins(2, 0, 2, 0);
     widget1->setLayout(layout1);
     m_portBlock->setParent(widget1);
 
     QLabel* nameTag = new QLabel();
-    layout1->addWidget(nameTag);
     nameTag->setText(_node->getName());
+    layout1->addWidget(nameTag);
 
     QPushButton* visibilityButton = new QPushButton();
     layout1->addWidget(visibilityButton);
@@ -41,9 +45,9 @@ NodeTreeItem::NodeTreeItem(
     setPalette(palette);
     show();
 
-//    QWidget* widget2 = new QWidget(this);
     QVBoxLayout* layout2 = new QVBoxLayout(m_portBlock);
     layout2->setSpacing(0);
+    layout2->setContentsMargins(4, 3, 3, 3);
     m_portBlock->setLayout(layout2);
     m_portBlock->setVisible(false);
 
@@ -52,16 +56,14 @@ NodeTreeItem::NodeTreeItem(
         QWidget* widget3 = new QWidget(m_portBlock);
         QHBoxLayout* layout3 = new QHBoxLayout();
         layout3->setSpacing(0);
-        layout3->setContentsMargins(0, 0, 0, 0);
-//        std::cerr << "Widget 3: top = " << widget3->contentsMargins().top() << ", bottom = " << widget3->contentsMargins().bottom() << "\n";
-//        std::cerr << "Layout3: x = " << layout3->geometry().x() << ", y = " << layout3->geometry().y() << "\n";
-//        layout3->setGeometry(QRect(0, 0, 100, 10));
+        layout3->setContentsMargins(2, 0, 2, 0);
         widget3->setLayout(layout3);
 
         QLabel* portName = new QLabel(pair->getName());
         layout3->addWidget(portName);
 
         QLabel* fileName = new QLabel("<file name>");
+        fileName->setTextInteractionFlags(Qt::TextEditorInteraction);
         layout3->addWidget(fileName);
 
         QComboBox* dataType = new QComboBox();
@@ -78,17 +80,15 @@ NodeTreeItem::NodeTreeItem(
     connect(visibilityButton, SIGNAL(toggled(bool)), m_portBlock, SLOT(setVisible(bool)));
 }
 
-void NodeTreeItem::paintEvent(
-        QPaintEvent* _event
-        )
-{
-    Q_UNUSED(_event);
-    foreach(QWidget* port, m_ports.keys())
-    {
-//        std::cerr << "Port: x = " << port->geometry().x() << ", y = " << port->geometry().y() << "\n";
-//        std::cerr << "Port: top = " << ((QWidget*) port->parent())->contentsMargins().top() << ", bottom = " << ((QWidget*) port->parent())->contentsMargins().bottom() << "\n";
-    }
-}
+//void NodeTreeItem::paintEvent(
+//        QPaintEvent* _event
+//        )
+//{
+//    Q_UNUSED(_event);
+//    foreach(QWidget* port, m_ports.keys())
+//    {
+//    }
+//}
 
 void NodeTreeItem::setHasFilName(
         QStandardItem* _item,
