@@ -25,11 +25,6 @@ public:
     //
     ~NodeTreeModel(
             );
-public slots:
-    //
-    void fileNameFieldChanged(
-            QStandardItem* _item
-            );
 private:
     //
     QVBoxLayout* m_layout;

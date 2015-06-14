@@ -1,7 +1,6 @@
 #include <QDomDocument>
 
 #include "Argument.hpp"
-//#include "Link.hpp"
 #include "Node.hpp"
 #include "Port.hpp"
 #include "PortPair.hpp"
@@ -68,6 +67,32 @@ const QVector<const DataType*>& PortPair::getType(
         ) const
 {
     return m_dataType;
+}
+
+bool PortPair::hasAncestors(
+        )
+{
+    if(m_input->getConnectedPorts().length() == 0)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+
+bool PortPair::hasDescendants(
+        )
+{
+    if(m_output->getConnectedPorts().length() == 0)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
 }
 
 QVector<PortPair*> PortPair::getAncestors(
@@ -183,36 +208,54 @@ void PortPair::loadFromXml(
     }
 }
 
-void PortPair::setFileName(
-        bool _bool,
+void PortPair::fileNameChanged(
         const QString& _fileName,
-        bool _cascade
+        bool _cascadeUp
         )
 {
-    m_hasFileName = _bool;
-    m_fileName = _fileName;
-    if(m_input)
+    //if file name is valid
+    bool fileValid;
+    if(false)
     {
-        m_input->setHasFileName(_bool);
-
+        fileValid = false;
     }
-    if(m_output)
+    else
     {
-        m_output->setHasFileName(_bool);
+        fileValid = true;
     }
-    if(_cascade)
+    //send file name up the tree
+    if(_cascadeUp && hasAncestors())
     {
         foreach (PortPair* port, getAncestors())
         {
-            port->setFileName(_bool, _fileName, false);
-        }
-        foreach (PortPair* port, getDescendants())
-        {
-            port->setFileName(_bool, _fileName, false);
+            port->fileNameChanged(_fileName, true);
         }
     }
+    else
+    //then send it down again (such that all branches are reached)
+    {
+        m_fileName = _fileName;
+        foreach (PortPair* port, getDescendants())
+        {
+            port->fileNameChanged(_fileName, false);
+        }
+    }
+    if(m_input)
+    {
+        m_input->setHasFileName(fileValid);
+    }
+    if(m_output)
+    {
+        m_output->setHasFileName(fileValid);
+    }
+    emit changeFileName(_fileName);
 }
 
+const QString& PortPair::getFileName(
+            )
+{
+    return m_fileName;
+}
 
 PortPair::~PortPair()
 {

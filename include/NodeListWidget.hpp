@@ -7,6 +7,7 @@
 #include <QVector>
 
 class NodeTreeModel;
+class QScrollArea;
 
 class NodeListWidget : public QWidget
 {
@@ -37,6 +38,7 @@ public:
 private:
     //
     QVBoxLayout* m_layout;
+//    QScrollArea* m_scrollArea;
     //
     QVector<NodeTreeModel*> m_nodeTreeModels;
 };

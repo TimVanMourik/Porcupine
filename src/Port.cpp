@@ -12,6 +12,7 @@
 #include "Link.hpp"
 #include "Preferences.hpp"
 #include "Port.hpp"
+#include "PortPair.hpp"
 
 qreal Port::s_margin = 0;
 qreal Port::s_radius = 4;
@@ -211,12 +212,32 @@ void Port::setOther(
     m_other = _other;
 }
 
+bool Port::hasFileName(
+        ) const
+{
+    return m_hasFileName;
+}
+
 void Port::setHasFileName(
         bool _bool
         )
 {
     m_hasFileName = _bool;
     update();
+}
+
+void Port::fileNameChanged(
+        const QString& _fileName,
+        bool _cascadeUp
+        )
+{
+    m_pair->fileNameChanged(_fileName, _cascadeUp);
+}
+
+const QString& Port::getFileName(
+        ) const
+{
+    return m_pair->getFileName();
 }
 
 Port::~Port(

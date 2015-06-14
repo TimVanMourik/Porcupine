@@ -11,6 +11,7 @@ class QDomElement;
 
 class PortPair : public QGraphicsTextItem
 {
+    Q_OBJECT
 public:
     //
     enum
@@ -42,8 +43,14 @@ public:
     //
     const QVector<const DataType*>& getType(
             ) const;
+    // returns if the port has ancestors
+    bool hasAncestors(
+            );
     // returns the ancestors that are input-output connected via Links. Ancestry does not go via the parent Node.
     QVector<PortPair*> getAncestors(
+            );
+    // returns if the port has descendants
+    bool hasDescendants(
             );
     // returns the descendants that are input-output connected via Links. Descendance does not go via the parent Node.
     QVector<PortPair*> getDescendants(
@@ -67,13 +74,22 @@ public:
             QMap<quint64, Port*>& o_portMap
             );
     //
-    void setFileName(
-            bool _bool,
-            const QString& _fileName = "",
-            bool _cascade = false
-            );
+    const QString& getFileName(
+                );
     //
     ~PortPair(
+            );
+signals:
+    //
+    void changeFileName(
+            const QString& _fileName
+            );
+public slots:
+    /// @brief
+    /// @param _cascadeUp indicates if the file name should be passed up the hierarchy or only down
+    void fileNameChanged(
+            const QString& _fileName = "",
+            bool _cascadeUp = true
             );
 private:
     //

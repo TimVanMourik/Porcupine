@@ -10,6 +10,7 @@ class QVBoxLayout;
 
 class NodeTreeItem : public QWidget
 {
+    Q_OBJECT
 public:
     //
     NodeTreeItem(
@@ -35,11 +36,11 @@ public:
     //
     ~NodeTreeItem(
             );
-public slots:
-    //
-    void setPortsVisible(
-            bool _visibility
-            );
+//public slots:
+//    //
+//    void setPortsVisible(
+//            bool _visibility
+//            );
 private:
     //
     const Node* m_node;

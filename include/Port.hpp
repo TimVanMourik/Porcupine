@@ -76,6 +76,9 @@ public:
     QVector<Port*> getConnectedPorts(
             ) const;
     //
+    bool hasFileName(
+            ) const;
+    //
     bool removeLink(
             Link* _link
             );
@@ -102,6 +105,14 @@ public:
     void setHasFileName(
             bool _bool
             );
+    //
+    void fileNameChanged(
+            const QString& _fileName = "",
+            bool _cascadeUp = true
+            );
+    //
+    const QString& getFileName(
+            ) const;
     //
     void setOther(
             Port* _other

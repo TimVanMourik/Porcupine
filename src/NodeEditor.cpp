@@ -159,6 +159,16 @@ bool NodeEditor::eventFilter(
                     m_newLink->updatePath();
                     portCreated->addConnection(m_newLink);
                     portExisting->addConnection(m_newLink);
+
+                    if(m_newLink->getPortFrom()->hasFileName())
+                    {
+                        m_newLink->getPortTo()->fileNameChanged(m_newLink->getPortFrom()->getFileName(), true);
+                    }
+                    else if(m_newLink->getPortTo()->hasFileName())
+                    {
+                        m_newLink->getPortFrom()->fileNameChanged(m_newLink->getPortTo()->getFileName(), true);
+                    }
+                    // make sure file names work out
                     m_newLink = 0;
                     return true;
                 }
