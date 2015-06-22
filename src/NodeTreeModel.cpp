@@ -9,6 +9,7 @@ NodeTreeModel::NodeTreeModel(
     m_layout(new QVBoxLayout())
 {
     m_layout->setAlignment(Qt::AlignTop);
+
     setLayout(m_layout);
 
     //The only editable item is the file name item, but it's also called when the other QStandardItems are constructed

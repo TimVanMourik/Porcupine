@@ -1,6 +1,7 @@
 #ifndef NODETREEITEM_H
 #define NODETREEITEM_H
 
+#include <QPoint>
 #include <QStandardItem>
 #include <QWidget>
 
@@ -34,6 +35,14 @@ public:
 //            QPaintEvent* _event
 //            );
     //
+    void mousePressEvent(
+            QMouseEvent* _event
+            );
+    //
+    void mouseMoveEvent(
+            QMouseEvent* _event
+            );
+    //
     ~NodeTreeItem(
             );
 //public slots:
@@ -48,6 +57,8 @@ private:
     QWidget* m_portBlock;
     //
     QMap<QWidget*, PortPair*> m_ports;
+    //
+    QPoint m_dragStartPosition;
 };
 
 #endif // NODETREEITEM_H

@@ -1,7 +1,12 @@
-#include <QPushButton>
+#include <QApplication>
 #include <QComboBox>
+#include <QDrag>
+#include <QDropEvent>
 #include <QLabel>
 #include <QLineEdit>
+#include <QMimeData>
+#include <QMouseEvent>
+#include <QPushButton>
 #include <QVBoxLayout>
 
 #include "DataType.hpp"
@@ -15,7 +20,8 @@ NodeTreeItem::NodeTreeItem(
         ) :
     QWidget(),
     m_node(_node),
-    m_portBlock(new QWidget(this))
+    m_portBlock(new QWidget(this)),
+    m_dragStartPosition(QPoint())
 {
     int minimumSize = 0;
     int spacing = 2;
@@ -108,6 +114,45 @@ NodeTreeItem::NodeTreeItem(
     mainLayout->addWidget(m_portBlock);
 
     connect(visibilityButton, SIGNAL(toggled(bool)), m_portBlock, SLOT(setVisible(bool)));
+}
+
+void NodeTreeItem::mousePressEvent(
+        QMouseEvent* _event
+        )
+{
+    if(_event->button() == Qt::LeftButton)
+    {
+        QDrag* drag = new QDrag(this);
+        QMimeData* mimeData = new QMimeData();
+        mimeData->setText(QString("Node moved"));
+        drag->setMimeData(mimeData);
+//        drag->setPixmap();
+        Qt::DropAction dropAction = drag->exec();
+
+        m_dragStartPosition = _event->pos();
+    }
+}
+
+void NodeTreeItem::mouseMoveEvent(
+        QMouseEvent* _event
+        )
+{
+    if(!(_event->buttons() & Qt::LeftButton))
+    {
+        return;
+    }
+    if((_event->pos() - m_dragStartPosition).manhattanLength() < QApplication::startDragDistance())
+    {
+        return;
+    }
+
+    QDrag* drag = new QDrag(this);
+    QMimeData* mimeData = new QMimeData();
+    mimeData->setText(QString("Node moved"));
+    drag->setMimeData(mimeData);
+//        drag->setPixmap();
+    Qt::DropAction dropAction = drag->exec();
+
 }
 
 void NodeTreeItem::setHasFilName(
