@@ -32,10 +32,10 @@ void NodeEditor::install(
     Preferences& preferences = Preferences::getInstance();
     QGraphicsScene* scene = new QGraphicsScene();
     scene->setBackgroundBrush(preferences.getSceneBackgroundBrush());
-    if(!scene)
-    {
-        scene = new QGraphicsScene();
-    }
+//    if(!scene)
+//    {
+//        scene = new QGraphicsScene();
+//    }
     setScene(scene);
     //makes sure that all events from the scene are passed on to the editor
     scene->installEventFilter(this);
@@ -199,7 +199,7 @@ void NodeEditor::keyPressEvent(
                 if(item->type() == Node::Type)
                 {
                     //remove node from list view
-                    m_treeModel->removeNode((const Node*) item);
+//                    m_treeModel->removeNode((const Node*) item);
                 }
                 delete item;
                 //if no break, program may crash when second deleted item was already deletted by first on cascade

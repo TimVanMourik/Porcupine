@@ -14,14 +14,14 @@
 #include "NodeTreeItem.hpp"
 #include "PortPair.hpp"
 
-#include <iostream>
 NodeTreeItem::NodeTreeItem(
-        const Node* _node
+        const Node* _node,
+        QWidget* _parent
         ) :
-    QWidget(),
+    QWidget(_parent),
     m_node(_node),
     m_portBlock(new QWidget(this)),
-    m_dragStartPosition(QPoint())
+    m_position(QPoint())
 {
     int minimumSize = 0;
     int spacing = 2;
@@ -33,7 +33,7 @@ NodeTreeItem::NodeTreeItem(
     QWidget* headerWidget = new QWidget(this);
     QHBoxLayout* layout1 = new QHBoxLayout(headerWidget);
     layout1->setSpacing(0);
-    layout1->setContentsMargins(2, 10, 20, 0);
+    layout1->setContentsMargins(10, 10, 20, 0);
     headerWidget->setLayout(layout1);
     m_portBlock->setParent(headerWidget);
 
@@ -120,16 +120,10 @@ void NodeTreeItem::mousePressEvent(
         QMouseEvent* _event
         )
 {
+    /// @todo make this node the top layer once selected
     if(_event->button() == Qt::LeftButton)
     {
-        QDrag* drag = new QDrag(this);
-        QMimeData* mimeData = new QMimeData();
-        mimeData->setText(QString("Node moved"));
-        drag->setMimeData(mimeData);
-//        drag->setPixmap();
-        Qt::DropAction dropAction = drag->exec();
-
-        m_dragStartPosition = _event->pos();
+        m_position = _event->globalPos();
     }
 }
 
@@ -137,62 +131,33 @@ void NodeTreeItem::mouseMoveEvent(
         QMouseEvent* _event
         )
 {
-    if(!(_event->buttons() & Qt::LeftButton))
-    {
-        return;
-    }
-    if((_event->pos() - m_dragStartPosition).manhattanLength() < QApplication::startDragDistance())
-    {
-        return;
-    }
 
-    QDrag* drag = new QDrag(this);
-    QMimeData* mimeData = new QMimeData();
-    mimeData->setText(QString("Node moved"));
-    drag->setMimeData(mimeData);
-//        drag->setPixmap();
-    Qt::DropAction dropAction = drag->exec();
-
+    const QPoint delta = _event->globalPos() - m_position;
+    move(x(), y() + delta.y());
+    m_position = _event->globalPos();
 }
 
-void NodeTreeItem::setHasFilName(
-        QStandardItem* _item,
-        bool _hasFileName
+void NodeTreeItem::mouseReleaseEvent(
+        QMouseEvent* _event
         )
 {
-//    PortPair* port = m_ports[_item];
-//    if(port)
-//    {
-//        if(_hasFileName)
-//        {
-//            port->setFileName(_hasFileName, _item->text(), true);
-//        }
-//        else
-//        {
-//            port->setFileName(_hasFileName, "", true);
-//        }
-//    }
+    Q_UNUSED(_event);
+    /// @todo check where it was released
+    /// @todo update the order
 }
 
-bool NodeTreeItem::hasNode(
-        const Node* _node
-        )
-{
-//    if(m_node == _node)
-//    {
-//        return true;
-//    }
-//    else
-//    {
-        return false;
-//    }
-}
-
-//void NodeTreeItem::setPortsVisible(
-//        bool _visibility
+//bool NodeTreeItem::hasNode(
+//        const Node* _node
 //        )
 //{
-
+////    if(m_node == _node)
+////    {
+////        return true;
+////    }
+////    else
+////    {
+//        return false;
+////    }
 //}
 
 NodeTreeItem::~NodeTreeItem(

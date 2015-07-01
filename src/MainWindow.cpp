@@ -22,7 +22,6 @@
 #include "NodeEditor.hpp"
 #include "NodeLibrary.hpp"
 #include "NodeListWidget.hpp"
-//#include "NodeTreeModel.hpp"
 
 MainWindow::MainWindow(
         QWidget* parent

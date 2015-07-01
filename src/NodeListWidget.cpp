@@ -1,3 +1,4 @@
+#include <QDropEvent>
 #include <QScrollArea>
 #include <QStandardItemModel>
 
@@ -8,8 +9,7 @@ NodeListWidget::NodeListWidget(
         QWidget* _parent
         ) :
     QWidget(_parent),
-    m_layout(new QVBoxLayout(this))//,
-//    m_scrollArea(new QScrollArea(this))
+    m_layout(new QVBoxLayout(this))
 {
     setLayout(m_layout);
 }
