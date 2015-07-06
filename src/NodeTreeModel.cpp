@@ -16,15 +16,18 @@ NodeTreeModel::NodeTreeModel(
     setFrameStyle(QFrame::StyledPanel);
     setLayout(m_layout);
 //    setAcceptDrops(true);
-
 }
 
 void NodeTreeModel::addNode(
         const Node* _node
         )
 {
+    m_nodes.append(_node);
     NodeTreeItem* item = new NodeTreeItem(_node, this);
     m_layout->addWidget(item);
+    m_nodeList.append(item);
+    item->setNumber(m_nodeList.length());
+//    connect
 }
 
 void NodeTreeModel::removeNode(
@@ -39,6 +42,31 @@ void NodeTreeModel::removeNode(
 //            removeRow(i);
 //            break;
 //        }
+//    }
+}
+
+void NodeTreeModel::nodeMoved(
+        NodeTreeItem* _item
+        )
+{
+    int index = 0;
+    while(m_nodeList[index]->y())
+    {
+        index++;
+        continue;
+    }
+    m_nodeList.insert(index, m_nodeList.takeAt(m_nodeList.indexOf(_item)));
+    updateNodeOrder();
+}
+
+#include <iostream>
+void NodeTreeModel::updateNodeOrder(
+        )
+{
+//    std::cerr<< "Order:\n";
+//    foreach (NodeTreeItem* item, m_nodeList)
+//    {
+//        std::cerr << item->m_number << "\n";
 //    }
 }
 

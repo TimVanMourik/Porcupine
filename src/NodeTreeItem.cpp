@@ -21,7 +21,9 @@ NodeTreeItem::NodeTreeItem(
     QWidget(_parent),
     m_node(_node),
     m_portBlock(new QWidget(this)),
-    m_position(QPoint())
+    m_position(QPoint()),
+    m_numberLabel(0),
+    m_number(0)
 {
     int minimumSize = 0;
     int spacing = 2;
@@ -36,6 +38,10 @@ NodeTreeItem::NodeTreeItem(
     layout1->setContentsMargins(10, 10, 20, 0);
     headerWidget->setLayout(layout1);
     m_portBlock->setParent(headerWidget);
+
+    m_numberLabel = new QLabel();
+    m_numberLabel->setText(QString::number(m_number));
+    layout1->addWidget(m_numberLabel);
 
     QLabel* nameTag = new QLabel();
     nameTag->setText(_node->getName());
@@ -137,13 +143,12 @@ void NodeTreeItem::mouseMoveEvent(
     m_position = _event->globalPos();
 }
 
+#include <iostream>
 void NodeTreeItem::mouseReleaseEvent(
         QMouseEvent* _event
         )
 {
     Q_UNUSED(_event);
-    /// @todo check where it was released
-    /// @todo update the order
 }
 
 //bool NodeTreeItem::hasNode(
@@ -159,6 +164,14 @@ void NodeTreeItem::mouseReleaseEvent(
 //        return false;
 ////    }
 //}
+
+void NodeTreeItem::setNumber(
+        unsigned int _i
+        )
+{
+    m_number = _i;
+    m_numberLabel->setText(QString::number(m_number));
+}
 
 NodeTreeItem::~NodeTreeItem(
         )

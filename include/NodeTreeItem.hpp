@@ -7,6 +7,7 @@
 
 class Node;
 class PortPair;
+class QLabel;
 class QVBoxLayout;
 
 class NodeTreeItem : public QWidget
@@ -27,6 +28,10 @@ public:
 //            const Node* _node
 //            );
     //
+    void setNumber(
+            unsigned int _i
+            );
+    //
     void mousePressEvent(
             QMouseEvent* _event
             );
@@ -41,6 +46,10 @@ public:
     //
     virtual ~NodeTreeItem(
             );
+signals:
+    void moved(
+            NodeTreeItem* _item
+            );
 private:
     //
     const Node* m_node;
@@ -50,6 +59,10 @@ private:
     QMap<QWidget*, PortPair*> m_ports;
     //
     QPoint m_position;
+    //
+    QLabel* m_numberLabel;
+    //
+    unsigned int m_number;
 };
 
 #endif // NODETREEITEM_H

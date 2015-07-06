@@ -5,6 +5,7 @@
 #include <QFrame>
 
 class Node;
+class NodeTreeItem;
 class QVBoxLayout;
 
 class NodeTreeModel : public QFrame
@@ -22,14 +23,23 @@ public:
     void removeNode(
             const Node* _node
             );
+    void updateNodeOrder(
+            );
     //
     ~NodeTreeModel(
+            );
+public slots:
+    /// @brief receives signal that _item just swapped places, so the nodes need to be reordered.
+    void nodeMoved(
+            NodeTreeItem* _item
             );
 private:
     //
     QVBoxLayout* m_layout;
     //
     QVector<const Node*> m_nodes;
+    //
+    QList<NodeTreeItem*> m_nodeList;
 };
 
 #endif // NODETREEMODEL_H
