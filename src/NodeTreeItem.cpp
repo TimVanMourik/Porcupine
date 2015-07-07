@@ -122,6 +122,12 @@ NodeTreeItem::NodeTreeItem(
     connect(visibilityButton, SIGNAL(toggled(bool)), m_portBlock, SLOT(setVisible(bool)));
 }
 
+const Node* NodeTreeItem::getNode(
+        ) const
+{
+    return m_node;
+}
+
 void NodeTreeItem::mousePressEvent(
         QMouseEvent* _event
         )
@@ -149,6 +155,7 @@ void NodeTreeItem::mouseReleaseEvent(
         )
 {
     Q_UNUSED(_event);
+    emit moved(this);
 }
 
 //bool NodeTreeItem::hasNode(

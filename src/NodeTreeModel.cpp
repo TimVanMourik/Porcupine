@@ -27,7 +27,7 @@ void NodeTreeModel::addNode(
     m_layout->addWidget(item);
     m_nodeList.append(item);
     item->setNumber(m_nodeList.length());
-//    connect
+    connect(item, SIGNAL(moved(NodeTreeItem*)), this, SLOT(nodeMoved(NodeTreeItem*)));
 }
 
 void NodeTreeModel::removeNode(
@@ -49,25 +49,30 @@ void NodeTreeModel::nodeMoved(
         NodeTreeItem* _item
         )
 {
-    int index = 0;
-    while(m_nodeList[index]->y())
+    m_nodeList.removeOne(_item);
+    m_layout->removeWidget(_item);
+    int index = m_nodeList.length() + 1;
+    for(int i = 0; i < m_nodeList.length(); ++i)
     {
-        index++;
-        continue;
+        if(m_nodeList[i]->y() > _item->y())
+        {
+            index = i;
+            break;
+        }
     }
-    m_nodeList.insert(index, m_nodeList.takeAt(m_nodeList.indexOf(_item)));
+    m_nodeList.insert(index, _item);
+    m_layout->insertWidget(index, _item);
+
     updateNodeOrder();
 }
 
-#include <iostream>
 void NodeTreeModel::updateNodeOrder(
         )
 {
-//    std::cerr<< "Order:\n";
-//    foreach (NodeTreeItem* item, m_nodeList)
-//    {
-//        std::cerr << item->m_number << "\n";
-//    }
+    for(int i = 0; i < m_nodeList.length(); ++i)
+    {
+        m_nodeList[i]->setNumber(i + 1);
+    }
 }
 
 //#include <iostream>

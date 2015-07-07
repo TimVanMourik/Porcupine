@@ -28,6 +28,9 @@ public:
 //            const Node* _node
 //            );
     //
+    const Node* getNode(
+            ) const;
+    //
     void setNumber(
             unsigned int _i
             );
