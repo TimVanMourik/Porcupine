@@ -49,7 +49,7 @@ void NodeTreeModel::nodeMoved(
         NodeTreeItem* _item
         )
 {
-//    int originalIndex = m_nodeList.indexOf(_item);
+    //remove the current _item
     m_nodeList.removeOne(_item);
     m_layout->removeWidget(_item);
 
@@ -83,9 +83,9 @@ void NodeTreeModel::nodeMoved(
     {
         end = m_nodeList.indexOf(firstChild);
     }
-
     int index = end;
-    if(begin != end)
+
+    if(begin != end) //if begin == end then it's pretty clear where our node should be
     {
         for(int i = begin; i < end; i++)
         {
@@ -131,6 +131,9 @@ void NodeTreeModel::updateNodeOrder(
 NodeTreeModel::~NodeTreeModel(
         )
 {
-//    delete all items;
+    foreach (NodeTreeItem* item, m_nodeList)
+    {
+        delete item;
+    }
 }
 
