@@ -168,6 +168,8 @@ bool NodeEditor::eventFilter(
                     {
                         m_newLink->getPortFrom()->fileNameChanged(m_newLink->getPortTo()->getFileName(), true);
                     }
+                    ///@todo notify the list view to update
+
                     // make sure file names work out
                     m_newLink = 0;
                     return true;
