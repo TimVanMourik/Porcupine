@@ -3,14 +3,14 @@
 
 #include <QPoint>
 #include <QStandardItem>
-#include <QWidget>
+#include <QFrame>
 
 class Node;
 class PortPair;
 class QLabel;
 class QVBoxLayout;
 
-class NodeTreeItem : public QWidget
+class NodeTreeItem : public QFrame
 {
     Q_OBJECT
 public:
@@ -24,12 +24,16 @@ public:
             PortPair* _port
             );
     //
-//    bool hasNode(
-//            const Node* _node
-//            );
+    bool isAncestorOf(
+            NodeTreeItem* _item
+            );
     //
     const Node* getNode(
             ) const;
+    //
+//    bool hasNode(
+//            const Node* _node
+//            );
     //
     void setNumber(
             unsigned int _i

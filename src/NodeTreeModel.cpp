@@ -49,15 +49,52 @@ void NodeTreeModel::nodeMoved(
         NodeTreeItem* _item
         )
 {
+//    int originalIndex = m_nodeList.indexOf(_item);
     m_nodeList.removeOne(_item);
     m_layout->removeWidget(_item);
-    int index = m_nodeList.length() + 1;
+
+    //The node needs to be placed after the last ancestor...
+    NodeTreeItem* lastAncestor = 0;
+    int begin = 0;
     for(int i = 0; i < m_nodeList.length(); ++i)
     {
-        if(m_nodeList[i]->y() > _item->y())
+        if(m_nodeList[i]->isAncestorOf(_item))
         {
-            index = i;
+            lastAncestor = m_nodeList[i];
+        }
+    }
+    if(lastAncestor)
+    {
+        begin = m_nodeList.indexOf(lastAncestor) + 1;
+    }
+
+    NodeTreeItem* firstChild = 0;
+    int end = m_nodeList.length();
+    //...and before the first child
+    for(int i = begin; i < end; ++i)
+    {
+        if(_item->isAncestorOf(m_nodeList[i]))
+        {
+            firstChild = m_nodeList[i];
             break;
+        }
+    }
+    if(firstChild)
+    {
+        end = m_nodeList.indexOf(firstChild);
+    }
+
+    int index = end;
+    if(begin != end)
+    {
+        for(int i = begin; i < end; i++)
+        {
+            //if the item is placed above me, then insert here
+            if(m_nodeList[i]->y() > _item->y())
+            {
+                index = i;
+                break;
+            }
         }
     }
     m_nodeList.insert(index, _item);

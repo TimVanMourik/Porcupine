@@ -18,7 +18,7 @@ NodeTreeItem::NodeTreeItem(
         const Node* _node,
         QWidget* _parent
         ) :
-    QWidget(_parent),
+    QFrame(_parent),
     m_node(_node),
     m_portBlock(new QWidget(this)),
     m_position(QPoint()),
@@ -31,7 +31,10 @@ NodeTreeItem::NodeTreeItem(
     mainLayout->setSpacing(0);
     mainLayout->setContentsMargins(2, 2, 2, 2);
 
+    setFrameShadow(QFrame::Raised);
+    setFrameStyle(QFrame::StyledPanel);
     setLayout(mainLayout);
+
     QWidget* headerWidget = new QWidget(this);
     QHBoxLayout* layout1 = new QHBoxLayout(headerWidget);
     layout1->setSpacing(0);
@@ -122,6 +125,13 @@ NodeTreeItem::NodeTreeItem(
     connect(visibilityButton, SIGNAL(toggled(bool)), m_portBlock, SLOT(setVisible(bool)));
 }
 
+bool NodeTreeItem::isAncestorOf(
+        NodeTreeItem* _item
+        )
+{
+    return _item->getNode()->hasAncestor(m_node);
+}
+
 const Node* NodeTreeItem::getNode(
         ) const
 {
@@ -132,7 +142,8 @@ void NodeTreeItem::mousePressEvent(
         QMouseEvent* _event
         )
 {
-    /// @todo make this node the top layer once selected
+    raise();
+//    setWindowOpacity(0.5);
     if(_event->button() == Qt::LeftButton)
     {
         m_position = _event->globalPos();
@@ -149,12 +160,12 @@ void NodeTreeItem::mouseMoveEvent(
     m_position = _event->globalPos();
 }
 
-#include <iostream>
 void NodeTreeItem::mouseReleaseEvent(
         QMouseEvent* _event
         )
 {
     Q_UNUSED(_event);
+//    setWindowOpacity(1);
     emit moved(this);
 }
 
