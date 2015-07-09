@@ -106,6 +106,12 @@ public:
             QMap<quint64, Port*>& o_portMap
             );
     //
+//    QVector<const Node*> getAncestors(
+//            ) const;
+    /// @brief returns an in-order list of descendants that are input-output connected via Links.
+    QVector<const Node*> getDescendants(
+            ) const;
+    //
     bool hasAncestor(
             const Node*
             ) const;

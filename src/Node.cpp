@@ -287,6 +287,21 @@ bool Node::hasAncestor(
     return false;
 }
 
+QVector<const Node*> Node::getDescendants(
+        ) const
+{
+    //get child nodes
+    //add their children
+    QVector<const Node*> children();
+    foreach (const PortPair* port, m_ports)
+    {
+//        foreach(, port)
+    }
+
+
+    return QVector<const Node*>();
+}
+
 const QVector<PortPair*>& Node::getPorts(
         ) const
 {

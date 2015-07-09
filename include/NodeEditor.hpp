@@ -20,10 +20,12 @@ class Link;
 class QGraphicsScene;
 class QKeyEvent;
 class QDomDocument;
+class QDomElement;
 class NodeSetting;
 
 class NodeEditor : public QGraphicsView
 {
+    Q_OBJECT
 public:
     //
     explicit NodeEditor(
@@ -74,6 +76,11 @@ public:
             );
     //
     ~NodeEditor(
+            );
+signals:
+    void linkCreated(
+            const Node* _from,
+            const Node* _to
             );
 private:
     //

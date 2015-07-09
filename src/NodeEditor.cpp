@@ -5,6 +5,7 @@
 #include <iostream>
 
 #include <QDomDocument>
+#include <QDomElement>
 #include <QPointF>
 #include <QGraphicsScene>
 #include <QGraphicsSceneMouseEvent>
@@ -169,7 +170,7 @@ bool NodeEditor::eventFilter(
                         m_newLink->getPortFrom()->fileNameChanged(m_newLink->getPortTo()->getFileName(), true);
                     }
                     ///@todo notify the list view to update
-
+                    emit linkCreated(m_newLink->getPortFrom()->getNode(), m_newLink->getPortTo()->getNode());
                     // make sure file names work out
                     m_newLink = 0;
                     return true;
@@ -289,6 +290,7 @@ void NodeEditor::setTreeModel(
         )
 {
     m_treeModel = _treeModel;
+    connect(this, SIGNAL(linkCreated(const Node*, const Node*)), m_treeModel, SLOT(linkCreated(const Node*, const Node*)));
 }
 
 
