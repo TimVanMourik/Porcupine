@@ -69,7 +69,7 @@ const QVector<const DataType*>& PortPair::getType(
     return m_dataType;
 }
 
-bool PortPair::hasAncestors(
+bool PortPair::hasAncestorPorts(
         )
 {
     if(m_input->getConnectedPorts().length() == 0)
@@ -82,7 +82,7 @@ bool PortPair::hasAncestors(
     }
 }
 
-bool PortPair::hasDescendants(
+bool PortPair::hasDescendantPorts(
         )
 {
     if(m_output->getConnectedPorts().length() == 0)
@@ -95,7 +95,7 @@ bool PortPair::hasDescendants(
     }
 }
 
-QVector<PortPair*> PortPair::getAncestors(
+QVector<PortPair*> PortPair::getAncestorPorts(
         )
 {
     QVector<PortPair*> ports;
@@ -103,7 +103,7 @@ QVector<PortPair*> PortPair::getAncestors(
     {
         PortPair* previous = port->getPortPair();
         ports.append(previous);
-        foreach(PortPair* pair, previous->getAncestors())
+        foreach(PortPair* pair, previous->getAncestorPorts())
         {
             ports.append(pair);
         }
@@ -111,7 +111,7 @@ QVector<PortPair*> PortPair::getAncestors(
     return ports;
 }
 
-QVector<PortPair*> PortPair::getDescendants(
+QVector<PortPair*> PortPair::getDescendantPorts(
         )
 {
     QVector<PortPair*> ports;
@@ -119,12 +119,25 @@ QVector<PortPair*> PortPair::getDescendants(
     {
         PortPair* previous = port->getPortPair();
         ports.append(previous);
-        foreach(PortPair* pair, previous->getDescendants())
+        foreach(PortPair* pair, previous->getDescendantPorts())
         {
             ports.append(pair);
         }
     }
     return ports;
+}
+
+QVector<const Node*> PortPair::getDescendantNodes(
+        ) const
+{
+    QVector<const Node*> children;
+    foreach(Port* port, m_output->getConnectedPorts())
+    {
+        children.append(port->getNode());
+        children.append(port->getNode()->getDescendants());
+    }
+    ///@todo children.removeDuplicates();
+    return children;
 }
 
 void PortPair::repositionPorts(
@@ -142,7 +155,7 @@ void PortPair::repositionPorts(
     }
 }
 
-bool PortPair::hasAncestor(
+bool PortPair::hasNodeAncestor(
         const Node* _node
         ) const
 {
@@ -224,9 +237,9 @@ void PortPair::fileNameChanged(
         fileValid = true;
     }
     //send file name up the tree
-    if(_cascadeUp && hasAncestors())
+    if(_cascadeUp && hasAncestorPorts())
     {
-        foreach (PortPair* port, getAncestors())
+        foreach (PortPair* port, getAncestorPorts())
         {
             port->fileNameChanged(_fileName, true);
         }
@@ -235,7 +248,7 @@ void PortPair::fileNameChanged(
     //then send it down again (such that all branches are reached)
     {
         m_fileName = _fileName;
-        foreach (PortPair* port, getDescendants())
+        foreach (PortPair* port, getDescendantPorts())
         {
             port->fileNameChanged(_fileName, false);
         }

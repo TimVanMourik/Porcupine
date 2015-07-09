@@ -279,7 +279,7 @@ bool Node::hasAncestor(
     }
     foreach(const PortPair* port, m_ports)
     {
-        if(port->hasAncestor(_node))
+        if(port->hasNodeAncestor(_node))
         {
             return true;
         }
@@ -292,10 +292,10 @@ QVector<const Node*> Node::getDescendants(
 {
     //get child nodes
     //add their children
-    QVector<const Node*> children();
-    foreach (const PortPair* port, m_ports)
+    QVector<const Node*> children;
+    foreach(const PortPair* port, m_ports)
     {
-//        foreach(, port)
+//        foreach(, port->)
     }
 
 

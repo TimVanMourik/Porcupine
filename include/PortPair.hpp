@@ -44,19 +44,25 @@ public:
     const QVector<const DataType*>& getType(
             ) const;
     /// @brief returns if the port has ancestors
-    bool hasAncestors(
+    bool hasAncestorPorts(
             );
     /// @brief returns the ancestors that are input-output connected via Links. Ancestry does not go via the parent Node.
-    QVector<PortPair*> getAncestors(
+    QVector<PortPair*> getAncestorPorts(
             );
     /// @brief returns if the port has descendants
-    bool hasDescendants(
+    bool hasDescendantPorts(
             );
     /// @brief returns the descendants that are input-output connected via Links. Descendance does not go via the parent Node.
-    QVector<PortPair*> getDescendants(
+    QVector<PortPair*> getDescendantPorts(
             );
     //
-    bool hasAncestor(
+//    QVector<const Node*> getAncestorNodes(
+//            ) const;
+    //
+    QVector<const Node*> getDescendantNodes(
+            ) const;
+    //
+    bool hasNodeAncestor(
             const Node* _node
             ) const;
     //

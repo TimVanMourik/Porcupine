@@ -138,7 +138,7 @@ void NodeTreeModel::linkCreated(
 {
     Q_UNUSED(_from);
     Q_UNUSED(_to);
-//    std::cerr << "Link created\n";
+    std::cerr << "Link created\n";
 }
 
 NodeTreeModel::~NodeTreeModel(
