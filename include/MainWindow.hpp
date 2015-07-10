@@ -21,7 +21,8 @@ class MainWindow;
 
 class NodeEditor;
 class NodeSetting;
-class NodeListWidget;
+//class NodeListWidget;
+class NodeTreeEditor;
 
 class MainWindow : public QMainWindow
 {
@@ -44,6 +45,10 @@ private slots:
     //
     void tabChanged(
             int _newTab
+            );
+    //
+    void setFileAt(
+            int _tabNumber
             );
 
     //
@@ -85,9 +90,10 @@ private:
     void loadNodes(
             );
 
-    QTabWidget* m_tabLayout;
+    QTabWidget* m_nodeEditorWidget;
+    QWidget* m_nodeTreeWidget;
     QVector<NodeEditor*> m_nodeEditors;
-    NodeListWidget* m_nodeListView;
+    QVector<NodeTreeEditor*> m_nodeTreeEditors;
 
     QMenu* m_fileMenu;
     QMenu* m_editMenu;
@@ -104,6 +110,7 @@ private:
     QAction* m_copyAct;
     QAction* m_pasteAct;
 
+    /// @brief
     QVector<QAction*> m_nodeActs;
     /// @brief
     QXmlSchemaValidator* m_nodeValidator;

@@ -14,7 +14,7 @@
 
 #include <QGraphicsView>
 
-#include "NodeTreeModel.hpp"
+#include "NodeTreeEditor.hpp"
 
 class Link;
 class QGraphicsScene;
@@ -65,10 +65,10 @@ public:
             );
     //
     void setTreeModel(
-            NodeTreeModel* _treeModel
+            NodeTreeEditor* _treeModel
             );
     //
-    NodeTreeModel* getTreeModel(
+    NodeTreeEditor* getTreeModel(
             ) const;
     //
     Node* addNode(
@@ -90,7 +90,7 @@ private:
     //New link is created such that it always goes from an output port to an input port
     Link* m_newLink;
     //
-    NodeTreeModel* m_treeModel;
+    NodeTreeEditor* m_treeModel;
 };
 
 #endif // NODEEDITOR_HPP

@@ -8,12 +8,12 @@ class Node;
 class NodeTreeItem;
 class QVBoxLayout;
 
-class NodeTreeModel : public QFrame
+class NodeTreeEditor : public QFrame
 {
     Q_OBJECT
 public:
     //
-    NodeTreeModel(
+    NodeTreeEditor(
             );
     //
     void addNode(
@@ -27,7 +27,7 @@ public:
     void updateNodeOrder(
             );
     //
-    ~NodeTreeModel(
+    ~NodeTreeEditor(
             );
 public slots:
     /// @brief receives signal that _item just swapped places, so the nodes need to be reordered.

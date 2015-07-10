@@ -6,7 +6,7 @@
 #include <QVBoxLayout>
 #include <QVector>
 
-class NodeTreeModel;
+class NodeTreeEditor;
 class QScrollArea;
 
 class NodeListWidget : public QWidget
@@ -20,7 +20,7 @@ public:
     void addNodeModel(
             );
     //
-    NodeTreeModel* modelAt(
+    NodeTreeEditor* modelAt(
             unsigned int _i
             );
     //
@@ -40,7 +40,7 @@ private:
     QVBoxLayout* m_layout;
 //    QScrollArea* m_scrollArea;
     //
-    QVector<NodeTreeModel*> m_nodeTreeModels;
+    QVector<NodeTreeEditor*> m_nodeTreeModels;
 };
 
 #endif // TREEVIEW_H

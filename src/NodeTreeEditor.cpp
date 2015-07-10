@@ -3,9 +3,9 @@
 #include <QVBoxLayout>
 
 #include "NodeTreeItem.hpp"
-#include "NodeTreeModel.hpp"
+#include "NodeTreeEditor.hpp"
 
-NodeTreeModel::NodeTreeModel(
+NodeTreeEditor::NodeTreeEditor(
         ) :
     QFrame(),
     m_layout(new QVBoxLayout())
@@ -18,7 +18,7 @@ NodeTreeModel::NodeTreeModel(
 //    setAcceptDrops(true);
 }
 
-void NodeTreeModel::addNode(
+void NodeTreeEditor::addNode(
         const Node* _node
         )
 {
@@ -30,7 +30,7 @@ void NodeTreeModel::addNode(
     connect(item, SIGNAL(moved(NodeTreeItem*)), this, SLOT(nodeMoved(NodeTreeItem*)));
 }
 
-void NodeTreeModel::removeNode(
+void NodeTreeEditor::removeNode(
         const Node* _node
         )
 {
@@ -45,7 +45,7 @@ void NodeTreeModel::removeNode(
 //    }
 }
 
-void NodeTreeModel::nodeMoved(
+void NodeTreeEditor::nodeMoved(
         NodeTreeItem* _item
         )
 {
@@ -105,7 +105,7 @@ void NodeTreeModel::nodeMoved(
 
 
 
-void NodeTreeModel::updateNodeOrder(
+void NodeTreeEditor::updateNodeOrder(
         )
 {
     for(int i = 0; i < m_nodeList.length(); ++i)
@@ -131,17 +131,22 @@ void NodeTreeModel::updateNodeOrder(
 //}
 
 #include <iostream>
-void NodeTreeModel::linkCreated(
+void NodeTreeEditor::linkCreated(
         const Node* _from,
         const Node* _to
         )
 {
     Q_UNUSED(_from);
     Q_UNUSED(_to);
+    ///@todo find matching two items
+
+    QVector<const Node*> children;
+//    children.append(_to);
+//    children.append(_to.);
     std::cerr << "Link created\n";
 }
 
-NodeTreeModel::~NodeTreeModel(
+NodeTreeEditor::~NodeTreeEditor(
         )
 {
     foreach (NodeTreeItem* item, m_nodeList)

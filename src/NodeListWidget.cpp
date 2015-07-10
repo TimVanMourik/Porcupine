@@ -3,7 +3,7 @@
 #include <QStandardItemModel>
 
 #include "NodeListWidget.hpp"
-#include "NodeTreeModel.hpp"
+#include "NodeTreeEditor.hpp"
 
 NodeListWidget::NodeListWidget(
         QWidget* _parent
@@ -17,12 +17,12 @@ NodeListWidget::NodeListWidget(
 void NodeListWidget::addNodeModel(
         )
 {
-    m_nodeTreeModels.append(new NodeTreeModel());
+    m_nodeTreeModels.append(new NodeTreeEditor());
     m_layout->addWidget(m_nodeTreeModels.last());
     setModelAt(m_nodeTreeModels.length() - 1);
 }
 
-NodeTreeModel* NodeListWidget::modelAt(
+NodeTreeEditor* NodeListWidget::modelAt(
         unsigned int _i
         )
 {
@@ -51,7 +51,7 @@ NodeListWidget::~NodeListWidget(
         )
 {
     delete m_layout;
-    foreach (NodeTreeModel* model, m_nodeTreeModels)
+    foreach (NodeTreeEditor* model, m_nodeTreeModels)
     {
         delete model;
     }

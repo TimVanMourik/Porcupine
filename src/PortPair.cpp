@@ -134,7 +134,7 @@ QVector<const Node*> PortPair::getDescendantNodes(
     foreach(Port* port, m_output->getConnectedPorts())
     {
         children.append(port->getNode());
-        children.append(port->getNode()->getDescendants());
+//        children.append(port->getNode()->getDescendants());
     }
     ///@todo children.removeDuplicates();
     return children;

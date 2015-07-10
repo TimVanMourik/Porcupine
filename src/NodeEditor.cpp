@@ -286,7 +286,7 @@ void NodeEditor::loadFromXml(
 }
 
 void NodeEditor::setTreeModel(
-        NodeTreeModel* _treeModel
+        NodeTreeEditor* _treeModel
         )
 {
     m_treeModel = _treeModel;
@@ -294,7 +294,7 @@ void NodeEditor::setTreeModel(
 }
 
 
-NodeTreeModel* NodeEditor::getTreeModel(
+NodeTreeEditor* NodeEditor::getTreeModel(
         ) const
 {
     return m_treeModel;
