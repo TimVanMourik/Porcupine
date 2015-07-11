@@ -43,10 +43,6 @@ private slots:
             QKeyEvent* _event
             );
     //
-    void tabChanged(
-            int _newTab
-            );
-    //
     void setFileAt(
             int _tabNumber
             );
@@ -94,6 +90,8 @@ private:
     QWidget* m_nodeTreeWidget;
     QVector<NodeEditor*> m_nodeEditors;
     QVector<NodeTreeEditor*> m_nodeTreeEditors;
+
+    int m_currentFileIndex;
 
     QMenu* m_fileMenu;
     QMenu* m_editMenu;

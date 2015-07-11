@@ -41,7 +41,7 @@ SOURCES +=          $$ROOT/main.cpp \
                     $$ROOT/src/Node.cpp \
                     $$ROOT/src/NodeEditor.cpp \
                     $$ROOT/src/NodeLibrary.cpp \
-                    $$ROOT/src/NodeListWidget.cpp \
+#                    $$ROOT/src/NodeListWidget.cpp \
                     $$ROOT/src/NodeSetting.cpp \
                     $$ROOT/src/NodeTreeEditor.cpp \
                     $$ROOT/src/Port.cpp \
@@ -55,7 +55,7 @@ HEADERS  +=         $$ROOT/include/Argument.hpp \
                     $$ROOT/include/Node.hpp \
                     $$ROOT/include/NodeEditor.hpp \
                     $$ROOT/include/NodeLibrary.hpp \
-                    $$ROOT/include/NodeListWidget.hpp \
+#                    $$ROOT/include/NodeListWidget.hpp \
                     $$ROOT/include/NodeSetting.hpp \
                     $$ROOT/include/NodeTreeItem.hpp \
                     $$ROOT/include/NodeTreeEditor.hpp \

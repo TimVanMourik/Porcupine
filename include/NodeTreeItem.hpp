@@ -14,7 +14,7 @@ class NodeTreeItem : public QFrame
 {
     Q_OBJECT
 public:
-    //
+    ///@todo make sure that the item doesn't flash before moving to the right position
     NodeTreeItem(
             const Node* _node,
             QWidget* _parent

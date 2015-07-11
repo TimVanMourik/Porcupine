@@ -20,7 +20,7 @@ NodeTreeItem::NodeTreeItem(
         ) :
     QFrame(_parent),
     m_node(_node),
-    m_portBlock(new QWidget(this)),
+    m_portBlock(new QWidget(/*this*/)),
     m_position(QPoint()),
     m_numberLabel(0),
     m_number(0)

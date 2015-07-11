@@ -22,7 +22,6 @@
 #include "NodeEditor.hpp"
 #include "NodeTreeEditor.hpp"
 #include "NodeLibrary.hpp"
-//#include "NodeListWidget.hpp"
 
 MainWindow::MainWindow(
         QWidget* parent
@@ -31,17 +30,18 @@ MainWindow::MainWindow(
     m_nodeEditorWidget(new QTabWidget(this)),
     m_nodeTreeWidget(new QWidget(this)),
     m_nodeEditors(0),
-    m_nodeTreeEditors(0)
+    m_nodeTreeEditors(0),
+    m_currentFileIndex(0)
 {
     //Create an instance of the NodeLibrary
     NodeLibrary& nodeLibrary = NodeLibrary::getInstance();
     Q_UNUSED(nodeLibrary);
 
     //
-//    m_nodeTreeWidget->setLayout(new QVBoxLayout(this));
-//    m_nodeEditorWidget->setLayout(new QVBoxLayout(this));
+    new QVBoxLayout(m_nodeTreeWidget);
+    new QVBoxLayout(m_nodeEditorWidget);
 
-    //Make the MainWindow and its layout for the central widget
+//    Make the MainWindow and its layout for the central widget
     QSplitter* layout = new QSplitter();
     setCentralWidget(layout);
 
@@ -59,31 +59,15 @@ MainWindow::MainWindow(
     layout->setStretchFactor(0, 1);
     layout->setStretchFactor(1, 12);
 
-    //Add a tab
-    m_nodeEditors.append(new NodeEditor(this));
-    m_nodeTreeEditors.append(new NodeTreeEditor());
-
-    m_nodeEditorWidget->addTab(m_nodeEditors.last(), tr("Untitled"));
-    m_nodeTreeWidget->layout()->addWidget(m_nodeTreeEditors.last());
-
-    setFileAt(m_nodeTreeEditors.length() - 1);
-
-
-
-    //Install an empty tab
-//    QGraphicsScene* scene = new QGraphicsScene();
-//    scene->setBackgroundBrush(preferences.getSceneBackgroundBrush());
-//    m_nodeEditors[m_tabLayout->currentIndex()]->install(scene);
-    m_nodeEditors[0]->setTreeModel(m_nodeTreeEditors[0]);
-    m_nodeEditors[m_nodeEditorWidget->currentIndex()]->install();
-
     createActions();
     createMenus();
 
     loadDataTypes();
     loadNodes();
 
-    connect(m_nodeEditorWidget, SIGNAL(currentChanged(int)), this, SLOT(tabChanged(int)));
+    newFile();
+
+    connect(m_nodeEditorWidget, SIGNAL(currentChanged(int)), this, SLOT(setFileAt(int)));
 }
 
 //void MainWindow::contextMenuEvent(
@@ -174,15 +158,6 @@ void MainWindow::updateNodeMenu(
     connect(m_nodesMenu, SIGNAL(triggered(QAction*)), this, SLOT(nodeSlot(QAction*)));
 }
 
-void MainWindow::tabChanged(
-        int _newTab
-        )
-{
-//    std::cerr << "Tab: " << _newTab << "\n";
-//    m_nodeListView->setModelAt(_newTab);
-    setFileAt(_newTab);
-}
-
 void MainWindow::nodeSlot(
         QAction* _action
         )
@@ -253,25 +228,24 @@ void MainWindow::printFile(
 void MainWindow::newFile(
         )
 {
-    m_nodeTreeEditors.append(new NodeTreeEditor());
 //    Preferences& preferences = Preferences::getInstance();
 
     //Create a node editor
     m_nodeEditors.append(new NodeEditor(this));
-    unsigned int tabNumber = m_nodeEditors.length() - 1;
+    m_nodeTreeEditors.append(new NodeTreeEditor());
 
     //Add it to a new tab
-    m_nodeEditorWidget->addTab(m_nodeEditors.last(), tr("Untitled"));
-    m_nodeEditorWidget->setCurrentIndex(tabNumber);
-    m_nodeEditors.last()->setTreeModel(m_nodeTreeEditors[tabNumber]);
+    m_currentFileIndex = m_nodeEditors.length() - 1;
+    m_nodeEditorWidget->addTab(m_nodeEditors[m_currentFileIndex], tr("Untitled"));
+    m_nodeTreeWidget->layout()->addWidget(m_nodeTreeEditors[m_currentFileIndex]);
 
-    setFileAt(tabNumber);
+    m_nodeEditors[m_currentFileIndex]->setTreeModel(m_nodeTreeEditors[m_currentFileIndex]);
+
+    setFileAt(m_currentFileIndex);
     //Install an empty scene in the tab
 //    QGraphicsScene* scene = new QGraphicsScene();
 //    scene->setBackgroundBrush(preferences.getSceneBackgroundBrush());
-//    m_nodeEditors.last()->install(scene);
-
-    m_nodeEditors.last()->install();
+    m_nodeEditors.last()->install(/*scene*/);
 }
 
 void MainWindow::undoEdit(
@@ -303,18 +277,18 @@ void MainWindow::addNode(
         NodeSetting* _setting
         )
 {
-    unsigned int tabIndex = m_nodeEditorWidget->currentIndex();
-    m_nodeEditors[tabIndex]->addNode(_setting);
+    m_nodeEditors[m_currentFileIndex]->addNode(_setting);
 }
 
 void MainWindow::setFileAt(
         int _tabNumber
         )
 {
-    m_nodeEditorWidget->setCurrentIndex(_tabNumber);
+    m_currentFileIndex = _tabNumber;
+    m_nodeEditorWidget->setCurrentIndex(m_currentFileIndex);
     for (int i = 0; i < m_nodeTreeWidget->layout()->count(); ++i)
     {
-        if(i == _tabNumber)
+        if(i == m_currentFileIndex)
         {
             m_nodeTreeWidget->layout()->itemAt(i)->widget()->setVisible(true);
         }
