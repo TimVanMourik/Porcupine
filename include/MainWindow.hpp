@@ -19,9 +19,9 @@ namespace Ui {
 class MainWindow;
 }
 
+class CodeEditor;
 class NodeEditor;
 class NodeSetting;
-//class NodeListWidget;
 class NodeTreeEditor;
 
 class MainWindow : public QMainWindow
@@ -88,8 +88,11 @@ private:
 
     QTabWidget* m_nodeEditorWidget;
     QWidget* m_nodeTreeWidget;
+    QTabWidget* m_codeEditorWidget;
+
     QVector<NodeEditor*> m_nodeEditors;
     QVector<NodeTreeEditor*> m_nodeTreeEditors;
+    QVector<CodeEditor*> m_codeEditors;
 
     int m_currentFileIndex;
 

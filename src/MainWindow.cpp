@@ -18,6 +18,7 @@
 #include <QSplitter>
 #include <QTabWidget>
 
+#include "CodeEditor.hpp"
 #include "MainWindow.hpp"
 #include "NodeEditor.hpp"
 #include "NodeTreeEditor.hpp"
@@ -29,8 +30,10 @@ MainWindow::MainWindow(
     QMainWindow(parent),
     m_nodeEditorWidget(new QTabWidget(this)),
     m_nodeTreeWidget(new QWidget(this)),
+    m_codeEditorWidget(new QTabWidget(this)),
     m_nodeEditors(0),
     m_nodeTreeEditors(0),
+    m_codeEditors(0),
     m_currentFileIndex(0)
 {
     //Create an instance of the NodeLibrary
@@ -40,6 +43,7 @@ MainWindow::MainWindow(
     //
     new QVBoxLayout(m_nodeTreeWidget);
     new QVBoxLayout(m_nodeEditorWidget);
+    new QVBoxLayout(m_codeEditorWidget);
 
 //    Make the MainWindow and its layout for the central widget
     QSplitter* layout = new QSplitter();

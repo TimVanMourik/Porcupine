@@ -34,6 +34,7 @@ MOC_DIR =           ./moc/
 
 SOURCES +=          $$ROOT/main.cpp \
                     $$ROOT/src/Argument.cpp \
+                    $$ROOT/src/CodeEditor.cpp \
                     $$ROOT/src/DataType.cpp \
                     $$ROOT/src/NodeTreeItem.cpp \
                     $$ROOT/src/Link.cpp \
@@ -48,6 +49,7 @@ SOURCES +=          $$ROOT/main.cpp \
                     $$ROOT/src/Preferences.cpp
 
 HEADERS  +=         $$ROOT/include/Argument.hpp \
+                    $$ROOT/include/CodeEditor.hpp \
                     $$ROOT/include/DataType.hpp \
                     $$ROOT/include/Link.hpp \
                     $$ROOT/include/MainWindow.hpp \
