@@ -138,6 +138,12 @@ const Node* NodeTreeItem::getNode(
     return m_node;
 }
 
+QVector<const Node*> NodeTreeItem::getDescendants(
+        )
+{
+    return m_node->getDescendants();
+}
+
 void NodeTreeItem::mousePressEvent(
         QMouseEvent* _event
         )

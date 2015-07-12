@@ -290,13 +290,20 @@ bool Node::hasAncestor(
 QVector<const Node*> Node::getDescendants(
         ) const
 {
-    QVector<const Node*> children;
-//    foreach(const PortPair* port, m_ports)
-//    {
-//        children.append(port->getDescendantNodes());
-//    }
-    ///@todo remove duplicates
-    return children;
+    QVector<const Node*> descendants;
+    //Add children
+    foreach(const PortPair* port, m_ports)
+    {
+        QVector<const Node*> portDescendant = port->getDescendantNodes();
+        foreach (const Node* descendant, portDescendant)
+        {
+            if(!descendants.contains(descendant))
+            {
+                descendants.append(descendant);
+            }
+        }
+    }
+    return descendants;
 }
 
 const QVector<PortPair*>& Node::getPorts(

@@ -130,14 +130,29 @@ QVector<PortPair*> PortPair::getDescendantPorts(
 QVector<const Node*> PortPair::getDescendantNodes(
         ) const
 {
-    QVector<const Node*> children;
+    QVector<const Node*> descendants;
+    //Add children
     foreach(Port* port, m_output->getConnectedPorts())
     {
-        children.append(port->getNode());
-//        children.append(port->getNode()->getDescendants());
+        const Node* child = port->getNode();
+        if(!descendants.contains(child))
+        {
+            descendants.append(child);
+        }
     }
-    ///@todo children.removeDuplicates();
-    return children;
+    //And all descendants of children
+    foreach (const Node* child, descendants)
+    {
+        QVector<const Node*> grandChildren = child->getDescendants();
+        foreach (const Node* grandChild, grandChildren)
+        {
+            if(!descendants.contains(grandChild))
+            {
+                descendants.append(grandChild);
+            }
+        }
+    }
+    return descendants;
 }
 
 void PortPair::repositionPorts(

@@ -46,6 +46,22 @@ private:
     QVector<const Node*> m_nodes;
     //
     QList<NodeTreeItem*> m_nodeList;
+    //
+    NodeTreeItem* getNodeTreeItem(
+            const Node* _node
+            );
+    //
+    QVector<NodeTreeItem*> getNodeTreeItems(
+            QVector<const Node*> _nodes
+            );
+    //
+    int nodeIndexInList(
+            const Node* _node
+            );
+    //
+    QList<int> nodeIndexInList(
+            QVector<const Node*> _nodes
+            );
 };
 
 #endif // NODETREEMODEL_H

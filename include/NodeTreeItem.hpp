@@ -31,6 +31,8 @@ public:
     const Node* getNode(
             ) const;
     //
+    QVector<const Node*> getDescendants(
+            );
 //    bool hasNode(
 //            const Node* _node
 //            );

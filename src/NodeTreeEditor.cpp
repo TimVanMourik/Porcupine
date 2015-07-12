@@ -15,7 +15,6 @@ NodeTreeEditor::NodeTreeEditor(
     setFrameShadow(QFrame::Raised);
     setFrameStyle(QFrame::StyledPanel);
     setLayout(m_layout);
-//    setAcceptDrops(true);
 }
 
 void NodeTreeEditor::addNode(
@@ -103,8 +102,6 @@ void NodeTreeEditor::nodeMoved(
     updateNodeOrder();
 }
 
-
-
 void NodeTreeEditor::updateNodeOrder(
         )
 {
@@ -131,19 +128,83 @@ void NodeTreeEditor::updateNodeOrder(
 //}
 
 #include <iostream>
+#include "Node.hpp"
 void NodeTreeEditor::linkCreated(
         const Node* _from,
         const Node* _to
         )
 {
-    Q_UNUSED(_from);
-    Q_UNUSED(_to);
-    ///@todo find matching two items
+    int toIndex = nodeIndexInList(_to);
+    int fromIndex = nodeIndexInList(_from);
+    if(fromIndex < toIndex)
+    {
+        //the list is already in the right order
+        return;
+    }
+    QVector<const Node*> _descendants = m_nodeList[toIndex]->getDescendants();
+    _descendants.prepend(_to);
 
-    QVector<const Node*> children;
-//    children.append(_to);
-//    children.append(_to.);
-    std::cerr << "Link created\n";
+    QVector<NodeTreeItem*> descendantItems = getNodeTreeItems(_descendants);
+    QList<int> childIndices = nodeIndexInList(_descendants);
+
+    int positioningIndex = std::max(fromIndex, childIndices.length() - 1);
+    ///@todo find a less drastic solution
+    for(int i = 0; i < childIndices.length(); ++i)
+    {
+        m_nodeList.removeOne(descendantItems[i]);
+        m_layout->removeWidget(descendantItems[i]);
+
+        m_nodeList.insert(positioningIndex, descendantItems[i]);
+        m_layout->insertWidget(positioningIndex, descendantItems[i]);
+    }
+    updateNodeOrder();
+}
+
+NodeTreeItem* NodeTreeEditor::getNodeTreeItem(
+        const Node* _node
+        )
+{
+    return m_nodeList[nodeIndexInList(_node)];
+}
+
+QVector<NodeTreeItem*> NodeTreeEditor::getNodeTreeItems(
+        QVector<const Node*> _nodes
+        )
+{
+    QVector<NodeTreeItem*> list(_nodes.length());
+    for(int i = 0; i < _nodes.length(); ++i)
+    {
+        list[i] = m_nodeList[nodeIndexInList(_nodes[i])];
+    }
+    return list;
+}
+
+int NodeTreeEditor::nodeIndexInList(
+        const Node* _node
+        )
+{
+    for(int i = 0; i < m_nodeList.length(); ++i)
+    {
+        if(m_nodeList[i]->getNode() == _node)
+        {
+            return i;
+        }
+    }
+    // If we cannot find the Node
+    return -1;
+}
+
+QList<int> NodeTreeEditor::nodeIndexInList(
+        QVector<const Node*> _nodes
+        )
+{
+    QList<int> indices;
+    for(int i = 0; i < _nodes.length(); ++i)
+    {
+        indices.append(nodeIndexInList(_nodes[i]));
+    }
+    std::sort(indices.begin(), indices.end());
+    return indices;
 }
 
 NodeTreeEditor::~NodeTreeEditor(

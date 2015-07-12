@@ -55,7 +55,7 @@ MainWindow::MainWindow(
 
     layout->addWidget(widget);
     layout->addWidget(m_nodeEditorWidget);
-    //stretch factors are a bit weird...
+    ///@todo stretch factors are a bit weird. Find out how to do this nicely
     layout->setStretchFactor(0, 1);
     layout->setStretchFactor(1, 12);
 
