@@ -28,9 +28,9 @@ MainWindow::MainWindow(
         QWidget* parent
         ) :
     QMainWindow(parent),
-    m_nodeEditorWidget(new QTabWidget(this)),
-    m_nodeTreeWidget(new QWidget(this)),
-    m_codeEditorWidget(new QTabWidget(this)),
+    m_nodeEditorWidget(new QTabWidget()),
+    m_nodeTreeWidget(new QWidget()),
+    m_codeEditorWidget(new QWidget()),
     m_nodeEditors(0),
     m_nodeTreeEditors(0),
     m_codeEditors(0),
@@ -42,26 +42,29 @@ MainWindow::MainWindow(
 
     //
     new QVBoxLayout(m_nodeTreeWidget);
-    new QVBoxLayout(m_nodeEditorWidget);
     new QVBoxLayout(m_codeEditorWidget);
 
 //    Make the MainWindow and its layout for the central widget
-    QSplitter* layout = new QSplitter();
-    setCentralWidget(layout);
+    QSplitter* mainWidget = new QSplitter(Qt::Horizontal, this);
+    setCentralWidget(mainWidget);
 
     //Add the panels to the layout
-    QWidget* widget = new QWidget();
-    QVBoxLayout* leftSide = new QVBoxLayout();
-    QPushButton* button = new QPushButton("Generate MATLAB code");
+    QScrollArea* leftWidget = new QScrollArea(mainWidget);
+    QVBoxLayout* leftSide = new QVBoxLayout(leftWidget);
+    QPushButton* button = new QPushButton("Generate code");
     leftSide->addWidget(m_nodeTreeWidget);
     leftSide->addWidget(button);
-    widget->setLayout(leftSide);
 
-    layout->addWidget(widget);
-    layout->addWidget(m_nodeEditorWidget);
+    QSplitter* rightWidget = new QSplitter(Qt::Vertical, mainWidget);
+    QVBoxLayout* rightSide = new QVBoxLayout(rightWidget);
+    rightSide->addWidget(m_nodeEditorWidget);
+    rightSide->addWidget(m_codeEditorWidget);
+    rightWidget->setStretchFactor(0, 12);
+    rightWidget->setStretchFactor(1, 1);
+
     ///@todo stretch factors are a bit weird. Find out how to do this nicely
-    layout->setStretchFactor(0, 1);
-    layout->setStretchFactor(1, 12);
+    mainWidget->setStretchFactor(0, 1);
+    mainWidget->setStretchFactor(1, 2);
 
     createActions();
     createMenus();
@@ -236,12 +239,14 @@ void MainWindow::newFile(
 
     //Create a node editor
     m_nodeEditors.append(new NodeEditor(this));
-    m_nodeTreeEditors.append(new NodeTreeEditor());
+    m_nodeTreeEditors.append(new NodeTreeEditor(this));
+    m_codeEditors.append(new CodeEditor(this));
 
     //Add it to a new tab
     m_currentFileIndex = m_nodeEditors.length() - 1;
     m_nodeEditorWidget->addTab(m_nodeEditors[m_currentFileIndex], tr("Untitled"));
     m_nodeTreeWidget->layout()->addWidget(m_nodeTreeEditors[m_currentFileIndex]);
+    m_codeEditorWidget->layout()->addWidget(m_codeEditors[m_currentFileIndex]);
 
     m_nodeEditors[m_currentFileIndex]->setTreeModel(m_nodeTreeEditors[m_currentFileIndex]);
 
@@ -295,10 +300,12 @@ void MainWindow::setFileAt(
         if(i == m_currentFileIndex)
         {
             m_nodeTreeWidget->layout()->itemAt(i)->widget()->setVisible(true);
+            m_codeEditorWidget->layout()->itemAt(i)->widget()->setVisible(true);
         }
         else
         {
             m_nodeTreeWidget->layout()->itemAt(i)->widget()->setVisible(false);
+            m_codeEditorWidget->layout()->itemAt(i)->widget()->setVisible(false);
         }
     }
 }

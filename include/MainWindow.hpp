@@ -88,7 +88,7 @@ private:
 
     QTabWidget* m_nodeEditorWidget;
     QWidget* m_nodeTreeWidget;
-    QTabWidget* m_codeEditorWidget;
+    QWidget* m_codeEditorWidget;
 
     QVector<NodeEditor*> m_nodeEditors;
     QVector<NodeTreeEditor*> m_nodeTreeEditors;

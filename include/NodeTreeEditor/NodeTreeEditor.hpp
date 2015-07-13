@@ -14,6 +14,7 @@ class NodeTreeEditor : public QFrame
 public:
     //
     NodeTreeEditor(
+            QWidget* _parent
             );
     //
     void addNode(

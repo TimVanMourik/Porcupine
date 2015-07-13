@@ -1,3 +1,5 @@
+#include <assert.h>
+
 #include <QDropEvent>
 #include <QMimeData>
 #include <QVBoxLayout>
@@ -6,8 +8,9 @@
 #include "NodeTreeEditor.hpp"
 
 NodeTreeEditor::NodeTreeEditor(
+        QWidget* _parent
         ) :
-    QFrame(),
+    QFrame(_parent),
     m_layout(new QVBoxLayout())
 {
     m_layout->setAlignment(Qt::AlignTop);
@@ -33,15 +36,14 @@ void NodeTreeEditor::removeNode(
         const Node* _node
         )
 {
-    Q_UNUSED(_node)
-//    for(int i = 0; i < rowCount(); ++i)
-//    {
-//        if(((NodeTreeItem*) item(i))->hasNode(_node))
-//        {
-//            removeRow(i);
-//            break;
-//        }
-//    }
+    assert(_node != 0);
+    NodeTreeItem* item = getNodeTreeItem(_node);
+    assert(item != 0);
+    m_nodes.removeOne(_node);
+    m_nodeList.removeOne(item);
+    m_layout->removeWidget(item);
+    delete item;
+    updateNodeOrder();
 }
 
 void NodeTreeEditor::nodeMoved(
@@ -127,8 +129,6 @@ void NodeTreeEditor::updateNodeOrder(
 //    std::cerr << _event->mimeData()->text().toStdString() << " B\n";
 //}
 
-#include <iostream>
-#include "Node.hpp"
 void NodeTreeEditor::linkCreated(
         const Node* _from,
         const Node* _to
