@@ -25,7 +25,8 @@ QString MatlabGenerator::itemToCode(
         const NodeTreeItem* _item
         ) const
 {
-    Q_UNUSED(_item);
+    const NodeSetting* nodeSetting = _item->getNodeSetting();
+    Q_UNUSED(nodeSetting);
     return QString();
 }
 

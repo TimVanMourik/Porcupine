@@ -140,6 +140,12 @@ const Node* NodeTreeItem::getNode(
     return m_node;
 }
 
+const NodeSetting* NodeTreeItem::getNodeSetting(
+        ) const
+{
+    return m_node->getSetting();
+}
+
 QVector<const Node*> NodeTreeItem::getDescendants(
         )
 {

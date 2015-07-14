@@ -29,7 +29,7 @@ public:
             );
     //
     void setArgument(
-            const Argument* _argument
+            const Argument& _argument
             );
     //
     const QString& getName(
@@ -41,8 +41,8 @@ public:
     Port* getOutputPort(
             ) const;
     //
-    const QVector<const DataType*>& getType(
-            ) const;
+//    const QVector<const DataType*>& getType(
+//            ) const;
     /// @brief returns if the port has ancestors
     bool hasAncestorPorts(
             );
@@ -103,7 +103,7 @@ private:
     //
     QString m_name;
     //
-    QVector<const DataType*> m_dataType;
+//    QVector<const DataType*> m_dataType;
     //
     Port* m_input;
     //

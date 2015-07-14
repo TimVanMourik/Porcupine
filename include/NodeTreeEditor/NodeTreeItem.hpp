@@ -6,6 +6,7 @@
 #include <QFrame>
 
 class Node;
+class NodeSetting;
 class PortPair;
 class QLabel;
 class QVBoxLayout;
@@ -31,8 +32,12 @@ public:
     const Node* getNode(
             ) const;
     //
+    const NodeSetting* getNodeSetting(
+            ) const;
+    //
     QVector<const Node*> getDescendants(
             );
+    //
 //    bool hasNode(
 //            const Node* _node
 //            );

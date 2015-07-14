@@ -4,7 +4,8 @@
 #include <QList>
 #include <QString>
 
-class NodeTreeItem;
+#include "NodeSetting.hpp"
+#include "NodeTreeItem.hpp"
 
 class CodeGenerator
 {

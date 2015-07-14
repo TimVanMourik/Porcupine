@@ -5,13 +5,12 @@
 #include "QXmlSchema"
 #include "QXmlSchemaValidator"
 
-#include "Argument.hpp"
 #include "NodeSetting.hpp"
 
 NodeSetting::NodeSetting(
-        const QString& _name,
-        const QVector<Argument*>& _inputPortNames,
-        const QVector<Argument*>& _outputPortNames
+        const Argument& _name,
+        const QVector<Argument>& _inputPortNames,
+        const QVector<Argument>& _outputPortNames
         ) :
     m_name(_name),
     m_inputPortNames(_inputPortNames),
@@ -29,16 +28,16 @@ void NodeSetting::setColour(
 const QString& NodeSetting::getName(
         ) const
 {
-    return m_name;
+    return m_name.getName();
 }
 
-const QVector<Argument*>& NodeSetting::getInput(
+const QVector<Argument>& NodeSetting::getInput(
         ) const
 {
     return m_inputPortNames;
 }
 
-const QVector<Argument*>& NodeSetting::getOutput(
+const QVector<Argument>& NodeSetting::getOutput(
         ) const
 {
     return m_outputPortNames;
@@ -47,12 +46,4 @@ const QVector<Argument*>& NodeSetting::getOutput(
 NodeSetting::~NodeSetting(
         )
 {
-    foreach(Argument* argument, m_inputPortNames)
-    {
-        delete argument;
-    }
-    foreach(Argument* argument, m_outputPortNames)
-    {
-        delete argument;
-    }
 }

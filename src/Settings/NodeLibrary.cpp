@@ -106,71 +106,34 @@ void NodeLibrary::addNodeSetting(
         if(std::strcmp(rootTag.toStdString().c_str(), "node") == 0)
         {
 //            std::cerr << rootTag.toStdString() << "\n"; //Should print 'node'
-            QString title;
-            QVector<Argument*> inputNodes;
-            QVector<Argument*> outputNodes;
+            Argument title;
+            QVector<Argument> inputNodes;
+            QVector<Argument> outputNodes;
             QDomNode node = docElem.firstChild();
             while(!node.isNull())
             {
                 if(node.isElement())
                 {
-//                    QDomElement nodeValue = node.toElement();
-//                    std::cerr << node.toDocument().nodeName().toStdString() << "\n";
-                    if(std::strcmp(node.nodeName().toStdString().c_str(), "title") == 0)
+                    if(node.nodeName().compare("title") == 0)
                     {
-                        title = node.firstChild().nodeValue();
-//                        std::cout << "title = " << node.firstChild().nodeValue().toStdString() << std::endl;
+                        title.setName(node.attributes().namedItem("name").nodeValue());
                     }
-                    else if(std::strcmp(node.nodeName().toStdString().c_str(), "input") == 0)
+                    else if(node.nodeName().compare("input") == 0)
                     {
-                        QDomNamedNodeMap attributes = node.attributes();
-                        QDomNode nodeName = attributes.namedItem("name");
-                        QDomNode className = attributes.namedItem("class");
-//                        std::cout << "nodeName = " << nodeName.nodeValue().toStdString() << std::endl;
-
-                        /// @todo the data type check has been temporarily removed
-//                        if(nodeName.isNull() || className.isNull() || m_dataTypes[className.nodeValue()] == NULL)
-                        if(nodeName.isNull() || className.isNull())
-                        {
-//                            std::cerr << className.nodeValue().toStdString() << " " << m_dataTypes[className.nodeValue()] << "\n";
-                            std::cerr << "This node is invalid: the input name is empty or the data type is invalid.\n";
-                            return;
-                        }
-                        QString name = nodeName.nodeValue();
-                        QVector<const DataType*> type;
-                        type.append(m_dataTypes[className.nodeValue()]);
-                        Argument* argument = new Argument(name, type);
-
+                        Argument argument(node.attributes().namedItem("name").nodeValue());
                         inputNodes.append(argument);
                     }
-                    else if(std::strcmp(node.nodeName().toStdString().c_str(), "output") == 0)
+                    else if(node.nodeName().compare("output") == 0)
                     {
-                        QDomNamedNodeMap attributes = node.attributes();
-                        QDomNode nodeName = attributes.namedItem("name");
-                        QDomNode className = attributes.namedItem("class");
-
-                        /// @todo the data type check has been temporarily removed
-//                        if(nodeName.isNull() || className.isNull() || m_dataTypes[className.nodeValue()] == NULL)
-                        if(nodeName.isNull() || className.isNull())
-                        {
-                            std::cerr << "This node is invalid: the output name is empty or the data type is invalid.\n";
-                            return;
-                        }
-                        QString name = nodeName.nodeValue();
-                        /// @todo add more DataTypes for a single setting
-                        QVector<const DataType*> type;
-                        /// @todo the data type has been temporarily removed
-//                        type.append(m_dataTypes[className.nodeValue()]);
-                        Argument* argument = new Argument(name, type);
-
+                        Argument argument(node.attributes().namedItem("name").nodeValue());
                         outputNodes.append(argument);
                     }
                     node = node.nextSibling();
                 }
             }
 //            std::cout << title.toStdString() << std::endl;
-            m_nodeSettings[title] = new NodeSetting(title, inputNodes, outputNodes);
-            m_nodeNames << title;
+            m_nodeSettings[title.getName()] = new NodeSetting(title, inputNodes, outputNodes);
+            m_nodeNames << title.getName();
         }
         else
         {

@@ -1,8 +1,53 @@
 <node>
-    <title>tvm_useBbregister</title>
-    <input name="Reference Volume" class="3D NifTI"/>
-    <input name="FreeSurfer Folder" class="Directory"/>
-    <output name="Boundaries" class="Mat file"/>
-    <output name="register.dat" class="File"/>
-    <output name="Coregistration Matrix" class="Mat file"/>
+    <title name="bbregister">
+        <code>
+            <language name="MATLAB">
+                <comment text="Uses FreeSurfer's bbregister"/>
+                <function name="tvm_useBbregister"/>
+            </language>
+        </code>
+    </title>
+    <input name="Root Directory">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_SubjectDirectory"/>
+            </language>
+        </code>
+    </input>
+    <input name="Reference Volume">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_ReferenceVolume"/>
+            </language>
+        </code>
+    </input>
+    <input name="FreeSurfer Folder">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_FreeSurferFolder"/>
+            </language>
+        </code>
+    </input>
+    <output name="Boundaries">
+        <code>
+            <language name="MATLAB">
+                <argument name="o_Boundaries"/>
+            </language>
+        </code>
+    </output>
+    <output name="register.dat">
+        <code>
+            <language name="MATLAB">
+                <argument name="o_RegisterDat"/>
+                <comment text="If you feel like saving the FreeSurfer output"/>
+            </language>
+        </code>
+    </output>
+    <output name="Coregistration Matrix">
+        <code>
+            <language name="MATLAB">
+                <argument name="o_CoregistrationMatrix"/>
+            </language>
+        </code>
+    </output>
 </node>

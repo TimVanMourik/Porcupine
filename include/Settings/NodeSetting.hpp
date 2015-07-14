@@ -15,16 +15,16 @@
 #include <QStringList>
 #include <QColor>
 
-class Argument;
+#include "Argument.hpp"
 
 class NodeSetting
 {
 public:
     //
     NodeSetting(
-            const QString& _name,
-            const QVector<Argument*>& _inputPortNames,
-            const QVector<Argument*>& _outputPortNames
+            const Argument& _name,
+            const QVector<Argument>& _inputPortNames,
+            const QVector<Argument>& _outputPortNames
             );
     //
     void setColour(
@@ -34,21 +34,21 @@ public:
     const QString& getName(
             ) const;
     //
-    const QVector<Argument*>& getInput(
+    const QVector<Argument>& getInput(
             ) const;
     //
-    const QVector<Argument*>& getOutput(
+    const QVector<Argument>& getOutput(
             ) const;
     //
     ~NodeSetting(
             );
 private:
     //
-    QString m_name;
+    Argument m_name;
     //
-    QVector<Argument*> m_inputPortNames;
+    QVector<Argument> m_inputPortNames;
     //
-    QVector<Argument*>  m_outputPortNames;
+    QVector<Argument>  m_outputPortNames;
     //
     QStringList m_matlabCode;
     //

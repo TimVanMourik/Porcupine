@@ -37,10 +37,6 @@ public:
             NodeEditor* _editor,
             NodeSetting* _setting = 0
             );
-    //
-    void loadFromNodeSetting(
-            NodeSetting* _setting
-            );
     ///@brief Returns a pointer to the new Port in case you need it (for example in loading a file)
 //    Port* addPort(
 //            const Argument* _name,
@@ -48,7 +44,7 @@ public:
 //            );
     //
     void addPortPair(
-            const Argument* _name,
+            const Argument& _name,
             bool _isInput
             );
     //
@@ -58,23 +54,23 @@ public:
             );
     //
     void setName(
-            const Argument* _argument
+            const Argument& _argument
             );
     //
     void addInputPort(
-            const Argument* _argument
+            const Argument& _argument
             );
     //
     void addOutputPort(
-            const Argument* _argument
+            const Argument& _argument
             );
     //
     void addInputPorts(
-            const QVector<Argument*>& _arguments
+            const QVector<Argument>& _arguments
             );
     //
     void addOutputPorts(
-            const QVector<Argument*>& _arguments
+            const QVector<Argument>& _arguments
             );
     //
     void paint(
@@ -92,6 +88,9 @@ public:
             ) const;
     //
     const QString& getName(
+            ) const;
+    //
+    const NodeSetting* getSetting(
             ) const;
     //
     int type(
@@ -120,6 +119,10 @@ public:
             );
 
 private:
+    //
+    void loadFromNodeSetting(
+            NodeSetting* _setting
+            );
     //
     const NodeSetting* m_setting;
     //

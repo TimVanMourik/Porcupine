@@ -49,7 +49,7 @@ void Node::loadFromNodeSetting(
     if(_setting)
     {
         m_setting = _setting;
-        Argument* argument = new Argument(_setting->getName(), QVector<const DataType*>());
+        Argument argument(_setting->getName());
         setName(argument);
 
         addInputPorts(_setting->getInput());
@@ -58,41 +58,41 @@ void Node::loadFromNodeSetting(
 }
 
 void Node::addInputPorts(
-        const QVector<Argument*>& names
+        const QVector<Argument>& names
         )
 {
-    foreach(Argument* argument, names)
+    foreach(const Argument& argument, names)
     {
         addInputPort(argument);
     }
 }
 
 void Node::addOutputPorts(
-        const QVector<Argument*>& names
+        const QVector<Argument>& names
         )
 {
-    foreach(Argument* argument, names)
+    foreach(const Argument& argument, names)
     {
         addOutputPort(argument);
     }
 }
 
 void Node::addInputPort(
-        const Argument* _argument
+        const Argument& _argument
         )
 {
     addPortPair(_argument, true);
 }
 
 void Node::addOutputPort(
-        const Argument* _argument
+        const Argument& _argument
         )
 {
     addPortPair(_argument, false);
 }
 
 void Node::setName(
-        const Argument* _argument
+        const Argument& _argument
         )
 {
     Preferences& preferences = Preferences::getInstance();
@@ -100,7 +100,7 @@ void Node::setName(
     QFont font(scene()->font());
     font.setBold(true);
     m_nameLabel->setFont(font);
-    m_nameLabel->setPlainText(_argument->getName());
+    m_nameLabel->setPlainText(_argument.getName());
     m_nameLabel->setDefaultTextColor(preferences.getPortTextColor());
 
     qreal width = m_nameLabel->boundingRect().width();
@@ -109,7 +109,7 @@ void Node::setName(
 }
 
 void Node::addPortPair(
-        const Argument* _argument,
+        const Argument& _argument,
         bool _isInput
         )
 {
@@ -194,6 +194,12 @@ const QString& Node::getName(
         ) const
 {
     return m_setting->getName();
+}
+
+const NodeSetting* Node::getSetting(
+        ) const
+{
+    return m_setting;
 }
 
 void Node::saveToXml(

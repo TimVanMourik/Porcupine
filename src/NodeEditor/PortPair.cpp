@@ -49,11 +49,11 @@ Port* PortPair::getOutputPort(
 }
 
 void PortPair::setArgument(
-        const Argument* _argument
+        const Argument& _argument
         )
 {
-    m_name = _argument->getName();
-    m_dataType = _argument->getType();
+    m_name = _argument.getName();
+//    m_dataType = _argument.getType();
     setPlainText(m_name);
 }
 
@@ -63,11 +63,11 @@ const QString& PortPair::getName(
     return m_name;
 }
 
-const QVector<const DataType*>& PortPair::getType(
-        ) const
-{
-    return m_dataType;
-}
+//const QVector<const DataType*>& PortPair::getType(
+//        ) const
+//{
+//    return m_dataType;
+//}
 
 bool PortPair::hasAncestorPorts(
         )
