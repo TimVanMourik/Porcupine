@@ -74,7 +74,14 @@ MainWindow::MainWindow(
 
     newFile();
 
+    connect(button, SIGNAL(released()), this, SLOT(nodeToCode()));
     connect(m_nodeEditorWidget, SIGNAL(currentChanged(int)), this, SLOT(setFileAt(int)));
+}
+
+void MainWindow::nodeToCode(
+        )
+{
+    m_nodeTreeEditors[m_currentFileIndex]->generateCode();
 }
 
 //void MainWindow::contextMenuEvent(
@@ -249,6 +256,7 @@ void MainWindow::newFile(
     m_codeEditorWidget->layout()->addWidget(m_codeEditors[m_currentFileIndex]);
 
     m_nodeEditors[m_currentFileIndex]->setTreeModel(m_nodeTreeEditors[m_currentFileIndex]);
+    m_nodeTreeEditors[m_currentFileIndex]->setCodeEditor(m_codeEditors[m_currentFileIndex]);
 
     setFileAt(m_currentFileIndex);
     //Install an empty scene in the tab

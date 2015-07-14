@@ -4,6 +4,7 @@
 #include <QMimeData>
 #include <QVBoxLayout>
 
+#include "CodeEditor.hpp"
 #include "NodeTreeItem.hpp"
 #include "NodeTreeEditor.hpp"
 
@@ -11,7 +12,8 @@ NodeTreeEditor::NodeTreeEditor(
         QWidget* _parent
         ) :
     QFrame(_parent),
-    m_layout(new QVBoxLayout())
+    m_layout(new QVBoxLayout()),
+    m_codeEditor(0)
 {
     m_layout->setAlignment(Qt::AlignTop);
 
@@ -44,6 +46,19 @@ void NodeTreeEditor::removeNode(
     m_layout->removeWidget(item);
     delete item;
     updateNodeOrder();
+}
+
+void NodeTreeEditor::setCodeEditor(
+        CodeEditor* _editor
+        )
+{
+    m_codeEditor = _editor;
+}
+
+void NodeTreeEditor::generateCode(
+        )
+{
+    m_codeEditor->generateCode(m_nodeList);
 }
 
 void NodeTreeEditor::nodeMoved(

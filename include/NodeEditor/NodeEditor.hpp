@@ -14,14 +14,14 @@
 
 #include <QGraphicsView>
 
-#include "NodeTreeEditor.hpp"
-
 class Link;
 class QGraphicsScene;
 class QKeyEvent;
 class QDomDocument;
 class QDomElement;
+class Node;
 class NodeSetting;
+class NodeTreeEditor;
 
 class NodeEditor : public QGraphicsView
 {

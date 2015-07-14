@@ -14,6 +14,7 @@
 #include "Link.hpp"
 #include "Node.hpp"
 #include "NodeEditor.hpp"
+#include "NodeTreeEditor.hpp"
 #include "Port.hpp"
 #include "Preferences.hpp"
 

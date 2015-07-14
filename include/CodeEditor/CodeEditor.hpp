@@ -3,6 +3,10 @@
 
 #include <QTabWidget>
 
+class CodeGenerator;
+class NodeTreeItem;
+class QTextEdit;
+
 class CodeEditor : public QTabWidget
 {
 public:
@@ -11,8 +15,19 @@ public:
             QWidget* _parent
             );
     //
+    void generateCode(
+            const QList<NodeTreeItem*>& _nodeList
+            );
+    //
     ~CodeEditor(
             );
+private:
+    //
+    QMap<QString, QTextEdit*> m_textEditors;
+    //
+    QMap<QString, CodeGenerator*> m_codeGenerators;
+    //
+    QStringList m_programmingLanguages;
 };
 
 #endif // CODEEDITOR_H

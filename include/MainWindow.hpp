@@ -74,6 +74,10 @@ private slots:
             );
     void updateNodeMenu(
             );
+public slots:
+    //
+    void nodeToCode(
+            );
 private:
     void createActions(
             );

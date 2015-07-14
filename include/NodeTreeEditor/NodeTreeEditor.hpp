@@ -6,6 +6,7 @@
 
 class Node;
 class NodeTreeItem;
+class CodeEditor;
 class QVBoxLayout;
 
 class NodeTreeEditor : public QFrame
@@ -23,6 +24,13 @@ public:
     //
     void removeNode(
             const Node* _node
+            );
+    //
+    void setCodeEditor(
+            CodeEditor* _editor
+            );
+    //
+    void generateCode(
             );
     //
     void updateNodeOrder(
@@ -47,6 +55,8 @@ private:
     QVector<const Node*> m_nodes;
     //
     QList<NodeTreeItem*> m_nodeList;
+    //
+    CodeEditor* m_codeEditor;
     //
     NodeTreeItem* getNodeTreeItem(
             const Node* _node

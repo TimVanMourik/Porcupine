@@ -128,7 +128,9 @@ void NodeLibrary::addNodeSetting(
                         QDomNode className = attributes.namedItem("class");
 //                        std::cout << "nodeName = " << nodeName.nodeValue().toStdString() << std::endl;
 
-                        if(nodeName.isNull() || className.isNull() || m_dataTypes[className.nodeValue()] == NULL)
+                        /// @todo the data type check has been temporarily removed
+//                        if(nodeName.isNull() || className.isNull() || m_dataTypes[className.nodeValue()] == NULL)
+                        if(nodeName.isNull() || className.isNull())
                         {
 //                            std::cerr << className.nodeValue().toStdString() << " " << m_dataTypes[className.nodeValue()] << "\n";
                             std::cerr << "This node is invalid: the input name is empty or the data type is invalid.\n";
@@ -147,14 +149,18 @@ void NodeLibrary::addNodeSetting(
                         QDomNode nodeName = attributes.namedItem("name");
                         QDomNode className = attributes.namedItem("class");
 
-                        if(nodeName.isNull() || className.isNull() || m_dataTypes[className.nodeValue()] == NULL)
+                        /// @todo the data type check has been temporarily removed
+//                        if(nodeName.isNull() || className.isNull() || m_dataTypes[className.nodeValue()] == NULL)
+                        if(nodeName.isNull() || className.isNull())
                         {
                             std::cerr << "This node is invalid: the output name is empty or the data type is invalid.\n";
                             return;
                         }
                         QString name = nodeName.nodeValue();
+                        /// @todo add more DataTypes for a single setting
                         QVector<const DataType*> type;
-                        type.append(m_dataTypes[className.nodeValue()]);
+                        /// @todo the data type has been temporarily removed
+//                        type.append(m_dataTypes[className.nodeValue()]);
                         Argument* argument = new Argument(name, type);
 
                         outputNodes.append(argument);

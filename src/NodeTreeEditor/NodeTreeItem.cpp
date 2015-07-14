@@ -70,6 +70,7 @@ NodeTreeItem::NodeTreeItem(
     m_portBlock->setLayout(layout2);
     m_portBlock->setVisible(false);
 
+    /// @todo Make two colums, one for the port name, one for the file name
     foreach(PortPair* pair, _node->getPorts())
     {
         ///@todo this pointer isn't explicitly deleted yet
@@ -100,13 +101,14 @@ NodeTreeItem::NodeTreeItem(
         fileName->setPalette(palette);
         layout3->addWidget(fileName);
 
-        ///@todo this pointer isn't explicitly deleted yet
-        QComboBox* dataType = new QComboBox();
-        foreach(const DataType* type, pair->getType())
-        {
-            dataType->addItem(type->getName());
-        }
-        layout3->addWidget(dataType);
+        /// @todo this pointer isn't explicitly deleted yet
+        /// @todo DataType has been temporarily removed. Reintroduce when working
+//        QComboBox* dataType = new QComboBox();
+//        foreach(const DataType* type, pair->getType())
+//        {
+//            dataType->addItem(type->getName());
+//        }
+//        layout3->addWidget(dataType);
         minimumSize += fileName->font().pointSize() + spacing;
 
 //        m_portBlock->setMinimumHeight(3 * (fileName->font().pointSize() + spacing) * m_ports.size());
