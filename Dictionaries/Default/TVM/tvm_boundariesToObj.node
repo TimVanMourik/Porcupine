@@ -1,6 +1,32 @@
 <node>
-    <title>tvm_boundariesToObj</title>
-    <input name="Boundaries" class="Mat file"/>
-    <output name="OBJ white matter surface" class="OBJ file"/>
-    <output name="OBJ pial surface" class="OBJ file"/>
+    <title name="Boundaries to OBJ">
+        <code>
+        <language name="MATLAB">
+            <comment text="Uses FreeSurfer's bbregister"/>
+            <function name="tvm_boundariesToObj"/>
+        </language>
+        </code>
+    </title>
+    <input name="Boundaries">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_Boundaries"/>
+            </language>
+        </code>
+    </input>
+    <output name="OBJ white matter surface">
+        <code>
+            <language name="MATLAB">
+                <argument name="o_ObjWhite"/>
+                <comment text="If you feel like saving the FreeSurfer output"/>
+            </language>
+        </code>
+    </output>
+    <output name="OBJ pial surface">
+        <code>
+            <language name="MATLAB">
+                <argument name="o_ObjPial"/>
+            </language>
+        </code>
+    </output>
 </node>

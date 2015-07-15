@@ -10,10 +10,12 @@
 NodeSetting::NodeSetting(
         const Argument& _name,
         const QVector<Argument>& _inputPortNames,
+        const QVector<Argument>& _inOutPortNames,
         const QVector<Argument>& _outputPortNames
         ) :
     m_name(_name),
     m_inputPortNames(_inputPortNames),
+    m_inOutPortNames(_inOutPortNames),
     m_outputPortNames(_outputPortNames)
 {
 }
@@ -35,6 +37,12 @@ const QVector<Argument>& NodeSetting::getInput(
         ) const
 {
     return m_inputPortNames;
+}
+
+const QVector<Argument>& NodeSetting::getInOut(
+        ) const
+{
+    return m_inOutPortNames;
 }
 
 const QVector<Argument>& NodeSetting::getOutput(

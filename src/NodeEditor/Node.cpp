@@ -53,6 +53,7 @@ void Node::loadFromNodeSetting(
         setName(argument);
 
         addInputPorts(_setting->getInput());
+        addInOutPorts(_setting->getInOut());
         addOutputPorts(_setting->getOutput());
     }
 }
@@ -64,6 +65,16 @@ void Node::addInputPorts(
     foreach(const Argument& argument, names)
     {
         addInputPort(argument);
+    }
+}
+
+void Node::addInOutPorts(
+        const QVector<Argument>& names
+        )
+{
+    foreach(const Argument& argument, names)
+    {
+        addInOutPort(argument);
     }
 }
 
@@ -81,14 +92,21 @@ void Node::addInputPort(
         const Argument& _argument
         )
 {
-    addPortPair(_argument, true);
+    addPortPair(_argument, "i");
+}
+
+void Node::addInOutPort(
+        const Argument& _argument
+        )
+{
+    addPortPair(_argument, "io");
 }
 
 void Node::addOutputPort(
         const Argument& _argument
         )
 {
-    addPortPair(_argument, false);
+    addPortPair(_argument, "o");
 }
 
 void Node::setName(
@@ -110,7 +128,7 @@ void Node::setName(
 
 void Node::addPortPair(
         const Argument& _argument,
-        bool _isInput
+        const QString& _type
         )
 {
     Preferences& preferences = Preferences::getInstance();
@@ -118,12 +136,16 @@ void Node::addPortPair(
     pair->setArgument(_argument);
     pair->setDefaultTextColor(preferences.getPortTextColor());
 
-    if(_isInput)
+    if(_type.compare("i") == 0)
+    {
+        pair->createInputPort();
+    }
+    else if(_type.compare("io") == 0)
     {
         pair->createInputPort();
         pair->createOutputPort();
     }
-    else
+    else if(_type.compare("o") == 0)
     {
         pair->createOutputPort();
     }

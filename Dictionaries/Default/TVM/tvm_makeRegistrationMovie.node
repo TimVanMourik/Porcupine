@@ -1,8 +1,61 @@
 <node>
-    <title>tvm_makeRegistrationMovie</title>
-    <input name="Reference Volume" class="3D NifTI"/>
-    <input name="Boundaries" class="Mat file"/>
-    <input name="Axis" class="Character"/>
-    <input name="Frames per Second" class="Integer"/>
-    <output name="Movie file" class="AVI file"/>
+    <title name="Registration Movie">
+        <code>
+            <language name="MATLAB">
+                <comment text="Makes movie of registration with boundaries "/>
+                <function name="tvm_makeRegistrationMovie"/>
+            </language>
+        </code>
+    </title>
+    <input name="Root Directory">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_SubjectDirectory"/>
+            </language>
+        </code>
+    </input>
+    <input name="Reference Volume">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_ReferenceVolume"/>
+            </language>
+        </code>
+    </input>
+    <input name="Boundaries">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_Boundaries"/>
+                <comment text="Boundaries in MATLAB voxel space"/>
+            </language>
+        </code>
+    </input>
+    <input name="Viewing Axis">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_Axis"/>
+            </language>
+        </code>
+    </input>
+    <input name="Frames per Second">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_FramesPerSecond"/>
+            </language>
+        </code>
+    </input>
+    <input name="Contour Colours">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_ContourColors"/>
+            </language>
+        </code>
+    </input>
+    <output name="Registration Movie">
+        <code>
+            <language name="MATLAB">
+                <argument name="o_RegistrationMovie"/>
+            </language>
+        </code>
+    </output>
 </node>
+

@@ -108,6 +108,7 @@ void NodeLibrary::addNodeSetting(
 //            std::cerr << rootTag.toStdString() << "\n"; //Should print 'node'
             Argument title;
             QVector<Argument> inputNodes;
+            QVector<Argument> inOutNodes;
             QVector<Argument> outputNodes;
             QDomNode node = docElem.firstChild();
             while(!node.isNull())
@@ -123,6 +124,11 @@ void NodeLibrary::addNodeSetting(
                         Argument argument(node.attributes().namedItem("name").nodeValue());
                         inputNodes.append(argument);
                     }
+                    else if(node.nodeName().compare("input-output") == 0)
+                    {
+                        Argument argument(node.attributes().namedItem("name").nodeValue());
+                        inOutNodes.append(argument);
+                    }
                     else if(node.nodeName().compare("output") == 0)
                     {
                         Argument argument(node.attributes().namedItem("name").nodeValue());
@@ -132,7 +138,7 @@ void NodeLibrary::addNodeSetting(
                 }
             }
 //            std::cout << title.toStdString() << std::endl;
-            m_nodeSettings[title.getName()] = new NodeSetting(title, inputNodes, outputNodes);
+            m_nodeSettings[title.getName()] = new NodeSetting(title, inputNodes, inOutNodes, outputNodes);
             m_nodeNames << title.getName();
         }
         else
