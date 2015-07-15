@@ -72,6 +72,10 @@ const QString& PortPair::getName(
 bool PortPair::hasAncestorPorts(
         )
 {
+    if(!m_input)
+    {
+        return false;
+    }
     if(m_input->getConnectedPorts().length() == 0)
     {
         return false;
@@ -85,6 +89,10 @@ bool PortPair::hasAncestorPorts(
 bool PortPair::hasDescendantPorts(
         )
 {
+    if(!m_output)
+    {
+        return false;
+    }
     if(m_output->getConnectedPorts().length() == 0)
     {
         return false;
@@ -99,6 +107,10 @@ QVector<PortPair*> PortPair::getAncestorPorts(
         )
 {
     QVector<PortPair*> ports;
+    if(!m_input)
+    {
+        return ports;
+    }
     foreach(Port* port, m_input->getConnectedPorts())
     {
         PortPair* previous = port->getPortPair();
@@ -115,6 +127,10 @@ QVector<PortPair*> PortPair::getDescendantPorts(
         )
 {
     QVector<PortPair*> ports;
+    if(!m_output)
+    {
+        return ports;
+    }
     foreach(Port* port, m_output->getConnectedPorts())
     {
         PortPair* previous = port->getPortPair();
@@ -131,6 +147,10 @@ QVector<const Node*> PortPair::getDescendantNodes(
         ) const
 {
     QVector<const Node*> descendants;
+    if(!m_output)
+    {
+        return descendants;
+    }
     //Add children
     foreach(Port* port, m_output->getConnectedPorts())
     {
@@ -236,6 +256,7 @@ void PortPair::loadFromXml(
     }
 }
 
+#include <iostream>
 void PortPair::fileNameChanged(
         const QString& _fileName,
         bool _cascadeUp

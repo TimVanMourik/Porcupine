@@ -33,6 +33,12 @@ const QString& NodeSetting::getName(
     return m_name.getName();
 }
 
+const Argument& NodeSetting::getTitle(
+        ) const
+{
+    return m_name;
+}
+
 const QVector<Argument>& NodeSetting::getInput(
         ) const
 {

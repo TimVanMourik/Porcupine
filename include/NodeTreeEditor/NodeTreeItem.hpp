@@ -9,6 +9,7 @@ class Node;
 class NodeSetting;
 class PortPair;
 class QLabel;
+class QLineEdit;
 class QVBoxLayout;
 
 class NodeTreeItem : public QFrame
@@ -46,6 +47,10 @@ public:
             unsigned int _i
             );
     //
+    const QString& getFileName(
+            const QString& _portName
+            ) const;
+    //
     void mousePressEvent(
             QMouseEvent* _event
             );
@@ -71,6 +76,8 @@ private:
     QWidget* m_portBlock;
     //
     QMap<QWidget*, PortPair*> m_ports;
+    //
+    QMap<QString, QLineEdit*> m_fileNames;
     //
     QPoint m_position;
     //

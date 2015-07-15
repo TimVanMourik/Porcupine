@@ -87,6 +87,7 @@ NodeTreeItem::NodeTreeItem(
 
         ///@todo this pointer isn't explicitly deleted yet
         QLineEdit* fileName = new QLineEdit();
+        m_fileNames[pair->getName()] = fileName;
         QFont font = QFont();
         font.setItalic(true);
 //        fileName->setMaximumHeight(fileName->font().pointSize() + 4);
@@ -125,6 +126,23 @@ NodeTreeItem::NodeTreeItem(
     mainLayout->addWidget(m_portBlock);
 
     connect(visibilityButton, SIGNAL(toggled(bool)), m_portBlock, SLOT(setVisible(bool)));
+}
+
+const QString& NodeTreeItem::getFileName(
+        const QString& _portName
+        ) const
+{
+    if(m_fileNames[_portName])
+    {
+        return m_fileNames[_portName]->text();
+    }
+    else
+    {
+        /// @todo check if there is a nicer solution
+        //in case we cannot return anything
+        static const QString emptyString;
+        return emptyString;
+    }
 }
 
 bool NodeTreeItem::isAncestorOf(

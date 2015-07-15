@@ -20,26 +20,43 @@ const QString& Argument::getName(
     return m_argumentName;
 }
 
-void Argument::addFunctionCode(
-        QString _language,
-        QString _function
-        )
+QString Argument::getArgument(
+        const QString& _language
+        ) const
 {
-    FunctionCode code;
-    code.language = _language;
-    code.function = _function;
-    m_functionCode.append(code);
+    if(m_code.contains(_language))
+    {
+        return m_code[_language].argument;
+    }
+    else
+    {
+        return QString();
+    }
 }
 
-void Argument::addArgumentCode(
-        QString _language,
-        QString _function
+QString Argument::getComment(
+        const QString& _language
+        ) const
+{
+    if(m_code.contains(_language))
+    {
+        return m_code[_language].comment;
+    }
+    else
+    {
+        return QString();
+    }
+}
+
+void Argument::addCode(
+        const QString& _language,
+        const QString& _function,
+        const QString& _comment
         )
 {
-    ArgumentCode code;
-    code.language = _language;
-    code.function = _function;
-    m_argumentCode.append(code);
+    m_code[_language] = Code();
+    m_code[_language].argument = _function;
+    m_code[_language].comment  = _comment;
 }
 
 //const QVector<const DataType*>& Argument::getType(

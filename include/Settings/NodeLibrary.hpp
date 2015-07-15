@@ -14,6 +14,7 @@
 
 #include <map>
 
+#include <QDomDocument>
 #include <QString>
 #include <QtXmlPatterns>
 
@@ -71,6 +72,13 @@ private:
     QXmlSchemaValidator* m_nodeValidator;
     /// @brief
     NodeLibrary(
+            );
+    /// @brief
+    void parseCodeBlock(
+            const QDomNode& _code,
+            QString& o_language,
+            QString& o_argument,
+            QString& o_comment
             );
     /// @brief
     NodeLibrary(

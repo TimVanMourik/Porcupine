@@ -118,21 +118,61 @@ void NodeLibrary::addNodeSetting(
                     if(node.nodeName().compare("title") == 0)
                     {
                         title.setName(node.attributes().namedItem("name").nodeValue());
+                        // if there is a code block
+                        QDomNode code = node.firstChild();
+                        if(!code.isNull() && code.nodeName().compare("code") == 0)
+                        {
+                            QString language;
+                            QString argument;
+                            QString comment;
+                            parseCodeBlock(code, language, argument, comment);
+                            title.addCode(language, argument, comment);
+                        }
                     }
                     else if(node.nodeName().compare("input") == 0)
                     {
-                        Argument argument(node.attributes().namedItem("name").nodeValue());
-                        inputNodes.append(argument);
+                        Argument codeArgument(node.attributes().namedItem("name").nodeValue());
+                        // if there is a code block
+                        QDomNode code = node.firstChild();
+                        if(!code.isNull() && code.nodeName().compare("code") == 0)
+                        {
+                            QString language;
+                            QString argument;
+                            QString comment;
+                            parseCodeBlock(code, language, argument, comment);
+                            codeArgument.addCode(language, argument, comment);
+                        }
+                        inputNodes.append(codeArgument);
                     }
                     else if(node.nodeName().compare("input-output") == 0)
                     {
-                        Argument argument(node.attributes().namedItem("name").nodeValue());
-                        inOutNodes.append(argument);
+                        Argument codeArgument(node.attributes().namedItem("name").nodeValue());
+                        // if there is a code block
+                        QDomNode code = node.firstChild();
+                        if(!code.isNull() && code.nodeName().compare("code") == 0)
+                        {
+                            QString language;
+                            QString argument;
+                            QString comment;
+                            parseCodeBlock(code, language, argument, comment);
+                            codeArgument.addCode(language, argument, comment);
+                        }
+                        inOutNodes.append(codeArgument);
                     }
                     else if(node.nodeName().compare("output") == 0)
                     {
-                        Argument argument(node.attributes().namedItem("name").nodeValue());
-                        outputNodes.append(argument);
+                        Argument codeArgument(node.attributes().namedItem("name").nodeValue());
+                        // if there is a code block
+                        QDomNode code = node.firstChild();
+                        if(!code.isNull() && code.nodeName().compare("code") == 0)
+                        {
+                            QString language;
+                            QString argument;
+                            QString comment;
+                            parseCodeBlock(code, language, argument, comment);
+                            codeArgument.addCode(language, argument, comment);
+                        }
+                        outputNodes.append(codeArgument);
                     }
                     node = node.nextSibling();
                 }
@@ -151,6 +191,37 @@ void NodeLibrary::addNodeSetting(
     {
         std::cerr << "This node is invalid. It has an invalid structure.\n";
         return;
+    }
+}
+
+void NodeLibrary::parseCodeBlock(
+        const QDomNode& _code,
+        QString& o_language,
+        QString& o_argument,
+        QString& o_comment
+        )
+{
+    QDomNode codeBlock = _code.firstChild();
+    while(!codeBlock.isNull())
+    {
+        if(codeBlock.nodeName().compare("language") == 0)
+        {
+            o_language = codeBlock.attributes().namedItem("name").nodeValue();
+            QDomNode argumentBlock = codeBlock.firstChild();
+            while(!argumentBlock.isNull())
+            {
+                if(argumentBlock.nodeName().compare("argument") == 0)
+                {
+                    o_argument = argumentBlock.attributes().namedItem("name").nodeValue();
+                }
+                else if(argumentBlock.nodeName().compare("comment") == 0)
+                {
+                    o_comment = argumentBlock.attributes().namedItem("text").nodeValue();
+                }
+                argumentBlock = argumentBlock.nextSibling();
+            }
+        }
+        codeBlock = codeBlock.nextSibling();
     }
 }
 

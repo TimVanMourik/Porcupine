@@ -1,6 +1,7 @@
 #ifndef ARGUMENT_HPP
 #define ARGUMENT_HPP
 
+#include <QMap>
 #include <QString>
 #include <QVector>
 
@@ -21,14 +22,21 @@ public:
     const QString& getName(
             ) const;
     //
-    void addFunctionCode(
-            QString _language,
-            QString _function
+    QString getArgument(
+            const QString& _language
+            ) const;
+    //
+    QString getComment(
+            const QString& _language
+            ) const;
+    //
+    unsigned int numberOfCodeRules(
             );
     //
-    void addArgumentCode(
-            QString _language,
-            QString _function
+    void addCode(
+            const QString& _language,
+            const QString& _argument,
+            const QString& _comment = QString("")
             );
     //
 //    const QVector<const DataType*>& getType(
@@ -38,18 +46,13 @@ private:
     //
     QString m_argumentName;
     //
-    struct FunctionCode
+    struct Code
     {
-        QString language;
-        QString function;
+        QString argument;
+        QString comment;
     };
-    struct ArgumentCode
-    {
-        QString language;
-        QString function;
-    };
-    QVector<ArgumentCode> m_argumentCode;
-    QVector<FunctionCode> m_functionCode;
+    //
+    QMap<QString, Code> m_code;
     //
 //    const QVector<const DataType*> m_type;
 

@@ -18,6 +18,13 @@ private:
     QString itemToCode(
             const NodeTreeItem* _item
             ) const;
+    //
+    QString argumentToCode(
+            const Argument& _argument,
+            const NodeTreeItem* _item
+            ) const;
+    //
+    QString m_configurationWord;
 };
 
 #endif // MATLABGENERATOR_H

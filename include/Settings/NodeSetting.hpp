@@ -35,6 +35,9 @@ public:
     const QString& getName(
             ) const;
     //
+    const Argument& getTitle(
+            ) const;
+    //
     const QVector<Argument>& getInput(
             ) const;
     //
