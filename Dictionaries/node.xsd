@@ -78,7 +78,7 @@
             <xs:attribute type="xs:string" name="name" use="optional"/>
           </xs:complexType>
         </xs:element>
-        <xs:element name="output" maxOccurs="unbounded" minOccurs="0">
+        <xs:element name="input-output" maxOccurs="unbounded" minOccurs="0">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="code">
@@ -116,7 +116,7 @@
             <xs:attribute type="xs:string" name="name" use="optional"/>
           </xs:complexType>
         </xs:element>
-        <xs:element name="input-output" maxOccurs="unbounded" minOccurs="0">
+        <xs:element name="output" maxOccurs="unbounded" minOccurs="0">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="code">

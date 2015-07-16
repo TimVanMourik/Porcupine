@@ -73,6 +73,7 @@ QString MatlabGenerator::argumentToCode(
         code.append(" = ");
         QString fileName = _item->getFileName(_argument.getName());
         code.append(fileName);
+        code.append(";");
         if(!_argument.getComment("MATLAB").isEmpty())
         {
             code.append("\t% ");

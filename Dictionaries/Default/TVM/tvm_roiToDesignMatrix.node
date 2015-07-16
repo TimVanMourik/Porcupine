@@ -1,6 +1,31 @@
 <node>
-    <title>tvm_roiToDesignMatrix</title>
-    <input name="Region of Interest" class="3D NifTI"/>
-    <input name="Layers" class="4D NifTI"/>
-    <output name="Design Matrix" class="Mat file"/>
+    <title name="ROI to design matrix">
+        <code>
+        <language name="MATLAB">
+            <comment text="Make a sptial design matrix from a region of interest"/>
+            <argument name="tvm_roiToDesignMatrix"/>
+        </language>
+        </code>
+    </title>
+    <input-output name="Region of Interest">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_RegionOfInterest"/>
+            </language>
+        </code>
+    </input-output>
+    <input-output name="Layers">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_Layers"/>
+            </language>
+        </code>
+    </input-output>
+    <output name="Design Matrix">
+        <code>
+            <language name="MATLAB">
+                <argument name="o_DesignMatrix"/>
+            </language>
+        </code>
+    </output>
 </node>

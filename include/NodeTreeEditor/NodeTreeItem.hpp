@@ -47,7 +47,7 @@ public:
             unsigned int _i
             );
     //
-    const QString& getFileName(
+    QString getFileName(
             const QString& _portName
             ) const;
     //

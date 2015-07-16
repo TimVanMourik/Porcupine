@@ -128,7 +128,7 @@ NodeTreeItem::NodeTreeItem(
     connect(visibilityButton, SIGNAL(toggled(bool)), m_portBlock, SLOT(setVisible(bool)));
 }
 
-const QString& NodeTreeItem::getFileName(
+QString NodeTreeItem::getFileName(
         const QString& _portName
         ) const
 {
@@ -139,9 +139,7 @@ const QString& NodeTreeItem::getFileName(
     else
     {
         /// @todo check if there is a nicer solution
-        //in case we cannot return anything
-        static const QString emptyString;
-        return emptyString;
+        return QString();
     }
 }
 
