@@ -1,46 +1,46 @@
 <node>
-    <title>Define trial</title>
-		<code>
-			<language="MATLAB">
-				<comment text="Find the interesting segments of data">
-				<function name="ft_definetrial">
-			</language>
-		</code>
-    <input name="Data set"/>
-		<code>
-			<language="MATLAB">
-				<argument name="dataset">
-				<comment text="name of CTF dataset">
-			</language>
-		</code>
-	</input>
+    <title name="Define trial">
+        <code>
+            <language name="MATLAB">
+                <comment text="Find the interesting segments of data"/>
+                <argument name="ft_definetrial"/>
+            </language>
+        </code>
+    </title>
+    <input name="Data set">
+        <code>
+            <language name="MATLAB">
+                <argument name="dataset"/>
+            </language>
+        </code>
+    </input>
     <input name="Event type">
-		<code>
-			<language="MATLAB">
-				<argument name="trialdef.eventtype">
-			</language>
-		</code>
-	</input>
+        <code>
+            <language name="MATLAB">
+                <argument name="trialdef.eventtype"/>
+            </language>
+        </code>
+    </input>
     <input name="Pre stimulus time">
-		<code>
-			<language="MATLAB">
-				<argument name="trialdef.prestim">
-			</language>
-		</code>
-	</input>
+        <code>
+            <language name="MATLAB">
+                <argument name="trialdef.prestim"/>
+            </language>
+        </code>
+    </input>
     <input name="Post stimulus time">
-		<code>
-			<language="MATLAB">
-				<argument name="trialdef.poststim">
-			</language>
-		</code>
-	</input>
+        <code>
+            <language name="MATLAB">
+                <argument name="trialdef.poststim"/>
+            </language>
+        </code>
+    </input>
     <input name="Event value">
-		<code>
-			<language="MATLAB">
-				<argument name="trialdef.eventvalue">
-				<comment text="trigger value for fully incongruent (FIC)">
-			</language>
-		</code>
-	</input>
+        <code>
+            <language name="MATLAB">
+                <argument name="trialdef.eventvalue">
+                <comment text="trigger value for fully incongruent (FIC)"/>
+            </language>
+        </code>
+    </input>
 </node>

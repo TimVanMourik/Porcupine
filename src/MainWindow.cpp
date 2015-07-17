@@ -136,7 +136,7 @@ void MainWindow::loadNodes(
     unsigned int i = 0;
     while(true)
     {
-        QFile xmlNodefile(QString(":/Default/TVM/node_%1.xml").arg(i));
+        QFile xmlNodefile(QString(":/Default/FieldTrip/node_%1.xml").arg(i));
         if(xmlNodefile.exists())
         {
             nodeLibrary.addNodeSetting(xmlNodefile);
