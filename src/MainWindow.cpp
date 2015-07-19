@@ -59,10 +59,10 @@ MainWindow::MainWindow(
     QVBoxLayout* rightSide = new QVBoxLayout(rightWidget);
     rightSide->addWidget(m_nodeEditorWidget);
     rightSide->addWidget(m_codeEditorWidget);
-    rightWidget->setStretchFactor(0, 12);
-    rightWidget->setStretchFactor(1, 1);
 
     ///@todo stretch factors are a bit weird. Find out how to do this nicely
+    rightWidget->setStretchFactor(0, 12);
+    rightWidget->setStretchFactor(1, 1);
     mainWidget->setStretchFactor(0, 1);
     mainWidget->setStretchFactor(1, 2);
 
@@ -196,7 +196,10 @@ void MainWindow::saveFileToXml()
     QDomElement root = xmlFile.createElement("pipeline");
     xmlFile.appendChild(root);
 
-    m_nodeEditors[m_nodeEditorWidget->currentIndex()]->saveToXml(root);
+    //save all nodes
+    m_nodeTreeEditors[m_nodeEditorWidget->currentIndex()]->saveToXml(root);
+    //save all links
+    m_nodeEditors[m_nodeEditorWidget->currentIndex()]->saveLinksToXml(root);
 
     QFile file(fileName);
     if (file.open(QIODevice::WriteOnly))

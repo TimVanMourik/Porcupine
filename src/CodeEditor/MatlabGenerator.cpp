@@ -2,7 +2,7 @@
 
 MatlabGenerator::MatlabGenerator() :
     CodeGenerator(),
-    m_configurationWord("configuration")
+    m_configurationWord("cfg")
 {
 
 }

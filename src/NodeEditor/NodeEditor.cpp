@@ -237,17 +237,10 @@ QGraphicsItem* NodeEditor::itemAt(
     return 0;
 }
 
-void NodeEditor::saveToXml(
+void NodeEditor::saveLinksToXml(
         QDomElement& _xmlElement
         )
 {
-    foreach(QGraphicsItem* item, scene()->items())
-    {
-        if (item->type() == Node::Type)
-        {
-            ((Node*) item)->saveToXml(_xmlElement);
-        }
-    }
     foreach(QGraphicsItem* item, scene()->items())
     {
         if (item->type() == Link::Type)

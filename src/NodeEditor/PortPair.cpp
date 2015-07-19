@@ -216,11 +216,12 @@ bool PortPair::hasNodeAncestor(
 
 void PortPair::saveToXml(
         QDomElement& _xmlElement
-        )
+        ) const
 {
     QDomDocument xml;
     QDomElement newPortPair = xml.createElement("pair");
     newPortPair.setAttribute("name", getName());
+    newPortPair.setAttribute("filename", getFileName());
 
     if(m_input)
     {
@@ -256,21 +257,20 @@ void PortPair::loadFromXml(
     }
 }
 
-#include <iostream>
 void PortPair::fileNameChanged(
         const QString& _fileName,
         bool _cascadeUp
         )
 {
-    //if file name is valid
+    /// @todo check validity of file names
     bool fileValid;
-    if(false)
+    if(true)
     {
-        fileValid = false;
+        fileValid = true;
     }
     else
     {
-        fileValid = true;
+        fileValid = false;
     }
     //send file name up the tree
     if(_cascadeUp && hasAncestorPorts())
@@ -301,7 +301,7 @@ void PortPair::fileNameChanged(
 }
 
 const QString& PortPair::getFileName(
-            )
+            ) const
 {
     return m_fileName;
 }

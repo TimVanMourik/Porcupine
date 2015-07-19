@@ -48,11 +48,7 @@ public:
     QGraphicsScene* getScene(
             ) const;
     //
-    void save(
-            QDataStream& _dataStream
-            );
-    //
-    void saveToXml(
+    void saveLinksToXml(
             QDomElement& _xmlFile
             );
     //
@@ -89,6 +85,9 @@ private:
             );
     //New link is created such that it always goes from an output port to an input port
     Link* m_newLink;
+    /// @todo think of storing all links explicitly, for example to facilitate saving
+    //
+    //const QVector<Link*>
     //
     NodeTreeEditor* m_treeModel;
 };

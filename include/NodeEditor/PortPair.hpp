@@ -73,7 +73,7 @@ public:
     //
     void saveToXml(
             QDomElement& _xmlElement
-            );
+            ) const;
     //
     void loadFromXml(
             QDomElement& _xmlNode,
@@ -81,7 +81,7 @@ public:
             );
     //
     const QString& getFileName(
-                );
+                ) const;
     //
     ~PortPair(
             );

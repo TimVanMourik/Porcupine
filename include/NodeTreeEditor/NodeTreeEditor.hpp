@@ -7,6 +7,8 @@
 class Node;
 class NodeTreeItem;
 class CodeEditor;
+class QDomDocument;
+class QDomElement;
 class QVBoxLayout;
 
 class NodeTreeEditor : public QFrame
@@ -25,6 +27,10 @@ public:
     void removeNode(
             const Node* _node
             );
+    //
+    void saveToXml(
+            QDomElement& _xmlFile
+            ) const;
     //
     void setCodeEditor(
             CodeEditor* _editor

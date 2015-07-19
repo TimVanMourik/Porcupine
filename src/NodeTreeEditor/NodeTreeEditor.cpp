@@ -119,6 +119,16 @@ void NodeTreeEditor::nodeMoved(
     updateNodeOrder();
 }
 
+void NodeTreeEditor::saveToXml(
+        QDomElement& _xmlElement
+        ) const
+{
+    foreach(const NodeTreeItem* node, m_nodeList)
+    {
+        node->saveToXml(_xmlElement);
+    }
+}
+
 void NodeTreeEditor::updateNodeOrder(
         )
 {
@@ -127,22 +137,6 @@ void NodeTreeEditor::updateNodeOrder(
         m_nodeList[i]->setNumber(i + 1);
     }
 }
-
-//#include <iostream>
-//void NodeTreeModel::dragEnterEvent(
-//        QDropEvent* _event
-//        )
-//{
-//    std::cerr << _event->mimeData()->text().toStdString() << " A\n";
-//    _event->acceptProposedAction();
-//}
-
-//void NodeTreeModel::dropEvent(
-//        QDropEvent* _event
-//        )
-//{
-//    std::cerr << _event->mimeData()->text().toStdString() << " B\n";
-//}
 
 void NodeTreeEditor::linkCreated(
         const Node* _from,

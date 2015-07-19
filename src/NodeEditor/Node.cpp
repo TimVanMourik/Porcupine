@@ -224,26 +224,26 @@ const NodeSetting* Node::getSetting(
     return m_setting;
 }
 
-void Node::saveToXml(
-        QDomElement& _xmlElement
-        )
-{
-    QDomDocument xml;
-    QDomElement node = xml.createElement("node");
-    node.setAttribute("name", m_setting->getName());
-    QDomElement position = xml.createElement("position");
-    position.setAttribute("x", QString::number(pos().x()));
-    position.setAttribute("y", QString::number(pos().y()));
-    node.appendChild(position);
+//void Node::saveToXml(
+//        QDomElement& _xmlElement
+//        ) const
+//{
+//    QDomDocument xml;
+//    QDomElement node = xml.createElement("node");
+//    node.setAttribute("name", m_setting->getName());
+//    QDomElement position = xml.createElement("position");
+//    position.setAttribute("x", QString::number(pos().x()));
+//    position.setAttribute("y", QString::number(pos().y()));
+//    node.appendChild(position);
 
-    QDomElement ports = xml.createElement("pairs");
-    foreach(PortPair* pair, m_ports)
-    {
-        pair->saveToXml(ports);
-    }
-    node.appendChild(ports);
-    _xmlElement.appendChild(node);
-}
+//    QDomElement ports = xml.createElement("pairs");
+//    foreach(PortPair* pair, m_ports)
+//    {
+//        pair->saveToXml(ports);
+//    }
+//    node.appendChild(ports);
+//    _xmlElement.appendChild(node);
+//}
 
 void Node::loadFromXml(
         QDomElement& _xmlNode,
@@ -255,6 +255,7 @@ void Node::loadFromXml(
 
     QString nodeType = _xmlNode.attribute("name");
     NodeSetting* setting = nodeLibrary.getNodeSetting(nodeType);
+    assert(setting != 0);
     loadFromNodeSetting(setting);
 
     QDomNode n = _xmlNode.firstChild();
@@ -275,9 +276,14 @@ void Node::loadFromXml(
                 PortPair* pair = 0;
                 foreach(PortPair* port, m_ports)
                 {
-                    if(port->getName().compare(portElement.attribute("name") )== 0)
+                    if(port->getName().compare(portElement.attribute("name")) == 0)
                     {
                         pair = port;
+                        QString name = portElement.attribute("filename");
+                        if(!name.isEmpty())
+                        {
+                            pair->fileNameChanged(name, false);
+                        }
                         break;
                     }
                     else

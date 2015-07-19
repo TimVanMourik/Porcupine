@@ -104,9 +104,9 @@ public:
     int type(
             ) const;
     //
-    void saveToXml(
-            QDomElement& _xmlElement
-            );
+//    void saveToXml(
+//            QDomElement& _xmlElement
+//            ) const;
     //
     void loadFromXml(
             QDomElement& _xmlNode,

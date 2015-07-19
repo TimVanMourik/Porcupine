@@ -8,60 +8,60 @@ fprintf('temporary results are stored in %s\n', p);
 
 
 %% Simulate frequencies for a given number of trials
-configuration.numtrl = 100;
-configuration.outputfile = 'data1.mat';
-ft_freqsimulation(configuration);
+cfg.numtrl = 100;
+cfg.outputfile = 'data1.mat';
+ft_freqsimulation(cfg);
 
 %% Simulate frequencies for a given number of trials
-configuration.numtrl = 100;
-configuration.outputfile = 'data2.mat';
-ft_freqsimulation(configuration);
+cfg.numtrl = 100;
+cfg.outputfile = 'data2.mat';
+ft_freqsimulation(cfg);
 
 %% Analyse frequencies of your signal
-configuration.method = 'wavelet';
-configuration.toi = 0:0.01:1;
-configuration.channel = 1;
-configuration.keeptrials = 'yes';
-configuration.inputfile = 'data1.mat';
-configuration.outputfile = 'freq1.mat';
-ft_freqanalysis(configuration);
+cfg.method = 'wavelet';
+cfg.toi = 0:0.1:10;
+cfg.channel = 1;
+cfg.keeptrials = 'yes';
+cfg.inputfile = 'data1.mat';
+cfg.outputfile = 'freq1.mat';
+ft_freqanalysis(cfg);
 
 %% Analyse frequencies of your signal
-configuration.method = 'wavelet';
-configuration.toi = 0:0.01:1;
-configuration.channel = 1;
-configuration.keeptrials = 'yes';
-configuration.inputfile = 'data2.mat';
-configuration.outputfile = 'cond2.mat';
-ft_freqanalysis(configuration);
+cfg.method = 'wavelet';
+cfg.toi = 0:0.01:1;
+cfg.channel = 1;
+cfg.keeptrials = 'yes';
+cfg.inputfile = 'data2.mat';
+cfg.outputfile = 'freq2.mat';
+ft_freqanalysis(cfg);
 
 %% Does all sorts of operation on your data
-configuration.operation = 'multiply';
-configuration.parameter = 'powspctrm';
-configuration.scalar = 0.9;
-configuration.inputfile = 'freq1.mat';
-configuration.outputfile = 'cond1.mat';
-ft_math(configuration);
+cfg.operation = 'multiply';
+cfg.parameter = 'powspctrm';
+cfg.scalar = 0.9;
+cfg.inputfile = 'freq1.mat';
+cfg.outputfile = 'cond1.mat';
+ft_math(cfg);
 
 %% Does all sorts of operation on your data
-configuration.operation = 'multiply';
-configuration.parameter = 'powspctrm';
-configuration.scalar = 0.9;
-configuration.inputfile = 'cond2.mat';
-configuration.outputfile = 'cond2.mat';
-ft_math(configuration);
+cfg.operation = 'multiply';
+cfg.parameter = 'powspctrm';
+cfg.scalar = 0.9;
+cfg.inputfile = 'freq2.mat';
+cfg.outputfile = 'cond2.mat';
+ft_math(cfg);
 
 %% Find the interesting segments of data
-configuration.statistic = 'indepsamplesT';
-configuration.method = 'analytic';
-configuration.ivar = 1;
-configuration.design = [1*ones(1,100) 2*ones(1,100)];
-configuration.inputfile1 = 'freq1.mat';
-configuration.inputfile2 = 'cond2.mat';
-configuration.outputfile = stat.mat;
-ft_freqstatistics(configuration);
+cfg.statistic = 'indepsamplesT';
+cfg.method = 'analytic';
+cfg.ivar = 1;
+cfg.design = [1*ones(1,100) 2*ones(1,100)];
+cfg.inputfile1 = 'freq1.mat';
+cfg.inputfile2 = 'freq2.mat';
+cfg.outputfile = 'stat.mat';
+ft_freqstatistics(cfg);
 
 %% Recreates a pipeline from providence
-configuration.inputfile = stat.mat;
-ft_analysispipeline(configuration);
+cfg.inputfile = 'stat.mat';
+ft_analysispipeline(cfg);
 

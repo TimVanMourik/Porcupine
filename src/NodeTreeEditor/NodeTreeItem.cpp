@@ -1,5 +1,6 @@
 #include <QApplication>
 #include <QComboBox>
+#include <QDomDocument>
 #include <QDrag>
 #include <QDropEvent>
 #include <QLabel>
@@ -92,8 +93,16 @@ NodeTreeItem::NodeTreeItem(
         font.setItalic(true);
 //        fileName->setMaximumHeight(fileName->font().pointSize() + 4);
         fileName->setFont(font);
-
-        fileName->setText("<file name>");
+        QString name = pair->getFileName();
+        if(!name.isEmpty())
+        {
+            fileName->setText(name);
+        }
+        else
+        {
+            ///@todo set italic when empty
+            fileName->setText("<file name>");
+        }
         fileName->font().pointSize();
         QPalette palette = fileName->palette();
         palette.setColor(fileName->backgroundRole(), Qt::white);
@@ -168,6 +177,27 @@ QVector<const Node*> NodeTreeItem::getDescendants(
     return m_node->getDescendants();
 }
 
+void NodeTreeItem::saveToXml(
+        QDomElement& _xmlElement
+        ) const
+{
+    QDomDocument xml;
+    QDomElement node = xml.createElement("node");
+    node.setAttribute("name", m_node->getName());
+    QDomElement position = xml.createElement("position");
+    position.setAttribute("x", QString::number(m_node->pos().x()));
+    position.setAttribute("y", QString::number(m_node->pos().y()));
+    node.appendChild(position);
+
+    QDomElement ports = xml.createElement("pairs");
+    foreach(const PortPair* pair, m_node->getPorts())
+    {
+        pair->saveToXml(ports);
+    }
+    node.appendChild(ports);
+    _xmlElement.appendChild(node);
+}
+
 void NodeTreeItem::mousePressEvent(
         QMouseEvent* _event
         )
@@ -198,20 +228,6 @@ void NodeTreeItem::mouseReleaseEvent(
 //    setWindowOpacity(1);
     emit moved(this);
 }
-
-//bool NodeTreeItem::hasNode(
-//        const Node* _node
-//        )
-//{
-////    if(m_node == _node)
-////    {
-////        return true;
-////    }
-////    else
-////    {
-//        return false;
-////    }
-//}
 
 void NodeTreeItem::setNumber(
         unsigned int _i

@@ -8,6 +8,8 @@
 class Node;
 class NodeSetting;
 class PortPair;
+class QDomDocument;
+class QDomElement;
 class QLabel;
 class QLineEdit;
 class QVBoxLayout;
@@ -30,6 +32,10 @@ public:
             NodeTreeItem* _item
             );
     //
+    void saveToXml(
+            QDomElement& _xmlElement
+            ) const;
+    //
     const Node* getNode(
             ) const;
     //
@@ -38,10 +44,6 @@ public:
     //
     QVector<const Node*> getDescendants(
             );
-    //
-//    bool hasNode(
-//            const Node* _node
-//            );
     //
     void setNumber(
             unsigned int _i

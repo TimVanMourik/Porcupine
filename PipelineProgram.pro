@@ -22,7 +22,7 @@ macx:{
 
 QMAKE_CXXFLAGS +=   -std=gnu++0x
 
-TARGET =            PipelineProgram
+TARGET =            bin/PipelineProgram
 
 TEMPLATE =          app
 
