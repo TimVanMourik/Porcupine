@@ -11,7 +11,7 @@
 NodeTreeEditor::NodeTreeEditor(
         QWidget* _parent
         ) :
-    QFrame(_parent),
+    QScrollArea(_parent),
     m_layout(new QVBoxLayout()),
     m_codeEditor(0)
 {

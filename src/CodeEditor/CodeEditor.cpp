@@ -15,9 +15,30 @@ CodeEditor::CodeEditor(
     QTabWidget(_parent)
 {
     /// @todo put this in the preferences
-    const int tabWidth = 4;
+//    const int tabWidth = 4;
 
     //MATLAB (C)
+    setupMatlabEditor();
+    //Bash
+    setupBashEditor();
+    //Python
+    setupPythonEditor();
+}
+
+void CodeEditor::generateCode(
+        const QList<NodeTreeItem*>& _nodeList
+        )
+{
+    foreach(QString language, m_programmingLanguages)
+    {
+        m_textEditors[language]->setPlainText(m_codeGenerators[language]->generateCode(_nodeList));
+    }
+}
+
+void CodeEditor::setupMatlabEditor(
+        )
+{
+    const int tabWidth = 4;
     QString matlab("MATLAB");
     m_programmingLanguages << matlab;
     QFont matlabFont = QFont("Courier", 10);
@@ -33,25 +54,12 @@ CodeEditor::CodeEditor(
     m_textEditors[matlab] = matlabEditor;
     m_codeGenerators[matlab] = new MatlabGenerator();
     addTab(m_textEditors[matlab], matlab);
+}
 
-    //Python
-    QString python("Python");
-    m_programmingLanguages << python;
-    QFont pythonFont = QFont("Courier", 10);
-    pythonFont.setStyleHint(QFont::Monospace);
-    pythonFont.setFixedPitch(true);
-    QFontMetrics pythonMetric(pythonFont);
-
-    QTextEdit* pythonEditor = new QTextEdit(this);
-    pythonEditor->setFont(matlabFont);
-    pythonEditor->setTabStopWidth(tabWidth * pythonMetric.width(' '));
-
-    new PythonHighlighter(pythonEditor->document());
-    m_textEditors[python] = pythonEditor;
-    m_codeGenerators[python] = new PythonGenerator();
-    addTab(m_textEditors[python], python);
-
-    //Bash
+void CodeEditor::setupBashEditor(
+        )
+{
+    const int tabWidth = 4;
     QString bash("Bash");
     m_programmingLanguages << bash;
     QFont bashFont = QFont("Courier", 10);
@@ -69,14 +77,25 @@ CodeEditor::CodeEditor(
     addTab(m_textEditors[bash], bash);
 }
 
-void CodeEditor::generateCode(
-        const QList<NodeTreeItem*>& _nodeList
+void CodeEditor::setupPythonEditor(
         )
 {
-    foreach(QString language, m_programmingLanguages)
-    {
-        m_textEditors[language]->setPlainText(m_codeGenerators[language]->generateCode(_nodeList));
-    }
+    const int tabWidth = 4;
+    QString python("Python");
+    m_programmingLanguages << python;
+    QFont pythonFont = QFont("Courier", 10);
+    pythonFont.setStyleHint(QFont::Monospace);
+    pythonFont.setFixedPitch(true);
+    QFontMetrics pythonMetric(pythonFont);
+
+    QTextEdit* pythonEditor = new QTextEdit(this);
+    pythonEditor->setFont(pythonFont);
+    pythonEditor->setTabStopWidth(tabWidth * pythonMetric.width(' '));
+
+    new PythonHighlighter(pythonEditor->document());
+    m_textEditors[python] = pythonEditor;
+    m_codeGenerators[python] = new PythonGenerator();
+    addTab(m_textEditors[python], python);
 }
 
 CodeEditor::~CodeEditor()

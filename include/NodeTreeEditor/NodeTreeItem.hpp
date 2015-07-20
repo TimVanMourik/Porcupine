@@ -75,8 +75,6 @@ private:
     //
     const Node* m_node;
     //
-    QWidget* m_portBlock;
-    //
     QMap<QWidget*, PortPair*> m_ports;
     //
     QMap<QString, QLineEdit*> m_fileNames;

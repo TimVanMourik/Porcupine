@@ -1,8 +1,8 @@
 #ifndef NODETREEMODEL_H
 #define NODETREEMODEL_H
 
+#include <QScrollArea>
 #include <QStandardItemModel>
-#include <QFrame>
 
 class Node;
 class NodeTreeItem;
@@ -11,7 +11,7 @@ class QDomDocument;
 class QDomElement;
 class QVBoxLayout;
 
-class NodeTreeEditor : public QFrame
+class NodeTreeEditor : public QScrollArea
 {
     Q_OBJECT
 public:

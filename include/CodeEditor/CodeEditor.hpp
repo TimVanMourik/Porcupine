@@ -23,6 +23,15 @@ public:
             );
 private:
     //
+    void setupMatlabEditor(
+            );
+    //
+    void setupBashEditor(
+            );
+    //
+    void setupPythonEditor(
+            );
+    //
     QMap<QString, QTextEdit*> m_textEditors;
     //
     QMap<QString, CodeGenerator*> m_codeGenerators;

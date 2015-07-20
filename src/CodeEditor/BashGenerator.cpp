@@ -36,33 +36,36 @@ QString BashGenerator::itemToCode(
 
     //add function
     code.append(nodeSetting->getTitle().getArgument("Bash"));
-    code.append(" ");
 
 //    //add input
     foreach (Argument argument, nodeSetting->getInput())
     {
-        code.append(argument.getArgument("Bash"));
-        code.append(" ");
-        code.append(_item->getFileName(argument.getName()));
-        code.append(" ");
+        code.append(argumentToCode(argument, _item));
     }
     //add input-output
     foreach (Argument argument, nodeSetting->getInOut())
     {
-        code.append(argument.getArgument("Bash"));
-        code.append(" ");
-        code.append(_item->getFileName(argument.getName()));
-        code.append(" ");
+        code.append(argumentToCode(argument, _item));
     }
     //add output
     foreach (Argument argument, nodeSetting->getOutput())
     {
-        code.append(argument.getArgument("Bash"));
-        code.append(" ");
-        code.append(_item->getFileName(argument.getName()));
-        code.append(" ");
+        code.append(argumentToCode(argument, _item));
     }
     code.append(";\n");
+    return code;
+}
+
+QString BashGenerator::argumentToCode(
+        const Argument& _argument,
+        const NodeTreeItem* _item
+        ) const
+{
+    QString code("");
+    code.append(" ");
+    code.append(_argument.getArgument("Bash"));
+    code.append(" ");
+    code.append(_item->getFileName(_argument.getName()));
     return code;
 }
 

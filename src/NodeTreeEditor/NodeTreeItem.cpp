@@ -21,7 +21,6 @@ NodeTreeItem::NodeTreeItem(
         ) :
     QFrame(_parent),
     m_node(_node),
-    m_portBlock(new QWidget(/*this*/)),
     m_position(QPoint()),
     m_numberLabel(0),
     m_number(0)
@@ -29,112 +28,91 @@ NodeTreeItem::NodeTreeItem(
     int minimumSize = 0;
     int spacing = 2;
     QVBoxLayout* mainLayout = new QVBoxLayout(this);
-    mainLayout->setSpacing(0);
-    mainLayout->setContentsMargins(2, 2, 2, 2);
+    QWidget* headerWidget = new QWidget();
+    QWidget* portBlock = new QWidget();
+    mainLayout->addWidget(headerWidget);
+    mainLayout->addWidget(portBlock);
+    QHBoxLayout* headerLayout = new QHBoxLayout(headerWidget);
+    QHBoxLayout* portBlockLayout = new QHBoxLayout(portBlock);
 
     setFrameShadow(QFrame::Raised);
     setFrameStyle(QFrame::StyledPanel);
-    setLayout(mainLayout);
-
-    QWidget* headerWidget = new QWidget(this);
-    QHBoxLayout* layout1 = new QHBoxLayout(headerWidget);
-    layout1->setSpacing(0);
-    layout1->setContentsMargins(10, 10, 20, 0);
-    headerWidget->setLayout(layout1);
-    m_portBlock->setParent(headerWidget);
-
-    m_numberLabel = new QLabel();
-    m_numberLabel->setText(QString::number(m_number));
-    layout1->addWidget(m_numberLabel);
-
-    QLabel* nameTag = new QLabel();
-    nameTag->setText(_node->getName());
-    layout1->addWidget(nameTag);
-
-    QPushButton* visibilityButton = new QPushButton();
-    visibilityButton->setMaximumWidth(30);
-    layout1->addWidget(visibilityButton);
-    visibilityButton->setText("\\/");
-    visibilityButton->setCheckable(true);
-
-    mainLayout->addWidget(headerWidget);
-
     QPalette palette = QPalette();
     palette.setColor(QPalette::Background, palette.window().color().darker(110));
     setAutoFillBackground(true);
     setPalette(palette);
     show();
 
-    QVBoxLayout* layout2 = new QVBoxLayout(m_portBlock);
-    layout2->setSpacing(0);
-    layout2->setContentsMargins(4, 3, 3, 3);
-    m_portBlock->setLayout(layout2);
-    m_portBlock->setVisible(false);
+    mainLayout->setSpacing(0);
+    mainLayout->setContentsMargins(2, 2, 2, 2);
+    headerLayout->setSpacing(0);
+    headerLayout->setContentsMargins(10, 10, 20, 0);
+
+    // headerLayout
+    m_numberLabel = new QLabel();
+    QLabel* nameTag = new QLabel();
+    QPushButton* visibilityButton = new QPushButton();
+    headerLayout->addWidget(m_numberLabel);
+    headerLayout->addWidget(nameTag);
+    headerLayout->addWidget(visibilityButton);
+
+    m_numberLabel->setText(QString::number(m_number));
+    nameTag->setText(_node->getName());
+    visibilityButton->setMaximumWidth(30);
+    visibilityButton->setText("\\/");
+    visibilityButton->setCheckable(true);
+
+    // portBlockLayout
+    portBlockLayout->setSpacing(0);
+    portBlockLayout->setContentsMargins(4, 3, 3, 3);
+    portBlock->setLayout(portBlockLayout);
+    portBlock->setVisible(false);
 
     /// @todo Make two colums, one for the port name, one for the file name
+    QWidget* left  = new QWidget();
+    QWidget* right = new QWidget();
+    portBlockLayout->addWidget(left);
+    portBlockLayout->addWidget(right);
+    QVBoxLayout* leftLayout = new QVBoxLayout(left);
+    QVBoxLayout* rightLayout = new QVBoxLayout(right);
+    leftLayout->setSpacing(spacing);
+    leftLayout->setContentsMargins(2, 0, 2, 0);
+    rightLayout->setSpacing(spacing);
+    rightLayout->setContentsMargins(2, 0, 2, 0);
     foreach(PortPair* pair, _node->getPorts())
     {
-        ///@todo this pointer isn't explicitly deleted yet
-        QHBoxLayout* layout3 = new QHBoxLayout();
-        ///@todo this pointer isn't explicitly deleted yet
-        QWidget* portWidget = new QWidget(m_portBlock);
-        portWidget->setLayout(layout3);
-        layout3->setSpacing(spacing);
-        layout3->setContentsMargins(2, 0, 2, 0);
-
-        ///@todo this pointer isn't explicitly deleted yet
         QLabel* portName = new QLabel(pair->getName());
-        layout3->addWidget(portName);
-
-        ///@todo this pointer isn't explicitly deleted yet
         QLineEdit* fileName = new QLineEdit();
+        leftLayout->addWidget(portName);
+        rightLayout->addWidget(fileName);
+
         m_fileNames[pair->getName()] = fileName;
         QFont font = QFont();
-        font.setItalic(true);
-//        fileName->setMaximumHeight(fileName->font().pointSize() + 4);
-        fileName->setFont(font);
         QString name = pair->getFileName();
         if(!name.isEmpty())
         {
+            font.setItalic(false);
             fileName->setText(name);
         }
         else
         {
-            ///@todo set italic when empty
+            font.setItalic(true);
             fileName->setText("<file name>");
         }
+        fileName->setFont(font);
         fileName->font().pointSize();
         QPalette palette = fileName->palette();
         palette.setColor(fileName->backgroundRole(), Qt::white);
 
         fileName->setAutoFillBackground(true);
         fileName->setPalette(palette);
-        layout3->addWidget(fileName);
-
-        /// @todo this pointer isn't explicitly deleted yet
-        /// @todo DataType has been temporarily removed. Reintroduce when working
-//        QComboBox* dataType = new QComboBox();
-//        foreach(const DataType* type, pair->getType())
-//        {
-//            dataType->addItem(type->getName());
-//        }
-//        layout3->addWidget(dataType);
         minimumSize += fileName->font().pointSize() + spacing;
 
-//        m_portBlock->setMinimumHeight(3 * (fileName->font().pointSize() + spacing) * m_ports.size());
-//        m_portBlock->setMaximumHeight(3 * (fileName->font().pointSize() + spacing) * m_ports.size());
-        m_ports[portWidget] = pair;
-
-        layout2->addWidget(portWidget);
-
         connect(fileName, SIGNAL(textEdited(QString)), pair, SLOT(fileNameChanged(QString)));
+        /// @todo set the SLOT such that it does not only handle the text but also the font
         connect(pair, SIGNAL(changeFileName(QString)), fileName, SLOT(setText(QString)));
     }
-//    setMinimumHeight(m_portBlock->minimumHeight() + 30);
-//    setMaximumHeight(m_portBlock->minimumHeight() + 30);
-    mainLayout->addWidget(m_portBlock);
-
-    connect(visibilityButton, SIGNAL(toggled(bool)), m_portBlock, SLOT(setVisible(bool)));
+    connect(visibilityButton, SIGNAL(toggled(bool)), portBlock, SLOT(setVisible(bool)));
 }
 
 QString NodeTreeItem::getFileName(
@@ -147,8 +125,7 @@ QString NodeTreeItem::getFileName(
     }
     else
     {
-        /// @todo check if there is a nicer solution
-        return QString();
+        return QString("");
     }
 }
 
@@ -240,10 +217,5 @@ void NodeTreeItem::setNumber(
 NodeTreeItem::~NodeTreeItem(
         )
 {
-    foreach(QWidget* port, m_ports.keys())
-    {
-        ///@todo delete its children first
-        delete port;
-    }
 }
 

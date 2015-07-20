@@ -20,10 +20,10 @@ private:
             const NodeTreeItem* _item
             ) const;
     //
-//    QString argumentToCode(
-//            const Argument& _argument,
-//            const NodeTreeItem* _item
-//            ) const;
+    QString argumentToCode(
+            const Argument& _argument,
+            const NodeTreeItem* _item
+            ) const;
 };
 
 #endif // BASHGENERATOR_H
