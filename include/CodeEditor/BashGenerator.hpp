@@ -13,7 +13,17 @@ public:
             const QList<NodeTreeItem*>& _nodeList
             );
     //
-    ~BashGenerator();
+    ~BashGenerator(
+            );
+private:
+    QString itemToCode(
+            const NodeTreeItem* _item
+            ) const;
+    //
+//    QString argumentToCode(
+//            const Argument& _argument,
+//            const NodeTreeItem* _item
+//            ) const;
 };
 
 #endif // BASHGENERATOR_H

@@ -2,7 +2,7 @@
 
 MatlabGenerator::MatlabGenerator() :
     CodeGenerator(),
-    m_configurationWord("cfg")
+    m_configurationVariable("cfg")
 {
 
 }
@@ -16,8 +16,6 @@ QString MatlabGenerator::generateCode(
     {
         code.append(itemToCode(item));
     }
-
-//    QString code("Generating MATLAB code\n");
     return code;
 }
 
@@ -27,9 +25,15 @@ QString MatlabGenerator::itemToCode(
 {
     const NodeSetting* nodeSetting = _item->getNodeSetting();
     QString code("");
+    if(nodeSetting->getTitle().getArgument("MATLAB").isEmpty())
+    {
+        return QString("% This function cannot be converted to MATLAB code\n");
+    }
+
     code.append("%% ");
     code.append(nodeSetting->getTitle().getComment("MATLAB"));
     code.append("\n");
+    code.append(m_configurationVariable).append(" = [];\n");
 
     //add input
     foreach (Argument argument, nodeSetting->getInput())
@@ -51,14 +55,13 @@ QString MatlabGenerator::itemToCode(
     //add function
     code.append(nodeSetting->getTitle().getArgument("MATLAB"));
     code.append("(");
-    code.append(m_configurationWord);
+    code.append(m_configurationVariable);
     code.append(");");
     code.append("\n\n");
     //
     return code;
 }
 
-#include <iostream>
 QString MatlabGenerator::argumentToCode(
         const Argument& _argument,
         const NodeTreeItem* _item
@@ -67,7 +70,7 @@ QString MatlabGenerator::argumentToCode(
     QString code("");
     if(!_argument.getArgument("MATLAB").isEmpty())
     {
-        code.append(m_configurationWord);
+        code.append(m_configurationVariable);
         code.append(".");
         code.append(_argument.getArgument("MATLAB"));
         code.append(" = ");

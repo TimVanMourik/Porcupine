@@ -13,7 +13,8 @@ public:
             const QList<NodeTreeItem*>& _nodeList
             );
     //
-    ~MatlabGenerator();
+    ~MatlabGenerator(
+            );
 private:
     QString itemToCode(
             const NodeTreeItem* _item
@@ -24,7 +25,7 @@ private:
             const NodeTreeItem* _item
             ) const;
     //
-    QString m_configurationWord;
+    QString m_configurationVariable;
 };
 
 #endif // MATLABGENERATOR_H
