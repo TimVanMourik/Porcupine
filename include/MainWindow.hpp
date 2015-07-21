@@ -56,6 +56,8 @@ private slots:
             );
     void printFile(
             );
+    void loadNewNodes(
+            );
     void undoEdit(
             );
     void redoEdit(
@@ -73,6 +75,7 @@ private slots:
             NodeSetting* _setting = 0
             );
     void updateNodeMenu(
+            const QString& _node
             );
 public slots:
     //
@@ -87,7 +90,7 @@ private:
             );
     void loadDataTypes(
             );
-    void loadNodes(
+    void loadDefaultNodes(
             );
 
     QTabWidget* m_nodeEditorWidget;
@@ -108,6 +111,7 @@ private:
     QAction* m_openAct;
     QAction* m_saveToXmlAct;
     QAction* m_printAct;
+    QAction* m_loadNodesAct;
     QAction* m_exitAct;
     QAction* m_undoAct;
     QAction* m_redoAct;

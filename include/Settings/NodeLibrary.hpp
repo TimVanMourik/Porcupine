@@ -39,7 +39,7 @@ public:
             );
     /// @brief
     /// @param _schema is not const because .open() is not a const function (even in read-only mode)
-    void addNodeSetting(
+    QString addNodeSetting(
             QFile& _node
             );
     /// @brief

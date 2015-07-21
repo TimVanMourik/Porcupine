@@ -88,7 +88,7 @@ void NodeLibrary::addDataTypes(
     }
 }
 
-void NodeLibrary::addNodeSetting(
+QString NodeLibrary::addNodeSetting(
         QFile& _schema
         )
 {
@@ -180,17 +180,18 @@ void NodeLibrary::addNodeSetting(
 //            std::cout << title.toStdString() << std::endl;
             m_nodeSettings[title.getName()] = new NodeSetting(title, inputNodes, inOutNodes, outputNodes);
             m_nodeNames << title.getName();
+            return title.getName();
         }
         else
         {
             std::cerr << "This node is invalid. The root is not a node.\n";
-            return;
+            return QString("");
         }
     }
     else
     {
         std::cerr << "This node is invalid. It has an invalid structure.\n";
-        return;
+        return QString("");
     }
 }
 

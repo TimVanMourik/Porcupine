@@ -2,6 +2,7 @@
  * Copyright (C) 2014 Tim van Mourik
 */
 
+#include <assert.h>
 #include <iostream>
 
 #include <QApplication>
@@ -44,7 +45,7 @@ MainWindow::MainWindow(
     new QVBoxLayout(m_nodeTreeWidget);
     new QVBoxLayout(m_codeEditorWidget);
 
-//    Make the MainWindow and its layout for the central widget
+    //Make the MainWindow and its layout for the central widget
     QSplitter* mainWidget = new QSplitter(Qt::Horizontal, this);
     setCentralWidget(mainWidget);
 
@@ -70,7 +71,7 @@ MainWindow::MainWindow(
     createMenus();
 
     loadDataTypes();
-    loadNodes();
+    loadDefaultNodes();
 
     newFile();
 
@@ -125,13 +126,12 @@ void MainWindow::loadDataTypes(
     }
 }
 
-void MainWindow::loadNodes(
+void MainWindow::loadDefaultNodes(
         )
 {
     NodeLibrary& nodeLibrary = NodeLibrary::getInstance();
     QFile schemaFile(QString(":/node_schema.xsd"));
     nodeLibrary.setNodeSchema(schemaFile);
-
 
     unsigned int i = 0;
     while(true)
@@ -139,36 +139,44 @@ void MainWindow::loadNodes(
         QFile xmlNodefile(QString(":/Default/FSL/node_%1.xml").arg(i));
         if(xmlNodefile.exists())
         {
-            nodeLibrary.addNodeSetting(xmlNodefile);
+            QString newNode = nodeLibrary.addNodeSetting(xmlNodefile);
+            if(!newNode.isEmpty())
+            {
+                updateNodeMenu(newNode);
+            }
         }
         else
         {
-//            std::cerr << "Break\n";
             break;
         }
-//        std::cerr << "Node " << i << "\n";
         ++i;
     }
 
-    updateNodeMenu();
 }
 
-void MainWindow::updateNodeMenu(
+void MainWindow::loadNewNodes(
         )
 {
     NodeLibrary& nodeLibrary = NodeLibrary::getInstance();
-    QStringList nodeNames = nodeLibrary.getNodeNames();
-    for(int i = 0; i < nodeNames.size(); ++i)
+    QStringList fileNames = QFileDialog::getOpenFileNames();
+    foreach(QString name, fileNames)
     {
-        //Replace by 'if node does not yet exist'
-        if(true)
-        {
-            QAction* newAction = new QAction(nodeNames[i], this);
-            newAction->setData(nodeNames[i]);
-
-            m_nodesMenu->addAction(newAction);
-        }
+        QFile file(name);
+        QString newNode = nodeLibrary.addNodeSetting(file);
+        updateNodeMenu(newNode);
     }
+}
+
+void MainWindow::updateNodeMenu(
+        const QString& _node
+        )
+{
+    assert(!_node.isEmpty());
+    /// @todo if(!_node.exists())
+    QAction* newAction = new QAction(_node, this);
+    newAction->setData(_node);
+    m_nodesMenu->addAction(newAction);
+
     connect(m_nodesMenu, SIGNAL(triggered(QAction*)), this, SLOT(nodeSlot(QAction*)));
 }
 
@@ -327,7 +335,8 @@ void MainWindow::createMenus()
     m_fileMenu->addAction(m_newAct);
     m_fileMenu->addAction(m_openAct);
     m_fileMenu->addAction(m_saveToXmlAct);
-    m_fileMenu->addAction(m_printAct);
+    m_fileMenu->addAction(m_loadNodesAct);
+//    m_fileMenu->addAction(m_printAct);
     m_fileMenu->addSeparator();
     m_fileMenu->addAction(m_exitAct);
 
@@ -363,6 +372,11 @@ void MainWindow::createActions()
     m_printAct->setShortcuts(QKeySequence::Print);
     m_printAct->setStatusTip(tr("Print the document"));
     connect(m_printAct, SIGNAL(triggered()), this, SLOT(printFile()));
+
+    m_loadNodesAct = new QAction(tr("Load Nodes..."), this);
+//    m_loadNodesAct->setShortcuts(QKeySequence::);
+    m_loadNodesAct->setStatusTip(tr("Load new nodes into the library"));
+    connect(m_loadNodesAct, SIGNAL(triggered()), this, SLOT(loadNewNodes()));
 
     m_exitAct = new QAction(tr("Quit"), this);
     m_exitAct->setShortcuts(QKeySequence::Quit);
