@@ -11,6 +11,7 @@ QString BashGenerator::generateCode(
             )
 {
     QString code;
+    code.append("");
     foreach(const NodeTreeItem* item, _nodeList)
     {
         code.append(itemToCode(item));
@@ -24,7 +25,7 @@ QString BashGenerator::itemToCode(
         ) const
 {
     const NodeSetting* nodeSetting = _item->getNodeSetting();
-    QString code("");
+    QString code("#!/bin/bash\n\n");
     if(nodeSetting->getTitle().getArgument("Bash").isEmpty())
     {
         return QString("# This function cannot be converted to Bash code\n");
