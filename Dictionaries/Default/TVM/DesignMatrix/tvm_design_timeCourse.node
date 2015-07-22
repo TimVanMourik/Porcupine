@@ -1,0 +1,34 @@
+<node>
+    <category name="TVM">
+        <category name="Design Matrix"/>
+    </category>
+    <title name="Add time course">
+        <code>
+            <language name="MATLAB">
+                <comment text="Add a constant to the design matrix"/>
+                <argument name="tvm_design_constant"/>
+            </language>
+        </code>
+    </title>
+    <input name="Input design matrix">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_Design"/>
+            </language>
+        </code>
+    </input>
+    <input name="Input time course">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_TimeCourse"/>
+            </language>
+        </code>
+    </input>
+    <output name="Output design matrix">
+        <code>
+            <language name="MATLAB">
+                <argument name="o_Design"/>
+            </language>
+        </code>
+    </output>
+</node>

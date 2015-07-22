@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<pipeline>
+ <node name="Initialise design matrix">
+  <position y="-266" x="-636"/>
+  <pairs>
+   <pair name="Input design matrix" filename="">
+    <port type="input" identifier="1f180750"/>
+   </pair>
+   <pair name="Files" filename="">
+    <port type="input" identifier="1f20ab48"/>
+   </pair>
+   <pair name="Output design matrix" filename="">
+    <port type="output" identifier="1f20abc0"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="Constant">
+  <position y="-219" x="-448"/>
+  <pairs>
+   <pair name="Input design matrix" filename="">
+    <port type="input" identifier="1f19e820"/>
+   </pair>
+   <pair name="Output design matrix" filename="">
+    <port type="output" identifier="1f270f10"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="Motion regression">
+  <position y="-178" x="-295"/>
+  <pairs>
+   <pair name="Input design matrix" filename="">
+    <port type="input" identifier="1f2d9420"/>
+   </pair>
+   <pair name="Motion Parameters" filename="">
+    <port type="input" identifier="1f2d9498"/>
+   </pair>
+   <pair name="Output design matrix" filename="">
+    <port type="output" identifier="1f2d95b0"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="High pass filter">
+  <position y="-105" x="-114"/>
+  <pairs>
+   <pair name="Input design matrix" filename="">
+    <port type="input" identifier="1f32d788"/>
+   </pair>
+   <pair name="Cut-off frequency" filename="">
+    <port type="input" identifier="1f32d7b0"/>
+   </pair>
+   <pair name="TR" filename="">
+    <port type="input" identifier="1f32daa8"/>
+   </pair>
+   <pair name="Output design matrix" filename="">
+    <port type="output" identifier="1f278848"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="FIR">
+  <position y="-124" x="73"/>
+  <pairs>
+   <pair name="Input design matrix" filename="">
+    <port type="input" identifier="1f272680"/>
+   </pair>
+   <pair name="Output design matrix" filename="">
+    <port type="output" identifier="1f272720"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="Stimulus regressors">
+  <position y="12" x="77"/>
+  <pairs>
+   <pair name="Input design matrix" filename="">
+    <port type="input" identifier="1f331f40"/>
+   </pair>
+   <pair name="Stimulus" filename="">
+    <port type="input" identifier="1f3327f8"/>
+   </pair>
+   <pair name="HRF parameters" filename="">
+    <port type="input" identifier="1f332898"/>
+   </pair>
+   <pair name="TR" filename="">
+    <port type="input" identifier="1f332a78"/>
+   </pair>
+   <pair name="Output design matrix" filename="">
+    <port type="output" identifier="1f332b40"/>
+   </pair>
+  </pairs>
+ </node>
+ <link to="1f272680" from="1f278848"/>
+ <link to="1f331f40" from="1f278848"/>
+ <link to="1f32d788" from="1f2d95b0"/>
+ <link to="1f19e820" from="1f20abc0"/>
+ <link to="1f2d9420" from="1f270f10"/>
+</pipeline>

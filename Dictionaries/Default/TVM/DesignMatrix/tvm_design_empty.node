@@ -1,0 +1,36 @@
+<node>
+    <category name="TVM">
+        <category name="Design Matrix"/>
+    </category>
+    <title name="Initialise design matrix">
+        <code>
+            <language name="MATLAB">
+                <comment text="Creates an empty template for a design matrix"/>
+                <argument name="tvm_design_empty"/>
+            </language>
+        </code>
+    </title>
+    <input name="Input design matrix">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_Design"/>
+            </language>
+        </code>
+    </input>
+    <input name="Files">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_FunctionalFolder"/>
+            </language>
+        </code>
+    </input>
+    <output name="Output design matrix">
+        <code>
+            <language name="MATLAB">
+                <argument name="o_Design"/>
+            </language>
+        </code>
+    </output>
+</node>
+
+

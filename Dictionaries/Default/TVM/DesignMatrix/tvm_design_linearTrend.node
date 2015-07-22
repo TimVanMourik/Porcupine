@@ -1,0 +1,27 @@
+<node>
+    <category name="TVM">
+        <category name="Design Matrix"/>
+    </category>
+    <title name="Linear Trend">
+        <code>
+            <language name="MATLAB">
+                <comment text="Linear trend regressor"/>
+                <argument name="tvm_design_linearTrend"/>
+            </language>
+        </code>
+    </title>
+    <input name="Input design matrix">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_Design"/>
+            </language>
+        </code>
+    </input>
+    <output name="Output design matrix">
+        <code>
+            <language name="MATLAB">
+                <argument name="o_Design"/>
+            </language>
+        </code>
+    </output>
+</node>

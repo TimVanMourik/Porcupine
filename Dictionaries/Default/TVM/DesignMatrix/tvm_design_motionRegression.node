@@ -1,0 +1,36 @@
+<node>
+    <category name="TVM">
+        <category name="Design Matrix"/>
+    </category>
+    <title name="Motion regression">
+        <code>
+            <language name="MATLAB">
+                <comment text="Adds motion regressors to the design"/>
+                <argument name="tvm_design_motionRegression"/>
+            </language>
+        </code>
+    </title>
+    <input name="Input design matrix">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_Design"/>
+            </language>
+        </code>
+    </input>
+    <input name="Motion Parameters">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_MotionFiles"/>
+            </language>
+        </code>
+    </input>
+    <output name="Output design matrix">
+        <code>
+            <language name="MATLAB">
+                <argument name="o_Design"/>
+            </language>
+        </code>
+    </output>
+</node>
+
+

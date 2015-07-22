@@ -136,7 +136,7 @@ void MainWindow::loadDefaultNodes(
     unsigned int i = 0;
     while(true)
     {
-        QFile xmlNodefile(QString(":/Default/FSL/node_%1.xml").arg(i));
+        QFile xmlNodefile(QString(":/Default/TVM/DesignMatrix/node_%1.xml").arg(i));
         if(xmlNodefile.exists())
         {
             QString newNode = nodeLibrary.addNodeSetting(xmlNodefile);

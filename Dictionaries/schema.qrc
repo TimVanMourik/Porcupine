@@ -55,13 +55,23 @@
     </qresource>
     <qresource prefix="/Default/FieldTrip">
         <file alias="node_0.xml">Default/FieldTrip/ft_analysispipeline.node</file>
-        <file>Default/FieldTrip/ft_definetrial.node</file>
+        <file alias="node_1.xml">Default/FieldTrip/ft_math.node</file>
         <file alias="node_2.xml">Default/FieldTrip/ft_freqanalysis.node</file>
         <file alias="node_3.xml">Default/FieldTrip/ft_freqsimulation.node</file>
         <file alias="node_4.xml">Default/FieldTrip/ft_freqstatistics.node</file>
-        <file alias="node_1.xml">Default/FieldTrip/ft_math.node</file>
     </qresource>
     <qresource prefix="/Default/FSL">
         <file alias="node_0.xml">Default/FSL/flirt.node</file>
+    </qresource>
+    <qresource prefix="/Default/TVM/DesignMatrix">
+        <file alias="node_0.xml">Default/TVM/DesignMatrix/tvm_design_linearTrend.node</file>
+        <file alias="node_1.xml">Default/TVM/DesignMatrix/tvm_design_bandpassFilter.node</file>
+        <file alias="node_2.xml">Default/TVM/DesignMatrix/tvm_design_constant.node</file>
+        <file alias="node_3.xml">Default/TVM/DesignMatrix/tvm_design_empty.node</file>
+        <file alias="node_4.xml">Default/TVM/DesignMatrix/tvm_design_fir.node</file>
+        <file alias="node_5.xml">Default/TVM/DesignMatrix/tvm_design_motionRegression.node</file>
+        <file alias="node_6.xml">Default/TVM/DesignMatrix/tvm_design_saveToImage.node</file>
+        <file alias="node_7.xml">Default/TVM/DesignMatrix/tvm_design_stimulus.node</file>
+        <file alias="node_8.xml">Default/TVM/DesignMatrix/tvm_design_timeCourse.node</file>
     </qresource>
 </RCC>
