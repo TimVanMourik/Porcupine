@@ -118,6 +118,7 @@ QString NodeLibrary::addNodeSetting(
                     if(node.nodeName().compare("title") == 0)
                     {
                         title.setName(node.attributes().namedItem("name").nodeValue());
+                        ///@todo add 'category' atribute
                         // if there is a code block
                         QDomNode code = node.firstChild();
                         if(!code.isNull() && code.nodeName().compare("code") == 0)
@@ -226,7 +227,7 @@ void NodeLibrary::parseCodeBlock(
     }
 }
 
-NodeSetting* NodeLibrary::getNodeSetting(
+const NodeSetting* NodeLibrary::getNodeSetting(
         const QString& _nodeName
         ) /*const*/
 {

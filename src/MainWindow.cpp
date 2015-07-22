@@ -176,8 +176,6 @@ void MainWindow::updateNodeMenu(
     QAction* newAction = new QAction(_node, this);
     newAction->setData(_node);
     m_nodesMenu->addAction(newAction);
-
-    connect(m_nodesMenu, SIGNAL(triggered(QAction*)), this, SLOT(nodeSlot(QAction*)));
 }
 
 void MainWindow::nodeSlot(
@@ -186,7 +184,7 @@ void MainWindow::nodeSlot(
 {
     NodeLibrary& nodeLibrary = NodeLibrary::getInstance();
     QString nodeType = _action->data().toString();
-    NodeSetting* setting = nodeLibrary.getNodeSetting(nodeType);
+    const NodeSetting* setting = nodeLibrary.getNodeSetting(nodeType);
     addNode(setting);
 }
 
@@ -302,7 +300,7 @@ void MainWindow::pasteEdit(
 }
 
 void MainWindow::addNode(
-        NodeSetting* _setting
+        const NodeSetting* _setting
         )
 {
     m_nodeEditors[m_currentFileIndex]->addNode(_setting);
@@ -349,6 +347,7 @@ void MainWindow::createMenus()
     m_editMenu->addAction(m_pasteAct);
 
     m_nodesMenu = menuBar()->addMenu(tr("Nodes"));
+    connect(m_nodesMenu, SIGNAL(triggered(QAction*)), this, SLOT(nodeSlot(QAction*)));
 }
 
 void MainWindow::createActions()

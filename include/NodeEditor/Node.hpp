@@ -35,7 +35,7 @@ public:
     //
     Node(
             NodeEditor* _editor,
-            NodeSetting* _setting = 0
+            const NodeSetting* _setting = 0
             );
     ///@brief Returns a pointer to the new Port in case you need it (for example in loading a file)
 //    Port* addPort(
@@ -129,7 +129,7 @@ public:
 private:
     //
     void loadFromNodeSetting(
-            NodeSetting* _setting
+            const NodeSetting* _setting
             );
     //
     const NodeSetting* m_setting;

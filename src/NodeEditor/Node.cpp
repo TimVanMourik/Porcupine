@@ -24,7 +24,7 @@ qreal Node::s_textSpacing       = 1;
 
 Node::Node(
         NodeEditor* _editor,
-        NodeSetting* _setting
+        const NodeSetting* _setting
         ) :
     QGraphicsPathItem(0),
     m_setting(_setting),
@@ -43,19 +43,20 @@ Node::Node(
 }
 
 void Node::loadFromNodeSetting(
-        NodeSetting* _setting
+        const NodeSetting* _setting
         )
 {
-    if(_setting)
+    if(!_setting)
     {
-        m_setting = _setting;
-        Argument argument(_setting->getName());
-        setName(argument);
-
-        addInputPorts(_setting->getInput());
-        addInOutPorts(_setting->getInOut());
-        addOutputPorts(_setting->getOutput());
+        return;
     }
+    m_setting = _setting;
+    Argument argument(_setting->getName());
+    setName(argument);
+
+    addInputPorts(_setting->getInput());
+    addInOutPorts(_setting->getInOut());
+    addOutputPorts(_setting->getOutput());
 }
 
 void Node::addInputPorts(
@@ -254,7 +255,7 @@ void Node::loadFromXml(
     NodeLibrary& nodeLibrary = NodeLibrary::getInstance();
 
     QString nodeType = _xmlNode.attribute("name");
-    NodeSetting* setting = nodeLibrary.getNodeSetting(nodeType);
+    const NodeSetting* setting = nodeLibrary.getNodeSetting(nodeType);
     assert(setting != 0);
     loadFromNodeSetting(setting);
 

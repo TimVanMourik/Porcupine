@@ -295,7 +295,7 @@ NodeTreeEditor* NodeEditor::getTreeModel(
 }
 
 Node* NodeEditor::addNode(
-        NodeSetting* _setting
+        const NodeSetting* _setting
         )
 {
     Node* node = new Node(this, _setting);

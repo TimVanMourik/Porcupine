@@ -48,7 +48,7 @@ public:
             QFile& _type
             );
     /// @brief
-    NodeSetting* getNodeSetting(
+    const NodeSetting* getNodeSetting(
             const QString& _nodeName
             ) /*const*/;
     /// @brief

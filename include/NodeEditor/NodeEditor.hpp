@@ -68,7 +68,7 @@ public:
             ) const;
     //
     Node* addNode(
-            NodeSetting* _setting = 0
+            const NodeSetting* _setting = 0
             );
     //
     ~NodeEditor(

@@ -72,7 +72,7 @@ private slots:
             QAction* _action
             );
     void addNode(
-            NodeSetting* _setting = 0
+            const NodeSetting* _setting = 0
             );
     void updateNodeMenu(
             const QString& _node
