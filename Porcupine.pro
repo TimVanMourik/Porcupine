@@ -6,7 +6,7 @@
 
 ROOT=$$_PRO_FILE_PWD_
 
-QT +=               core gui xmlpatterns xml
+QT +=               core gui xmlpatterns xml quick
 
 greaterThan(QT_MAJOR_VERSION, 4):{
     QT +=           widgets
@@ -72,6 +72,7 @@ HEADERS  +=         $$ROOT/include/MainWindow.hpp \
                     $$ROOT/include/NodeEditor/NodeEditor.hpp \
                     $$ROOT/include/NodeEditor/Port.hpp \
                     $$ROOT/include/NodeEditor/PortPair.hpp \
+#                    $$ROOT/include/NodeTreeEditor/Hider.hpp \
                     $$ROOT/include/NodeTreeEditor/NodeTreeItem.hpp \
                     $$ROOT/include/NodeTreeEditor/NodeTreeEditor.hpp \
                     $$ROOT/include/CodeEditor/BashHighlighter.hpp \
@@ -90,3 +91,6 @@ RESOURCES   =       $$ROOT/Dictionaries/schema.qrc
 #linux-g++:
 #linux-g++-64:
 #macx:
+
+#DISTFILES += \
+#                    QML/PieMenu.qml

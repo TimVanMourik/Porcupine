@@ -47,6 +47,13 @@ public:
     const QVector<Argument>& getOutput(
             ) const;
     //
+    void setCategory(
+            const QStringList& _category
+            );
+    //
+    const QStringList& getCategory(
+            ) const;
+    //
     ~NodeSetting(
             );
 private:
@@ -59,7 +66,7 @@ private:
     //
     QVector<Argument>  m_outputPortNames;
     //
-    QStringList m_matlabCode;
+    QStringList m_category;
     //
     QColor m_nodeColour;
 };

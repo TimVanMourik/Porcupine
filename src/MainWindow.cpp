@@ -15,7 +15,7 @@
 #include <QGraphicsView>
 #include <QMenuBar>
 #include <QPushButton>
-#include <QTabWidget>
+#include <QQuickView>
 #include <QSplitter>
 #include <QTabWidget>
 
@@ -65,7 +65,7 @@ MainWindow::MainWindow(
     rightWidget->setStretchFactor(0, 12);
     rightWidget->setStretchFactor(1, 1);
     mainWidget->setStretchFactor(0, 1);
-    mainWidget->setStretchFactor(1, 2);
+    mainWidget->setStretchFactor(1, 4);
 
     createActions();
     createMenus();
@@ -85,16 +85,18 @@ void MainWindow::nodeToCode(
     m_nodeTreeEditors[m_currentFileIndex]->generateCode();
 }
 
-//void MainWindow::contextMenuEvent(
-//        QContextMenuEvent* _event
-//        )
-//{
+void MainWindow::contextMenuEvent(
+        QContextMenuEvent* _event
+        )
+{
+    Q_UNUSED(_event);
+//    QPieMenu
 //    QMenu menu(this);
 //    menu.addAction(m_cutAct);
 //    menu.addAction(m_copyAct);
 //    menu.addAction(m_pasteAct);
 //    menu.exec(_event->globalPos());
-//}
+}
 
 void MainWindow::keyPressEvent(
         QKeyEvent* _event
@@ -133,23 +135,32 @@ void MainWindow::loadDefaultNodes(
     QFile schemaFile(QString(":/node_schema.xsd"));
     nodeLibrary.setNodeSchema(schemaFile);
 
-    unsigned int i = 0;
-    while(true)
+    QStringList toolboxNames;
+    toolboxNames << QString(":/Default/node_%1.xml");
+    toolboxNames << QString(":/Default/TVM/DesignMatrix/node_%1.xml");
+//    toolboxNames << QString(":/Default/TVM/node_%1.xml");
+    toolboxNames << QString(":/Default/FieldTrip/node_%1.xml");
+    toolboxNames << QString(":/Default/FSL/node_%1.xml");
+    foreach (QString toolbox, toolboxNames)
     {
-        QFile xmlNodefile(QString(":/Default/TVM/DesignMatrix/node_%1.xml").arg(i));
-        if(xmlNodefile.exists())
+        unsigned int i = 0;
+        while(true)
         {
-            QString newNode = nodeLibrary.addNodeSetting(xmlNodefile);
-            if(!newNode.isEmpty())
+            QFile xmlNodefile(toolbox.arg(i));
+            if(xmlNodefile.exists())
             {
-                updateNodeMenu(newNode);
+                QString newNode = nodeLibrary.addNodeSetting(xmlNodefile);
+                if(!newNode.isEmpty())
+                {
+                    updateNodeMenu(newNode);
+                }
             }
+            else
+            {
+                break;
+            }
+            ++i;
         }
-        else
-        {
-            break;
-        }
-        ++i;
     }
 
 }
@@ -172,10 +183,35 @@ void MainWindow::updateNodeMenu(
         )
 {
     assert(!_node.isEmpty());
-    /// @todo if(!_node.exists())
+    NodeLibrary& nodeLibrary = NodeLibrary::getInstance();
+    const QStringList category = nodeLibrary.getCategory(_node);
     QAction* newAction = new QAction(_node, this);
     newAction->setData(_node);
-    m_nodesMenu->addAction(newAction);
+
+    int categoryNumber = 0;
+    QMenu* currentMenu = m_nodesMenu;
+    while(categoryNumber < category.length())
+    {
+        QList<QMenu*> menus = currentMenu->findChildren<QMenu*>(QString(), Qt::FindDirectChildrenOnly);
+        bool menuFound = false;
+        foreach (QMenu* menu, menus)
+        {
+            if(menu->title().compare(category[categoryNumber]) == 0)
+            {
+                currentMenu = menu;
+                menuFound = true;
+                break;
+            }
+        }
+        if(!menuFound)
+        {
+            QMenu* newMenu = new QMenu(category[categoryNumber], currentMenu);
+            currentMenu->addMenu(newMenu);
+            currentMenu = newMenu;
+        }
+        ++categoryNumber;
+    }
+    currentMenu->addAction(newAction);
 }
 
 void MainWindow::nodeSlot(

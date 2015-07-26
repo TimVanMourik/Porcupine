@@ -1,8 +1,11 @@
 #ifndef NODETREEMODEL_H
 #define NODETREEMODEL_H
 
+#include <QMap>
 #include <QScrollArea>
 #include <QStandardItemModel>
+
+#include "Hider.hpp"
 
 class Node;
 class NodeTreeItem;
@@ -40,6 +43,9 @@ public:
             );
     //
     void updateNodeOrder(
+            );
+    //
+    void moveToNewLocation(
             );
     //
     ~NodeTreeEditor(

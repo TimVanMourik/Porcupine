@@ -1,6 +1,7 @@
 #ifndef NODETREEITEM_H
 #define NODETREEITEM_H
 
+#include <QGraphicsPathItem>
 #include <QPoint>
 #include <QStandardItem>
 #include <QFrame>
@@ -13,6 +14,8 @@ class QDomElement;
 class QLabel;
 class QLineEdit;
 class QVBoxLayout;
+
+#include "Hider.hpp"
 
 class NodeTreeItem : public QFrame
 {
@@ -79,7 +82,7 @@ private:
     //
     QMap<QString, QLineEdit*> m_fileNames;
     //
-    QPoint m_position;
+    QPoint m_startPosition;
     //
     QLabel* m_numberLabel;
     //

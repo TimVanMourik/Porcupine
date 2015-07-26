@@ -41,7 +41,7 @@ void NodeLibrary::setNodeSchema(
     xmlSchema.load(_nodeSchema.readAll());
     if (!xmlSchema.isValid())
     {
-        std::cerr << "Error: Nodes cold not be loaded.\n";
+        std::cerr << "Error: Nodes could not be loaded.\n";
     }
     m_nodeValidator = new QXmlSchemaValidator(xmlSchema);
 }
@@ -111,11 +111,22 @@ QString NodeLibrary::addNodeSetting(
             QVector<Argument> inOutNodes;
             QVector<Argument> outputNodes;
             QDomNode node = docElem.firstChild();
+            QStringList category;
             while(!node.isNull())
             {
                 if(node.isElement())
                 {
-                    if(node.nodeName().compare("title") == 0)
+                    if(node.nodeName().compare("category") == 0)
+                    {
+                        category << node.attributes().namedItem("name").nodeValue();
+                        QDomNode subCategory = node.firstChild();
+                        while(!subCategory.isNull())
+                        {
+                            category << subCategory.attributes().namedItem("name").nodeValue();
+                            subCategory = subCategory.firstChild();
+                        }
+                    }
+                    else if(node.nodeName().compare("title") == 0)
                     {
                         title.setName(node.attributes().namedItem("name").nodeValue());
                         ///@todo add 'category' atribute
@@ -179,7 +190,9 @@ QString NodeLibrary::addNodeSetting(
                 }
             }
 //            std::cout << title.toStdString() << std::endl;
-            m_nodeSettings[title.getName()] = new NodeSetting(title, inputNodes, inOutNodes, outputNodes);
+            NodeSetting* newNode = new NodeSetting(title, inputNodes, inOutNodes, outputNodes);
+            newNode->setCategory(category);
+            m_nodeSettings[title.getName()] = newNode;
             m_nodeNames << title.getName();
             return title.getName();
         }
@@ -227,6 +240,13 @@ void NodeLibrary::parseCodeBlock(
     }
 }
 
+const QStringList NodeLibrary::getCategory(
+        const QString& _setting
+        ) const
+{
+    return m_nodeSettings[_setting]->getCategory();
+}
+
 const NodeSetting* NodeLibrary::getNodeSetting(
         const QString& _nodeName
         ) /*const*/
@@ -242,20 +262,20 @@ const QStringList& NodeLibrary::getNodeNames(
 
 NodeLibrary::~NodeLibrary()
 {
-    std::map <QString, NodeSetting*>::iterator nodeIterator = m_nodeSettings.begin();
+    QMap<QString, NodeSetting*>::iterator nodeIterator = m_nodeSettings.begin();
 //    std::cerr << "NodeLibrary Destructed\n";
 //    std::cout << m_nodeSettings.size() << std::endl;
     while(nodeIterator != m_nodeSettings.end())
     {
 //        std::cerr << "Deleting NodeSetting...\n";
-        delete (*nodeIterator).second;
+        delete nodeIterator.value();
         ++nodeIterator;
     }
 
-    std::map <QString, DataType*>::iterator dataIterator = m_dataTypes.begin();
+    QMap<QString, DataType*>::iterator dataIterator = m_dataTypes.begin();
     while(dataIterator != m_dataTypes.end())
     {
-        delete (*dataIterator).second;
+        delete dataIterator.value();
         ++dataIterator;
     }
 

@@ -27,7 +27,8 @@ QString MatlabGenerator::itemToCode(
     QString code("");
     if(nodeSetting->getTitle().getArgument("MATLAB").isEmpty())
     {
-        return QString("% This function cannot be converted to MATLAB code\n");
+//        return QString("% This function cannot be converted to MATLAB code\n");
+        return QString("");
     }
 
     code.append("%% ");

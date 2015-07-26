@@ -1,152 +1,232 @@
 <?xml version="1.0"?>
 <pipeline>
+ <node name="Input">
+  <position x="-390" y="-111"/>
+  <pairs>
+   <pair name="Data" filename="100">
+    <port type="output" identifier="7fad441b8590"/>
+   </pair>
+  </pairs>
+ </node>
  <node name="Simulate frequencies">
-  <position x="2" y="-351"/>
+  <position x="-223" y="-161"/>
   <pairs>
    <pair name="Number of trials" filename="100">
-    <port type="input" identifier="7f9f2af9ce90"/>
+    <port type="input" identifier="7fad444e3470"/>
    </pair>
    <pair name="Output file" filename="'data1.mat'">
-    <port type="output" identifier="7f9f2d44ab30"/>
+    <port type="output" identifier="7fad444e5b40"/>
    </pair>
   </pairs>
  </node>
  <node name="Simulate frequencies">
-  <position x="-129" y="-163"/>
+  <position x="-226" y="-59"/>
   <pairs>
    <pair name="Number of trials" filename="100">
-    <port type="input" identifier="7f9f2d260470"/>
+    <port type="input" identifier="7fad444ef5e0"/>
    </pair>
    <pair name="Output file" filename="'data2.mat'">
-    <port type="output" identifier="7f9f2d2fb390"/>
+    <port type="output" identifier="7fad444f1b90"/>
    </pair>
   </pairs>
  </node>
- <node name="Frequency analysis">
-  <position x="252" y="-279"/>
+ <node name="Input">
+  <position x="-140" y="-421"/>
   <pairs>
-   <pair name="Method" filename="'wavelet'">
-    <port type="input" identifier="7f9f2ae6e7f0"/>
-   </pair>
-   <pair name="Time points of interest" filename="0:0.1:10">
-    <port type="input" identifier="7f9f2ae74540"/>
-   </pair>
-   <pair name="Channel" filename="1">
-    <port type="input" identifier="7f9f2ae736e0"/>
-   </pair>
-   <pair name="Keep trials" filename="'yes'">
-    <port type="input" identifier="7f9f2ae77d40"/>
-   </pair>
-   <pair name="Input file" filename="'data1.mat'">
-    <port type="input" identifier="7f9f2ae7adb0"/>
-   </pair>
-   <pair name="Output file" filename="'freq1.mat'">
-    <port type="output" identifier="7f9f2ae7d190"/>
+   <pair name="Data" filename="0:0.1:10">
+    <port type="output" identifier="7fad44409ea0"/>
    </pair>
   </pairs>
  </node>
- <node name="Frequency analysis">
-  <position x="93" y="-79"/>
+ <node name="Input">
+  <position x="-140" y="-482"/>
   <pairs>
-   <pair name="Method" filename="'wavelet'">
-    <port type="input" identifier="7f9f2d513260"/>
-   </pair>
-   <pair name="Time points of interest" filename="0:0.01:1">
-    <port type="input" identifier="7f9f2d515630"/>
-   </pair>
-   <pair name="Channel" filename="1">
-    <port type="input" identifier="7f9f2d517870"/>
-   </pair>
-   <pair name="Keep trials" filename="'yes'">
-    <port type="input" identifier="7f9f2d519b30"/>
-   </pair>
-   <pair name="Input file" filename="'data2.mat'">
-    <port type="input" identifier="7f9f2ae80330"/>
-   </pair>
-   <pair name="Output file" filename="'freq2.mat'">
-    <port type="output" identifier="7f9f2ae82e80"/>
+   <pair name="Data" filename="'wavelet'">
+    <port type="output" identifier="7fad44389620"/>
    </pair>
   </pairs>
  </node>
- <node name="Maths">
-  <position x="462" y="-268"/>
+ <node name="Input">
+  <position x="-140" y="-301"/>
   <pairs>
-   <pair name="Operation" filename="'multiply'">
-    <port type="input" identifier="7f9f2ae97790"/>
-   </pair>
-   <pair name="Parameter" filename="'powspctrm'">
-    <port type="input" identifier="7f9f2ae977f0"/>
-   </pair>
-   <pair name="Scalar" filename="0.9">
-    <port type="input" identifier="7f9f2ae96960"/>
-   </pair>
-   <pair name="Input file" filename="'freq1.mat'">
-    <port type="input" identifier="7f9f2ae913b0"/>
-   </pair>
-   <pair name="Output file" filename="'cond1.mat'">
-    <port type="output" identifier="7f9f2aea6a70"/>
+   <pair name="Data" filename="'yes'">
+    <port type="output" identifier="7fad442f0b70"/>
    </pair>
   </pairs>
  </node>
- <node name="Maths">
-  <position x="299" y="85"/>
+ <node name="Input">
+  <position x="-140" y="-361"/>
   <pairs>
-   <pair name="Operation" filename="'multiply'">
-    <port type="input" identifier="7f9f2aeb5190"/>
-   </pair>
-   <pair name="Parameter" filename="'powspctrm'">
-    <port type="input" identifier="7f9f2ae47080"/>
-   </pair>
-   <pair name="Scalar" filename="0.9">
-    <port type="input" identifier="7f9f2aebb2c0"/>
-   </pair>
-   <pair name="Input file" filename="'freq2.mat'">
-    <port type="input" identifier="7f9f2aebd370"/>
-   </pair>
-   <pair name="Output file" filename="'cond2.mat'">
-    <port type="output" identifier="7f9f2aec0c80"/>
+   <pair name="Data" filename="1">
+    <port type="output" identifier="7fad441b2ec0"/>
    </pair>
   </pairs>
  </node>
  <node name="Frequency Statistics">
-  <position x="499" y="-67"/>
+  <position x="559" y="-71"/>
   <pairs>
    <pair name="Test statistic" filename="'indepsamplesT'">
-    <port type="input" identifier="7f9f2afbd000"/>
+    <port type="input" identifier="7fad4456daa0"/>
    </pair>
    <pair name="Method" filename="'analytic'">
-    <port type="input" identifier="7f9f2afbed10"/>
+    <port type="input" identifier="7fad445708a0"/>
    </pair>
    <pair name="Ivar" filename="1">
-    <port type="input" identifier="7f9f2afc18b0"/>
+    <port type="input" identifier="7fad44572c30"/>
    </pair>
    <pair name="Design" filename="[1*ones(1,100) 2*ones(1,100)]">
-    <port type="input" identifier="7f9f2afc3c40"/>
+    <port type="input" identifier="7fad44574640"/>
    </pair>
    <pair name="Input file 1" filename="'freq1.mat'">
-    <port type="input" identifier="7f9f2afc6c60"/>
+    <port type="input" identifier="7fad44576c50"/>
    </pair>
    <pair name="Input file 2" filename="'freq2.mat'">
-    <port type="input" identifier="7f9f2afc9170"/>
+    <port type="input" identifier="7fad44579fd0"/>
    </pair>
    <pair name="Output file" filename="'stat.mat'">
-    <port type="output" identifier="7f9f2afcb6d0"/>
+    <port type="output" identifier="7fad4457b4c0"/>
    </pair>
   </pairs>
  </node>
  <node name="Visualise pipeline">
-  <position x="680" y="52"/>
+  <position x="744" y="4"/>
   <pairs>
    <pair name="Input file" filename="'stat.mat'">
-    <port type="input" identifier="7f9f2af32e40"/>
+    <port type="input" identifier="7fad4458f6f0"/>
    </pair>
   </pairs>
  </node>
- <link from="7f9f2afcb6d0" to="7f9f2af32e40"/>
- <link from="7f9f2d2fb390" to="7f9f2ae80330"/>
- <link from="7f9f2d44ab30" to="7f9f2ae7adb0"/>
- <link from="7f9f2ae7d190" to="7f9f2afc6c60"/>
- <link from="7f9f2ae82e80" to="7f9f2afc9170"/>
- <link from="7f9f2ae82e80" to="7f9f2aebd370"/>
- <link from="7f9f2ae7d190" to="7f9f2ae913b0"/>
+ <node name="Frequency analysis">
+  <position x="111" y="-84"/>
+  <pairs>
+   <pair name="Method" filename="'wavelet'">
+    <port type="input" identifier="7fad4451fc70"/>
+   </pair>
+   <pair name="Time points of interest" filename="0:0.1:10">
+    <port type="input" identifier="7fad445206d0"/>
+   </pair>
+   <pair name="Channel" filename="1">
+    <port type="input" identifier="7fad445228b0"/>
+   </pair>
+   <pair name="Keep trials" filename="'yes'">
+    <port type="input" identifier="7fad445249f0"/>
+   </pair>
+   <pair name="Input file" filename="'data2.mat'">
+    <port type="input" identifier="7fad44528d40"/>
+   </pair>
+   <pair name="Output file" filename="'freq2.mat'">
+    <port type="output" identifier="7fad445292f0"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="Frequency analysis">
+  <position x="112" y="-332"/>
+  <pairs>
+   <pair name="Method" filename="'wavelet'">
+    <port type="input" identifier="7fad445013d0"/>
+   </pair>
+   <pair name="Time points of interest" filename="0:0.1:10">
+    <port type="input" identifier="7fad44503380"/>
+   </pair>
+   <pair name="Channel" filename="1">
+    <port type="input" identifier="7fad44505580"/>
+   </pair>
+   <pair name="Keep trials" filename="'yes'">
+    <port type="input" identifier="7fad445077f0"/>
+   </pair>
+   <pair name="Input file" filename="'data1.mat'">
+    <port type="input" identifier="7fad4450bb40"/>
+   </pair>
+   <pair name="Output file" filename="'freq1.mat'">
+    <port type="output" identifier="7fad4450c0f0"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="Input">
+  <position x="341" y="-577"/>
+  <pairs>
+   <pair name="Data" filename="'multiply'">
+    <port type="output" identifier="7fad41f27950"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="Input">
+  <position x="340" y="-515"/>
+  <pairs>
+   <pair name="Data" filename="'powspctrm'">
+    <port type="output" identifier="7fad445518f0"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="Input">
+  <position x="341" y="-453"/>
+  <pairs>
+   <pair name="Data" filename="0.9">
+    <port type="output" identifier="7fad44337100"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="Maths">
+  <position x="525" y="-274"/>
+  <pairs>
+   <pair name="Operation" filename="'multiply'">
+    <port type="input" identifier="7fad445538b0"/>
+   </pair>
+   <pair name="Parameter" filename="'powspctrm'">
+    <port type="input" identifier="7fad445588a0"/>
+   </pair>
+   <pair name="Scalar" filename="0.9">
+    <port type="input" identifier="7fad44558e00"/>
+   </pair>
+   <pair name="Input file" filename="'freq2.mat'">
+    <port type="input" identifier="7fad4455d090"/>
+   </pair>
+   <pair name="Output file" filename="'cond2.mat'">
+    <port type="output" identifier="7fad4455f0f0"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="Maths">
+  <position x="524" y="-439"/>
+  <pairs>
+   <pair name="Operation" filename="'multiply'">
+    <port type="input" identifier="7fad4453bfb0"/>
+   </pair>
+   <pair name="Parameter" filename="'powspctrm'">
+    <port type="input" identifier="7fad4453d240"/>
+   </pair>
+   <pair name="Scalar" filename="0.9">
+    <port type="input" identifier="7fad4453fc30"/>
+   </pair>
+   <pair name="Input file" filename="'freq1.mat'">
+    <port type="input" identifier="7fad44543ec0"/>
+   </pair>
+   <pair name="Output file" filename="'cond1.mat'">
+    <port type="output" identifier="7fad44544de0"/>
+   </pair>
+  </pairs>
+ </node>
+ <link to="7fad44558e00" from="7fad44337100"/>
+ <link to="7fad4453fc30" from="7fad44337100"/>
+ <link to="7fad445588a0" from="7fad445518f0"/>
+ <link to="7fad4453d240" from="7fad445518f0"/>
+ <link to="7fad445538b0" from="7fad41f27950"/>
+ <link to="7fad4453bfb0" from="7fad41f27950"/>
+ <link to="7fad445249f0" from="7fad442f0b70"/>
+ <link to="7fad445077f0" from="7fad442f0b70"/>
+ <link to="7fad445228b0" from="7fad441b2ec0"/>
+ <link to="7fad44505580" from="7fad441b2ec0"/>
+ <link to="7fad445206d0" from="7fad44409ea0"/>
+ <link to="7fad44503380" from="7fad44409ea0"/>
+ <link to="7fad4451fc70" from="7fad44389620"/>
+ <link to="7fad445013d0" from="7fad44389620"/>
+ <link to="7fad444ef5e0" from="7fad441b8590"/>
+ <link to="7fad444e3470" from="7fad441b8590"/>
+ <link to="7fad44543ec0" from="7fad4450c0f0"/>
+ <link to="7fad4455d090" from="7fad445292f0"/>
+ <link to="7fad44579fd0" from="7fad445292f0"/>
+ <link to="7fad44576c50" from="7fad4450c0f0"/>
+ <link to="7fad4450bb40" from="7fad444e5b40"/>
+ <link to="7fad44528d40" from="7fad444f1b90"/>
+ <link to="7fad4458f6f0" from="7fad4457b4c0"/>
 </pipeline>

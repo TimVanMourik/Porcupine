@@ -2,6 +2,7 @@
 
 #include <QDropEvent>
 #include <QMimeData>
+#include <QPropertyAnimation>
 #include <QVBoxLayout>
 
 #include "CodeEditor.hpp"
@@ -43,7 +44,6 @@ void NodeTreeEditor::removeNode(
     assert(item != 0);
     m_nodes.removeOne(_node);
     m_nodeList.removeOne(item);
-    m_layout->removeWidget(item);
     delete item;
     updateNodeOrder();
 }
@@ -59,6 +59,36 @@ void NodeTreeEditor::generateCode(
         )
 {
     m_codeEditor->generateCode(m_nodeList);
+}
+
+//#include <iostream>
+//const static int initialSpacing = 13;
+//const static int nodeSpacing = 15;
+void NodeTreeEditor::moveToNewLocation()
+{
+//    int startingHeight = initialSpacing;
+//    int x, y, w, h;
+//    foreach (NodeTreeItem* item, m_nodeList)
+//    {
+//        item->geometry().getRect(&x, &y, &w, &h);
+//        y = startingHeight;
+//        item->setGeometry(x, y, w, h);
+//        startingHeight += h + nodeSpacing;
+
+//        QPropertyAnimation* animation = new QPropertyAnimation(item, "geometry");
+//        animation->setDuration(400);
+
+//        item->setVisible(true);
+//        QRect start = QRect(x, item->getStartPosition().y(), w, h);
+//        QRect stop  = QRect(x, item->pos().y(), w, h);
+//        animation->setStartValue(start);
+//        animation->setEndValue(stop);
+
+//        item->setGeometry(start);
+////        m_hider.unhide(item);
+
+//        animation->start();
+//    }
 }
 
 void NodeTreeEditor::nodeMoved(
@@ -116,7 +146,9 @@ void NodeTreeEditor::nodeMoved(
     m_nodeList.insert(index, _item);
     m_layout->insertWidget(index, _item);
 
+    /// @todo animate the following updates
     updateNodeOrder();
+    moveToNewLocation();
 }
 
 void NodeTreeEditor::saveToXml(

@@ -35,9 +35,9 @@ public:
             );
 
 private slots:
-//    void contextMenuEvent(
-//            QContextMenuEvent* _event
-//            );
+    void contextMenuEvent(
+            QContextMenuEvent* _event
+            );
     //
     void keyPressEvent(
             QKeyEvent* _event

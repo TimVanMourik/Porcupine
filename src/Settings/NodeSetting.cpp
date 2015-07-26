@@ -57,6 +57,19 @@ const QVector<Argument>& NodeSetting::getOutput(
     return m_outputPortNames;
 }
 
+void NodeSetting::setCategory(
+        const QStringList& _category
+        )
+{
+    m_category = _category;
+}
+
+const QStringList& NodeSetting::getCategory(
+        ) const
+{
+    return m_category;
+}
+
 NodeSetting::~NodeSetting(
         )
 {

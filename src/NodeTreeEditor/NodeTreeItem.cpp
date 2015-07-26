@@ -3,6 +3,7 @@
 #include <QDomDocument>
 #include <QDrag>
 #include <QDropEvent>
+#include <QFormLayout>
 #include <QLabel>
 #include <QLineEdit>
 #include <QMimeData>
@@ -21,19 +22,17 @@ NodeTreeItem::NodeTreeItem(
         ) :
     QFrame(_parent),
     m_node(_node),
-    m_position(QPoint()),
+    m_startPosition(QPoint()),
     m_numberLabel(0),
     m_number(0)
 {
-    int minimumSize = 0;
-    int spacing = 2;
     QVBoxLayout* mainLayout = new QVBoxLayout(this);
     QWidget* headerWidget = new QWidget();
     QWidget* portBlock = new QWidget();
     mainLayout->addWidget(headerWidget);
     mainLayout->addWidget(portBlock);
     QHBoxLayout* headerLayout = new QHBoxLayout(headerWidget);
-    QHBoxLayout* portBlockLayout = new QHBoxLayout(portBlock);
+    QFormLayout* portBlockLayout = new QFormLayout(portBlock);
 
     setFrameShadow(QFrame::Raised);
     setFrameStyle(QFrame::StyledPanel);
@@ -49,42 +48,31 @@ NodeTreeItem::NodeTreeItem(
     headerLayout->setContentsMargins(10, 10, 20, 0);
 
     // headerLayout
-    m_numberLabel = new QLabel();
-    QLabel* nameTag = new QLabel();
+    m_numberLabel = new QLabel(QString::number(m_number));
+    QLabel* nameTag = new QLabel(_node->getName());
     QPushButton* visibilityButton = new QPushButton();
-    headerLayout->addWidget(m_numberLabel);
-    headerLayout->addWidget(nameTag);
-    headerLayout->addWidget(visibilityButton);
-
-    m_numberLabel->setText(QString::number(m_number));
-    nameTag->setText(_node->getName());
     visibilityButton->setMaximumWidth(30);
     visibilityButton->setText("\\/");
     visibilityButton->setCheckable(true);
 
+    headerLayout->addWidget(m_numberLabel);
+    headerLayout->addWidget(nameTag);
+    headerLayout->addWidget(visibilityButton);
+
     // portBlockLayout
-    portBlockLayout->setSpacing(0);
-    portBlockLayout->setContentsMargins(4, 3, 3, 3);
+    portBlockLayout->setRowWrapPolicy(QFormLayout::DontWrapRows);
+    portBlockLayout->setVerticalSpacing(3);
+    portBlockLayout->setFieldGrowthPolicy(QFormLayout::FieldsStayAtSizeHint);
+    portBlockLayout->setFormAlignment(Qt::AlignLeft | Qt::AlignTop);
+    portBlockLayout->setLabelAlignment(Qt::AlignHCenter);
     portBlock->setLayout(portBlockLayout);
     portBlock->setVisible(false);
 
     /// @todo Make two colums, one for the port name, one for the file name
-    QWidget* left  = new QWidget();
-    QWidget* right = new QWidget();
-    portBlockLayout->addWidget(left);
-    portBlockLayout->addWidget(right);
-    QVBoxLayout* leftLayout = new QVBoxLayout(left);
-    QVBoxLayout* rightLayout = new QVBoxLayout(right);
-    leftLayout->setSpacing(spacing);
-    leftLayout->setContentsMargins(2, 0, 2, 0);
-    rightLayout->setSpacing(spacing);
-    rightLayout->setContentsMargins(2, 0, 2, 0);
     foreach(PortPair* pair, _node->getPorts())
     {
-        QLabel* portName = new QLabel(pair->getName());
         QLineEdit* fileName = new QLineEdit();
-        leftLayout->addWidget(portName);
-        rightLayout->addWidget(fileName);
+        portBlockLayout->addRow(pair->getName(), fileName);
 
         m_fileNames[pair->getName()] = fileName;
         QFont font = QFont();
@@ -100,13 +88,6 @@ NodeTreeItem::NodeTreeItem(
             fileName->setText("<file name>");
         }
         fileName->setFont(font);
-        fileName->font().pointSize();
-        QPalette palette = fileName->palette();
-        palette.setColor(fileName->backgroundRole(), Qt::white);
-
-        fileName->setAutoFillBackground(true);
-        fileName->setPalette(palette);
-        minimumSize += fileName->font().pointSize() + spacing;
 
         connect(fileName, SIGNAL(textEdited(QString)), pair, SLOT(fileNameChanged(QString)));
         /// @todo set the SLOT such that it does not only handle the text but also the font
@@ -183,7 +164,7 @@ void NodeTreeItem::mousePressEvent(
 //    setWindowOpacity(0.5);
     if(_event->button() == Qt::LeftButton)
     {
-        m_position = _event->globalPos();
+        m_startPosition = _event->globalPos();
     }
 }
 
@@ -192,9 +173,9 @@ void NodeTreeItem::mouseMoveEvent(
         )
 {
 
-    const QPoint delta = _event->globalPos() - m_position;
+    const QPoint delta = _event->globalPos() - m_startPosition;
     move(x(), y() + delta.y());
-    m_position = _event->globalPos();
+    m_startPosition = _event->globalPos();
 }
 
 void NodeTreeItem::mouseReleaseEvent(

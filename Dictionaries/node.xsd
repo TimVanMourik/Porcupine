@@ -21,7 +21,7 @@
         <xs:element name="title">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="code">
+              <xs:element name="code" minOccurs="0">
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element name="language">
@@ -60,7 +60,7 @@
         <xs:element name="input" maxOccurs="unbounded" minOccurs="0">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="code">
+              <xs:element name="code" minOccurs="0">
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element name="language">
@@ -98,7 +98,7 @@
         <xs:element name="input-output" maxOccurs="unbounded" minOccurs="0">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="code">
+              <xs:element name="code" minOccurs="0">
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element name="language">
@@ -136,7 +136,7 @@
         <xs:element name="output" maxOccurs="unbounded" minOccurs="0">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="code">
+              <xs:element name="code" minOccurs="0">
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element name="language">

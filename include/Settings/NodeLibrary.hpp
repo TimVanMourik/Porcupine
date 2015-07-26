@@ -55,15 +55,19 @@ public:
     const QStringList& getNodeNames(
         ) const ;
     /// @brief
+    const QStringList getCategory(
+            const QString& _setting
+            ) const;
+    /// @brief
     void save(
             QDataStream&
             );
 
 private:
     /// @brief
-    std::map <QString, NodeSetting*> m_nodeSettings;
+    QMap<QString, NodeSetting*> m_nodeSettings;
     /// @brief
-    std::map <QString, DataType*> m_dataTypes;
+    QMap<QString, DataType*> m_dataTypes;
     /// @brief
     QStringList m_nodeNames;
     /// @brief
