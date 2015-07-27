@@ -15,7 +15,6 @@
 #include <QGraphicsView>
 #include <QMenuBar>
 #include <QPushButton>
-#include <QQuickView>
 #include <QSplitter>
 #include <QTabWidget>
 

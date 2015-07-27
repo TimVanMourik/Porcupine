@@ -262,16 +262,7 @@ void PortPair::fileNameChanged(
         bool _cascadeUp
         )
 {
-    /// @todo check validity of file names
-    bool fileValid;
-    if(true)
-    {
-        fileValid = true;
-    }
-    else
-    {
-        fileValid = false;
-    }
+    bool fileValid = !_fileName.isEmpty();
     //send file name up the tree
     if(_cascadeUp && hasAncestorPorts())
     {

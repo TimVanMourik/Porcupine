@@ -75,19 +75,12 @@ NodeTreeItem::NodeTreeItem(
         portBlockLayout->addRow(pair->getName(), fileName);
 
         m_fileNames[pair->getName()] = fileName;
-        QFont font = QFont();
         QString name = pair->getFileName();
         if(!name.isEmpty())
         {
-            font.setItalic(false);
             fileName->setText(name);
         }
-        else
-        {
-            font.setItalic(true);
-            fileName->setText("<file name>");
-        }
-        fileName->setFont(font);
+        fileName->setPlaceholderText("<value>");
 
         connect(fileName, SIGNAL(textEdited(QString)), pair, SLOT(fileNameChanged(QString)));
         /// @todo set the SLOT such that it does not only handle the text but also the font

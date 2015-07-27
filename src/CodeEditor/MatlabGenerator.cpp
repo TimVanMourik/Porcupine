@@ -69,13 +69,13 @@ QString MatlabGenerator::argumentToCode(
         ) const
 {
     QString code("");
-    if(!_argument.getArgument("MATLAB").isEmpty())
+    QString fileName = _item->getFileName(_argument.getName());
+    if(!_argument.getArgument("MATLAB").isEmpty() && !fileName.isEmpty())
     {
         code.append(m_configurationVariable);
         code.append(".");
         code.append(_argument.getArgument("MATLAB"));
         code.append(" = ");
-        QString fileName = _item->getFileName(_argument.getName());
         code.append(fileName);
         code.append(";");
         if(!_argument.getComment("MATLAB").isEmpty())
@@ -83,9 +83,8 @@ QString MatlabGenerator::argumentToCode(
             code.append("\t% ");
             code.append(_argument.getComment("MATLAB"));
         }
-        // append given name
+        code.append("\n");
     }
-    code.append("\n");
     return code;
 }
 
