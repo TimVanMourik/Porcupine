@@ -28,10 +28,13 @@ Node::Node(
         ) :
     QGraphicsPathItem(0),
     m_setting(_setting),
+    m_name(_setting->getName()),
     m_nameLabel(new QGraphicsTextItem(this)),
     m_width(2 * s_horizontalMargin),
     m_height(2 * s_verticalMargin)
 {
+    Preferences& preferences = Preferences::getInstance();
+
     _editor->scene()->addItem(this);
     QPainterPath p;
     p.addRect(0, -m_height / 2, m_width, m_height);
@@ -39,7 +42,19 @@ Node::Node(
     setPen(QPen(Qt::darkRed));
     setFlag(QGraphicsItem::ItemIsMovable);
     setFlag(QGraphicsItem::ItemIsSelectable);
+
+    QFont font(scene()->font());
+    font.setBold(true);
+    m_nameLabel->setFont(font);
+    m_nameLabel->setPlainText(m_name);
+    m_nameLabel->setDefaultTextColor(preferences.getPortTextColor());
+
+    qreal width = m_nameLabel->boundingRect().width();
+    qreal height = m_nameLabel->boundingRect().height();
+    repositionPorts(width, height);
+
     loadFromNodeSetting(_setting);
+
 }
 
 void Node::loadFromNodeSetting(
@@ -51,8 +66,8 @@ void Node::loadFromNodeSetting(
         return;
     }
     m_setting = _setting;
-    Argument argument(_setting->getName());
-    setName(argument);
+    m_name = m_setting->getName();
+    m_nameLabel->setPlainText(m_name);
 
     addInputPorts(_setting->getInput());
     addInOutPorts(_setting->getInOut());
@@ -213,7 +228,7 @@ int Node::type(
     return Type;
 }
 
-const QString& Node::getName(
+const QString& Node::getType(
         ) const
 {
     return m_setting->getName();

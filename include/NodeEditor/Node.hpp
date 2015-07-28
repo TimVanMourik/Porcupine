@@ -95,7 +95,7 @@ public:
     const QVector<PortPair*>& getPorts(
             ) const;
     //
-    const QString& getName(
+    const QString& getType(
             ) const;
     //
     const NodeSetting* getSetting(
@@ -133,6 +133,8 @@ private:
             );
     //
     const NodeSetting* m_setting;
+    //
+    QString m_name;
     //
     QGraphicsTextItem* m_nameLabel;
     //
