@@ -15,6 +15,7 @@
 #include <QGraphicsPathItem>
 
 class QDomElement;
+class QLineEdit;
 
 class Argument;
 class DataType;
@@ -54,7 +55,7 @@ public:
             );
     //
     void setName(
-            const Argument& _argument
+            const QString& _name
             );
     //
     void addInputPort(
@@ -125,7 +126,10 @@ public:
     //
     ~Node(
             );
-
+private slots:
+    void labelChanged(
+            const QString& _name
+            );
 private:
     //
     void loadFromNodeSetting(
@@ -136,7 +140,7 @@ private:
     //
     QString m_name;
     //
-    QGraphicsTextItem* m_nameLabel;
+    QLineEdit* m_nameLabel;
     //
     QVector<PortPair*> m_ports;
     //

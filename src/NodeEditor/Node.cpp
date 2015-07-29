@@ -7,7 +7,9 @@
 
 #include <QDomDocument>
 #include <QGraphicsItem>
+#include <QGraphicsProxyWidget>
 #include <QGraphicsScene>
+#include <QLineEdit>
 #include <QLinearGradient>
 
 #include "Argument.hpp"
@@ -29,12 +31,14 @@ Node::Node(
     QGraphicsPathItem(0),
     m_setting(_setting),
     m_name(_setting->getName()),
-    m_nameLabel(new QGraphicsTextItem(this)),
+    m_nameLabel(new QLineEdit()),
     m_width(2 * s_horizontalMargin),
     m_height(2 * s_verticalMargin)
 {
-    Preferences& preferences = Preferences::getInstance();
+//    Preferences& preferences = Preferences::getInstance();
 
+    QGraphicsProxyWidget* proxy = new QGraphicsProxyWidget(this);
+    proxy->setWidget(m_nameLabel);
     _editor->scene()->addItem(this);
     QPainterPath p;
     p.addRect(0, -m_height / 2, m_width, m_height);
@@ -43,18 +47,25 @@ Node::Node(
     setFlag(QGraphicsItem::ItemIsMovable);
     setFlag(QGraphicsItem::ItemIsSelectable);
 
+    QPalette palette;
+    palette.setColor(QPalette::Text, Qt::white);
+    m_nameLabel->setPalette(palette);
+    m_nameLabel->setStyleSheet("* {background-color: rgba(0, 0, 0, 0);}");
     QFont font(scene()->font());
     font.setBold(true);
     m_nameLabel->setFont(font);
-    m_nameLabel->setPlainText(m_name);
-    m_nameLabel->setDefaultTextColor(preferences.getPortTextColor());
+    m_nameLabel->setText(m_name);
+    m_nameLabel->setFrame(false);
+    m_nameLabel->setAttribute(Qt::WA_TranslucentBackground);
+//    m_nameLabel->setDefaultTextColor(preferences.getPortTextColor());
+//    m_nameLabel->setTextInteractionFlags(Qt::TextEditorInteraction);
 
-    qreal width = m_nameLabel->boundingRect().width();
-    qreal height = m_nameLabel->boundingRect().height();
+    qreal width = m_nameLabel->fontMetrics().width(m_name);
+    qreal height = m_nameLabel->fontMetrics().height();
     repositionPorts(width, height);
 
     loadFromNodeSetting(_setting);
-
+//    connect(m_nameLabel, SIGNAL());
 }
 
 void Node::loadFromNodeSetting(
@@ -67,7 +78,7 @@ void Node::loadFromNodeSetting(
     }
     m_setting = _setting;
     m_name = m_setting->getName();
-    m_nameLabel->setPlainText(m_name);
+    m_nameLabel->setText(m_name);
 
     addInputPorts(_setting->getInput());
     addInOutPorts(_setting->getInOut());
@@ -126,19 +137,13 @@ void Node::addOutputPort(
 }
 
 void Node::setName(
-        const Argument& _argument
+        const QString& _name
         )
 {
-    Preferences& preferences = Preferences::getInstance();
-
-    QFont font(scene()->font());
-    font.setBold(true);
-    m_nameLabel->setFont(font);
-    m_nameLabel->setPlainText(_argument.getName());
-    m_nameLabel->setDefaultTextColor(preferences.getPortTextColor());
-
-    qreal width = m_nameLabel->boundingRect().width();
-    qreal height = m_nameLabel->boundingRect().height();
+    m_name = _name;
+    m_nameLabel->setText(m_name);
+    qreal width  = m_nameLabel->width();
+    qreal height = m_nameLabel->height();
     repositionPorts(width, height);
 }
 
@@ -188,7 +193,7 @@ void Node::repositionPorts(
     path.addRect(-m_width / 2, -m_height / 2, m_width, m_height);
     setPath(path);
     int y = s_verticalMargin - m_height / 2;
-    m_nameLabel->setPos(-m_nameLabel->boundingRect().width() / 2, y);
+    m_nameLabel->move(-m_nameLabel->fontMetrics().width(m_nameLabel->text()) / 2, y);
 
     y += _height + s_textSpacing * 4;
     for(int i = 0; i < m_ports.length(); ++i)
@@ -360,6 +365,13 @@ const QVector<PortPair*>& Node::getPorts(
         ) const
 {
     return m_ports;
+}
+
+void Node::labelChanged(
+        const QString& _name
+        )
+{
+
 }
 
 Node::~Node()
