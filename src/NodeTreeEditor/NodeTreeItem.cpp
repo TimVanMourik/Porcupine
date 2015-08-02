@@ -49,7 +49,9 @@ NodeTreeItem::NodeTreeItem(
 
     // headerLayout
     m_numberLabel = new QLabel(QString::number(m_number));
-    QLabel* nameTag = new QLabel(_node->getType());
+    QLabel* nameTag = new QLabel(_node->getName());
+    connect(m_node, SIGNAL(nodeNameChanged(QString)), nameTag, SLOT(setText(QString)));
+
     QPushButton* visibilityButton = new QPushButton();
     visibilityButton->setMaximumWidth(30);
     visibilityButton->setText("\\/");
@@ -134,7 +136,8 @@ void NodeTreeItem::saveToXml(
 {
     QDomDocument xml;
     QDomElement node = xml.createElement("node");
-    node.setAttribute("name", m_node->getType());
+    node.setAttribute("name", m_node->getName());
+    node.setAttribute("type", m_node->getType());
     QDomElement position = xml.createElement("position");
     position.setAttribute("x", QString::number(m_node->pos().x()));
     position.setAttribute("y", QString::number(m_node->pos().y()));

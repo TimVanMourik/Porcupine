@@ -16,6 +16,7 @@
 
 class QDomElement;
 class QLineEdit;
+class QObject;
 
 class Argument;
 class DataType;
@@ -24,8 +25,9 @@ class NodeSetting;
 class Port;
 class PortPair;
 
-class Node : public QGraphicsPathItem
+class Node : public QObject, public QGraphicsPathItem
 {
+    Q_OBJECT
 public:
     //
     enum
@@ -38,11 +40,6 @@ public:
             NodeEditor* _editor,
             const NodeSetting* _setting = 0
             );
-    ///@brief Returns a pointer to the new Port in case you need it (for example in loading a file)
-//    Port* addPort(
-//            const Argument* _name,
-//            Port::PortType _isInput
-//            );
     //
     void addPortPair(
             const Argument& _name,
@@ -52,10 +49,6 @@ public:
     void connectPortsToPair(
             const Port* _input,
             const Port* _output
-            );
-    //
-    void setName(
-            const QString& _name
             );
     //
     void addInputPort(
@@ -89,8 +82,6 @@ public:
             );
     //
     void repositionPorts(
-            qreal _width,
-            qreal _height
             );
     //
     const QVector<PortPair*>& getPorts(
@@ -99,15 +90,14 @@ public:
     const QString& getType(
             ) const;
     //
+    const QString& getName(
+            ) const;
+    //
     const NodeSetting* getSetting(
             ) const;
     //
     int type(
             ) const;
-    //
-//    void saveToXml(
-//            QDomElement& _xmlElement
-//            ) const;
     //
     void loadFromXml(
             QDomElement& _xmlNode,
@@ -127,7 +117,13 @@ public:
     ~Node(
             );
 private slots:
-    void labelChanged(
+    //
+    void labelNameChanged(
+            const QString& _name
+            );
+signals:
+    //
+    void nodeNameChanged(
             const QString& _name
             );
 private:
@@ -149,10 +145,6 @@ private:
     static qreal s_verticalMargin;
     //
     static qreal s_textSpacing;
-    //
-    qreal m_width;
-    //
-    qreal m_height;
 };
 
 #endif // NODE_HPP

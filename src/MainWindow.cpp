@@ -255,6 +255,7 @@ void MainWindow::openFile()
 {
     QDomDocument document;
     QFile file(QFileDialog::getOpenFileName());
+    QCoreApplication::processEvents();
     if (!file.open(QIODevice::ReadOnly))
     {
         std::cerr << "Error: cannot open file\n";

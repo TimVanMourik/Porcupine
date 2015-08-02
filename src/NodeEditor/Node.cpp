@@ -3,7 +3,6 @@
 */
 
 #include <assert.h>
-#include <iostream>
 
 #include <QDomDocument>
 #include <QGraphicsItem>
@@ -30,22 +29,13 @@ Node::Node(
         ) :
     QGraphicsPathItem(0),
     m_setting(_setting),
-    m_name(_setting->getName()),
-    m_nameLabel(new QLineEdit()),
-    m_width(2 * s_horizontalMargin),
-    m_height(2 * s_verticalMargin)
+    m_name(QString()),
+    m_nameLabel(new QLineEdit())
 {
 //    Preferences& preferences = Preferences::getInstance();
-
+    _editor->scene()->addItem(this);
     QGraphicsProxyWidget* proxy = new QGraphicsProxyWidget(this);
     proxy->setWidget(m_nameLabel);
-    _editor->scene()->addItem(this);
-    QPainterPath p;
-    p.addRect(0, -m_height / 2, m_width, m_height);
-    setPath(p);
-    setPen(QPen(Qt::darkRed));
-    setFlag(QGraphicsItem::ItemIsMovable);
-    setFlag(QGraphicsItem::ItemIsSelectable);
 
     QPalette palette;
     palette.setColor(QPalette::Text, Qt::white);
@@ -58,24 +48,28 @@ Node::Node(
     m_nameLabel->setFrame(false);
     m_nameLabel->setAttribute(Qt::WA_TranslucentBackground);
 //    m_nameLabel->setDefaultTextColor(preferences.getPortTextColor());
-//    m_nameLabel->setTextInteractionFlags(Qt::TextEditorInteraction);
 
-    qreal width = m_nameLabel->fontMetrics().width(m_name);
-    qreal height = m_nameLabel->fontMetrics().height();
-    repositionPorts(width, height);
+    QPainterPath p;
+    p.addRect(0, 0, 0, 0);
+    setPath(p);
+    setPen(QPen(Qt::darkRed));
+    setFlag(QGraphicsItem::ItemIsMovable);
+    setFlag(QGraphicsItem::ItemIsSelectable);
 
-    loadFromNodeSetting(_setting);
-//    connect(m_nameLabel, SIGNAL());
+    if(m_setting) //false when loaded from file
+    {
+        m_name = _setting->getName();
+        loadFromNodeSetting(_setting);
+    }
+
+    connect(m_nameLabel, SIGNAL(textChanged(QString)), this, SLOT(labelNameChanged(QString)));
 }
 
 void Node::loadFromNodeSetting(
         const NodeSetting* _setting
         )
 {
-    if(!_setting)
-    {
-        return;
-    }
+    assert(_setting != 0);
     m_setting = _setting;
     m_name = m_setting->getName();
     m_nameLabel->setText(m_name);
@@ -136,17 +130,6 @@ void Node::addOutputPort(
     addPortPair(_argument, "o");
 }
 
-void Node::setName(
-        const QString& _name
-        )
-{
-    m_name = _name;
-    m_nameLabel->setText(m_name);
-    qreal width  = m_nameLabel->width();
-    qreal height = m_nameLabel->height();
-    repositionPorts(width, height);
-}
-
 void Node::addPortPair(
         const Argument& _argument,
         const QString& _type
@@ -171,23 +154,31 @@ void Node::addPortPair(
         pair->createOutputPort();
     }
     m_ports.append(pair);
-
-    qreal textWidth  = pair->boundingRect().width();
-    qreal textHeight = pair->boundingRect().height();
-    repositionPorts(textWidth, textHeight);
+    repositionPorts();
 }
 
 void Node::repositionPorts(
-        qreal _width,
-        qreal _height
         )
 {
     //Expand the Node when the text is too large
-    if(_width > m_width - s_horizontalMargin * 2)
+    qreal m_width = s_horizontalMargin * 2;
+    qreal m_height = s_verticalMargin;
+
+    m_width += m_nameLabel->fontMetrics().width(m_name);
+    m_height += m_nameLabel->fontMetrics().height() + s_horizontalMargin;
+
+    foreach (const PortPair* port, m_ports)
     {
-        m_width = _width + s_horizontalMargin * 2;
+        qreal textWidth  = port->boundingRect().width();
+        qreal textHeight = port->boundingRect().height();
+
+        if(textWidth > m_width - s_horizontalMargin * 2)
+        {
+            m_width = textWidth + s_horizontalMargin * 2;
+        }
+        m_height += textHeight + s_textSpacing;
     }
-    m_height += _height + s_textSpacing;
+    m_height += s_verticalMargin;
 
     QPainterPath path;
     path.addRect(-m_width / 2, -m_height / 2, m_width, m_height);
@@ -195,12 +186,14 @@ void Node::repositionPorts(
     int y = s_verticalMargin - m_height / 2;
     m_nameLabel->move(-m_nameLabel->fontMetrics().width(m_nameLabel->text()) / 2, y);
 
-    y += _height + s_textSpacing * 4;
-    for(int i = 0; i < m_ports.length(); ++i)
+    y += m_nameLabel->fontMetrics().height() * 2 + s_textSpacing * 4;
+
+    foreach (PortPair* port, m_ports)
     {
-        m_ports[i]->setPos(-m_ports[i]->boundingRect().width() / 2, y - _height / 2);
-        m_ports[i]->repositionPorts(m_width, y);
-        y += _height + s_textSpacing;
+        qreal textHeight = port->boundingRect().height();
+        port->setPos(-port->boundingRect().width() / 2, y - textHeight / 2);
+        port->repositionPorts(m_width, y);
+        y += textHeight + s_textSpacing;
     }
 }
 
@@ -239,33 +232,19 @@ const QString& Node::getType(
     return m_setting->getName();
 }
 
+const QString& Node::getName(
+        ) const
+{
+    return m_name;
+}
+
 const NodeSetting* Node::getSetting(
         ) const
 {
     return m_setting;
 }
 
-//void Node::saveToXml(
-//        QDomElement& _xmlElement
-//        ) const
-//{
-//    QDomDocument xml;
-//    QDomElement node = xml.createElement("node");
-//    node.setAttribute("name", m_setting->getName());
-//    QDomElement position = xml.createElement("position");
-//    position.setAttribute("x", QString::number(pos().x()));
-//    position.setAttribute("y", QString::number(pos().y()));
-//    node.appendChild(position);
-
-//    QDomElement ports = xml.createElement("pairs");
-//    foreach(PortPair* pair, m_ports)
-//    {
-//        pair->saveToXml(ports);
-//    }
-//    node.appendChild(ports);
-//    _xmlElement.appendChild(node);
-//}
-
+#include <iostream>
 void Node::loadFromXml(
         QDomElement& _xmlNode,
         QMap<quint64, Port*>& o_portMap
@@ -274,6 +253,7 @@ void Node::loadFromXml(
     Preferences& preferences = Preferences::getInstance();
     NodeLibrary& nodeLibrary = NodeLibrary::getInstance();
 
+//    std::cerr << "Loading setting...\n";
     QString nodeType = _xmlNode.attribute("name");
     const NodeSetting* setting = nodeLibrary.getNodeSetting(nodeType);
     assert(setting != 0);
@@ -283,6 +263,7 @@ void Node::loadFromXml(
 
     while(!n.isNull())
     {
+//        std::cerr << "Loading element...\n";
         QDomElement e = n.toElement();
         if(e.tagName().compare("position") == 0)
         {
@@ -297,6 +278,7 @@ void Node::loadFromXml(
                 PortPair* pair = 0;
                 foreach(PortPair* port, m_ports)
                 {
+                    assert(port != 0);
                     if(port->getName().compare(portElement.attribute("name")) == 0)
                     {
                         pair = port;
@@ -367,11 +349,13 @@ const QVector<PortPair*>& Node::getPorts(
     return m_ports;
 }
 
-void Node::labelChanged(
+void Node::labelNameChanged(
         const QString& _name
         )
 {
-
+    m_name = _name;
+    repositionPorts();
+    emit nodeNameChanged(m_name);
 }
 
 Node::~Node()

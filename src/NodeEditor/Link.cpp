@@ -2,6 +2,8 @@
  * Copyright (C) 2014 Tim van Mourik
 */
 
+#include <assert.h>
+
 #include <QDomDocument>
 #include <QGraphicsScene>
 #include <QPainter>
@@ -138,6 +140,8 @@ void Link::loadFromXml(
 {
     quint64 pointerFrom =   (quint64) _xmlNode.attribute("from").toULongLong(0, 16);
     quint64 pointerTo =     (quint64) _xmlNode.attribute("to").toULongLong(0, 16);
+    assert(pointerFrom != 0);
+    assert(pointerTo != 0);
 
     Port* p = _portMap[pointerFrom];
     setPortFrom(p);

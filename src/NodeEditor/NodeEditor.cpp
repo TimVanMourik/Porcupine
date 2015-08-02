@@ -28,19 +28,16 @@ NodeEditor::NodeEditor(
 }
 
 void NodeEditor::install(
-//        QGraphicsScene* _scene
         )
 {
     Preferences& preferences = Preferences::getInstance();
     QGraphicsScene* scene = new QGraphicsScene();
     scene->setBackgroundBrush(preferences.getSceneBackgroundBrush());
-//    if(!scene)
-//    {
-//        scene = new QGraphicsScene();
-//    }
     setScene(scene);
+
     //makes sure that all events from the scene are passed on to the editor
     scene->installEventFilter(this);
+    show();
 }
 
 QGraphicsScene* NodeEditor::getScene(
@@ -192,6 +189,7 @@ void NodeEditor::keyPressEvent(
         QKeyEvent* _event
         )
 {
+    QGraphicsView::keyPressEvent(_event);
     switch (_event->key())
     {
     case Qt::Key_Backspace:
@@ -254,6 +252,7 @@ void NodeEditor::loadFromXml(
         QDomDocument& _xmlFile
         )
 {
+//    std::cerr << "Loading file...\n";
     scene()->clear();
 
     QMap<quint64, Port*> portMap;
@@ -266,12 +265,15 @@ void NodeEditor::loadFromXml(
         QDomElement e = n.toElement();
         if(e.tagName().compare("node") == 0)
         {
+//            std::cerr << "Loading node...\n";
             Node* node = new Node(this);
             node->loadFromXml(e, portMap);
+//            std::cerr << "Adding to tree...\n";
             getTreeModel()->addNode(node);
         }
         else if(e.tagName().compare("link") == 0)
         {
+//            std::cerr << "Loading link...\n";
             Link* link = new Link(scene());
             link->loadFromXml(e, portMap);
         }

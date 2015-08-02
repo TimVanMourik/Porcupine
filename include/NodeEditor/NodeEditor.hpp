@@ -33,7 +33,6 @@ public:
             );
     //
     void install(
-//            QGraphicsScene* _scene = 0
             );
     //
     bool eventFilter(
