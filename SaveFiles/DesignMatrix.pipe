@@ -1,92 +1,92 @@
 <?xml version="1.0"?>
 <pipeline>
- <node name="Initialise design matrix">
-  <position x="-636" y="-266"/>
+ <node type="Initialise design matrix" name="Initialise design matrix">
+  <position y="-266" x="-636"/>
   <pairs>
-   <pair filename="'Scans/Functional/Realigned/'" name="Files">
-    <port identifier="22549648" type="input"/>
+   <pair name="Files" filename="'Scans/Functional/Realigned/'">
+    <port identifier="264b0e58" type="input"/>
    </pair>
-   <pair filename="'design1.mat'" name="Output design matrix">
-    <port identifier="225496c0" type="output"/>
+   <pair name="Output design matrix" filename="'design1.mat'">
+    <port identifier="264b0ed0" type="output"/>
    </pair>
   </pairs>
  </node>
- <node name="Constant">
-  <position x="-448" y="-219"/>
+ <node type="Constant" name="Constant">
+  <position y="-219" x="-448"/>
   <pairs>
-   <pair filename="'design1.mat'" name="Input design matrix">
-    <port identifier="2256fed8" type="input"/>
+   <pair name="Input design matrix" filename="'design1.mat'">
+    <port identifier="264b13f8" type="input"/>
    </pair>
-   <pair filename="'design2.mat'" name="Output design matrix">
-    <port identifier="22570040" type="output"/>
+   <pair name="Output design matrix" filename="'design2.mat'">
+    <port identifier="264b1560" type="output"/>
    </pair>
   </pairs>
  </node>
- <node name="Motion regression">
-  <position x="-295" y="-178"/>
+ <node type="Motion regression" name="Motion regression">
+  <position y="-178" x="-295"/>
   <pairs>
-   <pair filename="'design2.mat'" name="Input design matrix">
-    <port identifier="22570478" type="input"/>
+   <pair name="Input design matrix" filename="'design2.mat'">
+    <port identifier="264b1a38" type="input"/>
    </pair>
-   <pair filename="'Scans/Functional/Realigned/rp_*.txt'" name="Motion Parameters">
-    <port identifier="225705e0" type="input"/>
+   <pair name="Motion Parameters" filename="'Scans/Functional/Realigned/rp_*.txt'">
+    <port identifier="264b1ba0" type="input"/>
    </pair>
-   <pair filename="'design3.mat'" name="Output design matrix">
-    <port identifier="225706f8" type="output"/>
+   <pair name="Output design matrix" filename="'design3.mat'">
+    <port identifier="264b1cb8" type="output"/>
    </pair>
   </pairs>
  </node>
- <node name="High pass filter">
-  <position x="-114" y="-105"/>
+ <node type="High pass filter" name="High pass filter">
+  <position y="-105" x="-114"/>
   <pairs>
-   <pair filename="'design3.mat'" name="Input design matrix">
-    <port identifier="22570b80" type="input"/>
+   <pair name="Input design matrix" filename="'design3.mat'">
+    <port identifier="264b21e0" type="input"/>
    </pair>
-   <pair filename="1/64" name="Cut-off frequency">
-    <port identifier="22570ce8" type="input"/>
+   <pair name="Cut-off frequency" filename="1/64">
+    <port identifier="264b2348" type="input"/>
    </pair>
-   <pair filename="3.36" name="TR">
-    <port identifier="22570ea0" type="input"/>
+   <pair name="TR" filename="3.36">
+    <port identifier="264b2500" type="input"/>
    </pair>
-   <pair filename="'design4.mat'" name="Output design matrix">
-    <port identifier="22570f68" type="output"/>
+   <pair name="Output design matrix" filename="'design4.mat'">
+    <port identifier="264b25c8" type="output"/>
    </pair>
   </pairs>
  </node>
- <node name="Stimulus regressors">
-  <position x="77" y="12"/>
+ <node type="Stimulus regressors" name="Stimulus regressors">
+  <position y="12" x="77"/>
   <pairs>
-   <pair filename="'design4.mat'" name="Input design matrix">
-    <port identifier="22571490" type="input"/>
+   <pair name="Input design matrix" filename="'design4.mat'">
+    <port identifier="264b2b90" type="input"/>
    </pair>
-   <pair filename="{'Stimulus/Stimulus_Right_Presented.mat', 'Stimulus/Stimulus_Left_Presented.mat'}" name="Stimulus">
-    <port identifier="225715f8" type="input"/>
+   <pair name="Stimulus" filename="{'Stimulus/Stimulus_Right_Presented.mat', 'Stimulus/Stimulus_Left_Presented.mat'}">
+    <port identifier="264b2cf8" type="input"/>
    </pair>
-   <pair filename="" name="HRF parameters">
-    <port identifier="22571710" type="input"/>
+   <pair name="HRF parameters" filename="">
+    <port identifier="264b2e10" type="input"/>
    </pair>
-   <pair filename="3.36" name="TR">
-    <port identifier="225718f0" type="input"/>
+   <pair name="TR" filename="3.36">
+    <port identifier="264b2ff0" type="input"/>
    </pair>
-   <pair filename="'design5.mat'" name="Output design matrix">
-    <port identifier="225719b8" type="output"/>
+   <pair name="Output design matrix" filename="'design5.mat'">
+    <port identifier="264b30b8" type="output"/>
    </pair>
   </pairs>
  </node>
- <node name="Save to image">
-  <position x="263" y="116"/>
+ <node type="Save to image" name="Save to image">
+  <position y="116" x="263"/>
   <pairs>
-   <pair filename="'design5.mat'" name="Input design matrix">
-    <port identifier="224e5408" type="input"/>
+   <pair name="Input design matrix" filename="'design5.mat'">
+    <port identifier="264b3658" type="input"/>
    </pair>
-   <pair filename="'design.fig'" name="Output image">
-    <port identifier="224e52c8" type="output"/>
+   <pair name="Output image" filename="'design.fig'">
+    <port identifier="264b37c0" type="output"/>
    </pair>
   </pairs>
  </node>
- <link to="224e5408" from="225719b8"/>
- <link to="22570478" from="22570040"/>
- <link to="2256fed8" from="225496c0"/>
- <link to="22570b80" from="225706f8"/>
- <link to="22571490" from="22570f68"/>
+ <link from="264b25c8" to="264b2b90"/>
+ <link from="264b1cb8" to="264b21e0"/>
+ <link from="264b0ed0" to="264b13f8"/>
+ <link from="264b1560" to="264b1a38"/>
+ <link from="264b30b8" to="264b3658"/>
 </pipeline>

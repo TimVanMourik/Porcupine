@@ -254,7 +254,7 @@ void Node::loadFromXml(
     NodeLibrary& nodeLibrary = NodeLibrary::getInstance();
 
 //    std::cerr << "Loading setting...\n";
-    QString nodeType = _xmlNode.attribute("name");
+    QString nodeType = _xmlNode.attribute("type");
     const NodeSetting* setting = nodeLibrary.getNodeSetting(nodeType);
     assert(setting != 0);
     loadFromNodeSetting(setting);
