@@ -2,6 +2,8 @@
  * Copyright (C) 2014 Tim van Mourik
 */
 
+#include <assert.h>
+
 #include <QDomDocument>
 #include <QFont>
 #include <QGraphicsItem>
@@ -115,6 +117,7 @@ QVariant Port::itemChange(
 const Node* Port::getNode(
         ) const
 {
+    assert(m_node != 0);
     return m_node;
 }
 
@@ -136,11 +139,12 @@ QVector<Port*> Port::getConnectedPorts(
     QVector<Port*> connectedPorts;
     foreach(Link* link, m_connections)
     {
+        assert(link != 0);
         if(m_type == PortType::INPUT)
         {
             connectedPorts.append(link->getPortFrom());
         }
-        if(m_type == PortType::OUTPUT)
+        else if(m_type == PortType::OUTPUT)
         {
             connectedPorts.append(link->getPortTo());
         }

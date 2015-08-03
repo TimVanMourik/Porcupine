@@ -64,6 +64,7 @@ bool NodeEditor::eventFilter(
             if (item && item->type() == Port::Type)
             {
                 m_newLink = new Link(scene());
+
                 Port* port = (Port*) item;
                 if(port->getPortType() == Port::PortType::INPUT)
                 {
@@ -124,7 +125,6 @@ bool NodeEditor::eventFilter(
                 {
                     if(startAtBeginning)
                     {
-//                        m_newLink->setPortTo(newPort);
                         if(!portExisting->getNode()->hasAncestor(portCreated->getNode()))
                         {
                             m_newLink->setPortTo(portCreated);
@@ -132,7 +132,7 @@ bool NodeEditor::eventFilter(
                         else
                         {
                             ///@todo Give a message that circularity is not appreciated
-//                            std::cerr << "B: Sorry, no can do\n";
+//                            std::cerr << "Sorry, no can do\n";
                             delete m_newLink;
                             m_newLink = 0;
                             return true;
@@ -140,7 +140,6 @@ bool NodeEditor::eventFilter(
                     }
                     else
                     {
-//                        m_newLink->setPortFrom(newPort);
                         if(!portCreated->getNode()->hasAncestor(portExisting->getNode()))
                         {
                             m_newLink->setPortFrom(portCreated);
@@ -148,7 +147,7 @@ bool NodeEditor::eventFilter(
                         else
                         {
                             ///@todo Give a message that circularity is not appreciated
-//                            std::cerr << "A: Sorry, no can do\n";
+//                            std::cerr << "Sorry, no can do\n";
                             delete m_newLink;
                             m_newLink = 0;
                             return true;
@@ -167,9 +166,8 @@ bool NodeEditor::eventFilter(
                     {
                         m_newLink->getPortFrom()->fileNameChanged(m_newLink->getPortTo()->getFileName(), true);
                     }
-                    ///@todo notify the list view to update
                     emit linkCreated(m_newLink->getPortFrom()->getNode(), m_newLink->getPortTo()->getNode());
-                    // make sure file names work out
+
                     m_newLink = 0;
                     return true;
                 }

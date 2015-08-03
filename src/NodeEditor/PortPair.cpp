@@ -1,3 +1,5 @@
+#include "assert.h"
+
 #include <QDomDocument>
 
 #include "Argument.hpp"
@@ -202,12 +204,10 @@ bool PortPair::hasNodeAncestor(
     {
         foreach(const Port* port, m_input->getConnectedPorts())
         {
-            if(port)
+            assert(port != 0);
+            if(port->getNode()->hasAncestor(_node))
             {
-                if(port->getNode()->hasAncestor(_node))
-                {
-                    return true;
-                }
+                return true;
             }
         }
     }
