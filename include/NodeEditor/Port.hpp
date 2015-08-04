@@ -35,11 +35,7 @@ public:
     };
     //
     Port(
-            QGraphicsItem* _parent = 0
-            );
-    //
-    void setNode(
-            Node*
+            const Node* _node = 0
             );
     //
     void setPortPair(
@@ -128,7 +124,7 @@ private:
             );
 
     // A pointer to the Node to which the Port belongs
-    Node* m_node;
+    const Node* m_node;
     // If this is an input port, m_other point to the output and vice versa.
     // m_other = 0 when the output does not have an input.
     Port* m_other;

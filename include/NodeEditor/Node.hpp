@@ -14,6 +14,8 @@
 
 #include <QGraphicsPathItem>
 
+#include "NodeAntenna.hpp"
+
 class QDomElement;
 class QLineEdit;
 class QObject;
@@ -25,9 +27,8 @@ class NodeSetting;
 class Port;
 class PortPair;
 
-class Node : public QObject, public QGraphicsPathItem
+class Node : public QGraphicsPathItem
 {
-    Q_OBJECT
 public:
     //
     enum
@@ -93,6 +94,9 @@ public:
     const QString& getName(
             ) const;
     //
+    const NodeAntenna& getAntenna(
+            ) const;
+    //
     const NodeSetting* getSetting(
             ) const;
     //
@@ -114,18 +118,17 @@ public:
             const Node*
             ) const;
     //
-    ~Node(
-            );
-private slots:
-    //
     void labelNameChanged(
             const QString& _name
             );
-signals:
     //
-    void nodeNameChanged(
-            const QString& _name
+    ~Node(
             );
+//signals:
+//    //
+//    void nodeNameChanged(
+//            const QString& _name
+//            );
 private:
     //
     void loadFromNodeSetting(
@@ -135,6 +138,9 @@ private:
     const NodeSetting* m_setting;
     //
     QString m_name;
+    // As Node is not a QObject derivative, but we would still like to use signals and slots, transmissions go via an antenna
+    // Another way to appraoch the problem is multiple inheritance.
+    NodeAntenna m_antenna;
     //
     QLineEdit* m_nameLabel;
     //

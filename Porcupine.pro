@@ -58,7 +58,8 @@ SOURCES +=          $$ROOT/main.cpp \
                     $$ROOT/src/CodeEditor/MatlabGenerator.cpp \
                     $$ROOT/src/CodeEditor/PythonGenerator.cpp \
                     $$ROOT/src/CodeEditor/BashGenerator.cpp \
-                    $$ROOT/src/CodeEditor/CodeGenerator.cpp
+                    $$ROOT/src/CodeEditor/CodeGenerator.cpp \
+    src/NodeEditor/NodeAntenna.cpp
 
 HEADERS  +=         $$ROOT/include/MainWindow.hpp \
                     $$ROOT/include/Settings/Argument.hpp \
@@ -83,7 +84,8 @@ HEADERS  +=         $$ROOT/include/MainWindow.hpp \
                     $$ROOT/include/CodeEditor/MatlabGenerator.hpp \
                     $$ROOT/include/CodeEditor/PythonGenerator.hpp \
                     $$ROOT/include/CodeEditor/BashGenerator.hpp \
-                    $$ROOT/include/CodeEditor/CodeGenerator.hpp
+                    $$ROOT/include/CodeEditor/CodeGenerator.hpp \
+    include/NodeEditor/NodeAntenna.hpp
 
 RESOURCES   =       $$ROOT/Dictionaries/schema.qrc
 

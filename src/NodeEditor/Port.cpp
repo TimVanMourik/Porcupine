@@ -20,14 +20,14 @@ qreal Port::s_margin = 0;
 qreal Port::s_radius = 4;
 
 Port::Port(
-        QGraphicsItem* _parent
+        const Node* _node
         ) :
-    QGraphicsPathItem(_parent),
+    QGraphicsPathItem((QGraphicsItem*)_node),
+    m_node(_node),
     m_other(0),
     m_hasFileName(false)
 {
     Preferences& preferences = Preferences::getInstance();
-    setNode((Node*) _parent);
     QPainterPath portDrawing;
     qreal centreX   = -s_radius;
     qreal centreY   = -s_radius;
@@ -40,13 +40,6 @@ Port::Port(
     setBrush(preferences.getPortBrushUnselected());
 
     setFlag(QGraphicsItem::ItemSendsScenePositionChanges);
-}
-
-void Port::setNode(
-        Node* _node
-        )
-{
-    m_node = _node;
 }
 
 void Port::setPortPair(

@@ -255,6 +255,8 @@ void MainWindow::openFile()
 {
     QDomDocument document;
     QFile file(QFileDialog::getOpenFileName());
+    QFileInfo fileInfo(file.fileName());
+    QString filename(fileInfo.fileName());
     QCoreApplication::processEvents();
     if (!file.open(QIODevice::ReadOnly))
     {
@@ -276,6 +278,7 @@ void MainWindow::openFile()
     newFile();
 //    }
 
+    m_nodeEditorWidget->setTabText(m_nodeEditorWidget->currentIndex(), filename);
     m_nodeEditors[m_nodeEditorWidget->currentIndex()]->loadFromXml(document);
 }
 

@@ -208,7 +208,6 @@ void NodeEditor::keyPressEvent(
         }
         break;
     }
-
     default:
     {
         break;
@@ -286,7 +285,6 @@ void NodeEditor::setTreeModel(
     m_treeModel = _treeModel;
     connect(this, SIGNAL(linkCreated(const Node*, const Node*)), m_treeModel, SLOT(linkCreated(const Node*, const Node*)));
 }
-
 
 NodeTreeEditor* NodeEditor::getTreeModel(
         ) const

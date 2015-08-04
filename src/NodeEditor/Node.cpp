@@ -33,6 +33,7 @@ Node::Node(
     m_nameLabel(new QLineEdit()),
     m_ports(QVector<PortPair*>(0))
 {
+    m_antenna.setNode(this);
 //    Preferences& preferences = Preferences::getInstance();
     _editor->scene()->addItem(this);
     QGraphicsProxyWidget* proxy = new QGraphicsProxyWidget(this);
@@ -62,8 +63,8 @@ Node::Node(
         m_name = _setting->getName();
         loadFromNodeSetting(_setting);
     }
-
-    connect(m_nameLabel, SIGNAL(textChanged(QString)), this, SLOT(labelNameChanged(QString)));
+    m_nameLabel->connect((QObject*) m_nameLabel, SIGNAL(textChanged(QString)), (QObject*) &m_antenna, SLOT(catchLabelChanged(QString)));
+//    connect(m_nameLabel, SIGNAL(textChanged(QString)), this, SLOT(labelNameChanged(QString)));
 }
 
 void Node::loadFromNodeSetting(
@@ -185,7 +186,7 @@ void Node::repositionPorts(
     path.addRect(-width / 2, -height / 2, width, height);
     setPath(path);
     int y = s_verticalMargin - height / 2;
-    m_nameLabel->move(-m_nameLabel->fontMetrics().width(m_nameLabel->text()) / 2, y);
+    m_nameLabel->move(-m_nameLabel->fontMetrics().width(m_nameLabel->text()) / 2 - s_horizontalMargin, y);
 
     y += m_nameLabel->fontMetrics().height() * 2 + s_textSpacing * 4;
 
@@ -239,13 +240,18 @@ const QString& Node::getName(
     return m_name;
 }
 
+const NodeAntenna& Node::getAntenna(
+        ) const
+{
+    return m_antenna;
+}
+
 const NodeSetting* Node::getSetting(
         ) const
 {
     return m_setting;
 }
 
-//#include <iostream>
 void Node::loadFromXml(
         QDomElement& _xmlNode,
         QMap<quint64, Port*>& o_portMap
@@ -254,7 +260,6 @@ void Node::loadFromXml(
     Preferences& preferences = Preferences::getInstance();
     NodeLibrary& nodeLibrary = NodeLibrary::getInstance();
 
-//    std::cerr << "Loading setting...\n";
     QString nodeType = _xmlNode.attribute("type");
     const NodeSetting* setting = nodeLibrary.getNodeSetting(nodeType);
     assert(setting != 0);
@@ -270,7 +275,6 @@ void Node::loadFromXml(
     QDomNode n = _xmlNode.firstChild();
     while(!n.isNull())
     {
-//        std::cerr << "Loading element...\n";
         QDomElement e = n.toElement();
         if(e.tagName().compare("position") == 0)
         {
@@ -313,7 +317,6 @@ void Node::loadFromXml(
     }
 }
 
-#include <iostream>
 bool Node::hasAncestor(
         const Node* _node
         ) const
@@ -322,7 +325,6 @@ bool Node::hasAncestor(
     {
         return true;
     }
-    std::cerr << "Number of ports, " << m_ports.length() << "\n";
 
     foreach(const PortPair* port, m_ports)
     {
@@ -365,7 +367,7 @@ void Node::labelNameChanged(
 {
     m_name = _name;
     repositionPorts();
-    emit nodeNameChanged(m_name);
+    m_antenna.sendLabelChanged(_name);
 }
 
 Node::~Node()

@@ -50,7 +50,7 @@ NodeTreeItem::NodeTreeItem(
     // headerLayout
     m_numberLabel = new QLabel(QString::number(m_number));
     QLabel* nameTag = new QLabel(_node->getName());
-    connect(m_node, SIGNAL(nodeNameChanged(QString)), nameTag, SLOT(setText(QString)));
+    connect(&m_node->getAntenna(), SIGNAL(nodeNameChanged(QString)), nameTag, SLOT(setText(QString)));
 
     QPushButton* visibilityButton = new QPushButton();
     visibilityButton->setMaximumWidth(30);

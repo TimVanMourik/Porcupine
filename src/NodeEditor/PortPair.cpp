@@ -21,7 +21,7 @@ PortPair::PortPair(
 void PortPair::createInputPort(
         )
 {
-    m_input = new Port((QGraphicsItem*) m_node);
+    m_input = new Port((Node*) m_node);
     m_input->setPortType(Port::PortType::INPUT);
     m_input->setOther(m_output);
     m_input->setPortPair(this);
@@ -31,7 +31,7 @@ void PortPair::createInputPort(
 void PortPair::createOutputPort(
         )
 {
-    m_output = new Port((QGraphicsItem*) m_node);
+    m_output = new Port((Node*) m_node);
     m_output->setPortType(Port::PortType::OUTPUT);
     m_output->setOther(m_input);
     m_output->setPortPair(this);
