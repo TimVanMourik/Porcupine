@@ -370,6 +370,26 @@ void Node::labelNameChanged(
     m_antenna.sendLabelChanged(_name);
 }
 
+QVariant Node::itemChange(
+        GraphicsItemChange _change,
+        const QVariant& _value
+        )
+{
+    if (_change == QGraphicsItem::ItemSelectedChange)
+    {
+        //explicitly equate it to true and false, because it's a QVariant
+        if (_value == true)
+        {
+            m_antenna.sendNodeSelected(true);
+        }
+        else if (_value == false)
+        {
+            m_antenna.sendNodeSelected(false);
+        }
+    }
+    return QGraphicsItem::itemChange(_change, _value);
+}
+
 Node::~Node()
 {
     foreach(PortPair* port, m_ports)

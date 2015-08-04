@@ -89,6 +89,7 @@ NodeTreeItem::NodeTreeItem(
         connect(pair, SIGNAL(changeFileName(QString)), fileName, SLOT(setText(QString)));
     }
     connect(visibilityButton, SIGNAL(toggled(bool)), portBlock, SLOT(setVisible(bool)));
+    connect(&m_node->getAntenna(), SIGNAL(nodeSelected(bool)), this, SLOT(setSelected(bool)));
 }
 
 QString NodeTreeItem::getFileName(
@@ -189,6 +190,22 @@ void NodeTreeItem::setNumber(
 {
     m_number = _i;
     m_numberLabel->setText(QString::number(m_number));
+}
+
+
+void NodeTreeItem::setSelected(
+        bool _isSelected
+        )
+{
+    if(_isSelected)
+    {
+        setObjectName("myObject");
+        setStyleSheet("#myObject { border: 5px solid black; }");
+    }
+    else
+    {
+        setStyleSheet("");
+    }
 }
 
 NodeTreeItem::~NodeTreeItem(

@@ -20,10 +20,19 @@ public:
     void sendLabelChanged(
             const QString& _name
             );
+    //
+    void sendNodeSelected(
+            bool _isSelected
+            );
 signals:
+    //
     void nodeNameChanged(
         const QString& _name
         );
+    //
+    void nodeSelected(
+            bool _isSelected
+            );
 public slots:
     //
     void catchLabelChanged(

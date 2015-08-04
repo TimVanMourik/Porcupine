@@ -28,3 +28,10 @@ void NodeAntenna::sendLabelChanged(
 {
     emit nodeNameChanged(_name);
 }
+
+void NodeAntenna::sendNodeSelected(
+        bool _isSelected
+        )
+{
+    emit nodeSelected(_isSelected);
+}

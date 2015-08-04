@@ -45,6 +45,7 @@ SOURCES +=          $$ROOT/main.cpp \
                     $$ROOT/src/Settings/Preferences.cpp \
                     $$ROOT/src/NodeEditor/Link.cpp \
                     $$ROOT/src/NodeEditor/Node.cpp \
+                    $$ROOT/src/NodeEditor/NodeAntenna.cpp \
                     $$ROOT/src/NodeEditor/NodeEditor.cpp \
                     $$ROOT/src/NodeEditor/Port.cpp \
                     $$ROOT/src/NodeEditor/PortPair.cpp \
@@ -58,8 +59,7 @@ SOURCES +=          $$ROOT/main.cpp \
                     $$ROOT/src/CodeEditor/MatlabGenerator.cpp \
                     $$ROOT/src/CodeEditor/PythonGenerator.cpp \
                     $$ROOT/src/CodeEditor/BashGenerator.cpp \
-                    $$ROOT/src/CodeEditor/CodeGenerator.cpp \
-    src/NodeEditor/NodeAntenna.cpp
+                    $$ROOT/src/CodeEditor/CodeGenerator.cpp
 
 HEADERS  +=         $$ROOT/include/MainWindow.hpp \
                     $$ROOT/include/Settings/Argument.hpp \
@@ -70,6 +70,7 @@ HEADERS  +=         $$ROOT/include/MainWindow.hpp \
                     $$ROOT/include/Settings/Singleton.hpp \
                     $$ROOT/include/NodeEditor/Link.hpp \
                     $$ROOT/include/NodeEditor/Node.hpp \
+                    $$ROOT/include/NodeEditor/NodeAntenna.hpp \
                     $$ROOT/include/NodeEditor/NodeEditor.hpp \
                     $$ROOT/include/NodeEditor/Port.hpp \
                     $$ROOT/include/NodeEditor/PortPair.hpp \
@@ -84,8 +85,7 @@ HEADERS  +=         $$ROOT/include/MainWindow.hpp \
                     $$ROOT/include/CodeEditor/MatlabGenerator.hpp \
                     $$ROOT/include/CodeEditor/PythonGenerator.hpp \
                     $$ROOT/include/CodeEditor/BashGenerator.hpp \
-                    $$ROOT/include/CodeEditor/CodeGenerator.hpp \
-    include/NodeEditor/NodeAntenna.hpp
+                    $$ROOT/include/CodeEditor/CodeGenerator.hpp
 
 RESOURCES   =       $$ROOT/Dictionaries/schema.qrc
 

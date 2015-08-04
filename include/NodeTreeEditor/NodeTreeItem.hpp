@@ -70,6 +70,11 @@ public:
     //
     virtual ~NodeTreeItem(
             );
+public slots:
+    //
+    void setSelected(
+            bool _isSelected
+            );
 signals:
     void moved(
             NodeTreeItem* _item

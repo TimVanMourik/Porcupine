@@ -122,6 +122,11 @@ public:
             const QString& _name
             );
     //
+    QVariant itemChange(
+            GraphicsItemChange _change,
+            const QVariant& _value
+            );
+    //
     ~Node(
             );
 //signals:
