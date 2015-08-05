@@ -87,9 +87,9 @@ HEADERS  +=         $$ROOT/include/MainWindow.hpp \
                     $$ROOT/include/CodeEditor/BashGenerator.hpp \
                     $$ROOT/include/CodeEditor/CodeGenerator.hpp
 
-RESOURCES   =       $$ROOT/Dictionaries/schema.qrc
+RESOURCES   =       $$ROOT/Resources/schema.qrc
 
-#win32:
+win32:RC_ICONS +=   $$ROOT/Resources/Icon/porcupine.ico
 #linux-g++:
 #linux-g++-64:
 #macx:

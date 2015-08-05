@@ -200,7 +200,7 @@ void NodeTreeItem::setSelected(
     if(_isSelected)
     {
         setObjectName("myObject");
-        setStyleSheet("#myObject { border: 5px solid black; }");
+        setStyleSheet("#myObject {border: 2px solid black;}");
     }
     else
     {

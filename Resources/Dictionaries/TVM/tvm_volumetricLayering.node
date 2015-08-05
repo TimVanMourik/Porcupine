@@ -1,0 +1,12 @@
+<node>
+    <title>tvm_volumetricLayering</title>
+    <input name="White Matter SDF" class="3D NifTI"/>
+    <input name="Pial SDF" class="3D NifTI"/>
+    <input name="White Matter Primary Curvature" class="3D NifTI"/>
+    <input name="Pial Primary Curvature" class="3D NifTI"/>
+    <input name="White Matter Secondary Curvature" class="3D NifTI"/>
+    <input name="Pial Secondary Curvature" class="3D NifTI"/>
+    <input name="Levels" class="Vector"/>
+    <output name="Level Set" class="4D NifTI"/>
+    <output name="Layers" class="4D NifTI"/>
+</node>

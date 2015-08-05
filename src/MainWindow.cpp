@@ -114,7 +114,7 @@ void MainWindow::loadDataTypes(
     unsigned int i = 0;
     while(true)
     {
-        QFile xmlTypefile(QString(":/Default/DataTypes/type_%1.xml").arg(i));
+        QFile xmlTypefile(QString(":/Dictionaries/DataTypes/type_%1.xml").arg(i));
         if(xmlTypefile.exists())
         {
             nodeLibrary.addDataTypes(xmlTypefile);
@@ -135,11 +135,11 @@ void MainWindow::loadDefaultNodes(
     nodeLibrary.setNodeSchema(schemaFile);
 
     QStringList toolboxNames;
-    toolboxNames << QString(":/Default/node_%1.xml");
-    toolboxNames << QString(":/Default/TVM/DesignMatrix/node_%1.xml");
-//    toolboxNames << QString(":/Default/TVM/node_%1.xml");
-    toolboxNames << QString(":/Default/FieldTrip/node_%1.xml");
-    toolboxNames << QString(":/Default/FSL/node_%1.xml");
+    toolboxNames << QString(":/Dictionaries/node_%1.xml");
+    toolboxNames << QString(":/Dictionaries/TVM/DesignMatrix/node_%1.xml");
+//    toolboxNames << QString(":/Dictionaries/TVM/node_%1.xml");
+    toolboxNames << QString(":/Dictionaries/FieldTrip/node_%1.xml");
+    toolboxNames << QString(":/Dictionaries/FSL/node_%1.xml");
     foreach (QString toolbox, toolboxNames)
     {
         unsigned int i = 0;
