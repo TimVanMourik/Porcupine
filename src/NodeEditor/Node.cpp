@@ -79,6 +79,7 @@ void Node::loadFromNodeSetting(
     addInputPorts(_setting->getInput());
     addInOutPorts(_setting->getInOut());
     addOutputPorts(_setting->getOutput());
+    repositionPorts();
 }
 
 void Node::addInputPorts(
@@ -156,7 +157,7 @@ void Node::addPortPair(
         pair->createOutputPort();
     }
     m_ports.append(pair);
-    repositionPorts();
+//    repositionPorts();
 }
 
 void Node::repositionPorts(
@@ -168,6 +169,8 @@ void Node::repositionPorts(
 
     width  += m_nameLabel->fontMetrics().width(m_name);
     height += m_nameLabel->fontMetrics().height() + s_horizontalMargin;
+    m_nameLabel->setMinimumWidth(width);
+    m_nameLabel->setMaximumWidth(width);
 
     foreach (const PortPair* port, m_ports)
     {
@@ -186,7 +189,7 @@ void Node::repositionPorts(
     path.addRect(-width / 2, -height / 2, width, height);
     setPath(path);
     int y = s_verticalMargin - height / 2;
-    m_nameLabel->move(-m_nameLabel->fontMetrics().width(m_nameLabel->text()) / 2 - s_horizontalMargin, y);
+    m_nameLabel->move(-m_nameLabel->fontMetrics().width(m_name) / 2 - s_horizontalMargin, y);
 
     y += m_nameLabel->fontMetrics().height() * 2 + s_textSpacing * 4;
 
@@ -315,6 +318,7 @@ void Node::loadFromXml(
         }
         n = n.nextSibling();
     }
+    repositionPorts();
 }
 
 bool Node::hasAncestor(
