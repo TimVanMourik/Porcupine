@@ -1,23 +1,38 @@
 <node>
-    <title name="Simulate frequencies">
+    <category name="FSL"/>
+    <title name="mcflirt">
         <code>
-            <language name="MATLAB">
-                <comment text="Simulate frequencies for a given number of trials"/>
-                <argument name="ft_freqsimulation"/>
+            <language name="Bash">
+                <comment text="Registers your data"/>
+                <argument name="flirt"/>
             </language>
         </code>
     </title>
-    <input name="Number of trials">
+    <input-output name="Input volume">
         <code>
-            <language name="MATLAB">
-                <argument name="numtrl"/>
+            <language name="Bash">
+                <argument name="-in"/>
             </language>
         </code>
-    </input>
-    <output name="Output file">
+    </input-output>
+    <input-output name="Reference volume">
         <code>
-            <language name="MATLAB">
-                <argument name="outputfile"/>
+            <language name="Bash">
+                <argument name="-reffile"/>
+            </language>
+        </code>
+    </input-output>
+    <output name="Output volume">
+        <code>
+            <language name="Bash">
+                <argument name="-out"/>
+            </language>
+        </code>
+    </output>
+    <output name="Output matrix">
+        <code>
+            <language name="Bash">
+                <argument name="-omat"/>
             </language>
         </code>
     </output>

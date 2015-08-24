@@ -1,24 +1,32 @@
 <node>
-    <title name="Simulate frequencies">
+    <category name="FSL"/>
+    <title name="bet2">
         <code>
-            <language name="MATLAB">
-                <comment text="Simulate frequencies for a given number of trials"/>
-                <argument name="ft_freqsimulation"/>
+            <language name="Bash">
+                <comment text="Extracts a brain"/>
+                <argument name="bet2"/>
             </language>
         </code>
     </title>
-    <input name="Number of trials">
+    <input-output name="Input volume">
         <code>
-            <language name="MATLAB">
-                <argument name="numtrl"/>
+            <language name="Bash">
+                <argument name=""/>
             </language>
         </code>
-    </input>
-    <output name="Output file">
+    </input-output>
+    <input-output name="Output volume">
         <code>
-            <language name="MATLAB">
-                <argument name="outputfile"/>
+            <language name="Bash">
+                <argument name=""/>
             </language>
         </code>
-    </output>
+    </input-output>
+    <input-output name="Fraction">
+        <code>
+            <language name="Bash">
+                <argument name="f"/>
+            </language>
+        </code>
+    </input-output>
 </node>

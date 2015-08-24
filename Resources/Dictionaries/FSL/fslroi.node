@@ -1,23 +1,38 @@
 <node>
-    <title name="Simulate frequencies">
+    <category name="FSL"/>
+    <title name="fslroi">
         <code>
-            <language name="MATLAB">
-                <comment text="Simulate frequencies for a given number of trials"/>
-                <argument name="ft_freqsimulation"/>
+            <language name="Bash">
+                <comment text="Create ROI"/>
+                <argument name="fslroi"/>
             </language>
         </code>
     </title>
-    <input name="Number of trials">
+    <input-output name="Input volume">
         <code>
-            <language name="MATLAB">
-                <argument name="numtrl"/>
+            <language name="Bash">
+                <argument name=""/>
             </language>
         </code>
-    </input>
-    <output name="Output file">
+    </input-output>
+    <input-output name="Output volume">
         <code>
-            <language name="MATLAB">
-                <argument name="outputfile"/>
+            <language name="Bash">
+                <argument name=""/>
+            </language>
+        </code>
+    </input-output>
+    <output name="Drop">
+        <code>
+            <language name="Bash">
+                <argument name=""/>
+            </language>
+        </code>
+    </output>
+    <output name="Keep">
+        <code>
+            <language name="Bash">
+                <argument name=""/>
             </language>
         </code>
     </output>

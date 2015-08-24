@@ -254,7 +254,11 @@ void MainWindow::saveFileToXml()
 void MainWindow::openFile()
 {
     QDomDocument document;
-    QFile file(QFileDialog::getOpenFileName());
+    #ifdef DARWIN // on Mac, the file dialog does not want to close with the native file dialog
+        QFile file(QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("Pipelines (*.pipe)"), 0, QFileDialog::DontUseNativeDialog));
+    #elif
+        QFile file(QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("Pipelines (*.pipe)"), 0));
+    #endif
     QFileInfo fileInfo(file.fileName());
     QString filename(fileInfo.fileName());
     QCoreApplication::processEvents();

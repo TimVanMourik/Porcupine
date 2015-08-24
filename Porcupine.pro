@@ -92,7 +92,9 @@ RESOURCES   =       $$ROOT/Resources/schema.qrc
 win32:RC_ICONS +=   $$ROOT/Resources/Icon/porcupine.ico
 #linux-g++:
 #linux-g++-64:
-#macx:
+macx:{
+DEFINES +=          DARWIN
+}
 
 #DISTFILES += \
 #                    QML/PieMenu.qml
