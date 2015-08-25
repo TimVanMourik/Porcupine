@@ -39,17 +39,7 @@ QString BashGenerator::itemToCode(
     code.append(nodeSetting->getTitle().getArgument("Bash"));
 
 //    //add input
-    foreach (Argument argument, nodeSetting->getInput())
-    {
-        code.append(argumentToCode(argument, _item));
-    }
-    //add input-output
-    foreach (Argument argument, nodeSetting->getInOut())
-    {
-        code.append(argumentToCode(argument, _item));
-    }
-    //add output
-    foreach (Argument argument, nodeSetting->getOutput())
+    foreach (Argument argument, nodeSetting->getPorts())
     {
         code.append(argumentToCode(argument, _item));
     }

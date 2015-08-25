@@ -1,8 +1,10 @@
 #include "Argument.hpp"
 
 Argument::Argument(
-        const QString& _argumentName
+        const QString& _argumentName,
+        FieldType _type
         ) :
+    m_portType(_type),
     m_argumentName(_argumentName)
 {
 }
@@ -14,10 +16,23 @@ void Argument::setName(
     m_argumentName = _name;
 }
 
+void Argument::setType(
+        const FieldType& _type
+        )
+{
+    m_portType = _type;
+}
+
 const QString& Argument::getName(
         ) const
 {
     return m_argumentName;
+}
+
+const Argument::FieldType& Argument::getType(
+        ) const
+{
+    return m_portType;
 }
 
 QString Argument::getArgument(

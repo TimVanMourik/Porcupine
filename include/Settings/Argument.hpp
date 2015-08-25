@@ -10,16 +10,31 @@ class DataType;
 class Argument
 {
 public:
+    enum FieldType
+    {
+        NONE = 0,
+        INPUT = 1,
+        OUTPUT = 2,
+        INOUT = 3
+    };
     //
     Argument(
-            const QString& _argumentName = QString()
+            const QString& _argumentName = QString(),
+            FieldType _type = NONE
             );
     //
     void setName(
             const QString& _name
             );
     //
+    void setType(
+            const FieldType& _type
+            );
+    //
     const QString& getName(
+            ) const;
+    //
+    const FieldType& getType(
             ) const;
     //
     QString getArgument(
@@ -43,6 +58,8 @@ public:
 //            ) const;
 
 private:
+    //
+    FieldType m_portType;
     //
     QString m_argumentName;
     //

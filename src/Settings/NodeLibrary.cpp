@@ -107,9 +107,7 @@ QString NodeLibrary::addNodeSetting(
         {
 //            std::cerr << rootTag.toStdString() << "\n"; //Should print 'node'
             Argument title;
-            QVector<Argument> inputNodes;
-            QVector<Argument> inOutNodes;
-            QVector<Argument> outputNodes;
+            QVector<Argument> nodes;
             QDomNode node = docElem.firstChild();
             QStringList category;
             while(!node.isNull())
@@ -143,7 +141,7 @@ QString NodeLibrary::addNodeSetting(
                     }
                     else if(node.nodeName().compare("input") == 0)
                     {
-                        Argument codeArgument(node.attributes().namedItem("name").nodeValue());
+                        Argument codeArgument(node.attributes().namedItem("name").nodeValue(), Argument::FieldType::INPUT);
                         // if there is a code block
                         QDomNode code = node.firstChild();
                         if(!code.isNull() && code.nodeName().compare("code") == 0)
@@ -154,11 +152,11 @@ QString NodeLibrary::addNodeSetting(
                             parseCodeBlock(code, language, argument, comment);
                             codeArgument.addCode(language, argument, comment);
                         }
-                        inputNodes.append(codeArgument);
+                        nodes.append(codeArgument);
                     }
                     else if(node.nodeName().compare("input-output") == 0)
                     {
-                        Argument codeArgument(node.attributes().namedItem("name").nodeValue());
+                        Argument codeArgument(node.attributes().namedItem("name").nodeValue(), Argument::FieldType::INOUT);
                         // if there is a code block
                         QDomNode code = node.firstChild();
                         if(!code.isNull() && code.nodeName().compare("code") == 0)
@@ -169,11 +167,11 @@ QString NodeLibrary::addNodeSetting(
                             parseCodeBlock(code, language, argument, comment);
                             codeArgument.addCode(language, argument, comment);
                         }
-                        inOutNodes.append(codeArgument);
+                        nodes.append(codeArgument);
                     }
                     else if(node.nodeName().compare("output") == 0)
                     {
-                        Argument codeArgument(node.attributes().namedItem("name").nodeValue());
+                        Argument codeArgument(node.attributes().namedItem("name").nodeValue(), Argument::FieldType::OUTPUT);
                         // if there is a code block
                         QDomNode code = node.firstChild();
                         if(!code.isNull() && code.nodeName().compare("code") == 0)
@@ -184,13 +182,13 @@ QString NodeLibrary::addNodeSetting(
                             parseCodeBlock(code, language, argument, comment);
                             codeArgument.addCode(language, argument, comment);
                         }
-                        outputNodes.append(codeArgument);
+                        nodes.append(codeArgument);
                     }
                     node = node.nextSibling();
                 }
             }
 //            std::cout << title.toStdString() << std::endl;
-            NodeSetting* newNode = new NodeSetting(title, inputNodes, inOutNodes, outputNodes);
+            NodeSetting* newNode = new NodeSetting(title, nodes);
             newNode->setCategory(category);
             m_nodeSettings[title.getName()] = newNode;
             m_nodeNames << title.getName();

@@ -76,66 +76,30 @@ void Node::loadFromNodeSetting(
     m_name = m_setting->getName();
     m_nameLabel->setText(m_name);
 
-    addInputPorts(_setting->getInput());
-    addInOutPorts(_setting->getInOut());
-    addOutputPorts(_setting->getOutput());
+    addPorts(_setting->getPorts());
+
     repositionPorts();
 }
 
-void Node::addInputPorts(
-        const QVector<Argument>& names
+void Node::addPorts(
+        const QVector<Argument>& ports
         )
 {
-    foreach(const Argument& argument, names)
+    foreach(const Argument& argument, ports)
     {
-        addInputPort(argument);
+        addPortPair(argument);
     }
 }
 
-void Node::addInOutPorts(
-        const QVector<Argument>& names
-        )
-{
-    foreach(const Argument& argument, names)
-    {
-        addInOutPort(argument);
-    }
-}
-
-void Node::addOutputPorts(
-        const QVector<Argument>& names
-        )
-{
-    foreach(const Argument& argument, names)
-    {
-        addOutputPort(argument);
-    }
-}
-
-void Node::addInputPort(
+void Node::addPort(
         const Argument& _argument
         )
 {
-    addPortPair(_argument, "i");
-}
-
-void Node::addInOutPort(
-        const Argument& _argument
-        )
-{
-    addPortPair(_argument, "io");
-}
-
-void Node::addOutputPort(
-        const Argument& _argument
-        )
-{
-    addPortPair(_argument, "o");
+    addPortPair(_argument);
 }
 
 void Node::addPortPair(
-        const Argument& _argument,
-        const QString& _type
+        const Argument& _argument
         )
 {
     Preferences& preferences = Preferences::getInstance();
@@ -143,18 +107,20 @@ void Node::addPortPair(
     pair->setArgument(_argument);
     pair->setDefaultTextColor(preferences.getPortTextColor());
 
-    if(_type.compare("i") == 0)
+    switch(_argument.getType())
     {
-        pair->createInputPort();
-    }
-    else if(_type.compare("io") == 0)
-    {
-        pair->createInputPort();
-        pair->createOutputPort();
-    }
-    else if(_type.compare("o") == 0)
-    {
-        pair->createOutputPort();
+        case Argument::FieldType::INPUT :
+            pair->createInputPort();
+            break;
+        case Argument::FieldType::INOUT :
+            pair->createInputPort();
+            pair->createOutputPort();
+            break;
+        case Argument::FieldType::OUTPUT :
+            pair->createOutputPort();
+            break;
+        case Argument::FieldType::NONE :
+            break;
     }
     m_ports.append(pair);
 //    repositionPorts();

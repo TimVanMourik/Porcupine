@@ -256,7 +256,7 @@ void MainWindow::openFile()
     QDomDocument document;
     #ifdef DARWIN // on Mac, the file dialog does not want to close with the native file dialog
         QFile file(QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("Pipelines (*.pipe)"), 0, QFileDialog::DontUseNativeDialog));
-    #elif
+    #else
         QFile file(QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("Pipelines (*.pipe)"), 0));
     #endif
     QFileInfo fileInfo(file.fileName());

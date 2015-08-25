@@ -37,19 +37,9 @@ QString MatlabGenerator::itemToCode(
     code.append(m_configurationVariable).append(" = [];\n");
 
     //add input
-    foreach (Argument argument, nodeSetting->getInput())
+    foreach (Argument argument, nodeSetting->getPorts())
     {
 //        _item->getFileName()
-        code.append(argumentToCode(argument, _item));
-    }
-    //add input-output
-    foreach (Argument argument, nodeSetting->getInOut())
-    {
-        code.append(argumentToCode(argument, _item));
-    }
-    //add output
-    foreach (Argument argument, nodeSetting->getOutput())
-    {
         code.append(argumentToCode(argument, _item));
     }
 
