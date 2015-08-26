@@ -1,14 +1,30 @@
 <node>
-    <category name="FSL"/>
-    <title name="bet2">
+    <category name="FSL">
+        <category name="fslmaths"/>
+    </category>
+    <title name="intensity normalisation">
         <code>
             <language name="Bash">
-                <comment text="Extract a brain"/>
-                <argument name="bet2"/>
+                <comment text="Bandpass temporal filter"/>
+                <argument name="fslmaths"/>
             </language>
         </code>
     </title>
     <input name="Input file">
+        <code>
+            <language name="Bash">
+                <argument name=""/>
+            </language>
+        </code>
+    </input>
+    <static name="-ing">
+        <code>
+            <language name="Bash">
+                <argument name="-ing"/>
+            </language>
+        </code>
+    </static>
+    <input name="global mean">
         <code>
             <language name="Bash">
                 <argument name=""/>
@@ -22,11 +38,4 @@
             </language>
         </code>
     </output>
-    <input name="Options">
-        <code>
-            <language name="Bash">
-                <argument name=""/>
-            </language>
-        </code>
-    </input>
 </node>

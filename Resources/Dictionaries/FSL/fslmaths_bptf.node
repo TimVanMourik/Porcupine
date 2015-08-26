@@ -1,45 +1,47 @@
 <node>
-    <category name="FSL"/>
-    <title name="applywarp">
+    <category name="FSL">
+        <category name="fslmaths"/>
+    </category>
+    <title name="temporal filter">
         <code>
             <language name="Bash">
-                <comment text="Apply a warp field"/>
-                <argument name="applywarp"/>
+                <comment text="Bandpass temporal filter"/>
+                <argument name="fslmaths"/>
             </language>
         </code>
     </title>
     <input name="Input file">
         <code>
             <language name="Bash">
-                <argument name="-in="/>
+                <argument name=""/>
             </language>
         </code>
     </input>
-    <input name="Reference file">
+    <static name="-bptf">
         <code>
             <language name="Bash">
-                <argument name="--ref="/>
+                <argument name="-bptf"/>
+            </language>
+        </code>
+    </static>
+    <input name="Low cut-off">
+        <code>
+            <language name="Bash">
+                <argument name=""/>
             </language>
         </code>
     </input>
-    <input name="Warp file">
+    <input name="High cut-off">
         <code>
             <language name="Bash">
-                <argument name="--warp="/>
-            </language>
-        </code>
-    </input>
-    <input name="Post matrix file">
-        <code>
-            <language name="Bash">
-                <argument name="--postmat="/>
+                <argument name=""/>
             </language>
         </code>
     </input>
     <output name="Output file">
         <code>
             <language name="Bash">
-                <argument name="--out="/>
+                <argument name=""/>
             </language>
         </code>
     </output>

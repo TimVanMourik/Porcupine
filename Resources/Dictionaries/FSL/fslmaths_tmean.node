@@ -1,39 +1,34 @@
 <node>
-    <category name="FSL"/>
-    <title name="fslroi">
+    <category name="FSL">
+        <category name="fslmaths"/>
+    </category>
+    <title name="temporal mean">
         <code>
             <language name="Bash">
-                <comment text="Create ROI"/>
-                <argument name="fslroi"/>
+                <comment text="Compute temporal mean"/>
+                <argument name="fslmaths"/>
             </language>
         </code>
     </title>
-    <input name="Input volume">
+    <input name="Input file">
         <code>
             <language name="Bash">
                 <argument name=""/>
             </language>
         </code>
     </input>
-    <output name="Output volume">
+    <static name="-Tmean">
+        <code>
+            <language name="Bash">
+                <argument name="-Tmean"/>
+            </language>
+        </code>
+    </static>
+    <output name="Output file">
         <code>
             <language name="Bash">
                 <argument name=""/>
             </language>
         </code>
     </output>
-    <input name="Drop">
-        <code>
-            <language name="Bash">
-                <argument name=""/>
-            </language>
-        </code>
-    </input>
-    <input name="Keep">
-        <code>
-            <language name="Bash">
-                <argument name=""/>
-            </language>
-        </code>
-    </input>
 </node>

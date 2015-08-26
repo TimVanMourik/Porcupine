@@ -1,10 +1,12 @@
 <node>
-    <category name="FSL"/>
-    <title name="bet2">
+    <category name="FSL">
+        <category name="fslmaths"/>
+    </category>
+    <title name="intensity normalisation">
         <code>
             <language name="Bash">
-                <comment text="Extract a brain"/>
-                <argument name="bet2"/>
+                <comment text="Bandpass temporal filter"/>
+                <argument name="fslmaths"/>
             </language>
         </code>
     </title>
@@ -15,6 +17,13 @@
             </language>
         </code>
     </input>
+    <input name="Threshold">
+        <code>
+            <language name="Bash">
+                <argument name="-thr "/>
+            </language>
+        </code>
+    </input>
     <output name="Output file">
         <code>
             <language name="Bash">
@@ -22,11 +31,4 @@
             </language>
         </code>
     </output>
-    <input name="Options">
-        <code>
-            <language name="Bash">
-                <argument name=""/>
-            </language>
-        </code>
-    </input>
 </node>

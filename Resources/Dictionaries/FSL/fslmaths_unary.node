@@ -1,14 +1,23 @@
 <node>
-    <category name="FSL"/>
-    <title name="bet2">
+    <category name="FSL">
+        <category name="fslmaths"/>
+    </category>
+    <title name="unary operations">
         <code>
             <language name="Bash">
-                <comment text="Extract a brain"/>
-                <argument name="bet2"/>
+                <comment text="Perform some unary computation"/>
+                <argument name="fslmaths"/>
             </language>
         </code>
     </title>
     <input name="Input file">
+        <code>
+            <language name="Bash">
+                <argument name=""/>
+            </language>
+        </code>
+    </input>
+    <input name="Operations">
         <code>
             <language name="Bash">
                 <argument name=""/>
@@ -22,11 +31,4 @@
             </language>
         </code>
     </output>
-    <input name="Options">
-        <code>
-            <language name="Bash">
-                <argument name=""/>
-            </language>
-        </code>
-    </input>
 </node>

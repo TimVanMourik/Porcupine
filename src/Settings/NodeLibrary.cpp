@@ -127,60 +127,65 @@ QString NodeLibrary::addNodeSetting(
                     else if(node.nodeName().compare("title") == 0)
                     {
                         title.setName(node.attributes().namedItem("name").nodeValue());
-                        ///@todo add 'category' atribute
                         // if there is a code block
                         QDomNode code = node.firstChild();
                         if(!code.isNull() && code.nodeName().compare("code") == 0)
                         {
-                            QString language;
-                            QString argument;
-                            QString comment;
-                            parseCodeBlock(code, language, argument, comment);
-                            title.addCode(language, argument, comment);
+                            QDomNode codeBlock = code.firstChild();
+                            while(!codeBlock.isNull())
+                            {
+                                if(codeBlock.nodeName().compare("language") == 0)
+                                {
+                                    QString language, argument, comment;
+                                    parseCodeBlock(codeBlock, language, argument, comment);
+                                    title.addCode(language, argument, comment);
+                                }
+                                codeBlock = codeBlock.nextSibling();
+                            }
                         }
                     }
-                    else if(node.nodeName().compare("input") == 0)
+                    else
                     {
-                        Argument codeArgument(node.attributes().namedItem("name").nodeValue(), Argument::FieldType::INPUT);
-                        // if there is a code block
-                        QDomNode code = node.firstChild();
-                        if(!code.isNull() && code.nodeName().compare("code") == 0)
+                        Argument codeArgument(node.attributes().namedItem("name").nodeValue());
+                        if(node.nodeName().compare("title") == 0)
                         {
-                            QString language;
-                            QString argument;
-                            QString comment;
-                            parseCodeBlock(code, language, argument, comment);
-                            codeArgument.addCode(language, argument, comment);
+                            codeArgument.setType(Argument::FieldType::NONE);
                         }
-                        nodes.append(codeArgument);
-                    }
-                    else if(node.nodeName().compare("input-output") == 0)
-                    {
-                        Argument codeArgument(node.attributes().namedItem("name").nodeValue(), Argument::FieldType::INOUT);
-                        // if there is a code block
-                        QDomNode code = node.firstChild();
-                        if(!code.isNull() && code.nodeName().compare("code") == 0)
+                        else if(node.nodeName().compare("input") == 0)
                         {
-                            QString language;
-                            QString argument;
-                            QString comment;
-                            parseCodeBlock(code, language, argument, comment);
-                            codeArgument.addCode(language, argument, comment);
+                            codeArgument.setType(Argument::FieldType::INPUT);
                         }
-                        nodes.append(codeArgument);
-                    }
-                    else if(node.nodeName().compare("output") == 0)
-                    {
-                        Argument codeArgument(node.attributes().namedItem("name").nodeValue(), Argument::FieldType::OUTPUT);
+                        else if(node.nodeName().compare("input-output") == 0)
+                        {
+                            codeArgument.setType(Argument::FieldType::INOUT);
+                        }
+                        else if(node.nodeName().compare("output") == 0)
+                        {
+                            codeArgument.setType(Argument::FieldType::OUTPUT);
+                        }
+                        else if(node.nodeName().compare("none") == 0)
+                        {
+                            codeArgument.setType(Argument::FieldType::NONE);
+                        }
+                        else ///@todo think of how to handle a block with a different name
+                        {
+                            codeArgument.setType(Argument::FieldType::NONE);
+                        }
                         // if there is a code block
                         QDomNode code = node.firstChild();
                         if(!code.isNull() && code.nodeName().compare("code") == 0)
                         {
-                            QString language;
-                            QString argument;
-                            QString comment;
-                            parseCodeBlock(code, language, argument, comment);
-                            codeArgument.addCode(language, argument, comment);
+                            QDomNode codeBlock = code.firstChild();
+                            while(!codeBlock.isNull())
+                            {
+                                if(codeBlock.nodeName().compare("language") == 0)
+                                {
+                                    QString language, argument, comment;
+                                    parseCodeBlock(codeBlock, language, argument, comment);
+                                    codeArgument.addCode(language, argument, comment);
+                                }
+                                codeBlock = codeBlock.nextSibling();
+                            }
                         }
                         nodes.append(codeArgument);
                     }
@@ -208,33 +213,25 @@ QString NodeLibrary::addNodeSetting(
 }
 
 void NodeLibrary::parseCodeBlock(
-        const QDomNode& _code,
+        const QDomNode& _codeBlock,
         QString& o_language,
         QString& o_argument,
         QString& o_comment
         )
 {
-    QDomNode codeBlock = _code.firstChild();
-    while(!codeBlock.isNull())
+    o_language = _codeBlock.attributes().namedItem("name").nodeValue();
+    QDomNode argumentBlock = _codeBlock.firstChild();
+    while(!argumentBlock.isNull())
     {
-        if(codeBlock.nodeName().compare("language") == 0)
+        if(argumentBlock.nodeName().compare("argument") == 0)
         {
-            o_language = codeBlock.attributes().namedItem("name").nodeValue();
-            QDomNode argumentBlock = codeBlock.firstChild();
-            while(!argumentBlock.isNull())
-            {
-                if(argumentBlock.nodeName().compare("argument") == 0)
-                {
-                    o_argument = argumentBlock.attributes().namedItem("name").nodeValue();
-                }
-                else if(argumentBlock.nodeName().compare("comment") == 0)
-                {
-                    o_comment = argumentBlock.attributes().namedItem("text").nodeValue();
-                }
-                argumentBlock = argumentBlock.nextSibling();
-            }
+            o_argument = argumentBlock.attributes().namedItem("name").nodeValue();
         }
-        codeBlock = codeBlock.nextSibling();
+        else if(argumentBlock.nodeName().compare("comment") == 0)
+        {
+            o_comment = argumentBlock.attributes().namedItem("text").nodeValue();
+        }
+        argumentBlock = argumentBlock.nextSibling();
     }
 }
 

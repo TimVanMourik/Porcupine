@@ -1,39 +1,41 @@
 <node>
-    <category name="FSL"/>
-    <title name="mcflirt">
+    <category name="FSL">
+        <category name="fslmaths"/>
+    </category>
+    <title name="multiply">
         <code>
             <language name="Bash">
-                <comment text="Motion correction"/>
-                <argument name="flirt"/>
+                <comment text="Bandpass temporal filter"/>
+                <argument name="fslmaths"/>
             </language>
         </code>
     </title>
-    <input name="Input file">
-        <code>
-            <language name="Bash">
-                <argument name="-in "/>
-            </language>
-        </code>
-    </input>
-    <input name="Reference file">
-        <code>
-            <language name="Bash">
-                <argument name="-reffile "/>
-            </language>
-        </code>
-    </input>
-    <output name="Output file">
-        <code>
-            <language name="Bash">
-                <argument name="-out "/>
-            </language>
-        </code>
-    </output>
-    <input name="Additional arguments">
+    <input name="Input file 1">
         <code>
             <language name="Bash">
                 <argument name=""/>
             </language>
         </code>
     </input>
+    <static name="-Tmean">
+        <code>
+            <language name="Bash">
+                <argument name="-mul"/>
+            </language>
+        </code>
+    </static>
+    <input name="Input file 2">
+        <code>
+            <language name="Bash">
+                <argument name=""/>
+            </language>
+        </code>
+    </input>
+    <output name="Output file">
+        <code>
+            <language name="Bash">
+                <argument name=""/>
+            </language>
+        </code>
+    </output>
 </node>

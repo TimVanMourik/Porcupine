@@ -1,52 +1,54 @@
 <node>
-    <category name="FSL"/>
-    <title name="fslmaths">
+    <category name="FSL">
+        <category name="fslmaths"/>
+    </category>
+    <title name="smoothing (Gaussian)">
         <code>
             <language name="Bash">
-                <comment text="Perform some computation"/>
+                <comment text="Smooth data"/>
                 <argument name="fslmaths"/>
             </language>
         </code>
     </title>
-    <input name="Operation">
+    <input name="Input file">
         <code>
             <language name="Bash">
                 <argument name=""/>
             </language>
         </code>
     </input>
-    <input name="Argument 1">
+    <static name="-kernel">
+        <code>
+            <language name="Bash">
+                <argument name="-kernel gauss"/>
+            </language>
+        </code>
+    </static>
+    <input name="FWHM">
         <code>
             <language name="Bash">
                 <argument name=""/>
             </language>
         </code>
     </input>
-    <input name="Argument 2">
+    <input name="Mask">
+        <code>
+            <language name="Bash">
+                <argument name="-mas "/>
+            </language>
+        </code>
+    </input>
+    <input name="Filtering option">
         <code>
             <language name="Bash">
                 <argument name=""/>
             </language>
         </code>
     </input>
-    <input name="Argument 3">
+    <output name="Output file">
         <code>
             <language name="Bash">
                 <argument name=""/>
-            </language>
-        </code>
-    </input>
-    <input name="Additional parameters">
-        <code>
-            <language name="Bash">
-                <argument name=""/>
-            </language>
-        </code>
-    </input>
-    <output name="Output volume">
-        <code>
-            <language name="Bash">
-                <argument name="-out"/>
             </language>
         </code>
     </output>

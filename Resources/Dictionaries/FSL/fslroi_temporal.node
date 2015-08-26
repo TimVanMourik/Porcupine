@@ -1,10 +1,12 @@
 <node>
-    <category name="FSL"/>
-    <title name="bet2">
+    <category name="FSL">
+        <category name="fslroi"/>
+    </category>
+    <title name="fslroi (temporal)">
         <code>
             <language name="Bash">
-                <comment text="Extract a brain"/>
-                <argument name="bet2"/>
+                <comment text="Create ROI"/>
+                <argument name="fslroi"/>
             </language>
         </code>
     </title>
@@ -22,7 +24,14 @@
             </language>
         </code>
     </output>
-    <input name="Options">
+    <input name="T min">
+        <code>
+            <language name="Bash">
+                <argument name=""/>
+            </language>
+        </code>
+    </input>
+    <input name="T size">
         <code>
             <language name="Bash">
                 <argument name=""/>

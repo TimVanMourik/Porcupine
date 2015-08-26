@@ -1,6 +1,8 @@
 <node>
-    <category name="FSL"/>
-    <title name="flirt">
+    <category name="FSL">
+        <category name="flirt"/>
+    </category>
+    <title name="flirt (registration)">
         <code>
             <language name="Bash">
                 <comment text="Registers your data"/>
@@ -8,31 +10,31 @@
             </language>
         </code>
     </title>
-    <input name="Input volume">
+    <input name="Input file">
         <code>
             <language name="Bash">
-                <argument name="-in"/>
+                <argument name="-in "/>
             </language>
         </code>
     </input>
-    <input name="Reference volume">
+    <input name="Reference file">
         <code>
             <language name="Bash">
-                <argument name="-ref"/>
+                <argument name="-ref "/>
             </language>
         </code>
     </input>
-    <output name="Output volume">
+    <output name="Output file">
         <code>
             <language name="Bash">
-                <argument name="-out"/>
+                <argument name="-out "/>
             </language>
         </code>
     </output>
     <output name="Output matrix">
         <code>
             <language name="Bash">
-                <argument name="-omat"/>
+                <argument name="-omat "/>
             </language>
         </code>
     </output>
