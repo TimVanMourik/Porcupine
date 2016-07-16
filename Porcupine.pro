@@ -4,6 +4,7 @@
 #
 #-------------------------------------------------
 
+
 ROOT=$$_PRO_FILE_PWD_
 
 QT +=               core gui xmlpatterns xml quick
@@ -15,10 +16,14 @@ greaterThan(QT_MAJOR_VERSION, 4):{
 CONFIG += static
 
 macx:{
+    QMAKE_MAC_SDK = macosx10.11
+    QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.11
     QMAKE_CXXFLAGS += -stdlib=libc++
     QMAKE_CXXFLAGS += -std=c++11
-    QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.9
+
+    DEFINES +=          DARWIN
 }
+
 
 QMAKE_CXXFLAGS +=   -std=gnu++0x
 
@@ -92,9 +97,7 @@ RESOURCES   =       $$ROOT/Resources/schema.qrc
 win32:RC_ICONS +=   $$ROOT/Resources/Icon/porcupine.ico
 #linux-g++:
 #linux-g++-64:
-macx:{
-DEFINES +=          DARWIN
-}
+
 
 #DISTFILES += \
 #                    QML/PieMenu.qml

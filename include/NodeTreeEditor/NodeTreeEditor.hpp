@@ -14,13 +14,13 @@ class QDomDocument;
 class QDomElement;
 class QVBoxLayout;
 
-class NodeTreeEditor : public QScrollArea
+class NodeTreeEditor : public QWidget
 {
     Q_OBJECT
 public:
     //
     NodeTreeEditor(
-            QWidget* _parent
+            QWidget* _parent = 0
             );
     //
     void addNode(

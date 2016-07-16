@@ -17,6 +17,7 @@ class QVBoxLayout;
 
 #include "Hider.hpp"
 
+#include <QPushButton>
 class NodeTreeItem : public QFrame
 {
     Q_OBJECT
@@ -92,6 +93,8 @@ private:
     QLabel* m_numberLabel;
     //
     unsigned int m_number;
+    //
+    bool m_isSelected;
 };
 
 #endif // NODETREEITEM_H

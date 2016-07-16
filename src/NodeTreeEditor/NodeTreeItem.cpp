@@ -24,14 +24,16 @@ NodeTreeItem::NodeTreeItem(
     m_node(_node),
     m_startPosition(QPoint()),
     m_numberLabel(0),
-    m_number(0)
+    m_number(0),
+    m_isSelected(false)
 {
     QVBoxLayout* mainLayout = new QVBoxLayout(this);
-    QWidget* headerWidget = new QWidget();
+
+    QWidget* headerBlock = new QWidget();
     QWidget* portBlock = new QWidget();
-    mainLayout->addWidget(headerWidget);
+    mainLayout->addWidget(headerBlock);
     mainLayout->addWidget(portBlock);
-    QHBoxLayout* headerLayout = new QHBoxLayout(headerWidget);
+    QHBoxLayout* headerLayout = new QHBoxLayout(headerBlock);
     QFormLayout* portBlockLayout = new QFormLayout(portBlock);
 
     setFrameShadow(QFrame::Raised);
@@ -67,10 +69,8 @@ NodeTreeItem::NodeTreeItem(
     portBlockLayout->setFieldGrowthPolicy(QFormLayout::FieldsStayAtSizeHint);
     portBlockLayout->setFormAlignment(Qt::AlignLeft | Qt::AlignTop);
     portBlockLayout->setLabelAlignment(Qt::AlignHCenter);
-    portBlock->setLayout(portBlockLayout);
     portBlock->setVisible(false);
 
-    /// @todo Make two colums, one for the port name, one for the file name
     foreach(PortPair* pair, _node->getPorts())
     {
         QLineEdit* fileName = new QLineEdit();
@@ -90,6 +90,16 @@ NodeTreeItem::NodeTreeItem(
     }
     connect(visibilityButton, SIGNAL(toggled(bool)), portBlock, SLOT(setVisible(bool)));
     connect(&m_node->getAntenna(), SIGNAL(nodeSelected(bool)), this, SLOT(setSelected(bool)));
+
+    this->setMinimumHeight(200);
+    this->setMaximumHeight(200);
+//    headerBlock->adjustSize();
+//    std::cerr << "width: " << headerBlock->size().width() << ", height: " << headerBlock->size().height() << "\n";
+//    portBlock->adjustSize();
+//    std::cerr << "width: " << portBlock->size().width() << ", height: " << portBlock->size().height() << "\n";
+//    adjustSize();
+//    std::cerr << "width: " << this->size().width() << ", height: " << this->size().height() << "\n";
+
 }
 
 QString NodeTreeItem::getFileName(
@@ -157,6 +167,14 @@ void NodeTreeItem::mousePressEvent(
         QMouseEvent* _event
         )
 {
+//    if(m_isSelected)
+//    {
+//       setSelected(false);
+//    }
+//    else
+//    {
+//        setSelected(true);
+//    }
     raise();
 //    setWindowOpacity(0.5);
     if(_event->button() == Qt::LeftButton)
@@ -169,7 +187,6 @@ void NodeTreeItem::mouseMoveEvent(
         QMouseEvent* _event
         )
 {
-
     const QPoint delta = _event->globalPos() - m_startPosition;
     move(x(), y() + delta.y());
     m_startPosition = _event->globalPos();
@@ -197,6 +214,7 @@ void NodeTreeItem::setSelected(
         bool _isSelected
         )
 {
+    m_isSelected = _isSelected;
     if(_isSelected)
     {
         setObjectName("myObject");

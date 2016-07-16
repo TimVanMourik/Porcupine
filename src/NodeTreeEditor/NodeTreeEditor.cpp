@@ -9,18 +9,33 @@
 #include "NodeTreeItem.hpp"
 #include "NodeTreeEditor.hpp"
 
+#include <QPushButton>
+
+#include <QLabel>
 NodeTreeEditor::NodeTreeEditor(
         QWidget* _parent
         ) :
-    QScrollArea(_parent),
-    m_layout(new QVBoxLayout()),
+    QWidget(_parent),
+    m_layout(0),
     m_codeEditor(0)
 {
-    m_layout->setAlignment(Qt::AlignTop);
+    QVBoxLayout* layout = new QVBoxLayout(this);
+    QScrollArea* area = new QScrollArea;
+    layout->addWidget(area);
 
-    setFrameShadow(QFrame::Raised);
-    setFrameStyle(QFrame::StyledPanel);
-    setLayout(m_layout);
+    QWidget* contents = new QWidget;
+    m_layout = new QVBoxLayout(contents);
+    m_layout->setAlignment(Qt::AlignTop);
+//    for(unsigned int i = 0; i < 50; ++i)
+//    {
+//        QPushButton* button = new QPushButton(tr("Button%1").arg(i));
+//        m_layout->addWidget(button);
+//    }
+    area->setWidget(contents);
+
+    area->setFrameShadow(QFrame::Raised);
+    area->setFrameStyle(QFrame::StyledPanel);
+    area->setWidgetResizable(true);
 }
 
 void NodeTreeEditor::addNode(
@@ -29,9 +44,12 @@ void NodeTreeEditor::addNode(
 {
     m_nodes.append(_node);
     NodeTreeItem* item = new NodeTreeItem(_node, this);
+
     m_layout->addWidget(item);
     m_nodeList.append(item);
     item->setNumber(m_nodeList.length());
+
+
     connect(item, SIGNAL(moved(NodeTreeItem*)), this, SLOT(nodeMoved(NodeTreeItem*)));
 }
 

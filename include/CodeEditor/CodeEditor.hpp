@@ -12,7 +12,7 @@ class CodeEditor : public QTabWidget
 public:
     //
     CodeEditor(
-            QWidget* _parent
+            QWidget* _parent = 0
             );
     //
     void generateCode(

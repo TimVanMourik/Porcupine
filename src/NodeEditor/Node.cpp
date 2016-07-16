@@ -155,7 +155,7 @@ void Node::repositionPorts(
     path.addRect(-width / 2, -height / 2, width, height);
     setPath(path);
     int y = s_verticalMargin - height / 2;
-    m_nameLabel->move(-m_nameLabel->fontMetrics().width(m_name) / 2 - s_horizontalMargin, y);
+    m_nameLabel->move(-m_nameLabel->fontMetrics().width(m_name) / 2, y);
 
     y += m_nameLabel->fontMetrics().height() * 2 + s_textSpacing * 4;
 

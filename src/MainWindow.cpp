@@ -40,7 +40,7 @@ MainWindow::MainWindow(
     NodeLibrary& nodeLibrary = NodeLibrary::getInstance();
     Q_UNUSED(nodeLibrary);
 
-    //
+    // these widgets have to have a layout
     new QVBoxLayout(m_nodeTreeWidget);
     new QVBoxLayout(m_codeEditorWidget);
 
@@ -49,7 +49,7 @@ MainWindow::MainWindow(
     setCentralWidget(mainWidget);
 
     //Add the panels to the layout
-    QScrollArea* leftWidget = new QScrollArea(mainWidget);
+    QSplitter* leftWidget = new QSplitter(Qt::Vertical, mainWidget);
     QVBoxLayout* leftSide = new QVBoxLayout(leftWidget);
     QPushButton* button = new QPushButton("Generate code");
     leftSide->addWidget(m_nodeTreeWidget);
@@ -297,9 +297,9 @@ void MainWindow::newFile(
 //    Preferences& preferences = Preferences::getInstance();
 
     //Create a node editor
-    m_nodeEditors.append(new NodeEditor(this));
-    m_nodeTreeEditors.append(new NodeTreeEditor(this));
-    m_codeEditors.append(new CodeEditor(this));
+    m_nodeEditors.append(new NodeEditor(/*this*/));
+    m_nodeTreeEditors.append(new NodeTreeEditor(/*this*/));
+    m_codeEditors.append(new CodeEditor(/*this*/));
 
     //Add it to a new tab
     m_currentFileIndex = m_nodeEditors.length() - 1;
