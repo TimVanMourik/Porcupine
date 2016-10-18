@@ -40,12 +40,6 @@ void NodeEditor::install(
     show();
 }
 
-QGraphicsScene* NodeEditor::getScene(
-        ) const
-{
-    return scene();
-}
-
 bool NodeEditor::eventFilter(
         QObject* _object,
         QEvent* _event)
@@ -304,7 +298,6 @@ Node* NodeEditor::addNode(
 NodeEditor::~NodeEditor(
         )
 {
-    //The scene is created by MainWindow, but the pointer isn't saved. So it has to be destoyed here.
     delete scene();
     //For the weird instance that there is one and the editor is destroyed:
     delete m_newLink;

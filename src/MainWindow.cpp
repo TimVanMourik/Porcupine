@@ -51,20 +51,26 @@ MainWindow::MainWindow(
     //Add the panels to the layout
     QSplitter* leftWidget = new QSplitter(Qt::Vertical, mainWidget);
     QVBoxLayout* leftSide = new QVBoxLayout(leftWidget);
-    QPushButton* button = new QPushButton("Generate code");
     leftSide->addWidget(m_nodeTreeWidget);
-    leftSide->addWidget(button);
 
     QSplitter* rightWidget = new QSplitter(Qt::Vertical, mainWidget);
     QVBoxLayout* rightSide = new QVBoxLayout(rightWidget);
+
+    QWidget* codeEditor = new QWidget();
+    QHBoxLayout* codeLayout = new QHBoxLayout(codeEditor);
+    QPushButton* button = new QPushButton("Generate code");
+
+    codeLayout->addWidget(button);
+    codeLayout->addWidget(m_codeEditorWidget);
+
     rightSide->addWidget(m_nodeEditorWidget);
-    rightSide->addWidget(m_codeEditorWidget);
+    rightSide->addWidget(codeEditor);
 
     ///@todo stretch factors are a bit weird. Find out how to do this nicely
     rightWidget->setStretchFactor(0, 12);
     rightWidget->setStretchFactor(1, 1);
-    mainWidget->setStretchFactor(0, 1);
-    mainWidget->setStretchFactor(1, 4);
+    mainWidget->setStretchFactor( 0, 1);
+    mainWidget->setStretchFactor( 1, 4);
 
     createActions();
     createMenus();
@@ -89,7 +95,6 @@ void MainWindow::contextMenuEvent(
         )
 {
     Q_UNUSED(_event);
-//    QPieMenu
 //    QMenu menu(this);
 //    menu.addAction(m_cutAct);
 //    menu.addAction(m_copyAct);
@@ -297,9 +302,9 @@ void MainWindow::newFile(
 //    Preferences& preferences = Preferences::getInstance();
 
     //Create a node editor
-    m_nodeEditors.append(new NodeEditor(/*this*/));
-    m_nodeTreeEditors.append(new NodeTreeEditor(/*this*/));
-    m_codeEditors.append(new CodeEditor(/*this*/));
+    m_nodeEditors.append(new NodeEditor(this));
+    m_nodeTreeEditors.append(new NodeTreeEditor(this));
+    m_codeEditors.append(new CodeEditor(this));
 
     //Add it to a new tab
     m_currentFileIndex = m_nodeEditors.length() - 1;
@@ -311,10 +316,7 @@ void MainWindow::newFile(
     m_nodeTreeEditors[m_currentFileIndex]->setCodeEditor(m_codeEditors[m_currentFileIndex]);
 
     setFileAt(m_currentFileIndex);
-    //Install an empty scene in the tab
-//    QGraphicsScene* scene = new QGraphicsScene();
-//    scene->setBackgroundBrush(preferences.getSceneBackgroundBrush());
-    m_nodeEditors.last()->install(/*scene*/);
+    m_nodeEditors.last()->install();
 }
 
 void MainWindow::undoEdit(

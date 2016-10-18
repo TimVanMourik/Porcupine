@@ -44,9 +44,6 @@ public:
             QKeyEvent* _event
             );
     //
-    QGraphicsScene* getScene(
-            ) const;
-    //
     void saveLinksToXml(
             QDomElement& _xmlFile
             );

@@ -26,11 +26,6 @@ NodeTreeEditor::NodeTreeEditor(
     QWidget* contents = new QWidget;
     m_layout = new QVBoxLayout(contents);
     m_layout->setAlignment(Qt::AlignTop);
-//    for(unsigned int i = 0; i < 50; ++i)
-//    {
-//        QPushButton* button = new QPushButton(tr("Button%1").arg(i));
-//        m_layout->addWidget(button);
-//    }
     area->setWidget(contents);
 
     area->setFrameShadow(QFrame::Raised);

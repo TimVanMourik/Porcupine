@@ -90,16 +90,6 @@ NodeTreeItem::NodeTreeItem(
     }
     connect(visibilityButton, SIGNAL(toggled(bool)), portBlock, SLOT(setVisible(bool)));
     connect(&m_node->getAntenna(), SIGNAL(nodeSelected(bool)), this, SLOT(setSelected(bool)));
-
-    this->setMinimumHeight(200);
-    this->setMaximumHeight(200);
-//    headerBlock->adjustSize();
-//    std::cerr << "width: " << headerBlock->size().width() << ", height: " << headerBlock->size().height() << "\n";
-//    portBlock->adjustSize();
-//    std::cerr << "width: " << portBlock->size().width() << ", height: " << portBlock->size().height() << "\n";
-//    adjustSize();
-//    std::cerr << "width: " << this->size().width() << ", height: " << this->size().height() << "\n";
-
 }
 
 QString NodeTreeItem::getFileName(

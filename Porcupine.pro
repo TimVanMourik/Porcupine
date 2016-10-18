@@ -7,7 +7,7 @@
 
 ROOT=$$_PRO_FILE_PWD_
 
-QT +=               core gui xmlpatterns xml quick
+QT +=               core gui xmlpatterns xml
 
 greaterThan(QT_MAJOR_VERSION, 4):{
     QT +=           widgets
@@ -16,12 +16,12 @@ greaterThan(QT_MAJOR_VERSION, 4):{
 CONFIG += static
 
 macx:{
-    QMAKE_MAC_SDK = macosx10.11
-    QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.11
+    QMAKE_MAC_SDK = macosx10.12
+    QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.12
     QMAKE_CXXFLAGS += -stdlib=libc++
     QMAKE_CXXFLAGS += -std=c++11
 
-    DEFINES +=          DARWIN
+    DEFINES +=      DARWIN
 }
 
 
@@ -79,7 +79,6 @@ HEADERS  +=         $$ROOT/include/MainWindow.hpp \
                     $$ROOT/include/NodeEditor/NodeEditor.hpp \
                     $$ROOT/include/NodeEditor/Port.hpp \
                     $$ROOT/include/NodeEditor/PortPair.hpp \
-#                    $$ROOT/include/NodeTreeEditor/Hider.hpp \
                     $$ROOT/include/NodeTreeEditor/NodeTreeItem.hpp \
                     $$ROOT/include/NodeTreeEditor/NodeTreeEditor.hpp \
                     $$ROOT/include/CodeEditor/BashHighlighter.hpp \
@@ -92,12 +91,8 @@ HEADERS  +=         $$ROOT/include/MainWindow.hpp \
                     $$ROOT/include/CodeEditor/BashGenerator.hpp \
                     $$ROOT/include/CodeEditor/CodeGenerator.hpp
 
-RESOURCES   =       $$ROOT/Resources/schema.qrc
+RESOURCES =         $$ROOT/Resources/resources.qrc
 
 win32:RC_ICONS +=   $$ROOT/Resources/Icon/porcupine.ico
 #linux-g++:
 #linux-g++-64:
-
-
-#DISTFILES += \
-#                    QML/PieMenu.qml
