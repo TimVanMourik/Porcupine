@@ -30,11 +30,14 @@ NodeEditor::NodeEditor(
 void NodeEditor::install(
         )
 {
-    Preferences& preferences = Preferences::getInstance();
+//    Preferences& preferences = Preferences::getInstance();
+//    scene->setBackgroundBrush(preferences.getSceneBackgroundBrush());
     QGraphicsScene* scene = new QGraphicsScene();
-    scene->setBackgroundBrush(preferences.getSceneBackgroundBrush());
-    setScene(scene);
 
+    QImage image = QImage(":/Images/RepeatingBrains.png");
+    QBrush brush = QBrush(image);
+    scene->setBackgroundBrush(brush);
+    setScene(scene);
     //makes sure that all events from the scene are passed on to the editor
     scene->installEventFilter(this);
     show();

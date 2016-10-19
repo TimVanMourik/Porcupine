@@ -28,6 +28,7 @@ int main(
     QApplication app(argc, argv);
     MainWindow w;
     w.showMaximized();
+    w.setWindowTitle("PORcupine Creates Ur PipelINE");
 
     return app.exec();
 }
