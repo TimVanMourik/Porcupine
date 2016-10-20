@@ -2,11 +2,11 @@
     <category name="TVM">
         <category name="Registration"/>
     </category>
-    <title name="Boundary Based Registration">
+    <title name="Label to Volume">
         <code>
             <language name="MATLAB">
-                <comment text="Use custom impementation of boundary based registration"/>
-                <argument name="tvm_boundaryBasedRegistration"/>
+                <comment text="Label to volume"/>
+                <argument name="tvm_labelToVolume"/>
             </language>
         </code>
     </title>
@@ -17,39 +17,40 @@
             </language>
         </code>
     </input-output>
-    <input-output name="Input Coregistration Matrix">
+    <input-output name="Label Files">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_LabelFiles"/>
+            </language>
+        </code>
+    </input-output>
+    <input-output name="Coregistration Matrix">
         <code>
             <language name="MATLAB">
                 <argument name="i_CoregistrationMatrix"/>
             </language>
         </code>
     </input-output>
-    <input-output name="Input Boundaries">
+    <input name="FreeSurfer Folder">
         <code>
             <language name="MATLAB">
-                <argument name="i_Boundaries"/>
+                <argument name="i_FreeSurfer"/>
             </language>
         </code>
-    </input-output>
-    <input-output name="Mask file">
+    </input>
+    <input name="Hemisphere">
         <code>
             <language name="MATLAB">
-                <argument name="i_Mask"/>
+                <argument name="i_Hemisphere"/>
             </language>
         </code>
-    </input-output>
-    <output name="Output Coregistration Matrix">
+    </input>
+    <output name="Output Volume">
         <code>
             <language name="MATLAB">
-                <argument name="o_CoregistrationMatrix"/>
-            </language>
-        </code>
-    </output>
-    <output name="Output Boundaries">
-        <code>
-            <language name="MATLAB">
-                <argument name="o_Boundaries"/>
+                <argument name="o_VolumeFile"/>
             </language>
         </code>
     </output>
 </node>
+

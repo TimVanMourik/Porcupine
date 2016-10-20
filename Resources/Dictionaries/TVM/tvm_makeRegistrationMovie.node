@@ -1,5 +1,7 @@
 <node>
-    <category name="TVM"/>
+    <category name="TVM">
+        <category name="Utilities"/>
+    </category>
     <title name="Registration Movie">
         <code>
             <language name="MATLAB">
@@ -8,28 +10,21 @@
             </language>
         </code>
     </title>
-    <input name="Root Directory">
-        <code>
-            <language name="MATLAB">
-                <argument name="i_SubjectDirectory"/>
-            </language>
-        </code>
-    </input>
-    <input name="Reference Volume">
+    <input-output name="Reference Volume">
         <code>
             <language name="MATLAB">
                 <argument name="i_ReferenceVolume"/>
             </language>
         </code>
-    </input>
-    <input name="Boundaries">
+    </input-output>
+    <input-output name="Boundaries">
         <code>
             <language name="MATLAB">
                 <argument name="i_Boundaries"/>
                 <comment text="Boundaries in MATLAB voxel space"/>
             </language>
         </code>
-    </input>
+    </input-output>
     <input name="Viewing Axis">
         <code>
             <language name="MATLAB">

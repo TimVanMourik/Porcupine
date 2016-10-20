@@ -1,48 +1,49 @@
 <node>
     <category name="TVM">
-        <category name="Preprocessing"/>
+        <category name="Laminar Analysis"/>
     </category>
-    <title name="Filter Functional Data">
+    <title name="Laplace Potentials">
         <code>
             <language name="MATLAB">
-                <comment text="Filter Functionals"/>
-                <argument name="tvm_filterFunctionals"/>
+                <comment text="Compute Laplace potentials"/>
+                <argument name="tvm_laplacePotentials"/>
             </language>
         </code>
     </title>
-    <input-output name="Functional Folder">
+    <input-output name="White Matter SDF">
         <code>
             <language name="MATLAB">
-                <argument name="i_FunctionalDirectory"/>
+                <argument name="i_White"/>
             </language>
         </code>
     </input-output>
-    <input name="Lowpass Cut-off">
+    <input-output name="Pial SDF">
         <code>
             <language name="MATLAB">
-                <argument name="i_LowPass"/>
+                <argument name="i_Pial"/>
+            </language>
+        </code>
+    </input-output>
+    <input name="B0">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_B0"/>
             </language>
         </code>
     </input>
-    <input name="Highpass Cut-off">
+    <input name="B1">
         <code>
             <language name="MATLAB">
-                <argument name="i_HighPass"/>
+                <argument name="i_B1"/>
             </language>
         </code>
     </input>
-    <input name="TR">
+    <output name="Laplace Potential">
         <code>
             <language name="MATLAB">
-                <argument name="i_TR"/>
-            </language>
-        </code>
-    </input>
-    <output name="OBJ pial surface">
-        <code>
-            <language name="MATLAB">
-                <argument name="o_FilterDirectory"/>
+                <argument name="o_LaplacePotential"/>
             </language>
         </code>
     </output>
 </node>
+

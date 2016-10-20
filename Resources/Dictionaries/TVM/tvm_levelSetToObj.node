@@ -1,27 +1,28 @@
 <node>
     <category name="TVM">
-        <category name="Utilities"/>
+        <category name="Laminar Analysis"/>
     </category>
-    <title name="Average volume">
+    <title name="Level Set to OBJ">
         <code>
             <language name="MATLAB">
-                <comment text="Compute Mean Volume"/>
-                <argument name="tvm_computeMeanVolume"/>
+                <comment text="Level Set to OBJ files"/>
+                <argument name="tvm_levelSetToObj"/>
             </language>
         </code>
     </title>
-    <input-output name="NifTI Directory">
+    <input-output name="Level Set">
         <code>
             <language name="MATLAB">
-                <argument name="i_NiftiDirectory"/>
+                <argument name="i_LevelSet"/>
             </language>
         </code>
     </input-output>
-    <output name="Mean Volume">
+    <output name="Obj Files">
         <code>
             <language name="MATLAB">
-                <argument name="o_MeanFile"/>
+                <argument name="o_ObjFile"/>
             </language>
         </code>
     </output>
 </node>
+

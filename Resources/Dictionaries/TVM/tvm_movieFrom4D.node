@@ -1,48 +1,49 @@
 <node>
     <category name="TVM">
-        <category name="Preprocessing"/>
+        <category name="Utilities"/>
     </category>
-    <title name="Filter Functional Data">
+    <title name="Movie from 4D file">
         <code>
             <language name="MATLAB">
-                <comment text="Filter Functionals"/>
-                <argument name="tvm_filterFunctionals"/>
+                <comment text="Makes movie of registration with boundaries "/>
+                <argument name="tvm_movieFrom4D"/>
             </language>
         </code>
     </title>
-    <input-output name="Functional Folder">
+    <input-output name="Reference Volume">
         <code>
             <language name="MATLAB">
-                <argument name="i_FunctionalDirectory"/>
+                <argument name="i_VolumeFile"/>
             </language>
         </code>
     </input-output>
-    <input name="Lowpass Cut-off">
+    <input name="Viewing Axis">
         <code>
             <language name="MATLAB">
-                <argument name="i_LowPass"/>
+                <argument name="i_Axis"/>
             </language>
         </code>
     </input>
-    <input name="Highpass Cut-off">
+    <input name="Frames per Second">
         <code>
             <language name="MATLAB">
-                <argument name="i_HighPass"/>
+                <argument name="i_FramesPerSecond"/>
             </language>
         </code>
     </input>
-    <input name="TR">
+    <input name="Slice">
         <code>
             <language name="MATLAB">
-                <argument name="i_TR"/>
+                <argument name="i_Slice"/>
             </language>
         </code>
     </input>
-    <output name="OBJ pial surface">
+    <output name="Registration Movie">
         <code>
             <language name="MATLAB">
-                <argument name="o_FilterDirectory"/>
+                <argument name="o_Movie"/>
             </language>
         </code>
     </output>
 </node>
+

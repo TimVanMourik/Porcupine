@@ -1,15 +1,22 @@
 <node>
     <category name="TVM">
-        <category name="Laminar Analysis"/>
+        <category name="Activation"/>
     </category>
-    <title name="Design matrix to time course">
+    <title name="Regress Confounds">
         <code>
             <language name="MATLAB">
-                <comment text="Creates a time course from a spatial design matrix and a 4D file"/>
-                <argument name="tvm_designMatrixToTimeCourse"/>
+                <comment text="Regress out confounds"/>
+                <argument name="tvm_regressConfounds"/>
             </language>
         </code>
     </title>
+    <input-output name="Functional Folder">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_FunctionalFolder"/>
+            </language>
+        </code>
+    </input-output>
     <input-output name="Design Matrix">
         <code>
             <language name="MATLAB">
@@ -17,17 +24,17 @@
             </language>
         </code>
     </input-output>
-    <input-output name="Functional Files">
+    <input-output name="Confounds">
         <code>
             <language name="MATLAB">
-                <argument name="i_FunctionalFiles"/>
+                <argument name="i_Confounds"/>
             </language>
         </code>
     </input-output>
-    <output name="Time course">
+    <output name="Filtered Folder">
         <code>
             <language name="MATLAB">
-                <argument name="o_TimeCourses"/>
+                <argument name="o_FilteredFolder"/>
             </language>
         </code>
     </output>

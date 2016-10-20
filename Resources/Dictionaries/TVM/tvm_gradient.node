@@ -2,33 +2,34 @@
     <category name="TVM">
         <category name="Laminar Analysis"/>
     </category>
-    <title name="Boundaries to OBJ">
+    <title name="Compute Gradient">
         <code>
             <language name="MATLAB">
-                <comment text="Transforms FreeSurfer Boundaries in .obj files"/>
-                <argument name="tvm_boundariesToObj"/>
+                <comment text="Compute Gradient"/>
+                <argument name="tvm_gradient"/>
             </language>
         </code>
     </title>
-    <input-output name="Boundaries">
+    <input-output name="Potential Volume">
         <code>
             <language name="MATLAB">
-                <argument name="i_Boundaries"/>
+                <argument name="i_Potential"/>
             </language>
         </code>
     </input-output>
-    <output name="OBJ white matter surface">
+    <input name="Normalise">
         <code>
             <language name="MATLAB">
-                <argument name="o_ObjWhite"/>
+                <argument name="i_Normalise"/>
             </language>
         </code>
-    </output>
-    <output name="OBJ pial surface">
+    </input>
+    <output name="Gradient">
         <code>
             <language name="MATLAB">
-                <argument name="o_ObjPial"/>
+                <argument name="o_Gradient"/>
             </language>
         </code>
     </output>
 </node>
+

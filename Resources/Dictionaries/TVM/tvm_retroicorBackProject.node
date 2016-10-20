@@ -2,11 +2,11 @@
     <category name="TVM">
         <category name="Activation"/>
     </category>
-    <title name="GLM to T-map">
+    <title name="RETROICOR backprojection">
         <code>
             <language name="MATLAB">
-                <comment text="GLM to T-map"/>
-                <argument name="tvm_glmToTMap"/>
+                <comment text="Project RETROICOR results onto a reference volume"/>
+                <argument name="tvm_retroicorBackProject"/>
             </language>
         </code>
     </title>
@@ -24,24 +24,38 @@
             </language>
         </code>
     </input-output>
-    <input-output name="Residual Sum of Squares">
+    <input-output name="Template Volume">
         <code>
             <language name="MATLAB">
-                <argument name="i_ResidualSumOfSquares"/>
+                <argument name="i_TemplateVolume"/>
             </language>
         </code>
     </input-output>
-    <input-output name="Contrast">
+    <input-output name="Resolution">
         <code>
             <language name="MATLAB">
-                <argument name="i_Contrast"/>
+                <argument name="i_Resolution"/>
             </language>
         </code>
     </input-output>
-    <output name="T-Map">
+    <input-output name="Order">
         <code>
             <language name="MATLAB">
-                <argument name="o_TMap"/>
+                <argument name="i_Order"/>
+            </language>
+        </code>
+    </input-output>
+    <input-output name="Physio Type">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_PhysioType"/>
+            </language>
+        </code>
+    </input-output>
+    <output name="Back-projection">
+        <code>
+            <language name="MATLAB">
+                <argument name="o_BackProjection"/>
             </language>
         </code>
     </output>

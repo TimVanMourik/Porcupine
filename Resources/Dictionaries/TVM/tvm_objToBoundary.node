@@ -1,27 +1,28 @@
 <node>
     <category name="TVM">
-        <category name="Utilities"/>
+        <category name="Laminar Analysis"/>
     </category>
-    <title name="Average volume">
+    <title name="OBJ to Boundary files">
         <code>
             <language name="MATLAB">
-                <comment text="Compute Mean Volume"/>
-                <argument name="tvm_computeMeanVolume"/>
+                <comment text="OBJ files to Boundaries"/>
+                <argument name="tvm_objToBoundary"/>
             </language>
         </code>
     </title>
-    <input-output name="NifTI Directory">
+    <input-output name="OBJ files">
         <code>
             <language name="MATLAB">
-                <argument name="i_NiftiDirectory"/>
+                <argument name="i_ObjFile"/>
             </language>
         </code>
     </input-output>
-    <output name="Mean Volume">
+    <output name="Boundary Files">
         <code>
             <language name="MATLAB">
-                <argument name="o_MeanFile"/>
+                <argument name="o_BoundaryFile"/>
             </language>
         </code>
     </output>
 </node>
+

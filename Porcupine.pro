@@ -7,13 +7,9 @@
 
 ROOT=$$_PRO_FILE_PWD_
 
-QT +=               core gui xmlpatterns xml
+QT +=               widgets core gui xmlpatterns xml
 
-greaterThan(QT_MAJOR_VERSION, 4):{
-    QT +=           widgets
-}
-
-CONFIG += static
+CONFIG +=           static
 
 macx:{
     QMAKE_MAC_SDK = macosx10.12

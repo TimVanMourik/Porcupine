@@ -142,15 +142,15 @@ void MainWindow::loadDefaultNodes(
     QStringList toolboxNames;
     toolboxNames << QString(":/Dictionaries/node_%1.xml");
     toolboxNames << QString(":/Dictionaries/TVM/DesignMatrix/node_%1.xml");
-//    toolboxNames << QString(":/Dictionaries/TVM/node_%1.xml");
-    toolboxNames << QString(":/Dictionaries/FieldTrip/node_%1.xml");
+    toolboxNames << QString(":/Dictionaries/TVM/node_%1.xml");
+//    toolboxNames << QString(":/Dictionaries/FieldTrip/node_%1.xml");
     toolboxNames << QString(":/Dictionaries/FSL/node_%1.xml");
     foreach (QString toolbox, toolboxNames)
     {
         unsigned int i = 0;
         while(true)
         {
-            QFile xmlNodefile(toolbox.arg(i));
+            QFile xmlNodefile(toolbox.arg(i, 2, 10, QLatin1Char('0')));
             if(xmlNodefile.exists())
             {
                 QString newNode = nodeLibrary.addNodeSetting(xmlNodefile);

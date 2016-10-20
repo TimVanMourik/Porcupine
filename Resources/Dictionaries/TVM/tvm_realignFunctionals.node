@@ -1,6 +1,34 @@
 <node>
-    <title>tvm_realignFunctionals</title>
-    <input name="Functional Folder" class="Directory"/>
-    <output name="Realignment Folder" class="Directory"/>
-    <output name="Mean Volume" class="3D NifTI"/>
+    <category name="TVM">
+        <category name="Preprocessing"/>
+    </category>
+    <title name="Realignment">
+        <code>
+            <language name="MATLAB">
+                <comment text="Realignment of functional data"/>
+                <argument name="tvm_realignFunctionals"/>
+            </language>
+        </code>
+    </title>
+    <input-output name="Functional Folder">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_NiftiDirectory"/>
+            </language>
+        </code>
+    </input-output>
+    <output name="Realignment Folder">
+        <code>
+            <language name="MATLAB">
+                <argument name="o_RealignmentDirectory"/>
+            </language>
+        </code>
+    </output>
+    <output name="Mean Volume">
+        <code>
+            <language name="MATLAB">
+                <argument name="o_MeanFunctional"/>
+            </language>
+        </code>
+    </output>
 </node>
