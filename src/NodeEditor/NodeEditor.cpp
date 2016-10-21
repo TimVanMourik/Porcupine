@@ -6,6 +6,7 @@
 
 #include <QDomDocument>
 #include <QDomElement>
+#include <QPainter>
 #include <QPointF>
 #include <QGraphicsScene>
 #include <QGraphicsSceneMouseEvent>
@@ -41,6 +42,13 @@ void NodeEditor::install(
     //makes sure that all events from the scene are passed on to the editor
     scene->installEventFilter(this);
     show();
+}
+
+void NodeEditor::printScene(
+        QPainter& _painter
+        )
+{
+    scene()->render(&_painter);
 }
 
 bool NodeEditor::eventFilter(

@@ -56,6 +56,10 @@ public:
             QDomDocument& _xmlFile
             );
     //
+    void printScene(
+            QPainter& _painter
+            );
+    //
     void setTreeModel(
             NodeTreeEditor* _treeModel
             );

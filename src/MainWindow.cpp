@@ -14,6 +14,8 @@
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QMenuBar>
+#include <QPainter>
+#include <QPrinter>
 #include <QPushButton>
 #include <QSplitter>
 #include <QTabWidget>
@@ -166,7 +168,6 @@ void MainWindow::loadDefaultNodes(
             ++i;
         }
     }
-
 }
 
 void MainWindow::loadNewNodes(
@@ -294,6 +295,27 @@ void MainWindow::openFile()
 void MainWindow::printFile(
         )
 {
+    QPrinter printer(QPrinter::HighResolution);
+    printer.setPageSize(QPrinter::A4);
+    printer.setOrientation(QPrinter::Landscape);
+    printer.setOutputFormat(QPrinter::PdfFormat);
+
+    QString fileName = QFileDialog::getSaveFileName();
+    if (fileName.isEmpty())
+    {
+        qDebug() << "No file name was chosen. Ergo, no file will be saved.";
+        return;
+    }
+    printer.setOutputFileName(fileName);
+
+    QPainter painter;
+    if(!painter.begin(&printer))
+    {
+        qDebug() << "Error setting up printer.";
+        return;
+    }
+    m_nodeEditors[m_nodeEditorWidget->currentIndex()]->printScene(painter);
+    painter.end();
 }
 
 void MainWindow::newFile(
@@ -378,8 +400,8 @@ void MainWindow::createMenus()
     m_fileMenu->addAction(m_newAct);
     m_fileMenu->addAction(m_openAct);
     m_fileMenu->addAction(m_saveToXmlAct);
+    m_fileMenu->addAction(m_printAct);
     m_fileMenu->addAction(m_loadNodesAct);
-//    m_fileMenu->addAction(m_printAct);
     m_fileMenu->addSeparator();
     m_fileMenu->addAction(m_exitAct);
 

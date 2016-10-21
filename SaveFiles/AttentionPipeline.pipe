@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <pipeline>
  <node name="FreeSurfer recon-all" type="FreeSurfer recon-all">
-  <position x="-258" y="-297"/>
+  <position x="-251" y="-272"/>
   <pairs>
    <pair name="Structural" filename="">
-    <port type="input" identifier="410e7be0"/>
-    <port type="output" identifier="410e7960"/>
+    <port identifier="2a274d18" type="input"/>
+    <port identifier="2a2756c8" type="output"/>
    </pair>
    <pair name="FreeSurfer Directory" filename="">
-    <port type="output" identifier="410e7a28"/>
+    <port identifier="2a275740" type="output"/>
    </pair>
   </pairs>
  </node>
@@ -16,14 +16,14 @@
   <position x="-260" y="-29"/>
   <pairs>
    <pair name="Functional Folder" filename="">
-    <port type="input" identifier="410e03b8"/>
-    <port type="output" identifier="410e7488"/>
+    <port identifier="2a275d58" type="input"/>
+    <port identifier="2a275e48" type="output"/>
    </pair>
    <pair name="Realignment Folder" filename="">
-    <port type="output" identifier="410df0f8"/>
+    <port identifier="2a275ee8" type="output"/>
    </pair>
    <pair name="Mean Volume" filename="">
-    <port type="output" identifier="410e03e0"/>
+    <port identifier="2a276028" type="output"/>
    </pair>
   </pairs>
  </node>
@@ -31,46 +31,46 @@
   <position x="23" y="-349"/>
   <pairs>
    <pair name="Reference Volume" filename="">
-    <port type="input" identifier="45290be0"/>
-    <port type="output" identifier="45290c80"/>
+    <port identifier="2a276640" type="input"/>
+    <port identifier="2a276730" type="output"/>
    </pair>
    <pair name="FreeSurfer Folder" filename="">
-    <port type="input" identifier="45290d20"/>
-    <port type="output" identifier="45290dc0"/>
+    <port identifier="2a2767d0" type="input"/>
+    <port identifier="2a276870" type="output"/>
    </pair>
    <pair name="Boundaries" filename="">
-    <port type="output" identifier="45290e88"/>
+    <port identifier="2a276938" type="output"/>
    </pair>
    <pair name="register.dat" filename="">
-    <port type="output" identifier="45290fc8"/>
+    <port identifier="2a276a78" type="output"/>
    </pair>
    <pair name="Coregistration Matrix" filename="">
-    <port type="output" identifier="45291108"/>
+    <port identifier="2a276bb8" type="output"/>
    </pair>
   </pairs>
  </node>
  <node name="Registration Movie" type="Registration Movie">
-  <position x="259" y="-524"/>
+  <position x="253" y="-533"/>
   <pairs>
    <pair name="Reference Volume" filename="">
-    <port type="input" identifier="45291860"/>
-    <port type="output" identifier="45291950"/>
+    <port identifier="2a277310" type="input"/>
+    <port identifier="2a277400" type="output"/>
    </pair>
    <pair name="Boundaries" filename="">
-    <port type="input" identifier="452919f0"/>
-    <port type="output" identifier="45291a90"/>
+    <port identifier="2a2774a0" type="input"/>
+    <port identifier="2a277540" type="output"/>
    </pair>
    <pair name="Viewing Axis" filename="">
-    <port type="input" identifier="45291b58"/>
+    <port identifier="2a277608" type="input"/>
    </pair>
    <pair name="Frames per Second" filename="">
-    <port type="input" identifier="45291c98"/>
+    <port identifier="2a277748" type="input"/>
    </pair>
    <pair name="Contour Colours" filename="">
-    <port type="input" identifier="45291dd8"/>
+    <port identifier="2a277888" type="input"/>
    </pair>
    <pair name="Registration Movie" filename="">
-    <port type="output" identifier="45291ef0"/>
+    <port identifier="2a2779a0" type="output"/>
    </pair>
   </pairs>
  </node>
@@ -78,15 +78,15 @@
   <position x="256" y="-341"/>
   <pairs>
    <pair name="Reference Volume" filename="">
-    <port type="input" identifier="452926c0"/>
-    <port type="output" identifier="452927b0"/>
+    <port identifier="2a278198" type="input"/>
+    <port identifier="2a278288" type="output"/>
    </pair>
    <pair name="Original Boundaries" filename="">
-    <port type="input" identifier="45292850"/>
-    <port type="output" identifier="452928f0"/>
+    <port identifier="2a278328" type="input"/>
+    <port identifier="2a2783c8" type="output"/>
    </pair>
    <pair name="Registered Boundaries" filename="">
-    <port type="output" identifier="452929b8"/>
+    <port identifier="2a278490" type="output"/>
    </pair>
   </pairs>
  </node>
@@ -94,15 +94,15 @@
   <position x="513" y="-388"/>
   <pairs>
    <pair name="Reference Volume" filename="">
-    <port type="input" identifier="45292fd0"/>
-    <port type="output" identifier="452930c0"/>
+    <port identifier="356f0128" type="input"/>
+    <port identifier="356f0218" type="output"/>
    </pair>
    <pair name="Transformations" filename="">
-    <port type="input" identifier="45293160"/>
-    <port type="output" identifier="45293200"/>
+    <port identifier="356f0290" type="input"/>
+    <port identifier="356f0330" type="output"/>
    </pair>
    <pair name="Displacement Map" filename="">
-    <port type="output" identifier="452932c8"/>
+    <port identifier="356f03f8" type="output"/>
    </pair>
   </pairs>
  </node>
@@ -110,348 +110,322 @@
   <position x="734" y="-284"/>
   <pairs>
    <pair name="Displacement Map" filename="">
-    <port type="input" identifier="45293908"/>
-    <port type="output" identifier="452939f8"/>
+    <port identifier="356f0a38" type="input"/>
+    <port identifier="356f0b28" type="output"/>
    </pair>
    <pair name="Input Boundaries" filename="">
-    <port type="input" identifier="45293a98"/>
-    <port type="output" identifier="45293b38"/>
+    <port identifier="356f0bc8" type="input"/>
+    <port identifier="356f0c68" type="output"/>
    </pair>
    <pair name="Output Boundaries" filename="">
-    <port type="output" identifier="45293c00"/>
+    <port identifier="356f0d30" type="output"/>
    </pair>
   </pairs>
  </node>
  <node name="Registration Movie" type="Registration Movie">
-  <position x="940" y="-495"/>
+  <position x="961" y="-458"/>
   <pairs>
    <pair name="Reference Volume" filename="">
-    <port type="input" identifier="45294240"/>
-    <port type="output" identifier="45294330"/>
+    <port identifier="356f1370" type="input"/>
+    <port identifier="356f1460" type="output"/>
    </pair>
    <pair name="Boundaries" filename="">
-    <port type="input" identifier="452943d0"/>
-    <port type="output" identifier="45294470"/>
+    <port identifier="356f1500" type="input"/>
+    <port identifier="356f15a0" type="output"/>
    </pair>
    <pair name="Viewing Axis" filename="">
-    <port type="input" identifier="45294538"/>
+    <port identifier="356f1668" type="input"/>
    </pair>
    <pair name="Frames per Second" filename="">
-    <port type="input" identifier="45294678"/>
+    <port identifier="356f17a8" type="input"/>
    </pair>
    <pair name="Contour Colours" filename="">
-    <port type="input" identifier="452947b8"/>
+    <port identifier="356f18e8" type="input"/>
    </pair>
    <pair name="Registration Movie" filename="">
-    <port type="output" identifier="452948d0"/>
+    <port identifier="356f1a00" type="output"/>
    </pair>
   </pairs>
  </node>
  <node name="Initialise design matrix" type="Initialise design matrix">
-  <position x="-893" y="227"/>
+  <position x="-915" y="240"/>
   <pairs>
    <pair name="Files" filename="">
-    <port type="input" identifier="45295230"/>
+    <port identifier="356f2360" type="input"/>
    </pair>
    <pair name="Output design matrix" filename="">
-    <port type="output" identifier="452952d0"/>
+    <port identifier="356f2400" type="output"/>
    </pair>
   </pairs>
  </node>
  <node name="Stimulus regressors" type="Stimulus regressors">
-  <position x="-713" y="259"/>
+  <position x="-725" y="259"/>
   <pairs>
    <pair name="Input design matrix" filename="">
-    <port type="input" identifier="45295848"/>
+    <port identifier="356f2978" type="input"/>
    </pair>
    <pair name="Stimulus" filename="">
-    <port type="input" identifier="452959d8"/>
+    <port identifier="356f2b08" type="input"/>
    </pair>
    <pair name="HRF parameters" filename="">
-    <port type="input" identifier="45295af0"/>
+    <port identifier="356f2c20" type="input"/>
    </pair>
    <pair name="TR" filename="">
-    <port type="input" identifier="45295cd0"/>
+    <port identifier="356f2e00" type="input"/>
    </pair>
    <pair name="Output design matrix" filename="">
-    <port type="output" identifier="45295d98"/>
+    <port identifier="356f2ec8" type="output"/>
    </pair>
   </pairs>
  </node>
  <node name="Constant" type="Constant">
-  <position x="-557" y="230"/>
+  <position x="-577" y="248"/>
   <pairs>
    <pair name="Input design matrix" filename="">
-    <port type="input" identifier="452964a0"/>
+    <port identifier="356f35d0" type="input"/>
    </pair>
    <pair name="Output design matrix" filename="">
-    <port type="output" identifier="45296630"/>
+    <port identifier="356f3760" type="output"/>
    </pair>
   </pairs>
  </node>
  <node name="High pass filter" type="High pass filter">
-  <position x="-400" y="253"/>
+  <position x="-428" y="253"/>
   <pairs>
    <pair name="Input design matrix" filename="">
-    <port type="input" identifier="45296ba8"/>
+    <port identifier="356f3cd8" type="input"/>
    </pair>
    <pair name="Cut-off frequency" filename="">
-    <port type="input" identifier="45296d38"/>
+    <port identifier="356f3e68" type="input"/>
    </pair>
    <pair name="TR" filename="">
-    <port type="input" identifier="45296ef0"/>
+    <port identifier="356f4020" type="input"/>
    </pair>
    <pair name="Output design matrix" filename="">
-    <port type="output" identifier="45296fb8"/>
+    <port identifier="35779418" type="output"/>
    </pair>
   </pairs>
  </node>
  <node name="Motion regression" type="Motion regression">
-  <position x="-246" y="247"/>
+  <position x="-278" y="252"/>
   <pairs>
    <pair name="Input design matrix" filename="">
-    <port type="input" identifier="45297648"/>
+    <port identifier="35779aa8" type="input"/>
    </pair>
    <pair name="Motion Parameters" filename="">
-    <port type="input" identifier="452977d8"/>
+    <port identifier="35779c38" type="input"/>
    </pair>
    <pair name="Output design matrix" filename="">
-    <port type="output" identifier="452978f0"/>
+    <port identifier="35779d50" type="output"/>
    </pair>
   </pairs>
  </node>
  <node name="RETROICOR" type="RETROICOR">
-  <position x="-86" y="280"/>
+  <position x="-125" y="278"/>
   <pairs>
    <pair name="Input design matrix" filename="">
-    <port type="input" identifier="45297ee0"/>
+    <port identifier="3577a340" type="input"/>
    </pair>
    <pair name="Physio Data" filename="">
-    <port type="input" identifier="45298070"/>
+    <port identifier="3577a4d0" type="input"/>
    </pair>
    <pair name="Scan Triggers" filename="">
-    <port type="input" identifier="45298188"/>
+    <port identifier="3577a5e8" type="input"/>
    </pair>
    <pair name="Order" filename="">
-    <port type="input" identifier="452983b8"/>
+    <port identifier="3577a818" type="input"/>
    </pair>
    <pair name="Type" filename="">
-    <port type="input" identifier="45298548"/>
+    <port identifier="3577a9a8" type="input"/>
    </pair>
    <pair name="Output design matrix" filename="">
-    <port type="output" identifier="452985c0"/>
+    <port identifier="3577aa20" type="output"/>
    </pair>
   </pairs>
  </node>
  <node name="RETROICOR" type="RETROICOR">
-  <position x="71" y="282"/>
+  <position x="44" y="279"/>
   <pairs>
    <pair name="Input design matrix" filename="">
-    <port type="input" identifier="45298d90"/>
+    <port identifier="3577b1f0" type="input"/>
    </pair>
    <pair name="Physio Data" filename="">
-    <port type="input" identifier="45298f20"/>
+    <port identifier="3577b380" type="input"/>
    </pair>
    <pair name="Scan Triggers" filename="">
-    <port type="input" identifier="45299038"/>
+    <port identifier="3577b498" type="input"/>
    </pair>
    <pair name="Order" filename="">
-    <port type="input" identifier="45299268"/>
+    <port identifier="3577b6c8" type="input"/>
    </pair>
    <pair name="Type" filename="">
-    <port type="input" identifier="452993f8"/>
+    <port identifier="3577b858" type="input"/>
    </pair>
    <pair name="Output design matrix" filename="">
-    <port type="output" identifier="45299470"/>
+    <port identifier="3577b8d0" type="output"/>
    </pair>
   </pairs>
  </node>
  <node name="Regress Confounds" type="Regress Confounds">
-  <position x="255" y="87"/>
+  <position x="241" y="189"/>
   <pairs>
    <pair name="Functional Folder" filename="">
-    <port type="input" identifier="45299c40"/>
-    <port type="output" identifier="45299d30"/>
+    <port identifier="3577c0a0" type="input"/>
+    <port identifier="3577c190" type="output"/>
    </pair>
    <pair name="Design Matrix" filename="">
-    <port type="input" identifier="45299dd0"/>
-    <port type="output" identifier="45299e70"/>
+    <port identifier="3577c230" type="input"/>
+    <port identifier="3577c2d0" type="output"/>
    </pair>
    <pair name="Confounds" filename="">
-    <port type="input" identifier="45299f38"/>
-    <port type="output" identifier="45299fd8"/>
+    <port identifier="3577c398" type="input"/>
+    <port identifier="3577c438" type="output"/>
    </pair>
    <pair name="Filtered Folder" filename="">
-    <port type="output" identifier="4529a0a0"/>
+    <port identifier="3577c500" type="output"/>
    </pair>
   </pairs>
  </node>
  <node name="Smooth Functionals" type="Smooth Functionals">
-  <position x="403" y="203"/>
+  <position x="400" y="310"/>
   <pairs>
    <pair name="Functional Folder" filename="">
-    <port type="input" identifier="4529a7a8"/>
-    <port type="output" identifier="4529a898"/>
+    <port identifier="3577cc08" type="input"/>
+    <port identifier="3577ccf8" type="output"/>
    </pair>
    <pair name="Smoothing Kernel" filename="">
-    <port type="input" identifier="4529a938"/>
+    <port identifier="3577cd98" type="input"/>
    </pair>
    <pair name="Smoothing Folder" filename="">
-    <port type="output" identifier="4529aa78"/>
+    <port identifier="3577ced8" type="output"/>
    </pair>
   </pairs>
  </node>
  <node name="GLM to F-map" type="GLM to F-map">
-  <position x="796" y="271"/>
+  <position x="1071" y="533"/>
   <pairs>
    <pair name="Design Matrix" filename="">
-    <port type="input" identifier="4529b090"/>
-    <port type="output" identifier="4529b180"/>
+    <port identifier="358008d0" type="input"/>
+    <port identifier="358009c0" type="output"/>
    </pair>
    <pair name="Betas" filename="">
-    <port type="input" identifier="4529b310"/>
-    <port type="output" identifier="4529b338"/>
+    <port identifier="35800b28" type="input"/>
+    <port identifier="35800b50" type="output"/>
    </pair>
    <pair name="Residual Sum of Squares" filename="">
-    <port type="input" identifier="4529b3d8"/>
-    <port type="output" identifier="4529b478"/>
+    <port identifier="35800bf0" type="input"/>
+    <port identifier="35800c90" type="output"/>
    </pair>
    <pair name="Contrast" filename="">
-    <port type="input" identifier="4529b540"/>
-    <port type="output" identifier="4529b5e0"/>
+    <port identifier="35800d58" type="input"/>
+    <port identifier="35800df8" type="output"/>
    </pair>
    <pair name="F-Map" filename="">
-    <port type="output" identifier="4529b798"/>
+    <port identifier="35800fb0" type="output"/>
    </pair>
   </pairs>
  </node>
  <node name="GLM to T-map" type="GLM to T-map">
-  <position x="809" y="430"/>
+  <position x="840" y="334"/>
   <pairs>
    <pair name="Design Matrix" filename="">
-    <port type="input" identifier="4529bea0"/>
-    <port type="output" identifier="4529bf90"/>
+    <port identifier="358016b8" type="input"/>
+    <port identifier="358017a8" type="output"/>
    </pair>
    <pair name="Betas" filename="">
-    <port type="input" identifier="4529c120"/>
-    <port type="output" identifier="4529c148"/>
+    <port identifier="35801938" type="input"/>
+    <port identifier="35801960" type="output"/>
    </pair>
    <pair name="Residual Sum of Squares" filename="">
-    <port type="input" identifier="4529c1e8"/>
-    <port type="output" identifier="4529c288"/>
+    <port identifier="35801a00" type="input"/>
+    <port identifier="35801aa0" type="output"/>
    </pair>
    <pair name="Contrast" filename="">
-    <port type="input" identifier="4529c350"/>
-    <port type="output" identifier="4529c3f0"/>
+    <port identifier="35801b68" type="input"/>
+    <port identifier="35801c08" type="output"/>
    </pair>
    <pair name="T-Map" filename="">
-    <port type="output" identifier="4529c5a8"/>
+    <port identifier="35801dc0" type="output"/>
    </pair>
   </pairs>
  </node>
  <node name="Movie from 4D file" type="Movie from 4D file">
-  <position x="1009" y="650"/>
+  <position x="1028" y="750"/>
   <pairs>
    <pair name="Reference Volume" filename="">
-    <port type="input" identifier="4529ccb0"/>
-    <port type="output" identifier="4529cda0"/>
+    <port identifier="358024c8" type="input"/>
+    <port identifier="358025b8" type="output"/>
    </pair>
    <pair name="Viewing Axis" filename="">
-    <port type="input" identifier="4529ce40"/>
+    <port identifier="35802658" type="input"/>
    </pair>
    <pair name="Frames per Second" filename="">
-    <port type="input" identifier="4529cf80"/>
+    <port identifier="35802798" type="input"/>
    </pair>
    <pair name="Slice" filename="">
-    <port type="input" identifier="4529d1b0"/>
+    <port identifier="358029c8" type="input"/>
    </pair>
    <pair name="Registration Movie" filename="">
-    <port type="output" identifier="4529d250"/>
+    <port identifier="35802a68" type="output"/>
    </pair>
   </pairs>
  </node>
  <node name="RETROICOR backprojection" type="RETROICOR backprojection">
-  <position x="808" y="627"/>
+  <position x="851" y="665"/>
   <pairs>
    <pair name="Design Matrix" filename="">
-    <port type="input" identifier="4529d980"/>
-    <port type="output" identifier="4529da70"/>
+    <port identifier="35803198" type="input"/>
+    <port identifier="35803288" type="output"/>
    </pair>
    <pair name="Betas" filename="">
-    <port type="input" identifier="4529dc00"/>
-    <port type="output" identifier="4529dc28"/>
+    <port identifier="35803418" type="input"/>
+    <port identifier="35803440" type="output"/>
    </pair>
    <pair name="Template Volume" filename="">
-    <port type="input" identifier="4529dcc8"/>
-    <port type="output" identifier="4529dd68"/>
+    <port identifier="358034e0" type="input"/>
+    <port identifier="35803580" type="output"/>
    </pair>
    <pair name="Resolution" filename="">
-    <port type="input" identifier="4529de30"/>
-    <port type="output" identifier="4529ded0"/>
+    <port identifier="35803648" type="input"/>
+    <port identifier="358036e8" type="output"/>
    </pair>
    <pair name="Order" filename="">
-    <port type="input" identifier="4529e088"/>
-    <port type="output" identifier="4529e0b0"/>
+    <port identifier="358038a0" type="input"/>
+    <port identifier="358038c8" type="output"/>
    </pair>
    <pair name="Physio Type" filename="">
-    <port type="input" identifier="4529e128"/>
-    <port type="output" identifier="4529e1c8"/>
+    <port identifier="35803940" type="input"/>
+    <port identifier="358039e0" type="output"/>
    </pair>
    <pair name="Back-projection" filename="">
-    <port type="output" identifier="4529e290"/>
+    <port identifier="35803aa8" type="output"/>
    </pair>
   </pairs>
  </node>
  <node name="GLM" type="GLM">
-  <position x="566" y="337"/>
+  <position x="588" y="408"/>
   <pairs>
    <pair name="Reference File" filename="">
-    <port type="input" identifier="4529ebf0"/>
-    <port type="output" identifier="4529ece0"/>
+    <port identifier="35804408" type="input"/>
+    <port identifier="358044f8" type="output"/>
    </pair>
    <pair name="Design Matrix" filename="">
-    <port type="input" identifier="4529ed80"/>
-    <port type="output" identifier="4529ee20"/>
+    <port identifier="35804598" type="input"/>
+    <port identifier="35804638" type="output"/>
    </pair>
    <pair name="Functional Folder" filename="">
-    <port type="input" identifier="4529eee8"/>
-    <port type="output" identifier="4529ef88"/>
+    <port identifier="3587cf20" type="input"/>
+    <port identifier="3587cfc0" type="output"/>
    </pair>
    <pair name="Mask File" filename="">
-    <port type="input" identifier="4529f050"/>
-    <port type="output" identifier="4529f0f0"/>
+    <port identifier="3587d088" type="input"/>
+    <port identifier="3587d128" type="output"/>
    </pair>
    <pair name="Betas" filename="">
-    <port type="output" identifier="4529f2a8"/>
+    <port identifier="3587d2e0" type="output"/>
    </pair>
    <pair name="Residual Sum of Squares" filename="">
-    <port type="output" identifier="4529f320"/>
-   </pair>
-  </pairs>
- </node>
- <node name="Label to Volume" type="Label to Volume">
-  <position x="420" y="-51"/>
-  <pairs>
-   <pair name="Reference Volume" filename="">
-    <port type="input" identifier="4529fb90"/>
-    <port type="output" identifier="4529fc80"/>
-   </pair>
-   <pair name="Label Files" filename="">
-    <port type="input" identifier="4529fd20"/>
-    <port type="output" identifier="4529fdc0"/>
-   </pair>
-   <pair name="Coregistration Matrix" filename="">
-    <port type="input" identifier="4529fe88"/>
-    <port type="output" identifier="4529ff28"/>
-   </pair>
-   <pair name="FreeSurfer Folder" filename="">
-    <port type="input" identifier="4529fff0"/>
-   </pair>
-   <pair name="Hemisphere" filename="">
-    <port type="input" identifier="452a0130"/>
-   </pair>
-   <pair name="Output Volume" filename="">
-    <port type="output" identifier="452a0248"/>
+    <port identifier="3587d358" type="output"/>
    </pair>
   </pairs>
  </node>
@@ -459,14 +433,14 @@
   <position x="922" y="-223"/>
   <pairs>
    <pair name="Boundaries" filename="">
-    <port type="input" identifier="452a0a90"/>
-    <port type="output" identifier="410e7618"/>
+    <port identifier="3587eac8" type="input"/>
+    <port identifier="3587ebb8" type="output"/>
    </pair>
    <pair name="OBJ white matter surface" filename="">
-    <port type="output" identifier="45464ca8"/>
+    <port identifier="3587ec58" type="output"/>
    </pair>
    <pair name="OBJ pial surface" filename="">
-    <port type="output" identifier="45464de8"/>
+    <port identifier="3587ed98" type="output"/>
    </pair>
   </pairs>
  </node>
@@ -474,26 +448,26 @@
   <position x="1095" y="-184"/>
   <pairs>
    <pair name="Reference Volume" filename="">
-    <port type="input" identifier="45465400"/>
-    <port type="output" identifier="454654f0"/>
+    <port identifier="3587f3b0" type="input"/>
+    <port identifier="3587f4a0" type="output"/>
    </pair>
    <pair name="White Matter OBJ" filename="">
-    <port type="input" identifier="45465590"/>
-    <port type="output" identifier="45465630"/>
+    <port identifier="3587f540" type="input"/>
+    <port identifier="3587f5e0" type="output"/>
    </pair>
    <pair name="Pial OBJ" filename="">
-    <port type="input" identifier="454656f8"/>
-    <port type="output" identifier="45465798"/>
+    <port identifier="3587f6a8" type="input"/>
+    <port identifier="3587f748" type="output"/>
    </pair>
    <pair name="Transformation matrix" filename="">
-    <port type="input" identifier="45465860"/>
-    <port type="output" identifier="45465900"/>
+    <port identifier="3587f810" type="input"/>
+    <port identifier="3587f8b0" type="output"/>
    </pair>
    <pair name="White Matter SDF" filename="">
-    <port type="output" identifier="454659c8"/>
+    <port identifier="3587f978" type="output"/>
    </pair>
    <pair name="Pial SDF" filename="">
-    <port type="output" identifier="45465ae0"/>
+    <port identifier="3587fa90" type="output"/>
    </pair>
   </pairs>
  </node>
@@ -501,21 +475,21 @@
   <position x="1251" y="-93"/>
   <pairs>
    <pair name="White Matter SDF" filename="">
-    <port type="input" identifier="45466350"/>
-    <port type="output" identifier="45466440"/>
+    <port identifier="35880300" type="input"/>
+    <port identifier="358803f0" type="output"/>
    </pair>
    <pair name="Pial SDF" filename="">
-    <port type="input" identifier="454664e0"/>
-    <port type="output" identifier="45466580"/>
+    <port identifier="35880490" type="input"/>
+    <port identifier="35880530" type="output"/>
    </pair>
    <pair name="B0" filename="">
-    <port type="input" identifier="454666e8"/>
+    <port identifier="35880698" type="input"/>
    </pair>
    <pair name="B1" filename="">
-    <port type="input" identifier="45466850"/>
+    <port identifier="35880800" type="input"/>
    </pair>
    <pair name="Laplace Potential" filename="">
-    <port type="output" identifier="45466918"/>
+    <port identifier="358808c8" type="output"/>
    </pair>
   </pairs>
  </node>
@@ -523,14 +497,14 @@
   <position x="1395" y="-15"/>
   <pairs>
    <pair name="Potential Volume" filename="">
-    <port type="input" identifier="45467070"/>
-    <port type="output" identifier="45467160"/>
+    <port identifier="3592c4d8" type="input"/>
+    <port identifier="3592c5c8" type="output"/>
    </pair>
    <pair name="Normalise" filename="">
-    <port type="input" identifier="45467200"/>
+    <port identifier="3592c668" type="input"/>
    </pair>
    <pair name="Gradient" filename="">
-    <port type="output" identifier="45467340"/>
+    <port identifier="3592c7a8" type="output"/>
    </pair>
   </pairs>
  </node>
@@ -538,11 +512,11 @@
   <position x="1554" y="41"/>
   <pairs>
    <pair name="Vector Field" filename="">
-    <port type="input" identifier="45467958"/>
-    <port type="output" identifier="45467a48"/>
+    <port identifier="3592cdc0" type="input"/>
+    <port identifier="3592ceb0" type="output"/>
    </pair>
    <pair name="Divergence" filename="">
-    <port type="output" identifier="45467ae8"/>
+    <port identifier="3592cf50" type="output"/>
    </pair>
   </pairs>
  </node>
@@ -550,64 +524,32 @@
   <position x="1726" y="6"/>
   <pairs>
    <pair name="White Matter SDF" filename="">
-    <port type="input" identifier="454680b0"/>
-    <port type="output" identifier="454681a0"/>
+    <port identifier="3592d518" type="input"/>
+    <port identifier="3592d608" type="output"/>
    </pair>
    <pair name="Pial SDF" filename="">
-    <port type="input" identifier="45468240"/>
-    <port type="output" identifier="454682e0"/>
+    <port identifier="3592d6a8" type="input"/>
+    <port identifier="3592d748" type="output"/>
    </pair>
    <pair name="Gradient" filename="">
-    <port type="input" identifier="454683a8"/>
-    <port type="output" identifier="45468448"/>
+    <port identifier="3592d810" type="input"/>
+    <port identifier="3592d8b0" type="output"/>
    </pair>
    <pair name="Curvature" filename="">
-    <port type="input" identifier="45468510"/>
-    <port type="output" identifier="454685b0"/>
+    <port identifier="3592d978" type="input"/>
+    <port identifier="3592da18" type="output"/>
    </pair>
    <pair name="Levels" filename="">
-    <port type="input" identifier="45468768"/>
+    <port identifier="3592dbd0" type="input"/>
    </pair>
    <pair name="Upsample factor" filename="">
-    <port type="input" identifier="454687e0"/>
+    <port identifier="3592dc48" type="input"/>
    </pair>
    <pair name="Layering" filename="">
-    <port type="output" identifier="45468920"/>
+    <port identifier="3592dd88" type="output"/>
    </pair>
    <pair name="Level set" filename="">
-    <port type="output" identifier="45468a60"/>
-   </pair>
-  </pairs>
- </node>
- <node name="ROI to design matrix" type="ROI to design matrix">
-  <position x="1900" y="176"/>
-  <pairs>
-   <pair name="Region of Interest" filename="">
-    <port type="input" identifier="45469410"/>
-    <port type="output" identifier="45469500"/>
-   </pair>
-   <pair name="Layers" filename="">
-    <port type="input" identifier="45469690"/>
-    <port type="output" identifier="454696b8"/>
-   </pair>
-   <pair name="Design Matrix" filename="">
-    <port type="output" identifier="45469758"/>
-   </pair>
-  </pairs>
- </node>
- <node name="Design matrix to time course" type="Design matrix to time course">
-  <position x="2086" y="263"/>
-  <pairs>
-   <pair name="Design Matrix" filename="">
-    <port type="input" identifier="45469d98"/>
-    <port type="output" identifier="45469e88"/>
-   </pair>
-   <pair name="Functional Files" filename="">
-    <port type="input" identifier="45469f28"/>
-    <port type="output" identifier="45469fc8"/>
-   </pair>
-   <pair name="Time course" filename="">
-    <port type="output" identifier="4546a090"/>
+    <port identifier="3592dec8" type="output"/>
    </pair>
   </pairs>
  </node>
@@ -615,11 +557,11 @@
   <position x="1902" y="56"/>
   <pairs>
    <pair name="Level Set" filename="">
-    <port type="input" identifier="4546a6d0"/>
-    <port type="output" identifier="4546a7c0"/>
+    <port identifier="3592fb38" type="input"/>
+    <port identifier="3592fc28" type="output"/>
    </pair>
    <pair name="Obj Files" filename="">
-    <port type="output" identifier="4546a860"/>
+    <port identifier="3592fcc8" type="output"/>
    </pair>
   </pairs>
  </node>
@@ -627,88 +569,160 @@
   <position x="2074" y="28"/>
   <pairs>
    <pair name="OBJ files" filename="">
-    <port type="input" identifier="4546ae28"/>
-    <port type="output" identifier="4546af18"/>
+    <port identifier="35930290" type="input"/>
+    <port identifier="35930380" type="output"/>
    </pair>
    <pair name="Boundary Files" filename="">
-    <port type="output" identifier="4546afb8"/>
+    <port identifier="359a6288" type="output"/>
    </pair>
   </pairs>
  </node>
  <node name="Registration Movie" type="Registration Movie">
-  <position x="2257" y="-123"/>
+  <position x="2271" y="-111"/>
   <pairs>
    <pair name="Reference Volume" filename="">
-    <port type="input" identifier="4546b580"/>
-    <port type="output" identifier="4546b670"/>
+    <port identifier="359a6850" type="input"/>
+    <port identifier="359a6940" type="output"/>
    </pair>
    <pair name="Boundaries" filename="">
-    <port type="input" identifier="4546b710"/>
-    <port type="output" identifier="4546b7b0"/>
+    <port identifier="359a69e0" type="input"/>
+    <port identifier="359a6a80" type="output"/>
    </pair>
    <pair name="Viewing Axis" filename="">
-    <port type="input" identifier="4546b878"/>
+    <port identifier="359a6b48" type="input"/>
    </pair>
    <pair name="Frames per Second" filename="">
-    <port type="input" identifier="4546b9b8"/>
+    <port identifier="359a6c88" type="input"/>
    </pair>
    <pair name="Contour Colours" filename="">
-    <port type="input" identifier="4546baf8"/>
+    <port identifier="359a6dc8" type="input"/>
    </pair>
    <pair name="Registration Movie" filename="">
-    <port type="output" identifier="4546bc10"/>
+    <port identifier="359a6ee0" type="output"/>
    </pair>
   </pairs>
  </node>
- <link to="452943d0" from="45291a90"/>
- <link to="4529fff0" from="410e7960"/>
- <link to="4529fe88" from="45291108"/>
- <link to="45469410" from="452a0248"/>
- <link to="4546b580" from="454654f0"/>
- <link to="4546b710" from="4546afb8"/>
- <link to="45290d20" from="410e7a28"/>
- <link to="45291860" from="45290c80"/>
- <link to="452919f0" from="45290e88"/>
- <link to="45292850" from="45290e88"/>
- <link to="45299c40" from="410df0f8"/>
- <link to="45295848" from="452952d0"/>
- <link to="452964a0" from="45295d98"/>
- <link to="45296ba8" from="45296630"/>
- <link to="45297648" from="45296fb8"/>
- <link to="45297ee0" from="452978f0"/>
- <link to="454664e0" from="45465ae0"/>
- <link to="45466350" from="454659c8"/>
- <link to="454680b0" from="45466440"/>
- <link to="45468240" from="45466580"/>
- <link to="45468510" from="45467ae8"/>
- <link to="454683a8" from="45467160"/>
- <link to="45467958" from="45467340"/>
- <link to="45467070" from="45466918"/>
- <link to="45469690" from="45468920"/>
- <link to="4546a6d0" from="45468a60"/>
- <link to="45469d98" from="45469758"/>
- <link to="4546ae28" from="4546a860"/>
- <link to="45465590" from="45464ca8"/>
- <link to="454656f8" from="45464de8"/>
- <link to="452943d0" from="45293c00"/>
- <link to="452a0a90" from="45293c00"/>
- <link to="45293908" from="452932c8"/>
- <link to="45293a98" from="452928f0"/>
- <link to="4529ccb0" from="4529e290"/>
- <link to="4529b310" from="4529f2a8"/>
- <link to="4529b3d8" from="4529f320"/>
- <link to="4529c120" from="4529f2a8"/>
- <link to="4529c1e8" from="4529f320"/>
- <link to="4529b090" from="4529ee20"/>
- <link to="4529bea0" from="4529ee20"/>
- <link to="4529dcc8" from="4529ece0"/>
- <link to="4529d980" from="4529ee20"/>
- <link to="4529eee8" from="4529aa78"/>
- <link to="4529a7a8" from="4529a0a0"/>
- <link to="45299dd0" from="45299470"/>
- <link to="45298d90" from="452985c0"/>
- <link to="45290be0" from="410e03e0"/>
- <link to="45293160" from="452929b8"/>
- <link to="45292fd0" from="452927b0"/>
- <link to="45469f28" from="4529a0a0"/>
+ <node name="Draw ROIs (manual)" type="Draw ROIs (manual)">
+  <position x="1011" y="312"/>
+  <pairs>
+   <pair name="Volume file" filename="">
+    <port identifier="359a9780" type="input"/>
+    <port identifier="359ab5d0" type="output"/>
+   </pair>
+   <pair name="Surface Label" filename="">
+    <port identifier="359ab580" type="output"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="Label to Volume" type="Label to Volume">
+  <position x="1234" y="179"/>
+  <pairs>
+   <pair name="Reference Volume" filename="">
+    <port identifier="3587dbc8" type="input"/>
+    <port identifier="3587dcb8" type="output"/>
+   </pair>
+   <pair name="Label Files" filename="">
+    <port identifier="3587dd58" type="input"/>
+    <port identifier="3587ddf8" type="output"/>
+   </pair>
+   <pair name="Coregistration Matrix" filename="">
+    <port identifier="3587dec0" type="input"/>
+    <port identifier="3587df60" type="output"/>
+   </pair>
+   <pair name="FreeSurfer Folder" filename="">
+    <port identifier="3587e028" type="input"/>
+   </pair>
+   <pair name="Hemisphere" filename="">
+    <port identifier="3587e168" type="input"/>
+   </pair>
+   <pair name="Output Volume" filename="">
+    <port identifier="3587e280" type="output"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="ROI to design matrix" type="ROI to design matrix">
+  <position x="1900" y="176"/>
+  <pairs>
+   <pair name="Region of Interest" filename="">
+    <port identifier="3592e878" type="input"/>
+    <port identifier="3592e968" type="output"/>
+   </pair>
+   <pair name="Layers" filename="">
+    <port identifier="3592eaf8" type="input"/>
+    <port identifier="3592eb20" type="output"/>
+   </pair>
+   <pair name="Design Matrix" filename="">
+    <port identifier="3592ebc0" type="output"/>
+   </pair>
+  </pairs>
+ </node>
+ <node name="Design matrix to time course" type="Design matrix to time course">
+  <position x="2107" y="289"/>
+  <pairs>
+   <pair name="Design Matrix" filename="">
+    <port identifier="3592f200" type="input"/>
+    <port identifier="3592f2f0" type="output"/>
+   </pair>
+   <pair name="Functional Files" filename="">
+    <port identifier="3592f390" type="input"/>
+    <port identifier="3592f430" type="output"/>
+   </pair>
+   <pair name="Time course" filename="">
+    <port identifier="3592f4f8" type="output"/>
+   </pair>
+  </pairs>
+ </node>
+ <link to="3587dd58" from="359ab580"/>
+ <link to="359a9780" from="35801dc0"/>
+ <link to="356f1500" from="356f0c68"/>
+ <link to="3592f390" from="3577c500"/>
+ <link to="356f0128" from="2a278288"/>
+ <link to="356f0290" from="2a278490"/>
+ <link to="2a276640" from="2a276028"/>
+ <link to="3577b1f0" from="3577aa20"/>
+ <link to="3577c230" from="3577b8d0"/>
+ <link to="3577cc08" from="3577c500"/>
+ <link to="3587cf20" from="3577ced8"/>
+ <link to="35803198" from="35804638"/>
+ <link to="358034e0" from="358044f8"/>
+ <link to="358016b8" from="35804638"/>
+ <link to="358008d0" from="35804638"/>
+ <link to="35801a00" from="3587d358"/>
+ <link to="35801938" from="3587d2e0"/>
+ <link to="35800bf0" from="3587d358"/>
+ <link to="35800b28" from="3587d2e0"/>
+ <link to="358024c8" from="35803aa8"/>
+ <link to="356f0bc8" from="2a2783c8"/>
+ <link to="356f0a38" from="356f03f8"/>
+ <link to="3587eac8" from="356f0d30"/>
+ <link to="356f1500" from="356f0d30"/>
+ <link to="3587f6a8" from="3587ed98"/>
+ <link to="3587f540" from="3587ec58"/>
+ <link to="35930290" from="3592fcc8"/>
+ <link to="3592f200" from="3592ebc0"/>
+ <link to="3592fb38" from="3592dec8"/>
+ <link to="3592eaf8" from="3592dd88"/>
+ <link to="3592c4d8" from="358808c8"/>
+ <link to="3592cdc0" from="3592c7a8"/>
+ <link to="3592d810" from="3592c5c8"/>
+ <link to="3592d978" from="3592cf50"/>
+ <link to="3592d6a8" from="35880530"/>
+ <link to="3592d518" from="358803f0"/>
+ <link to="35880300" from="3587f978"/>
+ <link to="35880490" from="3587fa90"/>
+ <link to="3577a340" from="35779d50"/>
+ <link to="35779aa8" from="35779418"/>
+ <link to="356f3cd8" from="356f3760"/>
+ <link to="356f35d0" from="356f2ec8"/>
+ <link to="356f2978" from="356f2400"/>
+ <link to="3577c0a0" from="2a275ee8"/>
+ <link to="2a278328" from="2a276938"/>
+ <link to="2a2774a0" from="2a276938"/>
+ <link to="2a277310" from="2a276730"/>
+ <link to="2a2767d0" from="2a275740"/>
+ <link to="359a69e0" from="359a6288"/>
+ <link to="359a6850" from="3587f4a0"/>
+ <link to="3592e878" from="3587e280"/>
+ <link to="3587dec0" from="2a276bb8"/>
+ <link to="3587e028" from="2a2756c8"/>
 </pipeline>
