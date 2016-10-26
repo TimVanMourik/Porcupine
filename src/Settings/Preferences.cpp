@@ -7,8 +7,6 @@ Preferences::Preferences() :
     Singleton()
 {
     //Colour settings
-
-//    m_sceneBackgroundBrush = QBrush(QColor(50, 50, 50), Qt::Dense7Pattern);
     m_sceneBackgroundBrush = QBrush(QColor(50, 50, 50), Qt::SolidPattern);
 
     QLinearGradient gradient(0.0, 0.0, 0.0, 30);
@@ -31,6 +29,12 @@ Preferences::Preferences() :
     m_portPenSelected     = QPen(QColor(130, 130, 200));
 
     m_portTextColor       = QColor(230, 230, 230);
+
+    m_selectionBrushUnselected = QBrush(gradient);
+    m_selectionBrushselected   = QBrush(gradient);
+    m_selectionPenUnselected   = QPen(QColor(110, 110, 170), 2);
+    m_selectionPenselected     = QPen(QColor(60, 60, 120), 2);
+    m_selectionOpacity         = 0.1;
 
     //sizes
     m_nodeHorizontalMargin  = 20;

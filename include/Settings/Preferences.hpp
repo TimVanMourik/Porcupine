@@ -89,7 +89,8 @@ public:
             ) const;
     const QColor& getPortTextColor(
             ) const;
-private:
+//Let's make these public. Otherwise we're flooded with getters and setters
+public:
     QBrush m_sceneBackgroundBrush;
 
     QBrush m_nodeBrushUnselected;
@@ -106,6 +107,12 @@ private:
     QBrush m_portBrushSelected;
     QPen m_portPenUnselected;
     QPen m_portPenSelected;
+
+    QBrush m_selectionBrushUnselected;
+    QBrush m_selectionBrushselected;
+    QPen m_selectionPenUnselected;
+    QPen m_selectionPenselected;
+    qreal m_selectionOpacity;
 
     QColor m_portTextColor;
 

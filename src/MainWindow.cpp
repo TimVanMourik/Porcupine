@@ -477,6 +477,18 @@ void MainWindow::createActions()
 
 MainWindow::~MainWindow()
 {
+    foreach (CodeEditor* editor, m_codeEditors)
+    {
+        delete editor;
+    }
+    foreach (NodeTreeEditor* editor, m_nodeTreeEditors)
+    {
+        delete editor;
+    }
+    foreach (NodeEditor* editor, m_nodeEditors)
+    {
+        delete editor;
+    }
     NodeLibrary& nodeLibrary = NodeLibrary::getInstance();
     nodeLibrary.destroy();
 }

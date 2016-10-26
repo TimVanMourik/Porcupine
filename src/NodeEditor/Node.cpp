@@ -51,9 +51,9 @@ Node::Node(
     m_nameLabel->setAttribute(Qt::WA_TranslucentBackground);
 //    m_nameLabel->setDefaultTextColor(preferences.getPortTextColor());
 
-    QPainterPath p;
-    p.addRect(0, 0, 0, 0);
-    setPath(p);
+    QPainterPath path;
+    path.addRect(0, 0, 0, 0);
+    setPath(path);
     setPen(QPen(Qt::darkRed));
     setFlag(QGraphicsItem::ItemIsMovable);
     setFlag(QGraphicsItem::ItemIsSelectable);

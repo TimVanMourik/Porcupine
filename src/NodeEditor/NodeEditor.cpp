@@ -4,6 +4,7 @@
 
 #include <iostream>
 
+#include <QDebug>
 #include <QDomDocument>
 #include <QDomElement>
 #include <QPainter>
@@ -18,12 +19,14 @@
 #include "NodeTreeEditor.hpp"
 #include "Port.hpp"
 #include "Preferences.hpp"
+#include "SelectionBox.hpp"
 
 NodeEditor::NodeEditor(
         QWidget* _parent
         ) :
     QGraphicsView(_parent),
     m_newLink(0),
+    m_newSelection(0),
     m_treeModel(0)
 {
 }
@@ -65,7 +68,7 @@ bool NodeEditor::eventFilter(
         {
         case Qt::LeftButton:
         {
-            QGraphicsItem* item = itemAt(mouseEvent->scenePos());
+            const QGraphicsItem* item = itemAt(mouseEvent->scenePos(), QSize(3, 3));
             if (item && item->type() == Port::Type)
             {
                 m_newLink = new Link(scene());
@@ -89,6 +92,11 @@ bool NodeEditor::eventFilter(
                 m_newLink->updatePath();
                 return true;
             }
+            else if(!item)
+            {
+                m_newSelection = new SelectionBox(mouseEvent->scenePos(), scene());
+                m_newSelection->reshape(mouseEvent->scenePos());
+            }
             break;
         }
         }
@@ -101,13 +109,18 @@ bool NodeEditor::eventFilter(
             m_newLink->updatePath();
             return true;
         }
+        if (m_newSelection)
+        {
+            m_newSelection->reshape(mouseEvent->scenePos());
+            return true;
+        }
         break;
     }
     case QEvent::GraphicsSceneMouseRelease:
     {
         if (m_newLink && mouseEvent->button() == Qt::LeftButton)
         {
-            QGraphicsItem* item = itemAt(mouseEvent->scenePos());
+            const QGraphicsItem* item = itemAt(mouseEvent->scenePos(), QSize(3, 3));
             if (item && item->type() == Port::Type)
             {
                 Port* portCreated = (Port*) item;
@@ -182,6 +195,44 @@ bool NodeEditor::eventFilter(
             m_newLink = 0;
             return true;
         }
+        else if (m_newSelection && mouseEvent->button() == Qt::LeftButton)
+        {
+            qreal x1, y1, x2, y2;
+            m_newSelection->boundingRect().getCoords(&x1, &y1, &x2, &y2);
+            if(round(x2 - x1) == 0 ||round(y2 - y1))
+            {
+                delete m_newSelection;
+                m_newSelection = 0;
+                return true;
+            }
+            qDebug() << x1 << " " << y1 << " " << x2 << " " << y2;
+            QList<QGraphicsItem*> itemsWithinSquare = scene()->items(m_newSelection->boundingRect());
+            QList<const Node*> nodeList;
+            foreach(const QGraphicsItem* eachItem, itemsWithinSquare)
+            {
+                qreal x1_selection, y1_selection, x2_selection, y2_selection;
+                if (eachItem->type() > Node::Type)
+                {
+                    nodeList.append((const Node*)eachItem);
+                    ((Node*)eachItem)->boundingRect().getCoords(&x1_selection, &y1_selection, &x2_selection, &y2_selection);
+                    x1 = std::min(x1, x1_selection);
+                    x2 = std::min(x2, x1_selection);
+                    y1 = std::min(y1, y1_selection);
+                    y2 = std::min(y2, y2_selection);
+                }
+            }
+            if (!nodeList.isEmpty())
+            {
+                m_newSelection->reshape(x1, y1, x2, y2);
+                m_selections.append(m_newSelection);
+                m_newSelection = 0;
+            }
+            else
+            {
+                delete m_newSelection;
+                m_newSelection = 0;
+            }
+        }
         break;
     }
     }
@@ -220,14 +271,15 @@ void NodeEditor::keyPressEvent(
     }
 }
 
-QGraphicsItem* NodeEditor::itemAt(
-        const QPointF& _position
+const QGraphicsItem* NodeEditor::itemAt(
+        const QPointF& _centrePosition,
+        const QSize& _size
         )
 {
-    //Draw a square of 3 by 3 pixels around the input position and return the item
-    QList<QGraphicsItem*> itemsWithinSquare = scene()->items(QRectF(_position - QPointF(1,1), QSize(3,3)));
+    //Draw a square around the input position and return the item
+    QList<QGraphicsItem*> itemsWithinSquare = scene()->items(QRectF(_centrePosition - QPointF(_size.width() / 2, _size.height()), _size));
 
-    foreach(QGraphicsItem* eachItem, itemsWithinSquare)
+    foreach(const QGraphicsItem* eachItem, itemsWithinSquare)
     {
         if (eachItem->type() > QGraphicsItem::UserType)
         {
@@ -309,7 +361,12 @@ Node* NodeEditor::addNode(
 NodeEditor::~NodeEditor(
         )
 {
-    delete scene();
     //For the weird instance that there is one and the editor is destroyed:
     delete m_newLink;
+    delete m_newSelection;
+    foreach (SelectionBox* selection, m_selections)
+    {
+        delete selection;
+    }
+    delete scene();
 }
