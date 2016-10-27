@@ -2,8 +2,11 @@
 #include <QGraphicsScene>
 #include <QPainter>
 
+#include "Node.hpp"
 #include "Preferences.hpp"
 #include "SelectionBox.hpp"
+
+qreal SelectionBox::s_rounding = 12;
 
 SelectionBox::SelectionBox(
         const QPointF& _mousePosition,
@@ -28,19 +31,18 @@ void SelectionBox::paint(
     Q_UNUSED(_widget);
 
     Preferences& preferences = Preferences::getInstance();
-    _painter->setPen(preferences.m_selectionPenUnselected);
-    _painter->setBrush(preferences.m_selectionBrushUnselected);
-    _painter->setOpacity(preferences.m_selectionOpacity);
-//    if(isSelected())
-//    {
-//        _painter->setPen(preferences.getLinkPenSelected());
-//        _painter->setBrush(preferences.getLinkBrushSelected());
-//    }
-//    else
-//    {
-//        _painter->setPen(preferences.getLinkPenUnselected());
-//        _painter->setBrush(preferences.getLinkBrushUnselected());
-//    }
+    if(isSelected())
+    {
+        _painter->setPen(preferences.m_selectionPenSelected);
+        _painter->setBrush(preferences.m_selectionBrushSelected);
+        _painter->setOpacity(preferences.m_selectionOpacity);
+    }
+    else
+    {
+        _painter->setPen(preferences.m_selectionPenUnselected);
+        _painter->setBrush(preferences.m_selectionBrushUnselected);
+        _painter->setOpacity(preferences.m_selectionOpacity);
+    }
     _painter->drawPath(path());
 }
 
@@ -55,7 +57,7 @@ void SelectionBox::reshape(
         )
 {
     QPainterPath path;
-    path.addRect(QRect((int)m_topLeftCorner.x(),(int) m_topLeftCorner.y(), _mousePosition.x() - m_topLeftCorner.x(), _mousePosition.y() - m_topLeftCorner.y()));
+    path.addRoundedRect(QRect((int)m_topLeftCorner.x(),(int) m_topLeftCorner.y(), _mousePosition.x() - m_topLeftCorner.x(), _mousePosition.y() - m_topLeftCorner.y()), s_rounding, s_rounding);
     setPath(path);
 }
 
@@ -67,8 +69,16 @@ void SelectionBox::reshape(
         )
 {
     QPainterPath path;
-    path.addRect(_x1, _y1, _x2, _y2);
+    path.addRoundedRect(_x1, _y1, _x2 - _x1, _y2 - _y1, s_rounding, s_rounding);
     setPath(path);
+}
+
+
+void SelectionBox::setNodeList(
+        QList<Node*>& _nodeList
+        )
+{
+    m_nodeList = _nodeList;
 }
 
 void SelectionBox::saveToXml(
@@ -89,4 +99,9 @@ void SelectionBox::loadFromXml(
 
 SelectionBox::~SelectionBox()
 {
+    foreach (Node* node, m_nodeList)
+    {
+        node->setParentItem(0);
+        node->setPos(node->pos() + this->pos());
+    }
 }

@@ -314,6 +314,7 @@ void MainWindow::printFile(
         qDebug() << "Error setting up printer.";
         return;
     }
+    painter.setRenderHint(QPainter::TextAntialiasing);
     m_nodeEditors[m_nodeEditorWidget->currentIndex()]->printScene(painter);
     painter.end();
 }

@@ -5,6 +5,7 @@
 
 class QDomElement;
 
+class Node;
 class Port;
 
 class SelectionBox : public QGraphicsPathItem
@@ -39,6 +40,10 @@ public:
             const qreal _y2
             );
     //
+    void setNodeList(
+            QList<Node*>& _nodeList
+            );
+    //
     void saveToXml(
             QDomElement& _xmlElement
             );
@@ -51,8 +56,12 @@ public:
     ~SelectionBox(
             );
 private:
+    //
+    static qreal s_rounding;
+    //
     QPointF m_topLeftCorner;
-
+    //
+    QList<Node*> m_nodeList;
 };
 
 #endif // SELECTIONBOX_HPP

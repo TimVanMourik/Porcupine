@@ -90,7 +90,7 @@ private:
     //
     SelectionBox* m_newSelection;
     //
-    QList<SelectionBox*> m_selections;
+//    QList<SelectionBox*> m_selections;
     //
     NodeTreeEditor* m_treeModel;
 };

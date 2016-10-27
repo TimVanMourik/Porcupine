@@ -40,10 +40,13 @@ void NodeEditor::install(
 
     QImage image = QImage(":/Images/RepeatingBrains.png");
     QBrush brush = QBrush(image);
+//    brush.setColor(Qt::transparent);
+
     scene->setBackgroundBrush(brush);
     setScene(scene);
     //makes sure that all events from the scene are passed on to the editor
     scene->installEventFilter(this);
+//    this->setBackgroundBrush(QBrush(Qt::transparent));
     show();
 }
 
@@ -92,7 +95,12 @@ bool NodeEditor::eventFilter(
                 m_newLink->updatePath();
                 return true;
             }
-            else if(!item)
+            break;
+        }
+        case Qt::RightButton:
+        {
+            const QGraphicsItem* item = itemAt(mouseEvent->scenePos(), QSize(3, 3));
+            if(!item)
             {
                 m_newSelection = new SelectionBox(mouseEvent->scenePos(), scene());
                 m_newSelection->reshape(mouseEvent->scenePos());
@@ -195,36 +203,47 @@ bool NodeEditor::eventFilter(
             m_newLink = 0;
             return true;
         }
-        else if (m_newSelection && mouseEvent->button() == Qt::LeftButton)
+        else if (m_newSelection && mouseEvent->button() == Qt::RightButton)
         {
             qreal x1, y1, x2, y2;
             m_newSelection->boundingRect().getCoords(&x1, &y1, &x2, &y2);
-            if(round(x2 - x1) == 0 ||round(y2 - y1))
+            if(round(x2 - x1) == 0 || round(y2 - y1) == 0)
             {
                 delete m_newSelection;
                 m_newSelection = 0;
                 return true;
             }
-            qDebug() << x1 << " " << y1 << " " << x2 << " " << y2;
             QList<QGraphicsItem*> itemsWithinSquare = scene()->items(m_newSelection->boundingRect());
-            QList<const Node*> nodeList;
-            foreach(const QGraphicsItem* eachItem, itemsWithinSquare)
+            QList<Node*> nodeList;
+            bool firstNode = true;
+            foreach(QGraphicsItem* eachItem, itemsWithinSquare)
             {
-                qreal x1_selection, y1_selection, x2_selection, y2_selection;
-                if (eachItem->type() > Node::Type)
+                if (eachItem->type() == Node::Type)
                 {
-                    nodeList.append((const Node*)eachItem);
-                    ((Node*)eachItem)->boundingRect().getCoords(&x1_selection, &y1_selection, &x2_selection, &y2_selection);
-                    x1 = std::min(x1, x1_selection);
-                    x2 = std::min(x2, x1_selection);
-                    y1 = std::min(y1, y1_selection);
-                    y2 = std::min(y2, y2_selection);
+                    if(firstNode)
+                    {
+                        x1 = ((Node*)eachItem)->pos().x();
+                        y1 = ((Node*)eachItem)->pos().y();
+                        x2 = ((Node*)eachItem)->pos().x();
+                        y2 = ((Node*)eachItem)->pos().y();
+                        firstNode = false;
+                    }
+                    nodeList.append((Node*)eachItem);
+                    QPointF topLeft     = ((Node*)eachItem)->pos() + ((Node*)eachItem)->boundingRect().topLeft();
+                    QPointF bottomRight = ((Node*)eachItem)->pos() + ((Node*)eachItem)->boundingRect().bottomRight();
+                    x1 = std::min(x1, topLeft.x());
+                    y1 = std::min(y1, topLeft.y());
+                    x2 = std::max(x2, bottomRight.x());
+                    y2 = std::max(y2, bottomRight.y());
+                    ((Node*)eachItem)->setParentItem((QGraphicsItem*)m_newSelection);
                 }
             }
             if (!nodeList.isEmpty())
             {
-                m_newSelection->reshape(x1, y1, x2, y2);
-                m_selections.append(m_newSelection);
+                qreal extraWidth = 8;
+                m_newSelection->reshape(x1 - extraWidth, y1 - extraWidth, x2 + extraWidth, y2 + extraWidth);
+                m_newSelection->setNodeList(nodeList);
+//                m_selections.append(m_newSelection);
                 m_newSelection = 0;
             }
             else
@@ -256,6 +275,10 @@ void NodeEditor::keyPressEvent(
                 {
                     //remove node from list view
                     m_treeModel->removeNode((const Node*) item);
+                }
+                else if(item->type() == SelectionBox::Type)
+                {
+//                    m_selections.removeOne((SelectionBox*)item);
                 }
                 delete item;
                 //if no break, program may crash when second deleted item was already deletted by first on cascade
@@ -364,9 +387,9 @@ NodeEditor::~NodeEditor(
     //For the weird instance that there is one and the editor is destroyed:
     delete m_newLink;
     delete m_newSelection;
-    foreach (SelectionBox* selection, m_selections)
-    {
-        delete selection;
-    }
+//    foreach (SelectionBox* selection, m_selections)
+//    {
+//        delete selection;
+//    }
     delete scene();
 }

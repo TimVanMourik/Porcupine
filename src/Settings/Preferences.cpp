@@ -31,9 +31,9 @@ Preferences::Preferences() :
     m_portTextColor       = QColor(230, 230, 230);
 
     m_selectionBrushUnselected = QBrush(gradient);
-    m_selectionBrushselected   = QBrush(gradient);
+    m_selectionBrushSelected   = QBrush(gradient);
     m_selectionPenUnselected   = QPen(QColor(110, 110, 170), 2);
-    m_selectionPenselected     = QPen(QColor(60, 60, 120), 2);
+    m_selectionPenSelected     = QPen(QColor(20, 20, 40), 2);
     m_selectionOpacity         = 0.1;
 
     //sizes

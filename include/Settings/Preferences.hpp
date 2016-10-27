@@ -109,9 +109,9 @@ public:
     QPen m_portPenSelected;
 
     QBrush m_selectionBrushUnselected;
-    QBrush m_selectionBrushselected;
+    QBrush m_selectionBrushSelected;
     QPen m_selectionPenUnselected;
-    QPen m_selectionPenselected;
+    QPen m_selectionPenSelected;
     qreal m_selectionOpacity;
 
     QColor m_portTextColor;
