@@ -202,7 +202,7 @@ bool NodeEditor::eventFilter(
         {
             qreal x1, y1, x2, y2;
             m_newSelection->boundingRect().getCoords(&x1, &y1, &x2, &y2);
-            if(round(x2 - x1) == 0 || round(y2 - y1) == 0)
+            if(qRound(x2 - x1) == 0 || qRound(y2 - y1) == 0)
             {
                 delete m_newSelection;
                 m_newSelection = 0;
