@@ -17,6 +17,7 @@
 #include <QPainter>
 #include <QPrinter>
 #include <QPushButton>
+#include <QSlider>
 #include <QSplitter>
 #include <QTabWidget>
 
@@ -31,7 +32,8 @@ MainWindow::MainWindow(
         ) :
     QMainWindow(parent),
     m_nodeEditorWidget(new QTabWidget()),
-    m_nodeTreeWidget(new QWidget()),
+    m_nodeScaleSlider(new QSlider(Qt::Horizontal, 0)),
+    m_nodeTreeWidget  (new QWidget()),
     m_codeEditorWidget(new QWidget()),
     m_nodeEditors(0),
     m_nodeTreeEditors(0),
@@ -66,6 +68,10 @@ MainWindow::MainWindow(
     codeLayout->addWidget(m_codeEditorWidget);
 
     rightSide->addWidget(m_nodeEditorWidget);
+    m_nodeScaleSlider->setMinimum(0);
+    m_nodeScaleSlider->setValue(50);
+    m_nodeScaleSlider->setMaximum(100);
+    rightSide->addWidget(m_nodeScaleSlider);
     rightSide->addWidget(codeEditor);
 
     ///@todo stretch factors are a bit weird. Find out how to do this nicely
@@ -84,6 +90,10 @@ MainWindow::MainWindow(
 
     connect(button, SIGNAL(released()), this, SLOT(nodeToCode()));
     connect(m_nodeEditorWidget, SIGNAL(currentChanged(int)), this, SLOT(setFileAt(int)));
+
+//    connect(m_nodeScaleSlider, SIGNAL(mousePressEvent(QMouseEvent* ev)), this, SLOT(nodeScaleSliderPressed(QMouseEvent* ev)));
+    connect(m_nodeScaleSlider, SIGNAL(valueChanged(int)), this, SLOT(nodeScaleSliderMoved(int)));
+//    connect(m_nodeScaleSlider, SIGNAL(mousePressEvent(QMouseEvent*)), this, SLOT(nodeScaleSliderReleased(QMouseEvent*)));
 }
 
 void MainWindow::nodeToCode(
@@ -322,8 +332,6 @@ void MainWindow::printFile(
 void MainWindow::newFile(
         )
 {
-//    Preferences& preferences = Preferences::getInstance();
-
     //Create a node editor
     m_nodeEditors.append(new NodeEditor(this));
     m_nodeTreeEditors.append(new NodeTreeEditor(this));
@@ -372,6 +380,21 @@ void MainWindow::addNode(
         )
 {
     m_nodeEditors[m_currentFileIndex]->addNode(_setting);
+}
+
+void MainWindow::nodeScaleSliderMoved(
+        int _value
+        )
+{
+    double scalingFactor = std::pow(2, (_value - 50) / 50.);
+    m_nodeEditors[m_currentFileIndex]->scale(scalingFactor, scalingFactor);
+}
+
+void MainWindow::nodeScaleSliderReleased(
+        int _value
+        )
+{
+    Q_UNUSED(_value);
 }
 
 void MainWindow::setFileAt(

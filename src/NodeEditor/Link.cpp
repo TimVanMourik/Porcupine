@@ -79,13 +79,13 @@ void Link::paint(
     Preferences& preferences = Preferences::getInstance();
     if(isSelected())
     {
-        _painter->setPen(preferences.getLinkPenSelected());
-        _painter->setBrush(preferences.getLinkBrushSelected());
+        _painter->setPen(preferences.m_linkPenSelected);
+        _painter->setBrush(preferences.m_linkBrushSelected);
     }
     else
     {
-        _painter->setPen(preferences.getLinkPenUnselected());
-        _painter->setBrush(preferences.getLinkBrushUnselected());
+        _painter->setPen(preferences.m_linkPenUnselected);
+        _painter->setBrush(preferences.m_linkBrushUnselected);
     }
     _painter->drawPath(path());
 }

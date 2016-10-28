@@ -19,6 +19,8 @@ namespace Ui {
 class MainWindow;
 }
 
+class QSlider;
+
 class CodeEditor;
 class NodeEditor;
 class NodeSetting;
@@ -46,7 +48,14 @@ private slots:
     void setFileAt(
             int _tabNumber
             );
-
+    //
+    void nodeScaleSliderMoved(
+            int _value
+            );
+    //
+    void nodeScaleSliderReleased(
+            int _value
+            );
     //
     void saveFileToXml(
             );
@@ -94,6 +103,7 @@ private:
             );
 
     QTabWidget* m_nodeEditorWidget;
+    QSlider* m_nodeScaleSlider;
     QWidget* m_nodeTreeWidget;
     QWidget* m_codeEditorWidget;
 

@@ -105,7 +105,7 @@ void Node::addPortPair(
     Preferences& preferences = Preferences::getInstance();
     PortPair* pair = new PortPair(this);
     pair->setArgument(_argument);
-    pair->setDefaultTextColor(preferences.getPortTextColor());
+    pair->setDefaultTextColor(preferences.m_portTextColor);
 
     switch(_argument.getType())
     {
@@ -180,13 +180,13 @@ void Node::paint(
     Preferences& preferences = Preferences::getInstance();
     if(isSelected())
     {
-        _painter->setPen(preferences.getNodePenSelected());
-        _painter->setBrush(preferences.getNodeBrushSelected());
+        _painter->setPen(preferences.m_nodePenSelected);
+        _painter->setBrush(preferences.m_nodeBrushSelected);
     }
     else
     {
-        _painter->setPen(preferences.getNodePenUnselected());
-        _painter->setBrush(preferences.getNodeBrushUnselected());
+        _painter->setPen(preferences.m_nodePenUnselected);
+        _painter->setBrush(preferences.m_nodeBrushUnselected);
     }
     _painter->drawPath(path());
 }
@@ -276,7 +276,7 @@ void Node::loadFromXml(
                 }
                 if(pair)
                 {
-                    pair->setDefaultTextColor(preferences.getPortTextColor());
+                    pair->setDefaultTextColor(preferences.m_portTextColor);
                     pair->loadFromXml(portElement, o_portMap);
                 }
                 portNode = portNode.nextSibling();
