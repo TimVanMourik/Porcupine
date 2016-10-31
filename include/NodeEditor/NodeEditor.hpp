@@ -92,6 +92,10 @@ private:
     //New link is created such that it always goes from an output port to an input port
     Link* m_newLink;
     //
+    bool m_drag;
+    //
+    QPointF m_startDragPoint;
+    //
     SelectionBox* m_newSelection;
     //
 //    QList<SelectionBox*> m_selections;

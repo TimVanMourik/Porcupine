@@ -12,6 +12,7 @@
 #include <QGraphicsScene>
 #include <QGraphicsSceneMouseEvent>
 #include <QKeyEvent>
+#include <QScrollBar>
 
 #include "Link.hpp"
 #include "Node.hpp"
@@ -26,6 +27,8 @@ NodeEditor::NodeEditor(
         ) :
     QGraphicsView(_parent),
     m_newLink(0),
+    m_drag(false),
+    m_startDragPoint(QPointF(0, 0)),
     m_newSelection(0),
     m_treeModel(0)
 {
@@ -54,7 +57,8 @@ void NodeEditor::printScene(
 
 bool NodeEditor::eventFilter(
         QObject* _object,
-        QEvent* _event)
+        QEvent* _event
+        )
 {
     QGraphicsSceneMouseEvent* mouseEvent = (QGraphicsSceneMouseEvent*) _event;
 
@@ -67,7 +71,12 @@ bool NodeEditor::eventFilter(
         case Qt::LeftButton:
         {
             const QGraphicsItem* item = itemAt(mouseEvent->scenePos(), QSize(3, 3));
-            if (item && item->type() == Port::Type)
+            if (!item)
+            {
+                m_drag = true;
+                m_startDragPoint = mouseEvent->scenePos();
+            }
+            else if (item->type() == Port::Type)
             {
                 m_newLink = new Link(scene());
 
@@ -106,6 +115,12 @@ bool NodeEditor::eventFilter(
     }
     case QEvent::GraphicsSceneMouseMove:
     {
+        if(m_drag)
+        {
+            this->horizontalScrollBar()->setValue(horizontalScrollBar()->value() + (m_startDragPoint.x() - mouseEvent->scenePos().x()));
+            this->verticalScrollBar()->setValue(verticalScrollBar()->value() + (m_startDragPoint.y() - mouseEvent->scenePos().y()));
+            return true;
+        }
         if (m_newLink)
         {
             m_newLink->setPositionTo(mouseEvent->scenePos());
@@ -121,6 +136,11 @@ bool NodeEditor::eventFilter(
     }
     case QEvent::GraphicsSceneMouseRelease:
     {
+        if(m_drag && mouseEvent->button() == Qt::LeftButton)
+        {
+            m_drag = false;
+            return true;
+        }
         if (m_newLink && mouseEvent->button() == Qt::LeftButton)
         {
             const QGraphicsItem* item = itemAt(mouseEvent->scenePos(), QSize(3, 3));

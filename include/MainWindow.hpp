@@ -30,13 +30,16 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 public:
+    //
     explicit MainWindow(
             QWidget* _parent = 0
             );
+    //
     ~MainWindow(
             );
 
 private slots:
+    //
     void contextMenuEvent(
             QContextMenuEvent* _event
             );
