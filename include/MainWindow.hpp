@@ -54,7 +54,6 @@ private slots:
             );
     //
     void nodeScaleSliderReleased(
-            int _value
             );
     //
     void saveFileToXml(
@@ -103,7 +102,10 @@ private:
             );
 
     QTabWidget* m_nodeEditorWidget;
+    /// @todo make sure that clicks and scrolls are handled appropriately
     QSlider* m_nodeScaleSlider;
+    bool m_scaleReleased;
+    float m_currentScale;
     QWidget* m_nodeTreeWidget;
     QWidget* m_codeEditorWidget;
 

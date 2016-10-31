@@ -33,6 +33,8 @@ MainWindow::MainWindow(
     QMainWindow(parent),
     m_nodeEditorWidget(new QTabWidget()),
     m_nodeScaleSlider(new QSlider(Qt::Horizontal, 0)),
+    m_scaleReleased(false),
+    m_currentScale(1.),
     m_nodeTreeWidget  (new QWidget()),
     m_codeEditorWidget(new QWidget()),
     m_nodeEditors(0),
@@ -93,7 +95,8 @@ MainWindow::MainWindow(
 
 //    connect(m_nodeScaleSlider, SIGNAL(mousePressEvent(QMouseEvent* ev)), this, SLOT(nodeScaleSliderPressed(QMouseEvent* ev)));
     connect(m_nodeScaleSlider, SIGNAL(valueChanged(int)), this, SLOT(nodeScaleSliderMoved(int)));
-//    connect(m_nodeScaleSlider, SIGNAL(mousePressEvent(QMouseEvent*)), this, SLOT(nodeScaleSliderReleased(QMouseEvent*)));
+    connect(m_nodeScaleSlider, SIGNAL(sliderReleased()), this, SLOT(nodeScaleSliderReleased()));
+//    m_nodeScaleSlider->
 }
 
 void MainWindow::nodeToCode(
@@ -386,15 +389,24 @@ void MainWindow::nodeScaleSliderMoved(
         int _value
         )
 {
-    double scalingFactor = std::pow(2, (_value - 50) / 50.);
-    m_nodeEditors[m_currentFileIndex]->scale(scalingFactor, scalingFactor);
+    if(m_scaleReleased)
+    {
+        m_scaleReleased = false;
+    }
+    else
+    {
+        double scalingFactor = std::pow(2, (_value - 50.) / 50.);
+        m_nodeEditors[m_currentFileIndex]->scale(scalingFactor / m_currentScale, scalingFactor / m_currentScale);
+        m_currentScale = scalingFactor;
+    }
 }
 
 void MainWindow::nodeScaleSliderReleased(
-        int _value
         )
 {
-    Q_UNUSED(_value);
+    m_currentScale = 1;
+    m_scaleReleased = true;
+    m_nodeScaleSlider->setValue(50);
 }
 
 void MainWindow::setFileAt(
