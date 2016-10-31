@@ -253,6 +253,20 @@ bool NodeEditor::eventFilter(
     return QObject::eventFilter(_object, _event);
 }
 
+void NodeEditor::wheelEvent(
+        QWheelEvent* _event
+        )
+{
+    if(_event->delta() < 0)
+    {
+        this->scale(0.9, 0.9);
+    }
+    else
+    {
+        this->scale(1 / .9, 1 / 0.9);
+    }
+}
+
 void NodeEditor::keyPressEvent(
         QKeyEvent* _event
         )

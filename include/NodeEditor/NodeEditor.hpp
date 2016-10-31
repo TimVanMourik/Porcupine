@@ -41,6 +41,10 @@ public:
             QEvent* _event
             );
     //
+    void wheelEvent(
+            QWheelEvent* _event
+            );
+    //
     void keyPressEvent(
             QKeyEvent* _event
             );

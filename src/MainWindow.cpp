@@ -32,9 +32,6 @@ MainWindow::MainWindow(
         ) :
     QMainWindow(parent),
     m_nodeEditorWidget(new QTabWidget()),
-    m_nodeScaleSlider(new QSlider(Qt::Horizontal, 0)),
-    m_scaleReleased(false),
-    m_currentScale(1.),
     m_nodeTreeWidget  (new QWidget()),
     m_codeEditorWidget(new QWidget()),
     m_nodeEditors(0),
@@ -70,10 +67,6 @@ MainWindow::MainWindow(
     codeLayout->addWidget(m_codeEditorWidget);
 
     rightSide->addWidget(m_nodeEditorWidget);
-    m_nodeScaleSlider->setMinimum(0);
-    m_nodeScaleSlider->setValue(50);
-    m_nodeScaleSlider->setMaximum(100);
-    rightSide->addWidget(m_nodeScaleSlider);
     rightSide->addWidget(codeEditor);
 
     ///@todo stretch factors are a bit weird. Find out how to do this nicely
@@ -92,11 +85,6 @@ MainWindow::MainWindow(
 
     connect(button, SIGNAL(released()), this, SLOT(nodeToCode()));
     connect(m_nodeEditorWidget, SIGNAL(currentChanged(int)), this, SLOT(setFileAt(int)));
-
-//    connect(m_nodeScaleSlider, SIGNAL(mousePressEvent(QMouseEvent* ev)), this, SLOT(nodeScaleSliderPressed(QMouseEvent* ev)));
-    connect(m_nodeScaleSlider, SIGNAL(valueChanged(int)), this, SLOT(nodeScaleSliderMoved(int)));
-    connect(m_nodeScaleSlider, SIGNAL(sliderReleased()), this, SLOT(nodeScaleSliderReleased()));
-//    m_nodeScaleSlider->
 }
 
 void MainWindow::nodeToCode(
@@ -383,30 +371,6 @@ void MainWindow::addNode(
         )
 {
     m_nodeEditors[m_currentFileIndex]->addNode(_setting);
-}
-
-void MainWindow::nodeScaleSliderMoved(
-        int _value
-        )
-{
-    if(m_scaleReleased)
-    {
-        m_scaleReleased = false;
-    }
-    else
-    {
-        double scalingFactor = std::pow(2, (_value - 50.) / 50.);
-        m_nodeEditors[m_currentFileIndex]->scale(scalingFactor / m_currentScale, scalingFactor / m_currentScale);
-        m_currentScale = scalingFactor;
-    }
-}
-
-void MainWindow::nodeScaleSliderReleased(
-        )
-{
-    m_currentScale = 1;
-    m_scaleReleased = true;
-    m_nodeScaleSlider->setValue(50);
 }
 
 void MainWindow::setFileAt(
