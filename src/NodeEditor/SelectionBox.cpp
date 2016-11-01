@@ -73,6 +73,16 @@ void SelectionBox::reshape(
     setPath(path);
 }
 
+void SelectionBox::updateOpacity(
+        float _scalingFactor
+        )
+{
+    float nodeOpacity = qMin(qMax((float)0.2, _scalingFactor), (float)1.0);
+    foreach (Node* node, m_nodeList)
+    {
+        node->setOpacity(nodeOpacity);
+    }
+}
 
 void SelectionBox::setNodeList(
         QList<Node*>& _nodeList

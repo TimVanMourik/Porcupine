@@ -28,6 +28,7 @@ NodeEditor::NodeEditor(
     QGraphicsView(_parent),
     m_newLink(0),
     m_drag(false),
+    m_scalingFactor(1),
     m_lastClickedPoint(QPointF(0, 0)),
     m_newSelection(0),
     m_treeModel(0)
@@ -117,8 +118,9 @@ bool NodeEditor::eventFilter(
     {
         if(m_drag)
         {
-            this->horizontalScrollBar()->setValue(horizontalScrollBar()->value() + (m_lastClickedPoint.x() - mouseEvent->scenePos().x()));
             this->verticalScrollBar()->setValue(verticalScrollBar()->value() + (m_lastClickedPoint.y() - mouseEvent->scenePos().y()));
+            this->horizontalScrollBar()->setValue(horizontalScrollBar()->value() + (m_lastClickedPoint.x() - mouseEvent->scenePos().x()));
+
             return true;
         }
         if (m_newLink)
@@ -258,7 +260,8 @@ bool NodeEditor::eventFilter(
                 qreal extraWidth = 8;
                 m_newSelection->reshape(x1 - extraWidth, y1 - extraWidth, x2 + extraWidth, y2 + extraWidth);
                 m_newSelection->setNodeList(nodeList);
-//                m_selections.append(m_newSelection);
+                m_newSelection->updateOpacity(m_scalingFactor);
+                m_selections.append(m_newSelection);
                 m_newSelection = 0;
             }
             else
@@ -277,13 +280,21 @@ void NodeEditor::wheelEvent(
         QWheelEvent* _event
         )
 {
+    float scalingStep = 0.9;
     if(_event->delta() < 0)
     {
-        this->scale(0.9, 0.9);
+        this->scale(scalingStep, scalingStep);
+        m_scalingFactor *= scalingStep;
     }
     else
     {
-        this->scale(1 / .9, 1 / 0.9);
+        this->scale(1 / scalingStep, 1 / scalingStep);
+        m_scalingFactor /= scalingStep;
+    }
+    /// @todo pass on to selections
+    foreach (SelectionBox* selection, m_selections)
+    {
+        selection->updateOpacity(m_scalingFactor);
     }
 }
 
@@ -307,7 +318,7 @@ void NodeEditor::keyPressEvent(
                 }
                 else if(item->type() == SelectionBox::Type)
                 {
-//                    m_selections.removeOne((SelectionBox*)item);
+                    m_selections.removeOne((SelectionBox*)item);
                 }
                 delete item;
                 //if no break, program may crash when second deleted item was already deletted by first on cascade
@@ -417,9 +428,9 @@ NodeEditor::~NodeEditor(
     //For the weird instance that there is one and the editor is destroyed:
     delete m_newLink;
     delete m_newSelection;
-//    foreach (SelectionBox* selection, m_selections)
-//    {
-//        delete selection;
-//    }
+    foreach (SelectionBox* selection, m_selections)
+    {
+        delete selection;
+    }
     delete scene();
 }

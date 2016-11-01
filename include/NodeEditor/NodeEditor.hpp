@@ -94,11 +94,13 @@ private:
     //
     bool m_drag;
     //
+    float m_scalingFactor;
+    //
     QPointF m_lastClickedPoint;
     //
     SelectionBox* m_newSelection;
     //
-//    QList<SelectionBox*> m_selections;
+    QList<SelectionBox*> m_selections;
     //
     NodeTreeEditor* m_treeModel;
 };

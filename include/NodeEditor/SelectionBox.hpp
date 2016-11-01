@@ -40,6 +40,10 @@ public:
             const qreal _y2
             );
     //
+    void updateOpacity(
+            float _scalingFactor
+            );
+    //
     void setNodeList(
             QList<Node*>& _nodeList
             );
