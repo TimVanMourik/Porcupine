@@ -94,7 +94,7 @@ private:
     //
     bool m_drag;
     //
-    QPointF m_startDragPoint;
+    QPointF m_lastClickedPoint;
     //
     SelectionBox* m_newSelection;
     //

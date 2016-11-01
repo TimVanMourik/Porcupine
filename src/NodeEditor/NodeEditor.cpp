@@ -28,7 +28,7 @@ NodeEditor::NodeEditor(
     QGraphicsView(_parent),
     m_newLink(0),
     m_drag(false),
-    m_startDragPoint(QPointF(0, 0)),
+    m_lastClickedPoint(QPointF(0, 0)),
     m_newSelection(0),
     m_treeModel(0)
 {
@@ -74,7 +74,7 @@ bool NodeEditor::eventFilter(
             if (!item)
             {
                 m_drag = true;
-                m_startDragPoint = mouseEvent->scenePos();
+                m_lastClickedPoint = mouseEvent->scenePos();
             }
             else if (item->type() == Port::Type)
             {
@@ -117,8 +117,8 @@ bool NodeEditor::eventFilter(
     {
         if(m_drag)
         {
-            this->horizontalScrollBar()->setValue(horizontalScrollBar()->value() + (m_startDragPoint.x() - mouseEvent->scenePos().x()));
-            this->verticalScrollBar()->setValue(verticalScrollBar()->value() + (m_startDragPoint.y() - mouseEvent->scenePos().y()));
+            this->horizontalScrollBar()->setValue(horizontalScrollBar()->value() + (m_lastClickedPoint.x() - mouseEvent->scenePos().x()));
+            this->verticalScrollBar()->setValue(verticalScrollBar()->value() + (m_lastClickedPoint.y() - mouseEvent->scenePos().y()));
             return true;
         }
         if (m_newLink)
@@ -406,6 +406,7 @@ Node* NodeEditor::addNode(
         )
 {
     Node* node = new Node(this, _setting);
+    node->setPos(m_lastClickedPoint);
     m_treeModel->addNode(node);
     return node;
 }
