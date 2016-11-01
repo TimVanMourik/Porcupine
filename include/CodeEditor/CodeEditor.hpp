@@ -26,6 +26,9 @@ private:
     void setupMatlabEditor(
             );
     //
+    void setupSpmEditor(
+            );
+    //
     void setupBashEditor(
             );
     //
