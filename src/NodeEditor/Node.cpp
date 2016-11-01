@@ -76,37 +76,38 @@ void Node::loadFromNodeSetting(
     m_name = m_setting->getName();
     m_nameLabel->setText(m_name);
 
-    addPorts(_setting->getPorts());
-
+    addPorts(_setting->getPorts(), true);
     repositionPorts();
 }
 
 void Node::addPorts(
-        const QVector<Argument>& ports
+        const QVector<Argument>& ports,
+        bool _initialiseWithDefault
         )
 {
     foreach(const Argument& argument, ports)
     {
-        addPortPair(argument);
+        addPortPair(argument, _initialiseWithDefault);
     }
 }
 
 void Node::addPort(
-        const Argument& _argument
+        const Argument& _argument,
+        bool _initialiseWithDefault
         )
 {
-    addPortPair(_argument);
+    addPortPair(_argument, _initialiseWithDefault);
 }
 
 void Node::addPortPair(
-        const Argument& _argument
+        const Argument& _argument,
+        bool _initialiseWithDefault
         )
 {
     Preferences& preferences = Preferences::getInstance();
     PortPair* pair = new PortPair(this);
     pair->setArgument(_argument);
     pair->setDefaultTextColor(preferences.m_portTextColor);
-
     switch(_argument.getType())
     {
         case Argument::FieldType::INPUT :
@@ -119,11 +120,18 @@ void Node::addPortPair(
         case Argument::FieldType::OUTPUT :
             pair->createOutputPort();
             break;
+        case Argument::FieldType::HIDDEN :
+            pair->setVisible(false);
+            break;
         case Argument::FieldType::NONE :
+            pair->setVisible(false);
             break;
     }
+    if(_initialiseWithDefault)
+    {
+        pair->fileNameChanged(_argument.getDefault(), false);
+    }
     m_ports.append(pair);
-//    repositionPorts();
 }
 
 void Node::repositionPorts(
@@ -140,6 +148,10 @@ void Node::repositionPorts(
 
     foreach (const PortPair* port, m_ports)
     {
+        if(!port->isVisible())
+        {
+            continue;
+        }
         qreal textWidth  = port->boundingRect().width();
         qreal textHeight = port->boundingRect().height();
 
@@ -161,6 +173,10 @@ void Node::repositionPorts(
 
     foreach (PortPair* port, m_ports)
     {
+        if(!port->isVisible())
+        {
+            continue;
+        }
         qreal textHeight = port->boundingRect().height();
         port->setPos(-port->boundingRect().width() / 2, y - textHeight / 2);
         port->repositionPorts(width, y);

@@ -62,7 +62,8 @@ SOURCES                                += $$ROOT/main.cpp \
                                           $$ROOT/src/CodeEditor/BashGenerator.cpp \
                                           $$ROOT/src/CodeEditor/CodeGenerator.cpp \
                                           $$ROOT/src/NodeEditor/SelectionBox.cpp \
-                                          $$ROOT/src/CodeInterpreter/CodeInterpreter.cpp
+                                          $$ROOT/src/CodeInterpreter/CodeInterpreter.cpp \
+                                          $$ROOT/src/CodeEditor/SpmGenerator.cpp
 
 HEADERS                                += $$ROOT/include/MainWindow.hpp \
                                           $$ROOT/include/Settings/Argument.hpp \
@@ -89,7 +90,8 @@ HEADERS                                += $$ROOT/include/MainWindow.hpp \
                                           $$ROOT/include/CodeEditor/BashGenerator.hpp \
                                           $$ROOT/include/CodeEditor/CodeGenerator.hpp \
                                           $$ROOT/include/NodeEditor/SelectionBox.hpp \
-                                          $$ROOT/include/CodeInterpreter/CodeInterpreter.hpp
+                                          $$ROOT/include/CodeInterpreter/CodeInterpreter.hpp \
+                                          $$ROOT/include/CodeEditor/SpmGenerator.hpp
 
 RESOURCES                               = $$ROOT/Resources/resources.qrc
 

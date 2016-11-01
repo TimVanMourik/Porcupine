@@ -2,10 +2,12 @@
 
 Argument::Argument(
         const QString& _argumentName,
-        FieldType _type
+        FieldType _type,
+        QString _defaultValue
         ) :
     m_portType(_type),
-    m_argumentName(_argumentName)
+    m_argumentName(_argumentName),
+    m_defaultValue(_defaultValue)
 {
 }
 
@@ -14,6 +16,13 @@ void Argument::setName(
         )
 {
     m_argumentName = _name;
+}
+
+void Argument::setDefault(
+        const QString& _default
+        )
+{
+    m_defaultValue = _default;
 }
 
 void Argument::setType(
@@ -27,6 +36,12 @@ const QString& Argument::getName(
         ) const
 {
     return m_argumentName;
+}
+
+const QString& Argument::getDefault(
+        ) const
+{
+    return m_defaultValue;
 }
 
 const Argument::FieldType& Argument::getType(

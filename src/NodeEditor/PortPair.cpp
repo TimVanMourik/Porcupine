@@ -55,7 +55,6 @@ void PortPair::setArgument(
         )
 {
     m_name = _argument.getName();
-//    m_dataType = _argument.getType();
     setPlainText(m_name);
 }
 

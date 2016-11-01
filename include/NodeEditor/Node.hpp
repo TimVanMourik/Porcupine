@@ -43,7 +43,8 @@ public:
             );
     //
     void addPortPair(
-            const Argument& _name
+            const Argument& _name,
+            bool _initialiseWithDefault = false
             );
     //
     void connectPortsToPair(
@@ -52,11 +53,13 @@ public:
             );
     //
     void addPort(
-            const Argument& _argument
+            const Argument& _argument,
+            bool _initialiseWithDefault = false
             );
     //
     void addPorts(
-            const QVector<Argument>& _arguments
+            const QVector<Argument>& _arguments,
+            bool _initialiseWithDefault = false
             );
     //
     void paint(

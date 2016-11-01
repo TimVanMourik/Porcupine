@@ -147,6 +147,7 @@ QString NodeLibrary::addNodeSetting(
                     else
                     {
                         Argument codeArgument(node.attributes().namedItem("name").nodeValue());
+                        codeArgument.setDefault(node.attributes().namedItem("default").nodeValue());
                         if(node.nodeName().compare("title") == 0)
                         {
                             codeArgument.setType(Argument::FieldType::NONE);
@@ -162,6 +163,10 @@ QString NodeLibrary::addNodeSetting(
                         else if(node.nodeName().compare("output") == 0)
                         {
                             codeArgument.setType(Argument::FieldType::OUTPUT);
+                        }
+                        else if(node.nodeName().compare("hidden") == 0)
+                        {
+                            codeArgument.setType(Argument::FieldType::HIDDEN);
                         }
                         else if(node.nodeName().compare("none") == 0)
                         {
