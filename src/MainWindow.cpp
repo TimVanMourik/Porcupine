@@ -144,8 +144,8 @@ void MainWindow::loadDefaultNodes(
 
     QStringList toolboxNames;
     toolboxNames << QString(":/Dictionaries/node_%1.xml");
-//    toolboxNames << QString(":/Dictionaries/TVM/DesignMatrix/node_%1.xml");
-//    toolboxNames << QString(":/Dictionaries/TVM/node_%1.xml");
+    toolboxNames << QString(":/Dictionaries/TVM/DesignMatrix/node_%1.xml");
+    toolboxNames << QString(":/Dictionaries/TVM/node_%1.xml");
     toolboxNames << QString(":/Dictionaries/SPM/node_%1.xml");
 //    toolboxNames << QString(":/Dictionaries/FieldTrip/node_%1.xml");
 //    toolboxNames << QString(":/Dictionaries/FSL/node_%1.xml");

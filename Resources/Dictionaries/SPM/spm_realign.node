@@ -23,7 +23,7 @@
                 <argument name="spm.spatial.realign.roptions.which"/>
             </language>
         </code>
-    </input>
+    </hidden>
     <hidden name="Interpolation" default="4">
         <code>
             <language name="SPM">
@@ -31,9 +31,9 @@
             </language>
         </code>
     </hidden>
-    <hidden name="Wrap">
+    <hidden name="Wrap" default="[0, 0, 0]">
         <code>
-            <language name="SPM" default="[0, 0, 0]">
+            <language name="SPM">
                 <argument name="spm.spatial.realign.roptions.wrap"/>
             </language>
         </code>
