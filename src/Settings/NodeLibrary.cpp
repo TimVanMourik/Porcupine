@@ -107,9 +107,7 @@ QString NodeLibrary::addNodeSetting(
         {
 //            std::cerr << rootTag.toStdString() << "\n"; //Should print 'node'
             Argument title;
-            QVector<Argument> inputNodes;
-            QVector<Argument> inOutNodes;
-            QVector<Argument> outputNodes;
+            QVector<Argument> nodes;
             QDomNode node = docElem.firstChild();
             QStringList category;
             while(!node.isNull())
@@ -129,68 +127,82 @@ QString NodeLibrary::addNodeSetting(
                     else if(node.nodeName().compare("title") == 0)
                     {
                         title.setName(node.attributes().namedItem("name").nodeValue());
-                        ///@todo add 'category' atribute
                         // if there is a code block
                         QDomNode code = node.firstChild();
                         if(!code.isNull() && code.nodeName().compare("code") == 0)
                         {
-                            QString language;
-                            QString argument;
-                            QString comment;
-                            parseCodeBlock(code, language, argument, comment);
-                            title.addCode(language, argument, comment);
+                            QDomNode codeBlock = code.firstChild();
+                            while(!codeBlock.isNull())
+                            {
+                                if(codeBlock.nodeName().compare("language") == 0)
+                                {
+                                    QString language, argument, comment;
+                                    parseCodeBlock(codeBlock, language, argument, comment);
+                                    title.addCode(language, argument, comment);
+                                }
+                                codeBlock = codeBlock.nextSibling();
+                            }
                         }
                     }
-                    else if(node.nodeName().compare("input") == 0)
+                    else
                     {
                         Argument codeArgument(node.attributes().namedItem("name").nodeValue());
+                        codeArgument.setDefault(node.attributes().namedItem("default").nodeValue());
+                        if(node.nodeName().compare("title") == 0)
+                        {
+                            codeArgument.setType(Argument::FieldType::NONE);
+                        }
+                        else if(node.nodeName().compare("input") == 0)
+                        {
+                            codeArgument.setType(Argument::FieldType::INPUT);
+                        }
+                        else if(node.nodeName().compare("input-output") == 0)
+                        {
+                            codeArgument.setType(Argument::FieldType::INOUT);
+                        }
+                        else if(node.nodeName().compare("output") == 0)
+                        {
+                            codeArgument.setType(Argument::FieldType::OUTPUT);
+                        }
+                        else if(node.nodeName().compare("hidden") == 0)
+                        {
+                            codeArgument.setType(Argument::FieldType::HIDDEN);
+                        }
+                        else if(node.nodeName().compare("none") == 0)
+                        {
+                            codeArgument.setType(Argument::FieldType::NONE);
+                        }
+                        else if(node.nodeName().compare("secret") == 0)
+                        {
+                            codeArgument.setType(Argument::FieldType::SECRET);
+                        }
+                        else ///@todo think of how to handle a block with a different name
+                        {
+                            codeArgument.setType(Argument::FieldType::NONE);
+                        }
                         // if there is a code block
                         QDomNode code = node.firstChild();
                         if(!code.isNull() && code.nodeName().compare("code") == 0)
                         {
-                            QString language;
-                            QString argument;
-                            QString comment;
-                            parseCodeBlock(code, language, argument, comment);
-                            codeArgument.addCode(language, argument, comment);
+                            QDomNode codeBlock = code.firstChild();
+                            while(!codeBlock.isNull())
+                            {
+                                if(codeBlock.nodeName().compare("language") == 0)
+                                {
+                                    QString language, argument, comment;
+                                    parseCodeBlock(codeBlock, language, argument, comment);
+                                    codeArgument.addCode(language, argument, comment);
+                                }
+                                codeBlock = codeBlock.nextSibling();
+                            }
                         }
-                        inputNodes.append(codeArgument);
-                    }
-                    else if(node.nodeName().compare("input-output") == 0)
-                    {
-                        Argument codeArgument(node.attributes().namedItem("name").nodeValue());
-                        // if there is a code block
-                        QDomNode code = node.firstChild();
-                        if(!code.isNull() && code.nodeName().compare("code") == 0)
-                        {
-                            QString language;
-                            QString argument;
-                            QString comment;
-                            parseCodeBlock(code, language, argument, comment);
-                            codeArgument.addCode(language, argument, comment);
-                        }
-                        inOutNodes.append(codeArgument);
-                    }
-                    else if(node.nodeName().compare("output") == 0)
-                    {
-                        Argument codeArgument(node.attributes().namedItem("name").nodeValue());
-                        // if there is a code block
-                        QDomNode code = node.firstChild();
-                        if(!code.isNull() && code.nodeName().compare("code") == 0)
-                        {
-                            QString language;
-                            QString argument;
-                            QString comment;
-                            parseCodeBlock(code, language, argument, comment);
-                            codeArgument.addCode(language, argument, comment);
-                        }
-                        outputNodes.append(codeArgument);
+                        nodes.append(codeArgument);
                     }
                     node = node.nextSibling();
                 }
             }
 //            std::cout << title.toStdString() << std::endl;
-            NodeSetting* newNode = new NodeSetting(title, inputNodes, inOutNodes, outputNodes);
+            NodeSetting* newNode = new NodeSetting(title, nodes);
             newNode->setCategory(category);
             m_nodeSettings[title.getName()] = newNode;
             m_nodeNames << title.getName();
@@ -210,33 +222,25 @@ QString NodeLibrary::addNodeSetting(
 }
 
 void NodeLibrary::parseCodeBlock(
-        const QDomNode& _code,
+        const QDomNode& _codeBlock,
         QString& o_language,
         QString& o_argument,
         QString& o_comment
         )
 {
-    QDomNode codeBlock = _code.firstChild();
-    while(!codeBlock.isNull())
+    o_language = _codeBlock.attributes().namedItem("name").nodeValue();
+    QDomNode argumentBlock = _codeBlock.firstChild();
+    while(!argumentBlock.isNull())
     {
-        if(codeBlock.nodeName().compare("language") == 0)
+        if(argumentBlock.nodeName().compare("argument") == 0)
         {
-            o_language = codeBlock.attributes().namedItem("name").nodeValue();
-            QDomNode argumentBlock = codeBlock.firstChild();
-            while(!argumentBlock.isNull())
-            {
-                if(argumentBlock.nodeName().compare("argument") == 0)
-                {
-                    o_argument = argumentBlock.attributes().namedItem("name").nodeValue();
-                }
-                else if(argumentBlock.nodeName().compare("comment") == 0)
-                {
-                    o_comment = argumentBlock.attributes().namedItem("text").nodeValue();
-                }
-                argumentBlock = argumentBlock.nextSibling();
-            }
+            o_argument = argumentBlock.attributes().namedItem("name").nodeValue();
         }
-        codeBlock = codeBlock.nextSibling();
+        else if(argumentBlock.nodeName().compare("comment") == 0)
+        {
+            o_comment = argumentBlock.attributes().namedItem("text").nodeValue();
+        }
+        argumentBlock = argumentBlock.nextSibling();
     }
 }
 

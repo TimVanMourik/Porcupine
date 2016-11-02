@@ -1,7 +1,48 @@
 <node>
-    <title>tvm_glmToTMap</title>
-    <input name="Design Matrix" class="Mat file"/>
-    <input name="Betas" class="4D NifTI"/>
-    <input name="Residual Sum of Squares" class="3D NifTI"/>
-    <output name="T-Map" class="3D NifTI"/>
+    <category name="TVM">
+        <category name="Activation"/>
+    </category>
+    <title name="GLM to T-map">
+        <code>
+            <language name="MATLAB">
+                <comment text="GLM to T-map"/>
+                <argument name="tvm_glmToTMap"/>
+            </language>
+        </code>
+    </title>
+    <input-output name="Design Matrix">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_DesignMatrix"/>
+            </language>
+        </code>
+    </input-output>
+    <input-output name="Betas">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_Betas"/>
+            </language>
+        </code>
+    </input-output>
+    <input-output name="Residual Sum of Squares">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_ResidualSumOfSquares"/>
+            </language>
+        </code>
+    </input-output>
+    <input-output name="Contrast">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_Contrast"/>
+            </language>
+        </code>
+    </input-output>
+    <output name="T-Map">
+        <code>
+            <language name="MATLAB">
+                <argument name="o_TMap"/>
+            </language>
+        </code>
+    </output>
 </node>

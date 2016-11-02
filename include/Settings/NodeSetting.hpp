@@ -23,9 +23,7 @@ public:
     //
     NodeSetting(
             const Argument& _name,
-            const QVector<Argument>& _inputPortNames,
-            const QVector<Argument>& _inOutPortNames,
-            const QVector<Argument>& _outputPortNames
+            const QVector<Argument>& _ports
             );
     //
     void setColour(
@@ -38,13 +36,7 @@ public:
     const Argument& getTitle(
             ) const;
     //
-    const QVector<Argument>& getInput(
-            ) const;
-    //
-    const QVector<Argument>& getInOut(
-            ) const;
-    //
-    const QVector<Argument>& getOutput(
+    const QVector<Argument>& getPorts(
             ) const;
     //
     void setCategory(
@@ -60,11 +52,7 @@ private:
     //
     Argument m_name;
     //
-    QVector<Argument> m_inputPortNames;
-    //
-    QVector<Argument>  m_inOutPortNames;
-    //
-    QVector<Argument>  m_outputPortNames;
+    QVector<Argument> m_ports;
     //
     QStringList m_category;
     //

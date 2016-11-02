@@ -38,6 +38,10 @@ public slots:
     void catchLabelChanged(
             const QString& _name
             );
+    //
+    void catchSelected(
+            bool _selected
+            );
 
 private:
     //

@@ -1,0 +1,56 @@
+<node>
+    <category name="TVM">
+        <category name="Registration"/>
+    </category>
+    <title name="Label to Volume">
+        <code>
+            <language name="MATLAB">
+                <comment text="Label to volume"/>
+                <argument name="tvm_labelToVolume"/>
+            </language>
+        </code>
+    </title>
+    <input-output name="Reference Volume">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_ReferenceVolume"/>
+            </language>
+        </code>
+    </input-output>
+    <input-output name="Label Files">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_LabelFiles"/>
+            </language>
+        </code>
+    </input-output>
+    <input-output name="Coregistration Matrix">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_CoregistrationMatrix"/>
+            </language>
+        </code>
+    </input-output>
+    <input name="FreeSurfer Folder">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_FreeSurfer"/>
+            </language>
+        </code>
+    </input>
+    <input name="Hemisphere">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_Hemisphere"/>
+            </language>
+        </code>
+    </input>
+    <output name="Output Volume">
+        <code>
+            <language name="MATLAB">
+                <argument name="o_VolumeFile"/>
+            </language>
+        </code>
+    </output>
+</node>
+

@@ -44,7 +44,7 @@ public:
     //
     void addPortPair(
             const Argument& _name,
-            const QString& _type
+            bool _initialiseWithDefault = false
             );
     //
     void connectPortsToPair(
@@ -52,28 +52,14 @@ public:
             const Port* _output
             );
     //
-    void addInputPort(
-            const Argument& _argument
+    void addPort(
+            const Argument& _argument,
+            bool _initialiseWithDefault = false
             );
     //
-    void addInOutPort(
-            const Argument& _argument
-            );
-    //
-    void addOutputPort(
-            const Argument& _argument
-            );
-    //
-    void addInputPorts(
-            const QVector<Argument>& _arguments
-            );
-    //
-    void addInOutPorts(
-            const QVector<Argument>& _arguments
-            );
-    //
-    void addOutputPorts(
-            const QVector<Argument>& _arguments
+    void addPorts(
+            const QVector<Argument>& _arguments,
+            bool _initialiseWithDefault = false
             );
     //
     void paint(

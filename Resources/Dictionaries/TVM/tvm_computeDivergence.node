@@ -1,0 +1,28 @@
+<node>
+    <category name="TVM">
+        <category name="Laminar Analysis"/>
+    </category>
+    <title name="Compute divergence">
+        <code>
+            <language name="MATLAB">
+                <comment text="Compute divergence"/>
+                <argument name="tvm_computeDivergence"/>
+            </language>
+        </code>
+    </title>
+    <input-output name="Vector Field">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_VectorField"/>
+            </language>
+        </code>
+    </input-output>
+    <output name="Divergence">
+        <code>
+            <language name="MATLAB">
+                <argument name="o_Divergence"/>
+            </language>
+        </code>
+    </output>
+</node>
+

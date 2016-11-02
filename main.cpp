@@ -25,9 +25,10 @@ int main(
         char *argv[]
         )
 {
-    QApplication a(argc, argv);
+    QApplication app(argc, argv);
     MainWindow w;
     w.showMaximized();
+    w.setWindowTitle("PORcupine Creates Ur PipelINE");
 
-    return a.exec();
+    return app.exec();
 }

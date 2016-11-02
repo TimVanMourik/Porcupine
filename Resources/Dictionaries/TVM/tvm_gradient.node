@@ -1,0 +1,35 @@
+<node>
+    <category name="TVM">
+        <category name="Laminar Analysis"/>
+    </category>
+    <title name="Compute Gradient">
+        <code>
+            <language name="MATLAB">
+                <comment text="Compute Gradient"/>
+                <argument name="tvm_gradient"/>
+            </language>
+        </code>
+    </title>
+    <input-output name="Potential Volume">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_Potential"/>
+            </language>
+        </code>
+    </input-output>
+    <input name="Normalise">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_Normalise"/>
+            </language>
+        </code>
+    </input>
+    <output name="Gradient">
+        <code>
+            <language name="MATLAB">
+                <argument name="o_Gradient"/>
+            </language>
+        </code>
+    </output>
+</node>
+

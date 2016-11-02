@@ -7,11 +7,14 @@
             <xs:sequence>
               <xs:element name="category" minOccurs="0">
                 <xs:complexType>
-                  <xs:simpleContent>
-                    <xs:extension base="xs:string">
-                      <xs:attribute type="xs:string" name="name"/>
-                    </xs:extension>
-                  </xs:simpleContent>
+                  <xs:sequence>
+                    <xs:element name="category" minOccurs="0">
+                      <xs:complexType>
+                        <xs:attribute type="xs:string" name="name"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="name"/>
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
@@ -57,6 +60,7 @@
             <xs:attribute type="xs:string" name="category"/>
           </xs:complexType>
         </xs:element>
+        <xs:choice maxOccurs="unbounded">
         <xs:element name="input" maxOccurs="unbounded" minOccurs="0">
           <xs:complexType>
             <xs:sequence>
@@ -93,6 +97,7 @@
               </xs:element>
             </xs:sequence>
             <xs:attribute type="xs:string" name="name" use="optional"/>
+            <xs:attribute type="xs:string" name="default" use="optional"/>
           </xs:complexType>
         </xs:element>
         <xs:element name="input-output" maxOccurs="unbounded" minOccurs="0">
@@ -131,6 +136,7 @@
               </xs:element>
             </xs:sequence>
             <xs:attribute type="xs:string" name="name" use="optional"/>
+            <xs:attribute type="xs:string" name="default" use="optional"/>
           </xs:complexType>
         </xs:element>
         <xs:element name="output" maxOccurs="unbounded" minOccurs="0">
@@ -169,8 +175,88 @@
               </xs:element>
             </xs:sequence>
             <xs:attribute type="xs:string" name="name" use="optional"/>
+            <xs:attribute type="xs:string" name="default" use="optional"/>
           </xs:complexType>
         </xs:element>
+        <xs:element name="hidden" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="code" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="language">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="argument">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="name" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="comment" minOccurs="0">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="text"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="name" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="name" use="optional"/>
+            <xs:attribute type="xs:string" name="default" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="secret" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="code" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="language">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="argument">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="name" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="comment" minOccurs="0">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="text"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="name" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="name" use="optional"/>
+            <xs:attribute type="xs:string" name="default" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+        </xs:choice>
       </xs:sequence>
     </xs:complexType>
   </xs:element>

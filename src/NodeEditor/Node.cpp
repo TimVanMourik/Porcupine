@@ -51,9 +51,9 @@ Node::Node(
     m_nameLabel->setAttribute(Qt::WA_TranslucentBackground);
 //    m_nameLabel->setDefaultTextColor(preferences.getPortTextColor());
 
-    QPainterPath p;
-    p.addRect(0, 0, 0, 0);
-    setPath(p);
+    QPainterPath path;
+    path.addRect(0, 0, 0, 0);
+    setPath(path);
     setPen(QPen(Qt::darkRed));
     setFlag(QGraphicsItem::ItemIsMovable);
     setFlag(QGraphicsItem::ItemIsSelectable);
@@ -76,88 +76,66 @@ void Node::loadFromNodeSetting(
     m_name = m_setting->getName();
     m_nameLabel->setText(m_name);
 
-    addInputPorts(_setting->getInput());
-    addInOutPorts(_setting->getInOut());
-    addOutputPorts(_setting->getOutput());
+    addPorts(_setting->getPorts(), true);
     repositionPorts();
 }
 
-void Node::addInputPorts(
-        const QVector<Argument>& names
+void Node::addPorts(
+        const QVector<Argument>& ports,
+        bool _initialiseWithDefault
         )
 {
-    foreach(const Argument& argument, names)
+    foreach(const Argument& argument, ports)
     {
-        addInputPort(argument);
+        addPortPair(argument, _initialiseWithDefault);
     }
 }
 
-void Node::addInOutPorts(
-        const QVector<Argument>& names
+void Node::addPort(
+        const Argument& _argument,
+        bool _initialiseWithDefault
         )
 {
-    foreach(const Argument& argument, names)
-    {
-        addInOutPort(argument);
-    }
-}
-
-void Node::addOutputPorts(
-        const QVector<Argument>& names
-        )
-{
-    foreach(const Argument& argument, names)
-    {
-        addOutputPort(argument);
-    }
-}
-
-void Node::addInputPort(
-        const Argument& _argument
-        )
-{
-    addPortPair(_argument, "i");
-}
-
-void Node::addInOutPort(
-        const Argument& _argument
-        )
-{
-    addPortPair(_argument, "io");
-}
-
-void Node::addOutputPort(
-        const Argument& _argument
-        )
-{
-    addPortPair(_argument, "o");
+    addPortPair(_argument, _initialiseWithDefault);
 }
 
 void Node::addPortPair(
         const Argument& _argument,
-        const QString& _type
+        bool _initialiseWithDefault
         )
 {
     Preferences& preferences = Preferences::getInstance();
     PortPair* pair = new PortPair(this);
     pair->setArgument(_argument);
-    pair->setDefaultTextColor(preferences.getPortTextColor());
-
-    if(_type.compare("i") == 0)
+    pair->setDefaultTextColor(preferences.m_portTextColor);
+    switch(_argument.getType())
     {
+    case Argument::FieldType::INPUT :
         pair->createInputPort();
-    }
-    else if(_type.compare("io") == 0)
-    {
+        break;
+    case Argument::FieldType::INOUT :
         pair->createInputPort();
         pair->createOutputPort();
-    }
-    else if(_type.compare("o") == 0)
-    {
+        break;
+    case Argument::FieldType::OUTPUT :
         pair->createOutputPort();
+        break;
+    case Argument::FieldType::HIDDEN :
+        pair->setVisible(false);
+        break;
+    case Argument::FieldType::SECRET :
+        pair->setVisible(false);
+        pair->setSecret(true);
+        break;
+    case Argument::FieldType::NONE :
+        pair->setVisible(false);
+        break;
+    }
+    if(_initialiseWithDefault)
+    {
+        pair->fileNameChanged(_argument.getDefault(), false);
     }
     m_ports.append(pair);
-//    repositionPorts();
 }
 
 void Node::repositionPorts(
@@ -174,6 +152,10 @@ void Node::repositionPorts(
 
     foreach (const PortPair* port, m_ports)
     {
+        if(!port->isVisible())
+        {
+            continue;
+        }
         qreal textWidth  = port->boundingRect().width();
         qreal textHeight = port->boundingRect().height();
 
@@ -189,12 +171,16 @@ void Node::repositionPorts(
     path.addRect(-width / 2, -height / 2, width, height);
     setPath(path);
     int y = s_verticalMargin - height / 2;
-    m_nameLabel->move(-m_nameLabel->fontMetrics().width(m_name) / 2 - s_horizontalMargin, y);
+    m_nameLabel->move(-m_nameLabel->fontMetrics().width(m_name) / 2, y);
 
     y += m_nameLabel->fontMetrics().height() * 2 + s_textSpacing * 4;
 
     foreach (PortPair* port, m_ports)
     {
+        if(!port->isVisible())
+        {
+            continue;
+        }
         qreal textHeight = port->boundingRect().height();
         port->setPos(-port->boundingRect().width() / 2, y - textHeight / 2);
         port->repositionPorts(width, y);
@@ -214,13 +200,13 @@ void Node::paint(
     Preferences& preferences = Preferences::getInstance();
     if(isSelected())
     {
-        _painter->setPen(preferences.getNodePenSelected());
-        _painter->setBrush(preferences.getNodeBrushSelected());
+        _painter->setPen(preferences.m_nodePenSelected);
+        _painter->setBrush(preferences.m_nodeBrushSelected);
     }
     else
     {
-        _painter->setPen(preferences.getNodePenUnselected());
-        _painter->setBrush(preferences.getNodeBrushUnselected());
+        _painter->setPen(preferences.m_nodePenUnselected);
+        _painter->setBrush(preferences.m_nodeBrushUnselected);
     }
     _painter->drawPath(path());
 }
@@ -310,7 +296,7 @@ void Node::loadFromXml(
                 }
                 if(pair)
                 {
-                    pair->setDefaultTextColor(preferences.getPortTextColor());
+                    pair->setDefaultTextColor(preferences.m_portTextColor);
                     pair->loadFromXml(portElement, o_portMap);
                 }
                 portNode = portNode.nextSibling();

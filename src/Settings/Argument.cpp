@@ -1,9 +1,13 @@
 #include "Argument.hpp"
 
 Argument::Argument(
-        const QString& _argumentName
+        const QString& _argumentName,
+        FieldType _type,
+        QString _defaultValue
         ) :
-    m_argumentName(_argumentName)
+    m_portType(_type),
+    m_argumentName(_argumentName),
+    m_defaultValue(_defaultValue)
 {
 }
 
@@ -14,10 +18,36 @@ void Argument::setName(
     m_argumentName = _name;
 }
 
+void Argument::setDefault(
+        const QString& _default
+        )
+{
+    m_defaultValue = _default;
+}
+
+void Argument::setType(
+        const FieldType& _type
+        )
+{
+    m_portType = _type;
+}
+
 const QString& Argument::getName(
         ) const
 {
     return m_argumentName;
+}
+
+const QString& Argument::getDefault(
+        ) const
+{
+    return m_defaultValue;
+}
+
+const Argument::FieldType& Argument::getType(
+        ) const
+{
+    return m_portType;
 }
 
 QString Argument::getArgument(

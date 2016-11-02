@@ -10,16 +10,41 @@ class DataType;
 class Argument
 {
 public:
+    enum FieldType
+    {
+        NONE    = 0,
+        INPUT   = 1,
+        OUTPUT  = 2,
+        INOUT   = 3,
+        HIDDEN  = 4, //hidden in the NodeEditor
+        SECRET  = 5  //also hidden in the NodeTreeEditor
+    };
     //
     Argument(
-            const QString& _argumentName = QString()
+            const QString& _argumentName = QString(),
+            FieldType _type = NONE,
+            QString _defaultValue = QString("")
             );
     //
     void setName(
             const QString& _name
             );
     //
+    void setDefault(
+            const QString& _name
+            );
+    //
+    void setType(
+            const FieldType& _type
+            );
+    //
     const QString& getName(
+            ) const;
+    //
+    const QString& getDefault(
+            ) const;
+    //
+    const FieldType& getType(
             ) const;
     //
     QString getArgument(
@@ -44,7 +69,11 @@ public:
 
 private:
     //
+    FieldType m_portType;
+    //
     QString m_argumentName;
+    //
+    QString m_defaultValue;
     //
     struct Code
     {

@@ -7,6 +7,7 @@
 #include "PythonHighlighter.hpp"
 #include "BashGenerator.hpp"
 #include "MatlabGenerator.hpp"
+#include "SpmGenerator.hpp"
 #include "PythonGenerator.hpp"
 
 CodeEditor::CodeEditor(
@@ -19,6 +20,8 @@ CodeEditor::CodeEditor(
 
     //MATLAB (C)
     setupMatlabEditor();
+    //SPM within MATLAB (C)
+    setupSpmEditor();
     //Bash
     setupBashEditor();
     //Python
@@ -54,6 +57,27 @@ void CodeEditor::setupMatlabEditor(
     m_textEditors[matlab] = matlabEditor;
     m_codeGenerators[matlab] = new MatlabGenerator();
     addTab(m_textEditors[matlab], matlab);
+}
+
+void CodeEditor::setupSpmEditor(
+        )
+{
+    const int tabWidth = 4;
+    QString spm("SPM");
+    m_programmingLanguages << spm;
+    QFont matlabFont = QFont("Courier", 10);
+    matlabFont.setStyleHint(QFont::Monospace);
+    matlabFont.setFixedPitch(true);
+    QFontMetrics matlabMetric(matlabFont);
+
+    QTextEdit* spmEditor = new QTextEdit(this);
+    spmEditor->setFont(matlabFont);
+    spmEditor->setTabStopWidth(tabWidth * matlabMetric.width(' '));
+
+    new MatlabHighlighter(spmEditor->document());
+    m_textEditors[spm] = spmEditor;
+    m_codeGenerators[spm] = new SpmGenerator();
+    addTab(m_textEditors[spm], spm);
 }
 
 void CodeEditor::setupBashEditor(

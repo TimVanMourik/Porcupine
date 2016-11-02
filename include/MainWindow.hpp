@@ -19,6 +19,8 @@ namespace Ui {
 class MainWindow;
 }
 
+class QSlider;
+
 class CodeEditor;
 class NodeEditor;
 class NodeSetting;
@@ -28,13 +30,16 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 public:
+    //
     explicit MainWindow(
             QWidget* _parent = 0
             );
+    //
     ~MainWindow(
             );
 
 private slots:
+    //
     void contextMenuEvent(
             QContextMenuEvent* _event
             );
@@ -46,7 +51,6 @@ private slots:
     void setFileAt(
             int _tabNumber
             );
-
     //
     void saveFileToXml(
             );

@@ -22,6 +22,14 @@ void NodeAntenna::catchLabelChanged(
     m_node->labelNameChanged(_name);
 }
 
+
+void NodeAntenna::catchSelected(
+        bool _selected
+        )
+{
+    m_node->setSelected(_selected);
+}
+
 void NodeAntenna::sendLabelChanged(
         const QString& _name
         )

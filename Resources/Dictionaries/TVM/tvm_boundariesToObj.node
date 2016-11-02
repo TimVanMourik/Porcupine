@@ -1,5 +1,7 @@
 <node>
-    <category name="TVM"/>
+    <category name="TVM">
+        <category name="Laminar Analysis"/>
+    </category>
     <title name="Boundaries to OBJ">
         <code>
             <language name="MATLAB">
@@ -8,13 +10,13 @@
             </language>
         </code>
     </title>
-    <input name="Boundaries">
+    <input-output name="Boundaries">
         <code>
             <language name="MATLAB">
                 <argument name="i_Boundaries"/>
             </language>
         </code>
-    </input>
+    </input-output>
     <output name="OBJ white matter surface">
         <code>
             <language name="MATLAB">

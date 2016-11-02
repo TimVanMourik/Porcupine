@@ -24,14 +24,16 @@ NodeTreeItem::NodeTreeItem(
     m_node(_node),
     m_startPosition(QPoint()),
     m_numberLabel(0),
-    m_number(0)
+    m_number(0),
+    m_isSelected(false)
 {
     QVBoxLayout* mainLayout = new QVBoxLayout(this);
-    QWidget* headerWidget = new QWidget();
+
+    QWidget* headerBlock = new QWidget();
     QWidget* portBlock = new QWidget();
-    mainLayout->addWidget(headerWidget);
+    mainLayout->addWidget(headerBlock);
     mainLayout->addWidget(portBlock);
-    QHBoxLayout* headerLayout = new QHBoxLayout(headerWidget);
+    QHBoxLayout* headerLayout = new QHBoxLayout(headerBlock);
     QFormLayout* portBlockLayout = new QFormLayout(portBlock);
 
     setFrameShadow(QFrame::Raised);
@@ -67,14 +69,12 @@ NodeTreeItem::NodeTreeItem(
     portBlockLayout->setFieldGrowthPolicy(QFormLayout::FieldsStayAtSizeHint);
     portBlockLayout->setFormAlignment(Qt::AlignLeft | Qt::AlignTop);
     portBlockLayout->setLabelAlignment(Qt::AlignHCenter);
-    portBlock->setLayout(portBlockLayout);
     portBlock->setVisible(false);
 
-    /// @todo Make two colums, one for the port name, one for the file name
     foreach(PortPair* pair, _node->getPorts())
     {
         QLineEdit* fileName = new QLineEdit();
-        portBlockLayout->addRow(pair->getName(), fileName);
+        fileName->setPlaceholderText("<value>");
 
         m_fileNames[pair->getName()] = fileName;
         QString name = pair->getFileName();
@@ -82,7 +82,11 @@ NodeTreeItem::NodeTreeItem(
         {
             fileName->setText(name);
         }
-        fileName->setPlaceholderText("<value>");
+        if(pair->isSecret())
+        {
+            continue;
+        }
+        portBlockLayout->addRow(pair->getName(), fileName);
 
         connect(fileName, SIGNAL(textEdited(QString)), pair, SLOT(fileNameChanged(QString)));
         /// @todo set the SLOT such that it does not only handle the text but also the font
@@ -157,6 +161,14 @@ void NodeTreeItem::mousePressEvent(
         QMouseEvent* _event
         )
 {
+//    if(m_isSelected)
+//    {
+//       setSelected(false);
+//    }
+//    else
+//    {
+//        setSelected(true);
+//    }
     raise();
 //    setWindowOpacity(0.5);
     if(_event->button() == Qt::LeftButton)
@@ -169,7 +181,6 @@ void NodeTreeItem::mouseMoveEvent(
         QMouseEvent* _event
         )
 {
-
     const QPoint delta = _event->globalPos() - m_startPosition;
     move(x(), y() + delta.y());
     m_startPosition = _event->globalPos();
@@ -197,6 +208,7 @@ void NodeTreeItem::setSelected(
         bool _isSelected
         )
 {
+    m_isSelected = _isSelected;
     if(_isSelected)
     {
         setObjectName("myObject");

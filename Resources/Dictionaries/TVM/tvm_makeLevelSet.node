@@ -1,9 +1,56 @@
 <node>
-    <title>tvm_makeLevelSet</title>
-    <input name="Reference Volume" class="3D NifTI"/>
-    <input name="White Matter OBJ" class="OBJ file"/>
-    <input name="Pial OBJ" class="OBJ file"/>
-    <input name="Transformation matrix" class="Matrix44"/>
-    <output name="White Matter SDF" class="3D NifTI"/>
-    <output name="Pial SDF" class="3D NifTI"/>
+    <category name="TVM">
+        <category name="Laminar Analysis"/>
+    </category>
+    <title name="Make level set">
+        <code>
+            <language name="MATLAB">
+                <comment text="Make level set"/>
+                <argument name="tvm_makeLevelSet"/>
+            </language>
+        </code>
+    </title>
+    <input-output name="Reference Volume">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_ReferenceVolume"/>
+            </language>
+        </code>
+    </input-output>
+    <input-output name="White Matter OBJ">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_ObjWhite"/>
+            </language>
+        </code>
+    </input-output>
+    <input-output name="Pial OBJ">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_ObjPial"/>
+            </language>
+        </code>
+    </input-output>
+    <input-output name="Transformation matrix">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_Matrix"/>
+            </language>
+        </code>
+    </input-output>
+    <output name="White Matter SDF">
+        <code>
+            <language name="MATLAB">
+                <argument name="o_White"/>
+            </language>
+        </code>
+    </output>
+    <output name="Pial SDF">
+        <code>
+            <language name="MATLAB">
+                <argument name="o_Pial"/>
+            </language>
+        </code>
+    </output>
 </node>
+

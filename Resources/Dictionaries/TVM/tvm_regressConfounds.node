@@ -1,0 +1,41 @@
+<node>
+    <category name="TVM">
+        <category name="Activation"/>
+    </category>
+    <title name="Regress Confounds">
+        <code>
+            <language name="MATLAB">
+                <comment text="Regress out confounds"/>
+                <argument name="tvm_regressConfounds"/>
+            </language>
+        </code>
+    </title>
+    <input-output name="Functional Folder">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_FunctionalFolder"/>
+            </language>
+        </code>
+    </input-output>
+    <input-output name="Design Matrix">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_DesignMatrix"/>
+            </language>
+        </code>
+    </input-output>
+    <input-output name="Confounds">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_Confounds"/>
+            </language>
+        </code>
+    </input-output>
+    <output name="Filtered Folder">
+        <code>
+            <language name="MATLAB">
+                <argument name="o_FilteredFolder"/>
+            </language>
+        </code>
+    </output>
+</node>

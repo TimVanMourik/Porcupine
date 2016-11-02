@@ -2,7 +2,6 @@
 #define PREFERENCES_H
 
 #include <QGraphicsItem>
-#include <QLinearGradient>
 #include <QPen>
 
 #include "Singleton.hpp"
@@ -11,85 +10,7 @@ class Preferences : public Singleton<Preferences>
 {
     friend class Singleton<Preferences>;
 public:
-    void setSceneBackgroundBrush(
-            const QBrush& _brush
-            );
-
-    void setNodeBrushUnselected(
-            const QBrush& _brush
-            );
-    void setNodeBrushSelected(
-            const QBrush& _brush
-            );
-    void setNodePenUnselected(
-            const QPen& _pen
-            );
-    void setNodePenSelected(
-            const QPen& _pen
-            );
-
-    void setLinkBrushUnselected(
-            const QBrush& _brush
-            );
-    void setLinkBrushSelected(
-            const QBrush& _brush
-            );
-    void setLinkPenUnselected(
-            const QPen& _pen
-            );
-    void setLinkPenSelected(
-            const QPen& _pen
-            );
-
-    void setPortBrushUnselected(
-            const QBrush& _brush
-            );
-    void setPortBrushSelected(
-            const QBrush& _brush
-            );
-    void setPortPenUnselected(
-            const QPen& _pen
-            );
-    void setPortPenSelected(
-            const QPen& _pen
-            );
-
-    void setPortTextColor(
-            const QColor& _color
-            );
-
-    const QBrush& getSceneBackgroundBrush(
-            ) const;
-
-    const QBrush& getNodeBrushUnselected(
-            ) const;
-    const QBrush& getNodeBrushSelected(
-            ) const;
-    const QPen& getNodePenUnselected(
-            ) const;
-    const QPen& getNodePenSelected(
-            ) const;
-
-    const QBrush& getLinkBrushUnselected(
-            ) const;
-    const QBrush& getLinkBrushSelected(
-            ) const;
-    const QPen& getLinkPenUnselected(
-            ) const;
-    const QPen& getLinkPenSelected(
-            ) const;
-
-    const QBrush& getPortBrushUnselected(
-            ) const;
-    const QBrush& getPortBrushSelected(
-            ) const;
-    const QPen& getPortPenUnselected(
-            ) const;
-    const QPen& getPortPenSelected(
-            ) const;
-    const QColor& getPortTextColor(
-            ) const;
-private:
+//Let's make these public. Otherwise we're flooded with getters and setters
     QBrush m_sceneBackgroundBrush;
 
     QBrush m_nodeBrushUnselected;
@@ -106,6 +27,12 @@ private:
     QBrush m_portBrushSelected;
     QPen m_portPenUnselected;
     QPen m_portPenSelected;
+
+    QBrush m_selectionBrushUnselected;
+    QBrush m_selectionBrushSelected;
+    QPen m_selectionPenUnselected;
+    QPen m_selectionPenSelected;
+    qreal m_selectionOpacity;
 
     QColor m_portTextColor;
 

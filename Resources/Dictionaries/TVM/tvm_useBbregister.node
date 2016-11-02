@@ -1,5 +1,7 @@
 <node>
-    <category name="TVM"/>
+    <category name="TVM">
+        <category name="Registration"/>
+    </category>
     <title name="bbregister">
         <code>
             <language name="MATLAB">
@@ -8,27 +10,20 @@
             </language>
         </code>
     </title>
-    <input name="Root Directory">
-        <code>
-            <language name="MATLAB">
-                <argument name="i_SubjectDirectory"/>
-            </language>
-        </code>
-    </input>
-    <input name="Reference Volume">
+    <input-output name="Reference Volume">
         <code>
             <language name="MATLAB">
                 <argument name="i_ReferenceVolume"/>
             </language>
         </code>
-    </input>
-    <input name="FreeSurfer Folder">
+    </input-output>
+    <input-output name="FreeSurfer Folder">
         <code>
             <language name="MATLAB">
                 <argument name="i_FreeSurferFolder"/>
             </language>
         </code>
-    </input>
+    </input-output>
     <output name="Boundaries">
         <code>
             <language name="MATLAB">

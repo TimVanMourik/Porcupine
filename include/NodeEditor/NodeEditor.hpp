@@ -15,6 +15,7 @@
 #include <QGraphicsView>
 
 class Link;
+class SelectionBox;
 class QGraphicsScene;
 class QKeyEvent;
 class QDomDocument;
@@ -40,12 +41,13 @@ public:
             QEvent* _event
             );
     //
+    void wheelEvent(
+            QWheelEvent* _event
+            );
+    //
     void keyPressEvent(
             QKeyEvent* _event
             );
-    //
-    QGraphicsScene* getScene(
-            ) const;
     //
     void saveLinksToXml(
             QDomElement& _xmlFile
@@ -57,6 +59,10 @@ public:
     //
     void loadFromXml(
             QDomDocument& _xmlFile
+            );
+    //
+    void printScene(
+            QPainter& _painter
             );
     //
     void setTreeModel(
@@ -79,14 +85,22 @@ signals:
             );
 private:
     //
-    QGraphicsItem* itemAt(
-            const QPointF& _position
+    const QGraphicsItem* itemAt(
+            const QPointF& _centrePosition,
+            const QSize& _size
             );
     //New link is created such that it always goes from an output port to an input port
     Link* m_newLink;
-    /// @todo think of storing all links explicitly, for example to facilitate saving
     //
-    //const QVector<Link*>
+    bool m_drag;
+    //
+    float m_scalingFactor;
+    //
+    QPointF m_lastClickedPoint;
+    //
+    SelectionBox* m_newSelection;
+    //
+    QList<SelectionBox*> m_selections;
     //
     NodeTreeEditor* m_treeModel;
 };

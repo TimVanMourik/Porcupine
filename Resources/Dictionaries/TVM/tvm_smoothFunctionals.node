@@ -1,6 +1,35 @@
 <node>
-    <title>tvm_smoothFunctionals</title>
-    <input name="Functional Folder" class="Directory"/>
-    <input name="Smoothing Kernel" class="Matrix"/>
-    <output name="Smoothing Folder" class="Directory"/>
+    <category name="TVM">
+        <category name="Preprocessing"/>
+    </category>
+    <title name="Smooth Functionals">
+        <code>
+            <language name="MATLAB">
+                <comment text="Smooth Functional Data"/>
+                <argument name="tvm_smoothFunctionals"/>
+            </language>
+        </code>
+    </title>
+    <input-output name="Functional Folder">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_FunctionalDirectory"/>
+            </language>
+        </code>
+    </input-output>
+    <input name="Smoothing Kernel">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_SmoothingKernel"/>
+            </language>
+        </code>
+    </input>
+    <output name="Smoothing Folder">
+        <code>
+            <language name="MATLAB">
+                <argument name="o_SmoothingDirectory"/>
+            </language>
+        </code>
+    </output>
 </node>
+

@@ -1,9 +1,55 @@
 <node>
-    <title>tvm_boundaryBasedRegistration</title>
-    <input name="Reference Volume" class="3D NifTI"/>
-    <input name="Input Coregistration Matrix" class="Mat file"/>
-    <input name="Input Boundaries" class="Mat file"/>
-    <input name="Mask file" class="3D NifTI"/>
-    <output name="Output Coregistration Matrix" class="Mat file"/>
-    <output name="Output Boundaries" class="Mat file"/>
+    <category name="TVM">
+        <category name="Registration"/>
+    </category>
+    <title name="Boundary Based Registration">
+        <code>
+            <language name="MATLAB">
+                <comment text="Use custom impementation of boundary based registration"/>
+                <argument name="tvm_boundaryBasedRegistration"/>
+            </language>
+        </code>
+    </title>
+    <input-output name="Reference Volume">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_ReferenceVolume"/>
+            </language>
+        </code>
+    </input-output>
+    <input-output name="Input Coregistration Matrix">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_CoregistrationMatrix"/>
+            </language>
+        </code>
+    </input-output>
+    <input-output name="Input Boundaries">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_Boundaries"/>
+            </language>
+        </code>
+    </input-output>
+    <input-output name="Mask file">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_Mask"/>
+            </language>
+        </code>
+    </input-output>
+    <output name="Output Coregistration Matrix">
+        <code>
+            <language name="MATLAB">
+                <argument name="o_CoregistrationMatrix"/>
+            </language>
+        </code>
+    </output>
+    <output name="Output Boundaries">
+        <code>
+            <language name="MATLAB">
+                <argument name="o_Boundaries"/>
+            </language>
+        </code>
+    </output>
 </node>

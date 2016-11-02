@@ -14,7 +14,10 @@
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QMenuBar>
+#include <QPainter>
+#include <QPrinter>
 #include <QPushButton>
+#include <QSlider>
 #include <QSplitter>
 #include <QTabWidget>
 
@@ -29,7 +32,7 @@ MainWindow::MainWindow(
         ) :
     QMainWindow(parent),
     m_nodeEditorWidget(new QTabWidget()),
-    m_nodeTreeWidget(new QWidget()),
+    m_nodeTreeWidget  (new QWidget()),
     m_codeEditorWidget(new QWidget()),
     m_nodeEditors(0),
     m_nodeTreeEditors(0),
@@ -40,7 +43,7 @@ MainWindow::MainWindow(
     NodeLibrary& nodeLibrary = NodeLibrary::getInstance();
     Q_UNUSED(nodeLibrary);
 
-    //
+    // these widgets have to have a layout
     new QVBoxLayout(m_nodeTreeWidget);
     new QVBoxLayout(m_codeEditorWidget);
 
@@ -49,22 +52,28 @@ MainWindow::MainWindow(
     setCentralWidget(mainWidget);
 
     //Add the panels to the layout
-    QScrollArea* leftWidget = new QScrollArea(mainWidget);
+    QSplitter* leftWidget = new QSplitter(Qt::Vertical, mainWidget);
     QVBoxLayout* leftSide = new QVBoxLayout(leftWidget);
-    QPushButton* button = new QPushButton("Generate code");
     leftSide->addWidget(m_nodeTreeWidget);
-    leftSide->addWidget(button);
 
     QSplitter* rightWidget = new QSplitter(Qt::Vertical, mainWidget);
     QVBoxLayout* rightSide = new QVBoxLayout(rightWidget);
+
+    QWidget* codeEditor = new QWidget();
+    QHBoxLayout* codeLayout = new QHBoxLayout(codeEditor);
+    QPushButton* button = new QPushButton("Generate code");
+
+    codeLayout->addWidget(button);
+    codeLayout->addWidget(m_codeEditorWidget);
+
     rightSide->addWidget(m_nodeEditorWidget);
-    rightSide->addWidget(m_codeEditorWidget);
+    rightSide->addWidget(codeEditor);
 
     ///@todo stretch factors are a bit weird. Find out how to do this nicely
     rightWidget->setStretchFactor(0, 12);
     rightWidget->setStretchFactor(1, 1);
-    mainWidget->setStretchFactor(0, 1);
-    mainWidget->setStretchFactor(1, 4);
+    mainWidget->setStretchFactor( 0, 1);
+    mainWidget->setStretchFactor( 1, 4);
 
     createActions();
     createMenus();
@@ -89,7 +98,6 @@ void MainWindow::contextMenuEvent(
         )
 {
     Q_UNUSED(_event);
-//    QPieMenu
 //    QMenu menu(this);
 //    menu.addAction(m_cutAct);
 //    menu.addAction(m_copyAct);
@@ -137,15 +145,16 @@ void MainWindow::loadDefaultNodes(
     QStringList toolboxNames;
     toolboxNames << QString(":/Dictionaries/node_%1.xml");
     toolboxNames << QString(":/Dictionaries/TVM/DesignMatrix/node_%1.xml");
-//    toolboxNames << QString(":/Dictionaries/TVM/node_%1.xml");
-    toolboxNames << QString(":/Dictionaries/FieldTrip/node_%1.xml");
-    toolboxNames << QString(":/Dictionaries/FSL/node_%1.xml");
+    toolboxNames << QString(":/Dictionaries/TVM/node_%1.xml");
+    toolboxNames << QString(":/Dictionaries/SPM/node_%1.xml");
+//    toolboxNames << QString(":/Dictionaries/FieldTrip/node_%1.xml");
+//    toolboxNames << QString(":/Dictionaries/FSL/node_%1.xml");
     foreach (QString toolbox, toolboxNames)
     {
         unsigned int i = 0;
         while(true)
         {
-            QFile xmlNodefile(toolbox.arg(i));
+            QFile xmlNodefile(toolbox.arg(i, 2, 10, QLatin1Char('0')));
             if(xmlNodefile.exists())
             {
                 QString newNode = nodeLibrary.addNodeSetting(xmlNodefile);
@@ -161,7 +170,6 @@ void MainWindow::loadDefaultNodes(
             ++i;
         }
     }
-
 }
 
 void MainWindow::loadNewNodes(
@@ -256,7 +264,7 @@ void MainWindow::openFile()
     QDomDocument document;
     #ifdef DARWIN // on Mac, the file dialog does not want to close with the native file dialog
         QFile file(QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("Pipelines (*.pipe)"), 0, QFileDialog::DontUseNativeDialog));
-    #elif
+    #else
         QFile file(QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("Pipelines (*.pipe)"), 0));
     #endif
     QFileInfo fileInfo(file.fileName());
@@ -289,13 +297,33 @@ void MainWindow::openFile()
 void MainWindow::printFile(
         )
 {
+    QPrinter printer(QPrinter::HighResolution);
+    printer.setPageSize(QPrinter::A4);
+    printer.setOrientation(QPrinter::Landscape);
+    printer.setOutputFormat(QPrinter::PdfFormat);
+
+    QString fileName = QFileDialog::getSaveFileName();
+    if (fileName.isEmpty())
+    {
+        qDebug() << "No file name was chosen. Ergo, no file will be saved.";
+        return;
+    }
+    printer.setOutputFileName(fileName);
+
+    QPainter painter;
+    if(!painter.begin(&printer))
+    {
+        qDebug() << "Error setting up printer.";
+        return;
+    }
+    painter.setRenderHint(QPainter::TextAntialiasing);
+    m_nodeEditors[m_nodeEditorWidget->currentIndex()]->printScene(painter);
+    painter.end();
 }
 
 void MainWindow::newFile(
         )
 {
-//    Preferences& preferences = Preferences::getInstance();
-
     //Create a node editor
     m_nodeEditors.append(new NodeEditor(this));
     m_nodeTreeEditors.append(new NodeTreeEditor(this));
@@ -311,10 +339,7 @@ void MainWindow::newFile(
     m_nodeTreeEditors[m_currentFileIndex]->setCodeEditor(m_codeEditors[m_currentFileIndex]);
 
     setFileAt(m_currentFileIndex);
-    //Install an empty scene in the tab
-//    QGraphicsScene* scene = new QGraphicsScene();
-//    scene->setBackgroundBrush(preferences.getSceneBackgroundBrush());
-    m_nodeEditors.last()->install(/*scene*/);
+    m_nodeEditors.last()->install();
 }
 
 void MainWindow::undoEdit(
@@ -376,8 +401,8 @@ void MainWindow::createMenus()
     m_fileMenu->addAction(m_newAct);
     m_fileMenu->addAction(m_openAct);
     m_fileMenu->addAction(m_saveToXmlAct);
+    m_fileMenu->addAction(m_printAct);
     m_fileMenu->addAction(m_loadNodesAct);
-//    m_fileMenu->addAction(m_printAct);
     m_fileMenu->addSeparator();
     m_fileMenu->addAction(m_exitAct);
 
@@ -453,6 +478,18 @@ void MainWindow::createActions()
 
 MainWindow::~MainWindow()
 {
+    foreach (CodeEditor* editor, m_codeEditors)
+    {
+        delete editor;
+    }
+    foreach (NodeTreeEditor* editor, m_nodeTreeEditors)
+    {
+        delete editor;
+    }
+    foreach (NodeEditor* editor, m_nodeEditors)
+    {
+        delete editor;
+    }
     NodeLibrary& nodeLibrary = NodeLibrary::getInstance();
     nodeLibrary.destroy();
 }

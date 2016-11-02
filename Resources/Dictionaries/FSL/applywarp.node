@@ -1,23 +1,45 @@
 <node>
-    <title name="Simulate frequencies">
+    <category name="FSL"/>
+    <title name="applywarp">
         <code>
-            <language name="MATLAB">
-                <comment text="Simulate frequencies for a given number of trials"/>
-                <argument name="ft_freqsimulation"/>
+            <language name="Bash">
+                <comment text="Apply a warp field"/>
+                <argument name="applywarp"/>
             </language>
         </code>
     </title>
-    <input name="Number of trials">
+    <input name="Input file">
         <code>
-            <language name="MATLAB">
-                <argument name="numtrl"/>
+            <language name="Bash">
+                <argument name="-in="/>
+            </language>
+        </code>
+    </input>
+    <input name="Reference file">
+        <code>
+            <language name="Bash">
+                <argument name="--ref="/>
+            </language>
+        </code>
+    </input>
+    <input name="Warp file">
+        <code>
+            <language name="Bash">
+                <argument name="--warp="/>
+            </language>
+        </code>
+    </input>
+    <input name="Post matrix file">
+        <code>
+            <language name="Bash">
+                <argument name="--postmat="/>
             </language>
         </code>
     </input>
     <output name="Output file">
         <code>
-            <language name="MATLAB">
-                <argument name="outputfile"/>
+            <language name="Bash">
+                <argument name="--out="/>
             </language>
         </code>
     </output>

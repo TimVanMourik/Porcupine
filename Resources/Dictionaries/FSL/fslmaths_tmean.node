@@ -1,38 +1,33 @@
 <node>
-    <category name="FSL"/>
-    <title name="fslmaths">
+    <category name="FSL">
+        <category name="fslmaths"/>
+    </category>
+    <title name="temporal mean">
         <code>
             <language name="Bash">
-                <comment text="Perform some computation"/>
+                <comment text="Compute temporal mean"/>
                 <argument name="fslmaths"/>
             </language>
         </code>
     </title>
-    <input name="Operation">
+    <input name="Input file">
         <code>
             <language name="Bash">
                 <argument name=""/>
             </language>
         </code>
     </input>
-    <input-output name="Argument 1">
+    <static name="-Tmean">
+        <code>
+            <language name="Bash">
+                <argument name="-Tmean"/>
+            </language>
+        </code>
+    </static>
+    <output name="Output file">
         <code>
             <language name="Bash">
                 <argument name=""/>
-            </language>
-        </code>
-    </input-output>
-    <input-output name="Argument 2">
-        <code>
-            <language name="Bash">
-                <argument name=""/>
-            </language>
-        </code>
-    </input-output>
-    <output name="Output volume">
-        <code>
-            <language name="Bash">
-                <argument name="-out"/>
             </language>
         </code>
     </output>

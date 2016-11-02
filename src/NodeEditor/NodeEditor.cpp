@@ -4,12 +4,15 @@
 
 #include <iostream>
 
+#include <QDebug>
 #include <QDomDocument>
 #include <QDomElement>
+#include <QPainter>
 #include <QPointF>
 #include <QGraphicsScene>
 #include <QGraphicsSceneMouseEvent>
 #include <QKeyEvent>
+#include <QScrollBar>
 
 #include "Link.hpp"
 #include "Node.hpp"
@@ -17,12 +20,17 @@
 #include "NodeTreeEditor.hpp"
 #include "Port.hpp"
 #include "Preferences.hpp"
+#include "SelectionBox.hpp"
 
 NodeEditor::NodeEditor(
         QWidget* _parent
         ) :
     QGraphicsView(_parent),
     m_newLink(0),
+    m_drag(false),
+    m_scalingFactor(1),
+    m_lastClickedPoint(QPointF(0, 0)),
+    m_newSelection(0),
     m_treeModel(0)
 {
 }
@@ -32,23 +40,26 @@ void NodeEditor::install(
 {
     Preferences& preferences = Preferences::getInstance();
     QGraphicsScene* scene = new QGraphicsScene();
-    scene->setBackgroundBrush(preferences.getSceneBackgroundBrush());
-    setScene(scene);
+    scene->setBackgroundBrush(preferences.m_sceneBackgroundBrush);
 
+    setScene(scene);
     //makes sure that all events from the scene are passed on to the editor
     scene->installEventFilter(this);
+
     show();
 }
 
-QGraphicsScene* NodeEditor::getScene(
-        ) const
+void NodeEditor::printScene(
+        QPainter& _painter
+        )
 {
-    return scene();
+    scene()->render(&_painter);
 }
 
 bool NodeEditor::eventFilter(
         QObject* _object,
-        QEvent* _event)
+        QEvent* _event
+        )
 {
     QGraphicsSceneMouseEvent* mouseEvent = (QGraphicsSceneMouseEvent*) _event;
 
@@ -60,8 +71,13 @@ bool NodeEditor::eventFilter(
         {
         case Qt::LeftButton:
         {
-            QGraphicsItem* item = itemAt(mouseEvent->scenePos());
-            if (item && item->type() == Port::Type)
+            const QGraphicsItem* item = itemAt(mouseEvent->scenePos(), QSize(3, 3));
+            if (!item)
+            {
+                m_drag = true;
+                m_lastClickedPoint = mouseEvent->scenePos();
+            }
+            else if (item->type() == Port::Type)
             {
                 m_newLink = new Link(scene());
 
@@ -86,23 +102,49 @@ bool NodeEditor::eventFilter(
             }
             break;
         }
+        case Qt::RightButton:
+        {
+            const QGraphicsItem* item = itemAt(mouseEvent->scenePos(), QSize(3, 3));
+            if(!item)
+            {
+                m_newSelection = new SelectionBox(mouseEvent->scenePos(), scene());
+                m_newSelection->reshape(mouseEvent->scenePos());
+            }
+            break;
+        }
         }
     }
     case QEvent::GraphicsSceneMouseMove:
     {
+        if(m_drag)
+        {
+            this->verticalScrollBar()  ->setValue(verticalScrollBar()  ->value() + (m_lastClickedPoint.y() - mouseEvent->scenePos().y()));
+            this->horizontalScrollBar()->setValue(horizontalScrollBar()->value() + (m_lastClickedPoint.x() - mouseEvent->scenePos().x()));
+            return true;
+        }
         if (m_newLink)
         {
             m_newLink->setPositionTo(mouseEvent->scenePos());
             m_newLink->updatePath();
             return true;
         }
+        if (m_newSelection)
+        {
+            m_newSelection->reshape(mouseEvent->scenePos());
+            return true;
+        }
         break;
     }
     case QEvent::GraphicsSceneMouseRelease:
     {
+        if(m_drag && mouseEvent->button() == Qt::LeftButton)
+        {
+            m_drag = false;
+            return true;
+        }
         if (m_newLink && mouseEvent->button() == Qt::LeftButton)
         {
-            QGraphicsItem* item = itemAt(mouseEvent->scenePos());
+            const QGraphicsItem* item = itemAt(mouseEvent->scenePos(), QSize(3, 3));
             if (item && item->type() == Port::Type)
             {
                 Port* portCreated = (Port*) item;
@@ -177,10 +219,82 @@ bool NodeEditor::eventFilter(
             m_newLink = 0;
             return true;
         }
+        else if (m_newSelection && mouseEvent->button() == Qt::RightButton)
+        {
+            qreal x1, y1, x2, y2;
+            m_newSelection->boundingRect().getCoords(&x1, &y1, &x2, &y2);
+            if(qRound(x2 - x1) == 0 || qRound(y2 - y1) == 0)
+            {
+                delete m_newSelection;
+                m_newSelection = 0;
+                return true;
+            }
+            QList<QGraphicsItem*> itemsWithinSquare = scene()->items(m_newSelection->boundingRect());
+            QList<Node*> nodeList;
+            bool firstNode = true;
+            foreach(QGraphicsItem* eachItem, itemsWithinSquare)
+            {
+                if (eachItem->type() == Node::Type)
+                {
+                    if(firstNode)
+                    {
+                        x1 = ((Node*)eachItem)->pos().x();
+                        y1 = ((Node*)eachItem)->pos().y();
+                        x2 = ((Node*)eachItem)->pos().x();
+                        y2 = ((Node*)eachItem)->pos().y();
+                        firstNode = false;
+                    }
+                    nodeList.append((Node*)eachItem);
+                    QPointF topLeft     = ((Node*)eachItem)->pos() + ((Node*)eachItem)->boundingRect().topLeft();
+                    QPointF bottomRight = ((Node*)eachItem)->pos() + ((Node*)eachItem)->boundingRect().bottomRight();
+                    x1 = std::min(x1, topLeft.x());
+                    y1 = std::min(y1, topLeft.y());
+                    x2 = std::max(x2, bottomRight.x());
+                    y2 = std::max(y2, bottomRight.y());
+                    ((Node*)eachItem)->setParentItem((QGraphicsItem*)m_newSelection);
+                }
+            }
+            if (!nodeList.isEmpty())
+            {
+                qreal extraWidth = 8;
+                m_newSelection->reshape(x1 - extraWidth, y1 - extraWidth, x2 + extraWidth, y2 + extraWidth);
+                m_newSelection->setNodeList(nodeList);
+                m_newSelection->updateOpacity(m_scalingFactor);
+                m_selections.append(m_newSelection);
+                m_newSelection = 0;
+            }
+            else
+            {
+                delete m_newSelection;
+                m_newSelection = 0;
+            }
+        }
         break;
     }
     }
     return QObject::eventFilter(_object, _event);
+}
+
+void NodeEditor::wheelEvent(
+        QWheelEvent* _event
+        )
+{
+    float scalingStep = 0.9;
+    if(_event->delta() < 0)
+    {
+        this->scale(scalingStep, scalingStep);
+        m_scalingFactor *= scalingStep;
+    }
+    else
+    {
+        this->scale(1 / scalingStep, 1 / scalingStep);
+        m_scalingFactor /= scalingStep;
+    }
+    /// @todo pass on to selections
+    foreach (SelectionBox* selection, m_selections)
+    {
+        selection->updateOpacity(m_scalingFactor);
+    }
 }
 
 void NodeEditor::keyPressEvent(
@@ -201,6 +315,10 @@ void NodeEditor::keyPressEvent(
                     //remove node from list view
                     m_treeModel->removeNode((const Node*) item);
                 }
+                else if(item->type() == SelectionBox::Type)
+                {
+                    m_selections.removeOne((SelectionBox*)item);
+                }
                 delete item;
                 //if no break, program may crash when second deleted item was already deletted by first on cascade
                 break;
@@ -215,14 +333,15 @@ void NodeEditor::keyPressEvent(
     }
 }
 
-QGraphicsItem* NodeEditor::itemAt(
-        const QPointF& _position
+const QGraphicsItem* NodeEditor::itemAt(
+        const QPointF& _centrePosition,
+        const QSize& _size
         )
 {
-    //Draw a square of 3 by 3 pixels around the input position and return the item
-    QList<QGraphicsItem*> itemsWithinSquare = scene()->items(QRectF(_position - QPointF(1,1), QSize(3,3)));
+    //Draw a square around the input position and return the item
+    QList<QGraphicsItem*> itemsWithinSquare = scene()->items(QRectF(_centrePosition - QPointF(_size.width() / 2, _size.height()), _size));
 
-    foreach(QGraphicsItem* eachItem, itemsWithinSquare)
+    foreach(const QGraphicsItem* eachItem, itemsWithinSquare)
     {
         if (eachItem->type() > QGraphicsItem::UserType)
         {
@@ -297,6 +416,7 @@ Node* NodeEditor::addNode(
         )
 {
     Node* node = new Node(this, _setting);
+    node->setPos(m_lastClickedPoint);
     m_treeModel->addNode(node);
     return node;
 }
@@ -304,8 +424,12 @@ Node* NodeEditor::addNode(
 NodeEditor::~NodeEditor(
         )
 {
-    //The scene is created by MainWindow, but the pointer isn't saved. So it has to be destoyed here.
-    delete scene();
     //For the weird instance that there is one and the editor is destroyed:
     delete m_newLink;
+    delete m_newSelection;
+    foreach (SelectionBox* selection, m_selections)
+    {
+        delete selection;
+    }
+    delete scene();
 }

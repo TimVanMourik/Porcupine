@@ -1,0 +1,48 @@
+<node>
+    <category name="TVM">
+        <category name="Activation"/>
+    </category>
+    <title name="GLM to F-map">
+        <code>
+            <language name="MATLAB">
+                <comment text="GLM to F-map"/>
+                <argument name="tvm_glmToTMap"/>
+            </language>
+        </code>
+    </title>
+    <input-output name="Design Matrix">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_DesignMatrix"/>
+            </language>
+        </code>
+    </input-output>
+    <input-output name="Betas">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_Betas"/>
+            </language>
+        </code>
+    </input-output>
+    <input-output name="Residual Sum of Squares">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_ResidualSumOfSquares"/>
+            </language>
+        </code>
+    </input-output>
+    <input-output name="Contrast">
+        <code>
+            <language name="MATLAB">
+                <argument name="i_Contrast"/>
+            </language>
+        </code>
+    </input-output>
+    <output name="F-Map">
+        <code>
+            <language name="MATLAB">
+                <argument name="o_FMap"/>
+            </language>
+        </code>
+    </output>
+</node>

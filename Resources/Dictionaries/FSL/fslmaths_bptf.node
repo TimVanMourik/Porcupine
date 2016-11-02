@@ -1,35 +1,44 @@
 <node>
-    <category name="FSL"/>
-    <title name="fslroi">
+    <category name="FSL">
+        <category name="fslmaths"/>
+    </category>
+    <title name="temporal filter">
         <code>
             <language name="Bash">
-                <comment text="Create ROI"/>
-                <argument name="fslroi"/>
+                <comment text="Bandpass temporal filter"/>
+                <argument name="fslmaths"/>
             </language>
         </code>
     </title>
-    <input-output name="Input volume">
+    <input name="Input file">
         <code>
             <language name="Bash">
                 <argument name=""/>
             </language>
         </code>
-    </input-output>
-    <input-output name="Output volume">
+    </input>
+    <static name="-bptf">
+        <code>
+            <language name="Bash">
+                <argument name="-bptf"/>
+            </language>
+        </code>
+    </static>
+    <input name="Low cut-off">
         <code>
             <language name="Bash">
                 <argument name=""/>
             </language>
         </code>
-    </input-output>
-    <output name="Drop">
+    </input>
+    <input name="High cut-off">
         <code>
             <language name="Bash">
                 <argument name=""/>
             </language>
         </code>
-    </output>
-    <output name="Keep">
+    </input>
+    <output name="Output file">
         <code>
             <language name="Bash">
                 <argument name=""/>

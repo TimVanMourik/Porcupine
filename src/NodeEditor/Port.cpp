@@ -36,8 +36,8 @@ Port::Port(
     portDrawing.addEllipse(centreX, centreY, sizeX, sizeY);
     setPath(portDrawing);
 
-    setPen(preferences.getPortPenUnselected());
-    setBrush(preferences.getPortBrushUnselected());
+    setPen(preferences.m_portPenUnselected);
+    setBrush(preferences.m_portBrushUnselected);
 
     setFlag(QGraphicsItem::ItemSendsScenePositionChanges);
 }
@@ -190,14 +190,14 @@ void Port::paint(
     Preferences& preferences = Preferences::getInstance();
     if(m_hasFileName)
     {
-        _painter->setPen(preferences.getPortPenSelected());
-        _painter->setBrush(preferences.getPortBrushSelected());
+        _painter->setPen(preferences.m_portPenSelected);
+        _painter->setBrush(preferences.m_portBrushSelected);
 
     }
     else
     {
-        _painter->setPen(preferences.getPortPenUnselected());
-        _painter->setBrush(preferences.getPortBrushUnselected());
+        _painter->setPen(preferences.m_portPenUnselected);
+        _painter->setBrush(preferences.m_portBrushUnselected);
     }
     _painter->drawPath(path());
 }

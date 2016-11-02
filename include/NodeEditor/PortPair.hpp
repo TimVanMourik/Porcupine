@@ -32,6 +32,13 @@ public:
             const Argument& _argument
             );
     //
+    void setSecret(
+            bool _isSecret
+            );
+    //
+    bool isSecret(
+            ) const;
+    //
     const QString& getName(
             ) const;
     //
@@ -104,6 +111,8 @@ private:
     QString m_name;
     //
 //    QVector<const DataType*> m_dataType;
+    //
+    bool m_secret;
     //
     Port* m_input;
     //
