@@ -1,8 +1,10 @@
 <node>
     <category name="SPM">
-        <category name="Preprocessing"/>
+        <category name="Spatial">
+            <category name="Realign"/>
+        </category>
     </category>
-    <title name="Realignment">
+    <title name="Realignment - estimate">
         <code>
             <language name="SPM">
                 <comment text="Realignment"/>
@@ -45,11 +47,18 @@
             </language>
         </code>
     </hidden>
-    <hidden name="Prefix" default="r">
+    <secret name="Prefix" default="r">
         <code>
             <language name="SPM">
                 <argument name="spm.spatial.realign.roptions.prefix"/>
             </language>
         </code>
-    </hidden>
+    </secret>
+    <output name="Realigned Data">
+        <code>
+            <language name="SPM">
+                <argument name="spm.copy.to.be.implemented"/>
+            </language>
+        </code>
+    </output>
 </node>

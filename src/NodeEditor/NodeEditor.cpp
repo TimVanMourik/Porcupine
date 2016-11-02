@@ -118,9 +118,8 @@ bool NodeEditor::eventFilter(
     {
         if(m_drag)
         {
-            this->verticalScrollBar()->setValue(verticalScrollBar()->value() + (m_lastClickedPoint.y() - mouseEvent->scenePos().y()));
+            this->verticalScrollBar()  ->setValue(verticalScrollBar()  ->value() + (m_lastClickedPoint.y() - mouseEvent->scenePos().y()));
             this->horizontalScrollBar()->setValue(horizontalScrollBar()->value() + (m_lastClickedPoint.x() - mouseEvent->scenePos().x()));
-
             return true;
         }
         if (m_newLink)

@@ -11,12 +11,14 @@ QString SpmGenerator::generateCode(
             const QList<NodeTreeItem*>& _nodeList
             )
 {
-    QString code("%SPM batch generator. Warning. Here be dragons\n");
+    QString code("%SPM batch generator. Warning. Here be dragons.\n\n");
+    code.append("matlabbatch = cell(0);\n");
     foreach(const NodeTreeItem* item, _nodeList)
     {
         code.append(itemToCode(item));
         m_batchNumber++;
     }
+    code.append("\nspm_jobman('run', matlabbatch);");
     m_batchNumber = 1;
     return code;
 }
@@ -33,7 +35,7 @@ QString SpmGenerator::itemToCode(
         return QString("");
     }
 
-    code.append("%% ");
+    code.append("% ");
     code.append(nodeSetting->getTitle().getComment("SPM"));
     code.append("\n");
 
@@ -44,7 +46,7 @@ QString SpmGenerator::itemToCode(
     }
 
     //add function
-    code.append("\n");
+//    code.append("\n");
     //
     return code;
 }
@@ -60,12 +62,12 @@ QString SpmGenerator::argumentToCode(
     QString fileName = _item->getFileName(_argument.getName());
 //    if(!_argument.getArgument("SPM").isEmpty() && !fileName.isEmpty())
     {
-        code.append(matlabbatch);
-        code.append(".");
-        code.append(_argument.getArgument("SPM"));
-        code.append(" = ");
-        code.append(fileName);
-        code.append(";");
+//        code.append(matlabbatch);
+//        code.append(".");
+        code.append(_argument.getArgument("SPM").replace("\\n", "\n").arg(m_batchNumber).arg(fileName));
+//        code.append(" = ");
+//        code.append(fileName);
+//        code.append(";");
         code.append("\n");
     }
     return code;

@@ -44,7 +44,6 @@ void NodeTreeEditor::addNode(
     m_nodeList.append(item);
     item->setNumber(m_nodeList.length());
 
-
     connect(item, SIGNAL(moved(NodeTreeItem*)), this, SLOT(nodeMoved(NodeTreeItem*)));
 }
 

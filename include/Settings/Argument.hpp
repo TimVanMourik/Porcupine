@@ -12,11 +12,12 @@ class Argument
 public:
     enum FieldType
     {
-        NONE = 0,
-        INPUT = 1,
-        OUTPUT = 2,
-        INOUT = 3,
-        HIDDEN = 4
+        NONE    = 0,
+        INPUT   = 1,
+        OUTPUT  = 2,
+        INOUT   = 3,
+        HIDDEN  = 4, //hidden in the NodeEditor
+        SECRET  = 5  //also hidden in the NodeTreeEditor
     };
     //
     Argument(

@@ -110,22 +110,26 @@ void Node::addPortPair(
     pair->setDefaultTextColor(preferences.m_portTextColor);
     switch(_argument.getType())
     {
-        case Argument::FieldType::INPUT :
-            pair->createInputPort();
-            break;
-        case Argument::FieldType::INOUT :
-            pair->createInputPort();
-            pair->createOutputPort();
-            break;
-        case Argument::FieldType::OUTPUT :
-            pair->createOutputPort();
-            break;
-        case Argument::FieldType::HIDDEN :
-            pair->setVisible(false);
-            break;
-        case Argument::FieldType::NONE :
-            pair->setVisible(false);
-            break;
+    case Argument::FieldType::INPUT :
+        pair->createInputPort();
+        break;
+    case Argument::FieldType::INOUT :
+        pair->createInputPort();
+        pair->createOutputPort();
+        break;
+    case Argument::FieldType::OUTPUT :
+        pair->createOutputPort();
+        break;
+    case Argument::FieldType::HIDDEN :
+        pair->setVisible(false);
+        break;
+    case Argument::FieldType::SECRET :
+        pair->setVisible(false);
+        pair->setSecret(true);
+        break;
+    case Argument::FieldType::NONE :
+        pair->setVisible(false);
+        break;
     }
     if(_initialiseWithDefault)
     {

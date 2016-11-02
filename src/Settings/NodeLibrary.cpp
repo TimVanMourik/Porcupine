@@ -172,6 +172,10 @@ QString NodeLibrary::addNodeSetting(
                         {
                             codeArgument.setType(Argument::FieldType::NONE);
                         }
+                        else if(node.nodeName().compare("secret") == 0)
+                        {
+                            codeArgument.setType(Argument::FieldType::SECRET);
+                        }
                         else ///@todo think of how to handle a block with a different name
                         {
                             codeArgument.setType(Argument::FieldType::NONE);

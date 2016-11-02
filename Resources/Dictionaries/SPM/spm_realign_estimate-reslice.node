@@ -1,0 +1,116 @@
+<node>
+    <category name="SPM">
+        <category name="Spatial">
+            <category name="Realign"/>
+        </category>
+    </category>
+    <title name="Realignment - estimate and reslice">
+        <code>
+            <language name="SPM">
+                <comment text="Realignment"/>
+                <argument name="tvm_realignFunctionals"/>
+            </language>
+        </code>
+    </title>
+    <input-output name="Functional Data">
+        <code>
+            <language name="SPM">
+                <argument name="spm.spatial.realign.estwrite.data"/>
+            </language>
+        </code>
+    </input-output>
+    <hidden name="Quality" default="0.9">
+        <code>
+            <language name="SPM">
+                <argument name="spm.spatial.realign.estwrite.eoptions.quality"/>
+            </language>
+        </code>
+    </hidden>
+    <hidden name="Separation" default="4">
+        <code>
+            <language name="SPM">
+                <argument name="spm.spatial.realign.estwrite.eoptions.sep"/>
+            </language>
+        </code>
+    </hidden>
+    <hidden name="FWHM" default="5">
+        <code>
+            <language name="SPM">
+                <argument name="spm.spatial.realign.estwrite.eoptions.fwhm"/>
+            </language>
+        </code>
+    </hidden>
+    <hidden name="Register to Mean" default="true">
+        <code>
+            <language name="SPM">
+                <argument name="spm.spatial.realign.estwrite.eoptions.rtm"/>
+            </language>
+        </code>
+    </hidden>
+    <hidden name="Interpolation" default="2">
+        <code>
+            <language name="SPM">
+                <argument name="spm.spatial.realign.estwrite.eoptions.interp"/>
+            </language>
+        </code>
+    </hidden>
+    <hidden name="Wrap" default="[0, 0, 0]">
+        <code>
+            <language name="SPM">
+                <argument name="spm.spatial.realign.estwrite.eoptions.wrap"/>
+            </language>
+        </code>
+    </hidden>
+    <hidden name="Weight" default="''">
+        <code>
+            <language name="SPM">
+                <argument name="spm.spatial.realign.estwrite.eoptions.weight"/>
+            </language>
+        </code>
+    </hidden>
+    <hidden name="Which" default="[2, 1]">
+        <code>
+            <language name="SPM">
+                <argument name="spm.spatial.realign.estwrite.roptions.roptions.which"/>
+            </language>
+        </code>
+    </hidden>
+    <hidden name="Interpolation" default="2">
+        <code>
+            <language name="SPM">
+                <argument name="spm.spatial.realign.estwrite.roptions.interp"/>
+            </language>
+        </code>
+    </hidden>
+    <hidden name="Wrap" default="[0, 0, 0]">
+        <code>
+            <language name="SPM">
+                <argument name="spm.spatial.realign.estwrite.roptions.wrap"/>
+            </language>
+        </code>
+    </hidden>
+    <hidden name="Mask" default="1">
+        <code>
+            <language name="SPM">
+                <argument name="spm.spatial.realign.estwrite.roptions.mask"/>
+            </language>
+        </code>
+    </hidden>
+    <secret name="Prefix" default="r">
+        <code>
+            <language name="SPM">
+                <argument name="spm.spatial.realign.estwrite.roptions.prefix"/>
+            </language>
+        </code>
+    </secret>
+    <output name="Realigned Data">
+        <code>
+            <language name="SPM">
+                <argument name=""/>
+            </language>
+        </code>
+    </output>
+</node>
+
+
+

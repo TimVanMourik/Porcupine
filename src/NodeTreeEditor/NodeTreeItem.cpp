@@ -74,7 +74,7 @@ NodeTreeItem::NodeTreeItem(
     foreach(PortPair* pair, _node->getPorts())
     {
         QLineEdit* fileName = new QLineEdit();
-        portBlockLayout->addRow(pair->getName(), fileName);
+        fileName->setPlaceholderText("<value>");
 
         m_fileNames[pair->getName()] = fileName;
         QString name = pair->getFileName();
@@ -82,7 +82,11 @@ NodeTreeItem::NodeTreeItem(
         {
             fileName->setText(name);
         }
-        fileName->setPlaceholderText("<value>");
+        if(pair->isSecret())
+        {
+            continue;
+        }
+        portBlockLayout->addRow(pair->getName(), fileName);
 
         connect(fileName, SIGNAL(textEdited(QString)), pair, SLOT(fileNameChanged(QString)));
         /// @todo set the SLOT such that it does not only handle the text but also the font
