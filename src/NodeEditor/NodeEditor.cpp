@@ -33,6 +33,8 @@ NodeEditor::NodeEditor(
     m_newSelection(0),
     m_treeModel(0)
 {
+    /// @todo when pressed 'backspace' in file name label, last clicked node is deleted #fix
+    /// @todo info 'tooltip' options
 }
 
 void NodeEditor::install(

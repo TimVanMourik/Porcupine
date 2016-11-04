@@ -17,8 +17,6 @@ public:
             );
 private:
     //
-    int m_batchNumber;
-    //
     QString itemToCode(
             const NodeTreeItem* _item
             );
