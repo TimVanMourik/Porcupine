@@ -111,12 +111,12 @@ for session = 1:length(matlabbatch{mainBatch}.spm.spatial.realign.estwrite.data)
     batchNumber = batchNumber + 1;
     [root, outputFile] = fileparts(outputData{session}{1});
     [~, file, ~] = fileparts(matlabbatch{mainBatch}.spm.spatial.realign.estwrite.data{session}{1});
-    matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.files(1) = cfg_dep(sprintf('Realign: Estimate &amp; Reslice: Realignment Param File (Sess %d)', session), substruct('.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('.','sess', '()',{session}, '.','rpfile'));
+    matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.files(1) = cfg_dep(sprintf('Realign: Estimate &amp; Reslice: Resliced Images (Sess %d)', session), substruct('.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('.','sess', '()',{session}, '.','rfiles'));
 
-    matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.moveto = {root};
-    matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.patrep.pattern = ['rp_', file];
-    matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.patrep.repl = outputFile;
-    matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.unique = false;
+    matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.moveto          = {root};
+    matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.patrep.pattern  = ['r', file];
+    matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.patrep.repl     = outputFile;
+    matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.unique          = false;
 end"
                 />
             </language>
@@ -130,12 +130,12 @@ for session = 1:length(matlabbatch{mainBatch}.spm.spatial.realign.estwrite.data)
 batchNumber = batchNumber + 1;
     [root, outputFile] = fileparts(outputData{session}{1});
     [~, file, ~] = fileparts(matlabbatch{mainBatch}.spm.spatial.realign.estwrite.data{session}{1});
-    matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.files(1) = cfg_dep(sprintf('Realign: Estimate &amp; Reslice: Resliced Images (Sess %d)', session), substruct('.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('.','sess', '()',{session}, '.','rfiles'));
+    matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.files(1) = cfg_dep(sprintf('Realign: Estimate &amp; Reslice: Realignment Param File (Sess %d)', session), substruct('.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('.','sess', '()',{session}, '.','rpfile'));
 
-    matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.moveto = {root};
-    matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.patrep.pattern = ['r', file];
-    matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.patrep.repl = outputFile;
-    matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.unique = false;
+    matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.moveto          = {root};
+    matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.patrep.pattern  = ['rp_', file];
+    matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.patrep.repl     = outputFile;
+    matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.unique          = false;
 end"
                 />
             </language>
@@ -145,11 +145,11 @@ end"
         <code>
             <language name="SPM">
                 <argument name="batchNumber = batchNumber + 1;
-[root, outputFile] = fileparts(%1);\nmatlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.files(1) = cfg_dep('Realign: Reslice: Mean Image', substruct('.','val', '{}',{batchNumber - 2}, '.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('.','rmean'));
-matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.moveto = {root};
-[~, file, ~] = fileparts(matlabbatch{batchNumber - 2}.spm.spatial.realign.estwrite.data{1});
-matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.patrep.pattern = ['mean', file];
-matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.patrep.repl = outputFile;\nmatlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.unique = false;"/>
+[root, outputFile] = fileparts(%1);\nmatlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.files(1) = cfg_dep('Realign: Estimate &amp; Reslice: Mean Image', substruct('.','val', '{}',{mainBatch}, '.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('.','rmean'));
+matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.moveto              = {root};
+[~, file, ~] = fileparts(matlabbatch{mainBatch}.spm.spatial.realign.estwrite.data{1}{1});
+matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.patrep.pattern      = ['mean', file];
+matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.patrep.repl         = outputFile;\nmatlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.unique = false;"/>
             </language>
         </code>
     </output>

@@ -15,7 +15,13 @@
     <input-output name="Functional Data">
         <code>
             <language name="SPM">
-                <argument name="matlabbatch{batchNumber}.spm.spatial.smooth.data(1)\t= {%1};"/>
+                <argument name="inputData = {%1}';
+inputData = [inputData{:}]';
+matlabbatch{batchNumber}.spm.spatial.smooth.data	= inputData;
+matlabbatch{batchNumber}.spm.spatial.smooth.fwhm	= [4, 4, 4];
+matlabbatch{batchNumber}.spm.spatial.smooth.dtype	= 0;
+matlabbatch{batchNumber}.spm.spatial.smooth.im		= 0;
+matlabbatch{batchNumber}.spm.spatial.smooth.prefix	= 's';"/>
             </language>
         </code>
     </input-output>
@@ -50,7 +56,17 @@
     <output name="Smoothed Data">
         <code>
             <language name="SPM">
-                <argument name="batchNumber = batchNumber + 1;\n[root, outputFile] = fileparts(%1);\nmatlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.files(1) = cfg_dep('Smooth: Smoothed Images', substruct('.','val', '{}',{batchNumber - 1}, '.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('.','files'));\nmatlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.moveto = {root};\n[~, file, ~] = fileparts(matlabbatch{batchNumber - 1}.spm.spatial.smooth.data{1});\nmatlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.patrep.pattern = ['s', file];\nmatlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.patrep.repl = outputFile;\nmatlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.unique = false;"/>
+                <argument name="outputData = {%1};
+for session = 1:length(outputData)
+    batchNumber = batchNumber + 1;
+    [root, outputFile] = fileparts(outputData{session}{1});
+    [path, fileName, extension] = fileparts(matlabbatch{mainBatch}.spm.spatial.smooth.data{session});
+    matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.files = {[path, filesep(), matlabbatch{mainBatch}.spm.spatial.smooth.prefix, fileName, extension]};
+    matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.moveto = {root};
+    matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.patrep.pattern = ['s', fileName];
+    matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.patrep.repl = outputFile;
+    matlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.unique = false;
+end"/>
             </language>
         </code>
     </output>

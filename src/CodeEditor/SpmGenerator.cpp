@@ -13,7 +13,7 @@ QString SpmGenerator::generateCode(
 
     code.append("spm_jobman('initcfg');\n");
     code.append("matlabbatch = cell(0);\n");
-    code.append("batchNumber = 0;\n\n");
+    code.append("batchNumber = 0;\n");
     foreach(const NodeTreeItem* item, _nodeList)
     {
         code.append(itemToCode(item));
@@ -28,7 +28,7 @@ QString SpmGenerator::itemToCode(
 {
     const NodeSetting* nodeSetting = _item->getNodeSetting();
     QString code("");
-    code.append("% ");
+    code.append("\n% ");
     if((nodeSetting->getTitle().getComment("SPM").isEmpty()))
     {
         return QString("");
