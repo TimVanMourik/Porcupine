@@ -1,18 +1,25 @@
 <node>
     <category name="FieldTrip"/>
-    <title name="Some function">
+    <title name="ft_read_mri">
         <code>
             <language name="FieldTrip">
                 <comment text="This is what the function does"/>
-                <argument name="ft_analysispipeline"/>
+                <argument name="ft_read_mri"/>
             </language>
         </code>
     </title>
-    <input name="Input file">
+    <input name="MRI Volume">
         <code>
             <language name="FieldTrip">
                 <argument name="code as output"/>
             </language>
         </code>
     </input>
+    <output name="MRI File">
+        <code>
+            <language name="FieldTrip">
+                <argument name="code as output"/>
+            </language>
+        </code>
+    </output>
 </node>

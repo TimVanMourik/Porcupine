@@ -1,46 +1,18 @@
 <node>
     <category name="FieldTrip"/>
-    <title name="Maths">
+    <title name="Some function">
         <code>
-            <language name="MATLAB">
-                <comment text="Does all sorts of operation on your data"/>
-                <argument name="ft_math"/>
+            <language name="FieldTrip">
+                <comment text="This is what the function does"/>
+                <argument name="ft_analysispipeline"/>
             </language>
         </code>
     </title>
-    <input name="Operation">
-        <code>
-            <language name="MATLAB">
-                <argument name="operation"/>
-            </language>
-        </code>
-    </input>
-    <input name="Parameter">
-        <code>
-            <language name="MATLAB">
-                <argument name="parameter"/>
-            </language>
-        </code>
-    </input>
-    <input name="Scalar">
-        <code>
-            <language name="MATLAB">
-                <argument name="scalar"/>
-            </language>
-        </code>
-    </input>
     <input name="Input file">
         <code>
-            <language name="MATLAB">
-                <argument name="inputfile"/>
+            <language name="FieldTrip">
+                <argument name="code as output"/>
             </language>
         </code>
     </input>
-    <output name="Output file">
-        <code>
-            <language name="MATLAB">
-                <argument name="outputfile"/>
-            </language>
-        </code>
-    </output>
 </node>
