@@ -57,13 +57,15 @@ SOURCES                                += $$ROOT/main.cpp \
                                           $$ROOT/src/CodeEditor/MatlabHighlighter.cpp \
                                           $$ROOT/src/CodeEditor/PythonHighlighter.cpp \
                                           $$ROOT/src/CodeEditor/SyntaxHighlighter.cpp \
-                                          $$ROOT/src/CodeEditor/MatlabGenerator.cpp \
+                                          $$ROOT/src/CodeEditor/TvmGenerator.cpp \
                                           $$ROOT/src/CodeEditor/PythonGenerator.cpp \
-                                          $$ROOT/src/CodeEditor/BashGenerator.cpp \
+                                          $$ROOT/src/CodeEditor/AfniGenerator.cpp \
+                                          $$ROOT/src/CodeEditor/FslGenerator.cpp \
                                           $$ROOT/src/CodeEditor/CodeGenerator.cpp \
                                           $$ROOT/src/NodeEditor/SelectionBox.cpp \
                                           $$ROOT/src/CodeInterpreter/CodeInterpreter.cpp \
-                                          $$ROOT/src/CodeEditor/SpmGenerator.cpp
+                                          $$ROOT/src/CodeEditor/SpmGenerator.cpp \
+                                          $$ROOT/src/CodeEditor/FieldtripGenerator.cpp
 
 HEADERS                                += $$ROOT/include/MainWindow.hpp \
                                           $$ROOT/include/Settings/Argument.hpp \
@@ -85,13 +87,15 @@ HEADERS                                += $$ROOT/include/MainWindow.hpp \
                                           $$ROOT/include/CodeEditor/SyntaxHighlighter.hpp \
                                           $$ROOT/include/CodeEditor/MatlabHighlighter.hpp \
                                           $$ROOT/include/CodeEditor/PythonHighlighter.hpp \
-                                          $$ROOT/include/CodeEditor/MatlabGenerator.hpp \
+                                          $$ROOT/include/CodeEditor/TvmGenerator.hpp \
                                           $$ROOT/include/CodeEditor/PythonGenerator.hpp \
-                                          $$ROOT/include/CodeEditor/BashGenerator.hpp \
+                                          $$ROOT/include/CodeEditor/AfniGenerator.hpp \
+                                          $$ROOT/include/CodeEditor/FslGenerator.hpp \
                                           $$ROOT/include/CodeEditor/CodeGenerator.hpp \
                                           $$ROOT/include/NodeEditor/SelectionBox.hpp \
                                           $$ROOT/include/CodeInterpreter/CodeInterpreter.hpp \
-                                          $$ROOT/include/CodeEditor/SpmGenerator.hpp
+                                          $$ROOT/include/CodeEditor/SpmGenerator.hpp \
+                                          $$ROOT/include/CodeEditor/FieldtripGenerator.hpp
 
 RESOURCES                               = $$ROOT/Resources/resources.qrc
 

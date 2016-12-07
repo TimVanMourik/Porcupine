@@ -28,9 +28,9 @@
 #include "NodeLibrary.hpp"
 
 MainWindow::MainWindow(
-        QWidget* parent
+        QWidget* _parent
         ) :
-    QMainWindow(parent),
+    QMainWindow(_parent),
     m_nodeEditorWidget(new QTabWidget()),
     m_nodeTreeWidget  (new QWidget()),
     m_codeEditorWidget(new QWidget()),

@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<pipeline>
+ <node type="Input" name="Functional">
+  <position x="0" y="0"/>
+  <pairs>
+   <pair filename="{'Functional/NifTI/Session01_4D.nii'}, {'Functional/NifTI/Session02_4D.nii'}" name="Data">
+    <port identifier="2a23b058" type="output"/>
+   </pair>
+  </pairs>
+ </node>
+ <node type="Input" name="Anatomical">
+  <position x="196" y="239"/>
+  <pairs>
+   <pair filename="'Anatomical/MP2RAGE.nii'" name="Data">
+    <port identifier="2a2a1f88" type="output"/>
+   </pair>
+  </pairs>
+ </node>
+ <node type="Realignment - estimate &amp; reslice" name="Realignment - estimate &amp; reslice">
+  <position x="167" y="77"/>
+  <pairs>
+   <pair filename="{'Functional/NifTI/Session01_4D.nii'}, {'Functional/NifTI/Session02_4D.nii'}" name="Functional Data">
+    <port identifier="2a2a2b68" type="input"/>
+    <port identifier="2a2a2c58" type="output"/>
+   </pair>
+   <pair filename="0.9" name="Quality"/>
+   <pair filename="4" name="Separation"/>
+   <pair filename="5" name="FWHM"/>
+   <pair filename="true" name="Register to Mean"/>
+   <pair filename="2" name="Interpolation"/>
+   <pair filename="[0, 0, 0]" name="Wrap"/>
+   <pair filename="''" name="Weight"/>
+   <pair filename="[2, 1]" name="Which"/>
+   <pair filename="4" name="Interpolation"/>
+   <pair filename="[0, 0, 0]" name="Wrap"/>
+   <pair filename="1" name="Mask"/>
+   <pair filename="'r'" name="Prefix"/>
+   <pair filename="{'Functional/Resliced/Session01_4D.nii'}, {'Functional/Resliced/Session02_4D.nii'}" name="Resliced Data">
+    <port identifier="2a2a3c20" type="output"/>
+   </pair>
+   <pair filename="{'Functional/Resliced/ParametersSession01.txt'}, {'Functional/Resliced/ParametersSession02.txt'}" name="Realignment Parameters ">
+    <port identifier="2a2a3d60" type="output"/>
+   </pair>
+   <pair filename="'Functional/MeanFunctional.nii'" name="Mean">
+    <port identifier="26ce5378" type="output"/>
+   </pair>
+  </pairs>
+ </node>
+ <node type="Smooth" name="Smooth">
+  <position x="470" y="103"/>
+  <pairs>
+   <pair filename="{'Functional/Resliced/Session01_4D.nii'}, {'Functional/Resliced/Session02_4D.nii'}" name="Functional Data">
+    <port identifier="2a31af20" type="input"/>
+    <port identifier="2a31afc0" type="output"/>
+   </pair>
+   <pair filename="[4, 4, 4]" name="FWHM">
+    <port identifier="2a31b150" type="input"/>
+   </pair>
+   <pair filename="0" name="Data type"/>
+   <pair filename="0" name="im"/>
+   <pair filename="'s'" name="Prefix"/>
+   <pair filename="{'Functional/Smoothed/Session01_4D.nii'}, {'Functional/Smoothed/Session02_4D.nii'}" name="Smoothed Data">
+    <port identifier="2a31b588" type="output"/>
+   </pair>
+  </pairs>
+ </node>
+ <node type="Coregister - estimate &amp; reslice" name="Coregister - estimate &amp; reslice">
+  <position x="477" y="252"/>
+  <pairs>
+   <pair filename="'Functional/MeanFunctional.nii'" name="Reference Image">
+    <port identifier="2a3683f8" type="input"/>
+    <port identifier="2a3684e8" type="output"/>
+   </pair>
+   <pair filename="'Anatomical/MP2RAGE.nii'" name="Source Image">
+    <port identifier="2a368588" type="input"/>
+   </pair>
+   <pair filename="''" name="Other files">
+    <port identifier="2a3686c8" type="input"/>
+   </pair>
+   <pair filename="'nmi'" name="Cost Function"/>
+   <pair filename="[4, 2]" name="Separation"/>
+   <pair filename="[0.02 0.02 0.02 0.001 0.001 0.001 0.01 0.01 0.01 0.001 0.001 0.001]" name="Tolerance"/>
+   <pair filename="[7, 7]" name="FWHM"/>
+   <pair filename="4" name="Interpolation"/>
+   <pair filename="[0, 0, 0]" name="Wrap"/>
+   <pair filename="0" name="Mask"/>
+   <pair filename="'r'" name="Prefix"/>
+   <pair filename="'Anatomical/ReslicedAnatomical.nii'" name="Resliced Image">
+    <port identifier="2a3691e0" type="output"/>
+   </pair>
+  </pairs>
+ </node>
+ <link from="2a2a1f88" to="2a368588"/>
+ <link from="26ce5378" to="2a3683f8"/>
+ <link from="2a2a3c20" to="2a31af20"/>
+ <link from="2a23b058" to="2a2a2b68"/>
+</pipeline>
