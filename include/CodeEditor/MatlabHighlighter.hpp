@@ -1,5 +1,5 @@
-#ifndef MATLABHIGHLIGHTER_H
-#define MATLABHIGHLIGHTER_H
+#ifndef MATLABHIGHLIGHTER_HPP
+#define MATLABHIGHLIGHTER_HPP
 
 #include "SyntaxHighlighter.hpp"
 
@@ -13,4 +13,4 @@ public:
             );
 };
 
-#endif // MATLABHIGHLIGHTER_H
+#endif // MATLABHIGHLIGHTER_HPP

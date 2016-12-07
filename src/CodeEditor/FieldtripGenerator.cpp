@@ -1,13 +1,13 @@
-#include "MatlabGenerator.hpp"
+#include "FieldtripGenerator.hpp"
 
-MatlabGenerator::MatlabGenerator() :
+FieldtripGenerator::FieldtripGenerator() :
     CodeGenerator(),
     m_configurationVariable("cfg")
 {
 
 }
 
-QString MatlabGenerator::generateCode(
+QString FieldtripGenerator::generateCode(
             const QList<NodeTreeItem*>& _nodeList
             )
 {
@@ -19,7 +19,7 @@ QString MatlabGenerator::generateCode(
     return code;
 }
 
-QString MatlabGenerator::itemToCode(
+QString FieldtripGenerator::itemToCode(
         const NodeTreeItem* _item
         ) const
 {
@@ -50,10 +50,11 @@ QString MatlabGenerator::itemToCode(
     code.append(");");
     code.append("\n\n");
     //
+//    code.append('%1(%2)').arg(nodeSetting->getTitle().getArgument("MATLAB"), argument);
     return code;
 }
 
-QString MatlabGenerator::argumentToCode(
+QString FieldtripGenerator::argumentToCode(
         const Argument& _argument,
         const NodeTreeItem* _item
         ) const
@@ -78,7 +79,7 @@ QString MatlabGenerator::argumentToCode(
     return code;
 }
 
-MatlabGenerator::~MatlabGenerator()
+FieldtripGenerator::~FieldtripGenerator()
 {
 
 }

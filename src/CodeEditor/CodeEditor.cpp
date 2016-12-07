@@ -5,8 +5,8 @@
 #include "BashHighlighter.hpp"
 #include "MatlabHighlighter.hpp"
 #include "PythonHighlighter.hpp"
-#include "BashGenerator.hpp"
-#include "MatlabGenerator.hpp"
+#include "FslGenerator.hpp"
+#include "TvmGenerator.hpp"
 #include "SpmGenerator.hpp"
 #include "PythonGenerator.hpp"
 
@@ -15,10 +15,7 @@ CodeEditor::CodeEditor(
         ) :
     QTabWidget(_parent)
 {
-    /// @todo put this in the preferences
-//    const int tabWidth = 4;
-
-    //MATLAB (C)
+    //TVM within MATLAB (C)
     setupMatlabEditor();
     //SPM within MATLAB (C)
     setupSpmEditor();
@@ -41,8 +38,9 @@ void CodeEditor::generateCode(
 void CodeEditor::setupMatlabEditor(
         )
 {
+    /// @todo put tabWidth in the preferences
     const int tabWidth = 4;
-    QString matlab("MATLAB");
+    QString matlab("MATLAB - TVM");
     m_programmingLanguages << matlab;
     QFont matlabFont = QFont("Courier", 10);
     matlabFont.setStyleHint(QFont::Monospace);
@@ -55,7 +53,7 @@ void CodeEditor::setupMatlabEditor(
 
     new MatlabHighlighter(matlabEditor->document());
     m_textEditors[matlab] = matlabEditor;
-    m_codeGenerators[matlab] = new MatlabGenerator();
+    m_codeGenerators[matlab] = new TvmGenerator();
     addTab(m_textEditors[matlab], matlab);
 }
 
@@ -63,7 +61,7 @@ void CodeEditor::setupSpmEditor(
         )
 {
     const int tabWidth = 4;
-    QString spm("SPM");
+    QString spm("MATLAB - SPM");
     m_programmingLanguages << spm;
     QFont matlabFont = QFont("Courier", 10);
     matlabFont.setStyleHint(QFont::Monospace);
@@ -97,7 +95,7 @@ void CodeEditor::setupBashEditor(
 
     new BashHighlighter(bashEditor->document());
     m_textEditors[bash] = bashEditor;
-    m_codeGenerators[bash] = new BashGenerator();
+    m_codeGenerators[bash] = new FslGenerator();
     addTab(m_textEditors[bash], bash);
 }
 

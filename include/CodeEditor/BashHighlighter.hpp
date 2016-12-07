@@ -1,5 +1,5 @@
-#ifndef BASHHIGHLIGHTER_H
-#define BASHHIGHLIGHTER_H
+#ifndef BASHHIGHLIGHTER_HPP
+#define BASHHIGHLIGHTER_HPP
 
 #include "SyntaxHighlighter.hpp"
 
@@ -14,4 +14,4 @@ public:
     ~BashHighlighter();
 };
 
-#endif // BASHHIGHLIGHTER_H
+#endif // BASHHIGHLIGHTER_HPP

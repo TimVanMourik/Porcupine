@@ -1,5 +1,5 @@
-#ifndef PYTHONGENERATOR_H
-#define PYTHONGENERATOR_H
+#ifndef PYTHONGENERATOR_HPP
+#define PYTHONGENERATOR_HPP
 
 #include "CodeGenerator.hpp"
 
@@ -16,4 +16,4 @@ public:
     ~PythonGenerator();
 };
 
-#endif // PYTHONGENERATOR_H
+#endif // PYTHONGENERATOR_HPP
