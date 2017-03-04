@@ -26,12 +26,19 @@ public:
             QString _defaultValue = QString("")
             );
     //
+    bool isEditable(
+            ) const;
+    //
     void setName(
             const QString& _name
             );
     //
     void setDefault(
             const QString& _name
+            );
+    //
+    void setEditable(
+            bool _editable
             );
     //
     void setType(
@@ -74,6 +81,8 @@ private:
     QString m_argumentName;
     //
     QString m_defaultValue;
+    //
+    bool m_isEditable;
     //
     struct Code
     {

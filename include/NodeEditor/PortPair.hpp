@@ -2,8 +2,9 @@
 #define PORTPAIR_H
 
 #include <QGraphicsTextItem>
+#include "Argument.hpp"
+//class Argument;
 
-class Argument;
 class DataType;
 class Node;
 class Port;
@@ -40,6 +41,9 @@ public:
             ) const;
     //
     const QString& getName(
+            ) const;
+    //
+    const Argument* getArgument(
             ) const;
     //
     Port* getInputPort(
@@ -107,6 +111,8 @@ public slots:
 private:
     //
     const Node* m_node;
+    //
+    const Argument* m_argument;
     //
     QString m_name;
     //

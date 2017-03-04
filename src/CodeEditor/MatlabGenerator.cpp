@@ -8,9 +8,11 @@ MatlabGenerator::MatlabGenerator() :
 }
 
 QString MatlabGenerator::generateCode(
-            const QList<NodeTreeItem*>& _nodeList
+            const QList<NodeTreeItem*>& _nodeList,
+            const QVector<const Link*>& _linkList
             )
 {
+    Q_UNUSED(_linkList);
     QString code;
     foreach(const NodeTreeItem* item, _nodeList)
     {
@@ -62,12 +64,13 @@ QString MatlabGenerator::argumentToCode(
     QString fileName = _item->getFileName(_argument.getName());
     if(!_argument.getArgument("MATLAB").isEmpty() && !fileName.isEmpty())
     {
-        code.append(m_configurationVariable);
-        code.append(".");
-        code.append(_argument.getArgument("MATLAB"));
-        code.append(" = ");
-        code.append(fileName);
-        code.append(";");
+//        code.append(m_configurationVariable);
+//        code.append(".");
+//        code.append(_argument.getArgument("MATLAB"));
+//        code.append(" = ");
+//        code.append(fileName);
+//        code.append(";");
+        code.append(QString("%1.%2 = %3;\n").arg(m_configurationVariable, _argument.getArgument("MATLAB"), fileName));
         if(!_argument.getComment("MATLAB").isEmpty())
         {
             code.append("\t% ");

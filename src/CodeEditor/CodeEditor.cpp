@@ -29,12 +29,13 @@ CodeEditor::CodeEditor(
 }
 
 void CodeEditor::generateCode(
-        const QList<NodeTreeItem*>& _nodeList
+        const QList<NodeTreeItem*>& _nodeList,
+        const QVector<const Link*>& _linkList
         )
 {
     foreach(QString language, m_programmingLanguages)
     {
-        m_textEditors[language]->setPlainText(m_codeGenerators[language]->generateCode(_nodeList));
+        m_textEditors[language]->setPlainText(m_codeGenerators[language]->generateCode(_nodeList, _linkList));
     }
 }
 

@@ -10,7 +10,8 @@ public:
     MatlabGenerator();
     //
     QString generateCode(
-            const QList<NodeTreeItem*>& _nodeList
+            const QList<NodeTreeItem*>& _nodeList,
+            const QVector<const Link*>& _linkList = QVector<const Link*>(0)
             );
     //
     ~MatlabGenerator(

@@ -7,7 +7,8 @@ Argument::Argument(
         ) :
     m_portType(_type),
     m_argumentName(_argumentName),
-    m_defaultValue(_defaultValue)
+    m_defaultValue(_defaultValue),
+    m_isEditable(true)
 {
 }
 
@@ -18,11 +19,24 @@ void Argument::setName(
     m_argumentName = _name;
 }
 
+bool Argument::isEditable(
+        ) const
+{
+    return m_isEditable;
+}
+
 void Argument::setDefault(
         const QString& _default
         )
 {
     m_defaultValue = _default;
+}
+
+void Argument::setEditable(
+        bool _editable
+        )
+{
+    m_isEditable = _editable;
 }
 
 void Argument::setType(

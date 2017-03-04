@@ -148,6 +148,15 @@ QString NodeLibrary::addNodeSetting(
                     {
                         Argument codeArgument(node.attributes().namedItem("name").nodeValue());
                         codeArgument.setDefault(node.attributes().namedItem("default").nodeValue());
+                        QString editable = node.attributes().namedItem("editable").nodeValue();
+                        if(editable.compare("true", Qt::CaseInsensitive) == 0)
+                        {
+                            codeArgument.setEditable(true);
+                        }
+                        else if(editable.compare("false", Qt::CaseInsensitive) == 0)
+                        {
+                            codeArgument.setEditable(false);
+                        }
                         if(node.nodeName().compare("title") == 0)
                         {
                             codeArgument.setType(Argument::FieldType::NONE);

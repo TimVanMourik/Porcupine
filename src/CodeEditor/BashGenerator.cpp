@@ -7,9 +7,11 @@ BashGenerator::BashGenerator() :
 }
 
 QString BashGenerator::generateCode(
-            const QList<NodeTreeItem*>& _nodeList
+            const QList<NodeTreeItem*>& _nodeList,
+            const QVector<const Link*>& _linkList
             )
 {
+    Q_UNUSED(_linkList);
     QString code("#!/bin/bash\n\n");
     code.append("");
     foreach(const NodeTreeItem* item, _nodeList)

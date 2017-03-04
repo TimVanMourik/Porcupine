@@ -90,7 +90,9 @@ MainWindow::MainWindow(
 void MainWindow::nodeToCode(
         )
 {
-    m_nodeTreeEditors[m_currentFileIndex]->generateCode();
+//    m_nodeTreeEditors[m_currentFileIndex]->generateCode();
+    QVector<const Link*> allLinks = m_nodeEditors[m_currentFileIndex]->getLinks();
+    m_codeEditors[m_currentFileIndex]->generateCode(m_nodeTreeEditors[m_currentFileIndex]->getNodeList(), allLinks);
 }
 
 void MainWindow::contextMenuEvent(
@@ -143,18 +145,21 @@ void MainWindow::loadDefaultNodes(
     nodeLibrary.setNodeSchema(schemaFile);
 
     QStringList toolboxNames;
-    toolboxNames << QString(":/Dictionaries/node_%1.xml");
-    toolboxNames << QString(":/Dictionaries/TVM/DesignMatrix/node_%1.xml");
-    toolboxNames << QString(":/Dictionaries/TVM/node_%1.xml");
-    toolboxNames << QString(":/Dictionaries/SPM/node_%1.xml");
+//    toolboxNames << QString(":/Dictionaries/node_%1.xml");
+//    toolboxNames << QString(":/Dictionaries/TVM/DesignMatrix/node_%1.xml");
+//    toolboxNames << QString(":/Dictionaries/TVM/node_%1.xml");
+//    toolboxNames << QString(":/Dictionaries/SPM/node_%1.xml");
+    toolboxNames << QString(":/Dictionaries/Porcupine/node_%1.xml");
+//    toolboxNames << QString(":/Dictionaries/NiPype/node_%1.xml");
 //    toolboxNames << QString(":/Dictionaries/FieldTrip/node_%1.xml");
 //    toolboxNames << QString(":/Dictionaries/FSL/node_%1.xml");
+    unsigned int framePadding = 3;
     foreach (QString toolbox, toolboxNames)
     {
         unsigned int i = 0;
         while(true)
         {
-            QFile xmlNodefile(toolbox.arg(i, 2, 10, QLatin1Char('0')));
+            QFile xmlNodefile(toolbox.arg(i, framePadding, 10, QLatin1Char('0')));
             if(xmlNodefile.exists())
             {
                 QString newNode = nodeLibrary.addNodeSetting(xmlNodefile);

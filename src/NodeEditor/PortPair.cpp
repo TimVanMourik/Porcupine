@@ -12,6 +12,7 @@ PortPair::PortPair(
         ) :
     QGraphicsTextItem(_parent),
     m_node((Node*)_parent),
+    m_argument(0),
     m_secret(false),
     m_input(0),
     m_output(0),
@@ -55,8 +56,9 @@ void PortPair::setArgument(
         const Argument& _argument
         )
 {
-    m_name = _argument.getName();
-    setPlainText(m_name);
+    m_argument = &_argument;
+//    m_name = _argument.getName();
+    setPlainText(m_argument->getName());
 }
 
 void PortPair::setSecret(
@@ -75,7 +77,13 @@ bool PortPair::isSecret(
 const QString& PortPair::getName(
         ) const
 {
-    return m_name;
+    return m_argument->getName();
+}
+
+const Argument*  PortPair::getArgument(
+        ) const
+{
+    return m_argument;
 }
 
 //const QVector<const DataType*>& PortPair::getType(
