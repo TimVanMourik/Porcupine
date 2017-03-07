@@ -97,8 +97,7 @@ HEADERS                                += $$ROOT/include/MainWindow.hpp \
                                           $$ROOT/include/CodeEditor/SpmGenerator.hpp \
                                           $$ROOT/include/CodeEditor/FieldtripGenerator.hpp
 
-#RESOURCES                               = $$ROOT/Resources/resources.qrc
-RESOURCES                               = $$ROOT/Resources/resourcesNipype.qrc
+RESOURCES                               = $$ROOT/Resources/resources.qrc
 
 win32:RC_ICONS                         += $$ROOT/Resources/Icon/porcupine.ico
 #linux-g++:

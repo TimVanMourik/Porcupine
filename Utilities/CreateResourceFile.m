@@ -1,7 +1,8 @@
 %% Resource File
 
 currentPath = fileparts(mfilename('fullpath'));
-saveLocation = fullfile(currentPath, '../Resources/Dictionaries/NiPype/');
+saveLocation = fullfile(currentPath, '../Resources/');
+
 
 docNode = com.mathworks.xml.XMLUtils.createDocument('RCC');
 docRoot = docNode.getDocumentElement();
@@ -32,10 +33,11 @@ fileNode.appendChild(docNode.createTextNode('Images/RepeatingBrains.png'));
 currentNode.appendChild(fileNode);
 docRoot.appendChild(currentNode);
 
-%
-directory = 'Dictionaries/Porcupine';
+%% Add NiPype nodes
+prefix = 'Dictionaries/NiPype';
+directory = fullfile('../Resources', prefix);
 currentNode = docNode.createElement('qresource');
-currentNode.setAttribute('prefix', directory);
+currentNode.setAttribute('prefix', prefix);
 
 files = dir([directory '/*.node']);
 files = {files(:).name};
@@ -49,7 +51,27 @@ for i = 1:length(files)
 end
 docRoot.appendChild(currentNode);
 
-xmlFileName = fullfile(saveLocation, 'resourcesNipype.qrc');
+%% Add TvM nodes
+prefix = 'Dictionaries/TvM';
+directory = fullfile('../Resources', prefix);
+currentNode = docNode.createElement('qresource');
+currentNode.setAttribute('prefix', prefix);
+
+files = dir([directory '/*.node']);
+files = {files(:).name};
+for i = 1:length(files)
+    fileNode = docNode.createElement('file');
+    fileNode.setAttribute('alias', sprintf('node_%03d.xml', i - 1));
+    
+    [~, file, ~] = fileparts(files{i});
+    fileNode.appendChild(docNode.createTextNode(fullfile(directory, [file, '.node'])));
+    currentNode.appendChild(fileNode);
+end
+
+%%
+docRoot.appendChild(currentNode);
+
+xmlFileName = fullfile(saveLocation, 'resources.qrc');
 xmlwrite(xmlFileName, docNode);
 type(xmlFileName);
 

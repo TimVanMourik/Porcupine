@@ -7,7 +7,7 @@ FieldtripGenerator::FieldtripGenerator() :
 
 }
 
-QString MatlabGenerator::generateCode(
+QString FieldtripGenerator::generateCode(
             const QList<NodeTreeItem*>& _nodeList,
             const QVector<const Link*>& _linkList
             )

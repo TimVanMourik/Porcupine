@@ -6,7 +6,7 @@ AfniGenerator::AfniGenerator() :
 
 }
 
-QString BashGenerator::generateCode(
+QString AfniGenerator::generateCode(
             const QList<NodeTreeItem*>& _nodeList,
             const QVector<const Link*>& _linkList
             )
