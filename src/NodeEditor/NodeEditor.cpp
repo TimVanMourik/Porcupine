@@ -420,6 +420,20 @@ Node* NodeEditor::addNode(
     return node;
 }
 
+QVector<const Link*> NodeEditor::getLinks(
+        ) const
+{
+    QVector<const Link*> links(0);
+    foreach(QGraphicsItem* item, scene()->items())
+    {
+        if (item->type() == Link::Type)
+        {
+            links.append((Link*) item);
+        }
+    }
+    return links;
+}
+
 NodeEditor::~NodeEditor(
         )
 {

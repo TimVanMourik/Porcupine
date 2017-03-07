@@ -1,6 +1,7 @@
 #ifndef NODETREEMODEL_H
 #define NODETREEMODEL_H
 
+#include <QList>
 #include <QMap>
 #include <QScrollArea>
 #include <QStandardItemModel>
@@ -47,6 +48,9 @@ public:
     //
     void moveToNewLocation(
             );
+    //
+    const QList<NodeTreeItem*>& getNodeList(
+            ) const;
     //
     ~NodeTreeEditor(
             );

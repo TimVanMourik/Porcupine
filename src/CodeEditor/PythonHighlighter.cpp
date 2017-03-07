@@ -34,9 +34,9 @@ PythonHighlighter::PythonHighlighter(
         addHighlightRule(QRegExp(pattern), typeNameFormat);
     }
 
-    QTextCharFormat digitFormat;
-    digitFormat.setForeground(Qt::green);
-    addHighlightRule(QRegExp("[0-9]"), digitFormat);
+//    QTextCharFormat digitFormat;
+//    digitFormat.setForeground(Qt::green);
+//    addHighlightRule(QRegExp("[0-9]"), digitFormat);
 
     QTextCharFormat quotationFormat;
     quotationFormat.setForeground(Qt::green);

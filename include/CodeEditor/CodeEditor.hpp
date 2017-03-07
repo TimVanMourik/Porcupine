@@ -4,6 +4,7 @@
 #include <QTabWidget>
 
 class CodeGenerator;
+class Link;
 class NodeTreeItem;
 class QTextEdit;
 
@@ -16,7 +17,8 @@ public:
             );
     //
     void generateCode(
-            const QList<NodeTreeItem*>& _nodeList
+            const QList<NodeTreeItem*>& _nodeList,
+            const QVector<const Link*>& _linkList = QVector<const Link*>(0)
             );
     //
     ~CodeEditor(

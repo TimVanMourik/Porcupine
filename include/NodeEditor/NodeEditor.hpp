@@ -76,6 +76,9 @@ public:
             const NodeSetting* _setting = 0
             );
     //
+    QVector<const Link*> getLinks(
+            ) const;
+    //
     ~NodeEditor(
             );
 signals:

@@ -86,6 +86,14 @@ NodeTreeItem::NodeTreeItem(
         {
             continue;
         }
+        if(pair->getArgument()->isEditable())
+        {
+            fileName->setDisabled(false);
+        }
+        else
+        {
+            fileName->setDisabled(true);
+        }
         portBlockLayout->addRow(pair->getName(), fileName);
 
         connect(fileName, SIGNAL(textEdited(QString)), pair, SLOT(fileNameChanged(QString)));

@@ -260,6 +260,13 @@ QList<int> NodeTreeEditor::nodeIndexInList(
     return indices;
 }
 
+
+const QList<NodeTreeItem*>& NodeTreeEditor::getNodeList(
+        ) const
+{
+    return m_nodeList;
+}
+
 NodeTreeEditor::~NodeTreeEditor(
         )
 {

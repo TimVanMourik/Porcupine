@@ -7,6 +7,8 @@
 #include "NodeSetting.hpp"
 #include "NodeTreeItem.hpp"
 
+class Link;
+
 class CodeGenerator
 {
 public:
@@ -14,7 +16,8 @@ public:
     CodeGenerator();
     //
     virtual QString generateCode(
-            const QList<NodeTreeItem*>& _nodeList
+            const QList<NodeTreeItem*>& _nodeList,
+            const QVector<const Link*>& _linkList = QVector<const Link*>(0)
             ) = 0;
     //
     ~CodeGenerator();
