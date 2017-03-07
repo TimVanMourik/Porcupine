@@ -30,8 +30,8 @@ QString TvmGenerator::itemToCode(
         return QString("");
     }
 
-    code.append("%% %1\n").arg(nodeSetting->getTitle().getComment("MATLAB"));
-    code.append("%1 = [];\n").arg(m_configurationVariable);
+    code.append(QString("%% %1\n").arg(nodeSetting->getTitle().getComment("MATLAB")));
+    code.append(QString("%1 = [];\n").arg(m_configurationVariable));
 
     //add input
     foreach (Argument argument, nodeSetting->getPorts())
@@ -40,7 +40,7 @@ QString TvmGenerator::itemToCode(
     }
 
     //add function
-    code.append("%1(%2);\n\n").arg(nodeSetting->getTitle().getArgument("MATLAB"), m_configurationVariable);
+    code.append(QString("%1(%2);\n\n").arg(nodeSetting->getTitle().getArgument("MATLAB"), m_configurationVariable));
     //
     return code;
 }
@@ -54,7 +54,7 @@ QString TvmGenerator::argumentToCode(
     QString fileName = _item->getFileName(_argument.getName());
     if(!_argument.getArgument("MATLAB").isEmpty() && !fileName.isEmpty())
     {
-        code.append("%1.%2 = %3;").arg(m_configurationVariable, _argument.getArgument("MATLAB"), fileName);
+        code.append(QString("%1.%2 = %3;").arg(m_configurationVariable, _argument.getArgument("MATLAB"), fileName));
         if(!_argument.getComment("MATLAB").isEmpty())
         {
             code.append("\t% ");

@@ -44,6 +44,7 @@ void NodeEditor::install(
     QGraphicsScene* scene = new QGraphicsScene();
     scene->setBackgroundBrush(preferences.m_sceneBackgroundBrush);
 
+    ///@todo the setScene command causes the window to be very small on startup
     setScene(scene);
     //makes sure that all events from the scene are passed on to the editor
     scene->installEventFilter(this);

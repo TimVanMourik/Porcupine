@@ -14,6 +14,7 @@ SelectionBox::SelectionBox(
         ) :
     m_topLeftCorner(_mousePosition)
 {
+    ///@todo deleting a selection may crash the program
     _scene->addItem(this);
     setFlag(QGraphicsItem::ItemIsMovable);
     setFlag(QGraphicsItem::ItemIsSelectable);
