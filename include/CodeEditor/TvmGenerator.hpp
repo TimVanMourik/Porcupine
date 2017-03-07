@@ -1,31 +1,31 @@
-#ifndef SPMGENERATOR_HPP
-#define SPMGENERATOR_HPP
+#ifndef TVMGENERATOR_HPP
+#define TVMGENERATOR_HPP
 
 #include "CodeGenerator.hpp"
 
-class SpmGenerator : public CodeGenerator
+class TvmGenerator : public CodeGenerator
 {
 public:
     //
-    SpmGenerator();
+    TvmGenerator();
     //
     QString generateCode(
             const QList<NodeTreeItem*>& _nodeList
             );
     //
-    ~SpmGenerator(
+    ~TvmGenerator(
             );
 private:
-    //
     QString itemToCode(
             const NodeTreeItem* _item
-            );
+            ) const;
     //
     QString argumentToCode(
             const Argument& _argument,
             const NodeTreeItem* _item
             ) const;
-
+    //
+    QString m_configurationVariable;
 };
 
-#endif // SPMGENERATOR_HPP
+#endif // TVMGENERATOR_HPP

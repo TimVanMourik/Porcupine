@@ -1,19 +1,19 @@
-#ifndef BASHGENERATOR_H
-#define BASHGENERATOR_H
+#ifndef AFNIGENERATOR_HPP
+#define AFNIGENERATOR_HPP
 
 #include "CodeGenerator.hpp"
 
-class BashGenerator : public CodeGenerator
+class AfniGenerator : public CodeGenerator
 {
 public:
     //
-    BashGenerator();
+    AfniGenerator();
     //
     QString generateCode(
             const QList<NodeTreeItem*>& _nodeList
             );
     //
-    ~BashGenerator(
+    ~AfniGenerator(
             );
 private:
     QString itemToCode(
@@ -26,4 +26,4 @@ private:
             ) const;
 };
 
-#endif // BASHGENERATOR_H
+#endif // AFNIGENERATOR_HPP

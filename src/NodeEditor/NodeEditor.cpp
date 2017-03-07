@@ -27,12 +27,14 @@ NodeEditor::NodeEditor(
         ) :
     QGraphicsView(_parent),
     m_newLink(0),
-    m_drag(false),
     m_scalingFactor(1),
     m_lastClickedPoint(QPointF(0, 0)),
     m_newSelection(0),
     m_treeModel(0)
 {
+    /// @todo when pressed 'backspace' in file name label, last clicked node is deleted #fix
+    /// @todo info 'tooltip' options
+    setDragMode(QGraphicsView::ScrollHandDrag);
 }
 
 void NodeEditor::install(
@@ -42,6 +44,7 @@ void NodeEditor::install(
     QGraphicsScene* scene = new QGraphicsScene();
     scene->setBackgroundBrush(preferences.m_sceneBackgroundBrush);
 
+    ///@todo the setScene command causes the window to be very small on startup
     setScene(scene);
     //makes sure that all events from the scene are passed on to the editor
     scene->installEventFilter(this);
@@ -74,7 +77,6 @@ bool NodeEditor::eventFilter(
             const QGraphicsItem* item = itemAt(mouseEvent->scenePos(), QSize(3, 3));
             if (!item)
             {
-                m_drag = true;
                 m_lastClickedPoint = mouseEvent->scenePos();
             }
             else if (item->type() == Port::Type)
@@ -116,11 +118,13 @@ bool NodeEditor::eventFilter(
     }
     case QEvent::GraphicsSceneMouseMove:
     {
-        if(m_drag)
+        if(itemAt(mouseEvent->scenePos(), QSize(3, 3)))
         {
-            this->verticalScrollBar()  ->setValue(verticalScrollBar()  ->value() + (m_lastClickedPoint.y() - mouseEvent->scenePos().y()));
-            this->horizontalScrollBar()->setValue(horizontalScrollBar()->value() + (m_lastClickedPoint.x() - mouseEvent->scenePos().x()));
-            return true;
+            setDragMode(QGraphicsView::NoDrag);
+        }
+        else
+        {
+            setDragMode(QGraphicsView::ScrollHandDrag);
         }
         if (m_newLink)
         {
@@ -137,11 +141,6 @@ bool NodeEditor::eventFilter(
     }
     case QEvent::GraphicsSceneMouseRelease:
     {
-        if(m_drag && mouseEvent->button() == Qt::LeftButton)
-        {
-            m_drag = false;
-            return true;
-        }
         if (m_newLink && mouseEvent->button() == Qt::LeftButton)
         {
             const QGraphicsItem* item = itemAt(mouseEvent->scenePos(), QSize(3, 3));

@@ -1,31 +1,29 @@
-#ifndef SPMGENERATOR_HPP
-#define SPMGENERATOR_HPP
+#ifndef FSLGENERATOR_HPP
+#define FSLGENERATOR_HPP
 
 #include "CodeGenerator.hpp"
 
-class SpmGenerator : public CodeGenerator
+class FslGenerator : public CodeGenerator
 {
 public:
     //
-    SpmGenerator();
+    FslGenerator();
     //
     QString generateCode(
             const QList<NodeTreeItem*>& _nodeList
             );
     //
-    ~SpmGenerator(
+    ~FslGenerator(
             );
 private:
-    //
     QString itemToCode(
             const NodeTreeItem* _item
-            );
+            ) const;
     //
     QString argumentToCode(
             const Argument& _argument,
             const NodeTreeItem* _item
             ) const;
-
 };
 
-#endif // SPMGENERATOR_HPP
+#endif // FSLGENERATOR_HPP

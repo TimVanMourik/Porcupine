@@ -42,13 +42,17 @@
         <file alias="node_32.xml">Dictionaries/TVM/tvm_levelSetToObj.node</file>
         <file alias="node_33.xml">Dictionaries/TVM/tvm_objToBoundary.node</file>
         <file alias="node_34.xml">Dictionaries/TVM/drawRois.node</file>
+        <file alias="node_35.xml">Dictionaries/TVM/tvm_convertRegisterDat.node</file>
     </qresource>
     <qresource prefix="/Dictionaries/FieldTrip">
-        <file alias="node_00.xml">Dictionaries/FieldTrip/ft_analysispipeline.node</file>
-        <file alias="node_01.xml">Dictionaries/FieldTrip/ft_math.node</file>
-        <file alias="node_02.xml">Dictionaries/FieldTrip/ft_freqanalysis.node</file>
-        <file alias="node_03.xml">Dictionaries/FieldTrip/ft_freqsimulation.node</file>
-        <file alias="node_04.xml">Dictionaries/FieldTrip/ft_freqstatistics.node</file>
+        <file alias="node_00.xml">Dictionaries/FieldTrip/ft_read_mri.node</file>
+        <file alias="node_01.xml">Dictionaries/FieldTrip/ft_determine_coordsys.node</file>
+        <file alias="node_02.xml">Dictionaries/FieldTrip/ft_read_sens.node</file>
+        <file alias="node_03.xml">Dictionaries/FieldTrip/ft_read_headshape.node</file>
+        <file alias="node_04.xml">Dictionaries/FieldTrip/ft_plot_axes.node</file>
+        <file alias="node_05.xml">Dictionaries/FieldTrip/ft_plot_headshape.node</file>
+        <file alias="node_06.xml">Dictionaries/FieldTrip/ft_plot_sens.node</file>
+        <file alias="node_07.xml">Dictionaries/FieldTrip/ft_sourceplot.node</file>
     </qresource>
     <qresource prefix="/Dictionaries/FSL">
         <file alias="node_00.xml">Dictionaries/FSL/flirt_registration.node</file>
@@ -66,6 +70,7 @@
         <file alias="node_12.xml">Dictionaries/FSL/fslmaths_smooth.node</file>
         <file alias="node_13.xml">Dictionaries/FSL/applywarp.node</file>
         <file alias="node_14.xml">Dictionaries/FSL/flirt_registration.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_applyDisplacementMap.node</file>
     </qresource>
     <qresource prefix="/Dictionaries/TVM/DesignMatrix">
         <file alias="node_00.xml">Dictionaries/TVM/DesignMatrix/tvm_design_linearTrend.node</file>
@@ -87,8 +92,76 @@
     </qresource>
     <qresource prefix="/Qml"/>
     <qresource prefix="/Dictionaries/SPM">
-        <file alias="node_00.xml">Dictionaries/SPM/spm_realign_estimate.node</file>
+        <file alias="node_00.xml">Dictionaries/SPM/spm_smooth.node</file>
+        <file alias="node_02.xml">Dictionaries/SPM/spm_coreg_estimate-reslice.node</file>
         <file alias="node_01.xml">Dictionaries/SPM/spm_realign_estimate-reslice.node</file>
-        <file alias="node_02.xml">Dictionaries/SPM/spm_realign_reslice.node</file>
+    </qresource>
+    <qresource prefix="/Dictionaries/tvm_nodes">
+        <file>Dictionaries/tvm_nodes/tvm_applyDisplacementMap.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_applyVdmToBoundaries.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_averageVolumes.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_backupFiles.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_boundariesToObj.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_boundaryBasedRegistration.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_computeCurvature.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_computeDivergence.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_computeGradient.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_computeMeanVolume.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_convertRegisterDat.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_design_addMatrix.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_design_addVector.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_design_constant.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_design_empty.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_design_fir.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_design_highpassFilter.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_design_linearTrend.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_design_motionRegression.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_design_orthogonalise.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_design_removeVolumes.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_design_reorderRegressors.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_design_retroicor.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_design_saveToImage.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_design_stimulus.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_designMatrixToTimeCourse.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_dicomSort.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_dicomsToNifti.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_filterFunctionals.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_freesurferBoundariesToVolume.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_glm.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_glmToFMap.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_glmToTMap.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_gradient.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_intersectVolumes.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_laplacePotentials.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_layerPipeline.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_leprincePotential.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_levelSetToObj.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_makeLevelSet.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_matrixToRegisterDat.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_mergeVolumes.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_modifyMp2rage.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_moveNiftis.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_movieFrom4D.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_multiplyMatrices.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_objToBoundary.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_potentialtoLayers.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_realignFunctionals.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_reconAll.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_recursiveBoundaryRegistration.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_registerVolumes.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_regressConfounds.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_resampleVolume.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_resliceVolume.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_restoreBackupFiles.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_retroicorBackProject.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_roiToDesignMatrix.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_smoothFunctionals.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_thresholdVolume.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_transFormStackToDisplacementMap.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_unionVolumes.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_useBbregister.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_volumetricLayering.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_volumeWithBoundariesToMovie.node</file>
+        <file>Dictionaries/tvm_nodes/tvm_warpVolumes.node</file>
     </qresource>
 </RCC>

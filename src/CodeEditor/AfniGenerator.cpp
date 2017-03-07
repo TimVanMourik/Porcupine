@@ -1,12 +1,12 @@
-#include "BashGenerator.hpp"
+#include "AfniGenerator.hpp"
 
-BashGenerator::BashGenerator() :
+AfniGenerator::AfniGenerator() :
     CodeGenerator()
 {
 
 }
 
-QString BashGenerator::generateCode(
+QString AfniGenerator::generateCode(
             const QList<NodeTreeItem*>& _nodeList
             )
 {
@@ -20,23 +20,23 @@ QString BashGenerator::generateCode(
 }
 
 
-QString BashGenerator::itemToCode(
+QString AfniGenerator::itemToCode(
         const NodeTreeItem* _item
         ) const
 {
     const NodeSetting* nodeSetting = _item->getNodeSetting();
     QString code("");
-    if(nodeSetting->getTitle().getArgument("Bash").isEmpty())
+    if(nodeSetting->getTitle().getArgument("Afni").isEmpty())
     {
         return QString("# This function cannot be converted to Bash code\n");
     }
     //add function comment
     code.append("# ");
-    code.append(nodeSetting->getTitle().getComment("Bash"));
+    code.append(nodeSetting->getTitle().getComment("Afni"));
     code.append("\n");
 
     //add function
-    code.append(nodeSetting->getTitle().getArgument("Bash"));
+    code.append(nodeSetting->getTitle().getArgument("Afni"));
 
 //    //add input
     foreach (Argument argument, nodeSetting->getPorts())
@@ -47,22 +47,22 @@ QString BashGenerator::itemToCode(
     return code;
 }
 
-QString BashGenerator::argumentToCode(
+QString AfniGenerator::argumentToCode(
         const Argument& _argument,
         const NodeTreeItem* _item
         ) const
 {
     QString code(" ");
-    if(!_argument.getArgument("Bash").isEmpty())
+    if(!_argument.getArgument("Afni").isEmpty())
     {
 //        code.append(" ");
-        code.append(_argument.getArgument("Bash"));
+        code.append(_argument.getArgument("Afni"));
     }
     code.append(_item->getFileName(_argument.getName()));
     return code;
 }
 
-BashGenerator::~BashGenerator()
+AfniGenerator::~AfniGenerator()
 {
 
 }

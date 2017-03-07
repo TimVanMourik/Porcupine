@@ -1,5 +1,5 @@
-#ifndef CODEGENERATOR_H
-#define CODEGENERATOR_H
+#ifndef CODEGENERATOR_HPP
+#define CODEGENERATOR_HPP
 
 #include <QList>
 #include <QString>
@@ -20,4 +20,4 @@ public:
     ~CodeGenerator();
 };
 
-#endif // CODEGENERATOR_H
+#endif // CODEGENERATOR_HPP

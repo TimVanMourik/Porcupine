@@ -1,5 +1,5 @@
-#ifndef SYNTAXHIGHLIGHTER_H
-#define SYNTAXHIGHLIGHTER_H
+#ifndef SYNTAXHIGHLIGHTER_HPP
+#define SYNTAXHIGHLIGHTER_HPP
 
 #include <QSyntaxHighlighter>
 
@@ -34,4 +34,4 @@ private:
     QVector<HighlightingRule> m_highlightingRules;
 };
 
-#endif // SYNTAXHIGHLIGHTER_H
+#endif // SYNTAXHIGHLIGHTER_HPP

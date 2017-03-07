@@ -1,13 +1,13 @@
-#include "MatlabGenerator.hpp"
+#include "TvmGenerator.hpp"
 
-MatlabGenerator::MatlabGenerator() :
+TvmGenerator::TvmGenerator() :
     CodeGenerator(),
     m_configurationVariable("cfg")
 {
 
 }
 
-QString MatlabGenerator::generateCode(
+QString TvmGenerator::generateCode(
             const QList<NodeTreeItem*>& _nodeList
             )
 {
@@ -19,7 +19,7 @@ QString MatlabGenerator::generateCode(
     return code;
 }
 
-QString MatlabGenerator::itemToCode(
+QString TvmGenerator::itemToCode(
         const NodeTreeItem* _item
         ) const
 {
@@ -27,33 +27,25 @@ QString MatlabGenerator::itemToCode(
     QString code("");
     if(nodeSetting->getTitle().getArgument("MATLAB").isEmpty())
     {
-//        return QString("% This function cannot be converted to MATLAB code\n");
         return QString("");
     }
 
-    code.append("%% ");
-    code.append(nodeSetting->getTitle().getComment("MATLAB"));
-    code.append("\n");
-    code.append(m_configurationVariable).append(" = [];\n");
+    code.append(QString("%% %1\n").arg(nodeSetting->getTitle().getComment("MATLAB")));
+    code.append(QString("%1 = [];\n").arg(m_configurationVariable));
 
     //add input
     foreach (Argument argument, nodeSetting->getPorts())
     {
-//        _item->getFileName()
         code.append(argumentToCode(argument, _item));
     }
 
     //add function
-    code.append(nodeSetting->getTitle().getArgument("MATLAB"));
-    code.append("(");
-    code.append(m_configurationVariable);
-    code.append(");");
-    code.append("\n\n");
+    code.append(QString("%1(%2);\n\n").arg(nodeSetting->getTitle().getArgument("MATLAB"), m_configurationVariable));
     //
     return code;
 }
 
-QString MatlabGenerator::argumentToCode(
+QString TvmGenerator::argumentToCode(
         const Argument& _argument,
         const NodeTreeItem* _item
         ) const
@@ -62,12 +54,7 @@ QString MatlabGenerator::argumentToCode(
     QString fileName = _item->getFileName(_argument.getName());
     if(!_argument.getArgument("MATLAB").isEmpty() && !fileName.isEmpty())
     {
-        code.append(m_configurationVariable);
-        code.append(".");
-        code.append(_argument.getArgument("MATLAB"));
-        code.append(" = ");
-        code.append(fileName);
-        code.append(";");
+        code.append(QString("%1.%2 = %3;").arg(m_configurationVariable, _argument.getArgument("MATLAB"), fileName));
         if(!_argument.getComment("MATLAB").isEmpty())
         {
             code.append("\t% ");
@@ -78,7 +65,7 @@ QString MatlabGenerator::argumentToCode(
     return code;
 }
 
-MatlabGenerator::~MatlabGenerator()
+TvmGenerator::~TvmGenerator()
 {
 
 }

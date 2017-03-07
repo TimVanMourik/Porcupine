@@ -1,0 +1,99 @@
+<node>
+    <category name="SPM">
+        <category name="Spatial">
+            <category name="Coregister"/>
+        </category>
+    </category>
+    <title name="Coregister - estimate &amp; reslice">
+        <code>
+            <language name="SPM">
+                <comment text="Coregistration"/>
+                <argument name=""/>
+            </language>
+        </code>
+    </title>
+    <input-output name="Reference Image">
+        <code>
+            <language name="SPM">
+                <argument name="matlabbatch{batchNumber}.spm.spatial.coreg.estwrite.ref(1)\t\t\t\t= {%1};"/>
+            </language>
+        </code>
+    </input-output>
+    <input name="Source Image">
+        <code>
+            <language name="SPM">
+                <argument name="matlabbatch{batchNumber}.spm.spatial.coreg.estwrite.source\t\t\t\t= {%1};"/>
+            </language>
+        </code>
+    </input>
+    <input name="Other files" default="''">
+        <code>
+            <language name="SPM">
+                <argument name="matlabbatch{batchNumber}.spm.spatial.coreg.estwrite.other\t\t\t\t= {%1};"/>
+            </language>
+        </code>
+    </input>
+    <hidden name="Cost Function" default="'nmi'">
+        <code>
+            <language name="SPM">
+                <argument name="matlabbatch{batchNumber}.spm.spatial.coreg.estwrite.eoptions.cost_fun\t= %1;"/>
+            </language>
+        </code>
+    </hidden>
+    <hidden name="Separation" default="[4, 2]">
+        <code>
+            <language name="SPM">
+                <argument name="matlabbatch{batchNumber}.spm.spatial.coreg.estwrite.eoptions.sep\t\t= %1;"/>
+            </language>
+        </code>
+    </hidden>
+    <hidden name="Tolerance" default="[0.02 0.02 0.02 0.001 0.001 0.001 0.01 0.01 0.01 0.001 0.001 0.001]">
+        <code>
+            <language name="SPM">
+                <argument name="matlabbatch{batchNumber}.spm.spatial.coreg.estwrite.eoptions.tol\t\t= %1;"/>
+            </language>
+        </code>
+    </hidden>
+    <hidden name="FWHM" default="[7, 7]">
+        <code>
+            <language name="SPM">
+                <argument name="matlabbatch{batchNumber}.spm.spatial.coreg.estwrite.eoptions.fwhm\t\t= %1;"/>
+            </language>
+        </code>
+    </hidden>
+    <hidden name="Interpolation" default="4">
+        <code>
+            <language name="SPM">
+                <argument name="matlabbatch{batchNumber}.spm.spatial.coreg.estwrite.roptions.interp\t\t= %1;"/>
+            </language>
+        </code>
+    </hidden>
+    <hidden name="Wrap" default="[0, 0, 0]">
+        <code>
+            <language name="SPM">
+                <argument name="matlabbatch{batchNumber}.spm.spatial.coreg.estwrite.roptions.wrap\t\t= %1;"/>
+            </language>
+        </code>
+    </hidden>
+    <hidden name="Mask" default="0">
+        <code>
+            <language name="SPM">
+                <argument name="matlabbatch{batchNumber}.spm.spatial.coreg.estwrite.roptions.mask\t\t= %1;"/>
+            </language>
+        </code>
+    </hidden>
+    <secret name="Prefix" default="'r'">
+        <code>
+            <language name="SPM">
+                <argument name="matlabbatch{batchNumber}.spm.spatial.coreg.estwrite.roptions.prefix\t\t= %1;"/>
+            </language>
+        </code>
+    </secret>
+    <output name="Resliced Image">
+        <code>
+            <language name="SPM">
+                <argument name="batchNumber = batchNumber + 1;\n[root, outputFile] = fileparts(%1);\nmatlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.files(1) = cfg_dep('Coregister: Estimate &amp; Reslice: Coregistered Images', substruct('.','val', '{}',{mainBatch}, '.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('.','rfiles'));\nmatlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.moveto = {root};\n[~, file, ~] = fileparts(matlabbatch{mainBatch}.spm.spatial.coreg.estwrite.source{1});\nmatlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.patrep.pattern = ['r', file];\nmatlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.patrep.repl = outputFile;\nmatlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.unique = false;"/>
+            </language>
+        </code>
+    </output>
+</node>

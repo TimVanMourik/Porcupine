@@ -1,5 +1,5 @@
-#ifndef CODEEDITOR_H
-#define CODEEDITOR_H
+#ifndef CODEEDITOR_HPP
+#define CODEEDITOR_HPP
 
 #include <QTabWidget>
 
@@ -42,4 +42,4 @@ private:
     QStringList m_programmingLanguages;
 };
 
-#endif // CODEEDITOR_H
+#endif // CODEEDITOR_HPP

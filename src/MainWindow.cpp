@@ -28,9 +28,9 @@
 #include "NodeLibrary.hpp"
 
 MainWindow::MainWindow(
-        QWidget* parent
+        QWidget* _parent
         ) :
-    QMainWindow(parent),
+    QMainWindow(_parent),
     m_nodeEditorWidget(new QTabWidget()),
     m_nodeTreeWidget  (new QWidget()),
     m_codeEditorWidget(new QWidget()),
@@ -81,10 +81,10 @@ MainWindow::MainWindow(
     loadDataTypes();
     loadDefaultNodes();
 
-    newFile();
-
     connect(button, SIGNAL(released()), this, SLOT(nodeToCode()));
     connect(m_nodeEditorWidget, SIGNAL(currentChanged(int)), this, SLOT(setFileAt(int)));
+
+    newFile();
 }
 
 void MainWindow::nodeToCode(
@@ -144,9 +144,10 @@ void MainWindow::loadDefaultNodes(
 
     QStringList toolboxNames;
     toolboxNames << QString(":/Dictionaries/node_%1.xml");
-    toolboxNames << QString(":/Dictionaries/TVM/DesignMatrix/node_%1.xml");
-    toolboxNames << QString(":/Dictionaries/TVM/node_%1.xml");
-    toolboxNames << QString(":/Dictionaries/SPM/node_%1.xml");
+//    toolboxNames << QString(":/Dictionaries/TVM/DesignMatrix/node_%1.xml");
+//    toolboxNames << QString(":/Dictionaries/TVM/node_%1.xml");
+    toolboxNames << QString(":/Dictionaries/tvm_nodes/node_%1.xml");
+//    toolboxNames << QString(":/Dictionaries/SPM/node_%1.xml");
 //    toolboxNames << QString(":/Dictionaries/FieldTrip/node_%1.xml");
 //    toolboxNames << QString(":/Dictionaries/FSL/node_%1.xml");
     foreach (QString toolbox, toolboxNames)
@@ -400,6 +401,7 @@ void MainWindow::createMenus()
     m_fileMenu = menuBar()->addMenu(tr("File"));
     m_fileMenu->addAction(m_newAct);
     m_fileMenu->addAction(m_openAct);
+    /// @todo Add 'open recent file' to the menu
     m_fileMenu->addAction(m_saveToXmlAct);
     m_fileMenu->addAction(m_printAct);
     m_fileMenu->addAction(m_loadNodesAct);

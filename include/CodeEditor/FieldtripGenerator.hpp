@@ -1,19 +1,19 @@
-#ifndef MATLABGENERATOR_H
-#define MATLABGENERATOR_H
+#ifndef FIELDTRIPGENERATOR_HPP
+#define FIELDTRIPGENERATOR_HPP
 
 #include "CodeGenerator.hpp"
 
-class MatlabGenerator : public CodeGenerator
+class FieldtripGenerator : public CodeGenerator
 {
 public:
     //
-    MatlabGenerator();
+    FieldtripGenerator();
     //
     QString generateCode(
             const QList<NodeTreeItem*>& _nodeList
             );
     //
-    ~MatlabGenerator(
+    ~FieldtripGenerator(
             );
 private:
     QString itemToCode(
@@ -28,4 +28,4 @@ private:
     QString m_configurationVariable;
 };
 
-#endif // MATLABGENERATOR_H
+#endif // FIELDTRIPGENERATOR_HPP

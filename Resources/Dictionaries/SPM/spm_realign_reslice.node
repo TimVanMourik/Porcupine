@@ -8,63 +8,63 @@
         <code>
             <language name="SPM">
                 <comment text="Realignment"/>
-                <argument name="tvm_realignFunctionals"/>
+                <argument name=""/>
             </language>
         </code>
     </title>
     <input-output name="Functional Data">
         <code>
             <language name="SPM">
-                <argument name="matlabbatch{%1}.spm.spatial.realign.write.data = %2;"/>
+                <argument name="matlabbatch{batchNumber}.spm.spatial.realign.write.data\t\t\t= {%1};"/>
             </language>
         </code>
     </input-output>
     <hidden name="Which" default="[2, 1]">
         <code>
             <language name="SPM">
-                <argument name="matlabbatch{%1}.spm.spatial.realign.roptions.which = %2;"/>
+                <argument name="matlabbatch{batchNumber}.spm.spatial.realign.write.roptions.which\t\t= %1;"/>
             </language>
         </code>
     </hidden>
     <hidden name="Interpolation" default="4">
         <code>
             <language name="SPM">
-                <argument name="matlabbatch{%1}.spm.spatial.realign.roptions.interp = %2;"/>
+                <argument name="matlabbatch{batchNumber}.spm.spatial.realign.write.roptions.interp\t= %1;"/>
             </language>
         </code>
     </hidden>
     <hidden name="Wrap" default="[0, 0, 0]">
         <code>
             <language name="SPM">
-                <argument name="matlabbatch{%1}.spm.spatial.realign.roptions.wrap = %2;"/>
+                <argument name="matlabbatch{batchNumber}.spm.spatial.realign.write.roptions.wrap\t\t= %1;"/>
             </language>
         </code>
     </hidden>
     <hidden name="Mask" default="1">
         <code>
             <language name="SPM">
-                <argument name="matlabbatch{%1}.spm.spatial.realign.roptions.mask = %2;"/>
+                <argument name="matlabbatch{batchNumber}.spm.spatial.realign.write.roptions.mask\t\t= %1;"/>
             </language>
         </code>
     </hidden>
     <secret name="Prefix" default="'r'">
         <code>
             <language name="SPM">
-                <argument name="matlabbatch{%1}.spm.spatial.realign.roptions.prefix = %2;"/>
+                <argument name="matlabbatch{batchNumber}.spm.spatial.realign.write.roptions.prefix\t= %1;"/>
             </language>
         </code>
     </secret>
     <output name="Realigned Data">
         <code>
             <language name="SPM">
-                <argument name="[root, outputFile] = fileparts('%2');\nmatlabbatch{1 + %1}.cfg_basicio.file_dir.file_ops.file_move.files(1) = cfg_dep('Realign: Reslice: Resliced Images', substruct('.','val', '{}',{%1}, '.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('.','rfiles'));\nmatlabbatch{1 + %1}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.moveto = {root};\n[~, file, ~] = fileparts(matlabbatch{%1}.spm.spatial.realign.write.data{1});\nmatlabbatch{1 + %1}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.patrep.pattern = ['r', file];\nmatlabbatch{1 + %1}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.patrep.repl = outputFile;\nmatlabbatch{1 + %1}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.unique = false;"/>
+                <argument name="batchNumber = batchNumber + 1;\n[root, outputFile] = fileparts(%1);\nmatlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.files(1) = cfg_dep('Realign: Reslice: Resliced Images', substruct('.','val', '{}',{batchNumber - 1}, '.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('.','rfiles'));\nmatlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.moveto = {root};\n[~, file, ~] = fileparts(matlabbatch{batchNumber - 1}.spm.spatial.realign.write.data{1});\nmatlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.patrep.pattern = ['r', file];\nmatlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.patrep.repl = outputFile;\nmatlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.unique = false;"/>
             </language>
         </code>
     </output>
     <output name="Mean">
         <code>
             <language name="SPM">
-                <argument name="[root, outputFile] = fileparts('%2');\nmatlabbatch{2 + %1}.cfg_basicio.file_dir.file_ops.file_move.files(1) = cfg_dep('Realign: Reslice: Mean Image', substruct('.','val', '{}',{%1}, '.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('.','rmean'));\nmatlabbatch{2 + %1}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.moveto = {root};\n[~, file, ~] = fileparts(matlabbatch{%1}.spm.spatial.realign.write.data{1});\nmatlabbatch{2 + %1}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.patrep.pattern = ['mean', file];\nmatlabbatch{2 + %1}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.patrep.repl = outputFile;\nmatlabbatch{2 + %1}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.unique = false;"/>
+                <argument name="batchNumber = batchNumber + 1;\n[root, outputFile] = fileparts(%1);\nmatlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.files(1) = cfg_dep('Realign: Reslice: Mean Image', substruct('.','val', '{}',{batchNumber - 2}, '.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('.','rmean'));\nmatlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.moveto = {root};\n[~, file, ~] = fileparts(matlabbatch{batchNumber - 2}.spm.spatial.realign.write.data{1});\nmatlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.patrep.pattern = ['mean', file];\nmatlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.patrep.repl = outputFile;\nmatlabbatch{batchNumber}.cfg_basicio.file_dir.file_ops.file_move.action.moveren.unique = false;"/>
             </language>
         </code>
     </output>

@@ -1,53 +1,18 @@
 <node>
     <category name="FieldTrip"/>
-    <title name="Frequency analysis">
+    <title name="Some function">
         <code>
-            <language name="MATLAB">
-                <comment text="Analyse frequencies of your signal"/>
-                <argument name="ft_freqanalysis"/>
+            <language name="FieldTrip">
+                <comment text="This is what the function does"/>
+                <argument name="ft_analysispipeline"/>
             </language>
         </code>
     </title>
-    <input name="Method">
-        <code>
-            <language name="MATLAB">
-                <argument name="method"/>
-            </language>
-        </code>
-    </input>
-    <input name="Time points of interest">
-        <code>
-            <language name="MATLAB">
-                <argument name="toi"/>
-            </language>
-        </code>
-    </input>
-    <input name="Channel">
-        <code>
-            <language name="MATLAB">
-                <argument name="channel"/>
-            </language>
-        </code>
-    </input>
-    <input name="Keep trials">
-        <code>
-            <language name="MATLAB">
-                <argument name="keeptrials"/>
-            </language>
-        </code>
-    </input>
     <input name="Input file">
         <code>
-            <language name="MATLAB">
-                <argument name="inputfile"/>
+            <language name="FieldTrip">
+                <argument name="code as output"/>
             </language>
         </code>
     </input>
-    <output name="Output file">
-        <code>
-            <language name="MATLAB">
-                <argument name="outputfile"/>
-            </language>
-        </code>
-    </output>
 </node>

@@ -1,5 +1,5 @@
-#ifndef PYTHONHIGHLIGHTER_H
-#define PYTHONHIGHLIGHTER_H
+#ifndef PYTHONHIGHLIGHTER_HPP
+#define PYTHONHIGHLIGHTER_HPP
 
 #include "SyntaxHighlighter.hpp"
 
@@ -14,4 +14,4 @@ public:
     ~PythonHighlighter();
 };
 
-#endif // PYTHONHIGHLIGHTER_H
+#endif // PYTHONHIGHLIGHTER_HPP
