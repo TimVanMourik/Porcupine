@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node>
+   <category name="TVM">
+      <category name="Activation"/>
+   </category>
+   <title name="tvm_glm">
+      <code>
+         <language name="MATLAB">
+            <argument name="tvm_glm"/>
+         </language>
+      </code>
+   </title>
+   <input-output name="i_SubjectDirectory">
+      <code>
+         <language name="MATLAB">
+            <argument name="i_SubjectDirectory"/>
+         </language>
+      </code>
+   </input-output>
+   <input-output name="i_DesignMatrix">
+      <code>
+         <language name="MATLAB">
+            <argument name="i_DesignMatrix"/>
+         </language>
+      </code>
+   </input-output>
+   <input-output name="i_ReferenceVolume">
+      <code>
+         <language name="MATLAB">
+            <argument name="i_ReferenceVolume"/>
+         </language>
+      </code>
+   </input-output>
+   <input-output name="i_SourceDirectory">
+      <code>
+         <language name="MATLAB">
+            <argument name="i_SourceDirectory"/>
+         </language>
+      </code>
+   </input-output>
+   <input-output name="i_FunctionalFiles">
+      <code>
+         <language name="MATLAB">
+            <argument name="i_FunctionalFiles"/>
+         </language>
+      </code>
+   </input-output>
+   <input-output name="i_Mask">
+      <code>
+         <language name="MATLAB">
+            <argument name="i_Mask"/>
+         </language>
+      </code>
+   </input-output>
+   <input-output name="i_FunctionalSelection">
+      <code>
+         <language name="MATLAB">
+            <argument name="i_FunctionalSelection"/>
+         </language>
+      </code>
+   </input-output>
+   <output name="o_Betas">
+      <code>
+         <language name="MATLAB">
+            <argument name="o_Betas"/>
+         </language>
+      </code>
+   </output>
+   <output name="o_ResidualSumOfSquares">
+      <code>
+         <language name="MATLAB">
+            <argument name="o_ResidualSumOfSquares"/>
+         </language>
+      </code>
+   </output>
+</node>

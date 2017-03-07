@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node>
+   <category name="TVM">
+      <category name="LaminarAnalysis"/>
+   </category>
+   <title name="tvm_gradient">
+      <code>
+         <language name="MATLAB">
+            <argument name="tvm_gradient"/>
+         </language>
+      </code>
+   </title>
+   <input-output name="i_SubjectDirectory">
+      <code>
+         <language name="MATLAB">
+            <argument name="i_SubjectDirectory"/>
+         </language>
+      </code>
+   </input-output>
+   <input-output name="i_Potential">
+      <code>
+         <language name="MATLAB">
+            <argument name="i_Potential"/>
+         </language>
+      </code>
+   </input-output>
+   <input-output name="i_Normalise">
+      <code>
+         <language name="MATLAB">
+            <argument name="i_Normalise"/>
+         </language>
+      </code>
+   </input-output>
+   <output name="o_Gradient">
+      <code>
+         <language name="MATLAB">
+            <argument name="o_Gradient"/>
+         </language>
+      </code>
+   </output>
+</node>

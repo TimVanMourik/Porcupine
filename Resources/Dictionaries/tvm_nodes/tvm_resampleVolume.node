@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node>
+   <category name="TVM">
+      <category name="Registration"/>
+   </category>
+   <title name="tvm_resampleVolume">
+      <code>
+         <language name="MATLAB">
+            <argument name="tvm_resampleVolume"/>
+         </language>
+      </code>
+   </title>
+   <input-output name="i_SubjectDirectory">
+      <code>
+         <language name="MATLAB">
+            <argument name="i_SubjectDirectory"/>
+         </language>
+      </code>
+   </input-output>
+   <input-output name="i_ReferenceVolume">
+      <code>
+         <language name="MATLAB">
+            <argument name="i_ReferenceVolume"/>
+         </language>
+      </code>
+   </input-output>
+   <input-output name="i_VoxelSize">
+      <code>
+         <language name="MATLAB">
+            <argument name="i_VoxelSize"/>
+         </language>
+      </code>
+   </input-output>
+   <output name="o_OutputVolume">
+      <code>
+         <language name="MATLAB">
+            <argument name="o_OutputVolume"/>
+         </language>
+      </code>
+   </output>
+</node>
