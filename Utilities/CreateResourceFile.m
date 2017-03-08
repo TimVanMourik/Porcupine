@@ -46,7 +46,7 @@ for i = 1:length(files)
     fileNode.setAttribute('alias', sprintf('node_%03d.xml', i - 1));
     
     [~, file, ~] = fileparts(files{i});
-    fileNode.appendChild(docNode.createTextNode(fullfile(directory, [file, '.node'])));
+    fileNode.appendChild(docNode.createTextNode(strrep(fullfile(directory, [file, '.node']), '\', '/')));
     currentNode.appendChild(fileNode);
 end
 docRoot.appendChild(currentNode);
@@ -64,7 +64,7 @@ for i = 1:length(files)
     fileNode.setAttribute('alias', sprintf('node_%03d.xml', i - 1));
     
     [~, file, ~] = fileparts(files{i});
-    fileNode.appendChild(docNode.createTextNode(fullfile(directory, [file, '.node'])));
+    fileNode.appendChild(docNode.createTextNode(strrep(fullfile(directory, [file, '.node']), '\', '/')));
     currentNode.appendChild(fileNode);
 end
 
