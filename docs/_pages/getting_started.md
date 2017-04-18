@@ -30,18 +30,20 @@ feature_row:
 
 
 # Porcupine
-## PORcupine Creates Ur PipelINE
+This program is meant for creating analysis pipelines for fMRI analysis (and perhaps for in the future). At the moment, this works only for NiPype pipelines, but interfaces to other packages are also in development.
+
+## Installation
+Just download the installer files. Currently, there is only an installer for Windows. Mac and Linux installer files will follow soon.
+
 ## Compilation
-This is a pipeline program for which documentation might be added some time in the future. For now, it should readily compile on any platform with <a href="https://www.qt.io/download/">Qt Creator</a>. Once that works, the GUI should be quite self-explanatory.
+If you want to contribute and hack around yourself, you should first compile it. This is easily done on any platform with <a href="https://www.qt.io/download/">Qt Creator</a>.
 
 Currently, it's been tested on Mac, Windows and Linux with the latest version of Qt (5.7.0) and Qt Creator (4.1.0). If that's installed, basically pressing the big green button is the only thing you need to make it compile and run.
 
-Installer files will be provided in the near future.
-
 ## Modules
 Porcupine features interfaces to
-* My own fMRI analysis toolbox, including laminar fMRI https://github.com/TimVanMourik/OpenFmriAnalysis
-* NiPype https://github.com/nipy/nipype
+* My own [fMRI analysis toolbox](https://github.com/TimVanMourik/OpenFmriAnalysis), including layer specific fMRI
+* [NiPype](https://github.com/nipy/nipype)
 
-## Porcupine in action: examples
+## Porcupine in action: examples that have not yet been created
 {% include feature_row %}
