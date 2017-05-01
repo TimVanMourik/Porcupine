@@ -5,7 +5,7 @@
         <a class="site-title" href="{{ '/' | absolute_url }}">{{ site.title }}</a>
         <ul class="visible-links">
           {% for link in site.data.navigation.main %}
-            {% if link.url contains 'http' %}
+            {% if link.url contains 'https' %}
               {% assign domain = '' %}
             {% else %}
               {% assign domain = site.url | append: site.baseurl %}
