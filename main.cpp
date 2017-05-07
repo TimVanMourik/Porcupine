@@ -55,6 +55,7 @@ int main(
     MainWindow w;
     w.showMaximized();
     w.setWindowTitle("PORcupine Creates Ur PipelINE");
+    w.setWindowIcon(QIcon("porcupine.icns"));
 
     return app.exec();
 }

@@ -18,6 +18,9 @@ macx:{
     QMAKE_CXXFLAGS                     += -std=c++11
 
     DEFINES                            += DARWIN
+    ICON                                = $$ROOT/Resources/Icon/porcupine.icns
+
+    QMAKE_RPATHDIR                      = /Applications/Qt/5.7/clang_64/lib
 }
 
 QMAKE_CXXFLAGS                         += -std=gnu++0x
