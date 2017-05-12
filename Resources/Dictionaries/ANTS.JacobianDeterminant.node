@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="ANTS"/>
+  </category>
+  <title name="ANTS.JacobianDeterminant">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **ANTSJacobian**"/>
+        <argument name="ants.JacobianDeterminant()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="dimension">
+    <code>
+      <language name="NiPype">
+        <argument name="dimension"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="warp_file">
+    <code>
+      <language name="NiPype">
+        <argument name="warp_file"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="jacobian_image">
+    <code>
+      <language name="NiPype">
+        <argument name="jacobian_image"/>
+      </language>
+    </code>
+  </output>
+</node>

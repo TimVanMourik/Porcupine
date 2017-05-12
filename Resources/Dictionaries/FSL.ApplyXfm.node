@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="FSL"/>
+  </category>
+  <title name="FSL.ApplyXfm">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **flirt**"/>
+        <argument name="fsl.ApplyXfm()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="in_file">
+    <code>
+      <language name="NiPype">
+        <argument name="in_file"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="reference">
+    <code>
+      <language name="NiPype">
+        <argument name="reference"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="out_log">
+    <code>
+      <language name="NiPype">
+        <argument name="out_log"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="out_file">
+    <code>
+      <language name="NiPype">
+        <argument name="out_file"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="out_matrix_file">
+    <code>
+      <language name="NiPype">
+        <argument name="out_matrix_file"/>
+      </language>
+    </code>
+  </output>
+</node>

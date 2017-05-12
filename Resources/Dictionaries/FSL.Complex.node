@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="FSL"/>
+  </category>
+  <title name="FSL.Complex">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **fslcomplex**"/>
+        <argument name="fsl.Complex()"/>
+      </language>
+    </code>
+  </title>
+  <output editable="false" name="phase_out_file">
+    <code>
+      <language name="NiPype">
+        <argument name="phase_out_file"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="imaginary_out_file">
+    <code>
+      <language name="NiPype">
+        <argument name="imaginary_out_file"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="complex_out_file">
+    <code>
+      <language name="NiPype">
+        <argument name="complex_out_file"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="magnitude_out_file">
+    <code>
+      <language name="NiPype">
+        <argument name="magnitude_out_file"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="real_out_file">
+    <code>
+      <language name="NiPype">
+        <argument name="real_out_file"/>
+      </language>
+    </code>
+  </output>
+</node>

@@ -1,0 +1,140 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="FREESURFER"/>
+  </category>
+  <title name="FREESURFER.OneSampleTTest">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **mri_glmfit**"/>
+        <argument name="freesurfer.OneSampleTTest()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="in_file">
+    <code>
+      <language name="NiPype">
+        <argument name="in_file"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="gamma_var_file">
+    <code>
+      <language name="NiPype">
+        <argument name="gamma_var_file"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="error_var_file">
+    <code>
+      <language name="NiPype">
+        <argument name="error_var_file"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="ftest_file">
+    <code>
+      <language name="NiPype">
+        <argument name="ftest_file"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="error_file">
+    <code>
+      <language name="NiPype">
+        <argument name="error_file"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="sig_file">
+    <code>
+      <language name="NiPype">
+        <argument name="sig_file"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="svd_stats_file">
+    <code>
+      <language name="NiPype">
+        <argument name="svd_stats_file"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="dof_file">
+    <code>
+      <language name="NiPype">
+        <argument name="dof_file"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="singular_values">
+    <code>
+      <language name="NiPype">
+        <argument name="singular_values"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="spatial_eigenvectors">
+    <code>
+      <language name="NiPype">
+        <argument name="spatial_eigenvectors"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="fwhm_file">
+    <code>
+      <language name="NiPype">
+        <argument name="fwhm_file"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="beta_file">
+    <code>
+      <language name="NiPype">
+        <argument name="beta_file"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="gamma_file">
+    <code>
+      <language name="NiPype">
+        <argument name="gamma_file"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="frame_eigenvectors">
+    <code>
+      <language name="NiPype">
+        <argument name="frame_eigenvectors"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="glm_dir">
+    <code>
+      <language name="NiPype">
+        <argument name="glm_dir"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="mask_file">
+    <code>
+      <language name="NiPype">
+        <argument name="mask_file"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="error_stddev_file">
+    <code>
+      <language name="NiPype">
+        <argument name="error_stddev_file"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="estimate_file">
+    <code>
+      <language name="NiPype">
+        <argument name="estimate_file"/>
+      </language>
+    </code>
+  </output>
+</node>

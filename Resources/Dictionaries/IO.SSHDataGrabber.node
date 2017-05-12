@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="IO"/>
+  </category>
+  <title name="IO.SSHDataGrabber">
+    <code>
+      <language name="NiPype">
+        <comment text="Extension of DataGrabber module that downloads the file list and"/>
+        <argument name="io.SSHDataGrabber()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="sort_filelist">
+    <code>
+      <language name="NiPype">
+        <argument name="sort_filelist"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="base_directory">
+    <code>
+      <language name="NiPype">
+        <argument name="base_directory"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="hostname">
+    <code>
+      <language name="NiPype">
+        <argument name="hostname"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="template">
+    <code>
+      <language name="NiPype">
+        <argument name="template"/>
+      </language>
+    </code>
+  </input>
+</node>

@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="FREESURFER"/>
+  </category>
+  <title name="FREESURFER.MakeAverageSubject">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **make_average_subject**"/>
+        <argument name="freesurfer.MakeAverageSubject()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="subjects_ids">
+    <code>
+      <language name="NiPype">
+        <argument name="subjects_ids"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="average_subject_name">
+    <code>
+      <language name="NiPype">
+        <argument name="average_subject_name"/>
+      </language>
+    </code>
+  </output>
+</node>

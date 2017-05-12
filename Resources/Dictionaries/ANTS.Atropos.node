@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="ANTS"/>
+  </category>
+  <title name="ANTS.Atropos">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **Atropos**"/>
+        <argument name="ants.Atropos()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="number_of_tissue_classes">
+    <code>
+      <language name="NiPype">
+        <argument name="number_of_tissue_classes"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="intensity_images">
+    <code>
+      <language name="NiPype">
+        <argument name="intensity_images"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="initialization">
+    <code>
+      <language name="NiPype">
+        <argument name="initialization"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="mask_image">
+    <code>
+      <language name="NiPype">
+        <argument name="mask_image"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="posteriors">
+    <code>
+      <language name="NiPype">
+        <argument name="posteriors"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="classified_image">
+    <code>
+      <language name="NiPype">
+        <argument name="classified_image"/>
+      </language>
+    </code>
+  </output>
+</node>

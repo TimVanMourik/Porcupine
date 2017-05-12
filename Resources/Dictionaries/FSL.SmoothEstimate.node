@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="FSL"/>
+  </category>
+  <title name="FSL.SmoothEstimate">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **smoothest**"/>
+        <argument name="fsl.SmoothEstimate()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="mask_file">
+    <code>
+      <language name="NiPype">
+        <argument name="mask_file"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="dof">
+    <code>
+      <language name="NiPype">
+        <argument name="dof"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="volume">
+    <code>
+      <language name="NiPype">
+        <argument name="volume"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="resels">
+    <code>
+      <language name="NiPype">
+        <argument name="resels"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="dlh">
+    <code>
+      <language name="NiPype">
+        <argument name="dlh"/>
+      </language>
+    </code>
+  </output>
+</node>

@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="ANTS"/>
+  </category>
+  <title name="ANTS.AverageImages">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **AverageImages**"/>
+        <argument name="ants.AverageImages()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="normalize">
+    <code>
+      <language name="NiPype">
+        <argument name="normalize"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="images">
+    <code>
+      <language name="NiPype">
+        <argument name="images"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="dimension">
+    <code>
+      <language name="NiPype">
+        <argument name="dimension"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="output_average_image">
+    <code>
+      <language name="NiPype">
+        <argument name="output_average_image"/>
+      </language>
+    </code>
+  </output>
+</node>

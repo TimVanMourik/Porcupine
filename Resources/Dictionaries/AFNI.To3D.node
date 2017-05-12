@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="AFNI"/>
+  </category>
+  <title name="AFNI.To3D">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **to3d**"/>
+        <argument name="afni.To3D()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="in_folder">
+    <code>
+      <language name="NiPype">
+        <argument name="in_folder"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="out_file">
+    <code>
+      <language name="NiPype">
+        <argument name="out_file"/>
+      </language>
+    </code>
+  </output>
+</node>

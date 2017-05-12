@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="FREESURFER"/>
+  </category>
+  <title name="FREESURFER.RegisterAVItoTalairach">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **avi2talxfm**"/>
+        <argument name="freesurfer.RegisterAVItoTalairach()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="vox2vox">
+    <code>
+      <language name="NiPype">
+        <argument name="vox2vox"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="target">
+    <code>
+      <language name="NiPype">
+        <argument name="target"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="in_file">
+    <code>
+      <language name="NiPype">
+        <argument name="in_file"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="log_file">
+    <code>
+      <language name="NiPype">
+        <argument name="log_file"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="out_file">
+    <code>
+      <language name="NiPype">
+        <argument name="out_file"/>
+      </language>
+    </code>
+  </output>
+</node>

@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="FREESURFER"/>
+  </category>
+  <title name="FREESURFER.SegmentCC">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **mri_cc**"/>
+        <argument name="freesurfer.SegmentCC()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="in_norm">
+    <code>
+      <language name="NiPype">
+        <argument name="in_norm"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="subject_id">
+    <code>
+      <language name="NiPype">
+        <argument name="subject_id"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="out_rotation">
+    <code>
+      <language name="NiPype">
+        <argument name="out_rotation"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="in_file">
+    <code>
+      <language name="NiPype">
+        <argument name="in_file"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="out_file">
+    <code>
+      <language name="NiPype">
+        <argument name="out_file"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="out_rotation">
+    <code>
+      <language name="NiPype">
+        <argument name="out_rotation"/>
+      </language>
+    </code>
+  </output>
+</node>

@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="ANTS"/>
+  </category>
+  <title name="ANTS.AntsJointFusion">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **antsJointFusion**"/>
+        <argument name="ants.AntsJointFusion()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="target_image">
+    <code>
+      <language name="NiPype">
+        <argument name="target_image"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="atlas_image">
+    <code>
+      <language name="NiPype">
+        <argument name="atlas_image"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="atlas_segmentation_image">
+    <code>
+      <language name="NiPype">
+        <argument name="atlas_segmentation_image"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="out_label_post_prob_name_format">
+    <code>
+      <language name="NiPype">
+        <argument name="out_label_post_prob_name_format"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="out_atlas_voting_weight_name_format">
+    <code>
+      <language name="NiPype">
+        <argument name="out_atlas_voting_weight_name_format"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="out_intensity_fusion_name_format">
+    <code>
+      <language name="NiPype">
+        <argument name="out_intensity_fusion_name_format"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="out_label_fusion">
+    <code>
+      <language name="NiPype">
+        <argument name="out_label_fusion"/>
+      </language>
+    </code>
+  </output>
+</node>

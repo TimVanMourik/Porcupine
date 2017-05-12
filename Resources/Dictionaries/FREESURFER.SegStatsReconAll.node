@@ -1,0 +1,126 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="FREESURFER"/>
+  </category>
+  <title name="FREESURFER.SegStatsReconAll">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **mri_segstats**"/>
+        <argument name="freesurfer.SegStatsReconAll()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="rh_white">
+    <code>
+      <language name="NiPype">
+        <argument name="rh_white"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="surf_label">
+    <code>
+      <language name="NiPype">
+        <argument name="surf_label"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="lh_orig_nofix">
+    <code>
+      <language name="NiPype">
+        <argument name="lh_orig_nofix"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="rh_orig_nofix">
+    <code>
+      <language name="NiPype">
+        <argument name="rh_orig_nofix"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="subject_id">
+    <code>
+      <language name="NiPype">
+        <argument name="subject_id"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="transform">
+    <code>
+      <language name="NiPype">
+        <argument name="transform"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="lh_white">
+    <code>
+      <language name="NiPype">
+        <argument name="lh_white"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="annot">
+    <code>
+      <language name="NiPype">
+        <argument name="annot"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="lh_pial">
+    <code>
+      <language name="NiPype">
+        <argument name="lh_pial"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="rh_pial">
+    <code>
+      <language name="NiPype">
+        <argument name="rh_pial"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="segmentation_file">
+    <code>
+      <language name="NiPype">
+        <argument name="segmentation_file"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="ribbon">
+    <code>
+      <language name="NiPype">
+        <argument name="ribbon"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="sf_avg_file">
+    <code>
+      <language name="NiPype">
+        <argument name="sf_avg_file"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="avgwf_txt_file">
+    <code>
+      <language name="NiPype">
+        <argument name="avgwf_txt_file"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="summary_file">
+    <code>
+      <language name="NiPype">
+        <argument name="summary_file"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="avgwf_file">
+    <code>
+      <language name="NiPype">
+        <argument name="avgwf_file"/>
+      </language>
+    </code>
+  </output>
+</node>

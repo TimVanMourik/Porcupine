@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="FREESURFER"/>
+  </category>
+  <title name="FREESURFER.MRISPreprocReconAll">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **mris_preproc**"/>
+        <argument name="freesurfer.MRISPreprocReconAll()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="hemi">
+    <code>
+      <language name="NiPype">
+        <argument name="hemi"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="target">
+    <code>
+      <language name="NiPype">
+        <argument name="target"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="out_file">
+    <code>
+      <language name="NiPype">
+        <argument name="out_file"/>
+      </language>
+    </code>
+  </output>
+</node>

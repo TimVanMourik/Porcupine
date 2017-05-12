@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="ANTS"/>
+  </category>
+  <title name="ANTS.ApplyTransforms">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **antsApplyTransforms**"/>
+        <argument name="ants.ApplyTransforms()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="input_image">
+    <code>
+      <language name="NiPype">
+        <argument name="input_image"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="transforms">
+    <code>
+      <language name="NiPype">
+        <argument name="transforms"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="reference_image">
+    <code>
+      <language name="NiPype">
+        <argument name="reference_image"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="output_image">
+    <code>
+      <language name="NiPype">
+        <argument name="output_image"/>
+      </language>
+    </code>
+  </output>
+</node>

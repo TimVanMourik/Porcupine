@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="FREESURFER"/>
+  </category>
+  <title name="FREESURFER.Smooth">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **mris_volsmooth**"/>
+        <argument name="freesurfer.Smooth()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="surface_fwhm">
+    <code>
+      <language name="NiPype">
+        <argument name="surface_fwhm"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="reg_file">
+    <code>
+      <language name="NiPype">
+        <argument name="reg_file"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="num_iters">
+    <code>
+      <language name="NiPype">
+        <argument name="num_iters"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="in_file">
+    <code>
+      <language name="NiPype">
+        <argument name="in_file"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="smoothed_file">
+    <code>
+      <language name="NiPype">
+        <argument name="smoothed_file"/>
+      </language>
+    </code>
+  </output>
+</node>

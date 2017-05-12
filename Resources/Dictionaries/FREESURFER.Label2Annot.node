@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="FREESURFER"/>
+  </category>
+  <title name="FREESURFER.Label2Annot">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **mris_label2annot**"/>
+        <argument name="freesurfer.Label2Annot()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="out_annot">
+    <code>
+      <language name="NiPype">
+        <argument name="out_annot"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="hemisphere">
+    <code>
+      <language name="NiPype">
+        <argument name="hemisphere"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="in_labels">
+    <code>
+      <language name="NiPype">
+        <argument name="in_labels"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="subject_id">
+    <code>
+      <language name="NiPype">
+        <argument name="subject_id"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="orig">
+    <code>
+      <language name="NiPype">
+        <argument name="orig"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="out_file">
+    <code>
+      <language name="NiPype">
+        <argument name="out_file"/>
+      </language>
+    </code>
+  </output>
+</node>

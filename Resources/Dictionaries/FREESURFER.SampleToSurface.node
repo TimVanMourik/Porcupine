@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="FREESURFER"/>
+  </category>
+  <title name="FREESURFER.SampleToSurface">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **mri_vol2surf**"/>
+        <argument name="freesurfer.SampleToSurface()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="hemi">
+    <code>
+      <language name="NiPype">
+        <argument name="hemi"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="reg_file">
+    <code>
+      <language name="NiPype">
+        <argument name="reg_file"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="sampling_method">
+    <code>
+      <language name="NiPype">
+        <argument name="sampling_method"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="source_file">
+    <code>
+      <language name="NiPype">
+        <argument name="source_file"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="mni152reg">
+    <code>
+      <language name="NiPype">
+        <argument name="mni152reg"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="reg_header">
+    <code>
+      <language name="NiPype">
+        <argument name="reg_header"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="projection_stem">
+    <code>
+      <language name="NiPype">
+        <argument name="projection_stem"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="vox_file">
+    <code>
+      <language name="NiPype">
+        <argument name="vox_file"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="hits_file">
+    <code>
+      <language name="NiPype">
+        <argument name="hits_file"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="out_file">
+    <code>
+      <language name="NiPype">
+        <argument name="out_file"/>
+      </language>
+    </code>
+  </output>
+</node>

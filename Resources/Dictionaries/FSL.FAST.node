@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="FSL"/>
+  </category>
+  <title name="FSL.FAST">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **fast**"/>
+        <argument name="fsl.FAST()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="in_files">
+    <code>
+      <language name="NiPype">
+        <argument name="in_files"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="partial_volume_files">
+    <code>
+      <language name="NiPype">
+        <argument name="partial_volume_files"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="tissue_class_files">
+    <code>
+      <language name="NiPype">
+        <argument name="tissue_class_files"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="mixeltype">
+    <code>
+      <language name="NiPype">
+        <argument name="mixeltype"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="restored_image">
+    <code>
+      <language name="NiPype">
+        <argument name="restored_image"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="tissue_class_map">
+    <code>
+      <language name="NiPype">
+        <argument name="tissue_class_map"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="partial_volume_map">
+    <code>
+      <language name="NiPype">
+        <argument name="partial_volume_map"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="probability_maps">
+    <code>
+      <language name="NiPype">
+        <argument name="probability_maps"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="bias_field">
+    <code>
+      <language name="NiPype">
+        <argument name="bias_field"/>
+      </language>
+    </code>
+  </output>
+</node>

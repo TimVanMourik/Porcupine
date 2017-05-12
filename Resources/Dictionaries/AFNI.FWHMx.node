@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="AFNI"/>
+  </category>
+  <title name="AFNI.FWHMx">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **3dFWHMx**"/>
+        <argument name="afni.FWHMx()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="in_file">
+    <code>
+      <language name="NiPype">
+        <argument name="in_file"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="out_subbricks">
+    <code>
+      <language name="NiPype">
+        <argument name="out_subbricks"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="out_file">
+    <code>
+      <language name="NiPype">
+        <argument name="out_file"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="out_detrend">
+    <code>
+      <language name="NiPype">
+        <argument name="out_detrend"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="out_acf">
+    <code>
+      <language name="NiPype">
+        <argument name="out_acf"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="acf_param">
+    <code>
+      <language name="NiPype">
+        <argument name="acf_param"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="fwhm">
+    <code>
+      <language name="NiPype">
+        <argument name="fwhm"/>
+      </language>
+    </code>
+  </output>
+</node>

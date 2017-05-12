@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="ANTS"/>
+  </category>
+  <title name="ANTS.ANTS">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **ANTS**"/>
+        <argument name="ants.ANTS()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="transformation_model">
+    <code>
+      <language name="NiPype">
+        <argument name="transformation_model"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="output_transform_prefix">
+    <code>
+      <language name="NiPype">
+        <argument name="output_transform_prefix"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="moving_image">
+    <code>
+      <language name="NiPype">
+        <argument name="moving_image"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="metric">
+    <code>
+      <language name="NiPype">
+        <argument name="metric"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="fixed_image">
+    <code>
+      <language name="NiPype">
+        <argument name="fixed_image"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="warp_transform">
+    <code>
+      <language name="NiPype">
+        <argument name="warp_transform"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="metaheader">
+    <code>
+      <language name="NiPype">
+        <argument name="metaheader"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="affine_transform">
+    <code>
+      <language name="NiPype">
+        <argument name="affine_transform"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="metaheader_raw">
+    <code>
+      <language name="NiPype">
+        <argument name="metaheader_raw"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="inverse_warp_transform">
+    <code>
+      <language name="NiPype">
+        <argument name="inverse_warp_transform"/>
+      </language>
+    </code>
+  </output>
+</node>

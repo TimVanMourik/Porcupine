@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="SPM"/>
+  </category>
+  <title name="SPM.MultipleRegressionDesign">
+    <code>
+      <language name="NiPype">
+        <comment text="Create SPM design for multiple regression"/>
+        <argument name="spm.MultipleRegressionDesign()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="in_files">
+    <code>
+      <language name="NiPype">
+        <argument name="in_files"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="spm_mat_file">
+    <code>
+      <language name="NiPype">
+        <argument name="spm_mat_file"/>
+      </language>
+    </code>
+  </output>
+</node>

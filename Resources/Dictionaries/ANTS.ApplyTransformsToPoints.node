@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="ANTS"/>
+  </category>
+  <title name="ANTS.ApplyTransformsToPoints">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **antsApplyTransformsToPoints**"/>
+        <argument name="ants.ApplyTransformsToPoints()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="transforms">
+    <code>
+      <language name="NiPype">
+        <argument name="transforms"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="input_file">
+    <code>
+      <language name="NiPype">
+        <argument name="input_file"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="output_file">
+    <code>
+      <language name="NiPype">
+        <argument name="output_file"/>
+      </language>
+    </code>
+  </output>
+</node>

@@ -1,0 +1,112 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="FREESURFER"/>
+  </category>
+  <title name="FREESURFER.ParcellationStats">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **mris_anatomical_stats**"/>
+        <argument name="freesurfer.ParcellationStats()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="rh_white">
+    <code>
+      <language name="NiPype">
+        <argument name="rh_white"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="aseg">
+    <code>
+      <language name="NiPype">
+        <argument name="aseg"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="wm">
+    <code>
+      <language name="NiPype">
+        <argument name="wm"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="transform">
+    <code>
+      <language name="NiPype">
+        <argument name="transform"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="lh_white">
+    <code>
+      <language name="NiPype">
+        <argument name="lh_white"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="brainmask">
+    <code>
+      <language name="NiPype">
+        <argument name="brainmask"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="hemisphere">
+    <code>
+      <language name="NiPype">
+        <argument name="hemisphere"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="lh_pial">
+    <code>
+      <language name="NiPype">
+        <argument name="lh_pial"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="thickness">
+    <code>
+      <language name="NiPype">
+        <argument name="thickness"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="rh_pial">
+    <code>
+      <language name="NiPype">
+        <argument name="rh_pial"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="subject_id">
+    <code>
+      <language name="NiPype">
+        <argument name="subject_id"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="ribbon">
+    <code>
+      <language name="NiPype">
+        <argument name="ribbon"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="out_table">
+    <code>
+      <language name="NiPype">
+        <argument name="out_table"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="out_color">
+    <code>
+      <language name="NiPype">
+        <argument name="out_color"/>
+      </language>
+    </code>
+  </output>
+</node>

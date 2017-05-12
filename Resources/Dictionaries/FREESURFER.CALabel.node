@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="FREESURFER"/>
+  </category>
+  <title name="FREESURFER.CALabel">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **mri_ca_label**"/>
+        <argument name="freesurfer.CALabel()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="in_file">
+    <code>
+      <language name="NiPype">
+        <argument name="in_file"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="out_file">
+    <code>
+      <language name="NiPype">
+        <argument name="out_file"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="template">
+    <code>
+      <language name="NiPype">
+        <argument name="template"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="transform">
+    <code>
+      <language name="NiPype">
+        <argument name="transform"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="out_file">
+    <code>
+      <language name="NiPype">
+        <argument name="out_file"/>
+      </language>
+    </code>
+  </output>
+</node>

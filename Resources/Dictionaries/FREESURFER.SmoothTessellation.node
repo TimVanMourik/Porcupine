@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="FREESURFER"/>
+  </category>
+  <title name="FREESURFER.SmoothTessellation">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **mris_smooth**"/>
+        <argument name="freesurfer.SmoothTessellation()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="in_file">
+    <code>
+      <language name="NiPype">
+        <argument name="in_file"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="surface">
+    <code>
+      <language name="NiPype">
+        <argument name="surface"/>
+      </language>
+    </code>
+  </output>
+</node>

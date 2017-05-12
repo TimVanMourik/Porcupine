@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="FREESURFER"/>
+  </category>
+  <title name="FREESURFER.MRIsCalc">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **mris_calc**"/>
+        <argument name="freesurfer.MRIsCalc()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="action">
+    <code>
+      <language name="NiPype">
+        <argument name="action"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="out_file">
+    <code>
+      <language name="NiPype">
+        <argument name="out_file"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="in_file1">
+    <code>
+      <language name="NiPype">
+        <argument name="in_file1"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="out_file">
+    <code>
+      <language name="NiPype">
+        <argument name="out_file"/>
+      </language>
+    </code>
+  </output>
+</node>

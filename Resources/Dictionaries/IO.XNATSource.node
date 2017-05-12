@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="IO"/>
+  </category>
+  <title name="IO.XNATSource">
+    <code>
+      <language name="NiPype">
+        <comment text="Generic XNATSource module that wraps around the pyxnat module in"/>
+        <argument name="io.XNATSource()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="query_template">
+    <code>
+      <language name="NiPype">
+        <argument name="query_template"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="config">
+    <code>
+      <language name="NiPype">
+        <argument name="config"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="server">
+    <code>
+      <language name="NiPype">
+        <argument name="server"/>
+      </language>
+    </code>
+  </input>
+</node>

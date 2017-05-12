@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="FREESURFER"/>
+  </category>
+  <title name="FREESURFER.Label2Vol">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **mri_label2vol**"/>
+        <argument name="freesurfer.Label2Vol()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="aparc_aseg">
+    <code>
+      <language name="NiPype">
+        <argument name="aparc_aseg"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="annot_file">
+    <code>
+      <language name="NiPype">
+        <argument name="annot_file"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="seg_file">
+    <code>
+      <language name="NiPype">
+        <argument name="seg_file"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="label_file">
+    <code>
+      <language name="NiPype">
+        <argument name="label_file"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="template_file">
+    <code>
+      <language name="NiPype">
+        <argument name="template_file"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="vol_label_file">
+    <code>
+      <language name="NiPype">
+        <argument name="vol_label_file"/>
+      </language>
+    </code>
+  </output>
+</node>

@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="FSL"/>
+  </category>
+  <title name="FSL.ImageStats">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **fslstats**"/>
+        <argument name="fsl.ImageStats()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="op_string">
+    <code>
+      <language name="NiPype">
+        <argument name="op_string"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="in_file">
+    <code>
+      <language name="NiPype">
+        <argument name="in_file"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="out_stat">
+    <code>
+      <language name="NiPype">
+        <argument name="out_stat"/>
+      </language>
+    </code>
+  </output>
+</node>

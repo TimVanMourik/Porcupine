@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="IO"/>
+  </category>
+  <title name="IO.DataGrabber">
+    <code>
+      <language name="NiPype">
+        <comment text="Generic datagrabber module that wraps around glob in an"/>
+        <argument name="io.DataGrabber()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="sort_filelist">
+    <code>
+      <language name="NiPype">
+        <argument name="sort_filelist"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="template">
+    <code>
+      <language name="NiPype">
+        <argument name="template"/>
+      </language>
+    </code>
+  </input>
+</node>

@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="ANTS"/>
+  </category>
+  <title name="ANTS.CreateTiledMosaic">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **CreateTiledMosaic**"/>
+        <argument name="ants.CreateTiledMosaic()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="input_image">
+    <code>
+      <language name="NiPype">
+        <argument name="input_image"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="rgb_image">
+    <code>
+      <language name="NiPype">
+        <argument name="rgb_image"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="output_image">
+    <code>
+      <language name="NiPype">
+        <argument name="output_image"/>
+      </language>
+    </code>
+  </output>
+</node>

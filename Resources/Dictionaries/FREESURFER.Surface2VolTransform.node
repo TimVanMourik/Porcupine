@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="FREESURFER"/>
+  </category>
+  <title name="FREESURFER.Surface2VolTransform">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **mri_surf2vol**"/>
+        <argument name="freesurfer.Surface2VolTransform()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="reg_file">
+    <code>
+      <language name="NiPype">
+        <argument name="reg_file"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="hemi">
+    <code>
+      <language name="NiPype">
+        <argument name="hemi"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="source_file">
+    <code>
+      <language name="NiPype">
+        <argument name="source_file"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="transformed_file">
+    <code>
+      <language name="NiPype">
+        <argument name="transformed_file"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="vertexvol_file">
+    <code>
+      <language name="NiPype">
+        <argument name="vertexvol_file"/>
+      </language>
+    </code>
+  </output>
+</node>

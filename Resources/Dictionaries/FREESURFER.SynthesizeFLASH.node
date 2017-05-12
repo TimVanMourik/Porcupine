@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="FREESURFER"/>
+  </category>
+  <title name="FREESURFER.SynthesizeFLASH">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **mri_synthesize**"/>
+        <argument name="freesurfer.SynthesizeFLASH()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="pd_image">
+    <code>
+      <language name="NiPype">
+        <argument name="pd_image"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="te">
+    <code>
+      <language name="NiPype">
+        <argument name="te"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="tr">
+    <code>
+      <language name="NiPype">
+        <argument name="tr"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="t1_image">
+    <code>
+      <language name="NiPype">
+        <argument name="t1_image"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="flip_angle">
+    <code>
+      <language name="NiPype">
+        <argument name="flip_angle"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="out_file">
+    <code>
+      <language name="NiPype">
+        <argument name="out_file"/>
+      </language>
+    </code>
+  </output>
+</node>

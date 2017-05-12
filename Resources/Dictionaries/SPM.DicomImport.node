@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="SPM"/>
+  </category>
+  <title name="SPM.DicomImport">
+    <code>
+      <language name="NiPype">
+        <comment text="Uses spm to convert DICOM files to nii or img+hdr."/>
+        <argument name="spm.DicomImport()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="in_files">
+    <code>
+      <language name="NiPype">
+        <argument name="in_files"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="out_files">
+    <code>
+      <language name="NiPype">
+        <argument name="out_files"/>
+      </language>
+    </code>
+  </output>
+</node>

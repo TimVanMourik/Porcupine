@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="ANTS"/>
+  </category>
+  <title name="ANTS.N4BiasFieldCorrection">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **N4BiasFieldCorrection**"/>
+        <argument name="ants.N4BiasFieldCorrection()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="save_bias">
+    <code>
+      <language name="NiPype">
+        <argument name="save_bias"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="input_image">
+    <code>
+      <language name="NiPype">
+        <argument name="input_image"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="bias_image">
+    <code>
+      <language name="NiPype">
+        <argument name="bias_image"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="output_image">
+    <code>
+      <language name="NiPype">
+        <argument name="output_image"/>
+      </language>
+    </code>
+  </output>
+</node>

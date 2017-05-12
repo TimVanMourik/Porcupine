@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="SPM"/>
+  </category>
+  <title name="SPM.EstimateModel">
+    <code>
+      <language name="NiPype">
+        <comment text="Use spm_spm to estimate the parameters of a model"/>
+        <argument name="spm.EstimateModel()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="spm_mat_file">
+    <code>
+      <language name="NiPype">
+        <argument name="spm_mat_file"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="estimation_method">
+    <code>
+      <language name="NiPype">
+        <argument name="estimation_method"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="residual_image">
+    <code>
+      <language name="NiPype">
+        <argument name="residual_image"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="spm_mat_file">
+    <code>
+      <language name="NiPype">
+        <argument name="spm_mat_file"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="mask_image">
+    <code>
+      <language name="NiPype">
+        <argument name="mask_image"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="beta_images">
+    <code>
+      <language name="NiPype">
+        <argument name="beta_images"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="RPVimage">
+    <code>
+      <language name="NiPype">
+        <argument name="RPVimage"/>
+      </language>
+    </code>
+  </output>
+</node>

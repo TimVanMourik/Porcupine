@@ -2,11 +2,11 @@ import os
 import xml.etree.ElementTree as ET
 import xml.dom.minidom as minidom
 
-working_dir = '/Users/knapen/Desktop/porcy'
-os.chdir(working_dir)
+working_dir = '../Resources/Dictionaries/'
+# os.chdir(working_dir)
 cat_nipype = 'NiPype'
 
-for class_name in ['utility', 'fsl', 'afni', 'spm', 'freesurfer']:
+for class_name in ['utility', 'io', 'ants', 'fsl', 'afni', 'spm', 'freesurfer']:
 
     exec('import nipype.interfaces.' + class_name + ' as ' + class_name)
 
@@ -17,6 +17,7 @@ for class_name in ['utility', 'fsl', 'afni', 'spm', 'freesurfer']:
     input_output_dict = {}
 
     for cls in class_list:
+        print cls
         if eval('"input_spec" in dir(' + class_name + '.' + cls + ')'):
             ##
             ## this is a node we'll want to write to xml
@@ -24,6 +25,7 @@ for class_name in ['utility', 'fsl', 'afni', 'spm', 'freesurfer']:
             if cls.endswith('Command'):
                 continue
 
+            print 'is command'
             long_node_title = op_class_name+'.'+cls
             print long_node_title
 
@@ -32,10 +34,19 @@ for class_name in ['utility', 'fsl', 'afni', 'spm', 'freesurfer']:
             all_inputs = [ai for ai in all_inputs if not ai.startswith('trait')]
 
             m_inputs = eval(class_name+'.'+cls+'.input_spec().traits(mandatory=True)').keys()
-            outputs = eval(class_name+'.'+cls+'.output_spec().traits()').keys()
-            m_outputs = [ou for ou in outputs if not ou.startswith('trait')]
+            try:
+                outputs = eval(class_name+'.'+cls+'.output_spec().traits()').keys()
+                m_outputs = [ou for ou in outputs if not ou.startswith('trait')]
+            except TypeError:
+                print 'TypeError for outputs'
+                m_outputs = []
 
-            descr = eval(class_name+'.'+cls+'().help(returnhelp=True).splitlines()[0]')
+            try:
+                descr = eval(class_name+'.'+cls+'().help(returnhelp=True).splitlines()[0]')
+            except TypeError: # for Interfaces without valid descriptions
+                descr = cls
+            except ValueError: # for Interfaces without valid descriptions
+                descr = cls
 
             ## XML stuff
             ## top-level node

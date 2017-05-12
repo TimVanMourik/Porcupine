@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="FREESURFER"/>
+  </category>
+  <title name="FREESURFER.SurfaceSnapshots">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **tksurfer**"/>
+        <argument name="freesurfer.SurfaceSnapshots()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="subject_id">
+    <code>
+      <language name="NiPype">
+        <argument name="subject_id"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="hemi">
+    <code>
+      <language name="NiPype">
+        <argument name="hemi"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="surface">
+    <code>
+      <language name="NiPype">
+        <argument name="surface"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="snapshots">
+    <code>
+      <language name="NiPype">
+        <argument name="snapshots"/>
+      </language>
+    </code>
+  </output>
+</node>

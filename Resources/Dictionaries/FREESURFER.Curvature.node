@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="FREESURFER"/>
+  </category>
+  <title name="FREESURFER.Curvature">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **mris_curvature**"/>
+        <argument name="freesurfer.Curvature()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="in_file">
+    <code>
+      <language name="NiPype">
+        <argument name="in_file"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="out_mean">
+    <code>
+      <language name="NiPype">
+        <argument name="out_mean"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="out_gauss">
+    <code>
+      <language name="NiPype">
+        <argument name="out_gauss"/>
+      </language>
+    </code>
+  </output>
+</node>
