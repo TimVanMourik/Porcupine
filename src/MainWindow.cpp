@@ -46,6 +46,7 @@
 #include "NodeEditor.hpp"
 #include "NodeTreeEditor.hpp"
 #include "NodeLibrary.hpp"
+#include "ParameterEditor.hpp"
 
 MainWindow::MainWindow(
         QWidget* _parent
@@ -54,9 +55,11 @@ MainWindow::MainWindow(
     m_nodeEditorWidget(new QTabWidget()),
     m_nodeTreeWidget  (new QWidget()),
     m_codeEditorWidget(new QWidget()),
+    m_parameterWidget (new QWidget()),
     m_nodeEditors(0),
     m_nodeTreeEditors(0),
     m_codeEditors(0),
+    m_parameterEditors(0),
     m_currentFileIndex(0)
 {
     //Create an instance of the NodeLibrary
@@ -66,6 +69,7 @@ MainWindow::MainWindow(
     // these widgets have to have a layout
     new QVBoxLayout(m_nodeTreeWidget);
     new QVBoxLayout(m_codeEditorWidget);
+    new QVBoxLayout(m_parameterWidget);
 
     //Make the MainWindow and its layout for the central widget
     QSplitter* mainWidget = new QSplitter(Qt::Horizontal, this);
@@ -79,17 +83,23 @@ MainWindow::MainWindow(
     QSplitter* rightWidget = new QSplitter(Qt::Vertical, mainWidget);
     QVBoxLayout* rightSide = new QVBoxLayout(rightWidget);
 
+    QSplitter* nodeEditor = new QSplitter();
+    QHBoxLayout* nodeLayout = new QHBoxLayout(nodeEditor);
+    nodeLayout->addWidget(m_nodeEditorWidget);
+    nodeLayout->addWidget(m_parameterWidget);
+
     QWidget* codeEditor = new QWidget();
     QHBoxLayout* codeLayout = new QHBoxLayout(codeEditor);
     QPushButton* button = new QPushButton("Generate code");
-
     codeLayout->addWidget(button);
     codeLayout->addWidget(m_codeEditorWidget);
 
-    rightSide->addWidget(m_nodeEditorWidget);
+    rightSide->addWidget(nodeEditor);
     rightSide->addWidget(codeEditor);
 
     ///@todo stretch factors are a bit weird. Find out how to do this nicely
+    nodeEditor->setStretchFactor(0, 6);
+    nodeEditor->setStretchFactor(1, 1);
     rightWidget->setStretchFactor(0, 12);
     rightWidget->setStretchFactor(1, 1);
     mainWidget->setStretchFactor( 0, 1);
@@ -347,12 +357,14 @@ void MainWindow::newFile(
     m_nodeEditors.append(new NodeEditor(this));
     m_nodeTreeEditors.append(new NodeTreeEditor(this));
     m_codeEditors.append(new CodeEditor(this));
+    m_parameterEditors.append(new ParameterEditor(this));
 
     //Add it to a new tab
     m_currentFileIndex = m_nodeEditors.length() - 1;
     m_nodeEditorWidget->addTab(m_nodeEditors[m_currentFileIndex], tr("Untitled"));
-    m_nodeTreeWidget->layout()->addWidget(m_nodeTreeEditors[m_currentFileIndex]);
-    m_codeEditorWidget->layout()->addWidget(m_codeEditors[m_currentFileIndex]);
+    m_nodeTreeWidget    ->layout()->addWidget(m_nodeTreeEditors[m_currentFileIndex]);
+    m_codeEditorWidget  ->layout()->addWidget(m_codeEditors[m_currentFileIndex]);
+    m_parameterWidget   ->layout()->addWidget(m_parameterEditors[m_currentFileIndex]);
 
     m_nodeEditors[m_currentFileIndex]->setTreeModel(m_nodeTreeEditors[m_currentFileIndex]);
     m_nodeTreeEditors[m_currentFileIndex]->setCodeEditor(m_codeEditors[m_currentFileIndex]);
@@ -507,6 +519,10 @@ MainWindow::~MainWindow()
         delete editor;
     }
     foreach (NodeEditor* editor, m_nodeEditors)
+    {
+        delete editor;
+    }
+    foreach (ParameterEditor* editor, m_parameterEditors)
     {
         delete editor;
     }

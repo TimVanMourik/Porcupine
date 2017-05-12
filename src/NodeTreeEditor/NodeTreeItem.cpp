@@ -23,6 +23,7 @@
 
 #include <QApplication>
 #include <QComboBox>
+#include <QCheckBox>
 #include <QDomDocument>
 #include <QDrag>
 #include <QDropEvent>
@@ -91,7 +92,8 @@ NodeTreeItem::NodeTreeItem(
     portBlockLayout->setVerticalSpacing(3);
     portBlockLayout->setFieldGrowthPolicy(QFormLayout::FieldsStayAtSizeHint);
     portBlockLayout->setFormAlignment(Qt::AlignLeft | Qt::AlignTop);
-    portBlockLayout->setLabelAlignment(Qt::AlignHCenter);
+//    portBlockLayout->setLabelAlignment(Qt::AlignBottom);
+//    portBlockLayout->set);
     portBlock->setVisible(false);
 
     foreach(PortPair* pair, _node->getPorts())
@@ -117,6 +119,17 @@ NodeTreeItem::NodeTreeItem(
         {
             fileName->setDisabled(true);
         }
+
+//        QWidget* row = new QWidget();
+//        QHBoxLayout* rowLayout = new QHBoxLayout(row);
+
+//        QCheckBox* checkbox = new QCheckBox();
+//        checkbox->setChecked(true);
+//        rowLayout->addWidget(fileName);
+//        rowLayout->addWidget(checkbox);
+//        portBlockLayout->addRow(pair->getName(), row);
+//        connect(checkbox, SIGNAL(toggled(bool)), ..., SLOT());
+
         portBlockLayout->addRow(pair->getName(), fileName);
 
         connect(fileName, SIGNAL(textEdited(QString)), pair, SLOT(fileNameChanged(QString)));

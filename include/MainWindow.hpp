@@ -44,6 +44,7 @@ class CodeEditor;
 class NodeEditor;
 class NodeSetting;
 class NodeTreeEditor;
+class ParameterEditor;
 
 class MainWindow : public QMainWindow
 {
@@ -119,10 +120,12 @@ private:
     QTabWidget* m_nodeEditorWidget;
     QWidget* m_nodeTreeWidget;
     QWidget* m_codeEditorWidget;
+    QWidget* m_parameterWidget;
 
     QVector<NodeEditor*> m_nodeEditors;
     QVector<NodeTreeEditor*> m_nodeTreeEditors;
     QVector<CodeEditor*> m_codeEditors;
+    QVector<ParameterEditor*> m_parameterEditors;
 
     int m_currentFileIndex;
 
