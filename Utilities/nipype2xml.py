@@ -103,7 +103,7 @@ except: # for Interfaces without valid descriptions
 for in_nr in range(1,10):
 
     opfilename = cls + '_%i'%in_nr
-    m_inputs = ['in%i'%i for i in in_nr]
+    m_inputs = ['in%i'%i for i in range(1, in_nr+1)]
     long_node_title = op_class_name+'.'+cls+'.%i'%in_nr
 
     ## XML stuff
