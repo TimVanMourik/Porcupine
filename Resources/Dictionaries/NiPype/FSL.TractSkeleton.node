@@ -1,1 +1,35 @@
-<node><category name="NiPype"><category name="FSL" /></category><title name="FSL.TractSkeleton"><code><language name="NiPype"><comment text="Wraps command **tbss_skeleton**" /><argument name="fsl.TractSkeleton()" /></language></code></title><input editable="false" name="in_file"><code><language name="NiPype"><argument name="in_file" /></language></code></input><output editable="false" name="projected_data"><code><language name="NiPype"><argument name="projected_data" /></language></code></output><output editable="false" name="skeleton_file"><code><language name="NiPype"><argument name="skeleton_file" /></language></code></output></node>
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="FSL"/>
+  </category>
+  <title name="FSL.TractSkeleton">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **tbss_skeleton**"/>
+        <argument name="fsl.TractSkeleton()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="in_file">
+    <code>
+      <language name="NiPype">
+        <argument name="in_file"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="projected_data">
+    <code>
+      <language name="NiPype">
+        <argument name="projected_data"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="skeleton_file">
+    <code>
+      <language name="NiPype">
+        <argument name="skeleton_file"/>
+      </language>
+    </code>
+  </output>
+</node>

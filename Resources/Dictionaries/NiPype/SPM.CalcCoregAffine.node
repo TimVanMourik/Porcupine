@@ -1,1 +1,42 @@
-<node><category name="NiPype"><category name="SPM" /></category><title name="SPM.CalcCoregAffine"><code><language name="NiPype"><comment text="Uses SPM (spm_coreg) to calculate the transform mapping" /><argument name="spm.CalcCoregAffine()" /></language></code></title><input editable="false" name="moving"><code><language name="NiPype"><argument name="moving" /></language></code></input><input editable="false" name="target"><code><language name="NiPype"><argument name="target" /></language></code></input><output editable="false" name="invmat"><code><language name="NiPype"><argument name="invmat" /></language></code></output><output editable="false" name="mat"><code><language name="NiPype"><argument name="mat" /></language></code></output></node>
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="SPM"/>
+  </category>
+  <title name="SPM.CalcCoregAffine">
+    <code>
+      <language name="NiPype">
+        <comment text="Uses SPM (spm_coreg) to calculate the transform mapping"/>
+        <argument name="spm.CalcCoregAffine()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="moving">
+    <code>
+      <language name="NiPype">
+        <argument name="moving"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="target">
+    <code>
+      <language name="NiPype">
+        <argument name="target"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="invmat">
+    <code>
+      <language name="NiPype">
+        <argument name="invmat"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="mat">
+    <code>
+      <language name="NiPype">
+        <argument name="mat"/>
+      </language>
+    </code>
+  </output>
+</node>

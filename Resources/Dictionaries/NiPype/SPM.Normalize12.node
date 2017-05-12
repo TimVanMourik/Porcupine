@@ -1,1 +1,49 @@
-<node><category name="NiPype"><category name="SPM" /></category><title name="SPM.Normalize12"><code><language name="NiPype"><comment text="uses SPM12's new Normalise routine for warping an image to a template." /><argument name="spm.Normalize12()" /></language></code></title><input editable="false" name="deformation_file"><code><language name="NiPype"><argument name="deformation_file" /></language></code></input><input editable="false" name="image_to_align"><code><language name="NiPype"><argument name="image_to_align" /></language></code></input><output editable="false" name="normalized_image"><code><language name="NiPype"><argument name="normalized_image" /></language></code></output><output editable="false" name="deformation_field"><code><language name="NiPype"><argument name="deformation_field" /></language></code></output><output editable="false" name="normalized_files"><code><language name="NiPype"><argument name="normalized_files" /></language></code></output></node>
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="SPM"/>
+  </category>
+  <title name="SPM.Normalize12">
+    <code>
+      <language name="NiPype">
+        <comment text="uses SPM12's new Normalise routine for warping an image to a template."/>
+        <argument name="spm.Normalize12()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="deformation_file">
+    <code>
+      <language name="NiPype">
+        <argument name="deformation_file"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="image_to_align">
+    <code>
+      <language name="NiPype">
+        <argument name="image_to_align"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="normalized_image">
+    <code>
+      <language name="NiPype">
+        <argument name="normalized_image"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="deformation_field">
+    <code>
+      <language name="NiPype">
+        <argument name="deformation_field"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="normalized_files">
+    <code>
+      <language name="NiPype">
+        <argument name="normalized_files"/>
+      </language>
+    </code>
+  </output>
+</node>

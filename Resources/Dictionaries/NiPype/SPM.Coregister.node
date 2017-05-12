@@ -1,1 +1,42 @@
-<node><category name="NiPype"><category name="SPM" /></category><title name="SPM.Coregister"><code><language name="NiPype"><comment text="Use spm_coreg for estimating cross-modality rigid body alignment" /><argument name="spm.Coregister()" /></language></code></title><input editable="false" name="source"><code><language name="NiPype"><argument name="source" /></language></code></input><input editable="false" name="target"><code><language name="NiPype"><argument name="target" /></language></code></input><output editable="false" name="coregistered_files"><code><language name="NiPype"><argument name="coregistered_files" /></language></code></output><output editable="false" name="coregistered_source"><code><language name="NiPype"><argument name="coregistered_source" /></language></code></output></node>
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="SPM"/>
+  </category>
+  <title name="SPM.Coregister">
+    <code>
+      <language name="NiPype">
+        <comment text="Use spm_coreg for estimating cross-modality rigid body alignment"/>
+        <argument name="spm.Coregister()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="source">
+    <code>
+      <language name="NiPype">
+        <argument name="source"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="target">
+    <code>
+      <language name="NiPype">
+        <argument name="target"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="coregistered_files">
+    <code>
+      <language name="NiPype">
+        <argument name="coregistered_files"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="coregistered_source">
+    <code>
+      <language name="NiPype">
+        <argument name="coregistered_source"/>
+      </language>
+    </code>
+  </output>
+</node>

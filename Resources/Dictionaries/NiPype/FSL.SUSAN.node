@@ -1,1 +1,42 @@
-<node><category name="NiPype"><category name="FSL" /></category><title name="FSL.SUSAN"><code><language name="NiPype"><comment text="Wraps command **susan**" /><argument name="fsl.SUSAN()" /></language></code></title><input editable="false" name="fwhm"><code><language name="NiPype"><argument name="fwhm" /></language></code></input><input editable="false" name="brightness_threshold"><code><language name="NiPype"><argument name="brightness_threshold" /></language></code></input><input editable="false" name="in_file"><code><language name="NiPype"><argument name="in_file" /></language></code></input><output editable="false" name="smoothed_file"><code><language name="NiPype"><argument name="smoothed_file" /></language></code></output></node>
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="FSL"/>
+  </category>
+  <title name="FSL.SUSAN">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **susan**"/>
+        <argument name="fsl.SUSAN()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="fwhm">
+    <code>
+      <language name="NiPype">
+        <argument name="fwhm"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="brightness_threshold">
+    <code>
+      <language name="NiPype">
+        <argument name="brightness_threshold"/>
+      </language>
+    </code>
+  </input>
+  <input editable="false" name="in_file">
+    <code>
+      <language name="NiPype">
+        <argument name="in_file"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="smoothed_file">
+    <code>
+      <language name="NiPype">
+        <argument name="smoothed_file"/>
+      </language>
+    </code>
+  </output>
+</node>

@@ -1,1 +1,28 @@
-<node><category name="NiPype"><category name="AFNI" /></category><title name="AFNI.Merge"><code><language name="NiPype"><comment text="Wraps command **3dmerge**" /><argument name="afni.Merge()" /></language></code></title><input editable="false" name="in_files"><code><language name="NiPype"><argument name="in_files" /></language></code></input><output editable="false" name="out_file"><code><language name="NiPype"><argument name="out_file" /></language></code></output></node>
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="AFNI"/>
+  </category>
+  <title name="AFNI.Merge">
+    <code>
+      <language name="NiPype">
+        <comment text="Wraps command **3dmerge**"/>
+        <argument name="afni.Merge()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="in_files">
+    <code>
+      <language name="NiPype">
+        <argument name="in_files"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="out_file">
+    <code>
+      <language name="NiPype">
+        <argument name="out_file"/>
+      </language>
+    </code>
+  </output>
+</node>

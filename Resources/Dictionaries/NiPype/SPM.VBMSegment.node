@@ -1,1 +1,112 @@
-<node><category name="NiPype"><category name="SPM" /></category><title name="SPM.VBMSegment"><code><language name="NiPype"><comment text="Use VBM8 toolbox to separate structural images into different" /><argument name="spm.VBMSegment()" /></language></code></title><input editable="false" name="in_files"><code><language name="NiPype"><argument name="in_files" /></language></code></input><output editable="false" name="modulated_class_images"><code><language name="NiPype"><argument name="modulated_class_images" /></language></code></output><output editable="false" name="pve_label_registered_images"><code><language name="NiPype"><argument name="pve_label_registered_images" /></language></code></output><output editable="false" name="normalized_class_images"><code><language name="NiPype"><argument name="normalized_class_images" /></language></code></output><output editable="false" name="normalized_bias_corrected_images"><code><language name="NiPype"><argument name="normalized_bias_corrected_images" /></language></code></output><output editable="false" name="bias_corrected_images"><code><language name="NiPype"><argument name="bias_corrected_images" /></language></code></output><output editable="false" name="pve_label_normalized_images"><code><language name="NiPype"><argument name="pve_label_normalized_images" /></language></code></output><output editable="false" name="inverse_deformation_field"><code><language name="NiPype"><argument name="inverse_deformation_field" /></language></code></output><output editable="false" name="dartel_input_images"><code><language name="NiPype"><argument name="dartel_input_images" /></language></code></output><output editable="false" name="transformation_mat"><code><language name="NiPype"><argument name="transformation_mat" /></language></code></output><output editable="false" name="pve_label_native_images"><code><language name="NiPype"><argument name="pve_label_native_images" /></language></code></output><output editable="false" name="native_class_images"><code><language name="NiPype"><argument name="native_class_images" /></language></code></output><output editable="false" name="forward_deformation_field"><code><language name="NiPype"><argument name="forward_deformation_field" /></language></code></output><output editable="false" name="jacobian_determinant_images"><code><language name="NiPype"><argument name="jacobian_determinant_images" /></language></code></output></node>
+<?xml version="1.0" ?>
+<node>
+  <category name="NiPype">
+    <category name="SPM"/>
+  </category>
+  <title name="SPM.VBMSegment">
+    <code>
+      <language name="NiPype">
+        <comment text="Use VBM8 toolbox to separate structural images into different"/>
+        <argument name="spm.VBMSegment()"/>
+      </language>
+    </code>
+  </title>
+  <input editable="false" name="in_files">
+    <code>
+      <language name="NiPype">
+        <argument name="in_files"/>
+      </language>
+    </code>
+  </input>
+  <output editable="false" name="modulated_class_images">
+    <code>
+      <language name="NiPype">
+        <argument name="modulated_class_images"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="pve_label_registered_images">
+    <code>
+      <language name="NiPype">
+        <argument name="pve_label_registered_images"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="normalized_class_images">
+    <code>
+      <language name="NiPype">
+        <argument name="normalized_class_images"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="normalized_bias_corrected_images">
+    <code>
+      <language name="NiPype">
+        <argument name="normalized_bias_corrected_images"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="bias_corrected_images">
+    <code>
+      <language name="NiPype">
+        <argument name="bias_corrected_images"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="pve_label_normalized_images">
+    <code>
+      <language name="NiPype">
+        <argument name="pve_label_normalized_images"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="inverse_deformation_field">
+    <code>
+      <language name="NiPype">
+        <argument name="inverse_deformation_field"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="dartel_input_images">
+    <code>
+      <language name="NiPype">
+        <argument name="dartel_input_images"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="transformation_mat">
+    <code>
+      <language name="NiPype">
+        <argument name="transformation_mat"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="pve_label_native_images">
+    <code>
+      <language name="NiPype">
+        <argument name="pve_label_native_images"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="native_class_images">
+    <code>
+      <language name="NiPype">
+        <argument name="native_class_images"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="forward_deformation_field">
+    <code>
+      <language name="NiPype">
+        <argument name="forward_deformation_field"/>
+      </language>
+    </code>
+  </output>
+  <output editable="false" name="jacobian_determinant_images">
+    <code>
+      <language name="NiPype">
+        <argument name="jacobian_determinant_images"/>
+      </language>
+    </code>
+  </output>
+</node>
