@@ -17,7 +17,6 @@ for class_name in ['utility', 'io', 'ants', 'fsl', 'afni', 'spm', 'freesurfer']:
     input_output_dict = {}
 
     for cls in class_list:
-        print cls
         if eval('"input_spec" in dir(' + class_name + '.' + cls + ')'):
             ##
             ## this is a node we'll want to write to xml
@@ -25,7 +24,6 @@ for class_name in ['utility', 'io', 'ants', 'fsl', 'afni', 'spm', 'freesurfer']:
             if cls.endswith('Command'):
                 continue
 
-            print 'is command'
             long_node_title = op_class_name+'.'+cls
             print long_node_title
 
@@ -43,9 +41,7 @@ for class_name in ['utility', 'io', 'ants', 'fsl', 'afni', 'spm', 'freesurfer']:
 
             try:
                 descr = eval(class_name+'.'+cls+'().help(returnhelp=True).splitlines()[0]')
-            except TypeError: # for Interfaces without valid descriptions
-                descr = cls
-            except ValueError: # for Interfaces without valid descriptions
+            except: # for Interfaces without valid descriptions
                 descr = cls
 
             ## XML stuff
@@ -83,6 +79,6 @@ for class_name in ['utility', 'io', 'ants', 'fsl', 'afni', 'spm', 'freesurfer']:
             doc = minidom.parseString(ET.tostring(node))
 
             opfilename = long_node_title + '.node'
-            with open(os.path.join(working_dir, opfilename), 'w') as f:
+            with open(os.path.join(working_dir, cat_nipype, opfilename), 'w') as f:
                 f.write(doc.toprettyxml(indent="  "))
         
