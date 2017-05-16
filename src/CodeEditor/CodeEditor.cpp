@@ -31,7 +31,8 @@
 #include "FslGenerator.hpp"
 #include "TvmGenerator.hpp"
 #include "SpmGenerator.hpp"
-#include "PythonGenerator.hpp"
+#include "NipypeGenerator.hpp"
+#include "ParameterEditor.hpp"
 
 CodeEditor::CodeEditor(
         QWidget* _parent
@@ -39,13 +40,27 @@ CodeEditor::CodeEditor(
     QTabWidget(_parent)
 {
     //TVM within MATLAB (C)
-    setupMatlabEditor();
+//    setupMatlabEditor();
     //SPM within MATLAB (C)
-    setupSpmEditor();
+//    setupSpmEditor();
     //Bash
-    setupBashEditor();
+//    setupBashEditor();
     //Python
-    setupPythonEditor();
+    setupNipypeEditor();
+}
+
+void CodeEditor::setParameterEditor(
+        ParameterEditor* _editor
+        )
+{
+    m_parameterEditor = _editor;
+}
+
+
+QMap<QString, QString> CodeEditor::getParameters(
+        )
+{
+    return m_parameterEditor->getParameters();
 }
 
 void CodeEditor::generateCode(
@@ -123,11 +138,11 @@ void CodeEditor::setupBashEditor(
     addTab(m_textEditors[bash], bash);
 }
 
-void CodeEditor::setupPythonEditor(
+void CodeEditor::setupNipypeEditor(
         )
 {
     const int tabWidth = 4;
-    QString python("Python");
+    QString python("NiPype");
     m_programmingLanguages << python;
     QFont pythonFont = QFont("Courier", 10);
     pythonFont.setStyleHint(QFont::Monospace);
@@ -140,12 +155,11 @@ void CodeEditor::setupPythonEditor(
 
     new PythonHighlighter(pythonEditor->document());
     m_textEditors[python] = pythonEditor;
-    m_codeGenerators[python] = new PythonGenerator();
+    m_codeGenerators[python] = new NipypeGenerator(this);
     addTab(m_textEditors[python], python);
 }
 
 CodeEditor::~CodeEditor()
 {
-
 }
 

@@ -1,4 +1,4 @@
-/*  Copyright (C) Tim van Mourik, 2014-2016
+/*  Copyright (C) Tim van Mourik, 2014-2017
     Copyright (C) Tim van Mourik, 2017, DCCN
     All rights reserved
 
@@ -22,14 +22,16 @@
 */
 
 #include "CodeGenerator.hpp"
+#include "CodeEditor.hpp"
 
-CodeGenerator::CodeGenerator()
+CodeGenerator::CodeGenerator(
+        CodeEditor* _editor
+        ) :
+    m_editor(_editor)
 {
-
 }
 
 CodeGenerator::~CodeGenerator()
 {
-
 }
 

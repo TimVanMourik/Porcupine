@@ -1,4 +1,4 @@
-/*  Copyright (C) Tim van Mourik, 2014-2016
+/*  Copyright (C) Tim van Mourik, 2014-2017
     Copyright (C) Tim van Mourik, 2017, DCCN
     All rights reserved
 
@@ -30,13 +30,16 @@
 #include "NodeSetting.hpp"
 #include "NodeTreeItem.hpp"
 
+class CodeEditor;
 class Link;
 
 class CodeGenerator
 {
 public:
     //
-    CodeGenerator();
+    CodeGenerator(
+            CodeEditor* _editor = 0
+            );
     //
     virtual QString generateCode(
             const QList<NodeTreeItem*>& _nodeList,
@@ -44,6 +47,9 @@ public:
             ) = 0;
     //
     ~CodeGenerator();
+protected:
+    //
+    CodeEditor* m_editor;
 };
 
 #endif // CODEGENERATOR_HPP

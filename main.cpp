@@ -54,7 +54,7 @@ int main(
     QApplication app(argc, argv);
     MainWindow w;
     w.showMaximized();
-    w.setWindowTitle("PORcupine Creates Ur PipelINE");
+    w.setWindowTitle("PORcupine Creates Ur PipelINE  © Tim van Mourik");
     w.setWindowIcon(QIcon("porcupine.icns"));
 
     return app.exec();

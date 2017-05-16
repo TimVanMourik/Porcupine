@@ -62,7 +62,7 @@ SOURCES                                += $$ROOT/main.cpp \
                                           $$ROOT/src/CodeEditor/PythonHighlighter.cpp \
                                           $$ROOT/src/CodeEditor/SyntaxHighlighter.cpp \
                                           $$ROOT/src/CodeEditor/TvmGenerator.cpp \
-                                          $$ROOT/src/CodeEditor/PythonGenerator.cpp \
+                                          $$ROOT/src/CodeEditor/NipypeGenerator.cpp \
                                           $$ROOT/src/CodeEditor/AfniGenerator.cpp \
                                           $$ROOT/src/CodeEditor/FslGenerator.cpp \
                                           $$ROOT/src/CodeEditor/CodeGenerator.cpp \
@@ -93,7 +93,7 @@ HEADERS                                += $$ROOT/include/MainWindow.hpp \
                                           $$ROOT/include/CodeEditor/MatlabHighlighter.hpp \
                                           $$ROOT/include/CodeEditor/PythonHighlighter.hpp \
                                           $$ROOT/include/CodeEditor/TvmGenerator.hpp \
-                                          $$ROOT/include/CodeEditor/PythonGenerator.hpp \
+                                          $$ROOT/include/CodeEditor/NipypeGenerator.hpp \
                                           $$ROOT/include/CodeEditor/AfniGenerator.hpp \
                                           $$ROOT/include/CodeEditor/FslGenerator.hpp \
                                           $$ROOT/include/CodeEditor/CodeGenerator.hpp \

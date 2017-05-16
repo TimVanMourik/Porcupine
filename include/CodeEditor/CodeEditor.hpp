@@ -24,12 +24,14 @@
 #ifndef CODEEDITOR_HPP
 #define CODEEDITOR_HPP
 
+#include <QMap>
 #include <QTabWidget>
 
 class CodeGenerator;
 class Link;
 class NodeTreeItem;
 class QTextEdit;
+class ParameterEditor;
 
 class CodeEditor : public QTabWidget
 {
@@ -42,6 +44,13 @@ public:
     void generateCode(
             const QList<NodeTreeItem*>& _nodeList,
             const QVector<const Link*>& _linkList = QVector<const Link*>(0)
+            );
+    //
+    void setParameterEditor(
+            ParameterEditor* _editor
+            );
+    //
+    QMap<QString, QString> getParameters(
             );
     //
     ~CodeEditor(
@@ -57,8 +66,10 @@ private:
     void setupBashEditor(
             );
     //
-    void setupPythonEditor(
+    void setupNipypeEditor(
             );
+    //
+    ParameterEditor* m_parameterEditor;
     //
     QMap<QString, QTextEdit*> m_textEditors;
     //

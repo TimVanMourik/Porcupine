@@ -27,18 +27,20 @@
 #include "CodeGenerator.hpp"
 #include "Link.hpp"
 
-class PythonGenerator : public CodeGenerator
+class NipypeGenerator : public CodeGenerator
 {
 public:
     //
-    PythonGenerator();
+    NipypeGenerator(
+            CodeEditor* _editor = 0
+            );
     //
     QString generateCode(
             const QList<NodeTreeItem*>& _nodeList,
             const QVector<const Link*>& _linkList = QVector<const Link*>(0)
             );
     //
-    ~PythonGenerator();
+    ~NipypeGenerator();
 private:
     //
     QString linkToCode(
@@ -46,7 +48,8 @@ private:
             ) const;
     //
     QString itemToCode(
-            const NodeTreeItem* _item
+            const NodeTreeItem* _item,
+            const QMap<QString, QString>& parameters
             ) const;
     //
     QString argumentToCode(

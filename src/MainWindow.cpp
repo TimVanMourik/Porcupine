@@ -1,5 +1,5 @@
 
-/*  Copyright (C) Tim van Mourik, 2014-2016
+/*  Copyright (C) Tim van Mourik, 2014-2017
     Copyright (C) Tim van Mourik, 2017, DCCN
     All rights reserved
 
@@ -354,10 +354,10 @@ void MainWindow::newFile(
         )
 {
     //Create a node editor
-    m_nodeEditors.append(new NodeEditor(this));
-    m_nodeTreeEditors.append(new NodeTreeEditor(this));
-    m_codeEditors.append(new CodeEditor(this));
-    m_parameterEditors.append(new ParameterEditor(this));
+    m_nodeEditors.append(       new NodeEditor(this));
+    m_nodeTreeEditors.append(   new NodeTreeEditor(this));
+    m_codeEditors.append(       new CodeEditor(this));
+    m_parameterEditors.append(  new ParameterEditor(this));
 
     //Add it to a new tab
     m_currentFileIndex = m_nodeEditors.length() - 1;
@@ -368,6 +368,7 @@ void MainWindow::newFile(
 
     m_nodeEditors[m_currentFileIndex]->setTreeModel(m_nodeTreeEditors[m_currentFileIndex]);
     m_nodeTreeEditors[m_currentFileIndex]->setCodeEditor(m_codeEditors[m_currentFileIndex]);
+    m_codeEditors[m_currentFileIndex]->setParameterEditor(m_parameterEditors[m_currentFileIndex]);
 
     setFileAt(m_currentFileIndex);
     m_nodeEditors.last()->install();
@@ -417,11 +418,13 @@ void MainWindow::setFileAt(
         {
             m_nodeTreeWidget->layout()->itemAt(i)->widget()->setVisible(true);
             m_codeEditorWidget->layout()->itemAt(i)->widget()->setVisible(true);
+            m_parameterWidget->layout()->itemAt(i)->widget()->setVisible(true);
         }
         else
         {
             m_nodeTreeWidget->layout()->itemAt(i)->widget()->setVisible(false);
             m_codeEditorWidget->layout()->itemAt(i)->widget()->setVisible(false);
+            m_parameterWidget->layout()->itemAt(i)->widget()->setVisible(false);
         }
     }
 }
