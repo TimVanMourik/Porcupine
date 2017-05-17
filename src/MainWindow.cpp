@@ -76,17 +76,12 @@ MainWindow::MainWindow(
     setCentralWidget(mainWidget);
 
     //Add the panels to the layout
-    QSplitter* leftWidget = new QSplitter(Qt::Vertical, mainWidget);
-    QVBoxLayout* leftSide = new QVBoxLayout(leftWidget);
-    leftSide->addWidget(m_nodeTreeWidget);
-
+    mainWidget->addWidget(m_nodeTreeWidget);
     QSplitter* rightWidget = new QSplitter(Qt::Vertical, mainWidget);
-    QVBoxLayout* rightSide = new QVBoxLayout(rightWidget);
 
-    QSplitter* nodeEditor = new QSplitter();
-    QHBoxLayout* nodeLayout = new QHBoxLayout(nodeEditor);
-    nodeLayout->addWidget(m_nodeEditorWidget);
-    nodeLayout->addWidget(m_parameterWidget);
+    QSplitter* nodeEditor = new QSplitter(Qt::Horizontal, rightWidget);
+    nodeEditor->addWidget(m_nodeEditorWidget);
+    nodeEditor->addWidget(m_parameterWidget);
 
     QWidget* codeEditor = new QWidget();
     QHBoxLayout* codeLayout = new QHBoxLayout(codeEditor);
@@ -94,16 +89,11 @@ MainWindow::MainWindow(
     codeLayout->addWidget(button);
     codeLayout->addWidget(m_codeEditorWidget);
 
-    rightSide->addWidget(nodeEditor);
-    rightSide->addWidget(codeEditor);
+    rightWidget->addWidget(codeEditor);
 
     ///@todo stretch factors are a bit weird. Find out how to do this nicely
-    nodeEditor->setStretchFactor(0, 6);
+    nodeEditor->setStretchFactor(0, 10);
     nodeEditor->setStretchFactor(1, 1);
-    rightWidget->setStretchFactor(0, 12);
-    rightWidget->setStretchFactor(1, 1);
-    mainWidget->setStretchFactor( 0, 1);
-    mainWidget->setStretchFactor( 1, 4);
 
     createActions();
     createMenus();
@@ -120,7 +110,7 @@ MainWindow::MainWindow(
 void MainWindow::nodeToCode(
         )
 {
-//    m_nodeTreeEditors[m_currentFileIndex]->generateCode();
+    m_nodeTreeEditors[m_currentFileIndex]->generateCode();
     QVector<const Link*> allLinks = m_nodeEditors[m_currentFileIndex]->getLinks();
     m_codeEditors[m_currentFileIndex]->generateCode(m_nodeTreeEditors[m_currentFileIndex]->getNodeList(), allLinks);
 }

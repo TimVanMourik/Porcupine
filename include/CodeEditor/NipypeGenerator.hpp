@@ -56,6 +56,24 @@ private:
             const Argument& _argument,
             const NodeTreeItem* _item
             ) const;
+    //
+    void writePreamble(
+            QString& io_code
+            );
+    //
+    void writeParameters(
+            QString& io_code
+            );
+    //
+    void writeNodes(
+            QString& io_code,
+            const QList<NodeTreeItem*>& _nodeList
+            );
+    //
+    void writeLinks(
+            QString& io_code,
+            const QVector<const Link*>& _linkList
+            );
 };
 
 #endif // PYTHONGENERATOR_HPP

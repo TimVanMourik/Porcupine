@@ -34,7 +34,7 @@
 #include <QGraphicsView>
 
 class Link;
-class SelectionBox;
+//class SelectionBox;
 class QGraphicsScene;
 class QKeyEvent;
 class QDomDocument;
@@ -118,9 +118,9 @@ private:
     //
     QPointF m_lastClickedPoint;
     //
-    SelectionBox* m_newSelection;
+//    SelectionBox* m_newSelection;
     //
-    QList<SelectionBox*> m_selections;
+//    QList<SelectionBox*> m_selections;
     //
     NodeTreeEditor* m_treeModel;
 };

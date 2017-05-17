@@ -41,35 +41,13 @@ QString NipypeGenerator::generateCode(
             const QVector<const Link*>& _linkList
             )
 {
-    Q_UNUSED(_linkList);
+    ///@todo check if there is at least one NiPype module in the scene
+
     QString code("#This is a NiPype generator. Warning, here be dragons.\n");
-    code.append("import nipype\n");
-    code.append("import nipype.pipeline as pe\n");
-    code.append("import nipype.interfaces.fsl as fsl\n");
-    code.append("import nipype.interfaces.afni as afni\n");
-    code.append("import nipype.interfaces.spm as spm\n");
-    code.append("import nipype.interfaces.utility as utility\n\n");
-
-    code.append("import nipype\n\n");
-
-    QMap<QString, QString> parameters = m_editor->getParameters();
-    foreach(const QString parameter, parameters.keys())
-    {
-        code.append(QString("#%1 = %2\n").arg(parameter, parameters[parameter]));
-    }
-    code.append("\n");
-
-    foreach(const NodeTreeItem* item, _nodeList)
-    {
-        code.append(itemToCode(item, parameters));
-    }
-    code.append("#Create a workflow to connect all those nodes\n");
-    code.append("analysisflow = nipype.Workflow('MyWorkflow')\n");
-
-    foreach(const Link* link, _linkList)
-    {
-        code.append(linkToCode(link));
-    }
+    writePreamble(code);
+    writeParameters(code);
+    writeNodes(code, _nodeList);
+    writeLinks(code, _linkList);
 
     code.append("\n#Run the workflow\n");
     code.append("analysisflow.run()\n");
@@ -101,7 +79,7 @@ QString NipypeGenerator::itemToCode(
         {
             if(filename.contains(QString("$").append(parameter)))
             {
-                filename = filename.replace(QString("$").append(parameter), parameters[parameter]);
+                filename = filename.replace(QString("$").append(parameter), parameter);
             }
         }
 
@@ -110,6 +88,14 @@ QString NipypeGenerator::itemToCode(
             if(argument.getType() == Argument::INPUT || argument.getType() == Argument::INOUT || argument.getType() == Argument::HIDDEN || argument.getType() == Argument::SECRET)
             {
                 code.append(QString("%1.inputs.%2 = %3\n").arg(nodeName, argument.getArgument("NiPype"), filename));
+            }
+        }
+
+        if(!filename.isEmpty())
+        {
+            if(argument.getType() == Argument::OUTPUT || argument.getType() == Argument::INOUT)
+            {
+                code.append(QString("%1.outputs.%2 = %3\n").arg(nodeName, argument.getArgument("NiPype"), filename));
             }
         }
     }
@@ -129,6 +115,58 @@ QString NipypeGenerator::linkToCode(
     code.append(QString("analysisflow.connect(%1, '%2', %3, '%4')\n").arg(source, sourceAttribute, destination, destinationAttribute));
 
     return code;
+}
+
+void NipypeGenerator::writePreamble(
+        QString& io_code
+        )
+{
+    ///@todo make module import dependent on scene nodes
+    io_code.append("import nipype\n");
+    io_code.append("import nipype.pipeline as pe\n");
+    io_code.append("import nipype.interfaces.fsl as fsl\n");
+    io_code.append("import nipype.interfaces.afni as afni\n");
+    io_code.append("import nipype.interfaces.spm as spm\n");
+    io_code.append("import nipype.interfaces.utility as utility\n\n");
+
+    io_code.append("import nipype\n\n");
+}
+
+void NipypeGenerator::writeParameters(
+        QString& io_code
+        )
+{
+    QMap<QString, QString> parameters = m_editor->getParameters();
+    foreach(const QString parameter, parameters.keys())
+    {
+        io_code.append(QString("%1 = %2\n").arg(parameter, parameters[parameter]));
+    }
+    io_code.append("\n");
+}
+
+void NipypeGenerator::writeNodes(
+        QString& io_code,
+        const QList<NodeTreeItem*>& _nodeList
+        )
+{
+    QMap<QString, QString> parameters = m_editor->getParameters();
+    foreach(const NodeTreeItem* item, _nodeList)
+    {
+        io_code.append(itemToCode(item, parameters));
+    }
+}
+
+void NipypeGenerator::writeLinks(
+        QString& io_code,
+        const QVector<const Link*>& _linkList
+        )
+{
+    io_code.append("#Create a workflow to connect all those nodes\n");
+    io_code.append("analysisflow = nipype.Workflow('MyWorkflow')\n");
+    foreach(const Link* link, _linkList)
+    {
+        io_code.append(linkToCode(link));
+    }
 }
 
 NipypeGenerator::~NipypeGenerator()

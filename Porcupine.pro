@@ -34,6 +34,7 @@ INCLUDEPATH                             = include/ \
                                           include/NodeEditor \
                                           include/NodeTreeEditor \
                                           include/CodeEditor \
+                                          include/ParameterEditor \
                                           include/CodeInterpreter
 
 OBJECTS_DIR                             = ./obj/
@@ -46,8 +47,8 @@ SOURCES                                += $$ROOT/main.cpp \
                                           $$ROOT/src/Settings/DataType.cpp \
                                           $$ROOT/src/Settings/NodeLibrary.cpp \
                                           $$ROOT/src/Settings/NodeSetting.cpp \
-                                          $$ROOT/src/Settings/ParameterEditor.cpp \
                                           $$ROOT/src/Settings/Preferences.cpp \
+                                          $$ROOT/src/ParameterEditor/ParameterEditor.cpp \
                                           $$ROOT/src/NodeEditor/Link.cpp \
                                           $$ROOT/src/NodeEditor/Node.cpp \
                                           $$ROOT/src/NodeEditor/NodeAntenna.cpp \
@@ -76,9 +77,9 @@ HEADERS                                += $$ROOT/include/MainWindow.hpp \
                                           $$ROOT/include/Settings/DataType.hpp \
                                           $$ROOT/include/Settings/NodeLibrary.hpp \
                                           $$ROOT/include/Settings/NodeSetting.hpp \
-                                          $$ROOT/include/Settings/ParameterEditor.hpp \
                                           $$ROOT/include/Settings/Preferences.hpp \
                                           $$ROOT/include/Settings/Singleton.hpp \
+                                          $$ROOT/include/ParameterEditor/ParameterEditor.hpp \
                                           $$ROOT/include/NodeEditor/Link.hpp \
                                           $$ROOT/include/NodeEditor/Node.hpp \
                                           $$ROOT/include/NodeEditor/NodeAntenna.hpp \

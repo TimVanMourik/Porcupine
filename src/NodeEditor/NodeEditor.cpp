@@ -39,7 +39,7 @@
 #include "NodeTreeEditor.hpp"
 #include "Port.hpp"
 #include "Preferences.hpp"
-#include "SelectionBox.hpp"
+//#include "SelectionBox.hpp"
 
 NodeEditor::NodeEditor(
         QWidget* _parent
@@ -48,7 +48,7 @@ NodeEditor::NodeEditor(
     m_newLink(0),
     m_scalingFactor(1),
     m_lastClickedPoint(QPointF(0, 0)),
-    m_newSelection(0),
+//    m_newSelection(0),
     m_treeModel(0)
 {
     /// @todo when pressed 'backspace' in file name label, last clicked node is deleted #fix
@@ -128,8 +128,8 @@ bool NodeEditor::eventFilter(
             const QGraphicsItem* item = itemAt(mouseEvent->scenePos(), QSize(3, 3));
             if(!item)
             {
-                m_newSelection = new SelectionBox(mouseEvent->scenePos(), scene());
-                m_newSelection->reshape(mouseEvent->scenePos());
+//                m_newSelection = new SelectionBox(mouseEvent->scenePos(), scene());
+//                m_newSelection->reshape(mouseEvent->scenePos());
             }
             break;
         }
@@ -151,11 +151,11 @@ bool NodeEditor::eventFilter(
             m_newLink->updatePath();
             return true;
         }
-        if (m_newSelection)
-        {
-            m_newSelection->reshape(mouseEvent->scenePos());
-            return true;
-        }
+//        if (m_newSelection)
+//        {
+//            m_newSelection->reshape(mouseEvent->scenePos());
+//            return true;
+//        }
         break;
     }
     case QEvent::GraphicsSceneMouseRelease:
@@ -237,56 +237,56 @@ bool NodeEditor::eventFilter(
             m_newLink = 0;
             return true;
         }
-        else if (m_newSelection && mouseEvent->button() == Qt::RightButton)
-        {
-            qreal x1, y1, x2, y2;
-            m_newSelection->boundingRect().getCoords(&x1, &y1, &x2, &y2);
-            if(qRound(x2 - x1) == 0 || qRound(y2 - y1) == 0)
-            {
-                delete m_newSelection;
-                m_newSelection = 0;
-                return true;
-            }
-            QList<QGraphicsItem*> itemsWithinSquare = scene()->items(m_newSelection->boundingRect());
-            QList<Node*> nodeList;
-            bool firstNode = true;
-            foreach(QGraphicsItem* eachItem, itemsWithinSquare)
-            {
-                if (eachItem->type() == Node::Type)
-                {
-                    if(firstNode)
-                    {
-                        x1 = ((Node*)eachItem)->pos().x();
-                        y1 = ((Node*)eachItem)->pos().y();
-                        x2 = ((Node*)eachItem)->pos().x();
-                        y2 = ((Node*)eachItem)->pos().y();
-                        firstNode = false;
-                    }
-                    nodeList.append((Node*)eachItem);
-                    QPointF topLeft     = ((Node*)eachItem)->pos() + ((Node*)eachItem)->boundingRect().topLeft();
-                    QPointF bottomRight = ((Node*)eachItem)->pos() + ((Node*)eachItem)->boundingRect().bottomRight();
-                    x1 = std::min(x1, topLeft.x());
-                    y1 = std::min(y1, topLeft.y());
-                    x2 = std::max(x2, bottomRight.x());
-                    y2 = std::max(y2, bottomRight.y());
-                    ((Node*)eachItem)->setParentItem((QGraphicsItem*)m_newSelection);
-                }
-            }
-            if (!nodeList.isEmpty())
-            {
-                qreal extraWidth = 8;
-                m_newSelection->reshape(x1 - extraWidth, y1 - extraWidth, x2 + extraWidth, y2 + extraWidth);
-                m_newSelection->setNodeList(nodeList);
-                m_newSelection->updateOpacity(m_scalingFactor);
-                m_selections.append(m_newSelection);
-                m_newSelection = 0;
-            }
-            else
-            {
-                delete m_newSelection;
-                m_newSelection = 0;
-            }
-        }
+//        else if (m_newSelection && mouseEvent->button() == Qt::RightButton)
+//        {
+//            qreal x1, y1, x2, y2;
+//            m_newSelection->boundingRect().getCoords(&x1, &y1, &x2, &y2);
+//            if(qRound(x2 - x1) == 0 || qRound(y2 - y1) == 0)
+//            {
+//                delete m_newSelection;
+//                m_newSelection = 0;
+//                return true;
+//            }
+//            QList<QGraphicsItem*> itemsWithinSquare = scene()->items(m_newSelection->boundingRect());
+//            QList<Node*> nodeList;
+//            bool firstNode = true;
+//            foreach(QGraphicsItem* eachItem, itemsWithinSquare)
+//            {
+//                if (eachItem->type() == Node::Type)
+//                {
+//                    if(firstNode)
+//                    {
+//                        x1 = ((Node*)eachItem)->pos().x();
+//                        y1 = ((Node*)eachItem)->pos().y();
+//                        x2 = ((Node*)eachItem)->pos().x();
+//                        y2 = ((Node*)eachItem)->pos().y();
+//                        firstNode = false;
+//                    }
+//                    nodeList.append((Node*)eachItem);
+//                    QPointF topLeft     = ((Node*)eachItem)->pos() + ((Node*)eachItem)->boundingRect().topLeft();
+//                    QPointF bottomRight = ((Node*)eachItem)->pos() + ((Node*)eachItem)->boundingRect().bottomRight();
+//                    x1 = std::min(x1, topLeft.x());
+//                    y1 = std::min(y1, topLeft.y());
+//                    x2 = std::max(x2, bottomRight.x());
+//                    y2 = std::max(y2, bottomRight.y());
+//                    ((Node*)eachItem)->setParentItem((QGraphicsItem*)m_newSelection);
+//                }
+//            }
+//            if (!nodeList.isEmpty())
+//            {
+//                qreal extraWidth = 8;
+//                m_newSelection->reshape(x1 - extraWidth, y1 - extraWidth, x2 + extraWidth, y2 + extraWidth);
+//                m_newSelection->setNodeList(nodeList);
+//                m_newSelection->updateOpacity(m_scalingFactor);
+//                m_selections.append(m_newSelection);
+//                m_newSelection = 0;
+//            }
+//            else
+//            {
+//                delete m_newSelection;
+//                m_newSelection = 0;
+//            }
+//        }
         break;
     }
     }
@@ -309,10 +309,10 @@ void NodeEditor::wheelEvent(
         m_scalingFactor /= scalingStep;
     }
     /// @todo pass on to selections
-    foreach (SelectionBox* selection, m_selections)
-    {
-        selection->updateOpacity(m_scalingFactor);
-    }
+//    foreach (SelectionBox* selection, m_selections)
+//    {
+//        selection->updateOpacity(m_scalingFactor);
+//    }
 }
 
 void NodeEditor::keyPressEvent(
@@ -331,12 +331,15 @@ void NodeEditor::keyPressEvent(
                 if(item->type() == Node::Type)
                 {
                     //remove node from list view
-                    m_treeModel->removeNode((const Node*) item);
+                    if(m_treeModel)
+                    {
+                        m_treeModel->removeNode((const Node*) item);
+                    }
                 }
-                else if(item->type() == SelectionBox::Type)
-                {
-                    m_selections.removeOne((SelectionBox*)item);
-                }
+//                else if(item->type() == SelectionBox::Type)
+//                {
+//                    m_selections.removeOne((SelectionBox*)item);
+//                }
                 delete item;
                 //if no break, program may crash when second deleted item was already deletted by first on cascade
                 break;
@@ -435,7 +438,10 @@ Node* NodeEditor::addNode(
 {
     Node* node = new Node(this, _setting);
     node->setPos(m_lastClickedPoint);
-    m_treeModel->addNode(node);
+    if(m_treeModel)
+    {
+        m_treeModel->addNode(node);
+    }
     return node;
 }
 
@@ -458,10 +464,10 @@ NodeEditor::~NodeEditor(
 {
     //For the weird instance that there is one and the editor is destroyed:
     delete m_newLink;
-    delete m_newSelection;
-    foreach (SelectionBox* selection, m_selections)
-    {
-        delete selection;
-    }
+//    delete m_newSelection;
+//    foreach (SelectionBox* selection, m_selections)
+//    {
+//        delete selection;
+//    }
     delete scene();
 }
