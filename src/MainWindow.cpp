@@ -165,7 +165,7 @@ void MainWindow::loadDefaultNodes(
     nodeLibrary.setNodeSchema(schemaFile);
 
     QStringList toolboxNames;
-    toolboxNames << QString(":/Dictionaries/TvM/node_%1.xml");
+//    toolboxNames << QString(":/Dictionaries/TvM/node_%1.xml");
     toolboxNames << QString(":/Dictionaries/NiPype/node_%1.xml");
     unsigned int framePadding = 3;
     foreach (QString toolbox, toolboxNames)
