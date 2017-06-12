@@ -120,19 +120,25 @@ NodeTreeItem::NodeTreeItem(
             fileName->setDisabled(true);
         }
 
-//        QWidget* row = new QWidget();
-//        QHBoxLayout* rowLayout = new QHBoxLayout(row);
+        QWidget* row = new QWidget();
+        QHBoxLayout* rowLayout = new QHBoxLayout(row);
 
-//        QCheckBox* checkbox = new QCheckBox();
-//        checkbox->setChecked(true);
-//        rowLayout->addWidget(fileName);
-//        rowLayout->addWidget(checkbox);
-//        portBlockLayout->addRow(pair->getName(), row);
+        QCheckBox* showCheckbox = new QCheckBox();
+        showCheckbox->setChecked(true);
+        QCheckBox* iterateCheckbox = new QCheckBox();
+        iterateCheckbox->setChecked(false);
+        rowLayout->addWidget(fileName);
+        rowLayout->addWidget(showCheckbox);
+        rowLayout->addWidget(iterateCheckbox);
+        portBlockLayout->addRow(pair->getName(), row);
 //        connect(checkbox, SIGNAL(toggled(bool)), ..., SLOT());
 
-        portBlockLayout->addRow(pair->getName(), fileName);
+//        portBlockLayout->addRow(pair->getName(), fileName);
 
+        connect(showCheckbox, SIGNAL(toggled(bool)), pair, SLOT(toggleVisibility(bool)));
+        connect(showCheckbox, SIGNAL(toggled(bool)), fileName, SLOT(setEnabled(bool)));
         connect(fileName, SIGNAL(textEdited(QString)), pair, SLOT(fileNameChanged(QString)));
+        connect(pair, SIGNAL(isConnected(bool)), showCheckbox, SLOT(setDisabled(bool)));
         /// @todo set the SLOT such that it does not only handle the text but also the font
         connect(pair, SIGNAL(changeFileName(QString)), fileName, SLOT(setText(QString)));
     }

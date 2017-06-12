@@ -94,7 +94,7 @@ public:
     bool hasFileName(
             ) const;
     //
-    bool removeLink(
+    void removeLink(
             Link* _link
             );
     //

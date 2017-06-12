@@ -80,6 +80,7 @@ void Port::addConnection(
         )
 {
     m_connections.append(_newLink);
+    m_pair->isConnected(true);
 }
 
 Port::PortType Port::getPortType(
@@ -164,11 +165,15 @@ QVector<Port*> Port::getConnectedPorts(
     return connectedPorts;
 }
 
-bool Port::removeLink(
+void Port::removeLink(
         Link* _link
         )
 {
-    return m_connections.removeOne(_link);
+    m_connections.removeOne(_link);
+    if(m_connections.length() == 0)
+    {
+        m_pair->isConnected(false);
+    }
 }
 
 void Port::saveToXml(

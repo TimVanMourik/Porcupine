@@ -124,6 +124,10 @@ signals:
     void changeFileName(
             const QString& _fileName
             );
+    //
+    void isConnected(
+            bool _connected
+            );
 public slots:
     /// @brief
     /// @param _cascadeUp indicates if the file name should be passed up the hierarchy or only down
@@ -131,9 +135,13 @@ public slots:
             const QString& _fileName = "",
             bool _cascadeUp = true
             );
+    //
+    void toggleVisibility(
+            bool _visibility
+            );
 private:
     //
-    const Node* m_node;
+    Node* m_node;
     //
     const Argument* m_argument;
     //

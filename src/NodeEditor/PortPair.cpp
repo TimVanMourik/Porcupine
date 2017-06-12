@@ -335,6 +335,18 @@ void PortPair::fileNameChanged(
     emit changeFileName(_fileName);
 }
 
+
+void PortPair::toggleVisibility(
+        bool _visibility
+        )
+{
+    if(m_input) m_input->setVisible(_visibility);
+    if(m_output) m_output->setVisible(_visibility);
+    setVisible(_visibility);
+    m_node->repositionPorts();
+}
+
+
 const QString& PortPair::getFileName(
             ) const
 {
