@@ -161,7 +161,7 @@ void Node::repositionPorts(
         )
 {
     //Expand the Node when the text is too large
-    qreal width = s_horizontalMargin * 2;
+    qreal width  = s_horizontalMargin * 2;
     qreal height = s_verticalMargin;
 
     width  += m_nameLabel->fontMetrics().width(m_name);

@@ -103,7 +103,7 @@ QString NipypeGenerator::itemToCode(
     }
     else
     {
-        code.append(QString(", iterfield = [%1])\n").arg(iterFields.join(", ")));
+        code.append(QString(", iterfield = ['%1'])\n").arg(iterFields.join("', '")));
     }
 
 

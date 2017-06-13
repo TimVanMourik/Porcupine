@@ -41,6 +41,11 @@ public:
     QPen m_nodePenUnselected;
     QPen m_nodePenSelected;
 
+    QBrush m_postitBrushUnselected;
+    QBrush m_postitBrushSelected;
+    QPen m_postitPenUnselected;
+    QPen m_postitPenSelected;
+
     QBrush m_linkBrushUnselected;
     QBrush m_linkBrushSelected;
     QPen m_linkPenUnselected;

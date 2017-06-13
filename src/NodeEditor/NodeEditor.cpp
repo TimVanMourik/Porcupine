@@ -38,6 +38,7 @@
 #include "NodeEditor.hpp"
 #include "NodeTreeEditor.hpp"
 #include "Port.hpp"
+#include "PostIt.hpp"
 #include "Preferences.hpp"
 //#include "SelectionBox.hpp"
 
@@ -443,6 +444,14 @@ Node* NodeEditor::addNode(
         m_treeModel->addNode(node);
     }
     return node;
+}
+
+PostIt* NodeEditor::addPostit(
+        )
+{
+    PostIt* postIt = new PostIt(this);
+    postIt->setPos(m_lastClickedPoint);
+    return postIt;
 }
 
 QVector<const Link*> NodeEditor::getLinks(

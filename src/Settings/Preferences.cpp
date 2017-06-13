@@ -31,14 +31,21 @@ Preferences::Preferences() :
     //Colour settings
     m_sceneBackgroundBrush = QBrush(QImage(":/Images/RepeatingBrains.png"));
 
-    QLinearGradient gradient(0.0, 0.0, 0.0, 30);
-    gradient.setColorAt(1, QColor(130, 5, 0));
-    gradient.setColorAt(0, QColor(110, 5, 0));
-
-    m_nodeBrushUnselected       = QBrush(gradient);
-    m_nodeBrushSelected         = QBrush(gradient);
+    QLinearGradient nodeGradient(0.0, 0.0, 0.0, 30);
+    nodeGradient.setColorAt(1, QColor(110, 5, 0));
+    nodeGradient.setColorAt(0, QColor(130, 5, 0));
+    m_nodeBrushUnselected       = QBrush(nodeGradient);
+    m_nodeBrushSelected         = QBrush(nodeGradient);
     m_nodePenUnselected         = QPen(QColor(20, 20, 20));
     m_nodePenSelected           = QPen(Qt::red);
+
+    QLinearGradient postitGradient(0.0, 0.0, 0.0, 30);
+    postitGradient.setColorAt(1, QColor(240, 240, 0));
+    postitGradient.setColorAt(0, QColor(220, 220, 0));
+    m_postitBrushUnselected     = QBrush(postitGradient);
+    m_postitBrushSelected       = QBrush(postitGradient);
+    m_postitPenUnselected       = QPen(QColor(60, 60, 0));
+    m_postitPenSelected         = QPen(QColor(140, 140, 20));
 
     m_linkBrushUnselected       = QBrush(Qt::NoBrush);
     m_linkBrushSelected         = QBrush(Qt::NoBrush);
@@ -52,8 +59,8 @@ Preferences::Preferences() :
 
     m_portTextColor             = QColor(230, 230, 230);
 
-    m_selectionBrushUnselected  = QBrush(gradient);
-    m_selectionBrushSelected    = QBrush(gradient);
+    m_selectionBrushUnselected  = QBrush(nodeGradient);
+    m_selectionBrushSelected    = QBrush(nodeGradient);
     m_selectionPenUnselected    = QPen(QColor(170, 170, 240), 2);
     m_selectionPenSelected      = QPen(QColor(20, 20, 40), 2);
     m_selectionOpacity          = 0.1;

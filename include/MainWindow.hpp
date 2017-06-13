@@ -98,6 +98,8 @@ private slots:
     void addNode(
             const NodeSetting* _setting = 0
             );
+    void addPostIt(
+            );
     void updateNodeMenu(
             const QString& _node
             );
@@ -132,6 +134,7 @@ private:
     QMenu* m_fileMenu;
     QMenu* m_editMenu;
     QMenu* m_nodesMenu;
+    QMenu* m_postitMenu;
 
     QAction* m_newAct;
     QAction* m_openAct;
@@ -144,6 +147,7 @@ private:
     QAction* m_cutAct;
     QAction* m_copyAct;
     QAction* m_pasteAct;
+    QAction* m_postitAct;
 
     /// @brief
     QVector<QAction*> m_nodeActs;

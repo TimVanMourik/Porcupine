@@ -55,6 +55,7 @@ SOURCES                                += $$ROOT/main.cpp \
                                           $$ROOT/src/NodeEditor/NodeEditor.cpp \
                                           $$ROOT/src/NodeEditor/Port.cpp \
                                           $$ROOT/src/NodeEditor/PortPair.cpp \
+                                          $$ROOT/src/NodeEditor/PostIt.cpp \
                                           $$ROOT/src/NodeTreeEditor/NodeTreeEditor.cpp \
                                           $$ROOT/src/NodeTreeEditor/NodeTreeItem.cpp \
                                           $$ROOT/src/CodeEditor/BashHighlighter.cpp \
@@ -86,6 +87,7 @@ HEADERS                                += $$ROOT/include/MainWindow.hpp \
                                           $$ROOT/include/NodeEditor/NodeEditor.hpp \
                                           $$ROOT/include/NodeEditor/Port.hpp \
                                           $$ROOT/include/NodeEditor/PortPair.hpp \
+                                          $$ROOT/include/NodeEditor/PostIt.hpp \
                                           $$ROOT/include/NodeTreeEditor/NodeTreeItem.hpp \
                                           $$ROOT/include/NodeTreeEditor/NodeTreeEditor.hpp \
                                           $$ROOT/include/CodeEditor/BashHighlighter.hpp \

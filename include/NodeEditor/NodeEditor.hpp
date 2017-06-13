@@ -42,6 +42,7 @@ class QDomElement;
 class Node;
 class NodeSetting;
 class NodeTreeEditor;
+class PostIt;
 
 class NodeEditor : public QGraphicsView
 {
@@ -93,6 +94,9 @@ public:
     //
     Node* addNode(
             const NodeSetting* _setting = 0
+            );
+    //
+    PostIt* addPostit(
             );
     //
     QVector<const Link*> getLinks(

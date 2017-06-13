@@ -396,6 +396,12 @@ void MainWindow::addNode(
     m_nodeEditors[m_currentFileIndex]->addNode(_setting);
 }
 
+void MainWindow::addPostIt(
+        )
+{
+    m_nodeEditors[m_currentFileIndex]->addPostit();
+}
+
 void MainWindow::setFileAt(
         int _tabNumber
         )
@@ -440,6 +446,10 @@ void MainWindow::createMenus()
     m_editMenu->addAction(m_pasteAct);
 
     m_nodesMenu = menuBar()->addMenu(tr("Nodes"));
+
+    m_postitMenu = menuBar()->addMenu(tr("Post-its"));
+    m_postitMenu->addAction(m_postitAct);
+
     connect(m_nodesMenu, SIGNAL(triggered(QAction*)), this, SLOT(nodeSlot(QAction*)));
 }
 
@@ -499,6 +509,9 @@ void MainWindow::createActions()
     m_pasteAct->setShortcuts(QKeySequence::Paste);
     m_pasteAct->setStatusTip(tr("Paste the clipboard's contents into the current selection"));
     connect(m_pasteAct, SIGNAL(triggered()), this, SLOT(pasteEdit()));
+
+    m_postitAct = new QAction(tr("Post-it"), this);
+    connect(m_postitAct, SIGNAL(triggered()), this, SLOT(addPostIt()));
 }
 
 MainWindow::~MainWindow()
