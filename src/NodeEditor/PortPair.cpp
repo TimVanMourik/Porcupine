@@ -346,11 +346,23 @@ void PortPair::toggleVisibility(
     m_node->repositionPorts();
 }
 
+void PortPair::setAsIterator(
+        bool _iterator
+        )
+{
+    m_isIterator = _iterator;
+}
 
 const QString& PortPair::getFileName(
             ) const
 {
     return m_fileName;
+}
+
+bool PortPair::isIterator(
+            ) const
+{
+    return m_isIterator;
 }
 
 PortPair::~PortPair()

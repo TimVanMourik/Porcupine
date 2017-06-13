@@ -66,6 +66,9 @@ public:
     const Node* getNode(
             ) const;
     //
+    const QVector<PortPair*> getPorts(
+            ) const;
+    //
     const NodeSetting* getNodeSetting(
             ) const;
     //
@@ -106,8 +109,6 @@ signals:
 private:
     //
     const Node* m_node;
-    //
-    QMap<QWidget*, PortPair*> m_ports;
     //
     QMap<QString, QLineEdit*> m_fileNames;
     //

@@ -117,6 +117,9 @@ public:
     const QString& getFileName(
                 ) const;
     //
+    bool isIterator(
+                ) const;
+    //
     ~PortPair(
             );
 signals:
@@ -139,6 +142,10 @@ public slots:
     void toggleVisibility(
             bool _visibility
             );
+    //
+    void setAsIterator(
+            bool _iterator
+            );
 private:
     //
     Node* m_node;
@@ -150,6 +157,8 @@ private:
 //    QVector<const DataType*> m_dataType;
     //
     bool m_secret;
+    //
+    bool m_isIterator;
     //
     Port* m_input;
     //

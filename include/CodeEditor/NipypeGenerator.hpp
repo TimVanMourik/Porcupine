@@ -74,6 +74,10 @@ private:
             QString& io_code,
             const QVector<const Link*>& _linkList
             );
+    //
+    QStringList getIteratorFields(
+            const NodeTreeItem* _item
+            ) const;
 };
 
 #endif // PYTHONGENERATOR_HPP

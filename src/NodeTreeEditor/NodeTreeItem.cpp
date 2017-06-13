@@ -135,15 +135,22 @@ NodeTreeItem::NodeTreeItem(
 
 //        portBlockLayout->addRow(pair->getName(), fileName);
 
-        connect(showCheckbox, SIGNAL(toggled(bool)), pair, SLOT(toggleVisibility(bool)));
-        connect(showCheckbox, SIGNAL(toggled(bool)), fileName, SLOT(setEnabled(bool)));
-        connect(fileName, SIGNAL(textEdited(QString)), pair, SLOT(fileNameChanged(QString)));
-        connect(pair, SIGNAL(isConnected(bool)), showCheckbox, SLOT(setDisabled(bool)));
+        connect(showCheckbox,   SIGNAL(toggled(bool)),              pair,           SLOT(toggleVisibility(bool)));
+        connect(showCheckbox,   SIGNAL(toggled(bool)),              fileName,       SLOT(setEnabled(bool)));
+        connect(iterateCheckbox,SIGNAL(toggled(bool)),              pair,           SLOT(setAsIterator(bool)));
+        connect(fileName,       SIGNAL(textEdited(QString)),        pair,           SLOT(fileNameChanged(QString)));
+        connect(pair,           SIGNAL(isConnected(bool)),          showCheckbox,   SLOT(setDisabled(bool)));
         /// @todo set the SLOT such that it does not only handle the text but also the font
-        connect(pair, SIGNAL(changeFileName(QString)), fileName, SLOT(setText(QString)));
+        connect(pair,           SIGNAL(changeFileName(QString)),    fileName,       SLOT(setText(QString)));
     }
     connect(visibilityButton, SIGNAL(toggled(bool)), portBlock, SLOT(setVisible(bool)));
     connect(&m_node->getAntenna(), SIGNAL(nodeSelected(bool)), this, SLOT(setSelected(bool)));
+}
+
+const QVector<PortPair*> NodeTreeItem::getPorts(
+        ) const
+{
+    return m_node->getPorts();
 }
 
 QString NodeTreeItem::getFileName(

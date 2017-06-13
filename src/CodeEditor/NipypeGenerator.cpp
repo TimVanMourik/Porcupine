@@ -55,6 +55,19 @@ QString NipypeGenerator::generateCode(
     return code;
 }
 
+#include <QDebug>
+QStringList NipypeGenerator::getIteratorFields(
+        const NodeTreeItem* _item
+        ) const
+{
+    QStringList iterFields;
+    foreach (const PortPair* pair,  _item->getPorts())
+    {
+        if(pair->isIterator()) iterFields << pair->getArgument()->getArgument("NiPype");
+    }
+    return iterFields;
+}
+
 QString NipypeGenerator::itemToCode(
         const NodeTreeItem* _item,
         const QMap<QString, QString>& parameters
@@ -69,8 +82,31 @@ QString NipypeGenerator::itemToCode(
 
     QString nodeName = QString("NodeHash_%1").arg(QString::number((quint64) _item->getNode(), 16));
     code.append(QString("#%1\n").arg(nodeSetting->getTitle().getComment("NiPype")));
-    code.append(QString("%1 = pe.Node(interface = %2, ").arg(nodeName, nodeSetting->getTitle().getArgument("NiPype")));
-    code.append(QString("name = 'NodeName_%1')\n").arg(QString::number((quint64) _item->getNode(), 16)));
+    code.append(QString("%1 = pe.").arg(nodeName));
+
+    QStringList iterFields = getIteratorFields(_item);
+    if(iterFields.length() == 0)
+    {
+        code.append(QString("Node"));
+    }
+    else
+    {
+        code.append(QString("MapNode"));
+    }
+
+    code.append(QString("(interface = %2, ").arg(nodeSetting->getTitle().getArgument("NiPype")));
+    code.append(QString("name = 'NodeName_%1'").arg(QString::number((quint64) _item->getNode(), 16)));
+
+    if(iterFields.length() == 0)
+    {
+        code.append(")\n");
+    }
+    else
+    {
+        code.append(QString(", iterfield = [%1])\n").arg(iterFields.join(", ")));
+    }
+
+
     foreach (Argument argument, nodeSetting->getPorts())
     {
         QString filename = _item->getFileName(argument.getName());
