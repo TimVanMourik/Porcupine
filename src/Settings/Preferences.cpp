@@ -29,7 +29,7 @@ Preferences::Preferences() :
     Singleton()
 {
     //Colour settings
-    m_sceneBackgroundBrush = QBrush(QImage(":/Images/RepeatingBrains.png"));
+    m_sceneBackgroundBrush = QBrush(QImage(":/images/RepeatingBrains.png"));
 
     QLinearGradient nodeGradient(0.0, 0.0, 0.0, 30);
     nodeGradient.setColorAt(1, QColor(110, 5, 0));

@@ -98,7 +98,7 @@ MainWindow::MainWindow(
     createActions();
     createMenus();
 
-    loadDataTypes();
+//    loadDataTypes();
     loadDefaultNodes();
 
     connect(button, SIGNAL(released()), this, SLOT(nodeToCode()));
@@ -134,28 +134,28 @@ void MainWindow::keyPressEvent(
     Q_UNUSED(_event);
 }
 
-void MainWindow::loadDataTypes(
-        )
-{
-    NodeLibrary& nodeLibrary = NodeLibrary::getInstance();
-    QFile schemaFile(QString(":/datatype_schema.xsd"));
-    nodeLibrary.setDataTypeSchema(schemaFile);
+//void MainWindow::loadDataTypes(
+//        )
+//{
+//    NodeLibrary& nodeLibrary = NodeLibrary::getInstance();
+//    QFile schemaFile(QString(":/datatype_schema.xsd"));
+//    nodeLibrary.setDataTypeSchema(schemaFile);
 
-    unsigned int i = 0;
-    while(true)
-    {
-        QFile xmlTypefile(QString(":/Dictionaries/DataTypes/type_%1.xml").arg(i));
-        if(xmlTypefile.exists())
-        {
-            nodeLibrary.addDataTypes(xmlTypefile);
-        }
-        else
-        {
-            break;
-        }
-        ++i;
-    }
-}
+//    unsigned int i = 0;
+//    while(true)
+//    {
+//        QFile xmlTypefile(QString(":/dictionaries/DataTypes/type_%1.xml").arg(i));
+//        if(xmlTypefile.exists())
+//        {
+//            nodeLibrary.addDataTypes(xmlTypefile);
+//        }
+//        else
+//        {
+//            break;
+//        }
+//        ++i;
+//    }
+//}
 
 void MainWindow::loadDefaultNodes(
         )
@@ -165,8 +165,8 @@ void MainWindow::loadDefaultNodes(
     nodeLibrary.setNodeSchema(schemaFile);
 
     QStringList toolboxNames;
-//    toolboxNames << QString(":/Dictionaries/TvM/node_%1.xml");
-    toolboxNames << QString(":/Dictionaries/NiPype/node_%1.xml");
+//    toolboxNames << QString(":/dictionaries/TvM/node_%1.xml");
+    toolboxNames << QString(":/dictionaries/NiPype/node_%1.xml");
     unsigned int framePadding = 3;
     foreach (QString toolbox, toolboxNames)
     {

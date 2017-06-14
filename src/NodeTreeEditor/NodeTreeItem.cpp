@@ -125,8 +125,18 @@ NodeTreeItem::NodeTreeItem(
 
         QCheckBox* showCheckbox = new QCheckBox();
         showCheckbox->setChecked(true);
+        QFile fileVisibility(":/qss/visibility_button.qss");
+        fileVisibility.open(QFile::ReadOnly);
+        QString styleSheetVisibility = QString::fromLatin1(fileVisibility.readAll());
+        showCheckbox->setStyleSheet(styleSheetVisibility);
+
         QCheckBox* iterateCheckbox = new QCheckBox();
         iterateCheckbox->setChecked(false);
+        QFile fileIterator(":/qss/iterator_button.qss");
+        fileIterator.open(QFile::ReadOnly);
+        QString styleSheetIterator = QString::fromLatin1(fileIterator.readAll());
+        iterateCheckbox->setStyleSheet(styleSheetIterator);
+
         rowLayout->addWidget(fileName);
         rowLayout->addWidget(showCheckbox);
         rowLayout->addWidget(iterateCheckbox);

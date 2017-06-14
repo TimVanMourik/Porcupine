@@ -1,7 +1,7 @@
 %% Resource File
 
 currentPath = fileparts(mfilename('fullpath'));
-saveLocation = fullfile(currentPath, '../Resources/');
+saveLocation = fullfile(currentPath, '../resources/');
 
 
 docNode = com.mathworks.xml.XMLUtils.createDocument('RCC');
@@ -25,17 +25,64 @@ docRoot.appendChild(currentNode);
 
 %
 currentNode = docNode.createElement('qresource');
-currentNode.setAttribute('prefix', '/Images');
+currentNode.setAttribute('prefix', '/images');
 
 fileNode = docNode.createElement('file');
 fileNode.setAttribute('alias', 'RepeatingBrains.png');
-fileNode.appendChild(docNode.createTextNode('Images/RepeatingBrains.png'));
+fileNode.appendChild(docNode.createTextNode('images/RepeatingBrains.png'));
+currentNode.appendChild(fileNode);
+fileNode = docNode.createElement('file');
+fileNode.setAttribute('alias', 'eye.png');
+fileNode.appendChild(docNode.createTextNode('images/eye.png'));
+currentNode.appendChild(fileNode);
+fileNode = docNode.createElement('file');
+fileNode.setAttribute('alias', 'eye-hidden.png');
+fileNode.appendChild(docNode.createTextNode('images/eye-hidden.png'));
+currentNode.appendChild(fileNode);
+fileNode = docNode.createElement('file');
+fileNode.setAttribute('alias', 'eye-hover.png');
+fileNode.appendChild(docNode.createTextNode('images/eye-hover.png'));
+currentNode.appendChild(fileNode);
+fileNode = docNode.createElement('file');
+fileNode.setAttribute('alias', 'eye-hidden-hover.png');
+fileNode.appendChild(docNode.createTextNode('images/eye-hidden-hover.png'));
+currentNode.appendChild(fileNode);
+
+fileNode = docNode.createElement('file');
+fileNode.setAttribute('alias', 'iterate.png');
+fileNode.appendChild(docNode.createTextNode('images/iterate.png'));
+currentNode.appendChild(fileNode);
+fileNode = docNode.createElement('file');
+fileNode.setAttribute('alias', 'iterate-off.png');
+fileNode.appendChild(docNode.createTextNode('images/iterate-off.png'));
+currentNode.appendChild(fileNode);
+fileNode = docNode.createElement('file');
+fileNode.setAttribute('alias', 'iterate-hover.png');
+fileNode.appendChild(docNode.createTextNode('images/iterate-hover.png'));
+currentNode.appendChild(fileNode);
+fileNode = docNode.createElement('file');
+fileNode.setAttribute('alias', 'iterate-off-hover.png');
+fileNode.appendChild(docNode.createTextNode('images/iterate-off-hover.png'));
+currentNode.appendChild(fileNode);
+docRoot.appendChild(currentNode);
+
+%
+currentNode = docNode.createElement('qresource');
+currentNode.setAttribute('prefix', '/qss');
+
+fileNode = docNode.createElement('file');
+fileNode.setAttribute('alias', 'visibility_button.qss');
+fileNode.appendChild(docNode.createTextNode('qss/visibility_button.qss'));
+currentNode.appendChild(fileNode);
+fileNode = docNode.createElement('file');
+fileNode.setAttribute('alias', 'iterator_button.qss');
+fileNode.appendChild(docNode.createTextNode('qss/iterator_button.qss'));
 currentNode.appendChild(fileNode);
 docRoot.appendChild(currentNode);
 
 %% Add NiPype nodes
-prefix = 'Dictionaries/NiPype';
-directory = fullfile('../Resources', prefix);
+prefix = 'dictionaries/NiPype';
+directory = fullfile('../resources', prefix);
 currentNode = docNode.createElement('qresource');
 currentNode.setAttribute('prefix', prefix);
 
@@ -52,8 +99,8 @@ end
 docRoot.appendChild(currentNode);
 
 %% Add TvM nodes
-prefix = 'Dictionaries/TvM';
-directory = fullfile('../Resources', prefix);
+prefix = 'dictionaries/TvM';
+directory = fullfile('../resources', prefix);
 currentNode = docNode.createElement('qresource');
 currentNode.setAttribute('prefix', prefix);
 

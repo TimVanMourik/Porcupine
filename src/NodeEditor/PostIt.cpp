@@ -20,22 +20,13 @@
     <http://www.gnu.org/licenses/>.
 */
 
-//#include <assert.h>
-
-//#include <QDomDocument>
-//#include <QGraphicsItem>
 #include <QGraphicsProxyWidget>
-//#include <QGraphicsScene>
 #include <QLineEdit>
-//#include <QLinearGradient>
+#include <QTextEdit>
 
-//#include "Argument.hpp"
 #include "PostIt.hpp"
 #include "NodeEditor.hpp"
-//#include "NodeLibrary.hpp"
-//#include "NodeSetting.hpp"
 #include "Preferences.hpp"
-//#include "PortPair.hpp"
 
 qreal PostIt::s_horizontalMargin  = 5;
 qreal PostIt::s_verticalMargin    = 3;
@@ -46,32 +37,43 @@ PostIt::PostIt(
         NodeEditor* _editor
         ) :
     QGraphicsPathItem(0),
-    m_nameLabel(new QLineEdit())
+    m_nameLabel(new QLineEdit()),
+    m_text(new QTextEdit())
 {
-    _editor->scene()->addItem(this);
-    QGraphicsProxyWidget* proxy = new QGraphicsProxyWidget(this);
-    proxy->setWidget(m_nameLabel);
-
-    QPalette palette;
-    palette.setColor(QPalette::Text, Qt::black);
-    m_nameLabel->setPalette(palette);
-    m_nameLabel->setStyleSheet("* {background-color: rgba(0, 0, 0, 0);}");
-    QFont font(scene()->font());
-    font.setBold(true);
-    m_nameLabel->setFont(font);
-    m_nameLabel->setText("I am a post-it!");
-    m_nameLabel->setFrame(false);
-    m_nameLabel->setAttribute(Qt::WA_TranslucentBackground);
-
-    m_nameLabel->move(-m_nameLabel->fontMetrics().width(m_nameLabel->text()) / 2, 0);
+    int width  = 120;
+    int height = 120;
     QPainterPath path;
-    path.addRect(-60, 0, 120, 120);
+    path.addRect(-width / 2, 0, width, height);
     setPath(path);
     setPen(QPen(Qt::darkRed));
     setFlag(QGraphicsItem::ItemIsMovable);
     setFlag(QGraphicsItem::ItemIsSelectable);
 
-//    m_nameLabel->connect((QObject*) m_nameLabel, SIGNAL(textChanged(QString)), (QObject*) &m_antenna, SLOT(catchLabelChanged(QString)));
+    _editor->scene()->addItem(this);
+    QGraphicsProxyWidget* proxyLabel = new QGraphicsProxyWidget(this);
+    proxyLabel->setWidget(m_nameLabel);
+    QGraphicsProxyWidget* proxyText = new QGraphicsProxyWidget(this);
+    proxyText->setWidget(m_text);
+
+    QPalette palette;
+    palette.setColor(QPalette::Text, Qt::black);
+    QFont font(scene()->font());
+    font.setBold(true);
+    m_nameLabel->setFont(font);
+    m_nameLabel->setPalette(palette);
+    m_nameLabel->setStyleSheet("* {background-color: rgba(0, 0, 0, 0);}");
+    m_nameLabel->setText("I am a post-it!");
+    m_nameLabel->setFrame(false);
+    m_nameLabel->setAttribute(Qt::WA_TranslucentBackground);
+    m_nameLabel->move(-m_nameLabel->fontMetrics().width(m_nameLabel->text()) / 2, 0);
+
+    m_text->setPlaceholderText("Text");
+    m_text->setPalette(palette);
+    m_text->setStyleSheet("* {background-color: rgba(0, 0, 0, 0);}");
+    m_text->setAttribute(Qt::WA_TranslucentBackground);
+    m_text->move(-width / 2 + s_horizontalMargin, m_nameLabel->fontMetrics().height() * 1.5);
+    m_text->setMaximumWidth(width - 2 * s_horizontalMargin);
+    m_text->setMaximumHeight(height - 2 * s_verticalMargin - m_nameLabel->fontMetrics().height() * 1.5);
 }
 
 void PostIt::paint(
@@ -112,4 +114,6 @@ int PostIt::type(
 
 PostIt::~PostIt()
 {
+    delete m_nameLabel;
+    delete m_text;
 }

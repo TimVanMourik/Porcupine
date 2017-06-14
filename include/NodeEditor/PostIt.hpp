@@ -32,18 +32,10 @@
 
 #include <QGraphicsPathItem>
 
-//#include "NodeAntenna.hpp"
-
-//class QDomElement;
 class QLineEdit;
-//class QObject;
+class QTextEdit;
 
-//class Argument;
-//class DataType;
 class NodeEditor;
-//class NodeSetting;
-//class Port;
-//class PortPair;
 
 class PostIt : public QGraphicsPathItem
 {
@@ -82,6 +74,8 @@ public:
 private:
     //
     QLineEdit* m_nameLabel;
+    //
+    QTextEdit* m_text;
     //
     static qreal s_horizontalMargin;
     //
