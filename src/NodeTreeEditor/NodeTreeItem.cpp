@@ -122,6 +122,7 @@ NodeTreeItem::NodeTreeItem(
 
         QWidget* row = new QWidget();
         QHBoxLayout* rowLayout = new QHBoxLayout(row);
+        rowLayout->addWidget(fileName);
 
         QCheckBox* showCheckbox = new QCheckBox();
         showCheckbox->setChecked(true);
@@ -129,25 +130,24 @@ NodeTreeItem::NodeTreeItem(
         fileVisibility.open(QFile::ReadOnly);
         QString styleSheetVisibility = QString::fromLatin1(fileVisibility.readAll());
         showCheckbox->setStyleSheet(styleSheetVisibility);
-
-        QCheckBox* iterateCheckbox = new QCheckBox();
-        iterateCheckbox->setChecked(false);
-        QFile fileIterator(":/qss/iterator_button.qss");
-        fileIterator.open(QFile::ReadOnly);
-        QString styleSheetIterator = QString::fromLatin1(fileIterator.readAll());
-        iterateCheckbox->setStyleSheet(styleSheetIterator);
-
-        rowLayout->addWidget(fileName);
         rowLayout->addWidget(showCheckbox);
-        rowLayout->addWidget(iterateCheckbox);
+        connect(showCheckbox, SIGNAL(toggled(bool)), pair, SLOT(toggleVisibility(bool)));
+        connect(showCheckbox, SIGNAL(toggled(bool)), fileName, SLOT(setEnabled(bool)));
+
+        if(pair->getInputPort())
+        {
+            QCheckBox* iterateCheckbox = new QCheckBox();
+            iterateCheckbox->setChecked(false);
+            QFile fileIterator(":/qss/iterator_button.qss");
+            fileIterator.open(QFile::ReadOnly);
+            QString styleSheetIterator = QString::fromLatin1(fileIterator.readAll());
+            iterateCheckbox->setStyleSheet(styleSheetIterator);
+            rowLayout->addWidget(iterateCheckbox);
+            connect(iterateCheckbox,SIGNAL(toggled(bool)), pair, SLOT(setAsIterator(bool)));
+        }
+
         portBlockLayout->addRow(pair->getName(), row);
-//        connect(checkbox, SIGNAL(toggled(bool)), ..., SLOT());
 
-//        portBlockLayout->addRow(pair->getName(), fileName);
-
-        connect(showCheckbox,   SIGNAL(toggled(bool)),              pair,           SLOT(toggleVisibility(bool)));
-        connect(showCheckbox,   SIGNAL(toggled(bool)),              fileName,       SLOT(setEnabled(bool)));
-        connect(iterateCheckbox,SIGNAL(toggled(bool)),              pair,           SLOT(setAsIterator(bool)));
         connect(fileName,       SIGNAL(textEdited(QString)),        pair,           SLOT(fileNameChanged(QString)));
         connect(pair,           SIGNAL(isConnected(bool)),          showCheckbox,   SLOT(setDisabled(bool)));
         /// @todo set the SLOT such that it does not only handle the text but also the font

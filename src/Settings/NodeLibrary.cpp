@@ -37,19 +37,19 @@ NodeLibrary::NodeLibrary() :
 {
 }
 
-void NodeLibrary::setDataTypeSchema(
-        QFile& _typeSchema
-        )
-{
-    _typeSchema.open(QIODevice::ReadOnly);
-    QXmlSchema xmlSchema;
-    xmlSchema.load(_typeSchema.readAll());
-    if (!xmlSchema.isValid())
-    {
-        std::cerr << "Error: Nodes cold not be loaded.\n";
-    }
-    m_nodeValidator = new QXmlSchemaValidator(xmlSchema);
-}
+//void NodeLibrary::setDataTypeSchema(
+//        QFile& _typeSchema
+//        )
+//{
+//    _typeSchema.open(QIODevice::ReadOnly);
+//    QXmlSchema xmlSchema;
+//    xmlSchema.load(_typeSchema.readAll());
+//    if (!xmlSchema.isValid())
+//    {
+//        std::cerr << "Error: Nodes cold not be loaded.\n";
+//    }
+//    m_nodeValidator = new QXmlSchemaValidator(xmlSchema);
+//}
 
 void NodeLibrary::setNodeSchema(
         QFile& _nodeSchema
@@ -65,46 +65,199 @@ void NodeLibrary::setNodeSchema(
     m_nodeValidator = new QXmlSchemaValidator(xmlSchema);
 }
 
-void NodeLibrary::addDataTypes(
+//void NodeLibrary::addDataTypes(
+//        QFile& _schema
+//        )
+//{
+//    QDomDocument document;
+//    if(!_schema.open(QIODevice::ReadOnly))
+//    {
+//        std::cerr << "Error: cannot open file.\n";
+//        return;
+//    }
+
+//    if(!document.setContent(&_schema))
+//    {
+//        std::cerr << "Error: cannot read file.\n";
+//        _schema.close();
+//        return;
+//    }
+//    _schema.reset();
+//    QByteArray instanceText = _schema.readAll();
+//    if(!m_nodeValidator->validate(instanceText))
+//    {
+//        std::cerr << "Error: The data type file has an incorrect format.\n";
+//        _schema.close();
+//        return;
+//    }
+
+//    QDomElement docElement = document.documentElement();
+//    QDomNode n = docElement.firstChild();
+//    while(!n.isNull())
+//    {
+//        QDomElement e = n.toElement();
+//        if(e.tagName().compare("typename") == 0)
+//        {
+//            QString title;
+//            title = e.firstChild().nodeValue();
+//            m_dataTypes[title] = new DataType(title);
+//            m_typeNames << title;
+//        }
+//        n = n.nextSibling();
+//    }
+//}
+
+QString NodeLibrary::addNodeSettingJson(
         QFile& _schema
         )
 {
-    QDomDocument document;
-    if(!_schema.open(QIODevice::ReadOnly))
-    {
-        std::cerr << "Error: cannot open file.\n";
-        return;
-    }
-
-    if(!document.setContent(&_schema))
-    {
-        std::cerr << "Error: cannot read file.\n";
-        _schema.close();
-        return;
-    }
-    _schema.reset();
+    _schema.open(QIODevice::ReadOnly);
     QByteArray instanceText = _schema.readAll();
-    if(!m_nodeValidator->validate(instanceText))
+    QJsonObject json = QJsonDocument::fromJson(instanceText).object();
+    if(json["node"].isUndefined())
     {
-        std::cerr << "Error: The data type file has an incorrect format.\n";
-        _schema.close();
-        return;
+//        std::cerr << "This node is invalid. It has an invalid structure.\n";
+        return QString("");
+    }
+    std::cerr << "Reached";
+//    QJsonObject node = json["node"].toObject();
+
+//    if(!json["node"].toArray().isEmpty())
+//    {
+//    }
+
+//    if(json["node"].toString() == 0)
+//    {
+//        std::cerr << json["node"].toString().toStdString() << "\n";
+//    }
+    return QString("");
+
+
+    std::cerr  << "Statement reached\n";
+
+    _schema.reset();
+    QDomDocument document;
+    document.setContent(&_schema);
+    _schema.close();
+
+    QDomElement docElem = document.documentElement();
+    QString rootTag = docElem.tagName();
+    if(std::strcmp(rootTag.toStdString().c_str(), "node") != 0)
+    {
+        std::cerr << "This node is invalid. It has an invalid structure.\n";
+        return QString("");
     }
 
-    QDomElement docElement = document.documentElement();
-    QDomNode n = docElement.firstChild();
-    while(!n.isNull())
+    Argument title;
+    QVector<Argument> nodes;
+    QDomNode node = docElem.firstChild();
+    QStringList category;
+    while(!node.isNull())
     {
-        QDomElement e = n.toElement();
-        if(e.tagName().compare("typename") == 0)
+        if(node.isElement())
         {
-            QString title;
-            title = e.firstChild().nodeValue();
-            m_dataTypes[title] = new DataType(title);
-            m_typeNames << title;
+            if(node.nodeName().compare("category") == 0)
+            {
+                category << node.attributes().namedItem("name").nodeValue();
+                QDomNode subCategory = node.firstChild();
+                while(!subCategory.isNull())
+                {
+                    category << subCategory.attributes().namedItem("name").nodeValue();
+                    subCategory = subCategory.firstChild();
+                }
+            }
+            else if(node.nodeName().compare("title") == 0)
+            {
+                title.setName(node.attributes().namedItem("name").nodeValue());
+                // if there is a code block
+                QDomNode code = node.firstChild();
+                if(!code.isNull() && code.nodeName().compare("code") == 0)
+                {
+                    QDomNode codeBlock = code.firstChild();
+                    while(!codeBlock.isNull())
+                    {
+                        if(codeBlock.nodeName().compare("language") == 0)
+                        {
+                            QString language, argument, comment;
+                            parseCodeBlock(codeBlock, language, argument, comment);
+                            title.addCode(language, argument, comment);
+                        }
+                        codeBlock = codeBlock.nextSibling();
+                    }
+                }
+            }
+            else
+            {
+                Argument codeArgument(node.attributes().namedItem("name").nodeValue());
+                codeArgument.setDefault(node.attributes().namedItem("default").nodeValue());
+                QString editable = node.attributes().namedItem("editable").nodeValue();
+                if(editable.compare("true", Qt::CaseInsensitive) == 0)
+                {
+                    codeArgument.setEditable(true);
+                }
+                else if(editable.compare("false", Qt::CaseInsensitive) == 0)
+                {
+                    codeArgument.setEditable(false);
+                }
+                if(node.nodeName().compare("title") == 0)
+                {
+                    codeArgument.setType(Argument::FieldType::NONE);
+                }
+                else if(node.nodeName().compare("input") == 0)
+                {
+                    codeArgument.setType(Argument::FieldType::INPUT);
+                }
+                else if(node.nodeName().compare("input-output") == 0)
+                {
+                    codeArgument.setType(Argument::FieldType::INOUT);
+                }
+                else if(node.nodeName().compare("output") == 0)
+                {
+                    codeArgument.setType(Argument::FieldType::OUTPUT);
+                }
+                else if(node.nodeName().compare("hidden") == 0)
+                {
+                    codeArgument.setType(Argument::FieldType::HIDDEN);
+                }
+                else if(node.nodeName().compare("none") == 0)
+                {
+                    codeArgument.setType(Argument::FieldType::NONE);
+                }
+                else if(node.nodeName().compare("secret") == 0)
+                {
+                    codeArgument.setType(Argument::FieldType::SECRET);
+                }
+                else ///@todo think of how to handle a block with a different name
+                {
+                    codeArgument.setType(Argument::FieldType::NONE);
+                }
+                // if there is a code block
+                QDomNode code = node.firstChild();
+                if(!code.isNull() && code.nodeName().compare("code") == 0)
+                {
+                    QDomNode codeBlock = code.firstChild();
+                    while(!codeBlock.isNull())
+                    {
+                        if(codeBlock.nodeName().compare("language") == 0)
+                        {
+                            QString language, argument, comment;
+                            parseCodeBlock(codeBlock, language, argument, comment);
+                            codeArgument.addCode(language, argument, comment);
+                        }
+                        codeBlock = codeBlock.nextSibling();
+                    }
+                }
+                nodes.append(codeArgument);
+            }
+            node = node.nextSibling();
         }
-        n = n.nextSibling();
     }
+//            std::cout << title.toStdString() << std::endl;
+    NodeSetting* newNode = new NodeSetting(title, nodes);
+    newNode->setCategory(category);
+    m_nodeSettings[title.getName()] = newNode;
+    m_nodeNames << title.getName();
+    return title.getName();
 }
 
 QString NodeLibrary::addNodeSetting(
@@ -113,140 +266,135 @@ QString NodeLibrary::addNodeSetting(
 {
     _schema.open(QIODevice::ReadOnly);
     QByteArray instanceText = _schema.readAll();
-    if(m_nodeValidator->validate(instanceText))
-    {
-        _schema.reset();
-        QDomDocument document;
-        document.setContent(&_schema);
-        _schema.close();
-
-        QDomElement docElem = document.documentElement();
-        QString rootTag = docElem.tagName();
-        if(std::strcmp(rootTag.toStdString().c_str(), "node") == 0)
-        {
-//            std::cerr << rootTag.toStdString() << "\n"; //Should print 'node'
-            Argument title;
-            QVector<Argument> nodes;
-            QDomNode node = docElem.firstChild();
-            QStringList category;
-            while(!node.isNull())
-            {
-                if(node.isElement())
-                {
-                    if(node.nodeName().compare("category") == 0)
-                    {
-                        category << node.attributes().namedItem("name").nodeValue();
-                        QDomNode subCategory = node.firstChild();
-                        while(!subCategory.isNull())
-                        {
-                            category << subCategory.attributes().namedItem("name").nodeValue();
-                            subCategory = subCategory.firstChild();
-                        }
-                    }
-                    else if(node.nodeName().compare("title") == 0)
-                    {
-                        title.setName(node.attributes().namedItem("name").nodeValue());
-                        // if there is a code block
-                        QDomNode code = node.firstChild();
-                        if(!code.isNull() && code.nodeName().compare("code") == 0)
-                        {
-                            QDomNode codeBlock = code.firstChild();
-                            while(!codeBlock.isNull())
-                            {
-                                if(codeBlock.nodeName().compare("language") == 0)
-                                {
-                                    QString language, argument, comment;
-                                    parseCodeBlock(codeBlock, language, argument, comment);
-                                    title.addCode(language, argument, comment);
-                                }
-                                codeBlock = codeBlock.nextSibling();
-                            }
-                        }
-                    }
-                    else
-                    {
-                        Argument codeArgument(node.attributes().namedItem("name").nodeValue());
-                        codeArgument.setDefault(node.attributes().namedItem("default").nodeValue());
-                        QString editable = node.attributes().namedItem("editable").nodeValue();
-                        if(editable.compare("true", Qt::CaseInsensitive) == 0)
-                        {
-                            codeArgument.setEditable(true);
-                        }
-                        else if(editable.compare("false", Qt::CaseInsensitive) == 0)
-                        {
-                            codeArgument.setEditable(false);
-                        }
-                        if(node.nodeName().compare("title") == 0)
-                        {
-                            codeArgument.setType(Argument::FieldType::NONE);
-                        }
-                        else if(node.nodeName().compare("input") == 0)
-                        {
-                            codeArgument.setType(Argument::FieldType::INPUT);
-                        }
-                        else if(node.nodeName().compare("input-output") == 0)
-                        {
-                            codeArgument.setType(Argument::FieldType::INOUT);
-                        }
-                        else if(node.nodeName().compare("output") == 0)
-                        {
-                            codeArgument.setType(Argument::FieldType::OUTPUT);
-                        }
-                        else if(node.nodeName().compare("hidden") == 0)
-                        {
-                            codeArgument.setType(Argument::FieldType::HIDDEN);
-                        }
-                        else if(node.nodeName().compare("none") == 0)
-                        {
-                            codeArgument.setType(Argument::FieldType::NONE);
-                        }
-                        else if(node.nodeName().compare("secret") == 0)
-                        {
-                            codeArgument.setType(Argument::FieldType::SECRET);
-                        }
-                        else ///@todo think of how to handle a block with a different name
-                        {
-                            codeArgument.setType(Argument::FieldType::NONE);
-                        }
-                        // if there is a code block
-                        QDomNode code = node.firstChild();
-                        if(!code.isNull() && code.nodeName().compare("code") == 0)
-                        {
-                            QDomNode codeBlock = code.firstChild();
-                            while(!codeBlock.isNull())
-                            {
-                                if(codeBlock.nodeName().compare("language") == 0)
-                                {
-                                    QString language, argument, comment;
-                                    parseCodeBlock(codeBlock, language, argument, comment);
-                                    codeArgument.addCode(language, argument, comment);
-                                }
-                                codeBlock = codeBlock.nextSibling();
-                            }
-                        }
-                        nodes.append(codeArgument);
-                    }
-                    node = node.nextSibling();
-                }
-            }
-//            std::cout << title.toStdString() << std::endl;
-            NodeSetting* newNode = new NodeSetting(title, nodes);
-            newNode->setCategory(category);
-            m_nodeSettings[title.getName()] = newNode;
-            m_nodeNames << title.getName();
-            return title.getName();
-        }
-        else
-        {
-            std::cerr << "This node is invalid. The root is not a node.\n";
-            return QString("");
-        }
-    }
-    else
+    if(!m_nodeValidator->validate(instanceText))
     {
         std::cerr << "This node is invalid. It has an invalid structure.\n";
         return QString("");
     }
+
+    _schema.reset();
+    QDomDocument document;
+    document.setContent(&_schema);
+    _schema.close();
+
+    QDomElement docElem = document.documentElement();
+    QString rootTag = docElem.tagName();
+    if(std::strcmp(rootTag.toStdString().c_str(), "node") != 0)
+    {
+        std::cerr << "This node is invalid. It has an invalid structure.\n";
+        return QString("");
+    }
+
+    Argument title;
+    QVector<Argument> nodes;
+    QDomNode node = docElem.firstChild();
+    QStringList category;
+    while(!node.isNull())
+    {
+        if(node.isElement())
+        {
+            if(node.nodeName().compare("category") == 0)
+            {
+                category << node.attributes().namedItem("name").nodeValue();
+                QDomNode subCategory = node.firstChild();
+                while(!subCategory.isNull())
+                {
+                    category << subCategory.attributes().namedItem("name").nodeValue();
+                    subCategory = subCategory.firstChild();
+                }
+            }
+            else if(node.nodeName().compare("title") == 0)
+            {
+                title.setName(node.attributes().namedItem("name").nodeValue());
+                // if there is a code block
+                QDomNode code = node.firstChild();
+                if(!code.isNull() && code.nodeName().compare("code") == 0)
+                {
+                    QDomNode codeBlock = code.firstChild();
+                    while(!codeBlock.isNull())
+                    {
+                        if(codeBlock.nodeName().compare("language") == 0)
+                        {
+                            QString language, argument, comment;
+                            parseCodeBlock(codeBlock, language, argument, comment);
+                            title.addCode(language, argument, comment);
+                        }
+                        codeBlock = codeBlock.nextSibling();
+                    }
+                }
+            }
+            else
+            {
+                Argument codeArgument(node.attributes().namedItem("name").nodeValue());
+                codeArgument.setDefault(node.attributes().namedItem("default").nodeValue());
+                QString editable = node.attributes().namedItem("editable").nodeValue();
+                if(editable.compare("true", Qt::CaseInsensitive) == 0)
+                {
+                    codeArgument.setEditable(true);
+                }
+                else if(editable.compare("false", Qt::CaseInsensitive) == 0)
+                {
+                    codeArgument.setEditable(false);
+                }
+                if(node.nodeName().compare("title") == 0)
+                {
+                    codeArgument.setType(Argument::FieldType::NONE);
+                }
+                else if(node.nodeName().compare("input") == 0)
+                {
+                    codeArgument.setType(Argument::FieldType::INPUT);
+                }
+                else if(node.nodeName().compare("input-output") == 0)
+                {
+                    codeArgument.setType(Argument::FieldType::INOUT);
+                }
+                else if(node.nodeName().compare("output") == 0)
+                {
+                    codeArgument.setType(Argument::FieldType::OUTPUT);
+                }
+                else if(node.nodeName().compare("hidden") == 0)
+                {
+                    codeArgument.setType(Argument::FieldType::HIDDEN);
+                }
+                else if(node.nodeName().compare("none") == 0)
+                {
+                    codeArgument.setType(Argument::FieldType::NONE);
+                }
+                else if(node.nodeName().compare("secret") == 0)
+                {
+                    codeArgument.setType(Argument::FieldType::SECRET);
+                }
+                else ///@todo think of how to handle a block with a different name
+                {
+                    codeArgument.setType(Argument::FieldType::NONE);
+                }
+                // if there is a code block
+                QDomNode code = node.firstChild();
+                if(!code.isNull() && code.nodeName().compare("code") == 0)
+                {
+                    QDomNode codeBlock = code.firstChild();
+                    while(!codeBlock.isNull())
+                    {
+                        if(codeBlock.nodeName().compare("language") == 0)
+                        {
+                            QString language, argument, comment;
+                            parseCodeBlock(codeBlock, language, argument, comment);
+                            codeArgument.addCode(language, argument, comment);
+                        }
+                        codeBlock = codeBlock.nextSibling();
+                    }
+                }
+                nodes.append(codeArgument);
+            }
+            node = node.nextSibling();
+        }
+    }
+//            std::cout << title.toStdString() << std::endl;
+    NodeSetting* newNode = new NodeSetting(title, nodes);
+    newNode->setCategory(category);
+    m_nodeSettings[title.getName()] = newNode;
+    m_nodeNames << title.getName();
+    return title.getName();
 }
 
 void NodeLibrary::parseCodeBlock(

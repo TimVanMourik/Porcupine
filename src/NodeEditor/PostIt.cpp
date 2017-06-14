@@ -40,8 +40,8 @@ PostIt::PostIt(
     m_nameLabel(new QLineEdit()),
     m_text(new QTextEdit())
 {
-    int width  = 120;
-    int height = 120;
+    int width  = 160;
+    int height = 160;
     QPainterPath path;
     path.addRect(-width / 2, 0, width, height);
     setPath(path);
@@ -62,7 +62,7 @@ PostIt::PostIt(
     m_nameLabel->setFont(font);
     m_nameLabel->setPalette(palette);
     m_nameLabel->setStyleSheet("* {background-color: rgba(0, 0, 0, 0);}");
-    m_nameLabel->setText("I am a post-it!");
+    m_nameLabel->setText("I am a porcupost-it!");
     m_nameLabel->setFrame(false);
     m_nameLabel->setAttribute(Qt::WA_TranslucentBackground);
     m_nameLabel->move(-m_nameLabel->fontMetrics().width(m_nameLabel->text()) / 2, 0);

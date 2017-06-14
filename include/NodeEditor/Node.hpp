@@ -32,6 +32,7 @@
 //----------------------------------------------------------------------------------------------------------------------
 
 #include <QGraphicsPathItem>
+#include <QJsonObject>
 
 #include "NodeAntenna.hpp"
 
@@ -146,6 +147,8 @@ private:
             );
     //
     const NodeSetting* m_setting;
+    //
+    QJsonObject m_json;
     //
     QString m_name;
     // As Node is not a QObject derivative, but we would still like to use signals and slots, transmissions go via an antenna

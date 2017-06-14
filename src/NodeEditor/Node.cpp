@@ -48,6 +48,7 @@ Node::Node(
         ) :
     QGraphicsPathItem(0),
     m_setting(_setting),
+    m_json(QJsonObject()),
     m_name(QString()),
     m_nameLabel(new QLineEdit()),
     m_ports(QVector<PortPair*>(0))

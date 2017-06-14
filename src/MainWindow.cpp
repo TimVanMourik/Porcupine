@@ -177,6 +177,7 @@ void MainWindow::loadDefaultNodes(
             if(xmlNodefile.exists())
             {
                 QString newNode = nodeLibrary.addNodeSetting(xmlNodefile);
+//                QString newNode = nodeLibrary.addNodeSettingJson(xmlNodefile);
                 if(!newNode.isEmpty())
                 {
                     updateNodeMenu(newNode);
@@ -200,6 +201,7 @@ void MainWindow::loadNewNodes(
     {
         QFile file(name);
         QString newNode = nodeLibrary.addNodeSetting(file);
+//        QString newNode = nodeLibrary.addNodeSettingJson(file);
         updateNodeMenu(newNode);
     }
 }

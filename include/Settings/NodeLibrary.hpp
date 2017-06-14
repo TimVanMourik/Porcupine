@@ -48,11 +48,6 @@ class NodeLibrary : public Singleton<NodeLibrary>
 public:
     /// @brief The scema is an .xsd file in which the schema for a node xml-file is explained
     /// @param _schema is not const because .open() is not a const function (even in read-only mode)
-    void setDataTypeSchema(
-            QFile& _schema
-            );
-    /// @brief The scema is an .xsd file in which the schema for a node xml-file is explained
-    /// @param _schema is not const because .open() is not a const function (even in read-only mode)
     void setNodeSchema(
             QFile& _schema
             );
@@ -63,13 +58,13 @@ public:
             );
     /// @brief
     /// @param _schema is not const because .open() is not a const function (even in read-only mode)
-    void addDataTypes(
-            QFile& _type
+    QString addNodeSettingJson(
+            QFile& _node
             );
     /// @brief
     const NodeSetting* getNodeSetting(
             const QString& _nodeName
-            ) /*const*/;
+            );
     /// @brief
     const QStringList& getNodeNames(
         ) const ;
