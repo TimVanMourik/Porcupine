@@ -44,8 +44,8 @@ Preferences::Preferences() :
     postitGradient.setColorAt(0, QColor(220, 220, 0));
     m_postitBrushUnselected     = QBrush(postitGradient);
     m_postitBrushSelected       = QBrush(postitGradient);
-    m_postitPenUnselected       = QPen(QColor(60, 60, 0));
-    m_postitPenSelected         = QPen(QColor(140, 140, 20));
+    m_postitPenUnselected       = QPen(QColor(140, 140, 20));
+    m_postitPenSelected         = QPen(QColor(60, 60, 0));
 
     m_linkBrushUnselected       = QBrush(Qt::NoBrush);
     m_linkBrushSelected         = QBrush(Qt::NoBrush);
