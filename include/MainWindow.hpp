@@ -74,6 +74,10 @@ private slots:
     //
     void saveFileToXml(
             );
+    //
+    void saveFileToJson(
+            );
+
     void openFile(
             );
     void newFile(

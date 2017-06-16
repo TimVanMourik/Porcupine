@@ -59,6 +59,10 @@ public:
             NodeTreeItem* _item
             );
     //
+    void saveToJson(
+            QJsonObject& _json
+            ) const;
+    //
     void saveToXml(
             QDomElement& _xmlElement
             ) const;

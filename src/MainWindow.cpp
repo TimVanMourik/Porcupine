@@ -228,6 +228,31 @@ void MainWindow::nodeSlot(
     addNode(setting);
 }
 
+void MainWindow::saveFileToJson(
+        )
+{
+    QString fileName = QFileDialog::getSaveFileName();
+    if (fileName.isEmpty())
+    {
+        return;
+    }
+
+    QJsonObject jsonFile();
+
+    //save all nodes
+//    m_nodeTreeEditors[m_nodeEditorWidget->currentIndex()]->saveToJson(jsonFile);
+    //save all links
+//    m_nodeEditors[m_nodeEditorWidget->currentIndex()]->saveLinksToXml(root);
+
+//    QFile file(fileName);
+//    if (file.open(QIODevice::WriteOnly))
+//    {
+//        QTextStream stream(&file);
+//        stream << jsonFile.toString();
+//    }
+//    file.close();
+}
+
 void MainWindow::saveFileToXml()
 {
     QString fileName = QFileDialog::getSaveFileName();

@@ -78,7 +78,7 @@ QStringList NodeLibrary::addNodeSetting(
             if(input && output) {port.setType(Argument::FieldType::INOUT);}
             else if(input)      {port.setType(Argument::FieldType::INPUT);}
             else if(output)     {port.setType(Argument::FieldType::OUTPUT);}
-            port.setDefault(portJson["default"].toString());
+            port.setDefault(portJson["value"].toString());
             port.setVisible(portJson["visible"].toBool());
 
             foreach (QJsonValue code, portJson["code"].toArray())

@@ -28,6 +28,7 @@
 #include <QDrag>
 #include <QDropEvent>
 #include <QFormLayout>
+#include <QJsonDocument>
 #include <QLabel>
 #include <QLineEdit>
 #include <QMimeData>
@@ -200,6 +201,29 @@ QVector<const Node*> NodeTreeItem::getDescendants(
         )
 {
     return m_node->getDescendants();
+}
+
+void NodeTreeItem::saveToJson(
+        QJsonObject& _json
+        ) const
+{
+    QJsonObject nodeObject;
+    QDomDocument xml;
+    QDomElement node = xml.createElement("node");
+    node.setAttribute("name", m_node->getName());
+    node.setAttribute("type", m_node->getType());
+    QDomElement position = xml.createElement("position");
+    position.setAttribute("x", QString::number(m_node->pos().x()));
+    position.setAttribute("y", QString::number(m_node->pos().y()));
+    node.appendChild(position);
+
+    QDomElement ports = xml.createElement("pairs");
+    foreach(const PortPair* pair, m_node->getPorts())
+    {
+        pair->saveToXml(ports);
+    }
+    node.appendChild(ports);
+//    _xmlElement.appendChild(node);
 }
 
 void NodeTreeItem::saveToXml(

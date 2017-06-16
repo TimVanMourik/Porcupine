@@ -186,6 +186,17 @@ void NodeTreeEditor::nodeMoved(
     moveToNewLocation();
 }
 
+void NodeTreeEditor::saveToJson(
+        QJsonObject& _json
+        ) const
+{
+    foreach(const NodeTreeItem* node, m_nodeList)
+    {
+        node->saveToJson(_json);
+    }
+}
+
+
 void NodeTreeEditor::saveToXml(
         QDomElement& _xmlElement
         ) const

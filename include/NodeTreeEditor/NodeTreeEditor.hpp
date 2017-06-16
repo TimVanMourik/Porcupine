@@ -55,6 +55,10 @@ public:
             const Node* _node
             );
     //
+    void saveToJson(
+            QJsonObject& _json
+            ) const;
+    //
     void saveToXml(
             QDomElement& _xmlFile
             ) const;
