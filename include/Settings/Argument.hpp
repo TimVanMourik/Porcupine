@@ -49,7 +49,7 @@ public:
             QString _defaultValue = QString("")
             );
     //
-    bool isEditable(
+    bool isVisible(
             ) const;
     //
     void setName(
@@ -60,7 +60,7 @@ public:
             const QString& _name
             );
     //
-    void setEditable(
+    void setVisible(
             bool _editable
             );
     //
@@ -105,7 +105,7 @@ private:
     //
     QString m_defaultValue;
     //
-    bool m_isEditable;
+    bool m_isVisible;
     //
     struct Code
     {

@@ -1,0 +1,2026 @@
+{
+  "nodes": [
+    {
+      "category": [
+        "NiPype",
+        "ANTS"
+      ],
+      "title": {
+        "name": "ANTS.ANTS",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **ANTS**",
+            "argument": "ants.ANTS()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "fixed_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fixed_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "moving_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "moving_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "metric",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "metric"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "output_transform_prefix",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "output_transform_prefix"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "transformation_model",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transformation_model"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "affine_transform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transformation_model"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "warp_transform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transformation_model"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "inverse_warp_transform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transformation_model"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "metaheader",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transformation_model"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "metaheader_raw",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transformation_model"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "ANTS"
+      ],
+      "title": {
+        "name": "ANTS.AffineInitializer",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **antsAffineInitializer**",
+            "argument": "ants.AffineInitializer()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "fixed_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fixed_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "moving_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "moving_image"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "moving_image"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "ANTS"
+      ],
+      "title": {
+        "name": "ANTS.AntsJointFusion",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **antsJointFusion**",
+            "argument": "ants.AntsJointFusion()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "target_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "target_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "atlas_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "atlas_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "atlas_segmentation_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "atlas_segmentation_image"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_label_fusion",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "atlas_segmentation_image"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_intensity_fusion_name_format",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "atlas_segmentation_image"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_label_post_prob_name_format",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "atlas_segmentation_image"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_atlas_voting_weight_name_format",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "atlas_segmentation_image"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "ANTS"
+      ],
+      "title": {
+        "name": "ANTS.ApplyTransforms",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **antsApplyTransforms**",
+            "argument": "ants.ApplyTransforms()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "input_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "input_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "reference_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reference_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "transforms",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transforms"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "output_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transforms"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "ANTS"
+      ],
+      "title": {
+        "name": "ANTS.ApplyTransformsToPoints",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **antsApplyTransformsToPoints**",
+            "argument": "ants.ApplyTransformsToPoints()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "input_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "input_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "transforms",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transforms"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "output_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transforms"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "ANTS"
+      ],
+      "title": {
+        "name": "ANTS.Atropos",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **Atropos**",
+            "argument": "ants.Atropos()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "intensity_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "intensity_images"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "mask_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "initialization",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "initialization"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "number_of_tissue_classes",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "number_of_tissue_classes"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "classified_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "number_of_tissue_classes"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "posteriors",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "number_of_tissue_classes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "ANTS"
+      ],
+      "title": {
+        "name": "ANTS.AverageAffineTransform",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **AverageAffineTransform**",
+            "argument": "ants.AverageAffineTransform()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dimension"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "output_affine_transform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "output_affine_transform"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "transforms",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transforms"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "affine_transform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transforms"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "ANTS"
+      ],
+      "title": {
+        "name": "ANTS.AverageImages",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **AverageImages**",
+            "argument": "ants.AverageImages()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dimension"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "normalize",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "normalize"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "images"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "output_average_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "images"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "ANTS"
+      ],
+      "title": {
+        "name": "ANTS.BrainExtraction",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **antsBrainExtraction.sh**",
+            "argument": "ants.BrainExtraction()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "anatomical_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "anatomical_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "brain_template",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "brain_template"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "brain_probability_mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "brain_probability_mask"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "BrainExtractionMask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "brain_probability_mask"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "BrainExtractionBrain",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "brain_probability_mask"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "BrainExtractionCSF",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "brain_probability_mask"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "BrainExtractionGM",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "brain_probability_mask"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "BrainExtractionInitialAffine",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "brain_probability_mask"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "BrainExtractionInitialAffineFixed",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "brain_probability_mask"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "BrainExtractionInitialAffineMoving",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "brain_probability_mask"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "BrainExtractionLaplacian",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "brain_probability_mask"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "BrainExtractionPrior0GenericAffine",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "brain_probability_mask"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "BrainExtractionPrior1InverseWarp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "brain_probability_mask"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "BrainExtractionPrior1Warp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "brain_probability_mask"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "BrainExtractionPriorWarped",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "brain_probability_mask"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "BrainExtractionSegmentation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "brain_probability_mask"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "BrainExtractionTemplateLaplacian",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "brain_probability_mask"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "BrainExtractionTmp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "brain_probability_mask"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "BrainExtractionWM",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "brain_probability_mask"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "N4Corrected0",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "brain_probability_mask"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "N4Truncated0",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "brain_probability_mask"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "ANTS"
+      ],
+      "title": {
+        "name": "ANTS.ConvertScalarImageToRGB",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **ConvertScalarImageToRGB**",
+            "argument": "ants.ConvertScalarImageToRGB()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dimension"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "input_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "input_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "colormap",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "colormap"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "minimum_input",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "minimum_input"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "maximum_input",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "maximum_input"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "output_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "maximum_input"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "ANTS"
+      ],
+      "title": {
+        "name": "ANTS.CorticalThickness",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **antsCorticalThickness.sh**",
+            "argument": "ants.CorticalThickness()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "anatomical_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "anatomical_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "brain_template",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "brain_template"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "brain_probability_mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "brain_probability_mask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "segmentation_priors",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "segmentation_priors"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "t1_registration_template",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_registration_template"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "BrainExtractionMask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_registration_template"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "BrainSegmentation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_registration_template"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "BrainSegmentationN4",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_registration_template"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "BrainSegmentationPosteriors",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_registration_template"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "CorticalThickness",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_registration_template"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "TemplateToSubject1GenericAffine",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_registration_template"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "TemplateToSubject0Warp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_registration_template"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "SubjectToTemplate1Warp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_registration_template"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "SubjectToTemplate0GenericAffine",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_registration_template"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "SubjectToTemplateLogJacobian",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_registration_template"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "CorticalThicknessNormedToTemplate",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_registration_template"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "BrainVolumes",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_registration_template"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "ANTS"
+      ],
+      "title": {
+        "name": "ANTS.CreateJacobianDeterminantImage",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **CreateJacobianDeterminantImage**",
+            "argument": "ants.CreateJacobianDeterminantImage()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "imageDimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "imageDimension"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "deformationField",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "deformationField"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "outputImage",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputImage"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "jacobian_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputImage"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "ANTS"
+      ],
+      "title": {
+        "name": "ANTS.CreateTiledMosaic",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **CreateTiledMosaic**",
+            "argument": "ants.CreateTiledMosaic()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "input_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "input_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "rgb_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "rgb_image"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "output_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "rgb_image"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "ANTS"
+      ],
+      "title": {
+        "name": "ANTS.DenoiseImage",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **DenoiseImage**",
+            "argument": "ants.DenoiseImage()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "input_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "input_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "save_noise",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "save_noise"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "output_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "save_noise"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "noise_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "save_noise"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "ANTS"
+      ],
+      "title": {
+        "name": "ANTS.JointFusion",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **jointfusion**",
+            "argument": "ants.JointFusion()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dimension"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "modalities",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "modalities"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "warped_intensity_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "warped_intensity_images"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "target_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "target_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "warped_label_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "warped_label_images"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "output_label_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "output_label_image"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "output_label_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "output_label_image"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "ANTS"
+      ],
+      "title": {
+        "name": "ANTS.LaplacianThickness",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **LaplacianThickness**",
+            "argument": "ants.LaplacianThickness()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "input_wm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "input_wm"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "input_gm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "input_gm"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "output_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "input_gm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "ANTS"
+      ],
+      "title": {
+        "name": "ANTS.MultiplyImages",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **MultiplyImages**",
+            "argument": "ants.MultiplyImages()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dimension"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "first_input",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "first_input"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "second_input",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "second_input"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "output_product_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "output_product_image"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "output_product_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "output_product_image"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "ANTS"
+      ],
+      "title": {
+        "name": "ANTS.N4BiasFieldCorrection",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **N4BiasFieldCorrection**",
+            "argument": "ants.N4BiasFieldCorrection()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "input_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "input_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "save_bias",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "save_bias"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "output_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "save_bias"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "bias_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "save_bias"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "ANTS"
+      ],
+      "title": {
+        "name": "ANTS.Registration",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **antsRegistration**",
+            "argument": "ants.Registration()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "fixed_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fixed_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "moving_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "moving_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "metric",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "metric"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "metric_weight",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "metric_weight"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "transforms",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transforms"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "smoothing_sigmas",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "smoothing_sigmas"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "shrink_factors",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "shrink_factors"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "forward_transforms",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "shrink_factors"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "reverse_transforms",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "shrink_factors"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "forward_invert_flags",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "shrink_factors"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "reverse_invert_flags",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "shrink_factors"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "composite_transform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "shrink_factors"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "inverse_composite_transform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "shrink_factors"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "warped_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "shrink_factors"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "inverse_warped_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "shrink_factors"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "save_state",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "shrink_factors"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "ANTS"
+      ],
+      "title": {
+        "name": "ANTS.WarpImageMultiTransform",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **WarpImageMultiTransform**",
+            "argument": "ants.WarpImageMultiTransform()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "input_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "input_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "transformation_series",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transformation_series"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "output_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transformation_series"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "ANTS"
+      ],
+      "title": {
+        "name": "ANTS.WarpTimeSeriesImageMultiTransform",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **WarpTimeSeriesImageMultiTransform**",
+            "argument": "ants.WarpTimeSeriesImageMultiTransform()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "input_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "input_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "transformation_series",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transformation_series"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "output_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transformation_series"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6982 @@
+{
+  "nodes": [
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.AddXFormToHeader",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_add_xform_to_header**",
+            "argument": "freesurfer.AddXFormToHeader()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "transform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transform"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transform"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.Aparc2Aseg",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_aparc2aseg**",
+            "argument": "freesurfer.Aparc2Aseg()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "subject_id",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "lh_white",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "lh_white"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "rh_white",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "rh_white"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "lh_pial",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "lh_pial"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "rh_pial",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "rh_pial"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "lh_ribbon",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "lh_ribbon"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "rh_ribbon",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "rh_ribbon"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "ribbon",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ribbon"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "lh_annotation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "lh_annotation"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "rh_annotation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "rh_annotation"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "rh_annotation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.Apas2Aseg",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **apas2aseg**",
+            "argument": "freesurfer.Apas2Aseg()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.ApplyMask",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_mask**",
+            "argument": "freesurfer.ApplyMask()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "mask_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.ApplyVolTransform",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_vol2vol**",
+            "argument": "freesurfer.ApplyVolTransform()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "source_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "source_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "target_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "target_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "tal",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "tal"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "fs_target",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fs_target"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "reg_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reg_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "fsl_reg_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fsl_reg_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "xfm_reg_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "xfm_reg_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "reg_header",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reg_header"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "subject",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "transformed_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.BBRegister",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **bbregister**",
+            "argument": "freesurfer.BBRegister()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "subject_id",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "source_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "source_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "init",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "init"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "init_reg_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "init_reg_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "contrast_type",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "contrast_type"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_reg_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "contrast_type"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_fsl_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "contrast_type"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_lta_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "contrast_type"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "min_cost_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "contrast_type"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "registered_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "contrast_type"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.Binarize",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_binarize**",
+            "argument": "freesurfer.Binarize()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "binary_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "count_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.CALabel",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_ca_label**",
+            "argument": "freesurfer.CALabel()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "transform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transform"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "template",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "template"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "template"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.CANormalize",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_ca_normalize**",
+            "argument": "freesurfer.CANormalize()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "atlas",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "atlas"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "transform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transform"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transform"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "control_points",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transform"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.CARegister",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_ca_register**",
+            "argument": "freesurfer.CARegister()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.CheckTalairachAlignment",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **talairach_afd**",
+            "argument": "freesurfer.CheckTalairachAlignment()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "subject",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.Concatenate",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_concat**",
+            "argument": "freesurfer.Concatenate()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "concatenated_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.ConcatenateLTA",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_concatenate_lta**",
+            "argument": "freesurfer.ConcatenateLTA()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_lta1",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_lta1"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_lta2",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_lta2"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_lta2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.Contrast",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **pctsurfcon**",
+            "argument": "freesurfer.Contrast()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "subject_id",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "hemisphere",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "hemisphere"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "thickness",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "thickness"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "white",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "white"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "annotation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "annotation"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "cortex",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "cortex"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "orig",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "orig"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "rawavg",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "rawavg"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_contrast",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "rawavg"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_stats",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "rawavg"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_log",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "rawavg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.Curvature",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mris_curvature**",
+            "argument": "freesurfer.Curvature()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_mean",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_gauss",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.CurvatureStats",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mris_curvature_stats**",
+            "argument": "freesurfer.CurvatureStats()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "curvfile1",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "curvfile1"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "curvfile2",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "curvfile2"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "hemisphere",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "hemisphere"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "subject_id",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.DICOMConvert",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_convert**",
+            "argument": "freesurfer.DICOMConvert()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "dicom_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "base_output_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "base_output_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.EMRegister",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_em_register**",
+            "argument": "freesurfer.EMRegister()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "template",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "template"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "template"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.EditWMwithAseg",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_edit_wm_with_aseg**",
+            "argument": "freesurfer.EditWMwithAseg()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "brain_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "brain_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "seg_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "seg_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.EulerNumber",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mris_euler_number**",
+            "argument": "freesurfer.EulerNumber()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.ExtractMainComponent",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mris_extract_main_component**",
+            "argument": "freesurfer.ExtractMainComponent()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.FitMSParams",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_ms_fitparms**",
+            "argument": "freesurfer.FitMSParams()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "t1_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "pd_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "t2star_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.FixTopology",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mris_fix_topology**",
+            "argument": "freesurfer.FixTopology()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_orig",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_orig"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_inflated",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_inflated"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_brain",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_brain"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_wm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_wm"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "hemisphere",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "hemisphere"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "subject_id",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "copy_inputs",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "copy_inputs"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "copy_inputs"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.FuseSegmentations",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_fuse_segmentations**",
+            "argument": "freesurfer.FuseSegmentations()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "timepoints",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "timepoints"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_segmentations",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_segmentations"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_segmentations_noCC",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_segmentations_noCC"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_norms",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_norms"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_norms"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.GLMFit",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_glmfit**",
+            "argument": "freesurfer.GLMFit()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "glm_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "beta_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "error_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "error_var_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "error_stddev_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "estimate_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mask_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "fwhm_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "dof_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "gamma_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "gamma_var_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "sig_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "ftest_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "spatial_eigenvectors",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "frame_eigenvectors",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "singular_values",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "svd_stats_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.Jacobian",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mris_jacobian**",
+            "argument": "freesurfer.Jacobian()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_origsurf",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_origsurf"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_mappedsurf",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_mappedsurf"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_mappedsurf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.Label2Annot",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mris_label2annot**",
+            "argument": "freesurfer.Label2Annot()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "hemisphere",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "hemisphere"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "subject_id",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_labels",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_labels"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "out_annot",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_annot"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "orig",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "orig"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "orig"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.Label2Label",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_label2label**",
+            "argument": "freesurfer.Label2Label()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "hemisphere",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "hemisphere"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "subject_id",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "sphere_reg",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "sphere_reg"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "white",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "white"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "source_sphere_reg",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "source_sphere_reg"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "source_white",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "source_white"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "source_label",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "source_label"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "source_subject",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "source_subject"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "source_subject"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.Label2Vol",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_label2vol**",
+            "argument": "freesurfer.Label2Vol()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "label_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "label_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "annot_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "annot_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "seg_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "seg_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "aparc_aseg",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "aparc_aseg"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "template_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "template_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "vol_label_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "template_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.MNIBiasCorrection",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_nu_correct.mni**",
+            "argument": "freesurfer.MNIBiasCorrection()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.MPRtoMNI305",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mpr2mni305**",
+            "argument": "freesurfer.MPRtoMNI305()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "reference_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reference_dir"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "target",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "target"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "target"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "log_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "target"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.MRIConvert",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_convert**",
+            "argument": "freesurfer.MRIConvert()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.MRIFill",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_fill**",
+            "argument": "freesurfer.MRIFill()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "log_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.MRIMarchingCubes",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_mc**",
+            "argument": "freesurfer.MRIMarchingCubes()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "label_value",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "label_value"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "surface",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "label_value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.MRIPretess",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_pretess**",
+            "argument": "freesurfer.MRIPretess()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_filled",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_filled"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "label",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "label"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_norm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_norm"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_norm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.MRISPreproc",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mris_preproc**",
+            "argument": "freesurfer.MRISPreproc()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "target",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "target"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "hemi",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "hemi"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "hemi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.MRISPreprocReconAll",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mris_preproc**",
+            "argument": "freesurfer.MRISPreprocReconAll()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "target",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "target"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "hemi",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "hemi"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "hemi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.MRITessellate",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_tessellate**",
+            "argument": "freesurfer.MRITessellate()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "label_value",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "label_value"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "surface",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "label_value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.MRIsCALabel",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mris_ca_label**",
+            "argument": "freesurfer.MRIsCALabel()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "subject_id",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "hemisphere",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "hemisphere"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "canonsurf",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "canonsurf"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "classifier",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "classifier"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "smoothwm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "smoothwm"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "curv",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "curv"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "sulc",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "sulc"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "sulc"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.MRIsCalc",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mris_calc**",
+            "argument": "freesurfer.MRIsCalc()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file1",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file1"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "action",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "action"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.MRIsCombine",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mris_convert**",
+            "argument": "freesurfer.MRIsCombine()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.MRIsConvert",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mris_convert**",
+            "argument": "freesurfer.MRIsConvert()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "out_datatype",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_datatype"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "converted",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_datatype"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.MRIsExpand",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mris_expand**",
+            "argument": "freesurfer.MRIsExpand()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "distance",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "distance"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "distance"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.MRIsInflate",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mris_inflate**",
+            "argument": "freesurfer.MRIsInflate()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_sulc",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.MS_LDA",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_ms_LDA**",
+            "argument": "freesurfer.MS_LDA()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "lda_labels",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "lda_labels"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "weight_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "weight_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "vol_synth_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "vol_synth_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "images"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "weight_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "images"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "vol_synth_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "images"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.MakeAverageSubject",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **make_average_subject**",
+            "argument": "freesurfer.MakeAverageSubject()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "subjects_ids",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_ids"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "average_subject_name",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_ids"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.MakeSurfaces",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mris_make_surfaces**",
+            "argument": "freesurfer.MakeSurfaces()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "hemisphere",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "hemisphere"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "subject_id",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_orig",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_orig"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_wm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_wm"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_filled",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_filled"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_white",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_filled"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_curv",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_filled"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_area",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_filled"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_cortex",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_filled"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_pial",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_filled"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_thickness",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_filled"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.Normalize",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_normalize**",
+            "argument": "freesurfer.Normalize()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.OneSampleTTest",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_glmfit**",
+            "argument": "freesurfer.OneSampleTTest()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "glm_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "beta_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "error_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "error_var_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "error_stddev_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "estimate_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mask_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "fwhm_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "dof_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "gamma_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "gamma_var_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "sig_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "ftest_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "spatial_eigenvectors",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "frame_eigenvectors",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "singular_values",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "svd_stats_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.Paint",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mrisp_paint**",
+            "argument": "freesurfer.Paint()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_surf",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_surf"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "template",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "template"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "template"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.ParcellationStats",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mris_anatomical_stats**",
+            "argument": "freesurfer.ParcellationStats()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "subject_id",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "hemisphere",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "hemisphere"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "wm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "wm"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "lh_white",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "lh_white"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "rh_white",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "rh_white"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "lh_pial",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "lh_pial"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "rh_pial",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "rh_pial"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "transform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transform"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "thickness",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "thickness"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "brainmask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "brainmask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "aseg",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "aseg"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "ribbon",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ribbon"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_table",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ribbon"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_color",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ribbon"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.ParseDICOMDir",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_parse_sdcmdir**",
+            "argument": "freesurfer.ParseDICOMDir()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "dicom_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "dicom_info_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.ReconAll",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **recon-all**",
+            "argument": "freesurfer.ReconAll()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "subjects_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "subject_id",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "T1",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "aseg",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "brain",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "brainmask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "filled",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "norm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "nu",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "orig",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "rawavg",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "ribbon",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "wm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "wmparc",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "curv",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "avg_curv",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "inflated",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "pial",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "area_pial",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "curv_pial",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "smoothwm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "sphere",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "sulc",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "thickness",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "volume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "white",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "jacobian_white",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "graymid",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "label",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "annot",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "aparc_aseg",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "sphere_reg",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "aseg_stats",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "wmparc_stats",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "aparc_stats",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "BA_stats",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "aparc_a2009s_stats",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "curv_stats",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "entorhinal_exvivo_stats",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dicom_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.Register",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mris_register**",
+            "argument": "freesurfer.Register()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_surf",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_surf"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "target",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "target"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_sulc",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_sulc"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_sulc"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.RegisterAVItoTalairach",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **avi2talxfm**",
+            "argument": "freesurfer.RegisterAVItoTalairach()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "target",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "target"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "vox2vox",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "vox2vox"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "vox2vox"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "log_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "vox2vox"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.RelabelHypointensities",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_relabel_hypointensities**",
+            "argument": "freesurfer.RelabelHypointensities()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "lh_white",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "lh_white"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "rh_white",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "rh_white"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "aseg",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "aseg"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "aseg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.RemoveIntersection",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mris_remove_intersection**",
+            "argument": "freesurfer.RemoveIntersection()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.RemoveNeck",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_remove_neck**",
+            "argument": "freesurfer.RemoveNeck()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "transform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transform"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "template",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "template"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "template"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.Resample",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_convert**",
+            "argument": "freesurfer.Resample()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "voxel_size",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "voxel_size"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "resampled_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "voxel_size"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.RobustRegister",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_robust_register**",
+            "argument": "freesurfer.RobustRegister()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "source_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "source_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "target_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "target_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "auto_sens",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "auto_sens"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "outlier_sens",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outlier_sens"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_reg_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outlier_sens"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "registered_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outlier_sens"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "weights_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outlier_sens"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "half_source",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outlier_sens"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "half_targ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outlier_sens"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "half_weights",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outlier_sens"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "half_source_xfm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outlier_sens"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "half_targ_xfm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outlier_sens"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.RobustTemplate",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_robust_template**",
+            "argument": "freesurfer.RobustTemplate()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "auto_detect_sensitivity",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "auto_detect_sensitivity"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "outlier_sensitivity",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outlier_sensitivity"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outlier_sensitivity"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "transform_outputs",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outlier_sensitivity"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "scaled_intensity_outputs",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outlier_sensitivity"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.SampleToSurface",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_vol2surf**",
+            "argument": "freesurfer.SampleToSurface()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "source_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "source_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "hemi",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "hemi"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "reg_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reg_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "reg_header",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reg_header"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "mni152reg",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mni152reg"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "sampling_method",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "sampling_method"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "projection_stem",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "projection_stem"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "projection_stem"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "hits_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "projection_stem"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "vox_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "projection_stem"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.SegStats",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_segstats**",
+            "argument": "freesurfer.SegStats()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "segmentation_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "segmentation_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "annot",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "annot"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "surf_label",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "surf_label"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "summary_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "surf_label"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "avgwf_txt_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "surf_label"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "avgwf_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "surf_label"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "sf_avg_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "surf_label"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.SegStatsReconAll",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_segstats**",
+            "argument": "freesurfer.SegStatsReconAll()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "subject_id",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "ribbon",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ribbon"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "transform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transform"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "lh_orig_nofix",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "lh_orig_nofix"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "rh_orig_nofix",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "rh_orig_nofix"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "lh_white",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "lh_white"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "rh_white",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "rh_white"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "lh_pial",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "lh_pial"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "rh_pial",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "rh_pial"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "segmentation_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "segmentation_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "annot",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "annot"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "surf_label",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "surf_label"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "summary_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "surf_label"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "avgwf_txt_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "surf_label"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "avgwf_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "surf_label"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "sf_avg_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "surf_label"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.SegmentCC",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_cc**",
+            "argument": "freesurfer.SegmentCC()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_norm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_norm"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "out_rotation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_rotation"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "subject_id",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_rotation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.SegmentWM",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_segment**",
+            "argument": "freesurfer.SegmentWM()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.Smooth",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mris_volsmooth**",
+            "argument": "freesurfer.Smooth()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "reg_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reg_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "surface_fwhm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "surface_fwhm"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "num_iters",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "num_iters"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "smoothed_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "num_iters"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.SmoothTessellation",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mris_smooth**",
+            "argument": "freesurfer.SmoothTessellation()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "surface",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.Sphere",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mris_sphere**",
+            "argument": "freesurfer.Sphere()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.SphericalAverage",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mris_spherical_average**",
+            "argument": "freesurfer.SphericalAverage()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_surf",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_surf"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "hemisphere",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "hemisphere"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "fname",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fname"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "which",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "which"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "subject_id",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.Surface2VolTransform",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_surf2vol**",
+            "argument": "freesurfer.Surface2VolTransform()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "source_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "source_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "hemi",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "hemi"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "reg_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reg_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "transformed_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reg_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "vertexvol_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reg_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.SurfaceSmooth",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_surf2surf**",
+            "argument": "freesurfer.SurfaceSmooth()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "subject_id",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "hemi",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "hemi"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "hemi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.SurfaceSnapshots",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **tksurfer**",
+            "argument": "freesurfer.SurfaceSnapshots()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "subject_id",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "hemi",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "hemi"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "surface",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "surface"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "snapshots",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "surface"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.SurfaceTransform",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_surf2surf**",
+            "argument": "freesurfer.SurfaceTransform()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "source_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "source_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "source_annot_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "source_annot_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "source_subject",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "source_subject"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "hemi",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "hemi"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "target_subject",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "target_subject"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "target_subject"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.SynthesizeFLASH",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_synthesize**",
+            "argument": "freesurfer.SynthesizeFLASH()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "tr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "tr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "flip_angle",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "flip_angle"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "te",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "te"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "t1_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "pd_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "pd_image"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "pd_image"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.TalairachAVI",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **talairach_avi**",
+            "argument": "freesurfer.TalairachAVI()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_log",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_txt",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.TalairachQC",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **tal_QC_AZS**",
+            "argument": "freesurfer.TalairachQC()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "log_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "log_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "log_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "log_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.Tkregister2",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **tkregister2**",
+            "argument": "freesurfer.Tkregister2()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "moving_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "moving_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "reg_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reg_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "reg_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reg_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "fsl_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reg_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.UnpackSDICOMDir",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **unpacksdcmdir**",
+            "argument": "freesurfer.UnpackSDICOMDir()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "source_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "source_dir"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "run_info",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "run_info"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "config",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "config"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "seq_config",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "seq_config"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.VolumeMask",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mris_volmask**",
+            "argument": "freesurfer.VolumeMask()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "left_whitelabel",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "left_whitelabel"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "left_ribbonlabel",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "left_ribbonlabel"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "right_whitelabel",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "right_whitelabel"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "right_ribbonlabel",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "right_ribbonlabel"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "lh_pial",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "lh_pial"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "rh_pial",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "rh_pial"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "lh_white",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "lh_white"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "rh_white",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "rh_white"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "subject_id",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_ribbon",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "lh_ribbon",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "rh_ribbon",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FREESURFER"
+      ],
+      "title": {
+        "name": "FREESURFER.WatershedSkullStrip",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mri_watershed**",
+            "argument": "freesurfer.WatershedSkullStrip()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

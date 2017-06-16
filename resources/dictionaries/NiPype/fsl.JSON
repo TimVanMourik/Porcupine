@@ -1,0 +1,7876 @@
+{
+  "nodes": [
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.AR1Image",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslmaths**",
+            "argument": "fsl.AR1Image()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.AccuracyTester",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **None**",
+            "argument": "fsl.AccuracyTester()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "mel_icas",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mel_icas"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "trained_wts_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "trained_wts_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "output_directory",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "output_directory"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "output_directory",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "output_directory"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.ApplyMask",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslmaths**",
+            "argument": "fsl.ApplyMask()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "mask_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.ApplyTOPUP",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **applytopup**",
+            "argument": "fsl.ApplyTOPUP()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "encoding_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "encoding_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_corrected",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "encoding_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.ApplyWarp",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **applywarp**",
+            "argument": "fsl.ApplyWarp()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "ref_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ref_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ref_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.ApplyXFM",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **flirt**",
+            "argument": "fsl.ApplyXFM()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "reference",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reference"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reference"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_matrix_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reference"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_log",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reference"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.AvScale",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **avscale**",
+            "argument": "fsl.AvScale()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "rotation_translation_matrix",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reference"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "scales",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reference"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "skews",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reference"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "average_scaling",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reference"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "determinant",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reference"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "forward_half_transform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reference"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "backward_half_transform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reference"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "left_right_orientation_preserved",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reference"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "rot_angles",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reference"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "translations",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reference"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.B0Calc",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **b0calc**",
+            "argument": "fsl.B0Calc()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.BEDPOSTX",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **bedpostx**",
+            "argument": "fsl.BEDPOSTX()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "dwi",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dwi"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "bvecs",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bvecs"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "bvals",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bvals"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "n_fibres",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "n_fibres"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "out_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mean_dsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mean_fsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mean_S0samples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mean_phsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mean_thsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "merged_thsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "merged_phsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "merged_fsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "dyads",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "dyads_dispersion",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.BEDPOSTX5",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **bedpostx**",
+            "argument": "fsl.BEDPOSTX5()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "dwi",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dwi"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "bvecs",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bvecs"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "bvals",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bvals"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "n_fibres",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "n_fibres"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "out_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mean_dsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mean_fsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mean_S0samples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mean_phsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mean_thsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "merged_thsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "merged_phsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "merged_fsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "dyads",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "dyads_dispersion",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.BET",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **bet**",
+            "argument": "fsl.BET()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mask_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outline_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "meshfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "inskull_mask_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "inskull_mesh_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outskull_mask_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outskull_mesh_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outskin_mask_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outskin_mesh_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "skull_mask_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.BinaryMaths",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslmaths**",
+            "argument": "fsl.BinaryMaths()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "operation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "operation"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "operand_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "operand_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "operand_value",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "operand_value"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.ChangeDataType",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslmaths**",
+            "argument": "fsl.ChangeDataType()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "output_datatype",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "output_datatype"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.Classifier",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **None**",
+            "argument": "fsl.Classifier()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "trained_wts_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "trained_wts_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "thresh",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "thresh"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "artifacts_list_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "thresh"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.Cleaner",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **None**",
+            "argument": "fsl.Cleaner()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "artifacts_list_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "artifacts_list_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "cleaned_functional_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "artifacts_list_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.Cluster",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **cluster**",
+            "argument": "fsl.Cluster()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "threshold",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "threshold"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "index_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "threshold"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "threshold_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "threshold"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "localmax_txt_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "threshold"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "localmax_vol_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "threshold"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "size_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "threshold"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "max_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "threshold"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mean_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "threshold"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "pval_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "threshold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.Complex",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslcomplex**",
+            "argument": "fsl.Complex()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "magnitude_out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "threshold"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "phase_out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "threshold"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "real_out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "threshold"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "imaginary_out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "threshold"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "complex_out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "threshold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.ContrastMgr",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **contrast_mgr**",
+            "argument": "fsl.ContrastMgr()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "tcon_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "tcon_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "param_estimates",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "param_estimates"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "corrections",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "corrections"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "dof_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dof_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "sigmasquareds",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "sigmasquareds"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "copes",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "sigmasquareds"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "varcopes",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "sigmasquareds"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "zstats",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "sigmasquareds"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "tstats",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "sigmasquareds"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "fstats",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "sigmasquareds"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "zfstats",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "sigmasquareds"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "neffs",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "sigmasquareds"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.ConvertWarp",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **convertwarp**",
+            "argument": "fsl.ConvertWarp()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "reference",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reference"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reference"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.ConvertXFM",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **convert_xfm**",
+            "argument": "fsl.ConvertXFM()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.CopyGeom",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslcpgeom**",
+            "argument": "fsl.CopyGeom()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "dest_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dest_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dest_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.DTIFit",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **dtifit**",
+            "argument": "fsl.DTIFit()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "dwi",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dwi"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "bvecs",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bvecs"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "bvals",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bvals"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "V1",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bvals"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "V2",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bvals"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "V3",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bvals"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "L1",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bvals"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "L2",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bvals"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "L3",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bvals"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "MD",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bvals"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "FA",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bvals"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "MO",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bvals"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "S0",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bvals"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "tensor",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bvals"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.DilateImage",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslmaths**",
+            "argument": "fsl.DilateImage()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "operation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "operation"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.DistanceMap",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **distancemap**",
+            "argument": "fsl.DistanceMap()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "distance_map",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "local_max_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.EPIDeWarp",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **epidewarp.fsl**",
+            "argument": "fsl.EPIDeWarp()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "mag_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mag_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "dph_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dph_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "unwarped_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dph_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "vsm_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dph_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "exfdw",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dph_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "exf_mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dph_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.Eddy",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **eddy_openmp**",
+            "argument": "fsl.Eddy()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_mask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_index",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_index"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_acqp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_acqp"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_bvec",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_bvec"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_bval",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_bval"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_corrected",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_bval"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_parameter",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_bval"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_rotated_bvecs",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_bval"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_movement_rms",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_bval"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_restricted_movement_rms",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_bval"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_shell_alignment_parameters",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_bval"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_outlier_report",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_bval"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.EddyCorrect",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **eddy_correct**",
+            "argument": "fsl.EddyCorrect()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "ref_num",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ref_num"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "eddy_corrected",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ref_num"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.EpiReg",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **epi_reg**",
+            "argument": "fsl.EpiReg()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "epi",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "epi"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "t1_head",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_head"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "t1_brain",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_brain"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_brain"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_1vol",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_brain"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "fmap2str_mat",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_brain"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "fmap2epi_mat",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_brain"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "fmap_epi",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_brain"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "fmap_str",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_brain"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "fmapmag_str",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_brain"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "epi2str_inv",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_brain"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "epi2str_mat",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_brain"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "shiftmap",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_brain"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "fullwarp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_brain"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "wmseg",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_brain"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "wmedge",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_brain"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.ErodeImage",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslmaths**",
+            "argument": "fsl.ErodeImage()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.ExtractROI",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslroi**",
+            "argument": "fsl.ExtractROI()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "roi_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.FAST",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fast**",
+            "argument": "fsl.FAST()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "tissue_class_map",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "tissue_class_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "restored_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mixeltype",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "partial_volume_map",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "partial_volume_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "bias_field",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "probability_maps",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.FEAT",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **feat**",
+            "argument": "fsl.FEAT()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "fsf_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fsf_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "feat_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fsf_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.FEATModel",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **feat_model**",
+            "argument": "fsl.FEATModel()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "fsf_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fsf_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "ev_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ev_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "design_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ev_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "design_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ev_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "design_cov",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ev_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "con_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ev_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "fcon_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ev_files"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.FEATRegister",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Register feat directories to a specific standard",
+            "argument": "fsl.FEATRegister()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "feat_dirs",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "feat_dirs"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "reg_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reg_image"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "fsf_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reg_image"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.FILMGLS",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **film_gls**",
+            "argument": "fsl.FILMGLS()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "param_estimates",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "residual4d",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "dof_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "sigmasquareds",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "results_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "corrections",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "thresholdac",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "logfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.FIRST",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **run_first_all**",
+            "argument": "fsl.FIRST()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "vtk_surfaces",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "bvars",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "original_segmentations",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "segmentation_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.FLAMEO",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **flameo**",
+            "argument": "fsl.FLAMEO()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "cope_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "cope_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "mask_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "design_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "design_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "t_con_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t_con_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "cov_split_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "cov_split_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "run_mode",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "run_mode"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "pes",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "run_mode"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "res4d",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "run_mode"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "copes",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "run_mode"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "var_copes",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "run_mode"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "zstats",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "run_mode"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "tstats",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "run_mode"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "zfstats",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "run_mode"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "fstats",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "run_mode"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mrefvars",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "run_mode"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "tdof",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "run_mode"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "weights",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "run_mode"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "stats_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "run_mode"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.FLIRT",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **flirt**",
+            "argument": "fsl.FLIRT()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "reference",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reference"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reference"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_matrix_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reference"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_log",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reference"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.FNIRT",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fnirt**",
+            "argument": "fsl.FNIRT()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "ref_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ref_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "fieldcoeff_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "warped_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "field_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "jacobian_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "modulatedref_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_intensitymap_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "log_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.FUGUE",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fugue**",
+            "argument": "fsl.FUGUE()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "unwarped_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "warped_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "shift_out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "fmap_out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.FeatureExtractor",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **None**",
+            "argument": "fsl.FeatureExtractor()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mel_ica",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.FilterRegressor",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fsl_regfilt**",
+            "argument": "fsl.FilterRegressor()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "design_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "design_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "filter_columns",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "filter_columns"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "filter_all",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "filter_all"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "filter_all"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.FindTheBiggest",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **find_the_biggest**",
+            "argument": "fsl.FindTheBiggest()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.GLM",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fsl_glm**",
+            "argument": "fsl.GLM()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "design",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "design"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "design"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_cope",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "design"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_z",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "design"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_t",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "design"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_p",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "design"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_f",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "design"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_pf",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "design"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_res",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "design"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_varcb",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "design"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_sigsq",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "design"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_data",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "design"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_vnscales",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.ImageMaths",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslmaths**",
+            "argument": "fsl.ImageMaths()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.ImageMeants",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslmeants**",
+            "argument": "fsl.ImageMeants()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.ImageStats",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslstats**",
+            "argument": "fsl.ImageStats()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "op_string",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "op_string"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_stat",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "op_string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.InvWarp",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **invwarp**",
+            "argument": "fsl.InvWarp()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "warp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "warp"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "reference",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reference"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "inverse_warp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reference"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.IsotropicSmooth",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslmaths**",
+            "argument": "fsl.IsotropicSmooth()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "fwhm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fwhm"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "sigma",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "sigma"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.L2Model",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Generate subject specific second level model",
+            "argument": "fsl.L2Model()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "num_copes",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "num_copes"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "design_mat",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "num_copes"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "design_con",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "num_copes"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "design_grp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "num_copes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.Level1Design",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Generate FEAT specific files",
+            "argument": "fsl.Level1Design()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "interscan_interval",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "interscan_interval"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "session_info",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "session_info"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "bases",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bases"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "model_serial_correlations",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "model_serial_correlations"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "fsf_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "model_serial_correlations"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "ev_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "model_serial_correlations"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.MCFLIRT",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mcflirt**",
+            "argument": "fsl.MCFLIRT()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "variance_img",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "std_img",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mean_img",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "par_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mat_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "rms_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.MELODIC",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **melodic**",
+            "argument": "fsl.MELODIC()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "report_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.MakeDyadicVectors",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **make_dyadic_vectors**",
+            "argument": "fsl.MakeDyadicVectors()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "theta_vol",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "theta_vol"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "phi_vol",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "phi_vol"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "dyads",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "phi_vol"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "dispersion",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "phi_vol"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.MaxnImage",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslmaths**",
+            "argument": "fsl.MaxnImage()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.MeanImage",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslmaths**",
+            "argument": "fsl.MeanImage()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.MedianImage",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslmaths**",
+            "argument": "fsl.MedianImage()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.Merge",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslmerge**",
+            "argument": "fsl.Merge()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dimension"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "merged_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dimension"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.MinImage",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslmaths**",
+            "argument": "fsl.MinImage()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.MotionOutliers",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fsl_motion_outliers**",
+            "argument": "fsl.MotionOutliers()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_metric_values",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_metric_plot",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.MultiImageMaths",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslmaths**",
+            "argument": "fsl.MultiImageMaths()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "op_string",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "op_string"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "operand_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "operand_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.MultipleRegressDesign",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Generate multiple regression design",
+            "argument": "fsl.MultipleRegressDesign()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "contrasts",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "contrasts"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "regressors",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "regressors"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "design_mat",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "regressors"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "design_con",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "regressors"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "design_fts",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "regressors"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "design_grp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "regressors"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.Overlay",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **overlay**",
+            "argument": "fsl.Overlay()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "background_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "background_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "auto_thresh_bg",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "auto_thresh_bg"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "full_bg_range",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "full_bg_range"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "bg_thresh",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bg_thresh"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "stat_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "stat_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "stat_thresh",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "stat_thresh"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "stat_thresh"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.PRELUDE",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **prelude**",
+            "argument": "fsl.PRELUDE()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "complex_phase_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "complex_phase_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "magnitude_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "magnitude_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "phase_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "phase_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "unwrapped_phase_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "phase_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.PercentileImage",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslmaths**",
+            "argument": "fsl.PercentileImage()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.PlotMotionParams",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fsl_tsplot**",
+            "argument": "fsl.PlotMotionParams()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_source",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_source"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "plot_type",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "plot_type"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "plot_type"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.PlotTimeSeries",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fsl_tsplot**",
+            "argument": "fsl.PlotTimeSeries()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.PowerSpectrum",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslpspec**",
+            "argument": "fsl.PowerSpectrum()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.PrepareFieldmap",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fsl_prepare_fieldmap**",
+            "argument": "fsl.PrepareFieldmap()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_phase",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_phase"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_magnitude",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_magnitude"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "delta_TE",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "delta_TE"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_fieldmap",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "delta_TE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.ProbTrackX",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **probtrackx**",
+            "argument": "fsl.ProbTrackX()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "thsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "thsamples"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "phsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "phsamples"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "fsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fsamples"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "seed",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "seed"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "log",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "seed"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "fdt_paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "seed"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "way_total",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "seed"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "targets",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "seed"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "particle_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "seed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.ProbTrackX2",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **probtrackx2**",
+            "argument": "fsl.ProbTrackX2()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "thsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "thsamples"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "phsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "phsamples"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "fsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fsamples"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "seed",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "seed"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "network_matrix",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "seed"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "matrix1_dot",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "seed"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "lookup_tractspace",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "seed"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "matrix2_dot",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "seed"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "matrix3_dot",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "seed"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "log",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "seed"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "fdt_paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "seed"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "way_total",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "seed"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "targets",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "seed"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "particle_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "seed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.ProjThresh",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **proj_thresh**",
+            "argument": "fsl.ProjThresh()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "threshold",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "threshold"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "threshold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.Randomise",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **randomise**",
+            "argument": "fsl.Randomise()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "tstat_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "fstat_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "t_p_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "f_p_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "t_corrected_p_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "f_corrected_p_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.Reorient2Std",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslreorient2std**",
+            "argument": "fsl.Reorient2Std()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.RobustFOV",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **robustfov**",
+            "argument": "fsl.RobustFOV()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_roi",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_transform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.SMM",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mm --ld=logdir**",
+            "argument": "fsl.SMM()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "spatial_data_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "spatial_data_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "null_p_map",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "activation_p_map",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "deactivation_p_map",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.SUSAN",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **susan**",
+            "argument": "fsl.SUSAN()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "brightness_threshold",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "brightness_threshold"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "fwhm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fwhm"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "smoothed_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fwhm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.SigLoss",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **sigloss**",
+            "argument": "fsl.SigLoss()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.SliceTimer",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **slicetimer**",
+            "argument": "fsl.SliceTimer()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "slice_time_corrected_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.Slicer",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **slicer**",
+            "argument": "fsl.Slicer()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.Smooth",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslmaths**",
+            "argument": "fsl.Smooth()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "sigma",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "sigma"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "fwhm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fwhm"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "smoothed_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fwhm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.SmoothEstimate",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **smoothest**",
+            "argument": "fsl.SmoothEstimate()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "dof",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dof"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "mask_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "dlh",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "volume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "resels",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.SpatialFilter",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslmaths**",
+            "argument": "fsl.SpatialFilter()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "operation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "operation"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.Split",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslsplit**",
+            "argument": "fsl.Split()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dimension"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dimension"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.SwapDimensions",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslswapdim**",
+            "argument": "fsl.SwapDimensions()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "new_dims",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "new_dims"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "new_dims"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.TOPUP",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **topup**",
+            "argument": "fsl.TOPUP()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "encoding_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "encoding_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "encoding_direction",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "encoding_direction"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "readout_times",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "readout_times"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_fieldcoef",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "readout_times"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_movpar",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "readout_times"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_enc_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "readout_times"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_field",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "readout_times"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_warps",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "readout_times"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_jacs",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "readout_times"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_corrected",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "readout_times"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_logfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "readout_times"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.TemporalFilter",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslmaths**",
+            "argument": "fsl.TemporalFilter()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.Threshold",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslmaths**",
+            "argument": "fsl.Threshold()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "thresh",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "thresh"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.TractSkeleton",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **tbss_skeleton**",
+            "argument": "fsl.TractSkeleton()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "projected_data",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "skeleton_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.Training",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **None**",
+            "argument": "fsl.Training()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "trained_wts_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.TrainingSetCreator",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Goes through set of provided melodic output directories, to find all",
+            "argument": "fsl.TrainingSetCreator()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mel_icas_out",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.UnaryMaths",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fslmaths**",
+            "argument": "fsl.UnaryMaths()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "operation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "operation"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.VecReg",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **vecreg**",
+            "argument": "fsl.VecReg()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "ref_vol",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ref_vol"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ref_vol"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.WarpPoints",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **img2imgcoord**",
+            "argument": "fsl.WarpPoints()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "src_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "src_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "dest_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dest_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_coords",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_coords"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_coords"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.WarpPointsToStd",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **img2stdcoord**",
+            "argument": "fsl.WarpPointsToStd()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "img_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "img_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "std_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "std_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_coords",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_coords"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_coords"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.WarpUtils",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fnirtfileutils**",
+            "argument": "fsl.WarpUtils()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "reference",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reference"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "write_jacobian",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "write_jacobian"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "write_jacobian"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_jacobian",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "write_jacobian"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.XFibres",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **xfibres**",
+            "argument": "fsl.XFibres()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "dwi",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dwi"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "bvecs",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bvecs"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "bvals",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bvals"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "n_fibres",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "n_fibres"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "dyads",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "n_fibres"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "fsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "n_fibres"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mean_dsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "n_fibres"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mean_fsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "n_fibres"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mean_S0samples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "n_fibres"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mean_tausamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "n_fibres"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "phsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "n_fibres"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "thsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "n_fibres"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "FSL"
+      ],
+      "title": {
+        "name": "FSL.XFibres5",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **xfibres**",
+            "argument": "fsl.XFibres5()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "dwi",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dwi"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "bvecs",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bvecs"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "bvals",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bvals"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "n_fibres",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "n_fibres"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "dyads",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "n_fibres"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "fsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "n_fibres"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mean_dsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "n_fibres"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mean_fsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "n_fibres"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mean_S0samples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "n_fibres"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mean_tausamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "n_fibres"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "phsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "n_fibres"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "thsamples",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "n_fibres"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

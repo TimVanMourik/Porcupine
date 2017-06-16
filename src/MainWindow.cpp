@@ -134,39 +134,14 @@ void MainWindow::keyPressEvent(
     Q_UNUSED(_event);
 }
 
-//void MainWindow::loadDataTypes(
-//        )
-//{
-//    NodeLibrary& nodeLibrary = NodeLibrary::getInstance();
-//    QFile schemaFile(QString(":/datatype_schema.xsd"));
-//    nodeLibrary.setDataTypeSchema(schemaFile);
-
-//    unsigned int i = 0;
-//    while(true)
-//    {
-//        QFile xmlTypefile(QString(":/dictionaries/DataTypes/type_%1.xml").arg(i));
-//        if(xmlTypefile.exists())
-//        {
-//            nodeLibrary.addDataTypes(xmlTypefile);
-//        }
-//        else
-//        {
-//            break;
-//        }
-//        ++i;
-//    }
-//}
-
 void MainWindow::loadDefaultNodes(
         )
 {
     NodeLibrary& nodeLibrary = NodeLibrary::getInstance();
-    QFile schemaFile(QString(":/node_schema.xsd"));
-    nodeLibrary.setNodeSchema(schemaFile);
 
     QStringList toolboxNames;
-//    toolboxNames << QString(":/dictionaries/TvM/node_%1.xml");
-    toolboxNames << QString(":/dictionaries/NiPype/node_%1.xml");
+    toolboxNames << QString(":/dictionaries/TvM/dict_%1.JSON");
+    toolboxNames << QString(":/dictionaries/NiPype/dict_%1.JSON");
     unsigned int framePadding = 3;
     foreach (QString toolbox, toolboxNames)
     {
@@ -176,11 +151,10 @@ void MainWindow::loadDefaultNodes(
             QFile xmlNodefile(toolbox.arg(i, framePadding, 10, QLatin1Char('0')));
             if(xmlNodefile.exists())
             {
-                QString newNode = nodeLibrary.addNodeSetting(xmlNodefile);
-//                QString newNode = nodeLibrary.addNodeSettingJson(xmlNodefile);
-                if(!newNode.isEmpty())
+                QStringList newNodes = nodeLibrary.addNodeSetting(xmlNodefile);
+                if(!newNodes.isEmpty())
                 {
-                    updateNodeMenu(newNode);
+                    updateNodeMenu(newNodes);
                 }
             }
             else
@@ -200,46 +174,48 @@ void MainWindow::loadNewNodes(
     foreach(QString name, fileNames)
     {
         QFile file(name);
-        QString newNode = nodeLibrary.addNodeSetting(file);
-//        QString newNode = nodeLibrary.addNodeSettingJson(file);
-        updateNodeMenu(newNode);
+        QStringList newNodes = nodeLibrary.addNodeSetting(file);
+        updateNodeMenu(newNodes);
     }
 }
 
 void MainWindow::updateNodeMenu(
-        const QString& _node
+        const QStringList& _nodes
         )
 {
-    assert(!_node.isEmpty());
+    assert(!_nodes.isEmpty());
     NodeLibrary& nodeLibrary = NodeLibrary::getInstance();
-    const QStringList category = nodeLibrary.getCategory(_node);
-    QAction* newAction = new QAction(_node, this);
-    newAction->setData(_node);
-
-    int categoryNumber = 0;
-    QMenu* currentMenu = m_nodesMenu;
-    while(categoryNumber < category.length())
+    foreach (QString node, _nodes)
     {
-        QList<QMenu*> menus = currentMenu->findChildren<QMenu*>(QString(), Qt::FindDirectChildrenOnly);
-        bool menuFound = false;
-        foreach (QMenu* menu, menus)
+        const QStringList category = nodeLibrary.getCategory(node);
+        QAction* newAction = new QAction(node, this);
+        newAction->setData(node);
+
+        int categoryNumber = 0;
+        QMenu* currentMenu = m_nodesMenu;
+        while(categoryNumber < category.length())
         {
-            if(menu->title().compare(category[categoryNumber]) == 0)
+            QList<QMenu*> menus = currentMenu->findChildren<QMenu*>(QString(), Qt::FindDirectChildrenOnly);
+            bool menuFound = false;
+            foreach (QMenu* menu, menus)
             {
-                currentMenu = menu;
-                menuFound = true;
-                break;
+                if(menu->title().compare(category[categoryNumber]) == 0)
+                {
+                    currentMenu = menu;
+                    menuFound = true;
+                    break;
+                }
             }
+            if(!menuFound)
+            {
+                QMenu* newMenu = new QMenu(category[categoryNumber], currentMenu);
+                currentMenu->addMenu(newMenu);
+                currentMenu = newMenu;
+            }
+            ++categoryNumber;
         }
-        if(!menuFound)
-        {
-            QMenu* newMenu = new QMenu(category[categoryNumber], currentMenu);
-            currentMenu->addMenu(newMenu);
-            currentMenu = newMenu;
-        }
-        ++categoryNumber;
+        currentMenu->addAction(newAction);
     }
-    currentMenu->addAction(newAction);
 }
 
 void MainWindow::nodeSlot(

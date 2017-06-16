@@ -53,12 +53,7 @@ public:
             );
     /// @brief
     /// @param _schema is not const because .open() is not a const function (even in read-only mode)
-    QString addNodeSetting(
-            QFile& _node
-            );
-    /// @brief
-    /// @param _schema is not const because .open() is not a const function (even in read-only mode)
-    QString addNodeSettingJson(
+    QStringList addNodeSetting(
             QFile& _node
             );
     /// @brief
@@ -81,22 +76,9 @@ private:
     /// @brief
     QMap<QString, NodeSetting*> m_nodeSettings;
     /// @brief
-    QMap<QString, DataType*> m_dataTypes;
-    /// @brief
     QStringList m_nodeNames;
     /// @brief
-    QStringList m_typeNames;
-    /// @brief
-    QXmlSchemaValidator* m_nodeValidator;
-    /// @brief
     NodeLibrary(
-            );
-    /// @brief
-    void parseCodeBlock(
-            const QDomNode& _code,
-            QString& o_language,
-            QString& o_argument,
-            QString& o_comment
             );
     /// @brief
     NodeLibrary(

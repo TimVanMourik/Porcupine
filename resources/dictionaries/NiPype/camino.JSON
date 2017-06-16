@@ -1,0 +1,1696 @@
+{
+  "nodes": [
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.AnalyzeHeader",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **analyzeheader**",
+            "argument": "camino.AnalyzeHeader()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "datatype",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "datatype"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "header",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "datatype"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.ComputeEigensystem",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **dteig**",
+            "argument": "camino.ComputeEigensystem()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "eigen",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.ComputeFractionalAnisotropy",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fa**",
+            "argument": "camino.ComputeFractionalAnisotropy()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "fa",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.ComputeMeanDiffusivity",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **md**",
+            "argument": "camino.ComputeMeanDiffusivity()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "md",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.ComputeTensorTrace",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **trd**",
+            "argument": "camino.ComputeTensorTrace()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "trace",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.Conmat",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **conmat**",
+            "argument": "camino.Conmat()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "target_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "target_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "conmat_sc",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "target_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "conmat_ts",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "target_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.DT2NIfTI",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **dt2nii**",
+            "argument": "camino.DT2NIfTI()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "header_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "header_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "dt",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "header_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "exitcode",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "header_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "lns0",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "header_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.DTIFit",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **dtfit**",
+            "argument": "camino.DTIFit()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "scheme_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "scheme_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "tensor_fitted",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "scheme_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.DTLUTGen",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **dtlutgen**",
+            "argument": "camino.DTLUTGen()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "scheme_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "scheme_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "dtLUT",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "scheme_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.DTMetric",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **dtshape**",
+            "argument": "camino.DTMetric()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "eigen_data",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "eigen_data"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "metric",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "metric"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "metric_stats",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "metric"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.FSL2Scheme",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **fsl2scheme**",
+            "argument": "camino.FSL2Scheme()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "bvec_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bvec_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "bval_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bval_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "scheme",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bval_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.Image2Voxel",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **image2voxel**",
+            "argument": "camino.Image2Voxel()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "voxel_order",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.ImageStats",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **imagestats**",
+            "argument": "camino.ImageStats()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "stat",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "stat"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "output_root",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "output_root"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "output_root"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.LinRecon",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **linrecon**",
+            "argument": "camino.LinRecon()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "scheme_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "scheme_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "qball_mat",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "qball_mat"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "recon_data",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "qball_mat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.MESD",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mesd**",
+            "argument": "camino.MESD()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "inverter",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inverter"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "inverter_param",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inverter_param"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "scheme_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "scheme_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mesd_data",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "scheme_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.ModelFit",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **modelfit**",
+            "argument": "camino.ModelFit()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "model",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "model"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "scheme_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "scheme_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "fitted_data",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "scheme_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.NIfTIDT2Camino",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **niftidt2camino**",
+            "argument": "camino.NIfTIDT2Camino()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.PicoPDFs",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **picopdfs**",
+            "argument": "camino.PicoPDFs()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "luts",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "luts"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "pdfs",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "luts"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.ProcStreamlines",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **procstreamlines**",
+            "argument": "camino.ProcStreamlines()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "proc",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputroot_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.QBallMX",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **qballmx**",
+            "argument": "camino.QBallMX()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "scheme_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "scheme_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "qmat",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "scheme_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.SFLUTGen",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **sflutgen**",
+            "argument": "camino.SFLUTGen()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "info_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "info_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "lut_one_fibre",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "info_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "lut_two_fibres",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "info_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.SFPICOCalibData",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **sfpicocalibdata**",
+            "argument": "camino.SFPICOCalibData()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "scheme_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "scheme_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "info_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "info_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "PICOCalib",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "info_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "calib_info",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "info_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.SFPeaks",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **sfpeaks**",
+            "argument": "camino.SFPeaks()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "inputmodel",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputmodel"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "peaks",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputmodel"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.Shredder",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **shredder**",
+            "argument": "camino.Shredder()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "shredded",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.Track",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **track**",
+            "argument": "camino.Track()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "tracked",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.TrackBallStick",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **track**",
+            "argument": "camino.TrackBallStick()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "tracked",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.TrackBayesDirac",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **track**",
+            "argument": "camino.TrackBayesDirac()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "scheme_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "scheme_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "tracked",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "scheme_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.TrackBedpostxDeter",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **track**",
+            "argument": "camino.TrackBedpostxDeter()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "bedpostxdir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bedpostxdir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "tracked",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bedpostxdir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.TrackBedpostxProba",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **track**",
+            "argument": "camino.TrackBedpostxProba()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "bedpostxdir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bedpostxdir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "tracked",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bedpostxdir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.TrackBootstrap",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **track**",
+            "argument": "camino.TrackBootstrap()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "scheme_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "scheme_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "bsdatafiles",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bsdatafiles"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "tracked",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bsdatafiles"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.TrackDT",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **track**",
+            "argument": "camino.TrackDT()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "tracked",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bsdatafiles"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.TrackPICo",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **track**",
+            "argument": "camino.TrackPICo()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "tracked",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bsdatafiles"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.TractShredder",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **tractshredder**",
+            "argument": "camino.TractShredder()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "shredded",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "CAMINO"
+      ],
+      "title": {
+        "name": "CAMINO.VtkStreamlines",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **vtkstreamlines**",
+            "argument": "camino.VtkStreamlines()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "vtk",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

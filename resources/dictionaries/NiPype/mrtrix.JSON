@@ -1,0 +1,1180 @@
+{
+  "nodes": [
+    {
+      "category": [
+        "NiPype",
+        "MRTRIX"
+      ],
+      "title": {
+        "name": "MRTRIX.ConstrainedSphericalDeconvolution",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **csdeconv**",
+            "argument": "mrtrix.ConstrainedSphericalDeconvolution()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "response_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "response_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "spherical_harmonics_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "response_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "MRTRIX"
+      ],
+      "title": {
+        "name": "MRTRIX.DWI2SphericalHarmonicsImage",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **dwi2SH**",
+            "argument": "mrtrix.DWI2SphericalHarmonicsImage()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "encoding_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "encoding_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "spherical_harmonics_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "encoding_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "MRTRIX"
+      ],
+      "title": {
+        "name": "MRTRIX.DWI2Tensor",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **dwi2tensor**",
+            "argument": "mrtrix.DWI2Tensor()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "tensor",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "MRTRIX"
+      ],
+      "title": {
+        "name": "MRTRIX.DiffusionTensorStreamlineTrack",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **streamtrack**",
+            "argument": "mrtrix.DiffusionTensorStreamlineTrack()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "gradient_encoding_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "gradient_encoding_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "tracked",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "MRTRIX"
+      ],
+      "title": {
+        "name": "MRTRIX.Directions2Amplitude",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **dir2amp**",
+            "argument": "mrtrix.Directions2Amplitude()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "MRTRIX"
+      ],
+      "title": {
+        "name": "MRTRIX.Erode",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **erode**",
+            "argument": "mrtrix.Erode()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "MRTRIX"
+      ],
+      "title": {
+        "name": "MRTRIX.EstimateResponseForSH",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **estimate_response**",
+            "argument": "mrtrix.EstimateResponseForSH()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "mask_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "encoding_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "encoding_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "response",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "encoding_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "MRTRIX"
+      ],
+      "title": {
+        "name": "MRTRIX.FSL2MRTrix",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Converts separate b-values and b-vectors from text files (FSL style) into a",
+            "argument": "mrtrix.FSL2MRTrix()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "bvec_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bvec_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "bval_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bval_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "encoding_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bval_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "MRTRIX"
+      ],
+      "title": {
+        "name": "MRTRIX.FilterTracks",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **filter_tracks**",
+            "argument": "mrtrix.FilterTracks()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "MRTRIX"
+      ],
+      "title": {
+        "name": "MRTRIX.FindShPeaks",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **find_SH_peaks**",
+            "argument": "mrtrix.FindShPeaks()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "directions_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "directions_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "directions_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "MRTRIX"
+      ],
+      "title": {
+        "name": "MRTRIX.GenerateDirections",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **gendir**",
+            "argument": "mrtrix.GenerateDirections()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "num_dirs",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "num_dirs"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "num_dirs"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "MRTRIX"
+      ],
+      "title": {
+        "name": "MRTRIX.GenerateWhiteMatterMask",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **gen_WM_mask**",
+            "argument": "mrtrix.GenerateWhiteMatterMask()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "binary_mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "binary_mask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "encoding_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "encoding_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "WMprobabilitymap",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "encoding_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "MRTRIX"
+      ],
+      "title": {
+        "name": "MRTRIX.MRConvert",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mrconvert**",
+            "argument": "mrtrix.MRConvert()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "converted",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "MRTRIX"
+      ],
+      "title": {
+        "name": "MRTRIX.MRMultiply",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mrmult**",
+            "argument": "mrtrix.MRMultiply()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "MRTRIX"
+      ],
+      "title": {
+        "name": "MRTRIX.MRTrix2TrackVis",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Converts MRtrix (.tck) tract files into TrackVis (.trk) format",
+            "argument": "mrtrix.MRTrix2TrackVis()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "MRTRIX"
+      ],
+      "title": {
+        "name": "MRTRIX.MRTrixInfo",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mrinfo**",
+            "argument": "mrtrix.MRTrixInfo()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "MRTRIX"
+      ],
+      "title": {
+        "name": "MRTRIX.MRTrixViewer",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mrview**",
+            "argument": "mrtrix.MRTrixViewer()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "MRTRIX"
+      ],
+      "title": {
+        "name": "MRTRIX.MedianFilter3D",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **median3D**",
+            "argument": "mrtrix.MedianFilter3D()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "MRTRIX"
+      ],
+      "title": {
+        "name": "MRTRIX.ProbabilisticSphericallyDeconvolutedStreamlineTrack",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **streamtrack**",
+            "argument": "mrtrix.ProbabilisticSphericallyDeconvolutedStreamlineTrack()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "tracked",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "MRTRIX"
+      ],
+      "title": {
+        "name": "MRTRIX.SphericallyDeconvolutedStreamlineTrack",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **streamtrack**",
+            "argument": "mrtrix.SphericallyDeconvolutedStreamlineTrack()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "tracked",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "MRTRIX"
+      ],
+      "title": {
+        "name": "MRTRIX.StreamlineTrack",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **streamtrack**",
+            "argument": "mrtrix.StreamlineTrack()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "tracked",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "MRTRIX"
+      ],
+      "title": {
+        "name": "MRTRIX.Tensor2ApparentDiffusion",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **tensor2ADC**",
+            "argument": "mrtrix.Tensor2ApparentDiffusion()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "ADC",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "MRTRIX"
+      ],
+      "title": {
+        "name": "MRTRIX.Tensor2FractionalAnisotropy",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **tensor2FA**",
+            "argument": "mrtrix.Tensor2FractionalAnisotropy()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "FA",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "MRTRIX"
+      ],
+      "title": {
+        "name": "MRTRIX.Tensor2Vector",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **tensor2vector**",
+            "argument": "mrtrix.Tensor2Vector()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "vector",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "MRTRIX"
+      ],
+      "title": {
+        "name": "MRTRIX.Threshold",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **threshold**",
+            "argument": "mrtrix.Threshold()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "MRTRIX"
+      ],
+      "title": {
+        "name": "MRTRIX.Tracks2Prob",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **tracks2prob**",
+            "argument": "mrtrix.Tracks2Prob()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "tract_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -31,7 +31,7 @@ Argument::Argument(
     m_portType(_type),
     m_argumentName(_argumentName),
     m_defaultValue(_defaultValue),
-    m_isEditable(true)
+    m_isVisible(true)
 {
 }
 
@@ -42,10 +42,10 @@ void Argument::setName(
     m_argumentName = _name;
 }
 
-bool Argument::isEditable(
+bool Argument::isVisible(
         ) const
 {
-    return m_isEditable;
+    return m_isVisible;
 }
 
 void Argument::setDefault(
@@ -55,11 +55,11 @@ void Argument::setDefault(
     m_defaultValue = _default;
 }
 
-void Argument::setEditable(
+void Argument::setVisible(
         bool _editable
         )
 {
-    m_isEditable = _editable;
+    m_isVisible = _editable;
 }
 
 void Argument::setType(

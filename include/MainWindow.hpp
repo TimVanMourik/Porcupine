@@ -101,7 +101,7 @@ private slots:
     void addPostIt(
             );
     void updateNodeMenu(
-            const QString& _node
+            const QStringList& _node
             );
 public slots:
     //

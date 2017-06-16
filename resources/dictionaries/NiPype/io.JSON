@@ -1,0 +1,1050 @@
+{
+  "nodes": [
+    {
+      "category": [
+        "NiPype",
+        "IO"
+      ],
+      "title": {
+        "name": "IO.BaseInterface",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Implements common interface functionality.",
+            "argument": "io.BaseInterface()"
+          }
+        ]
+      },
+      "ports": []
+    },
+    {
+      "category": [
+        "NiPype",
+        "IO"
+      ],
+      "title": {
+        "name": "IO.DataFinder",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Search for paths that match a given regular expression. Allows a less",
+            "argument": "io.DataFinder()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "root_paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "root_paths"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "IO"
+      ],
+      "title": {
+        "name": "IO.DataGrabber",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Generic datagrabber module that wraps around glob in an",
+            "argument": "io.DataGrabber()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "sort_filelist",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "sort_filelist"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "template",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "template"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "IO"
+      ],
+      "title": {
+        "name": "IO.DataSink",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Generic datasink module to store structured outputs",
+            "argument": "io.DataSink()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "template"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "IO"
+      ],
+      "title": {
+        "name": "IO.FreeSurferSource",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Generates freesurfer subject info from their directories",
+            "argument": "io.FreeSurferSource()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "subjects_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "subject_id",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "T1",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "aseg",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "brain",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "brainmask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "filled",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "norm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "nu",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "orig",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "rawavg",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "ribbon",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "wm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "wmparc",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "curv",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "avg_curv",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "inflated",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "pial",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "area_pial",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "curv_pial",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "smoothwm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "sphere",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "sulc",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "thickness",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "volume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "white",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "jacobian_white",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "graymid",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "label",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "annot",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "aparc_aseg",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "sphere_reg",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "aseg_stats",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "wmparc_stats",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "aparc_stats",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "BA_stats",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "aparc_a2009s_stats",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "curv_stats",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "entorhinal_exvivo_stats",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "IO"
+      ],
+      "title": {
+        "name": "IO.IOBase",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "",
+            "argument": "io.IOBase()"
+          }
+        ]
+      },
+      "ports": []
+    },
+    {
+      "category": [
+        "NiPype",
+        "IO"
+      ],
+      "title": {
+        "name": "IO.JSONFileGrabber",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Datagrabber interface that loads a json file and generates an output for",
+            "argument": "io.JSONFileGrabber()"
+          }
+        ]
+      },
+      "ports": []
+    },
+    {
+      "category": [
+        "NiPype",
+        "IO"
+      ],
+      "title": {
+        "name": "IO.JSONFileSink",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Very simple frontend for storing values into a JSON file.",
+            "argument": "io.JSONFileSink()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "IO"
+      ],
+      "title": {
+        "name": "IO.MySQLSink",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "MySQLSink",
+            "argument": "io.MySQLSink()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "host",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "host"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "config",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "config"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "database_name",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "database_name"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "table_name",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "table_name"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "IO"
+      ],
+      "title": {
+        "name": "IO.S3DataGrabber",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Generic datagrabber module that wraps around glob in an",
+            "argument": "io.S3DataGrabber()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "bucket",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bucket"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "sort_filelist",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "sort_filelist"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "template",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "template"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "IO"
+      ],
+      "title": {
+        "name": "IO.SQLiteSink",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "SQLiteSink",
+            "argument": "io.SQLiteSink()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "database_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "database_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "table_name",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "table_name"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "IO"
+      ],
+      "title": {
+        "name": "IO.SSHDataGrabber",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Extension of DataGrabber module that downloads the file list and",
+            "argument": "io.SSHDataGrabber()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "hostname",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "hostname"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "base_directory",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "base_directory"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "sort_filelist",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "sort_filelist"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "template",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "template"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "IO"
+      ],
+      "title": {
+        "name": "IO.SelectFiles",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "SelectFiles",
+            "argument": "io.SelectFiles()"
+          }
+        ]
+      },
+      "ports": []
+    },
+    {
+      "category": [
+        "NiPype",
+        "IO"
+      ],
+      "title": {
+        "name": "IO.XNATSink",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Generic datasink module that takes a directory containing a",
+            "argument": "io.XNATSink()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "server",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "server"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "config",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "config"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "project_id",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "project_id"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "subject_id",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "experiment_id",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "experiment_id"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "IO"
+      ],
+      "title": {
+        "name": "IO.XNATSource",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Generic XNATSource module that wraps around the pyxnat module in",
+            "argument": "io.XNATSource()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "query_template",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "query_template"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "server",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "server"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "config",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "config"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

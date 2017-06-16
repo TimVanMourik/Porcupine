@@ -1,0 +1,2266 @@
+{
+  "nodes": [
+    {
+      "category": [
+        "NiPype",
+        "SPM"
+      ],
+      "title": {
+        "name": "SPM.Analyze2nii",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "",
+            "argument": "spm.Analyze2nii()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "analyze_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "analyze_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "nifti_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "analyze_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "analyze_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "analyze_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "analyze_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "analyze_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "analyze_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "analyze_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SPM"
+      ],
+      "title": {
+        "name": "SPM.ApplyInverseDeformation",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Uses spm to apply inverse deformation stored in a .mat file or a",
+            "argument": "spm.ApplyInverseDeformation()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SPM"
+      ],
+      "title": {
+        "name": "SPM.ApplyTransform",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Uses SPM to apply transform stored in a .mat file to given file",
+            "argument": "spm.ApplyTransform()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "mat",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mat"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SPM"
+      ],
+      "title": {
+        "name": "SPM.CalcCoregAffine",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Uses SPM (spm_coreg) to calculate the transform mapping",
+            "argument": "spm.CalcCoregAffine()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "target",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "target"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "moving",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "moving"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mat",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "moving"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "invmat",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "moving"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SPM"
+      ],
+      "title": {
+        "name": "SPM.Coregister",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Use spm_coreg for estimating cross-modality rigid body alignment",
+            "argument": "spm.Coregister()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "target",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "target"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "source",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "source"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "coregistered_source",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "source"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "coregistered_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "source"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SPM"
+      ],
+      "title": {
+        "name": "SPM.CreateWarped",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Apply a flow field estimated by DARTEL to create warped images",
+            "argument": "spm.CreateWarped()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "image_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "image_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "flowfield_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "flowfield_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "warped_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "flowfield_files"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SPM"
+      ],
+      "title": {
+        "name": "SPM.DARTEL",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Use spm DARTEL to create a template and flow fields",
+            "argument": "spm.DARTEL()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "image_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "image_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "final_template_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "image_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "template_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "image_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "dartel_flow_fields",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "image_files"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SPM"
+      ],
+      "title": {
+        "name": "SPM.DARTELNorm2MNI",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Use spm DARTEL to normalize data to MNI space",
+            "argument": "spm.DARTELNorm2MNI()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "template_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "template_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "flowfield_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "flowfield_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "apply_to_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "apply_to_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "normalized_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "apply_to_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "normalization_parameter_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "apply_to_files"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SPM"
+      ],
+      "title": {
+        "name": "SPM.DicomImport",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Uses spm to convert DICOM files to nii or img+hdr.",
+            "argument": "spm.DicomImport()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SPM"
+      ],
+      "title": {
+        "name": "SPM.EstimateContrast",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Use spm_contrasts to estimate contrasts of interest",
+            "argument": "spm.EstimateContrast()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "spm_mat_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "spm_mat_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "contrasts",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "contrasts"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "beta_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "beta_images"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "residual_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "residual_image"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "con_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "residual_image"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "spmT_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "residual_image"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "ess_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "residual_image"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "spmF_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "residual_image"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "spm_mat_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "residual_image"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SPM"
+      ],
+      "title": {
+        "name": "SPM.EstimateModel",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Use spm_spm to estimate the parameters of a model",
+            "argument": "spm.EstimateModel()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "spm_mat_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "spm_mat_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "estimation_method",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "estimation_method"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mask_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "estimation_method"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "beta_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "estimation_method"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "residual_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "estimation_method"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "residual_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "estimation_method"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "RPVimage",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "estimation_method"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "spm_mat_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "estimation_method"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "labels",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "estimation_method"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "SDerror",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "estimation_method"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "ARcoef",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "estimation_method"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "Cbetas",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "estimation_method"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "SDbetas",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "estimation_method"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SPM"
+      ],
+      "title": {
+        "name": "SPM.Level1Design",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Generate an SPM design matrix",
+            "argument": "spm.Level1Design()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "timing_units",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "timing_units"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "interscan_interval",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "interscan_interval"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "session_info",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "session_info"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "bases",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bases"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "spm_mat_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bases"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SPM"
+      ],
+      "title": {
+        "name": "SPM.MultipleRegressionDesign",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Create SPM design for multiple regression",
+            "argument": "spm.MultipleRegressionDesign()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "spm_mat_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SPM"
+      ],
+      "title": {
+        "name": "SPM.NewSegment",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Use spm_preproc8 (New Segment) to separate structural images into",
+            "argument": "spm.NewSegment()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "channel_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "channel_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "native_class_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "channel_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "dartel_input_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "channel_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "normalized_class_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "channel_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "modulated_class_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "channel_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "transformation_mat",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "channel_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "bias_corrected_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "channel_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "bias_field_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "channel_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "forward_deformation_field",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "channel_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "inverse_deformation_field",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "channel_files"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SPM"
+      ],
+      "title": {
+        "name": "SPM.Normalize",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "use spm_normalise for warping an image to a template",
+            "argument": "spm.Normalize()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "template",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "template"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "source",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "source"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "parameter_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "parameter_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "normalization_parameters",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "parameter_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "normalized_source",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "parameter_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "normalized_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "parameter_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SPM"
+      ],
+      "title": {
+        "name": "SPM.Normalize12",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "uses SPM12's new Normalise routine for warping an image to a template.",
+            "argument": "spm.Normalize12()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "image_to_align",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "image_to_align"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "deformation_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "deformation_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "deformation_field",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "deformation_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "normalized_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "deformation_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "normalized_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "deformation_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SPM"
+      ],
+      "title": {
+        "name": "SPM.OneSampleTTestDesign",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Create SPM design for one sample t-test",
+            "argument": "spm.OneSampleTTestDesign()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "spm_mat_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SPM"
+      ],
+      "title": {
+        "name": "SPM.PairedTTestDesign",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Create SPM design for paired t-test",
+            "argument": "spm.PairedTTestDesign()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "paired_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "paired_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "spm_mat_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "paired_files"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SPM"
+      ],
+      "title": {
+        "name": "SPM.Realign",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Use spm_realign for estimating within modality rigid body alignment",
+            "argument": "spm.Realign()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mean_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "modified_in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "realigned_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "realignment_parameters",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SPM"
+      ],
+      "title": {
+        "name": "SPM.Reslice",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "uses  spm_reslice to resample in_file into space of space_defining",
+            "argument": "spm.Reslice()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "space_defining",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "space_defining"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "space_defining"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SPM"
+      ],
+      "title": {
+        "name": "SPM.ResliceToReference",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Uses spm to reslice a volume to a target image space or to a provided",
+            "argument": "spm.ResliceToReference()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SPM"
+      ],
+      "title": {
+        "name": "SPM.Segment",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "use spm_segment to separate structural images into different",
+            "argument": "spm.Segment()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "data",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "data"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "native_gm_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "data"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "normalized_gm_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "data"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "modulated_gm_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "data"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "native_wm_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "data"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "normalized_wm_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "data"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "modulated_wm_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "data"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "native_csf_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "data"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "normalized_csf_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "data"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "modulated_csf_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "data"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "modulated_input_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "data"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "bias_corrected_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "data"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "transformation_mat",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "data"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "inverse_transformation_mat",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "data"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SPM"
+      ],
+      "title": {
+        "name": "SPM.SliceTiming",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Use spm to perform slice timing correction.",
+            "argument": "spm.SliceTiming()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "num_slices",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "num_slices"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "time_repetition",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "time_repetition"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "time_acquisition",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "time_acquisition"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "slice_order",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "slice_order"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "ref_slice",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ref_slice"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "timecorrected_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ref_slice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SPM"
+      ],
+      "title": {
+        "name": "SPM.Smooth",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Use spm_smooth for 3D Gaussian smoothing of image volumes.",
+            "argument": "spm.Smooth()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "smoothed_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SPM"
+      ],
+      "title": {
+        "name": "SPM.Threshold",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Topological FDR thresholding based on cluster extent/size. Smoothness is",
+            "argument": "spm.Threshold()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "spm_mat_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "spm_mat_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "stat_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "stat_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "contrast_index",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "contrast_index"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "thresholded_map",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "contrast_index"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "n_clusters",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "contrast_index"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "pre_topo_fdr_map",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "contrast_index"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "pre_topo_n_clusters",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "contrast_index"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "activation_forced",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "contrast_index"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "cluster_forming_thr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "contrast_index"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SPM"
+      ],
+      "title": {
+        "name": "SPM.TwoSampleTTestDesign",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Create SPM design for two sample t-test",
+            "argument": "spm.TwoSampleTTestDesign()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "group1_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "group1_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "group2_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "group2_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "spm_mat_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "group2_files"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SPM"
+      ],
+      "title": {
+        "name": "SPM.VBMSegment",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Use VBM8 toolbox to separate structural images into different",
+            "argument": "spm.VBMSegment()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "native_class_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "dartel_input_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "normalized_class_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "modulated_class_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "transformation_mat",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "bias_corrected_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "normalized_bias_corrected_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "pve_label_native_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "pve_label_normalized_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "pve_label_registered_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "forward_deformation_field",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "inverse_deformation_field",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "jacobian_determinant_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

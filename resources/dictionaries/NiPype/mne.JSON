@@ -1,0 +1,130 @@
+{
+  "nodes": [
+    {
+      "category": [
+        "NiPype",
+        "MNE"
+      ],
+      "title": {
+        "name": "MNE.WatershedBEM",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **mne_watershed_bem**",
+            "argument": "mne.WatershedBEM()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "subject_id",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "subjects_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "mesh_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "brain_surface",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "inner_skull_surface",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outer_skull_surface",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outer_skin_surface",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "fif_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "cor_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

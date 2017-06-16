@@ -111,7 +111,7 @@ NodeTreeItem::NodeTreeItem(
         {
             continue;
         }
-        if(pair->getArgument()->isEditable())
+        if(pair->getArgument()->isVisible())
         {
             fileName->setDisabled(false);
         }

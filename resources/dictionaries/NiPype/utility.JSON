@@ -1,0 +1,303 @@
+{
+  "nodes": [
+    {
+      "category": [
+        "NiPype",
+        "UTILITY"
+      ],
+      "title": {
+        "name": "UTILITY.AssertEqual",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "",
+            "argument": "utility.AssertEqual()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "volume1",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "volume1"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "volume2",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "volume2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "UTILITY"
+      ],
+      "title": {
+        "name": "UTILITY.CSVReader",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Examples",
+            "argument": "utility.CSVReader()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "UTILITY"
+      ],
+      "title": {
+        "name": "UTILITY.Function",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Function",
+            "argument": "utility.Function()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "function_str",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "function_str"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "UTILITY"
+      ],
+      "title": {
+        "name": "UTILITY.IdentityInterface",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "IdentityInterface",
+            "argument": "utility.IdentityInterface()"
+          }
+        ]
+      },
+      "ports": []
+    },
+    {
+      "category": [
+        "NiPype",
+        "UTILITY"
+      ],
+      "title": {
+        "name": "UTILITY.Merge",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Basic interface class to merge inputs into a single list",
+            "argument": "utility.Merge()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "function_str"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "UTILITY"
+      ],
+      "title": {
+        "name": "UTILITY.Rename",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Change the name of a file based on a mapped format string.",
+            "argument": "utility.Rename()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "format_string",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "format_string"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "format_string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "UTILITY"
+      ],
+      "title": {
+        "name": "UTILITY.Select",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Basic interface class to select specific elements from a list",
+            "argument": "utility.Select()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "inlist",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inlist"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "index",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "index"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "out",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "index"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "UTILITY"
+      ],
+      "title": {
+        "name": "UTILITY.Split",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Basic interface class to split lists into multiple outputs",
+            "argument": "utility.Split()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "inlist",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inlist"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "name": "splits",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "splits"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

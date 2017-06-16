@@ -1,0 +1,4665 @@
+{
+	"nodes": [
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_glm.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_glm.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_DesignMatrix"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_ReferenceVolume",
+					"code": {
+						"language": "TvM",
+						"argument": "i_ReferenceVolume"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SourceDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SourceDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_FunctionalFiles",
+					"code": {
+						"language": "TvM",
+						"argument": "i_FunctionalFiles"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Mask",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Mask"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_FunctionalSelection",
+					"code": {
+						"language": "TvM",
+						"argument": "i_FunctionalSelection"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_Betas",
+					"code": {
+						"language": "TvM",
+						"argument": "o_Betas"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_ResidualSumOfSquares",
+					"code": {
+						"language": "TvM",
+						"argument": "o_ResidualSumOfSquares"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_glmToFMap.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_glmToFMap.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_DesignMatrix"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Betas",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Betas"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_ResidualSumOfSquares",
+					"code": {
+						"language": "TvM",
+						"argument": "i_ResidualSumOfSquares"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Contrast",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Contrast"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_FMap",
+					"code": {
+						"language": "TvM",
+						"argument": "o_FMap"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_glmToTMap.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_glmToTMap.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_DesignMatrix"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Betas",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Betas"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_ResidualSumOfSquares",
+					"code": {
+						"language": "TvM",
+						"argument": "i_ResidualSumOfSquares"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Contrast",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Contrast"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_TMap",
+					"code": {
+						"language": "TvM",
+						"argument": "o_TMap"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_regressConfounds.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_regressConfounds.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_DesignMatrix"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_FunctionalFolder",
+					"code": {
+						"language": "TvM",
+						"argument": "i_FunctionalFolder"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_FunctionalFiles",
+					"code": {
+						"language": "TvM",
+						"argument": "i_FunctionalFiles"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Confounds",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Confounds"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_FilteredFolder",
+					"code": {
+						"language": "TvM",
+						"argument": "o_FilteredFolder"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_design_addMatrix.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_design_addMatrix.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_DesignMatrix"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Label",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Label"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Matrix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Matrix"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "o_DesignMatrix"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_design_addVector.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_design_addVector.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_DesignMatrix"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Vector",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Vector"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "o_DesignMatrix"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_design_constant.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_design_constant.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_DesignMatrix"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "o_DesignMatrix"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_design_empty.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_design_empty.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_FunctionalFiles",
+					"code": {
+						"language": "TvM",
+						"argument": "i_FunctionalFiles"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_FunctionalFolder",
+					"code": {
+						"language": "TvM",
+						"argument": "i_FunctionalFolder"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "o_DesignMatrix"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_design_fir.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_design_fir.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_DesignMatrix"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "o_DesignMatrix"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_design_highpassFilter.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_design_highpassFilter.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_DesignMatrix"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_CutOffFrequency",
+					"code": {
+						"language": "TvM",
+						"argument": "i_CutOffFrequency"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_TR",
+					"code": {
+						"language": "TvM",
+						"argument": "i_TR"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "o_DesignMatrix"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_design_linearTrend.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_design_linearTrend.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_DesignMatrix"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "o_DesignMatrix"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_design_motionRegression.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_design_motionRegression.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_DesignMatrix"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_MotionFiles",
+					"code": {
+						"language": "TvM",
+						"argument": "i_MotionFiles"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "o_DesignMatrix"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_design_orthogonalise.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_design_orthogonalise.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_DesignMatrix"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Order",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Order"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "o_DesignMatrix"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_design_removeVolumes.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_design_removeVolumes.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_DesignMatrix"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Deletions",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Deletions"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "o_DesignMatrix"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_design_reorderRegressors.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_design_reorderRegressors.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_DesignMatrix"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Order",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Order"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "o_DesignMatrix"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_design_retroicor.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_design_retroicor.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_DesignMatrix"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_PhysioFiles",
+					"code": {
+						"language": "TvM",
+						"argument": "i_PhysioFiles"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_ScanTriggers",
+					"code": {
+						"language": "TvM",
+						"argument": "i_ScanTriggers"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Order",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Order"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Type",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Type"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "o_DesignMatrix"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_design_saveToImage.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_design_saveToImage.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_DesignMatrix"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_Image",
+					"code": {
+						"language": "TvM",
+						"argument": "o_Image"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_design_stimulus.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_design_stimulus.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_DesignMatrix"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Stimulus",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Stimulus"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_HrfParameters",
+					"code": {
+						"language": "TvM",
+						"argument": "i_HrfParameters"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Labels",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Labels"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_TR",
+					"code": {
+						"language": "TvM",
+						"argument": "i_TR"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_TemporalDerivative",
+					"code": {
+						"language": "TvM",
+						"argument": "i_TemporalDerivative"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_DispersionDerivative",
+					"code": {
+						"language": "TvM",
+						"argument": "i_DispersionDerivative"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_DiagonaliseElements",
+					"code": {
+						"language": "TvM",
+						"argument": "i_DiagonaliseElements"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "o_DesignMatrix"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_computeCurvature.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_computeCurvature.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Potential",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Potential"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_White",
+					"code": {
+						"language": "TvM",
+						"argument": "i_White"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Pial",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Pial"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Order",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Order"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_Curvature",
+					"code": {
+						"language": "TvM",
+						"argument": "o_Curvature"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_computeDivergence.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_computeDivergence.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_VectorField",
+					"code": {
+						"language": "TvM",
+						"argument": "i_VectorField"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Order",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Order"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_Divergence",
+					"code": {
+						"language": "TvM",
+						"argument": "o_Divergence"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_computeGradient.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_computeGradient.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_White",
+					"code": {
+						"language": "TvM",
+						"argument": "i_White"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Pial",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Pial"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Normalise",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Normalise"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Order",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Order"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_WhiteGradient",
+					"code": {
+						"language": "TvM",
+						"argument": "o_WhiteGradient"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_PialGradient",
+					"code": {
+						"language": "TvM",
+						"argument": "o_PialGradient"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_designMatrixToTimeCourse.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_designMatrixToTimeCourse.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_DesignMatrix"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_FunctionalFolder",
+					"code": {
+						"language": "TvM",
+						"argument": "i_FunctionalFolder"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_FunctionalFiles",
+					"code": {
+						"language": "TvM",
+						"argument": "i_FunctionalFiles"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_RegressionApproach",
+					"code": {
+						"language": "TvM",
+						"argument": "i_RegressionApproach"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_TimeCourse",
+					"code": {
+						"language": "TvM",
+						"argument": "o_TimeCourse"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_gradient.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_gradient.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Potential",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Potential"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Normalise",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Normalise"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_Gradient",
+					"code": {
+						"language": "TvM",
+						"argument": "o_Gradient"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_laplacePotentials.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_laplacePotentials.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_White",
+					"code": {
+						"language": "TvM",
+						"argument": "i_White"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Pial",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Pial"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_B0",
+					"code": {
+						"language": "TvM",
+						"argument": "i_B0"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_B1",
+					"code": {
+						"language": "TvM",
+						"argument": "i_B1"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_LaplacePotential",
+					"code": {
+						"language": "TvM",
+						"argument": "o_LaplacePotential"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_layerPipeline.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_layerPipeline.m"
+				}
+			},
+			"ports": {
+				"input": true,
+				"output": true,
+				"visible": true,
+				"name": "i_SubjectDirectory",
+				"code": {
+					"language": "TvM",
+					"argument": "i_SubjectDirectory"
+				}
+			}
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_leprincePotential.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_leprincePotential.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_White",
+					"code": {
+						"language": "TvM",
+						"argument": "i_White"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Pial",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Pial"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Potential",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Potential"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Gradient",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Gradient"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Curvature",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Curvature"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_B0",
+					"code": {
+						"language": "TvM",
+						"argument": "i_B0"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_B1",
+					"code": {
+						"language": "TvM",
+						"argument": "i_B1"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Epsilon",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Epsilon"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_EquivolumePotential",
+					"code": {
+						"language": "TvM",
+						"argument": "o_EquivolumePotential"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_EquidistantPotential",
+					"code": {
+						"language": "TvM",
+						"argument": "o_EquidistantPotential"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_levelSetToObj.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_levelSetToObj.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_LevelSet",
+					"code": {
+						"language": "TvM",
+						"argument": "i_LevelSet"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_ObjFile",
+					"code": {
+						"language": "TvM",
+						"argument": "o_ObjFile"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_makeLevelSet.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_makeLevelSet.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_ReferenceVolume",
+					"code": {
+						"language": "TvM",
+						"argument": "i_ReferenceVolume"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_ObjWhite",
+					"code": {
+						"language": "TvM",
+						"argument": "i_ObjWhite"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_ObjPial",
+					"code": {
+						"language": "TvM",
+						"argument": "i_ObjPial"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Matrix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Matrix"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_UpsampleFactor",
+					"code": {
+						"language": "TvM",
+						"argument": "i_UpsampleFactor"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_SdfWhite",
+					"code": {
+						"language": "TvM",
+						"argument": "o_SdfWhite"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_SdfPial",
+					"code": {
+						"language": "TvM",
+						"argument": "o_SdfPial"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_White",
+					"code": {
+						"language": "TvM",
+						"argument": "o_White"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_Pial",
+					"code": {
+						"language": "TvM",
+						"argument": "o_Pial"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_objToBoundary.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_objToBoundary.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_ObjFile",
+					"code": {
+						"language": "TvM",
+						"argument": "i_ObjFile"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_BoundaryFile",
+					"code": {
+						"language": "TvM",
+						"argument": "o_BoundaryFile"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_potentialtoLayers.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_potentialtoLayers.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_White",
+					"code": {
+						"language": "TvM",
+						"argument": "i_White"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Pial",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Pial"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Potential",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Potential"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Levels",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Levels"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_Layering",
+					"code": {
+						"language": "TvM",
+						"argument": "o_Layering"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_roiToDesignMatrix.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_roiToDesignMatrix.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_ROI",
+					"code": {
+						"language": "TvM",
+						"argument": "i_ROI"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Layers",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Layers"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "o_DesignMatrix"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_volumetricLayering.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_volumetricLayering.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_White",
+					"code": {
+						"language": "TvM",
+						"argument": "i_White"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Pial",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Pial"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Gradient",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Gradient"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Curvature",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Curvature"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Levels",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Levels"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_UpsampleFactor",
+					"code": {
+						"language": "TvM",
+						"argument": "i_UpsampleFactor"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_Layering",
+					"code": {
+						"language": "TvM",
+						"argument": "o_Layering"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_LevelSet",
+					"code": {
+						"language": "TvM",
+						"argument": "o_LevelSet"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_dicomSort.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_dicomSort.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_MoveOption",
+					"code": {
+						"language": "TvM",
+						"argument": "i_MoveOption"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_Curvature",
+					"code": {
+						"language": "TvM",
+						"argument": "o_Curvature"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_dicomsToNifti.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_dicomsToNifti.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SourceDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SourceDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Characteristic",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Characteristic"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_filterFunctionals.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_filterFunctionals.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SourceDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SourceDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_LowPass",
+					"code": {
+						"language": "TvM",
+						"argument": "i_LowPass"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_HighPass",
+					"code": {
+						"language": "TvM",
+						"argument": "i_HighPass"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_TR",
+					"code": {
+						"language": "TvM",
+						"argument": "i_TR"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Qsub",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Qsub"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_OutputDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "o_OutputDirectory"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_modifyMp2rage.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_modifyMp2rage.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_ContrastImage",
+					"code": {
+						"language": "TvM",
+						"argument": "i_ContrastImage"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_BlackBackgroundImage",
+					"code": {
+						"language": "TvM",
+						"argument": "i_BlackBackgroundImage"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Threshold",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Threshold"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_OutputFile",
+					"code": {
+						"language": "TvM",
+						"argument": "o_OutputFile"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_moveNiftis.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_moveNiftis.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SourceDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SourceDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Characteristic",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Characteristic"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_OutputDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "o_OutputDirectory"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_realignFunctionals.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_realignFunctionals.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SourceDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SourceDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Characteristic",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Characteristic"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_OutputDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "o_OutputDirectory"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_MeanFunctional",
+					"code": {
+						"language": "TvM",
+						"argument": "o_MeanFunctional"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_reconAll.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_reconAll.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Structural",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Structural"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_HighRes",
+					"code": {
+						"language": "TvM",
+						"argument": "i_HighRes"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_ExpertFile",
+					"code": {
+						"language": "TvM",
+						"argument": "i_ExpertFile"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_ComputationTime",
+					"code": {
+						"language": "TvM",
+						"argument": "i_ComputationTime"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Memory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Memory"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_FreeSurferFolder",
+					"code": {
+						"language": "TvM",
+						"argument": "o_FreeSurferFolder"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_smoothFunctionals.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_smoothFunctionals.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SourceDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SourceDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SmoothingKernel",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SmoothingKernel"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Qsub",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Qsub"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_OutputDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "o_OutputDirectory"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_functionToMFile.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_functionToMFile.m"
+				}
+			},
+			"ports": null
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_publishMFile.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_publishMFile.m"
+				}
+			},
+			"ports": null
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_applyDisplacementMap.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_applyDisplacementMap.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_DisplacementMap",
+					"code": {
+						"language": "TvM",
+						"argument": "i_DisplacementMap"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Boundaries",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Boundaries"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_Boundaries",
+					"code": {
+						"language": "TvM",
+						"argument": "o_Boundaries"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_applyVdmToBoundaries.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_applyVdmToBoundaries.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Boundaries",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Boundaries"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_VoxelDisplacementMap",
+					"code": {
+						"language": "TvM",
+						"argument": "i_VoxelDisplacementMap"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_TransformationFunction",
+					"code": {
+						"language": "TvM",
+						"argument": "i_TransformationFunction"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_DistortionDimenions",
+					"code": {
+						"language": "TvM",
+						"argument": "i_DistortionDimenions"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_Boundaries",
+					"code": {
+						"language": "TvM",
+						"argument": "o_Boundaries"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_basisFunctionBoundaryRegistration.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_basisFunctionBoundaryRegistration.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_ReferenceVolume",
+					"code": {
+						"language": "TvM",
+						"argument": "i_ReferenceVolume"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Boundaries",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Boundaries"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Mask",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Mask"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_Boundaries",
+					"code": {
+						"language": "TvM",
+						"argument": "o_Boundaries"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_boundariesToObj.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_boundariesToObj.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Boundaries",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Boundaries"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_ObjWhite",
+					"code": {
+						"language": "TvM",
+						"argument": "o_ObjWhite"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_ObjPial",
+					"code": {
+						"language": "TvM",
+						"argument": "o_ObjPial"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_boundaryBasedRegistration.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_boundaryBasedRegistration.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_ReferenceVolume",
+					"code": {
+						"language": "TvM",
+						"argument": "i_ReferenceVolume"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Mask",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Mask"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_CoregistrationMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_CoregistrationMatrix"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Boundaries",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Boundaries"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_CoregistrationMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "o_CoregistrationMatrix"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_Boundaries",
+					"code": {
+						"language": "TvM",
+						"argument": "o_Boundaries"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_convertRegisterDat.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_convertRegisterDat.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_RegistrationVolume",
+					"code": {
+						"language": "TvM",
+						"argument": "i_RegistrationVolume"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_FreeSurferFolder",
+					"code": {
+						"language": "TvM",
+						"argument": "i_FreeSurferFolder"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_RegisterDat",
+					"code": {
+						"language": "TvM",
+						"argument": "i_RegisterDat"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_Boundaries",
+					"code": {
+						"language": "TvM",
+						"argument": "o_Boundaries"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_CoregistrationMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "o_CoregistrationMatrix"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_freesurferBoundariesToVolume.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_freesurferBoundariesToVolume.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_RegistrationVolume",
+					"code": {
+						"language": "TvM",
+						"argument": "i_RegistrationVolume"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_FreeSurferFolder",
+					"code": {
+						"language": "TvM",
+						"argument": "i_FreeSurferFolder"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_Boundaries",
+					"code": {
+						"language": "TvM",
+						"argument": "o_Boundaries"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_matrixToRegisterDat.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_matrixToRegisterDat.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_ReferenceVolume",
+					"code": {
+						"language": "TvM",
+						"argument": "i_ReferenceVolume"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_MoveVolume",
+					"code": {
+						"language": "TvM",
+						"argument": "i_MoveVolume"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_CoregistrationMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_CoregistrationMatrix"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_RegisterDat",
+					"code": {
+						"language": "TvM",
+						"argument": "o_RegisterDat"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_multiplyMatrices.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_multiplyMatrices.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Matrices",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Matrices"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_Matrix",
+					"code": {
+						"language": "TvM",
+						"argument": "o_Matrix"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_recursiveBoundaryRegistration.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_recursiveBoundaryRegistration.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_ReferenceVolume",
+					"code": {
+						"language": "TvM",
+						"argument": "i_ReferenceVolume"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Boundaries",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Boundaries"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Mask",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Mask"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_Boundaries",
+					"code": {
+						"language": "TvM",
+						"argument": "o_Boundaries"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_registerVolumes.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_registerVolumes.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_ReferenceVolume",
+					"code": {
+						"language": "TvM",
+						"argument": "i_ReferenceVolume"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_FreeSurferFolder",
+					"code": {
+						"language": "TvM",
+						"argument": "i_FreeSurferFolder"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_CoregistrationMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_CoregistrationMatrix"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_CoregistrationMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "o_CoregistrationMatrix"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_Boundaries",
+					"code": {
+						"language": "TvM",
+						"argument": "o_Boundaries"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_resampleVolume.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_resampleVolume.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_ReferenceVolume",
+					"code": {
+						"language": "TvM",
+						"argument": "i_ReferenceVolume"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_VoxelSize",
+					"code": {
+						"language": "TvM",
+						"argument": "i_VoxelSize"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_OutputVolume",
+					"code": {
+						"language": "TvM",
+						"argument": "o_OutputVolume"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_resliceVolume.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_resliceVolume.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_ReferenceVolume",
+					"code": {
+						"language": "TvM",
+						"argument": "i_ReferenceVolume"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_CoregistrationMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_CoregistrationMatrix"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_MoveVolumes",
+					"code": {
+						"language": "TvM",
+						"argument": "i_MoveVolumes"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_InterpolationMethod",
+					"code": {
+						"language": "TvM",
+						"argument": "i_InterpolationMethod"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_InverseRegistration",
+					"code": {
+						"language": "TvM",
+						"argument": "i_InverseRegistration"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_OutputVolumes",
+					"code": {
+						"language": "TvM",
+						"argument": "o_OutputVolumes"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_sineEnhanceRegistration.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_sineEnhanceRegistration.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_ReferenceVolume",
+					"code": {
+						"language": "TvM",
+						"argument": "i_ReferenceVolume"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_TransformStack",
+					"code": {
+						"language": "TvM",
+						"argument": "i_TransformStack"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Filter",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Filter"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_DisplacementMap",
+					"code": {
+						"language": "TvM",
+						"argument": "o_DisplacementMap"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_transFormStackToDisplacementMap.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_transFormStackToDisplacementMap.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_ReferenceVolume",
+					"code": {
+						"language": "TvM",
+						"argument": "i_ReferenceVolume"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_TransformStack",
+					"code": {
+						"language": "TvM",
+						"argument": "i_TransformStack"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Filter",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Filter"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_DisplacementMap",
+					"code": {
+						"language": "TvM",
+						"argument": "o_DisplacementMap"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_transFormStackToSineDisplacementMap.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_transFormStackToSineDisplacementMap.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_ReferenceVolume",
+					"code": {
+						"language": "TvM",
+						"argument": "i_ReferenceVolume"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_TransformStack",
+					"code": {
+						"language": "TvM",
+						"argument": "i_TransformStack"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Filter",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Filter"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_DisplacementMap",
+					"code": {
+						"language": "TvM",
+						"argument": "o_DisplacementMap"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_useBbregister.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_useBbregister.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_RegistrationVolume",
+					"code": {
+						"language": "TvM",
+						"argument": "i_RegistrationVolume"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_FreeSurferFolder",
+					"code": {
+						"language": "TvM",
+						"argument": "i_FreeSurferFolder"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SpmInitialisation",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SpmInitialisation"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_FslInitialisation",
+					"code": {
+						"language": "TvM",
+						"argument": "i_FslInitialisation"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Contrast",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Contrast"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_DegreesOfFreedom",
+					"code": {
+						"language": "TvM",
+						"argument": "i_DegreesOfFreedom"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_InititialMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_InititialMatrix"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_Boundaries",
+					"code": {
+						"language": "TvM",
+						"argument": "o_Boundaries"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_RegisterDat",
+					"code": {
+						"language": "TvM",
+						"argument": "o_RegisterDat"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_CoregistrationMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "o_CoregistrationMatrix"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_volumeWithBoundariesToMovie.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_volumeWithBoundariesToMovie.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_ReferenceVolume",
+					"code": {
+						"language": "TvM",
+						"argument": "i_ReferenceVolume"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Boundaries",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Boundaries"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Axis",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Axis"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_FramesPerSecond",
+					"code": {
+						"language": "TvM",
+						"argument": "i_FramesPerSecond"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_MovieQuality",
+					"code": {
+						"language": "TvM",
+						"argument": "i_MovieQuality"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_ContourColors",
+					"code": {
+						"language": "TvM",
+						"argument": "i_ContourColors"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_RegionOfInterest",
+					"code": {
+						"language": "TvM",
+						"argument": "i_RegionOfInterest"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_ColorLimits",
+					"code": {
+						"language": "TvM",
+						"argument": "i_ColorLimits"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Rotation",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Rotation"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Contrast",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Contrast"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_RegistrationMovie",
+					"code": {
+						"language": "TvM",
+						"argument": "o_RegistrationMovie"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_warpVolumes.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_warpVolumes.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_DisplacementMap",
+					"code": {
+						"language": "TvM",
+						"argument": "i_DisplacementMap"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Volume",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Volume"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_Volume",
+					"code": {
+						"language": "TvM",
+						"argument": "o_Volume"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_averageVolumes.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_averageVolumes.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_NiftiFiles",
+					"code": {
+						"language": "TvM",
+						"argument": "i_NiftiFiles"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_MeanVolume",
+					"code": {
+						"language": "TvM",
+						"argument": "o_MeanVolume"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_backupFiles.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_backupFiles.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Files",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Files"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Suffix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Suffix"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_computeMeanVolume.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_computeMeanVolume.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SourceDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SourceDirectory"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_MeanFile",
+					"code": {
+						"language": "TvM",
+						"argument": "o_MeanFile"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_intersectVolumes.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_intersectVolumes.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_InputVolumes",
+					"code": {
+						"language": "TvM",
+						"argument": "i_InputVolumes"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_IntersectionVolumes",
+					"code": {
+						"language": "TvM",
+						"argument": "i_IntersectionVolumes"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_OutputVolumes",
+					"code": {
+						"language": "TvM",
+						"argument": "o_OutputVolumes"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_mergeVolumes.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_mergeVolumes.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_InputVolumes",
+					"code": {
+						"language": "TvM",
+						"argument": "i_InputVolumes"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_OutputVolume",
+					"code": {
+						"language": "TvM",
+						"argument": "o_OutputVolume"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_movieFrom4D.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_movieFrom4D.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_VolumeFile",
+					"code": {
+						"language": "TvM",
+						"argument": "i_VolumeFile"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Axis",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Axis"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_FramesPerSecond",
+					"code": {
+						"language": "TvM",
+						"argument": "i_FramesPerSecond"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_MovieQuality",
+					"code": {
+						"language": "TvM",
+						"argument": "i_MovieQuality"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_ColorLimits",
+					"code": {
+						"language": "TvM",
+						"argument": "i_ColorLimits"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Slice",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Slice"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Contrast",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Contrast"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_Movie",
+					"code": {
+						"language": "TvM",
+						"argument": "o_Movie"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_restoreBackupFiles.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_restoreBackupFiles.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Files",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Files"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Suffix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Suffix"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_retroicorBackProject.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_retroicorBackProject.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_DesignMatrix",
+					"code": {
+						"language": "TvM",
+						"argument": "i_DesignMatrix"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Betas",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Betas"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_TemplateVolume",
+					"code": {
+						"language": "TvM",
+						"argument": "i_TemplateVolume"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Resolution",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Resolution"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Order",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Order"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_PhysioType",
+					"code": {
+						"language": "TvM",
+						"argument": "i_PhysioType"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_BackProjection",
+					"code": {
+						"language": "TvM",
+						"argument": "o_BackProjection"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_thresholdVolume.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_thresholdVolume.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Volume",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Volume"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_Threshold",
+					"code": {
+						"language": "TvM",
+						"argument": "i_Threshold"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_ThresholdedVolume",
+					"code": {
+						"language": "TvM",
+						"argument": "o_ThresholdedVolume"
+					}
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM"
+			],
+			"title": {
+				"name": "tvm_unionVolumes.m",
+				"code": {
+					"language": "TvM",
+					"comment": "",
+					"argument": "tvm_unionVolumes.m"
+				}
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_SubjectDirectory",
+					"code": {
+						"language": "TvM",
+						"argument": "i_SubjectDirectory"
+					}
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"name": "i_InputVolumes",
+					"code": {
+						"language": "TvM",
+						"argument": "i_InputVolumes"
+					}
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"name": "o_OutputVolume",
+					"code": {
+						"language": "TvM",
+						"argument": "o_OutputVolume"
+					}
+				}
+			]
+		}
+	]
+}

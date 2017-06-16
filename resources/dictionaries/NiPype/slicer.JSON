@@ -1,0 +1,2104 @@
+{
+  "nodes": [
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.ACPCTransform",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **ACPCTransform **",
+            "argument": "slicer.ACPCTransform()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputTransform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.AddScalarVolumes",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **AddScalarVolumes **",
+            "argument": "slicer.AddScalarVolumes()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.AffineRegistration",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **AffineRegistration **",
+            "argument": "slicer.AffineRegistration()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputtransform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "resampledmovingfilename",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.BRAINSDemonWarp",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **BRAINSDemonWarp **",
+            "argument": "slicer.BRAINSDemonWarp()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputDisplacementFieldVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputCheckerboardVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.BRAINSFit",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **BRAINSFit **",
+            "argument": "slicer.BRAINSFit()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "bsplineTransform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "linearTransform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputFixedVolumeROI",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputMovingVolumeROI",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "strippedOutputTransform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputTransform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.BRAINSROIAuto",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **BRAINSROIAuto **",
+            "argument": "slicer.BRAINSROIAuto()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputROIMaskVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputClippedVolumeROI",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.BRAINSResample",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **BRAINSResample **",
+            "argument": "slicer.BRAINSResample()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.BSplineDeformableRegistration",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **BSplineDeformableRegistration **",
+            "argument": "slicer.BSplineDeformableRegistration()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputtransform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputwarp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "resampledmovingfilename",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.BSplineToDeformationField",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **BSplineToDeformationField **",
+            "argument": "slicer.BSplineToDeformationField()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "defImage",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.CastScalarVolume",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **CastScalarVolume **",
+            "argument": "slicer.CastScalarVolume()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "OutputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.CheckerBoardFilter",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **CheckerBoardFilter **",
+            "argument": "slicer.CheckerBoardFilter()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.CurvatureAnisotropicDiffusion",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **CurvatureAnisotropicDiffusion **",
+            "argument": "slicer.CurvatureAnisotropicDiffusion()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.DTIexport",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **DTIexport **",
+            "argument": "slicer.DTIexport()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputFile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.DTIimport",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **DTIimport **",
+            "argument": "slicer.DTIimport()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputTensor",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.DWIJointRicianLMMSEFilter",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **DWIJointRicianLMMSEFilter **",
+            "argument": "slicer.DWIJointRicianLMMSEFilter()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.DWIRicianLMMSEFilter",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **DWIRicianLMMSEFilter **",
+            "argument": "slicer.DWIRicianLMMSEFilter()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.DWIToDTIEstimation",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **DWIToDTIEstimation **",
+            "argument": "slicer.DWIToDTIEstimation()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputTensor",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputBaseline",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.DWIUnbiasedNonLocalMeansFilter",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **DWIUnbiasedNonLocalMeansFilter **",
+            "argument": "slicer.DWIUnbiasedNonLocalMeansFilter()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.DicomToNrrdConverter",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **DicomToNrrdConverter **",
+            "argument": "slicer.DicomToNrrdConverter()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputDirectory",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.DiffusionTensorScalarMeasurements",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **DiffusionTensorScalarMeasurements **",
+            "argument": "slicer.DiffusionTensorScalarMeasurements()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputScalar",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.DiffusionWeightedVolumeMasking",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **DiffusionWeightedVolumeMasking **",
+            "argument": "slicer.DiffusionWeightedVolumeMasking()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputBaseline",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "thresholdMask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.EMSegmentCommandLine",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **EMSegmentCommandLine **",
+            "argument": "slicer.EMSegmentCommandLine()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "resultVolumeFileName",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "generateEmptyMRMLSceneAndQuit",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "resultMRMLSceneFileName",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.EMSegmentTransformToNewFormat",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **EMSegmentTransformToNewFormat **",
+            "argument": "slicer.EMSegmentTransformToNewFormat()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputMRMLFileName",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.ExpertAutomatedRegistration",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **ExpertAutomatedRegistration **",
+            "argument": "slicer.ExpertAutomatedRegistration()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "resampledImage",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "saveTransform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.ExtractSkeleton",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **ExtractSkeleton **",
+            "argument": "slicer.ExtractSkeleton()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "OutputImageFileName",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.FiducialRegistration",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **FiducialRegistration **",
+            "argument": "slicer.FiducialRegistration()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "saveTransform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.GaussianBlurImageFilter",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **GaussianBlurImageFilter **",
+            "argument": "slicer.GaussianBlurImageFilter()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.GradientAnisotropicDiffusion",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **GradientAnisotropicDiffusion **",
+            "argument": "slicer.GradientAnisotropicDiffusion()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.GrayscaleFillHoleImageFilter",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **GrayscaleFillHoleImageFilter **",
+            "argument": "slicer.GrayscaleFillHoleImageFilter()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.GrayscaleGrindPeakImageFilter",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **GrayscaleGrindPeakImageFilter **",
+            "argument": "slicer.GrayscaleGrindPeakImageFilter()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.GrayscaleModelMaker",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **GrayscaleModelMaker **",
+            "argument": "slicer.GrayscaleModelMaker()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "OutputGeometry",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.HistogramMatching",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **HistogramMatching **",
+            "argument": "slicer.HistogramMatching()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.ImageLabelCombine",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **ImageLabelCombine **",
+            "argument": "slicer.ImageLabelCombine()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "OutputLabelMap",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.IntensityDifferenceMetric",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **IntensityDifferenceMetric **",
+            "argument": "slicer.IntensityDifferenceMetric()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "reportFileName",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.LabelMapSmoothing",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **LabelMapSmoothing **",
+            "argument": "slicer.LabelMapSmoothing()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.LinearRegistration",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **LinearRegistration **",
+            "argument": "slicer.LinearRegistration()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputtransform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "resampledmovingfilename",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.MaskScalarVolume",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **MaskScalarVolume **",
+            "argument": "slicer.MaskScalarVolume()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "OutputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.MedianImageFilter",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **MedianImageFilter **",
+            "argument": "slicer.MedianImageFilter()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.MergeModels",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **MergeModels **",
+            "argument": "slicer.MergeModels()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "ModelOutput",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.ModelMaker",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **ModelMaker **",
+            "argument": "slicer.ModelMaker()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "modelSceneFile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.ModelToLabelMap",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **ModelToLabelMap **",
+            "argument": "slicer.ModelToLabelMap()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "OutputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.MultiResolutionAffineRegistration",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **MultiResolutionAffineRegistration **",
+            "argument": "slicer.MultiResolutionAffineRegistration()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "resampledImage",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "saveTransform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.MultiplyScalarVolumes",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **MultiplyScalarVolumes **",
+            "argument": "slicer.MultiplyScalarVolumes()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.N4ITKBiasFieldCorrection",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **N4ITKBiasFieldCorrection **",
+            "argument": "slicer.N4ITKBiasFieldCorrection()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputimage",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputbiasfield",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.OrientScalarVolume",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **OrientScalarVolume **",
+            "argument": "slicer.OrientScalarVolume()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.OtsuThresholdImageFilter",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **OtsuThresholdImageFilter **",
+            "argument": "slicer.OtsuThresholdImageFilter()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.OtsuThresholdSegmentation",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **OtsuThresholdSegmentation **",
+            "argument": "slicer.OtsuThresholdSegmentation()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.PETStandardUptakeValueComputation",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **PETStandardUptakeValueComputation **",
+            "argument": "slicer.PETStandardUptakeValueComputation()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "csvFile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.ProbeVolumeWithModel",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **ProbeVolumeWithModel **",
+            "argument": "slicer.ProbeVolumeWithModel()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "OutputModel",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.ResampleDTIVolume",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **ResampleDTIVolume **",
+            "argument": "slicer.ResampleDTIVolume()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.ResampleScalarVectorDWIVolume",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **ResampleScalarVectorDWIVolume **",
+            "argument": "slicer.ResampleScalarVectorDWIVolume()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.ResampleScalarVolume",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **ResampleScalarVolume **",
+            "argument": "slicer.ResampleScalarVolume()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "OutputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.RigidRegistration",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **RigidRegistration **",
+            "argument": "slicer.RigidRegistration()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputtransform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "resampledmovingfilename",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.RobustStatisticsSegmenter",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **RobustStatisticsSegmenter **",
+            "argument": "slicer.RobustStatisticsSegmenter()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "segmentedImageFileName",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.SimpleRegionGrowingSegmentation",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **SimpleRegionGrowingSegmentation **",
+            "argument": "slicer.SimpleRegionGrowingSegmentation()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.SubtractScalarVolumes",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **SubtractScalarVolumes **",
+            "argument": "slicer.SubtractScalarVolumes()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.ThresholdScalarVolume",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **ThresholdScalarVolume **",
+            "argument": "slicer.ThresholdScalarVolume()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "OutputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.TractographyLabelMapSeeding",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **TractographyLabelMapSeeding **",
+            "argument": "slicer.TractographyLabelMapSeeding()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "OutputFibers",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputdirectory",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.VBRAINSDemonWarp",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **VBRAINSDemonWarp **",
+            "argument": "slicer.VBRAINSDemonWarp()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputDisplacementFieldVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputCheckerboardVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "SLICER"
+      ],
+      "title": {
+        "name": "SLICER.VotingBinaryHoleFillingImageFilter",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **VotingBinaryHoleFillingImageFilter **",
+            "argument": "slicer.VotingBinaryHoleFillingImageFilter()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "name": "outputVolume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_dir"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
