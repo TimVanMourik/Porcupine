@@ -95,6 +95,7 @@ void Node::loadFromNodeSetting(
     m_setting = _setting;
     m_name = m_setting->getName();
     m_nameLabel->setText(m_name);
+    m_json = _setting->getJson();
 
     addPorts(_setting->getPorts(), true);
     repositionPorts();
@@ -119,7 +120,7 @@ void Node::addPort(
     addPortPair(_argument, _initialiseWithDefault);
 }
 
-void Node::addPortPair(
+PortPair* Node::addPortPair(
         const Argument& _argument,
         bool _initialiseWithDefault
         )
@@ -128,34 +129,16 @@ void Node::addPortPair(
     PortPair* pair = new PortPair(this);
     pair->setArgument(_argument);
     pair->setDefaultTextColor(preferences.m_portTextColor);
-    switch(_argument.getType())
-    {
-    case Argument::FieldType::INPUT :
-        pair->createInputPort();
-        break;
-    case Argument::FieldType::INOUT :
-        pair->createInputPort();
-        pair->createOutputPort();
-        break;
-    case Argument::FieldType::OUTPUT :
-        pair->createOutputPort();
-        break;
-    case Argument::FieldType::HIDDEN :
-        pair->setVisible(false);
-        break;
-    case Argument::FieldType::SECRET :
-        pair->setVisible(false);
-        pair->setSecret(true);
-        break;
-    case Argument::FieldType::NONE :
-        pair->setVisible(false);
-        break;
-    }
+    if(_argument.isInput())   pair->createInputPort();
+    if(_argument.isOutput())  pair->createOutputPort();
+    _argument.isVisible() ? pair->setVisible(true) : pair->setVisible(false);
+
     if(_initialiseWithDefault)
     {
         pair->fileNameChanged(_argument.getDefault(), false);
     }
     m_ports.append(pair);
+    return pair;
 }
 
 void Node::repositionPorts(
@@ -261,68 +244,33 @@ const NodeSetting* Node::getSetting(
     return m_setting;
 }
 
-void Node::loadFromXml(
-        QDomElement& _xmlNode,
+const QJsonObject& Node::getJson(
+        ) const
+{
+    return m_json;
+}
+
+void Node::loadFromJson(
+        const QJsonObject& _json,
         QMap<quint64, Port*>& o_portMap
         )
 {
-    Preferences& preferences = Preferences::getInstance();
-    NodeLibrary& nodeLibrary = NodeLibrary::getInstance();
-
-    QString nodeType = _xmlNode.attribute("type");
-    const NodeSetting* setting = nodeLibrary.getNodeSetting(nodeType);
-    assert(setting != 0);
-    loadFromNodeSetting(setting);
-
-    QString nodeName = _xmlNode.attribute("name");
-    if(!nodeName.isEmpty())
-    {
-        m_nameLabel->setText(nodeName);
-        labelNameChanged(nodeName);
-    }
-
-    QDomNode n = _xmlNode.firstChild();
-    while(!n.isNull())
-    {
-        QDomElement e = n.toElement();
-        if(e.tagName().compare("position") == 0)
+    Argument title(_json["title"].toObject());
+    m_json = _json;
+    m_name = title.getName();
+    m_nameLabel->setText(m_name);
+    setPos(_json["position"].toArray().at(0).toInt(0), _json["position"].toArray().at(0).toInt(1));
+    foreach (QJsonValue portValue, _json["ports"].toArray()) {
+        QJsonObject portObject = portValue.toObject();
+        PortPair* p = addPortPair(Argument(portObject));
+        if(!portObject["value"].isNull())
         {
-            setPos(e.attribute("x").toInt(), e.attribute("y").toInt());
+            p->fileNameChanged(portObject["value"].toString(), false);
+            QJsonValue inputPort  = portObject["inputPort"];
+            QJsonValue outputPort = portObject["outputPort"];
+            if(!inputPort.isNull())  o_portMap[(quint64)  inputPort.toString().toULongLong(0, 16)] = p->getInputPort();
+            if(!outputPort.isNull()) o_portMap[(quint64) outputPort.toString().toULongLong(0, 16)] = p->getOutputPort();
         }
-        else if(e.tagName().compare("pairs") == 0)
-        {
-            QDomNode portNode = e.firstChild();
-            while(!portNode.isNull())
-            {
-                QDomElement portElement = portNode.toElement();
-                PortPair* pair = 0;
-                foreach(PortPair* port, m_ports)
-                {
-                    assert(port != 0);
-                    if(port->getName().compare(portElement.attribute("name")) == 0)
-                    {
-                        pair = port;
-                        QString name = portElement.attribute("filename");
-                        if(!name.isEmpty())
-                        {
-                            pair->fileNameChanged(name, false);
-                        }
-                        break;
-                    }
-                    else
-                    {
-                        continue;
-                    }
-                }
-                if(pair)
-                {
-                    pair->setDefaultTextColor(preferences.m_portTextColor);
-                    pair->loadFromXml(portElement, o_portMap);
-                }
-                portNode = portNode.nextSibling();
-            }
-        }
-        n = n.nextSibling();
     }
     repositionPorts();
 }

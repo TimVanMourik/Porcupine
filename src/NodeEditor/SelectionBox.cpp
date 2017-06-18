@@ -21,7 +21,6 @@
     <http://www.gnu.org/licenses/>.
 */
 
-#include <QDebug>
 #include <QGraphicsScene>
 #include <QPainter>
 
@@ -115,12 +114,12 @@ void SelectionBox::setNodeList(
     m_nodeList = _nodeList;
 }
 
-void SelectionBox::saveToXml(
-        QDomElement& _xmlElement
-        )
-{
-    Q_UNUSED(_xmlElement);
-}
+//void SelectionBox::saveToXml(
+//        QDomElement& _xmlElement
+//        )
+//{
+//    Q_UNUSED(_xmlElement);
+//}
 
 void SelectionBox::loadFromXml(
         QDomElement& _xmlNode,

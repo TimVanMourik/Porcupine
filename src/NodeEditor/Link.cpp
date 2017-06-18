@@ -24,6 +24,7 @@
 #include <assert.h>
 
 #include <QDomDocument>
+#include <QJsonObject>
 #include <QGraphicsScene>
 #include <QPainter>
 
@@ -131,7 +132,7 @@ void Link::setPositionFromPorts(
         )
 {
     m_positionFrom = m_portFrom->scenePos();
-    m_positionTo = m_portTo->scenePos();
+    m_positionTo   = m_portTo->scenePos();
 }
 
 int Link::type(
@@ -140,35 +141,32 @@ int Link::type(
     return Type;
 }
 
-void Link::saveToXml(
-        QDomElement& _xmlElement
+void Link::saveToJson(
+        QJsonObject& o_json
         )
 {
-    QDomDocument xml;
-
-    QDomElement link = xml.createElement("link");
-    link.setAttribute("from", QString::number((quint64) m_portFrom, 16));
-    link.setAttribute("to", QString::number((quint64) m_portTo, 16));
-    _xmlElement.appendChild(link);
+    o_json["from"] = QString::number((quint64) m_portFrom, 16);
+    o_json["to"]   = QString::number((quint64) m_portTo,   16);
 }
 
-void Link::loadFromXml(
-        QDomElement& _xmlNode,
+void Link::loadFromJson(
+        const QJsonObject& _json,
         QMap<quint64, Port*>& _portMap
         )
 {
-    quint64 pointerFrom =   (quint64) _xmlNode.attribute("from").toULongLong(0, 16);
-    quint64 pointerTo =     (quint64) _xmlNode.attribute("to").toULongLong(0, 16);
+    quint64 pointerFrom = (quint64) _json["from"].toString().toULongLong(0, 16);
+    quint64 pointerTo   = (quint64) _json["to"  ].toString().toULongLong(0, 16);
     assert(pointerFrom != 0);
-    assert(pointerTo != 0);
+    assert(pointerTo   != 0);
 
-    Port* p = _portMap[pointerFrom];
+    Port* p;
+    p = _portMap[pointerFrom];
     setPortFrom(p);
     p = _portMap[pointerTo];
     setPortTo(p);
 
     _portMap[pointerFrom]->addConnection(this);
-    _portMap[pointerTo]->addConnection(this);
+    _portMap[pointerTo  ]->addConnection(this);
     setPositionFromPorts();
     updatePath();
 }

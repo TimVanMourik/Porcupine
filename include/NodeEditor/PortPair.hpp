@@ -26,7 +26,6 @@
 
 #include <QGraphicsTextItem>
 #include "Argument.hpp"
-//class Argument;
 
 class DataType;
 class Node;
@@ -66,7 +65,7 @@ public:
     const QString& getName(
             ) const;
     //
-    const Argument* getArgument(
+    const Argument& getArgument(
             ) const;
     //
     Port* getInputPort(
@@ -104,10 +103,6 @@ public:
             qreal _width,
             qreal _height
             );
-    //
-    void saveToXml(
-            QDomElement& _xmlElement
-            ) const;
     //
     void loadFromXml(
             QDomElement& _xmlNode,
@@ -150,11 +145,7 @@ private:
     //
     Node* m_node;
     //
-    const Argument* m_argument;
-    //
-    QString m_name;
-    //
-//    QVector<const DataType*> m_dataType;
+    Argument m_argument;
     //
     bool m_secret;
     //

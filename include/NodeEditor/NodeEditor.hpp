@@ -69,16 +69,16 @@ public:
             QKeyEvent* _event
             );
     //
-    void saveLinksToXml(
-            QDomElement& _xmlFile
+    void saveToJson(
+            QJsonObject& _json
             );
     //
     void load(
             QDataStream& _dataStream
             );
     //
-    void loadFromXml(
-            QDomDocument& _xmlFile
+    void loadFromJson(
+            const QJsonObject& _json
             );
     //
     void printScene(
@@ -114,6 +114,14 @@ private:
     const QGraphicsItem* itemAt(
             const QPointF& _centrePosition,
             const QSize& _size
+            );
+    //
+    void saveLinksToJson(
+            QJsonObject& _json
+            );
+    //
+    void savePostItsToJson(
+            QJsonObject& _json
             );
     //New link is created such that it always goes from an output port to an input port
     Link* m_newLink;

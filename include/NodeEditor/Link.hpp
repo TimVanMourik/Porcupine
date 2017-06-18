@@ -87,12 +87,12 @@ public:
     int type(
             ) const;
     //
-    void saveToXml(
-            QDomElement& _xmlElement
+    void saveToJson(
+            QJsonObject& o_json
             );
     //
-    void loadFromXml(
-            QDomElement& _xmlNode,
+    void loadFromJson(
+            const QJsonObject& _json,
             QMap<quint64, Port*>& o_portMap
             );
     //

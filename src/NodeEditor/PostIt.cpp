@@ -23,6 +23,8 @@
 #include <QGraphicsProxyWidget>
 #include <QLineEdit>
 #include <QTextEdit>
+#include <QJsonObject>
+#include <QJsonArray>
 
 #include "PostIt.hpp"
 #include "NodeEditor.hpp"
@@ -105,12 +107,29 @@ int PostIt::type(
     return Type;
 }
 
-//void PostIt::loadFromXml(
-//        QDomElement& _xmlNode,
-//        QMap<quint64, Port*>& o_portMap
-//        )
-//{
-//}
+void PostIt::saveToJson(
+        QJsonObject& o_json
+        )
+{
+    o_json["name"] = m_nameLabel->text();
+    o_json["text"] = m_text->toPlainText();
+
+    QJsonArray position;
+    position.append(pos().x());
+    position.append(pos().y());
+    o_json["position"] = position;
+}
+
+void PostIt::loadFromJson(
+        const QJsonObject& _json
+        )
+{
+    m_nameLabel->setText(_json["name"].toString());
+    m_text->setText(_json["text"].toString());
+
+    QJsonArray position = _json["position"].toArray();
+    setPos(position.at(0).toDouble(0), position.at(1).toDouble(0));
+}
 
 PostIt::~PostIt()
 {

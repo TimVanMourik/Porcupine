@@ -35,7 +35,7 @@ PortPair::PortPair(
         ) :
     QGraphicsTextItem(_parent),
     m_node((Node*)_parent),
-    m_argument(0),
+    m_argument(Argument()),
     m_secret(false),
     m_input(0),
     m_output(0),
@@ -79,9 +79,8 @@ void PortPair::setArgument(
         const Argument& _argument
         )
 {
-    m_argument = &_argument;
-//    m_name = _argument.getName();
-    setPlainText(m_argument->getName());
+    m_argument = _argument;
+    setPlainText(_argument.getName());
 }
 
 void PortPair::setSecret(
@@ -100,20 +99,14 @@ bool PortPair::isSecret(
 const QString& PortPair::getName(
         ) const
 {
-    return m_argument->getName();
+    return m_argument.getName();
 }
 
-const Argument*  PortPair::getArgument(
+const Argument& PortPair::getArgument(
         ) const
 {
     return m_argument;
 }
-
-//const QVector<const DataType*>& PortPair::getType(
-//        ) const
-//{
-//    return m_dataType;
-//}
 
 bool PortPair::hasAncestorPorts(
         )
@@ -258,26 +251,6 @@ bool PortPair::hasNodeAncestor(
     return false;
 }
 
-void PortPair::saveToXml(
-        QDomElement& _xmlElement
-        ) const
-{
-    QDomDocument xml;
-    QDomElement newPortPair = xml.createElement("pair");
-    newPortPair.setAttribute("name", getName());
-    newPortPair.setAttribute("filename", getFileName());
-
-    if(m_input)
-    {
-        m_input->saveToXml(newPortPair);
-    }
-    if(m_output)
-    {
-        m_output->saveToXml(newPortPair);
-    }
-    _xmlElement.appendChild(newPortPair);
-}
-
 void PortPair::loadFromXml(
         QDomElement& _xmlNode,
         QMap<quint64, Port*>& o_portMap
@@ -295,7 +268,6 @@ void PortPair::loadFromXml(
         {
             o_portMap[(quint64) portElement.attribute("identifier").toULongLong(0, 16)] = m_output;
         }
-//        DataType* d = new DataType("");
 //        Argument* argument = new Argument(portElement.attribute("name"), d);
         portNode = portNode.nextSibling();
     }

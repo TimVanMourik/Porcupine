@@ -176,26 +176,6 @@ void Port::removeLink(
     }
 }
 
-void Port::saveToXml(
-        QDomElement& _xmlElement
-        )
-{
-    QDomDocument xml;
-    QDomElement port = xml.createElement("port");
-    QString portType;
-    if(getPortType() == Port::INPUT)
-    {
-        portType = "input";
-    }
-    else if(getPortType() == Port::OUTPUT)
-    {
-        portType = "output";
-    }
-    port.setAttribute("type", portType);
-    port.setAttribute("identifier", QString::number((quint64) this, 16));
-    _xmlElement.appendChild(port);
-}
-
 int Port::type(
         ) const
 {

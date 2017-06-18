@@ -62,7 +62,7 @@ public:
             const NodeSetting* _setting = 0
             );
     //
-    void addPortPair(
+    PortPair* addPortPair(
             const Argument& _name,
             bool _initialiseWithDefault = false
             );
@@ -106,11 +106,14 @@ public:
     const NodeSetting* getSetting(
             ) const;
     //
+    const QJsonObject& getJson(
+            ) const;
+    //
     int type(
             ) const;
     //
-    void loadFromXml(
-            QDomElement& _xmlNode,
+    void loadFromJson(
+            const QJsonObject& _json,
             QMap<quint64, Port*>& o_portMap
             );
     //

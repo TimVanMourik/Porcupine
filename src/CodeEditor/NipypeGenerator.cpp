@@ -55,7 +55,6 @@ QString NipypeGenerator::generateCode(
     return code;
 }
 
-#include <QDebug>
 QStringList NipypeGenerator::getIteratorFields(
         const NodeTreeItem* _item
         ) const
@@ -63,7 +62,7 @@ QStringList NipypeGenerator::getIteratorFields(
     QStringList iterFields;
     foreach (const PortPair* pair,  _item->getPorts())
     {
-        if(pair->isIterator()) iterFields << pair->getArgument()->getArgument("NiPype");
+        if(pair->isIterator()) iterFields << pair->getArgument().getArgument("NiPype");
     }
     return iterFields;
 }
@@ -121,7 +120,7 @@ QString NipypeGenerator::itemToCode(
 
         if(!filename.isEmpty())
         {
-            if(argument.getType() == Argument::INPUT || argument.getType() == Argument::INOUT || argument.getType() == Argument::HIDDEN || argument.getType() == Argument::SECRET)
+//            if(argument.getType() == Argument::INPUT || argument.getType() == Argument::INOUT || argument.getType() == Argument::HIDDEN || argument.getType() == Argument::SECRET)
             {
                 code.append(QString("%1.inputs.%2 = %3\n").arg(nodeName, argument.getArgument("NiPype"), filename));
             }
@@ -129,7 +128,7 @@ QString NipypeGenerator::itemToCode(
 
         if(!filename.isEmpty())
         {
-            if(argument.getType() == Argument::OUTPUT || argument.getType() == Argument::INOUT)
+//            if(argument.getType() == Argument::OUTPUT || argument.getType() == Argument::INOUT)
             {
                 code.append(QString("%1.outputs.%2 = %3\n").arg(nodeName, argument.getArgument("NiPype"), filename));
             }
@@ -146,8 +145,8 @@ QString NipypeGenerator::linkToCode(
     QString code("");
     QString source =  QString("NodeHash_%1").arg(QString::number((quint64) _link->getPortFrom()->getNode(), 16));
     QString destination =  QString("NodeHash_%1").arg(QString::number((quint64) _link->getPortTo()->getNode(), 16));
-    QString sourceAttribute(_link->getPortFrom()->getPortPair()->getArgument()->getArgument("NiPype"));
-    QString destinationAttribute(_link->getPortTo()->getPortPair()->getArgument()->getArgument("NiPype"));
+    QString sourceAttribute(_link->getPortFrom()->getPortPair()->getArgument().getArgument("NiPype"));
+    QString destinationAttribute(_link->getPortTo()->getPortPair()->getArgument().getArgument("NiPype"));
     code.append(QString("analysisflow.connect(%1, '%2', %3, '%4')\n").arg(source, sourceAttribute, destination, destinationAttribute));
 
     return code;

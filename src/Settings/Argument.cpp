@@ -21,18 +21,28 @@
     <http://www.gnu.org/licenses/>.
 */
 
+#include <QJsonArray>
+
 #include "Argument.hpp"
 
 Argument::Argument(
-        const QString& _argumentName,
-        FieldType _type,
-        QString _defaultValue
+        const QJsonObject& _json
         ) :
-    m_portType(_type),
-    m_argumentName(_argumentName),
-    m_defaultValue(_defaultValue),
-    m_isVisible(true)
+    m_isInput     (_json["input"  ].toBool()),
+    m_isOutput    (_json["output" ].toBool()),
+    m_isVisible   (_json["visible"].toBool()),
+    m_argumentName(_json["name"   ].toString()),
+    m_defaultValue(_json["value"  ].toString()),
+    m_json(_json)
 {
+    foreach (QJsonValue code, _json["code"].toArray())
+    {
+        QJsonObject codeJson = code.toObject();
+        addCode(codeJson["language"].toString(),
+                codeJson["argument"].toString(),
+                codeJson["comment" ].toString());
+    }
+
 }
 
 void Argument::setName(
@@ -40,6 +50,18 @@ void Argument::setName(
         )
 {
     m_argumentName = _name;
+}
+
+bool Argument::isInput(
+        ) const
+{
+    return m_isInput;
+}
+
+bool Argument::isOutput(
+        ) const
+{
+    return m_isOutput;
 }
 
 bool Argument::isVisible(
@@ -62,13 +84,6 @@ void Argument::setVisible(
     m_isVisible = _editable;
 }
 
-void Argument::setType(
-        const FieldType& _type
-        )
-{
-    m_portType = _type;
-}
-
 const QString& Argument::getName(
         ) const
 {
@@ -79,12 +94,6 @@ const QString& Argument::getDefault(
         ) const
 {
     return m_defaultValue;
-}
-
-const Argument::FieldType& Argument::getType(
-        ) const
-{
-    return m_portType;
 }
 
 QString Argument::getArgument(
@@ -99,6 +108,13 @@ QString Argument::getArgument(
     {
         return QString();
     }
+}
+
+
+const QJsonObject& Argument::getJson(
+        ) const
+{
+    return m_json;
 }
 
 QString Argument::getComment(
@@ -125,9 +141,3 @@ void Argument::addCode(
     m_code[_language].argument = _function;
     m_code[_language].comment  = _comment;
 }
-
-//const QVector<const DataType*>& Argument::getType(
-//        ) const
-//{
-//    return m_type;
-//}

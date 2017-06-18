@@ -72,8 +72,8 @@ private slots:
             int _tabNumber
             );
     //
-    void saveFileToXml(
-            );
+//    void saveFileToXml(
+//            );
     //
     void saveFileToJson(
             );
@@ -142,7 +142,7 @@ private:
 
     QAction* m_newAct;
     QAction* m_openAct;
-    QAction* m_saveToXmlAct;
+    QAction* m_saveToJsonAct;
     QAction* m_printAct;
     QAction* m_loadNodesAct;
     QAction* m_exitAct;

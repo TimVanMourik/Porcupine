@@ -60,12 +60,12 @@ public:
             );
     //
     void saveToJson(
-            QJsonObject& _json
+            QJsonObject& o_json
             ) const;
     //
-    void saveToXml(
-            QDomElement& _xmlElement
-            ) const;
+//    void saveToXml(
+//            QDomElement& _xmlElement
+//            ) const;
     //
     const Node* getNode(
             ) const;

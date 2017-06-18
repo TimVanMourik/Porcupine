@@ -24,6 +24,9 @@
 #include <assert.h>
 
 #include <QDropEvent>
+#include <QJsonObject>
+#include <QJsonArray>
+#include <QLabel>
 #include <QMimeData>
 #include <QPropertyAnimation>
 #include <QVBoxLayout>
@@ -34,7 +37,6 @@
 
 #include <QPushButton>
 
-#include <QLabel>
 NodeTreeEditor::NodeTreeEditor(
         QWidget* _parent
         ) :
@@ -190,21 +192,14 @@ void NodeTreeEditor::saveToJson(
         QJsonObject& _json
         ) const
 {
+    QJsonArray nodeArray;
     foreach(const NodeTreeItem* node, m_nodeList)
     {
-        node->saveToJson(_json);
+        QJsonObject nodeObject;
+        node->saveToJson(nodeObject);
+        nodeArray.append(nodeObject);
     }
-}
-
-
-void NodeTreeEditor::saveToXml(
-        QDomElement& _xmlElement
-        ) const
-{
-    foreach(const NodeTreeItem* node, m_nodeList)
-    {
-        node->saveToXml(_xmlElement);
-    }
+    _json["nodes"] = nodeArray;
 }
 
 void NodeTreeEditor::updateNodeOrder(

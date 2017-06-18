@@ -97,8 +97,6 @@ MainWindow::MainWindow(
 
     createActions();
     createMenus();
-
-//    loadDataTypes();
     loadDefaultNodes();
 
     connect(button, SIGNAL(released()), this, SLOT(nodeToCode()));
@@ -148,10 +146,10 @@ void MainWindow::loadDefaultNodes(
         unsigned int i = 0;
         while(true)
         {
-            QFile xmlNodefile(toolbox.arg(i, framePadding, 10, QLatin1Char('0')));
-            if(xmlNodefile.exists())
+            QFile dictionaryFile(toolbox.arg(i, framePadding, 10, QLatin1Char('0')));
+            if(dictionaryFile.exists())
             {
-                QStringList newNodes = nodeLibrary.addNodeSetting(xmlNodefile);
+                QStringList newNodes = nodeLibrary.addNodeSetting(dictionaryFile);
                 if(!newNodes.isEmpty())
                 {
                     updateNodeMenu(newNodes);
@@ -237,75 +235,41 @@ void MainWindow::saveFileToJson(
         return;
     }
 
-    QJsonObject jsonFile();
-
+    QJsonObject jsonFile;
     //save all nodes
-//    m_nodeTreeEditors[m_nodeEditorWidget->currentIndex()]->saveToJson(jsonFile);
-    //save all links
-//    m_nodeEditors[m_nodeEditorWidget->currentIndex()]->saveLinksToXml(root);
-
-//    QFile file(fileName);
-//    if (file.open(QIODevice::WriteOnly))
-//    {
-//        QTextStream stream(&file);
-//        stream << jsonFile.toString();
-//    }
-//    file.close();
-}
-
-void MainWindow::saveFileToXml()
-{
-    QString fileName = QFileDialog::getSaveFileName();
-    if (fileName.isEmpty())
-    {
-        return;
-    }
-    QDomDocument xmlFile;
-    QDomProcessingInstruction xmlProcessingInstruction = xmlFile.createProcessingInstruction("xml", "version=\"1.0\"");
-    xmlFile.appendChild(xmlProcessingInstruction);
-
-    QDomElement root = xmlFile.createElement("pipeline");
-    xmlFile.appendChild(root);
-
-    //save all nodes
-    m_nodeTreeEditors[m_nodeEditorWidget->currentIndex()]->saveToXml(root);
-    //save all links
-    m_nodeEditors[m_nodeEditorWidget->currentIndex()]->saveLinksToXml(root);
+    m_nodeTreeEditors[m_nodeEditorWidget->currentIndex()]->saveToJson(jsonFile);
+    m_nodeEditors    [m_nodeEditorWidget->currentIndex()]->saveToJson(jsonFile);
 
     QFile file(fileName);
     if (file.open(QIODevice::WriteOnly))
     {
-        QTextStream stream(&file);
-        stream << xmlFile.toString();
+        QJsonDocument saveDoc(jsonFile);
+        file.write(saveDoc.toJson());
     }
     file.close();
 }
 
 void MainWindow::openFile()
 {
-    QDomDocument document;
     #ifdef DARWIN // on Mac, the file dialog does not want to close with the native file dialog
         QFile file(QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("Pipelines (*.pipe)"), 0, QFileDialog::DontUseNativeDialog));
     #else
         QFile file(QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("Pipelines (*.pipe)"), 0));
-    #endif
+    #endif       
+
     QFileInfo fileInfo(file.fileName());
     QString filename(fileInfo.fileName());
     QCoreApplication::processEvents();
+
     if (!file.open(QIODevice::ReadOnly))
     {
         std::cerr << "Error: cannot open file\n";
         return;
     }
-    if (!document.setContent(&file))
-    {
-        std::cerr << "Error: cannot read file\n";
-        file.close();
-        return;
-    }
+    QJsonDocument document(QJsonDocument::fromJson(file.readAll()));
     file.close();
 
-    ///@todo if the file is empty, use it. Otherwise, create a new tab
+    ///@todo if the current file is empty, use it. Otherwise, create a new tab
 //    if(m_nodeEditors[m_tabLayout->currentIndex()]->children().length() != 0)
 //    {
 //        std::cerr << m_nodeEditors[m_tabLayout->currentIndex()]->children().length() << "\n";
@@ -313,7 +277,7 @@ void MainWindow::openFile()
 //    }
 
     m_nodeEditorWidget->setTabText(m_nodeEditorWidget->currentIndex(), filename);
-    m_nodeEditors[m_nodeEditorWidget->currentIndex()]->loadFromXml(document);
+    m_nodeEditors[m_nodeEditorWidget->currentIndex()]->loadFromJson(document.object());
 }
 
 void MainWindow::printFile(
@@ -434,7 +398,7 @@ void MainWindow::createMenus()
     m_fileMenu->addAction(m_newAct);
     m_fileMenu->addAction(m_openAct);
     /// @todo Add 'open recent file' to the menu
-    m_fileMenu->addAction(m_saveToXmlAct);
+    m_fileMenu->addAction(m_saveToJsonAct);
     m_fileMenu->addAction(m_printAct);
     m_fileMenu->addAction(m_loadNodesAct);
     m_fileMenu->addSeparator();
@@ -468,10 +432,10 @@ void MainWindow::createActions()
     m_openAct->setStatusTip(tr("Open an existing file"));
     connect(m_openAct, SIGNAL(triggered()), this, SLOT(openFile()));
 
-    m_saveToXmlAct = new QAction(tr("Save..."), this);
-    m_saveToXmlAct->setShortcuts(QKeySequence::Save);
-    m_saveToXmlAct->setStatusTip(tr("Save the document as XML-file to disk"));
-    connect(m_saveToXmlAct, SIGNAL(triggered()), this, SLOT(saveFileToXml()));
+    m_saveToJsonAct = new QAction(tr("Save..."), this);
+    m_saveToJsonAct->setShortcuts(QKeySequence::Save);
+    m_saveToJsonAct->setStatusTip(tr("Save the document as XML-file to disk"));
+    connect(m_saveToJsonAct, SIGNAL(triggered()), this, SLOT(saveFileToJson()));
 
     m_printAct = new QAction(tr("Print..."), this);
     m_printAct->setShortcuts(QKeySequence::Print);

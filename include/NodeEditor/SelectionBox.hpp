@@ -71,9 +71,9 @@ public:
             QList<Node*>& _nodeList
             );
     //
-    void saveToXml(
-            QDomElement& _xmlElement
-            );
+//    void saveToXml(
+//            QDomElement& _xmlElement
+//            );
     //
     void loadFromXml(
             QDomElement& _xmlNode,

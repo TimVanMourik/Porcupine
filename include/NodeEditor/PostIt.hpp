@@ -64,6 +64,14 @@ public:
             const QString& _name
             );
     //
+    void saveToJson(
+            QJsonObject& o_json
+            );
+    //
+    void loadFromJson(
+            const QJsonObject& _json
+            );
+    //
 //    QVariant itemChange(
 //            GraphicsItemChange _change,
 //            const QVariant& _value

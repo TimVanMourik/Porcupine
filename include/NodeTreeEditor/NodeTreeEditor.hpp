@@ -56,11 +56,7 @@ public:
             );
     //
     void saveToJson(
-            QJsonObject& _json
-            ) const;
-    //
-    void saveToXml(
-            QDomElement& _xmlFile
+            QJsonObject& o_json
             ) const;
     //
     void setCodeEditor(

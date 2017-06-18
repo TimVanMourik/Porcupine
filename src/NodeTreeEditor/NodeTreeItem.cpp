@@ -29,6 +29,7 @@
 #include <QDropEvent>
 #include <QFormLayout>
 #include <QJsonDocument>
+#include <QJsonArray>
 #include <QLabel>
 #include <QLineEdit>
 #include <QMimeData>
@@ -36,7 +37,6 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 
-#include "DataType.hpp"
 #include "Node.hpp"
 #include "NodeTreeItem.hpp"
 #include "PortPair.hpp"
@@ -101,25 +101,9 @@ NodeTreeItem::NodeTreeItem(
     {
         QLineEdit* fileName = new QLineEdit();
         fileName->setPlaceholderText("<value>");
-
         m_fileNames[pair->getName()] = fileName;
         QString name = pair->getFileName();
-        if(!name.isEmpty())
-        {
-            fileName->setText(name);
-        }
-        if(pair->isSecret())
-        {
-            continue;
-        }
-        if(pair->getArgument()->isVisible())
-        {
-            fileName->setDisabled(false);
-        }
-        else
-        {
-            fileName->setDisabled(true);
-        }
+        if(pair->isSecret()) continue;
 
         QWidget* row = new QWidget();
         QHBoxLayout* rowLayout = new QHBoxLayout(row);
@@ -143,12 +127,31 @@ NodeTreeItem::NodeTreeItem(
             fileIterator.open(QFile::ReadOnly);
             QString styleSheetIterator = QString::fromLatin1(fileIterator.readAll());
             iterateCheckbox->setStyleSheet(styleSheetIterator);
+            if(pair->isIterator())
+            {
+                iterateCheckbox->setEnabled(true);
+            }
+            else
+            {
+                iterateCheckbox->setEnabled(false);
+            }
             rowLayout->addWidget(iterateCheckbox);
             connect(iterateCheckbox,SIGNAL(toggled(bool)), pair, SLOT(setAsIterator(bool)));
         }
 
-        portBlockLayout->addRow(pair->getName(), row);
+        if(!name.isEmpty()) fileName->setText(name);
+        if(pair->getArgument().isVisible())
+        {
+            fileName->setEnabled(true);
+            showCheckbox->setEnabled(true);
+        }
+        else
+        {
+            fileName->setEnabled(false);
+            showCheckbox->setEnabled(false);
+        }
 
+        portBlockLayout->addRow(pair->getName(), row);
         connect(fileName,       SIGNAL(textEdited(QString)),        pair,           SLOT(fileNameChanged(QString)));
         connect(pair,           SIGNAL(isConnected(bool)),          showCheckbox,   SLOT(setDisabled(bool)));
         /// @todo set the SLOT such that it does not only handle the text but also the font
@@ -204,48 +207,27 @@ QVector<const Node*> NodeTreeItem::getDescendants(
 }
 
 void NodeTreeItem::saveToJson(
-        QJsonObject& _json
+        QJsonObject& o_json
         ) const
 {
-    QJsonObject nodeObject;
-    QDomDocument xml;
-    QDomElement node = xml.createElement("node");
-    node.setAttribute("name", m_node->getName());
-    node.setAttribute("type", m_node->getType());
-    QDomElement position = xml.createElement("position");
-    position.setAttribute("x", QString::number(m_node->pos().x()));
-    position.setAttribute("y", QString::number(m_node->pos().y()));
-    node.appendChild(position);
+    o_json = m_node->getJson();
+    QJsonArray position;
+    position.append(m_node->pos().x());
+    position.append(m_node->pos().y());
+    o_json["position"] = position;
 
-    QDomElement ports = xml.createElement("pairs");
-    foreach(const PortPair* pair, m_node->getPorts())
+    QJsonArray ports;
+    foreach (const PortPair* port, getPorts())
     {
-        pair->saveToXml(ports);
+        QJsonObject portJson   = port->getArgument().getJson();
+        portJson["value"]      = m_fileNames[portJson["name"].toString()]->text();
+        portJson["inputPort"]  = QString::number((quint64) port->getInputPort(), 16);
+        portJson["outputPort"] = QString::number((quint64) port->getOutputPort(), 16);
+        portJson["visible"]    = port->isVisible();
+        portJson["iterator"]   = port->isIterator();
+        ports << portJson;
     }
-    node.appendChild(ports);
-//    _xmlElement.appendChild(node);
-}
-
-void NodeTreeItem::saveToXml(
-        QDomElement& _xmlElement
-        ) const
-{
-    QDomDocument xml;
-    QDomElement node = xml.createElement("node");
-    node.setAttribute("name", m_node->getName());
-    node.setAttribute("type", m_node->getType());
-    QDomElement position = xml.createElement("position");
-    position.setAttribute("x", QString::number(m_node->pos().x()));
-    position.setAttribute("y", QString::number(m_node->pos().y()));
-    node.appendChild(position);
-
-    QDomElement ports = xml.createElement("pairs");
-    foreach(const PortPair* pair, m_node->getPorts())
-    {
-        pair->saveToXml(ports);
-    }
-    node.appendChild(ports);
-    _xmlElement.appendChild(node);
+    o_json["ports"] = ports;
 }
 
 void NodeTreeItem::mousePressEvent(

@@ -31,8 +31,9 @@
 /// @brief
 //----------------------------------------------------------------------------------------------------------------------
 
-#include <QStringList>
 #include <QColor>
+#include <QJsonObject>
+#include <QStringList>
 
 #include "Argument.hpp"
 
@@ -41,8 +42,9 @@ class NodeSetting
 public:
     //
     NodeSetting(
-            const Argument& _name,
-            const QVector<Argument>& _ports
+            const Argument& _title,
+            const QVector<Argument>& _ports,
+            const QJsonObject& _json
             );
     //
     void setColour(
@@ -58,6 +60,9 @@ public:
     const QVector<Argument>& getPorts(
             ) const;
     //
+    const QJsonObject& getJson(
+            ) const;
+    //
     void setCategory(
             const QStringList& _category
             );
@@ -69,7 +74,9 @@ public:
             );
 private:
     //
-    Argument m_name;
+    Argument m_title;
+    //
+    QJsonObject m_json;
     //
     QVector<Argument> m_ports;
     //

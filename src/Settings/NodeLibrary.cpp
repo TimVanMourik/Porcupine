@@ -24,10 +24,8 @@
 #include <iostream>
 #include <cstring>
 #include <QDomDocument>
-#include <QXmlStreamReader>
 
 #include "Argument.hpp"
-#include "DataType.hpp"
 #include "NodeLibrary.hpp"
 #include "NodeSetting.hpp"
 
@@ -59,39 +57,14 @@ QStringList NodeLibrary::addNodeSetting(
             categories << category.toString();
         }
 
-        Argument title;
-        QJsonObject titleJson = nodeJson["title"].toObject();
-        title.setName(titleJson["name"].toString());
-        foreach (QJsonValue code, titleJson["code"].toArray())
+        Argument title(nodeJson["title"].toObject());
+        QVector<Argument> ports;
+        foreach (QJsonValue portObject, nodeJson["ports"].toArray())
         {
-            QJsonObject codeJson = code.toObject();
-            title.addCode(codeJson["language"].toString(),
-                          codeJson["argument"].toString(),
-                          codeJson["comment" ].toString());
-        }
-        QVector<Argument> nodes;
-        foreach (QJsonValue portObject, nodeJson["ports"].toArray()) {
-            QJsonObject portJson = portObject.toObject();
-            bool input  = portJson["input"].toBool();
-            bool output = portJson["output"].toBool();
-            Argument port(portJson["name"].toString());
-            if(input && output) {port.setType(Argument::FieldType::INOUT);}
-            else if(input)      {port.setType(Argument::FieldType::INPUT);}
-            else if(output)     {port.setType(Argument::FieldType::OUTPUT);}
-            port.setDefault(portJson["value"].toString());
-            port.setVisible(portJson["visible"].toBool());
-
-            foreach (QJsonValue code, portJson["code"].toArray())
-            {
-                QJsonObject codeJson = code.toObject();
-                port.addCode(codeJson["language"].toString(),
-                             codeJson["argument"].toString(),
-                             codeJson["comment" ].toString());
-            }
-            nodes << port;
+            ports << Argument(portObject.toObject());
         }
 
-        NodeSetting* newNode = new NodeSetting(title, nodes);
+        NodeSetting* newNode = new NodeSetting(title, ports, nodeJson);
         newNode->setCategory(categories);
         m_nodeSettings[title.getName()] = newNode;
         m_nodeNames << title.getName();

@@ -21,16 +21,15 @@
     <http://www.gnu.org/licenses/>.
 */
 
-#include "QXmlSchema"
-#include "QXmlSchemaValidator"
-
 #include "NodeSetting.hpp"
 
 NodeSetting::NodeSetting(
-        const Argument& _name,
-        const QVector<Argument>& _ports
+        const Argument& _title,
+        const QVector<Argument>& _ports,
+        const QJsonObject& _json
         ) :
-    m_name(_name),
+    m_title(_title),
+    m_json(_json),
     m_ports(_ports)
 {
 }
@@ -45,19 +44,25 @@ void NodeSetting::setColour(
 const QString& NodeSetting::getName(
         ) const
 {
-    return m_name.getName();
+    return m_title.getName();
 }
 
 const Argument& NodeSetting::getTitle(
         ) const
 {
-    return m_name;
+    return m_title;
 }
 
 const QVector<Argument>& NodeSetting::getPorts(
         ) const
 {
     return m_ports;
+}
+
+const QJsonObject& NodeSetting::getJson(
+        ) const
+{
+    return m_json;
 }
 
 void NodeSetting::setCategory(

@@ -44,7 +44,6 @@ MOC_DIR                                 = ./moc/
 SOURCES                                += $$ROOT/main.cpp \
                                           $$ROOT/src/MainWindow.cpp \
                                           $$ROOT/src/Settings/Argument.cpp \
-                                          $$ROOT/src/Settings/DataType.cpp \
                                           $$ROOT/src/Settings/NodeLibrary.cpp \
                                           $$ROOT/src/Settings/NodeSetting.cpp \
                                           $$ROOT/src/Settings/Preferences.cpp \
@@ -75,7 +74,6 @@ SOURCES                                += $$ROOT/main.cpp \
 
 HEADERS                                += $$ROOT/include/MainWindow.hpp \
                                           $$ROOT/include/Settings/Argument.hpp \
-                                          $$ROOT/include/Settings/DataType.hpp \
                                           $$ROOT/include/Settings/NodeLibrary.hpp \
                                           $$ROOT/include/Settings/NodeSetting.hpp \
                                           $$ROOT/include/Settings/Preferences.hpp \

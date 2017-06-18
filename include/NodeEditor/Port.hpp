@@ -104,10 +104,6 @@ public:
     static qreal getRadius(
             );
     //
-    void saveToXml(
-            QDomElement& _xmlElement
-            );
-    //
     void paint(
             QPainter* _painter,
             const QStyleOptionGraphicsItem* _option,

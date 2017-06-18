@@ -23,9 +23,9 @@
 
 #include <iostream>
 
-#include <QDebug>
 #include <QDomDocument>
 #include <QDomElement>
+#include <QJsonArray>
 #include <QPainter>
 #include <QPointF>
 #include <QGraphicsScene>
@@ -373,49 +373,79 @@ const QGraphicsItem* NodeEditor::itemAt(
     return 0;
 }
 
-void NodeEditor::saveLinksToXml(
-        QDomElement& _xmlElement
+void NodeEditor::saveToJson(
+        QJsonObject& o_json
         )
 {
+    saveLinksToJson(o_json);
+    savePostItsToJson(o_json);
+    int x1, y1, x2, y2;
+    geometry().getCoords(&x1, &y1, &x2, &y2);
+    QJsonArray size;
+    size.append(x1); size.append(y1); size.append(x2); size.append(y2);
+    o_json["size"] = size;
+}
+
+void NodeEditor::saveLinksToJson(
+        QJsonObject& o_json
+        )
+{
+    QJsonArray links;
     foreach(QGraphicsItem* item, scene()->items())
     {
         if (item->type() == Link::Type)
         {
-            ((Link*) item)->saveToXml(_xmlElement);
+            QJsonObject linkObject;
+            ((Link*) item)->saveToJson(linkObject);
+            links << linkObject;
         }
     }
+    o_json["links"] = links;
 }
 
-void NodeEditor::loadFromXml(
-        QDomDocument& _xmlFile
+void NodeEditor::savePostItsToJson(
+        QJsonObject& o_json
         )
 {
-//    std::cerr << "Loading file...\n";
+    QJsonArray postIts;
+    foreach(QGraphicsItem* item, scene()->items())
+    {
+        if (item->type() == PostIt::Type)
+        {
+            QJsonObject postItObject;
+            ((PostIt*) item)->saveToJson(postItObject);
+            postIts << postItObject;
+        }
+    }
+    o_json["post-its"] = postIts;
+}
+
+void NodeEditor::loadFromJson(
+        const QJsonObject& _json
+        )
+{
     scene()->clear();
+    int x1, y1, x2, y2;
+    QJsonArray size = _json["size"].toArray();
+    x1 = size.at(0).toInt(0); y1 = size.at(1).toInt(0); x2 = size.at(2).toInt(0); y2 = size.at(3).toInt(0);
+    setGeometry(x1, y1, x2, y2);
 
     QMap<quint64, Port*> portMap;
-
-    QDomElement docElem = _xmlFile.documentElement();
-    QDomNode n = docElem.firstChild();
-
-    while(!n.isNull())
+    foreach (QJsonValue nodeValue, _json["nodes"].toArray())
     {
-        QDomElement e = n.toElement();
-        if(e.tagName().compare("node") == 0)
-        {
-//            std::cerr << "Loading node...\n";
-            Node* node = new Node(this);
-            node->loadFromXml(e, portMap);
-//            std::cerr << "Adding to tree...\n";
-            getTreeModel()->addNode(node);
-        }
-        else if(e.tagName().compare("link") == 0)
-        {
-//            std::cerr << "Loading link...\n";
-            Link* link = new Link(scene());
-            link->loadFromXml(e, portMap);
-        }
-        n = n.nextSibling();
+        Node* node = new Node(this);
+        node->loadFromJson(nodeValue.toObject(), portMap);
+        getTreeModel()->addNode(node);
+    }
+    foreach (QJsonValue linkValue, _json["links"].toArray())
+    {
+        Link* link = new Link(scene());
+        link->loadFromJson(linkValue.toObject(), portMap);
+    }
+    foreach (QJsonValue postitValue, _json["post-its"].toArray())
+    {
+        PostIt* postit = new PostIt(this);
+        postit->loadFromJson(postitValue.toObject());
     }
 }
 
