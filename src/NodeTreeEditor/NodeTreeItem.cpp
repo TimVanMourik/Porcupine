@@ -129,11 +129,11 @@ NodeTreeItem::NodeTreeItem(
             iterateCheckbox->setStyleSheet(styleSheetIterator);
             if(pair->isIterator())
             {
-                iterateCheckbox->setEnabled(true);
+                iterateCheckbox->setChecked(true);
             }
             else
             {
-                iterateCheckbox->setEnabled(false);
+                iterateCheckbox->setChecked(false);
             }
             rowLayout->addWidget(iterateCheckbox);
             connect(iterateCheckbox,SIGNAL(toggled(bool)), pair, SLOT(setAsIterator(bool)));
@@ -143,12 +143,12 @@ NodeTreeItem::NodeTreeItem(
         if(pair->getArgument().isVisible())
         {
             fileName->setEnabled(true);
-            showCheckbox->setEnabled(true);
+            showCheckbox->setChecked(true);
         }
         else
         {
             fileName->setEnabled(false);
-            showCheckbox->setEnabled(false);
+            showCheckbox->setChecked(false);
         }
 
         portBlockLayout->addRow(pair->getName(), row);
