@@ -33,7 +33,6 @@ NipypeGenerator::NipypeGenerator(
         ) :
     CodeGenerator(_editor)
 {
-
 }
 
 QString NipypeGenerator::generateCode(
@@ -42,7 +41,6 @@ QString NipypeGenerator::generateCode(
             )
 {
     ///@todo check if there is at least one NiPype module in the scene
-
     QString code("#This is a NiPype generator. Warning, here be dragons.\n");
     writePreamble(code);
     writeParameters(code);
@@ -105,7 +103,6 @@ QString NipypeGenerator::itemToCode(
         code.append(QString(", iterfield = ['%1'])\n").arg(iterFields.join("', '")));
     }
 
-
     foreach (Argument argument, nodeSetting->getPorts())
     {
         QString filename = _item->getFileName(argument.getName());
@@ -118,20 +115,14 @@ QString NipypeGenerator::itemToCode(
             }
         }
 
-        if(!filename.isEmpty())
+        if(!filename.isEmpty() && argument.isInput())
         {
-//            if(argument.getType() == Argument::INPUT || argument.getType() == Argument::INOUT || argument.getType() == Argument::HIDDEN || argument.getType() == Argument::SECRET)
-            {
-                code.append(QString("%1.inputs.%2 = %3\n").arg(nodeName, argument.getArgument("NiPype"), filename));
-            }
+            code.append(QString("%1.inputs.%2 = %3\n").arg(nodeName, argument.getArgument("NiPype"), filename));
         }
 
-        if(!filename.isEmpty())
+        if(!filename.isEmpty() && argument.isOutput())
         {
-//            if(argument.getType() == Argument::OUTPUT || argument.getType() == Argument::INOUT)
-            {
-                code.append(QString("%1.outputs.%2 = %3\n").arg(nodeName, argument.getArgument("NiPype"), filename));
-            }
+            code.append(QString("%1.outputs.%2 = %3\n").arg(nodeName, argument.getArgument("NiPype"), filename));
         }
     }
     code.append("\n");
@@ -206,6 +197,5 @@ void NipypeGenerator::writeLinks(
 
 NipypeGenerator::~NipypeGenerator()
 {
-
 }
 
