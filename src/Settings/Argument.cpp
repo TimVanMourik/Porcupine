@@ -28,12 +28,13 @@
 Argument::Argument(
         const QJsonObject& _json
         ) :
-    m_isInput     (_json["input"  ].toBool()),
-    m_isOutput    (_json["output" ].toBool()),
-    m_isVisible   (_json["visible"].toBool()),
-    m_argumentName(_json["name"   ].toString()),
-    m_defaultValue(_json["value"  ].toString()),
-    m_json(_json)
+    m_isInput     (_json["input"   ].toBool()),
+    m_isOutput    (_json["output"  ].toBool()),
+    m_isVisible   (_json["visible" ].toBool()),
+    m_isIterator  (_json["iterator"].toBool()),
+    m_json(_json),
+    m_argumentName(_json["name"    ].toString()),
+    m_defaultValue(_json["value"   ].toString())
 {
     foreach (QJsonValue code, _json["code"].toArray())
     {
@@ -70,6 +71,12 @@ bool Argument::isVisible(
     return m_isVisible;
 }
 
+bool Argument::isIterator(
+        ) const
+{
+    return m_isIterator;
+}
+
 void Argument::setDefault(
         const QString& _default
         )
@@ -82,6 +89,13 @@ void Argument::setVisible(
         )
 {
     m_isVisible = _editable;
+}
+
+void Argument::setIterator(
+        bool _iterator
+        )
+{
+    m_isIterator = _iterator;
 }
 
 const QString& Argument::getName(

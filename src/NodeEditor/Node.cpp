@@ -23,10 +23,12 @@
 
 #include <assert.h>
 
-#include <QDomDocument>
 #include <QGraphicsItem>
 #include <QGraphicsProxyWidget>
 #include <QGraphicsScene>
+#include <QJsonArray>
+#include <QJsonObject>
+#include <QJsonDocument>
 #include <QLineEdit>
 #include <QLinearGradient>
 

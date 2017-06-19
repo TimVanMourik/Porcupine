@@ -23,8 +23,6 @@
 
 #include "assert.h"
 
-#include <QDomDocument>
-
 #include "Argument.hpp"
 #include "Node.hpp"
 #include "Port.hpp"
@@ -251,28 +249,6 @@ bool PortPair::hasNodeAncestor(
     return false;
 }
 
-void PortPair::loadFromXml(
-        QDomElement& _xmlNode,
-        QMap<quint64, Port*>& o_portMap
-        )
-{
-    QDomNode portNode = _xmlNode.firstChild();
-    while(!portNode.isNull())
-    {
-        QDomElement portElement = portNode.toElement();
-        if(portElement.attribute("type").compare("input") == 0)
-        {
-            o_portMap[(quint64) portElement.attribute("identifier").toULongLong(0, 16)] = m_input;
-        }
-        else if(portElement.attribute("type").compare("output") == 0)
-        {
-            o_portMap[(quint64) portElement.attribute("identifier").toULongLong(0, 16)] = m_output;
-        }
-//        Argument* argument = new Argument(portElement.attribute("name"), d);
-        portNode = portNode.nextSibling();
-    }
-}
-
 void PortPair::fileNameChanged(
         const QString& _fileName,
         bool _cascadeUp
@@ -322,7 +298,7 @@ void PortPair::setAsIterator(
         bool _iterator
         )
 {
-    m_isIterator = _iterator;
+    m_argument.setIterator(_iterator);
 }
 
 const QString& PortPair::getFileName(
@@ -334,7 +310,7 @@ const QString& PortPair::getFileName(
 bool PortPair::isIterator(
             ) const
 {
-    return m_isIterator;
+    return m_argument.isIterator();
 }
 
 PortPair::~PortPair()

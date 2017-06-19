@@ -24,7 +24,6 @@
 #include <QApplication>
 #include <QComboBox>
 #include <QCheckBox>
-#include <QDomDocument>
 #include <QDrag>
 #include <QDropEvent>
 #include <QFormLayout>
@@ -122,12 +121,11 @@ NodeTreeItem::NodeTreeItem(
         if(pair->getInputPort())
         {
             QCheckBox* iterateCheckbox = new QCheckBox();
-            iterateCheckbox->setChecked(false);
             QFile fileIterator(":/qss/iterator_button.qss");
             fileIterator.open(QFile::ReadOnly);
             QString styleSheetIterator = QString::fromLatin1(fileIterator.readAll());
             iterateCheckbox->setStyleSheet(styleSheetIterator);
-            if(pair->isIterator())
+            if(pair->getArgument().isIterator())
             {
                 iterateCheckbox->setChecked(true);
             }

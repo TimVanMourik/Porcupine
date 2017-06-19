@@ -23,7 +23,11 @@
 
 #include <iostream>
 #include <cstring>
-#include <QDomDocument>
+
+#include <QFile>
+#include <QJsonArray>
+#include <QJsonObject>
+#include <QJsonDocument>
 
 #include "Argument.hpp"
 #include "NodeLibrary.hpp"

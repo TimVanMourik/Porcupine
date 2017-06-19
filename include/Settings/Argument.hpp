@@ -48,6 +48,9 @@ public:
     bool isVisible(
             ) const;
     //
+    bool isIterator(
+            ) const;
+    //
     void setName(
             const QString& _name
             );
@@ -58,6 +61,10 @@ public:
     //
     void setVisible(
             bool _editable
+            );
+    //
+    void setIterator(
+            bool _iterator
             );
     //
     const QString& getName(
@@ -93,6 +100,8 @@ private:
     bool m_isOutput;
     //
     bool m_isVisible;
+    //
+    bool m_isIterator;
     //
     QJsonObject m_json;
     //

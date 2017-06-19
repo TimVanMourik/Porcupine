@@ -23,8 +23,6 @@
 
 #include <iostream>
 
-#include <QDomDocument>
-#include <QDomElement>
 #include <QJsonArray>
 #include <QPainter>
 #include <QPointF>

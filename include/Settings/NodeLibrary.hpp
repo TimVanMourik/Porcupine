@@ -33,9 +33,7 @@
 
 #include <map>
 
-#include <QDomDocument>
 #include <QString>
-#include <QtXmlPatterns>
 
 #include "Singleton.hpp"
 

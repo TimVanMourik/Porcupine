@@ -28,11 +28,12 @@
 #include <QApplication>
 #include <QBoxLayout>
 #include <QContextMenuEvent>
-#include <QDomDocument>
 #include <QFile>
 #include <QFileDialog>
 #include <QGraphicsScene>
 #include <QGraphicsView>
+#include <QJsonObject>
+#include <QJsonDocument>
 #include <QMenuBar>
 #include <QPainter>
 #include <QPrinter>
@@ -291,7 +292,7 @@ void MainWindow::printFile(
     QString fileName = QFileDialog::getSaveFileName();
     if (fileName.isEmpty())
     {
-        qDebug() << "No file name was chosen. Ergo, no file will be saved.";
+//        qDebug() << "No file name was chosen. Ergo, no file will be saved.";
         return;
     }
     printer.setOutputFileName(fileName);
@@ -299,7 +300,7 @@ void MainWindow::printFile(
     QPainter painter;
     if(!painter.begin(&printer))
     {
-        qDebug() << "Error setting up printer.";
+//        qDebug() << "Error setting up printer.";
         return;
     }
     painter.setRenderHint(QPainter::TextAntialiasing);

@@ -7,7 +7,7 @@
 
 ROOT                                    = $$_PRO_FILE_PWD_
 
-QT                                     += widgets core gui xmlpatterns xml printsupport
+QT                                     += widgets core gui printsupport
 
 CONFIG                                 += static
 

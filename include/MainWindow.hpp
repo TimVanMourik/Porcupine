@@ -32,7 +32,6 @@
 //----------------------------------------------------------------------------------------------------------------------
 
 #include <QMainWindow>
-#include <QtXmlPatterns>
 
 namespace Ui {
 class MainWindow;
@@ -155,8 +154,6 @@ private:
 
     /// @brief
     QVector<QAction*> m_nodeActs;
-    /// @brief
-    QXmlSchemaValidator* m_nodeValidator;
 };
 
 #endif // MAINWINDOW_H

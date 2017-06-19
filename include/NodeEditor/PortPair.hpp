@@ -104,11 +104,6 @@ public:
             qreal _height
             );
     //
-    void loadFromXml(
-            QDomElement& _xmlNode,
-            QMap<quint64, Port*>& o_portMap
-            );
-    //
     const QString& getFileName(
                 ) const;
     //
@@ -148,8 +143,6 @@ private:
     Argument m_argument;
     //
     bool m_secret;
-    //
-    bool m_isIterator;
     //
     Port* m_input;
     //
