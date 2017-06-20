@@ -34,8 +34,7 @@ INCLUDEPATH                             = include/ \
                                           include/NodeEditor \
                                           include/NodeTreeEditor \
                                           include/CodeEditor \
-                                          include/ParameterEditor \
-                                          include/CodeInterpreter
+                                          include/ParameterEditor
 
 OBJECTS_DIR                             = ./obj/
 
@@ -55,22 +54,18 @@ SOURCES                                += $$ROOT/main.cpp \
                                           $$ROOT/src/NodeEditor/Port.cpp \
                                           $$ROOT/src/NodeEditor/PortPair.cpp \
                                           $$ROOT/src/NodeEditor/PostIt.cpp \
+                                          $$ROOT/src/NodeEditor/SelectionBox.cpp \
                                           $$ROOT/src/NodeTreeEditor/NodeTreeEditor.cpp \
                                           $$ROOT/src/NodeTreeEditor/NodeTreeItem.cpp \
                                           $$ROOT/src/CodeEditor/BashHighlighter.cpp \
                                           $$ROOT/src/CodeEditor/CodeEditor.cpp \
+                                          $$ROOT/src/CodeEditor/CodeGenerator.cpp \
                                           $$ROOT/src/CodeEditor/MatlabHighlighter.cpp \
                                           $$ROOT/src/CodeEditor/PythonHighlighter.cpp \
                                           $$ROOT/src/CodeEditor/SyntaxHighlighter.cpp \
                                           $$ROOT/src/CodeEditor/TvmGenerator.cpp \
-                                          $$ROOT/src/CodeEditor/NipypeGenerator.cpp \
-                                          $$ROOT/src/CodeEditor/AfniGenerator.cpp \
-                                          $$ROOT/src/CodeEditor/FslGenerator.cpp \
-                                          $$ROOT/src/CodeEditor/CodeGenerator.cpp \
-                                          $$ROOT/src/NodeEditor/SelectionBox.cpp \
-                                          $$ROOT/src/CodeInterpreter/CodeInterpreter.cpp \
-                                          $$ROOT/src/CodeEditor/SpmGenerator.cpp \
-                                          $$ROOT/src/CodeEditor/FieldtripGenerator.cpp
+                                          $$ROOT/src/CodeEditor/NipypeGenerator.cpp
+                                          $$ROOT/src/CodeEditor/CodeGenerator.cpp
 
 HEADERS                                += $$ROOT/include/MainWindow.hpp \
                                           $$ROOT/include/Settings/Argument.hpp \
@@ -86,6 +81,7 @@ HEADERS                                += $$ROOT/include/MainWindow.hpp \
                                           $$ROOT/include/NodeEditor/Port.hpp \
                                           $$ROOT/include/NodeEditor/PortPair.hpp \
                                           $$ROOT/include/NodeEditor/PostIt.hpp \
+                                          $$ROOT/include/NodeEditor/SelectionBox.hpp \
                                           $$ROOT/include/NodeTreeEditor/NodeTreeItem.hpp \
                                           $$ROOT/include/NodeTreeEditor/NodeTreeEditor.hpp \
                                           $$ROOT/include/CodeEditor/BashHighlighter.hpp \
@@ -95,13 +91,7 @@ HEADERS                                += $$ROOT/include/MainWindow.hpp \
                                           $$ROOT/include/CodeEditor/PythonHighlighter.hpp \
                                           $$ROOT/include/CodeEditor/TvmGenerator.hpp \
                                           $$ROOT/include/CodeEditor/NipypeGenerator.hpp \
-                                          $$ROOT/include/CodeEditor/AfniGenerator.hpp \
-                                          $$ROOT/include/CodeEditor/FslGenerator.hpp \
-                                          $$ROOT/include/CodeEditor/CodeGenerator.hpp \
-                                          $$ROOT/include/NodeEditor/SelectionBox.hpp \
-                                          $$ROOT/include/CodeInterpreter/CodeInterpreter.hpp \
-                                          $$ROOT/include/CodeEditor/SpmGenerator.hpp \
-                                          $$ROOT/include/CodeEditor/FieldtripGenerator.hpp
+                                          $$ROOT/include/CodeEditor/CodeGenerator.hpp
 
 RESOURCES                               = $$ROOT/Resources/resources.qrc
 

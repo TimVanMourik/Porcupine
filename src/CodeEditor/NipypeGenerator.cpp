@@ -23,10 +23,15 @@
 
 #include <functional>
 
+#include <QJsonObject>
+#include <QJsonArray>
+
 #include "CodeEditor.hpp"
 #include "NipypeGenerator.hpp"
 #include "Port.hpp"
 #include "PortPair.hpp"
+
+const QString NipypeGenerator::s_thisLanguage("NiPype");
 
 NipypeGenerator::NipypeGenerator(
         CodeEditor* _editor
@@ -40,7 +45,7 @@ QString NipypeGenerator::generateCode(
             const QVector<const Link*>& _linkList
             )
 {
-    ///@todo check if there is at least one NiPype module in the scene
+    ///@todo check if there is at least one NiPype module in the scene for given module
     QString code("#This is a NiPype generator. Warning, here be dragons.\n");
     writePreamble(code);
     writeParameters(code);
@@ -60,7 +65,7 @@ QStringList NipypeGenerator::getIteratorFields(
     QStringList iterFields;
     foreach (const PortPair* pair,  _item->getPorts())
     {
-        if(pair->isIterator()) iterFields << pair->getArgument().getArgument("NiPype");
+        if(pair->isIterator()) iterFields << pair->getArgument().getArgument(s_thisLanguage);
     }
     return iterFields;
 }
@@ -70,41 +75,28 @@ QString NipypeGenerator::itemToCode(
         const QMap<QString, QString>& parameters
         ) const
 {
-    const NodeSetting* nodeSetting = _item->getNodeSetting();
     QString code("");
-    if(nodeSetting->getTitle().getArgument("NiPype").isEmpty())
-    {
-        return QString("");
-    }
+    QJsonObject json = _item->getJson();
+    Argument title(json["title"].toObject());
+    if(title.getArgument(s_thisLanguage).isEmpty()) return QString("");
 
     QString nodeName = QString("NodeHash_%1").arg(QString::number((quint64) _item->getNode(), 16));
-    code.append(QString("#%1\n").arg(nodeSetting->getTitle().getComment("NiPype")));
+    code.append(QString("#%1\n").arg(title.getComment(s_thisLanguage)));
     code.append(QString("%1 = pe.").arg(nodeName));
 
     QStringList iterFields = getIteratorFields(_item);
-    if(iterFields.length() == 0)
-    {
-        code.append(QString("Node"));
-    }
-    else
-    {
-        code.append(QString("MapNode"));
-    }
+    if(iterFields.length() == 0) {code.append(QString("Node"));}
+    else                         {code.append(QString("MapNode"));}
 
-    code.append(QString("(interface = %2, ").arg(nodeSetting->getTitle().getArgument("NiPype")));
+    code.append(QString("(interface = %2, ").arg(title.getArgument(s_thisLanguage)));
     code.append(QString("name = 'NodeName_%1'").arg(QString::number((quint64) _item->getNode(), 16)));
 
-    if(iterFields.length() == 0)
-    {
-        code.append(")\n");
-    }
-    else
-    {
-        code.append(QString(", iterfield = ['%1'])\n").arg(iterFields.join("', '")));
-    }
+    if(iterFields.length() == 0) code.append(")\n");
+    else                         code.append(QString(", iterfield = ['%1'])\n").arg(iterFields.join("', '")));
 
-    foreach (Argument argument, nodeSetting->getPorts())
+    foreach (QJsonValue portObject, json["ports"].toArray())
     {
+        Argument argument = Argument(portObject.toObject());
         QString filename = _item->getFileName(argument.getName());
         //replace filename
         foreach (const QString parameter, parameters.keys())
@@ -117,12 +109,12 @@ QString NipypeGenerator::itemToCode(
 
         if(!filename.isEmpty() && argument.isInput())
         {
-            code.append(QString("%1.inputs.%2 = %3\n").arg(nodeName, argument.getArgument("NiPype"), filename));
+            code.append(QString("%1.inputs.%2 = %3\n").arg(nodeName, argument.getArgument(s_thisLanguage), filename));
         }
 
         if(!filename.isEmpty() && argument.isOutput())
         {
-            code.append(QString("%1.outputs.%2 = %3\n").arg(nodeName, argument.getArgument("NiPype"), filename));
+            code.append(QString("%1.outputs.%2 = %3\n").arg(nodeName, argument.getArgument(s_thisLanguage), filename));
         }
     }
     code.append("\n");

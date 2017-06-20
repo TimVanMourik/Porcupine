@@ -98,7 +98,6 @@ void NodeTreeEditor::generateCode(
     m_codeEditor->generateCode(m_nodeList);
 }
 
-//#include <iostream>
 //const static int initialSpacing = 13;
 //const static int nodeSpacing = 15;
 void NodeTreeEditor::moveToNewLocation()

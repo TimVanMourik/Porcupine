@@ -21,13 +21,17 @@
     <http://www.gnu.org/licenses/>.
 */
 
+#include <QJsonObject>
+#include <QJsonArray>
+
 #include "TvmGenerator.hpp"
+
+const QString TvmGenerator::s_thisLanguage = QString("TvM");
 
 TvmGenerator::TvmGenerator() :
     CodeGenerator(),
     m_configurationVariable("cfg")
 {
-
 }
 
 QString TvmGenerator::generateCode(
@@ -35,7 +39,7 @@ QString TvmGenerator::generateCode(
         const QVector<const Link*>& _linkList
         )
 {
-Q_UNUSED(_linkList);
+    Q_UNUSED(_linkList);
     QString code;
     foreach(const NodeTreeItem* item, _nodeList)
     {
@@ -48,25 +52,20 @@ QString TvmGenerator::itemToCode(
         const NodeTreeItem* _item
         ) const
 {
-    const NodeSetting* nodeSetting = _item->getNodeSetting();
     QString code("");
-    if(nodeSetting->getTitle().getArgument("MATLAB").isEmpty())
-    {
-        return QString("");
-    }
-
-    code.append(QString("%% %1\n").arg(nodeSetting->getTitle().getComment("MATLAB")));
+    QJsonObject json = _item->getJson();
+    Argument title(json["title"].toObject());
+    if(title.getArgument(s_thisLanguage).isEmpty()) return QString("");
+    code.append(QString("%% %1\n").arg(title.getComment(s_thisLanguage)));
     code.append(QString("%1 = [];\n").arg(m_configurationVariable));
-
     //add input
-    foreach (Argument argument, nodeSetting->getPorts())
+    foreach (QJsonValue portObject, json["ports"].toArray())
     {
+        Argument argument = Argument(portObject.toObject());
         code.append(argumentToCode(argument, _item));
     }
-
     //add function
-    code.append(QString("%1(%2);\n\n").arg(nodeSetting->getTitle().getArgument("MATLAB"), m_configurationVariable));
-    //
+    code.append(QString("%1(%2);\n\n").arg(title.getArgument(s_thisLanguage), m_configurationVariable));
     return code;
 }
 
@@ -77,13 +76,13 @@ QString TvmGenerator::argumentToCode(
 {
     QString code("");
     QString fileName = _item->getFileName(_argument.getName());
-    if(!_argument.getArgument("MATLAB").isEmpty() && !fileName.isEmpty())
+    if(!_argument.getArgument(s_thisLanguage).isEmpty() && !fileName.isEmpty())
     {
-        code.append(QString("%1.%2 = %3;").arg(m_configurationVariable, _argument.getArgument("MATLAB"), fileName));
-        if(!_argument.getComment("MATLAB").isEmpty())
+        code.append(QString("%1.%2 = %3;").arg(m_configurationVariable, _argument.getArgument(s_thisLanguage), fileName));
+        if(!_argument.getComment(s_thisLanguage).isEmpty())
         {
             code.append("\t% ");
-            code.append(_argument.getComment("MATLAB"));
+            code.append(_argument.getComment(s_thisLanguage));
         }
         code.append("\n");
     }
@@ -92,6 +91,5 @@ QString TvmGenerator::argumentToCode(
 
 TvmGenerator::~TvmGenerator()
 {
-
 }
 

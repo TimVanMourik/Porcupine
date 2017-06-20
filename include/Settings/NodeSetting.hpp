@@ -51,8 +51,8 @@ public:
             const QColor& _colour
               );
     //
-    const QString& getName(
-            ) const;
+//    const QString& getName(
+//            ) const;
     //
     const Argument& getTitle(
             ) const;

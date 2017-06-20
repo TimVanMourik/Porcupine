@@ -103,8 +103,8 @@ public:
     const NodeAntenna& getAntenna(
             ) const;
     //
-    const NodeSetting* getSetting(
-            ) const;
+//    const NodeSetting* getSetting(
+//            ) const;
     //
     const QJsonObject& getJson(
             ) const;
@@ -149,7 +149,7 @@ private:
             const NodeSetting* _setting
             );
     //
-    const NodeSetting* m_setting;
+//    const NodeSetting* m_setting;
     //
     QJsonObject m_json;
     //

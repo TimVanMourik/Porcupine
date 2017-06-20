@@ -63,18 +63,17 @@ public:
             QJsonObject& o_json
             ) const;
     //
-//    void saveToXml(
-//            QDomElement& _xmlElement
-//            ) const;
-    //
     const Node* getNode(
+            ) const;
+    //
+    const QJsonObject& getJson(
             ) const;
     //
     const QVector<PortPair*> getPorts(
             ) const;
     //
-    const NodeSetting* getNodeSetting(
-            ) const;
+//    const NodeSetting* getNodeSetting(
+//            ) const;
     //
     QVector<const Node*> getDescendants(
             );

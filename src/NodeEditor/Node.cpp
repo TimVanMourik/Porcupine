@@ -49,7 +49,7 @@ Node::Node(
         const NodeSetting* _setting
         ) :
     QGraphicsPathItem(0),
-    m_setting(_setting),
+//    m_setting(_setting),
     m_json(QJsonObject()),
     m_name(QString()),
     m_nameLabel(new QLineEdit()),
@@ -80,9 +80,8 @@ Node::Node(
     setFlag(QGraphicsItem::ItemIsMovable);
     setFlag(QGraphicsItem::ItemIsSelectable);
 
-    if(m_setting) //false when loaded from file
+    if(_setting) //false when loaded from file
     {
-        m_name = _setting->getName();
         loadFromNodeSetting(_setting);
     }
     m_nameLabel->connect((QObject*) m_nameLabel, SIGNAL(textChanged(QString)), (QObject*) &m_antenna, SLOT(catchLabelChanged(QString)));
@@ -94,12 +93,17 @@ void Node::loadFromNodeSetting(
         )
 {
     assert(_setting != 0);
-    m_setting = _setting;
-    m_name = m_setting->getName();
-    m_nameLabel->setText(m_name);
     m_json = _setting->getJson();
+    Argument title(m_json["title"].toObject());
+    m_name = title.getName();
+    m_nameLabel->setText(m_name);
 
-    addPorts(_setting->getPorts(), true);
+    QVector<Argument> ports;
+    foreach (QJsonValue portObject, m_json["ports"].toArray())
+    {
+        ports << Argument(portObject.toObject());
+    }
+    addPorts(ports, true);
     repositionPorts();
 }
 
@@ -222,11 +226,11 @@ int Node::type(
     return Type;
 }
 
-const QString& Node::getType(
-        ) const
-{
-    return m_setting->getName();
-}
+//const QString& Node::getType(
+//        ) const
+//{
+//    return m_setting->getName();
+//}
 
 const QString& Node::getName(
         ) const
@@ -240,11 +244,11 @@ const NodeAntenna& Node::getAntenna(
     return m_antenna;
 }
 
-const NodeSetting* Node::getSetting(
-        ) const
-{
-    return m_setting;
-}
+//const NodeSetting* Node::getSetting(
+//        ) const
+//{
+//    return m_setting;
+//}
 
 const QJsonObject& Node::getJson(
         ) const

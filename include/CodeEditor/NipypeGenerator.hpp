@@ -78,6 +78,8 @@ private:
     QStringList getIteratorFields(
             const NodeTreeItem* _item
             ) const;
+private:
+    static const QString s_thisLanguage;
 };
 
 #endif // PYTHONGENERATOR_HPP

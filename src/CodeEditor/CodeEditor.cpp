@@ -28,9 +28,7 @@
 #include "BashHighlighter.hpp"
 #include "MatlabHighlighter.hpp"
 #include "PythonHighlighter.hpp"
-#include "FslGenerator.hpp"
 #include "TvmGenerator.hpp"
-#include "SpmGenerator.hpp"
 #include "NipypeGenerator.hpp"
 #include "ParameterEditor.hpp"
 
@@ -39,14 +37,6 @@ CodeEditor::CodeEditor(
         ) :
     QTabWidget(_parent)
 {
-    //TVM within MATLAB (C)
-//    setupMatlabEditor();
-    //SPM within MATLAB (C)
-//    setupSpmEditor();
-    //Bash
-//    setupBashEditor();
-    //Python
-    setupNipypeEditor();
 }
 
 void CodeEditor::setParameterEditor(
@@ -63,23 +53,56 @@ QMap<QString, QString> CodeEditor::getParameters(
     return m_parameterEditor->getParameters();
 }
 
+bool CodeEditor::isPresentInEditor(
+        const QString& _language,
+        const QList<NodeTreeItem*>& _nodeList
+        )
+{
+    foreach(const NodeTreeItem* item, _nodeList)
+    {
+        QJsonObject json = item->getJson();
+        Argument title(json["title"].toObject());
+        if(!title.getArgument(_language).isEmpty())
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
 void CodeEditor::generateCode(
         const QList<NodeTreeItem*>& _nodeList,
         const QVector<const Link*>& _linkList
         )
 {
-    foreach(QString language, m_programmingLanguages)
+    QString language;
+    language = "NiPype";
+    if(isPresentInEditor(language, _nodeList))
     {
+        if(!m_textEditors[language])
+        {
+            setupNipypeEditor();
+        }
+        m_textEditors[language]->setPlainText(m_codeGenerators[language]->generateCode(_nodeList, _linkList));
+    }
+
+    language = "TvM";
+    if(isPresentInEditor(language, _nodeList))
+    {
+        if(!m_textEditors[language])
+        {
+            setupTvmEditor();
+        }
         m_textEditors[language]->setPlainText(m_codeGenerators[language]->generateCode(_nodeList, _linkList));
     }
 }
 
-void CodeEditor::setupMatlabEditor(
+void CodeEditor::setupTvmEditor(
         )
 {
     /// @todo put tabWidth in the preferences
     const int tabWidth = 4;
-    QString matlab("MATLAB - TVM");
+    QString matlab("TvM");
     m_programmingLanguages << matlab;
     QFont matlabFont = QFont("Courier", 10);
     matlabFont.setStyleHint(QFont::Monospace);
@@ -96,47 +119,6 @@ void CodeEditor::setupMatlabEditor(
     addTab(m_textEditors[matlab], matlab);
 }
 
-void CodeEditor::setupSpmEditor(
-        )
-{
-    const int tabWidth = 4;
-    QString spm("MATLAB - SPM");
-    m_programmingLanguages << spm;
-    QFont matlabFont = QFont("Courier", 10);
-    matlabFont.setStyleHint(QFont::Monospace);
-    matlabFont.setFixedPitch(true);
-    QFontMetrics matlabMetric(matlabFont);
-
-    QTextEdit* spmEditor = new QTextEdit(this);
-    spmEditor->setFont(matlabFont);
-    spmEditor->setTabStopWidth(tabWidth * matlabMetric.width(' '));
-
-    new MatlabHighlighter(spmEditor->document());
-    m_textEditors[spm] = spmEditor;
-    m_codeGenerators[spm] = new SpmGenerator();
-    addTab(m_textEditors[spm], spm);
-}
-
-void CodeEditor::setupBashEditor(
-        )
-{
-    const int tabWidth = 4;
-    QString bash("Bash");
-    m_programmingLanguages << bash;
-    QFont bashFont = QFont("Courier", 10);
-    bashFont.setStyleHint(QFont::Monospace);
-    bashFont.setFixedPitch(true);
-    QFontMetrics bashMetric(bashFont);
-
-    QTextEdit* bashEditor = new QTextEdit(this);
-    bashEditor->setFont(bashFont);
-    bashEditor->setTabStopWidth(tabWidth * bashMetric.width(' '));
-
-    new BashHighlighter(bashEditor->document());
-    m_textEditors[bash] = bashEditor;
-    m_codeGenerators[bash] = new FslGenerator();
-    addTab(m_textEditors[bash], bash);
-}
 
 void CodeEditor::setupNipypeEditor(
         )

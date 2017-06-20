@@ -192,10 +192,10 @@ const Node* NodeTreeItem::getNode(
     return m_node;
 }
 
-const NodeSetting* NodeTreeItem::getNodeSetting(
+const QJsonObject& NodeTreeItem::getJson(
         ) const
 {
-    return m_node->getSetting();
+    return m_node->getJson();
 }
 
 QVector<const Node*> NodeTreeItem::getDescendants(

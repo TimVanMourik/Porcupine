@@ -109,9 +109,9 @@ MainWindow::MainWindow(
 void MainWindow::nodeToCode(
         )
 {
-    m_nodeTreeEditors[m_currentFileIndex]->generateCode();
-    QVector<const Link*> allLinks = m_nodeEditors[m_currentFileIndex]->getLinks();
-    m_codeEditors[m_currentFileIndex]->generateCode(m_nodeTreeEditors[m_currentFileIndex]->getNodeList(), allLinks);
+    const QList<NodeTreeItem*> allNodes = m_nodeTreeEditors[m_currentFileIndex]->getNodeList();
+    const QVector<const Link*> allLinks = m_nodeEditors[m_currentFileIndex]->getLinks();
+    m_codeEditors[m_currentFileIndex]->generateCode(allNodes, allLinks);
 }
 
 void MainWindow::contextMenuEvent(

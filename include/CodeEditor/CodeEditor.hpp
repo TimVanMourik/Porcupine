@@ -50,6 +50,11 @@ public:
             ParameterEditor* _editor
             );
     //
+    bool isPresentInEditor(
+            const QString& _language,
+            const QList<NodeTreeItem*>& _nodes
+            );
+    //
     QMap<QString, QString> getParameters(
             );
     //
@@ -57,7 +62,7 @@ public:
             );
 private:
     //
-    void setupMatlabEditor(
+    void setupTvmEditor(
             );
     //
     void setupSpmEditor(

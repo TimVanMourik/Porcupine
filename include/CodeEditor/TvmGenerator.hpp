@@ -50,6 +50,9 @@ private:
             ) const;
     //
     QString m_configurationVariable;
+
+private:
+    static const QString s_thisLanguage;
 };
 
 #endif // TVMGENERATOR_HPP
