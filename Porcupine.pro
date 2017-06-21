@@ -93,8 +93,8 @@ HEADERS                                += $$ROOT/include/MainWindow.hpp \
                                           $$ROOT/include/CodeEditor/NipypeGenerator.hpp \
                                           $$ROOT/include/CodeEditor/CodeGenerator.hpp
 
-RESOURCES                               = $$ROOT/Resources/resources.qrc
+RESOURCES                               = $$ROOT/resources/resources.qrc
 
-win32:RC_ICONS                         += $$ROOT/Resources/Icon/porcupine.ico
+win32:RC_ICONS                         += $$ROOT/resources/icon/porcupine.ico
 #linux-g++:
 #linux-g++-64:
