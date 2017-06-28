@@ -101,13 +101,13 @@ ENV PATH $C3DPATH/bin:$PATH
 #RUN npm install -g svgo
 
 # Installing and setting up miniconda
-#RUN curl -sSLO https://repo.continuum.io/miniconda/Miniconda3-4.3.11-Linux-x86_64.sh && \
-#    bash Miniconda3-4.3.11-Linux-x86_64.sh -b -p /usr/local/miniconda && \
-#    rm Miniconda3-4.3.11-Linux-x86_64.sh
+RUN curl -sSLO https://repo.continuum.io/miniconda/Miniconda3-4.3.11-Linux-x86_64.sh && \
+    bash Miniconda3-4.3.11-Linux-x86_64.sh -b -p /usr/local/miniconda && \
+    rm Miniconda3-4.3.11-Linux-x86_64.sh
 
-#ENV PATH=/usr/local/miniconda/bin:$PATH \
-#    LANG=C.UTF-8 \
-#    LC_ALL=C.UTF-8
+ENV PATH=/usr/local/miniconda/bin:$PATH \
+    LANG=C.UTF-8 \
+    LC_ALL=C.UTF-8
 
 # Installing precomputed python packages
 #RUN conda install -y mkl=2017.0.1 mkl-service &&  \
@@ -119,8 +119,7 @@ ENV PATH $C3DPATH/bin:$PATH
 #                     libxml2=2.9.4 \
 #                     libxslt=1.1.29\
 #                     traits=4.6.0 &&  \
-#    chmod +x /usr/local/miniconda/bin/* && \
-#    conda clean --all -y
+ RUN   chmod +x /usr/local/miniconda/bin/* && conda clean --all -y
 
 # Precaching fonts
 #RUN python -c "from matplotlib import font_manager"
@@ -159,5 +158,7 @@ RUN apt-get update && \
 #WORKDIR /root/src/fmriprep
 
 #ENTRYPOINT ["/usr/local/miniconda/bin/fmriprep"]
-
+RUN conda install -y qt
+ENV LD_LIBRARY_PATH=/usr/local/miniconda/lib:$LD_LIBRARY_PATH
+RUN dbus-uuidgen > /etc/machine-id
 CMD /root/Porcupine
