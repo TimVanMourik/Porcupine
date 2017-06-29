@@ -1,4 +1,6 @@
 #include <QHeaderView>
+#include <QJsonObject>
+#include <QJsonArray>
 
 #include "ParameterEditor.hpp"
 
@@ -26,17 +28,50 @@ ParameterEditor::ParameterEditor(
     connect(this, SIGNAL(itemChanged(QTableWidgetItem*)), this, SLOT(checkForEmptyRows(QTableWidgetItem*)));
 }
 
+void ParameterEditor::saveToJson(
+        QJsonObject& o_json
+        )
+{
+    QJsonArray parameters;
+    for(int i = 0; i < rowCount(); ++i)
+    {
+        QJsonObject keyValuePair;
+        if(item(i, 0) && item(i, 1))
+        {
+            keyValuePair["key"]   = item(i, 0)->text();
+            keyValuePair["value"] = item(i, 1)->text();
+            parameters.append(keyValuePair);
+        }
+    }
+    o_json["parameters"] = parameters;
+}
+
+void ParameterEditor::loadFromJson(
+        const QJsonObject& _json
+        )
+{
+    clear();
+    int row = 0;
+    foreach (QJsonValue keyValuePair, _json["parameters"].toArray())
+    {
+        QJsonObject keyValueObject = keyValuePair.toObject();
+        setItem(row, 0, new QTableWidgetItem(keyValueObject[ "key" ].toString()));
+        setItem(row, 1, new QTableWidgetItem(keyValueObject["value"].toString()));
+        row++;
+    }
+}
+
 QMap<QString, QString> ParameterEditor::getParameters(
         )
 {
     QMap<QString, QString> parameters;
     for(int i = 0; i < rowCount() - 1; ++i)
     {
-        QString parameter = item(i, 0) ? item(i, 0)->text() : "";
-        QString value     = item(i, 1) ? item(i, 1)->text() : "";
-        if(!parameter.isEmpty() && !value.isEmpty())
+        QString key   = item(i, 0) ? item(i, 0)->text() : "";
+        QString value = item(i, 1) ? item(i, 1)->text() : "";
+        if(!key.isEmpty() && !value.isEmpty())
         {
-            parameters[parameter] = value;
+            parameters[key] = value;
         }
     }
     return parameters;

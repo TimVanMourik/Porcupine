@@ -41,12 +41,6 @@ void NodeSetting::setColour(
     m_nodeColour = _colour;
 }
 
-//const QString& NodeSetting::getName(
-//        ) const
-//{
-//    return m_title.getName();
-//}
-
 const Argument& NodeSetting::getTitle(
         ) const
 {
