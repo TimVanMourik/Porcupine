@@ -25,6 +25,7 @@
 #include <QComboBox>
 #include <QCheckBox>
 #include <QDrag>
+#include <QDebug>
 #include <QDropEvent>
 #include <QFormLayout>
 #include <QJsonDocument>
@@ -147,6 +148,14 @@ NodeTreeItem::NodeTreeItem(
         {
             fileName->setEnabled(false);
             showCheckbox->setChecked(false);
+        }
+        if(pair->getArgument().isEditable())
+        {
+            fileName->setEnabled(true);
+        }
+        else
+        {
+            fileName->setEnabled(false);
         }
 
         portBlockLayout->addRow(pair->getName(), row);

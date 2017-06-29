@@ -20,7 +20,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "subject_id",
+          "editable": true,
+          "name": "inputs.subject_id",
           "code": [
             {
               "language": "NiPype",
@@ -32,7 +33,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "subjects_dir",
+          "editable": true,
+          "name": "inputs.subjects_dir",
           "code": [
             {
               "language": "NiPype",
@@ -41,14 +43,106 @@
           ]
         },
         {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "volume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.volume"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "overwrite",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.overwrite"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "atlas_mode",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.atlas_mode"
+            }
+          ]
+        },
+        {
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "mesh_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "subjects_dir"
+              "argument": "outputs.atlas_mode"
             }
           ]
         },
@@ -56,11 +150,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "brain_surface",
           "code": [
             {
               "language": "NiPype",
-              "argument": "subjects_dir"
+              "argument": "outputs.atlas_mode"
             }
           ]
         },
@@ -68,11 +163,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "inner_skull_surface",
           "code": [
             {
               "language": "NiPype",
-              "argument": "subjects_dir"
+              "argument": "outputs.atlas_mode"
             }
           ]
         },
@@ -80,11 +176,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "outer_skull_surface",
           "code": [
             {
               "language": "NiPype",
-              "argument": "subjects_dir"
+              "argument": "outputs.atlas_mode"
             }
           ]
         },
@@ -92,11 +189,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "outer_skin_surface",
           "code": [
             {
               "language": "NiPype",
-              "argument": "subjects_dir"
+              "argument": "outputs.atlas_mode"
             }
           ]
         },
@@ -104,11 +202,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "fif_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "subjects_dir"
+              "argument": "outputs.atlas_mode"
             }
           ]
         },
@@ -116,11 +215,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "cor_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "subjects_dir"
+              "argument": "outputs.atlas_mode"
             }
           ]
         }

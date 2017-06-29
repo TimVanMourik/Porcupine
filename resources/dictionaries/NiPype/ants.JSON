@@ -20,7 +20,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "fixed_image",
+          "editable": true,
+          "name": "inputs.fixed_image",
           "code": [
             {
               "language": "NiPype",
@@ -32,7 +33,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "moving_image",
+          "editable": true,
+          "name": "inputs.moving_image",
           "code": [
             {
               "language": "NiPype",
@@ -44,7 +46,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "metric",
+          "editable": true,
+          "name": "inputs.metric",
           "code": [
             {
               "language": "NiPype",
@@ -56,7 +59,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "output_transform_prefix",
+          "editable": true,
+          "name": "inputs.output_transform_prefix",
           "code": [
             {
               "language": "NiPype",
@@ -68,7 +72,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "transformation_model",
+          "editable": true,
+          "name": "inputs.transformation_model",
           "code": [
             {
               "language": "NiPype",
@@ -77,14 +82,301 @@
           ]
         },
         {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "number_of_time_steps",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.number_of_time_steps"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "smoothing_sigmas",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.smoothing_sigmas"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "subsampling_factors",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.subsampling_factors"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "regularization_deformation_field_sigma",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.regularization_deformation_field_sigma"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "use_histogram_matching",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_histogram_matching"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.dimension"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mi_option",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mi_option"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "radius",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.radius"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "regularization",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.regularization"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_threads",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.num_threads"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "regularization_gradient_field_sigma",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.regularization_gradient_field_sigma"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "symmetry_type",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.symmetry_type"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "number_of_iterations",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.number_of_iterations"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "gradient_step_length",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.gradient_step_length"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "number_of_affine_iterations",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.number_of_affine_iterations"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "delta_time",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.delta_time"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "affine_gradient_descent_option",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.affine_gradient_descent_option"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "metric_weight",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.metric_weight"
+            }
+          ]
+        },
+        {
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "affine_transform",
           "code": [
             {
               "language": "NiPype",
-              "argument": "transformation_model"
+              "argument": "outputs.metric_weight"
             }
           ]
         },
@@ -92,11 +384,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "warp_transform",
           "code": [
             {
               "language": "NiPype",
-              "argument": "transformation_model"
+              "argument": "outputs.metric_weight"
             }
           ]
         },
@@ -104,11 +397,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "inverse_warp_transform",
           "code": [
             {
               "language": "NiPype",
-              "argument": "transformation_model"
+              "argument": "outputs.metric_weight"
             }
           ]
         },
@@ -116,11 +410,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "metaheader",
           "code": [
             {
               "language": "NiPype",
-              "argument": "transformation_model"
+              "argument": "outputs.metric_weight"
             }
           ]
         },
@@ -128,11 +423,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "metaheader_raw",
           "code": [
             {
               "language": "NiPype",
-              "argument": "transformation_model"
+              "argument": "outputs.metric_weight"
             }
           ]
         }
@@ -158,7 +454,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "fixed_image",
+          "editable": true,
+          "name": "inputs.fixed_image",
           "code": [
             {
               "language": "NiPype",
@@ -170,7 +467,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "moving_image",
+          "editable": true,
+          "name": "inputs.moving_image",
           "code": [
             {
               "language": "NiPype",
@@ -179,14 +477,158 @@
           ]
         },
         {
-          "input": false,
-          "output": true,
-          "visible": true,
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "search_factor",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.search_factor"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_threads",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.num_threads"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "principal_axes",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.principal_axes"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "radian_fraction",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.radian_fraction"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "local_search",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.local_search"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
           "name": "out_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "moving_image"
+              "argument": "inputs.out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.dimension"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.dimension"
             }
           ]
         }
@@ -212,7 +654,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "target_image",
+          "editable": true,
+          "name": "inputs.target_image",
           "code": [
             {
               "language": "NiPype",
@@ -224,7 +667,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "atlas_image",
+          "editable": true,
+          "name": "inputs.atlas_image",
           "code": [
             {
               "language": "NiPype",
@@ -236,7 +680,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "atlas_segmentation_image",
+          "editable": true,
+          "name": "inputs.atlas_segmentation_image",
           "code": [
             {
               "language": "NiPype",
@@ -245,50 +690,340 @@
           ]
         },
         {
-          "input": false,
-          "output": true,
-          "visible": true,
-          "name": "out_label_fusion",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "atlas_segmentation_image"
-            }
-          ]
-        },
-        {
-          "input": false,
-          "output": true,
-          "visible": true,
-          "name": "out_intensity_fusion_name_format",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "atlas_segmentation_image"
-            }
-          ]
-        },
-        {
-          "input": false,
-          "output": true,
-          "visible": true,
-          "name": "out_label_post_prob_name_format",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "atlas_segmentation_image"
-            }
-          ]
-        },
-        {
-          "input": false,
-          "output": true,
-          "visible": true,
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
           "name": "out_atlas_voting_weight_name_format",
           "code": [
             {
               "language": "NiPype",
-              "argument": "atlas_segmentation_image"
+              "argument": "inputs.out_atlas_voting_weight_name_format"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "retain_atlas_voting_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.retain_atlas_voting_images"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.dimension"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mask_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "alpha",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.alpha"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "beta",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.beta"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "exclusion_image_label",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.exclusion_image_label"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "constrain_nonnegative",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.constrain_nonnegative"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_label_fusion",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_label_fusion"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "verbose",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.verbose"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_threads",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.num_threads"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_intensity_fusion_name_format",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_intensity_fusion_name_format"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "exclusion_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.exclusion_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "search_radius",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.search_radius"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_label_post_prob_name_format",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_label_post_prob_name_format"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "patch_radius",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.patch_radius"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "patch_metric",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.patch_metric"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "retain_label_posterior_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.retain_label_posterior_images"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_label_fusion",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.retain_label_posterior_images"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_intensity_fusion_name_format",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.retain_label_posterior_images"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_label_post_prob_name_format",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.retain_label_posterior_images"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_atlas_voting_weight_name_format",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.retain_label_posterior_images"
             }
           ]
         }
@@ -314,7 +1049,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "input_image",
+          "editable": true,
+          "name": "inputs.input_image",
           "code": [
             {
               "language": "NiPype",
@@ -326,7 +1062,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "reference_image",
+          "editable": true,
+          "name": "inputs.reference_image",
           "code": [
             {
               "language": "NiPype",
@@ -338,7 +1075,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "transforms",
+          "editable": true,
+          "name": "inputs.transforms",
           "code": [
             {
               "language": "NiPype",
@@ -347,14 +1085,210 @@
           ]
         },
         {
-          "input": false,
-          "output": true,
-          "visible": true,
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
           "name": "output_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "transforms"
+              "argument": "inputs.output_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "interpolation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.interpolation"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "invert_transform_flags",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.invert_transform_flags"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "interpolation_parameters",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.interpolation_parameters"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "print_out_composite_warp_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.print_out_composite_warp_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "input_image_type",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.input_image_type"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.dimension"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_threads",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.num_threads"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_postfix",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_postfix"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "default_value",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.default_value"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "float",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.float"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "output_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.float"
             }
           ]
         }
@@ -380,7 +1314,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "input_file",
+          "editable": true,
+          "name": "inputs.input_file",
           "code": [
             {
               "language": "NiPype",
@@ -392,7 +1327,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "transforms",
+          "editable": true,
+          "name": "inputs.transforms",
           "code": [
             {
               "language": "NiPype",
@@ -401,14 +1337,119 @@
           ]
         },
         {
-          "input": false,
-          "output": true,
-          "visible": true,
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
           "name": "output_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "transforms"
+              "argument": "inputs.output_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "invert_transform_flags",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.invert_transform_flags"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_threads",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.num_threads"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.dimension"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "output_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.dimension"
             }
           ]
         }
@@ -434,7 +1475,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "intensity_images",
+          "editable": true,
+          "name": "inputs.intensity_images",
           "code": [
             {
               "language": "NiPype",
@@ -446,7 +1488,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "mask_image",
+          "editable": true,
+          "name": "inputs.mask_image",
           "code": [
             {
               "language": "NiPype",
@@ -458,7 +1501,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "initialization",
+          "editable": true,
+          "name": "inputs.initialization",
           "code": [
             {
               "language": "NiPype",
@@ -470,7 +1514,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "number_of_tissue_classes",
+          "editable": true,
+          "name": "inputs.number_of_tissue_classes",
           "code": [
             {
               "language": "NiPype",
@@ -479,14 +1524,301 @@
           ]
         },
         {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "posterior_formulation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.posterior_formulation"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "likelihood_model",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.likelihood_model"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "maximum_number_of_icm_terations",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.maximum_number_of_icm_terations"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "prior_weighting",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.prior_weighting"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.dimension"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "prior_probability_threshold",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.prior_probability_threshold"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "use_random_seed",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_random_seed"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "output_posteriors_name_template",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.output_posteriors_name_template"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "n_iterations",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.n_iterations"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "convergence_threshold",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.convergence_threshold"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "prior_probability_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.prior_probability_images"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_threads",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.num_threads"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "use_mixture_model_proportions",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_mixture_model_proportions"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mrf_smoothing_factor",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mrf_smoothing_factor"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_classified_image_name",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_classified_image_name"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mrf_radius",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mrf_radius"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "icm_use_synchronous_update",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.icm_use_synchronous_update"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "save_posteriors",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.save_posteriors"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "classified_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "number_of_tissue_classes"
+              "argument": "outputs.ignore_exception"
             }
           ]
         },
@@ -494,11 +1826,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "posteriors",
           "code": [
             {
               "language": "NiPype",
-              "argument": "number_of_tissue_classes"
+              "argument": "outputs.ignore_exception"
             }
           ]
         }
@@ -524,7 +1857,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "dimension",
+          "editable": true,
+          "name": "inputs.dimension",
           "code": [
             {
               "language": "NiPype",
@@ -536,7 +1870,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "output_affine_transform",
+          "editable": true,
+          "name": "inputs.output_affine_transform",
           "code": [
             {
               "language": "NiPype",
@@ -548,7 +1883,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "transforms",
+          "editable": true,
+          "name": "inputs.transforms",
           "code": [
             {
               "language": "NiPype",
@@ -557,14 +1893,80 @@
           ]
         },
         {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_threads",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.num_threads"
+            }
+          ]
+        },
+        {
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "affine_transform",
           "code": [
             {
               "language": "NiPype",
-              "argument": "transforms"
+              "argument": "outputs.num_threads"
             }
           ]
         }
@@ -590,7 +1992,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "dimension",
+          "editable": true,
+          "name": "inputs.dimension",
           "code": [
             {
               "language": "NiPype",
@@ -602,7 +2005,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "normalize",
+          "editable": true,
+          "name": "inputs.normalize",
           "code": [
             {
               "language": "NiPype",
@@ -614,7 +2018,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "images",
+          "editable": true,
+          "name": "inputs.images",
           "code": [
             {
               "language": "NiPype",
@@ -623,14 +2028,93 @@
           ]
         },
         {
-          "input": false,
-          "output": true,
-          "visible": true,
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_threads",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.num_threads"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
           "name": "output_average_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "images"
+              "argument": "inputs.output_average_image"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "output_average_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.output_average_image"
             }
           ]
         }
@@ -656,7 +2140,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "anatomical_image",
+          "editable": true,
+          "name": "inputs.anatomical_image",
           "code": [
             {
               "language": "NiPype",
@@ -668,7 +2153,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "brain_template",
+          "editable": true,
+          "name": "inputs.brain_template",
           "code": [
             {
               "language": "NiPype",
@@ -680,7 +2166,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "brain_probability_mask",
+          "editable": true,
+          "name": "inputs.brain_probability_mask",
           "code": [
             {
               "language": "NiPype",
@@ -689,14 +2176,184 @@
           ]
         },
         {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "debug",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.debug"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "use_floatingpoint_precision",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_floatingpoint_precision"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "image_suffix",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.image_suffix"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.dimension"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "use_random_seeding",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_random_seeding"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_threads",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.num_threads"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "extraction_registration_mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.extraction_registration_mask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_prefix",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_prefix"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "keep_temporary_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.keep_temporary_files"
+            }
+          ]
+        },
+        {
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "BrainExtractionMask",
           "code": [
             {
               "language": "NiPype",
-              "argument": "brain_probability_mask"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -704,11 +2361,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "BrainExtractionBrain",
           "code": [
             {
               "language": "NiPype",
-              "argument": "brain_probability_mask"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -716,11 +2374,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "BrainExtractionCSF",
           "code": [
             {
               "language": "NiPype",
-              "argument": "brain_probability_mask"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -728,11 +2387,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "BrainExtractionGM",
           "code": [
             {
               "language": "NiPype",
-              "argument": "brain_probability_mask"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -740,11 +2400,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "BrainExtractionInitialAffine",
           "code": [
             {
               "language": "NiPype",
-              "argument": "brain_probability_mask"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -752,11 +2413,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "BrainExtractionInitialAffineFixed",
           "code": [
             {
               "language": "NiPype",
-              "argument": "brain_probability_mask"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -764,11 +2426,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "BrainExtractionInitialAffineMoving",
           "code": [
             {
               "language": "NiPype",
-              "argument": "brain_probability_mask"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -776,11 +2439,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "BrainExtractionLaplacian",
           "code": [
             {
               "language": "NiPype",
-              "argument": "brain_probability_mask"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -788,11 +2452,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "BrainExtractionPrior0GenericAffine",
           "code": [
             {
               "language": "NiPype",
-              "argument": "brain_probability_mask"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -800,11 +2465,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "BrainExtractionPrior1InverseWarp",
           "code": [
             {
               "language": "NiPype",
-              "argument": "brain_probability_mask"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -812,11 +2478,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "BrainExtractionPrior1Warp",
           "code": [
             {
               "language": "NiPype",
-              "argument": "brain_probability_mask"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -824,11 +2491,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "BrainExtractionPriorWarped",
           "code": [
             {
               "language": "NiPype",
-              "argument": "brain_probability_mask"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -836,11 +2504,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "BrainExtractionSegmentation",
           "code": [
             {
               "language": "NiPype",
-              "argument": "brain_probability_mask"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -848,11 +2517,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "BrainExtractionTemplateLaplacian",
           "code": [
             {
               "language": "NiPype",
-              "argument": "brain_probability_mask"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -860,11 +2530,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "BrainExtractionTmp",
           "code": [
             {
               "language": "NiPype",
-              "argument": "brain_probability_mask"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -872,11 +2543,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "BrainExtractionWM",
           "code": [
             {
               "language": "NiPype",
-              "argument": "brain_probability_mask"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -884,11 +2556,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "N4Corrected0",
           "code": [
             {
               "language": "NiPype",
-              "argument": "brain_probability_mask"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -896,11 +2569,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "N4Truncated0",
           "code": [
             {
               "language": "NiPype",
-              "argument": "brain_probability_mask"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         }
@@ -926,7 +2600,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "dimension",
+          "editable": true,
+          "name": "inputs.dimension",
           "code": [
             {
               "language": "NiPype",
@@ -938,7 +2613,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "input_image",
+          "editable": true,
+          "name": "inputs.input_image",
           "code": [
             {
               "language": "NiPype",
@@ -950,7 +2626,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "colormap",
+          "editable": true,
+          "name": "inputs.colormap",
           "code": [
             {
               "language": "NiPype",
@@ -962,7 +2639,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "minimum_input",
+          "editable": true,
+          "name": "inputs.minimum_input",
           "code": [
             {
               "language": "NiPype",
@@ -974,7 +2652,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "maximum_input",
+          "editable": true,
+          "name": "inputs.maximum_input",
           "code": [
             {
               "language": "NiPype",
@@ -983,14 +2662,145 @@
           ]
         },
         {
-          "input": false,
-          "output": true,
-          "visible": true,
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
           "name": "output_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "maximum_input"
+              "argument": "inputs.output_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "maximum_RGB_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.maximum_RGB_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "custom_color_map_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.custom_color_map_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mask_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_threads",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.num_threads"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "minimum_RGB_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.minimum_RGB_output"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "output_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.minimum_RGB_output"
             }
           ]
         }
@@ -1016,7 +2826,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "anatomical_image",
+          "editable": true,
+          "name": "inputs.anatomical_image",
           "code": [
             {
               "language": "NiPype",
@@ -1028,7 +2839,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "brain_template",
+          "editable": true,
+          "name": "inputs.brain_template",
           "code": [
             {
               "language": "NiPype",
@@ -1040,7 +2852,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "brain_probability_mask",
+          "editable": true,
+          "name": "inputs.brain_probability_mask",
           "code": [
             {
               "language": "NiPype",
@@ -1052,7 +2865,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "segmentation_priors",
+          "editable": true,
+          "name": "inputs.segmentation_priors",
           "code": [
             {
               "language": "NiPype",
@@ -1064,7 +2878,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "t1_registration_template",
+          "editable": true,
+          "name": "inputs.t1_registration_template",
           "code": [
             {
               "language": "NiPype",
@@ -1073,14 +2888,288 @@
           ]
         },
         {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "debug",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.debug"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "cortical_label_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.cortical_label_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "posterior_formulation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.posterior_formulation"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "use_floatingpoint_precision",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_floatingpoint_precision"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "image_suffix",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.image_suffix"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "b_spline_smoothing",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.b_spline_smoothing"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "segmentation_iterations",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.segmentation_iterations"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.dimension"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "use_random_seeding",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_random_seeding"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_threads",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.num_threads"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "extraction_registration_mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.extraction_registration_mask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "label_propagation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.label_propagation"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "max_iterations",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.max_iterations"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_prefix",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_prefix"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "quick_registration",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.quick_registration"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "prior_segmentation_weight",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.prior_segmentation_weight"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "keep_temporary_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.keep_temporary_files"
+            }
+          ]
+        },
+        {
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "BrainExtractionMask",
           "code": [
             {
               "language": "NiPype",
-              "argument": "t1_registration_template"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -1088,11 +3177,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "BrainSegmentation",
           "code": [
             {
               "language": "NiPype",
-              "argument": "t1_registration_template"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -1100,11 +3190,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "BrainSegmentationN4",
           "code": [
             {
               "language": "NiPype",
-              "argument": "t1_registration_template"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -1112,11 +3203,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "BrainSegmentationPosteriors",
           "code": [
             {
               "language": "NiPype",
-              "argument": "t1_registration_template"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -1124,11 +3216,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "CorticalThickness",
           "code": [
             {
               "language": "NiPype",
-              "argument": "t1_registration_template"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -1136,11 +3229,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "TemplateToSubject1GenericAffine",
           "code": [
             {
               "language": "NiPype",
-              "argument": "t1_registration_template"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -1148,11 +3242,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "TemplateToSubject0Warp",
           "code": [
             {
               "language": "NiPype",
-              "argument": "t1_registration_template"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -1160,11 +3255,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "SubjectToTemplate1Warp",
           "code": [
             {
               "language": "NiPype",
-              "argument": "t1_registration_template"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -1172,11 +3268,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "SubjectToTemplate0GenericAffine",
           "code": [
             {
               "language": "NiPype",
-              "argument": "t1_registration_template"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -1184,11 +3281,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "SubjectToTemplateLogJacobian",
           "code": [
             {
               "language": "NiPype",
-              "argument": "t1_registration_template"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -1196,11 +3294,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "CorticalThicknessNormedToTemplate",
           "code": [
             {
               "language": "NiPype",
-              "argument": "t1_registration_template"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         },
@@ -1208,11 +3307,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "BrainVolumes",
           "code": [
             {
               "language": "NiPype",
-              "argument": "t1_registration_template"
+              "argument": "outputs.keep_temporary_files"
             }
           ]
         }
@@ -1238,7 +3338,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "imageDimension",
+          "editable": true,
+          "name": "inputs.imageDimension",
           "code": [
             {
               "language": "NiPype",
@@ -1250,7 +3351,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "deformationField",
+          "editable": true,
+          "name": "inputs.deformationField",
           "code": [
             {
               "language": "NiPype",
@@ -1262,7 +3364,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "outputImage",
+          "editable": true,
+          "name": "inputs.outputImage",
           "code": [
             {
               "language": "NiPype",
@@ -1271,14 +3374,106 @@
           ]
         },
         {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "doLogJacobian",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.doLogJacobian"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_threads",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.num_threads"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "useGeometric",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.useGeometric"
+            }
+          ]
+        },
+        {
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "jacobian_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputImage"
+              "argument": "outputs.useGeometric"
             }
           ]
         }
@@ -1304,7 +3499,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "input_image",
+          "editable": true,
+          "name": "inputs.input_image",
           "code": [
             {
               "language": "NiPype",
@@ -1316,7 +3512,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "rgb_image",
+          "editable": true,
+          "name": "inputs.rgb_image",
           "code": [
             {
               "language": "NiPype",
@@ -1325,14 +3522,197 @@
           ]
         },
         {
-          "input": false,
-          "output": true,
-          "visible": true,
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
           "name": "output_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "rgb_image"
+              "argument": "inputs.output_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "direction",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.direction"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "alpha_value",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.alpha_value"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "permute_axes",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.permute_axes"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "slices",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.slices"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mask_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "flip_slice",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.flip_slice"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "tile_geometry",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.tile_geometry"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_threads",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.num_threads"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "pad_or_crop",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.pad_or_crop"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "output_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.ignore_exception"
             }
           ]
         }
@@ -1358,7 +3738,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "input_image",
+          "editable": true,
+          "name": "inputs.input_image",
           "code": [
             {
               "language": "NiPype",
@@ -1370,7 +3751,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "save_noise",
+          "editable": true,
+          "name": "inputs.save_noise",
           "code": [
             {
               "language": "NiPype",
@@ -1379,14 +3761,145 @@
           ]
         },
         {
-          "input": false,
-          "output": true,
-          "visible": true,
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
           "name": "output_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "save_noise"
+              "argument": "inputs.output_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "noise_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.noise_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "verbose",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.verbose"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_threads",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.num_threads"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "noise_model",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.noise_model"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "shrink_factor",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.shrink_factor"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.dimension"
             }
           ]
         },
@@ -1394,11 +3907,25 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
+          "name": "output_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.dimension"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
           "name": "noise_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "save_noise"
+              "argument": "outputs.dimension"
             }
           ]
         }
@@ -1424,7 +3951,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "dimension",
+          "editable": true,
+          "name": "inputs.dimension",
           "code": [
             {
               "language": "NiPype",
@@ -1436,7 +3964,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "modalities",
+          "editable": true,
+          "name": "inputs.modalities",
           "code": [
             {
               "language": "NiPype",
@@ -1448,7 +3977,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "warped_intensity_images",
+          "editable": true,
+          "name": "inputs.warped_intensity_images",
           "code": [
             {
               "language": "NiPype",
@@ -1460,7 +3990,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "target_image",
+          "editable": true,
+          "name": "inputs.target_image",
           "code": [
             {
               "language": "NiPype",
@@ -1472,7 +4003,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "warped_label_images",
+          "editable": true,
+          "name": "inputs.warped_label_images",
           "code": [
             {
               "language": "NiPype",
@@ -1484,7 +4016,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "output_label_image",
+          "editable": true,
+          "name": "inputs.output_label_image",
           "code": [
             {
               "language": "NiPype",
@@ -1493,14 +4026,184 @@
           ]
         },
         {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "search_radius",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.search_radius"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "patch_radius",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.patch_radius"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "alpha",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.alpha"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "beta",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.beta"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "method",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.method"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "exclusion_region",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.exclusion_region"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "atlas_group_weights",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.atlas_group_weights"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "atlas_group_id",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.atlas_group_id"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_threads",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.num_threads"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "output_label_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "output_label_image"
+              "argument": "outputs.ignore_exception"
             }
           ]
         }
@@ -1526,7 +4229,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "input_wm",
+          "editable": true,
+          "name": "inputs.input_wm",
           "code": [
             {
               "language": "NiPype",
@@ -1538,7 +4242,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "input_gm",
+          "editable": true,
+          "name": "inputs.input_gm",
           "code": [
             {
               "language": "NiPype",
@@ -1547,14 +4252,158 @@
           ]
         },
         {
-          "input": false,
-          "output": true,
-          "visible": true,
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
           "name": "output_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "input_gm"
+              "argument": "inputs.output_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "prior_thickness",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.prior_thickness"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "opt_tolerance",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.opt_tolerance"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "smooth_param",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.smooth_param"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_threads",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.num_threads"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dT",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.dT"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "sulcus_prior",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.sulcus_prior"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "output_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.ignore_exception"
             }
           ]
         }
@@ -1580,7 +4429,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "dimension",
+          "editable": true,
+          "name": "inputs.dimension",
           "code": [
             {
               "language": "NiPype",
@@ -1592,7 +4442,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "first_input",
+          "editable": true,
+          "name": "inputs.first_input",
           "code": [
             {
               "language": "NiPype",
@@ -1604,7 +4455,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "second_input",
+          "editable": true,
+          "name": "inputs.second_input",
           "code": [
             {
               "language": "NiPype",
@@ -1616,7 +4468,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "output_product_image",
+          "editable": true,
+          "name": "inputs.output_product_image",
           "code": [
             {
               "language": "NiPype",
@@ -1625,14 +4478,80 @@
           ]
         },
         {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_threads",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.num_threads"
+            }
+          ]
+        },
+        {
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "output_product_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "output_product_image"
+              "argument": "outputs.num_threads"
             }
           ]
         }
@@ -1658,7 +4577,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "input_image",
+          "editable": true,
+          "name": "inputs.input_image",
           "code": [
             {
               "language": "NiPype",
@@ -1670,7 +4590,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "save_bias",
+          "editable": true,
+          "name": "inputs.save_bias",
           "code": [
             {
               "language": "NiPype",
@@ -1679,14 +4600,197 @@
           ]
         },
         {
-          "input": false,
-          "output": true,
-          "visible": true,
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
           "name": "output_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "save_bias"
+              "argument": "inputs.output_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "bspline_fitting_distance",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.bspline_fitting_distance"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "bspline_order",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.bspline_order"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "shrink_factor",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.shrink_factor"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.dimension"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mask_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "n_iterations",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.n_iterations"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "convergence_threshold",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.convergence_threshold"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "weight_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.weight_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_threads",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.num_threads"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "bias_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.bias_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
             }
           ]
         },
@@ -1694,11 +4798,25 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
+          "name": "output_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
           "name": "bias_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "save_bias"
+              "argument": "outputs.ignore_exception"
             }
           ]
         }
@@ -1724,7 +4842,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "fixed_image",
+          "editable": true,
+          "name": "inputs.fixed_image",
           "code": [
             {
               "language": "NiPype",
@@ -1736,7 +4855,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "moving_image",
+          "editable": true,
+          "name": "inputs.moving_image",
           "code": [
             {
               "language": "NiPype",
@@ -1748,7 +4868,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "metric",
+          "editable": true,
+          "name": "inputs.metric",
           "code": [
             {
               "language": "NiPype",
@@ -1760,7 +4881,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "metric_weight",
+          "editable": true,
+          "name": "inputs.metric_weight",
           "code": [
             {
               "language": "NiPype",
@@ -1772,7 +4894,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "transforms",
+          "editable": true,
+          "name": "inputs.transforms",
           "code": [
             {
               "language": "NiPype",
@@ -1784,7 +4907,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "smoothing_sigmas",
+          "editable": true,
+          "name": "inputs.smoothing_sigmas",
           "code": [
             {
               "language": "NiPype",
@@ -1796,7 +4920,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "shrink_factors",
+          "editable": true,
+          "name": "inputs.shrink_factors",
           "code": [
             {
               "language": "NiPype",
@@ -1805,110 +4930,704 @@
           ]
         },
         {
-          "input": false,
-          "output": true,
-          "visible": true,
-          "name": "forward_transforms",
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "radius_or_number_of_bins",
           "code": [
             {
               "language": "NiPype",
-              "argument": "shrink_factors"
+              "argument": "inputs.radius_or_number_of_bins"
             }
           ]
         },
         {
-          "input": false,
-          "output": true,
-          "visible": true,
-          "name": "reverse_transforms",
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "metric_weight_item_trait",
           "code": [
             {
               "language": "NiPype",
-              "argument": "shrink_factors"
+              "argument": "inputs.metric_weight_item_trait"
             }
           ]
         },
         {
-          "input": false,
-          "output": true,
-          "visible": true,
-          "name": "forward_invert_flags",
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "sampling_strategy_item_trait",
           "code": [
             {
               "language": "NiPype",
-              "argument": "shrink_factors"
+              "argument": "inputs.sampling_strategy_item_trait"
             }
           ]
         },
         {
-          "input": false,
-          "output": true,
-          "visible": true,
-          "name": "reverse_invert_flags",
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "interpolation_parameters",
           "code": [
             {
               "language": "NiPype",
-              "argument": "shrink_factors"
+              "argument": "inputs.interpolation_parameters"
             }
           ]
         },
         {
-          "input": false,
-          "output": true,
-          "visible": true,
-          "name": "composite_transform",
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "sampling_percentage_stage_trait",
           "code": [
             {
               "language": "NiPype",
-              "argument": "shrink_factors"
+              "argument": "inputs.sampling_percentage_stage_trait"
             }
           ]
         },
         {
-          "input": false,
-          "output": true,
-          "visible": true,
-          "name": "inverse_composite_transform",
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "use_estimate_learning_rate_once",
           "code": [
             {
               "language": "NiPype",
-              "argument": "shrink_factors"
+              "argument": "inputs.use_estimate_learning_rate_once"
             }
           ]
         },
         {
-          "input": false,
-          "output": true,
-          "visible": true,
-          "name": "warped_image",
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "invert_initial_moving_transform",
           "code": [
             {
               "language": "NiPype",
-              "argument": "shrink_factors"
+              "argument": "inputs.invert_initial_moving_transform"
             }
           ]
         },
         {
-          "input": false,
-          "output": true,
-          "visible": true,
-          "name": "inverse_warped_image",
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "initial_moving_transform_com",
           "code": [
             {
               "language": "NiPype",
-              "argument": "shrink_factors"
+              "argument": "inputs.initial_moving_transform_com"
             }
           ]
         },
         {
-          "input": false,
-          "output": true,
-          "visible": true,
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.dimension"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "sigma_units",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.sigma_units"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "moving_image_mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.moving_image_mask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "radius_bins_stage_trait",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.radius_bins_stage_trait"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "fixed_image_mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.fixed_image_mask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "verbose",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.verbose"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "sampling_strategy",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.sampling_strategy"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "write_composite_transform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.write_composite_transform"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "output_inverse_warped_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.output_inverse_warped_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "winsorize_upper_quantile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.winsorize_upper_quantile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "interpolation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.interpolation"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "metric_item_trait",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.metric_item_trait"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "output_warped_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.output_warped_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "transform_parameters",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.transform_parameters"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "metric_stage_trait",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.metric_stage_trait"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "output_transform_prefix",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.output_transform_prefix"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "use_histogram_matching",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_histogram_matching"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
           "name": "save_state",
           "code": [
             {
               "language": "NiPype",
-              "argument": "shrink_factors"
+              "argument": "inputs.save_state"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "collapse_output_transforms",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.collapse_output_transforms"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "radius_bins_item_trait",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.radius_bins_item_trait"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "convergence_threshold",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.convergence_threshold"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "initial_moving_transform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.initial_moving_transform"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_threads",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.num_threads"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "number_of_iterations",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.number_of_iterations"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "initialize_transforms_per_stage",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.initialize_transforms_per_stage"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "sampling_percentage_item_trait",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.sampling_percentage_item_trait"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "winsorize_lower_quantile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.winsorize_lower_quantile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "sampling_percentage",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.sampling_percentage"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "convergence_window_size",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.convergence_window_size"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "restore_state",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.restore_state"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "sampling_strategy_stage_trait",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.sampling_strategy_stage_trait"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "metric_weight_stage_trait",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.metric_weight_stage_trait"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "float",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.float"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "forward_transforms",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.float"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "reverse_transforms",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.float"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "forward_invert_flags",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.float"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "reverse_invert_flags",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.float"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "composite_transform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.float"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "inverse_composite_transform",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.float"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "warped_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.float"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "inverse_warped_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.float"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "save_state",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.float"
             }
           ]
         }
@@ -1934,7 +5653,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "input_image",
+          "editable": true,
+          "name": "inputs.input_image",
           "code": [
             {
               "language": "NiPype",
@@ -1946,7 +5666,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "transformation_series",
+          "editable": true,
+          "name": "inputs.transformation_series",
           "code": [
             {
               "language": "NiPype",
@@ -1955,14 +5676,197 @@
           ]
         },
         {
-          "input": false,
-          "output": true,
-          "visible": true,
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
           "name": "output_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "transformation_series"
+              "argument": "inputs.output_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "invert_affine",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.invert_affine"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.dimension"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "use_nearest",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_nearest"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "use_bspline",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_bspline"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_threads",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.num_threads"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_postfix",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_postfix"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "reslice_by_header",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.reslice_by_header"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "reference_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.reference_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "tightest_box",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.tightest_box"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "output_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.ignore_exception"
             }
           ]
         }
@@ -1988,7 +5892,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "input_image",
+          "editable": true,
+          "name": "inputs.input_image",
           "code": [
             {
               "language": "NiPype",
@@ -2000,7 +5905,8 @@
           "input": true,
           "output": false,
           "visible": true,
-          "name": "transformation_series",
+          "editable": true,
+          "name": "inputs.transformation_series",
           "code": [
             {
               "language": "NiPype",
@@ -2009,14 +5915,184 @@
           ]
         },
         {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "use_nearest",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_nearest"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "use_bspline",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_bspline"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_threads",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.num_threads"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_postfix",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_postfix"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "invert_affine",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.invert_affine"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "reslice_by_header",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.reslice_by_header"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "reference_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.reference_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "tightest_box",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.tightest_box"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.dimension"
+            }
+          ]
+        },
+        {
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "output_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "transformation_series"
+              "argument": "outputs.dimension"
             }
           ]
         }

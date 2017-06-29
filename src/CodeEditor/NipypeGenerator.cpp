@@ -88,9 +88,15 @@ QString NipypeGenerator::itemToCode(
     if(iterFields.length() == 0) {code.append(QString("Node"));}
     else                         {code.append(QString("MapNode"));}
 
+    ///@todo if(!isConnected(remove_eyes, functional))
+//    NodeHash_6ffea20 = pe.Node(interface = fsl.BET(), name = 'NodeName_6ffea20')
+//    NodeHash_6ffea20.iterables = [('remove_eyes', [True, False]), ('functional', )[1, 2, 3]]
+
+
     code.append(QString("(interface = %2, ").arg(title.getArgument(s_thisLanguage)));
     code.append(QString("name = 'NodeName_%1'").arg(QString::number((quint64) _item->getNode(), 16)));
 
+    ///@todo remove 'inputs.'
     if(iterFields.length() == 0) code.append(")\n");
     else                         code.append(QString(", iterfield = ['%1'])\n").arg(iterFields.join("', '")));
 
@@ -107,14 +113,9 @@ QString NipypeGenerator::itemToCode(
             }
         }
 
-        if(!filename.isEmpty() && argument.isInput())
+        if(!filename.isEmpty())
         {
-            code.append(QString("%1.inputs.%2 = %3\n").arg(nodeName, argument.getArgument(s_thisLanguage), filename));
-        }
-
-        if(!filename.isEmpty() && argument.isOutput())
-        {
-            code.append(QString("%1.outputs.%2 = %3\n").arg(nodeName, argument.getArgument(s_thisLanguage), filename));
+            code.append(QString("%1.%2 = %3\n").arg(nodeName, argument.getArgument(s_thisLanguage), filename));
         }
     }
     code.append("\n");

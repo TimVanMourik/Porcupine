@@ -48,6 +48,9 @@ public:
     bool isVisible(
             ) const;
     //
+    bool isEditable(
+            ) const;
+    //
     bool isIterator(
             ) const;
     //
@@ -60,6 +63,10 @@ public:
             );
     //
     void setVisible(
+            bool _visible
+            );
+    //
+    void setEditable(
             bool _editable
             );
     //
@@ -95,15 +102,17 @@ public:
 
 private:
     //
+    QJsonObject m_json;
+    //
     bool m_isInput;
     //
     bool m_isOutput;
     //
     bool m_isVisible;
     //
-    bool m_isIterator;
+    bool m_isEditable;
     //
-    QJsonObject m_json;
+    bool m_isIterator;
     //
     QString m_argumentName;
     //

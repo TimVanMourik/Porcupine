@@ -28,6 +28,7 @@
 #include <QApplication>
 #include <QBoxLayout>
 #include <QContextMenuEvent>
+#include <QDebug>
 #include <QFile>
 #include <QFileDialog>
 #include <QGraphicsScene>
@@ -443,7 +444,7 @@ void MainWindow::createActions()
     m_printAct->setStatusTip(tr("Print the document"));
     connect(m_printAct, SIGNAL(triggered()), this, SLOT(printFile()));
 
-    m_loadNodesAct = new QAction(tr("Load Nodes..."), this);
+    m_loadNodesAct = new QAction(tr("Add Dictionary..."), this);
 //    m_loadNodesAct->setShortcuts(QKeySequence::);
     m_loadNodesAct->setStatusTip(tr("Load new nodes into the library"));
     connect(m_loadNodesAct, SIGNAL(triggered()), this, SLOT(loadNewNodes()));
