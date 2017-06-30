@@ -21,11 +21,11 @@
           "output": false,
           "visible": true,
           "editable": true,
-          "name": "inputs.subject_id",
+          "name": "subject_id",
           "code": [
             {
               "language": "NiPype",
-              "argument": "subject_id"
+              "argument": "inputs.subject_id"
             }
           ]
         },
@@ -34,11 +34,11 @@
           "output": false,
           "visible": true,
           "editable": true,
-          "name": "inputs.subjects_dir",
+          "name": "subjects_dir",
           "code": [
             {
               "language": "NiPype",
-              "argument": "subjects_dir"
+              "argument": "inputs.subjects_dir"
             }
           ]
         },
@@ -46,20 +46,7 @@
           "input": true,
           "output": false,
           "visible": false,
-          "editable": true,
-          "name": "args",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.args"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
+          "editable": false,
           "name": "volume",
           "code": [
             {
@@ -72,20 +59,7 @@
           "input": true,
           "output": false,
           "visible": false,
-          "editable": true,
-          "name": "overwrite",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.overwrite"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
+          "editable": false,
           "name": "terminal_output",
           "code": [
             {
@@ -98,20 +72,7 @@
           "input": true,
           "output": false,
           "visible": false,
-          "editable": true,
-          "name": "environ",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.environ"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
+          "editable": false,
           "name": "ignore_exception",
           "code": [
             {
@@ -124,7 +85,46 @@
           "input": true,
           "output": false,
           "visible": false,
-          "editable": true,
+          "editable": false,
+          "name": "overwrite",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.overwrite"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
           "name": "atlas_mode",
           "code": [
             {
