@@ -72,9 +72,6 @@ public:
     const QVector<PortPair*> getPorts(
             ) const;
     //
-//    const NodeSetting* getNodeSetting(
-//            ) const;
-    //
     QVector<const Node*> getDescendants(
             );
     //

@@ -239,8 +239,9 @@ void MainWindow::saveFileToJson(
 
     QJsonObject jsonFile;
     //save all nodes
-    m_nodeTreeEditors[m_nodeEditorWidget->currentIndex()]->saveToJson(jsonFile);
-    m_nodeEditors    [m_nodeEditorWidget->currentIndex()]->saveToJson(jsonFile);
+    m_nodeTreeEditors [m_nodeEditorWidget->currentIndex()]->saveToJson(jsonFile);
+    m_nodeEditors     [m_nodeEditorWidget->currentIndex()]->saveToJson(jsonFile);
+    m_parameterEditors[m_nodeEditorWidget->currentIndex()]->saveToJson(jsonFile);
 
     QFile file(fileName);
     if (file.open(QIODevice::WriteOnly))
@@ -280,6 +281,7 @@ void MainWindow::openFile()
 
     m_nodeEditorWidget->setTabText(m_nodeEditorWidget->currentIndex(), filename);
     m_nodeEditors[m_nodeEditorWidget->currentIndex()]->loadFromJson(document.object());
+    m_parameterEditors[m_nodeEditorWidget->currentIndex()]->loadFromJson(document.object());
 }
 
 void MainWindow::printFile(
