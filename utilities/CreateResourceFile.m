@@ -9,7 +9,7 @@ docRoot = docNode.getDocumentElement();
 %
 currentNode = docNode.createElement('qresource');
 currentNode.setAttribute('prefix', '/images');
-currentNode.appendChild(fileToXML(docNode, 'file', 'RepeatingBrains.png',   'images/RepeatingBrains.png'));
+currentNode.appendChild(fileToXML(docNode, 'file', 'repeating-brains.png',  'images/repeating-brains.png'));
 currentNode.appendChild(fileToXML(docNode, 'file', 'eye.png',               'images/eye.png'));
 currentNode.appendChild(fileToXML(docNode, 'file', 'eye-hidden.png',        'images/eye-hidden.png'));
 currentNode.appendChild(fileToXML(docNode, 'file', 'eye-hover.png',         'images/eye-hover.png'));

@@ -14,6 +14,14 @@ public:
     //
     QMap<QString, QString> getParameters(
             );
+    //
+    void saveToJson(
+            QJsonObject& _json
+            );
+    //
+    void loadFromJson(
+            const QJsonObject& _json
+            );
 public slots:
     //
     void checkForEmptyRows(

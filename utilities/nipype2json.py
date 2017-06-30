@@ -5,7 +5,7 @@ import json
 working_dir = '../Resources/Dictionaries/'
 cat_nipype = 'NiPype'
 
-for class_name in ['utility', 'io', 'ants', 'fsl', 'afni', 'spm', 'freesurfer']:
+for class_name in ['utility', 'io', 'ants', 'fsl', 'afni', 'spm', 'freesurfer', 'camino', 'mrtrix', 'mne', 'slicer']:
 
     exec('import nipype.interfaces.' + class_name + ' as ' + class_name)
     class_list = [e for e in eval('dir(' + class_name + ')') if e[0].isupper() or e[0].isdigit()]
@@ -23,7 +23,6 @@ for class_name in ['utility', 'io', 'ants', 'fsl', 'afni', 'spm', 'freesurfer']:
             all_inputs = eval(class_name+'.'+cls+'.input_spec().traits()').keys()
             all_inputs = [ai for ai in all_inputs if not ai.startswith('trait')]
 
-            m_inputs = eval(class_name+'.'+cls+'.input_spec().traits(mandatory=True)').keys()
             try:
                 outputs = eval(class_name+'.'+cls+'.output_spec().traits()').keys()
                 m_outputs = [ou for ou in outputs if not ou.startswith('trait')]
@@ -47,16 +46,36 @@ for class_name in ['utility', 'io', 'ants', 'fsl', 'afni', 'spm', 'freesurfer']:
                     
             ports = []
             input_strings = []
+            
+            m_inputs = eval(class_name + '.' + cls + '.input_spec().traits(mandatory=True)').keys()
+            #par_class = str(eval(class_name + '.' + cls + '.__class__')).split('.')[-2]
             for m_inp in m_inputs:
                 codeBlock = {
                         'language': cat_nipype,
-                        'argument': m_inp
+                        'argument': 'inputs.' + m_inp,
+                        #'web_url': 'nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.' + class_name + '/' + par_class + '.html'
                         }
-                
                 port = {
                         'input': True,
                         'output': False,
                         'visible': True,
+                        'editable': True,
+                        'name': m_inp,
+                        'code': [codeBlock]
+                        }
+                ports.append(port);
+                            
+            m_inputs = set(all_inputs) - set(m_inputs)
+            for m_inp in m_inputs:
+                codeBlock = {
+                        'language': cat_nipype,
+                        'argument': 'inputs.' + m_inp
+                        }
+                port = {
+                        'input': True,
+                        'output': False,
+                        'visible': False,
+                        'editable': False,
                         'name': m_inp,
                         'code': [codeBlock]
                         }
@@ -67,20 +86,26 @@ for class_name in ['utility', 'io', 'ants', 'fsl', 'afni', 'spm', 'freesurfer']:
             for m_out in m_outputs:
                 codeBlock = {
                         'language': cat_nipype,
-                        'argument': m_inp
+                        'argument': 'outputs.' + m_inp
                         }
                 
                 port = {
                         'input': False,
                         'output': True,
                         'visible': True,
+                        'editable': False,
                         'name': m_out,
                         'code': [codeBlock]
                         }
                 ports.append(port);
     			
+            #if par_class == op_class_name:
+            this_category = [cat_nipype, op_class_name]
+            #else:
+                #this_category = [cat_nipype, op_class_name, par_class]
+                
             node = {
-                    'category': [cat_nipype, op_class_name],
+                    'category': this_category,
                     'title': titleBlock,
                     'ports': ports
                     }

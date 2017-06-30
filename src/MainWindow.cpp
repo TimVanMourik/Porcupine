@@ -28,6 +28,7 @@
 #include <QApplication>
 #include <QBoxLayout>
 #include <QContextMenuEvent>
+#include <QDebug>
 #include <QFile>
 #include <QFileDialog>
 #include <QGraphicsScene>
@@ -238,8 +239,9 @@ void MainWindow::saveFileToJson(
 
     QJsonObject jsonFile;
     //save all nodes
-    m_nodeTreeEditors[m_nodeEditorWidget->currentIndex()]->saveToJson(jsonFile);
-    m_nodeEditors    [m_nodeEditorWidget->currentIndex()]->saveToJson(jsonFile);
+    m_nodeTreeEditors [m_nodeEditorWidget->currentIndex()]->saveToJson(jsonFile);
+    m_nodeEditors     [m_nodeEditorWidget->currentIndex()]->saveToJson(jsonFile);
+    m_parameterEditors[m_nodeEditorWidget->currentIndex()]->saveToJson(jsonFile);
 
     QFile file(fileName);
     if (file.open(QIODevice::WriteOnly))
@@ -279,6 +281,7 @@ void MainWindow::openFile()
 
     m_nodeEditorWidget->setTabText(m_nodeEditorWidget->currentIndex(), filename);
     m_nodeEditors[m_nodeEditorWidget->currentIndex()]->loadFromJson(document.object());
+    m_parameterEditors[m_nodeEditorWidget->currentIndex()]->loadFromJson(document.object());
 }
 
 void MainWindow::printFile(
@@ -443,7 +446,7 @@ void MainWindow::createActions()
     m_printAct->setStatusTip(tr("Print the document"));
     connect(m_printAct, SIGNAL(triggered()), this, SLOT(printFile()));
 
-    m_loadNodesAct = new QAction(tr("Load Nodes..."), this);
+    m_loadNodesAct = new QAction(tr("Add Dictionary..."), this);
 //    m_loadNodesAct->setShortcuts(QKeySequence::);
     m_loadNodesAct->setStatusTip(tr("Load new nodes into the library"));
     connect(m_loadNodesAct, SIGNAL(triggered()), this, SLOT(loadNewNodes()));

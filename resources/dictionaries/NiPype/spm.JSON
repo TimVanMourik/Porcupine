@@ -20,95 +20,181 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "analyze_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "analyze_file"
+              "argument": "inputs.analyze_file"
             }
           ]
         },
         {
-          "input": false,
-          "output": true,
-          "visible": true,
-          "name": "nifti_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "analyze_file"
-            }
-          ]
-        },
-        {
-          "input": false,
-          "output": true,
-          "visible": true,
-          "name": "matlab_cmd",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "analyze_file"
-            }
-          ]
-        },
-        {
-          "input": false,
-          "output": true,
-          "visible": true,
-          "name": "paths",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "analyze_file"
-            }
-          ]
-        },
-        {
-          "input": false,
-          "output": true,
-          "visible": true,
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
           "name": "mfile",
           "code": [
             {
               "language": "NiPype",
-              "argument": "analyze_file"
+              "argument": "inputs.mfile"
             }
           ]
         },
         {
-          "input": false,
-          "output": true,
-          "visible": true,
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
           "name": "use_mcr",
           "code": [
             {
               "language": "NiPype",
-              "argument": "analyze_file"
+              "argument": "inputs.use_mcr"
             }
           ]
         },
         {
-          "input": false,
-          "output": true,
-          "visible": true,
-          "name": "use_v8struct",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "analyze_file"
-            }
-          ]
-        },
-        {
-          "input": false,
-          "output": true,
-          "visible": true,
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
           "name": "ignore_exception",
           "code": [
             {
               "language": "NiPype",
-              "argument": "analyze_file"
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.paths"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_v8struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matlab_cmd"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "nifti_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.matlab_cmd"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.matlab_cmd"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.matlab_cmd"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.matlab_cmd"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.matlab_cmd"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.matlab_cmd"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.matlab_cmd"
             }
           ]
         }
@@ -134,11 +220,168 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "in_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "inputs.in_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "bounding_box",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.bounding_box"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mfile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_mcr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "target",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.target"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.paths"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_v8struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matlab_cmd"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "deformation_field",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.deformation_field"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "voxel_sizes",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.voxel_sizes"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "deformation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.deformation"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "interpolation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.interpolation"
             }
           ]
         },
@@ -146,11 +389,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "out_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "outputs.interpolation"
             }
           ]
         }
@@ -176,11 +420,12 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "in_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": "inputs.in_file"
             }
           ]
         },
@@ -188,11 +433,103 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "mat",
           "code": [
             {
               "language": "NiPype",
-              "argument": "mat"
+              "argument": "inputs.mat"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mfile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_mcr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.paths"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_v8struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matlab_cmd"
             }
           ]
         },
@@ -200,11 +537,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "out_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "mat"
+              "argument": "outputs.matlab_cmd"
             }
           ]
         }
@@ -230,11 +568,12 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "target",
           "code": [
             {
               "language": "NiPype",
-              "argument": "target"
+              "argument": "inputs.target"
             }
           ]
         },
@@ -242,23 +581,116 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "moving",
           "code": [
             {
               "language": "NiPype",
-              "argument": "moving"
+              "argument": "inputs.moving"
             }
           ]
         },
         {
-          "input": false,
-          "output": true,
-          "visible": true,
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mfile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_mcr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
           "name": "mat",
           "code": [
             {
               "language": "NiPype",
-              "argument": "moving"
+              "argument": "inputs.mat"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.paths"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_v8struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "invmat",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.invmat"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matlab_cmd"
             }
           ]
         },
@@ -266,11 +698,25 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
+          "name": "mat",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.matlab_cmd"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
           "name": "invmat",
           "code": [
             {
               "language": "NiPype",
-              "argument": "moving"
+              "argument": "outputs.matlab_cmd"
             }
           ]
         }
@@ -296,11 +742,12 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "target",
           "code": [
             {
               "language": "NiPype",
-              "argument": "target"
+              "argument": "inputs.target"
             }
           ]
         },
@@ -308,11 +755,220 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "source",
           "code": [
             {
               "language": "NiPype",
-              "argument": "source"
+              "argument": "inputs.source"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "cost_function",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.cost_function"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_mcr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.paths"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "out_prefix",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_prefix"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "write_mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.write_mask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matlab_cmd"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "write_wrap",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.write_wrap"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "apply_to_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.apply_to_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mfile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_v8struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "jobtype",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.jobtype"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "fwhm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.fwhm"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "separation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.separation"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "write_interp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.write_interp"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "tolerance",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.tolerance"
             }
           ]
         },
@@ -320,11 +976,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "coregistered_source",
           "code": [
             {
               "language": "NiPype",
-              "argument": "source"
+              "argument": "outputs.tolerance"
             }
           ]
         },
@@ -332,11 +989,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "coregistered_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "source"
+              "argument": "outputs.tolerance"
             }
           ]
         }
@@ -362,11 +1020,12 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "image_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "image_files"
+              "argument": "inputs.image_files"
             }
           ]
         },
@@ -374,11 +1033,129 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "flowfield_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "flowfield_files"
+              "argument": "inputs.flowfield_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "modulate",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.modulate"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "iterations",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.iterations"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "interp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.interp"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mfile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_mcr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.paths"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_v8struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matlab_cmd"
             }
           ]
         },
@@ -386,11 +1163,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "warped_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "flowfield_files"
+              "argument": "outputs.matlab_cmd"
             }
           ]
         }
@@ -416,11 +1194,142 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "image_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "image_files"
+              "argument": "inputs.image_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "iteration_parameters",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.iteration_parameters"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mfile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_mcr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "regularization_form",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.regularization_form"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.paths"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_v8struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "template_prefix",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.template_prefix"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matlab_cmd"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "optimization_parameters",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.optimization_parameters"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
             }
           ]
         },
@@ -428,11 +1337,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "final_template_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "image_files"
+              "argument": "outputs.ignore_exception"
             }
           ]
         },
@@ -440,11 +1350,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "template_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "image_files"
+              "argument": "outputs.ignore_exception"
             }
           ]
         },
@@ -452,11 +1363,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "dartel_flow_fields",
           "code": [
             {
               "language": "NiPype",
-              "argument": "image_files"
+              "argument": "outputs.ignore_exception"
             }
           ]
         }
@@ -482,11 +1394,12 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "template_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "template_file"
+              "argument": "inputs.template_file"
             }
           ]
         },
@@ -494,11 +1407,12 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "flowfield_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "flowfield_files"
+              "argument": "inputs.flowfield_files"
             }
           ]
         },
@@ -506,11 +1420,142 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "apply_to_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "apply_to_files"
+              "argument": "inputs.apply_to_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "modulate",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.modulate"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "bounding_box",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.bounding_box"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mfile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_mcr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.paths"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "voxel_size",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.voxel_size"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_v8struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "fwhm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.fwhm"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matlab_cmd"
             }
           ]
         },
@@ -518,11 +1563,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "normalized_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "apply_to_files"
+              "argument": "outputs.matlab_cmd"
             }
           ]
         },
@@ -530,11 +1576,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "normalization_parameter_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "apply_to_files"
+              "argument": "outputs.matlab_cmd"
             }
           ]
         }
@@ -560,11 +1607,142 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "in_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "inputs.in_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mfile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "icedims",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.icedims"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_mcr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.paths"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_v8struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "format",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.format"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "output_dir_struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.output_dir_struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matlab_cmd"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "output_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.output_dir"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
             }
           ]
         },
@@ -572,11 +1750,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "out_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "outputs.ignore_exception"
             }
           ]
         }
@@ -602,11 +1781,12 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "spm_mat_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "spm_mat_file"
+              "argument": "inputs.spm_mat_file"
             }
           ]
         },
@@ -614,11 +1794,12 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "contrasts",
           "code": [
             {
               "language": "NiPype",
-              "argument": "contrasts"
+              "argument": "inputs.contrasts"
             }
           ]
         },
@@ -626,11 +1807,12 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "beta_images",
           "code": [
             {
               "language": "NiPype",
-              "argument": "beta_images"
+              "argument": "inputs.beta_images"
             }
           ]
         },
@@ -638,11 +1820,116 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "residual_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "residual_image"
+              "argument": "inputs.residual_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mfile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_mcr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "group_contrast",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.group_contrast"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.paths"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_v8struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_derivs",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_derivs"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matlab_cmd"
             }
           ]
         },
@@ -650,11 +1937,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "con_images",
           "code": [
             {
               "language": "NiPype",
-              "argument": "residual_image"
+              "argument": "outputs.matlab_cmd"
             }
           ]
         },
@@ -662,11 +1950,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "spmT_images",
           "code": [
             {
               "language": "NiPype",
-              "argument": "residual_image"
+              "argument": "outputs.matlab_cmd"
             }
           ]
         },
@@ -674,11 +1963,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "ess_images",
           "code": [
             {
               "language": "NiPype",
-              "argument": "residual_image"
+              "argument": "outputs.matlab_cmd"
             }
           ]
         },
@@ -686,11 +1976,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "spmF_images",
           "code": [
             {
               "language": "NiPype",
-              "argument": "residual_image"
+              "argument": "outputs.matlab_cmd"
             }
           ]
         },
@@ -698,11 +1989,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "spm_mat_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "residual_image"
+              "argument": "outputs.matlab_cmd"
             }
           ]
         }
@@ -728,11 +2020,12 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "spm_mat_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "spm_mat_file"
+              "argument": "inputs.spm_mat_file"
             }
           ]
         },
@@ -740,11 +2033,116 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "estimation_method",
           "code": [
             {
               "language": "NiPype",
-              "argument": "estimation_method"
+              "argument": "inputs.estimation_method"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mfile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_mcr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.paths"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_v8struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "flags",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.flags"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "write_residuals",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.write_residuals"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matlab_cmd"
             }
           ]
         },
@@ -752,11 +2150,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "mask_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "estimation_method"
+              "argument": "outputs.matlab_cmd"
             }
           ]
         },
@@ -764,11 +2163,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "beta_images",
           "code": [
             {
               "language": "NiPype",
-              "argument": "estimation_method"
+              "argument": "outputs.matlab_cmd"
             }
           ]
         },
@@ -776,11 +2176,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "residual_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "estimation_method"
+              "argument": "outputs.matlab_cmd"
             }
           ]
         },
@@ -788,11 +2189,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "residual_images",
           "code": [
             {
               "language": "NiPype",
-              "argument": "estimation_method"
+              "argument": "outputs.matlab_cmd"
             }
           ]
         },
@@ -800,11 +2202,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "RPVimage",
           "code": [
             {
               "language": "NiPype",
-              "argument": "estimation_method"
+              "argument": "outputs.matlab_cmd"
             }
           ]
         },
@@ -812,11 +2215,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "spm_mat_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "estimation_method"
+              "argument": "outputs.matlab_cmd"
             }
           ]
         },
@@ -824,11 +2228,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "labels",
           "code": [
             {
               "language": "NiPype",
-              "argument": "estimation_method"
+              "argument": "outputs.matlab_cmd"
             }
           ]
         },
@@ -836,11 +2241,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "SDerror",
           "code": [
             {
               "language": "NiPype",
-              "argument": "estimation_method"
+              "argument": "outputs.matlab_cmd"
             }
           ]
         },
@@ -848,11 +2254,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "ARcoef",
           "code": [
             {
               "language": "NiPype",
-              "argument": "estimation_method"
+              "argument": "outputs.matlab_cmd"
             }
           ]
         },
@@ -860,11 +2267,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "Cbetas",
           "code": [
             {
               "language": "NiPype",
-              "argument": "estimation_method"
+              "argument": "outputs.matlab_cmd"
             }
           ]
         },
@@ -872,11 +2280,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "SDbetas",
           "code": [
             {
               "language": "NiPype",
-              "argument": "estimation_method"
+              "argument": "outputs.matlab_cmd"
             }
           ]
         }
@@ -902,11 +2311,12 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "timing_units",
           "code": [
             {
               "language": "NiPype",
-              "argument": "timing_units"
+              "argument": "inputs.timing_units"
             }
           ]
         },
@@ -914,11 +2324,12 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "interscan_interval",
           "code": [
             {
               "language": "NiPype",
-              "argument": "interscan_interval"
+              "argument": "inputs.interscan_interval"
             }
           ]
         },
@@ -926,11 +2337,12 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "session_info",
           "code": [
             {
               "language": "NiPype",
-              "argument": "session_info"
+              "argument": "inputs.session_info"
             }
           ]
         },
@@ -938,11 +2350,207 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "bases",
           "code": [
             {
               "language": "NiPype",
-              "argument": "bases"
+              "argument": "inputs.bases"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mfile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_mcr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "spm_mat_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.spm_mat_dir"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matlab_cmd"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "volterra_expansion_order",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.volterra_expansion_order"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.paths"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_v8struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "microtime_onset",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.microtime_onset"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "global_intensity_normalization",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.global_intensity_normalization"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "microtime_resolution",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.microtime_resolution"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "factor_info",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.factor_info"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mask_threshold",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mask_threshold"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mask_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mask_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "model_serial_correlations",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.model_serial_correlations"
             }
           ]
         },
@@ -950,11 +2558,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "spm_mat_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "bases"
+              "argument": "outputs.model_serial_correlations"
             }
           ]
         }
@@ -980,11 +2589,272 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "in_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "inputs.in_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "include_intercept",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.include_intercept"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "covariates",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.covariates"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_mcr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "threshold_mask_relative",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.threshold_mask_relative"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.paths"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_implicit_threshold",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_implicit_threshold"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "global_calc_omit",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.global_calc_omit"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "global_normalization",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.global_normalization"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matlab_cmd"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "threshold_mask_none",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.threshold_mask_none"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "explicit_mask_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.explicit_mask_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "spm_mat_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.spm_mat_dir"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "threshold_mask_absolute",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.threshold_mask_absolute"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "no_grand_mean_scaling",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.no_grand_mean_scaling"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mfile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_v8struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "user_covariates",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.user_covariates"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "global_calc_mean",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.global_calc_mean"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "global_calc_values",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.global_calc_values"
             }
           ]
         },
@@ -992,11 +2862,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "spm_mat_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "outputs.global_calc_values"
             }
           ]
         }
@@ -1022,11 +2893,168 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "channel_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "channel_files"
+              "argument": "inputs.channel_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "affine_regularization",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.affine_regularization"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mfile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_mcr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "sampling_distance",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.sampling_distance"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.paths"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_v8struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "warping_regularization",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.warping_regularization"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matlab_cmd"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "channel_info",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.channel_info"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "write_deformation_fields",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.write_deformation_fields"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "tissues",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.tissues"
             }
           ]
         },
@@ -1034,11 +3062,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "native_class_images",
           "code": [
             {
               "language": "NiPype",
-              "argument": "channel_files"
+              "argument": "outputs.tissues"
             }
           ]
         },
@@ -1046,11 +3075,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "dartel_input_images",
           "code": [
             {
               "language": "NiPype",
-              "argument": "channel_files"
+              "argument": "outputs.tissues"
             }
           ]
         },
@@ -1058,11 +3088,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "normalized_class_images",
           "code": [
             {
               "language": "NiPype",
-              "argument": "channel_files"
+              "argument": "outputs.tissues"
             }
           ]
         },
@@ -1070,11 +3101,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "modulated_class_images",
           "code": [
             {
               "language": "NiPype",
-              "argument": "channel_files"
+              "argument": "outputs.tissues"
             }
           ]
         },
@@ -1082,11 +3114,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "transformation_mat",
           "code": [
             {
               "language": "NiPype",
-              "argument": "channel_files"
+              "argument": "outputs.tissues"
             }
           ]
         },
@@ -1094,11 +3127,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "bias_corrected_images",
           "code": [
             {
               "language": "NiPype",
-              "argument": "channel_files"
+              "argument": "outputs.tissues"
             }
           ]
         },
@@ -1106,11 +3140,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "bias_field_images",
           "code": [
             {
               "language": "NiPype",
-              "argument": "channel_files"
+              "argument": "outputs.tissues"
             }
           ]
         },
@@ -1118,11 +3153,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "forward_deformation_field",
           "code": [
             {
               "language": "NiPype",
-              "argument": "channel_files"
+              "argument": "outputs.tissues"
             }
           ]
         },
@@ -1130,11 +3166,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "inverse_deformation_field",
           "code": [
             {
               "language": "NiPype",
-              "argument": "channel_files"
+              "argument": "outputs.tissues"
             }
           ]
         }
@@ -1160,11 +3197,12 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "template",
           "code": [
             {
               "language": "NiPype",
-              "argument": "template"
+              "argument": "inputs.template"
             }
           ]
         },
@@ -1172,11 +3210,12 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "source",
           "code": [
             {
               "language": "NiPype",
-              "argument": "source"
+              "argument": "inputs.source"
             }
           ]
         },
@@ -1184,11 +3223,298 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "parameter_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "parameter_file"
+              "argument": "inputs.parameter_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_mcr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "source_image_smoothing",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.source_image_smoothing"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.paths"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "affine_regularization_type",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.affine_regularization_type"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "template_image_smoothing",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.template_image_smoothing"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "out_prefix",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_prefix"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matlab_cmd"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "write_bounding_box",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.write_bounding_box"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "write_wrap",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.write_wrap"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "apply_to_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.apply_to_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "write_voxel_sizes",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.write_voxel_sizes"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mfile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_v8struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "jobtype",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.jobtype"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "source_weight",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.source_weight"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "write_interp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.write_interp"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "template_weight",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.template_weight"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "nonlinear_regularization",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.nonlinear_regularization"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "write_preserve",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.write_preserve"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "DCT_period_cutoff",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.DCT_period_cutoff"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "nonlinear_iterations",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.nonlinear_iterations"
             }
           ]
         },
@@ -1196,11 +3522,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "normalization_parameters",
           "code": [
             {
               "language": "NiPype",
-              "argument": "parameter_file"
+              "argument": "outputs.nonlinear_iterations"
             }
           ]
         },
@@ -1208,11 +3535,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "normalized_source",
           "code": [
             {
               "language": "NiPype",
-              "argument": "parameter_file"
+              "argument": "outputs.nonlinear_iterations"
             }
           ]
         },
@@ -1220,11 +3548,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "normalized_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "parameter_file"
+              "argument": "outputs.nonlinear_iterations"
             }
           ]
         }
@@ -1250,11 +3579,12 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "image_to_align",
           "code": [
             {
               "language": "NiPype",
-              "argument": "image_to_align"
+              "argument": "inputs.image_to_align"
             }
           ]
         },
@@ -1262,11 +3592,259 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "deformation_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "deformation_file"
+              "argument": "inputs.deformation_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_mcr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.paths"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "affine_regularization_type",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.affine_regularization_type"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "out_prefix",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_prefix"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matlab_cmd"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "tpm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.tpm"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "smoothness",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.smoothness"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "write_bounding_box",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.write_bounding_box"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "apply_to_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.apply_to_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "warping_regularization",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.warping_regularization"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "write_voxel_sizes",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.write_voxel_sizes"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mfile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "sampling_distance",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.sampling_distance"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_v8struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "jobtype",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.jobtype"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "bias_regularization",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.bias_regularization"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "write_interp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.write_interp"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "bias_fwhm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.bias_fwhm"
             }
           ]
         },
@@ -1274,11 +3852,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "deformation_field",
           "code": [
             {
               "language": "NiPype",
-              "argument": "deformation_file"
+              "argument": "outputs.bias_fwhm"
             }
           ]
         },
@@ -1286,11 +3865,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "normalized_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "deformation_file"
+              "argument": "outputs.bias_fwhm"
             }
           ]
         },
@@ -1298,11 +3878,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "normalized_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "deformation_file"
+              "argument": "outputs.bias_fwhm"
             }
           ]
         }
@@ -1328,11 +3909,246 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "in_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "inputs.in_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "covariates",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.covariates"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_mcr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "threshold_mask_relative",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.threshold_mask_relative"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.paths"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_implicit_threshold",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_implicit_threshold"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "global_calc_omit",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.global_calc_omit"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "global_normalization",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.global_normalization"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matlab_cmd"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "threshold_mask_none",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.threshold_mask_none"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "explicit_mask_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.explicit_mask_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "spm_mat_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.spm_mat_dir"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "threshold_mask_absolute",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.threshold_mask_absolute"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "no_grand_mean_scaling",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.no_grand_mean_scaling"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mfile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_v8struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "global_calc_mean",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.global_calc_mean"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "global_calc_values",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.global_calc_values"
             }
           ]
         },
@@ -1340,11 +4156,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "spm_mat_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "outputs.global_calc_values"
             }
           ]
         }
@@ -1370,11 +4187,272 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "paired_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "paired_files"
+              "argument": "inputs.paired_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "covariates",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.covariates"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_mcr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "threshold_mask_relative",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.threshold_mask_relative"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.paths"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_implicit_threshold",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_implicit_threshold"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "global_calc_omit",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.global_calc_omit"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "global_normalization",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.global_normalization"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matlab_cmd"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "threshold_mask_none",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.threshold_mask_none"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "explicit_mask_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.explicit_mask_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "spm_mat_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.spm_mat_dir"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "threshold_mask_absolute",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.threshold_mask_absolute"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "no_grand_mean_scaling",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.no_grand_mean_scaling"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mfile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_v8struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "grand_mean_scaling",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.grand_mean_scaling"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ancova",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ancova"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "global_calc_mean",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.global_calc_mean"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "global_calc_values",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.global_calc_values"
             }
           ]
         },
@@ -1382,11 +4460,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "spm_mat_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "paired_files"
+              "argument": "outputs.global_calc_values"
             }
           ]
         }
@@ -1412,11 +4491,259 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "in_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "inputs.in_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "quality",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.quality"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "weight_img",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.weight_img"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_mcr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.paths"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "out_prefix",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_prefix"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "write_mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.write_mask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matlab_cmd"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "interp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.interp"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "register_to_mean",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.register_to_mean"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "write_wrap",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.write_wrap"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mfile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "wrap",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.wrap"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_v8struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "jobtype",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.jobtype"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "fwhm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.fwhm"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "separation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.separation"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "write_interp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.write_interp"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "write_which",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.write_which"
             }
           ]
         },
@@ -1424,11 +4751,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "mean_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "outputs.write_which"
             }
           ]
         },
@@ -1436,11 +4764,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "modified_in_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "outputs.write_which"
             }
           ]
         },
@@ -1448,11 +4777,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "realigned_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "outputs.write_which"
             }
           ]
         },
@@ -1460,11 +4790,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "realignment_parameters",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "outputs.write_which"
             }
           ]
         }
@@ -1490,11 +4821,12 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "in_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": "inputs.in_file"
             }
           ]
         },
@@ -1502,11 +4834,116 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "space_defining",
           "code": [
             {
               "language": "NiPype",
-              "argument": "space_defining"
+              "argument": "inputs.space_defining"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "interp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.interp"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mfile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_mcr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.paths"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_v8struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matlab_cmd"
             }
           ]
         },
@@ -1514,11 +4951,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "out_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "space_defining"
+              "argument": "outputs.matlab_cmd"
             }
           ]
         }
@@ -1544,11 +4982,142 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "in_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "inputs.in_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "bounding_box",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.bounding_box"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mfile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_mcr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "target",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.target"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.paths"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_v8struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matlab_cmd"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "voxel_sizes",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.voxel_sizes"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "interpolation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.interpolation"
             }
           ]
         },
@@ -1556,11 +5125,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "out_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "outputs.interpolation"
             }
           ]
         }
@@ -1586,11 +5156,272 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "data",
           "code": [
             {
               "language": "NiPype",
-              "argument": "data"
+              "argument": "inputs.data"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "clean_masks",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.clean_masks"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_mcr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.paths"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "wm_output_type",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.wm_output_type"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matlab_cmd"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "gaussians_per_class",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.gaussians_per_class"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "warp_frequency_cutoff",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.warp_frequency_cutoff"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "tissue_prob_maps",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.tissue_prob_maps"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mask_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mask_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "warping_regularization",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.warping_regularization"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "gm_output_type",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.gm_output_type"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "affine_regularization",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.affine_regularization"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "save_bias_corrected",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.save_bias_corrected"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mfile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "csf_output_type",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.csf_output_type"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "sampling_distance",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.sampling_distance"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_v8struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "bias_regularization",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.bias_regularization"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "bias_fwhm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.bias_fwhm"
             }
           ]
         },
@@ -1598,11 +5429,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "native_gm_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "data"
+              "argument": "outputs.bias_fwhm"
             }
           ]
         },
@@ -1610,11 +5442,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "normalized_gm_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "data"
+              "argument": "outputs.bias_fwhm"
             }
           ]
         },
@@ -1622,11 +5455,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "modulated_gm_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "data"
+              "argument": "outputs.bias_fwhm"
             }
           ]
         },
@@ -1634,11 +5468,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "native_wm_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "data"
+              "argument": "outputs.bias_fwhm"
             }
           ]
         },
@@ -1646,11 +5481,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "normalized_wm_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "data"
+              "argument": "outputs.bias_fwhm"
             }
           ]
         },
@@ -1658,11 +5494,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "modulated_wm_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "data"
+              "argument": "outputs.bias_fwhm"
             }
           ]
         },
@@ -1670,11 +5507,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "native_csf_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "data"
+              "argument": "outputs.bias_fwhm"
             }
           ]
         },
@@ -1682,11 +5520,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "normalized_csf_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "data"
+              "argument": "outputs.bias_fwhm"
             }
           ]
         },
@@ -1694,11 +5533,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "modulated_csf_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "data"
+              "argument": "outputs.bias_fwhm"
             }
           ]
         },
@@ -1706,11 +5546,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "modulated_input_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "data"
+              "argument": "outputs.bias_fwhm"
             }
           ]
         },
@@ -1718,11 +5559,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "bias_corrected_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "data"
+              "argument": "outputs.bias_fwhm"
             }
           ]
         },
@@ -1730,11 +5572,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "transformation_mat",
           "code": [
             {
               "language": "NiPype",
-              "argument": "data"
+              "argument": "outputs.bias_fwhm"
             }
           ]
         },
@@ -1742,11 +5585,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "inverse_transformation_mat",
           "code": [
             {
               "language": "NiPype",
-              "argument": "data"
+              "argument": "outputs.bias_fwhm"
             }
           ]
         }
@@ -1772,11 +5616,12 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "in_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "inputs.in_files"
             }
           ]
         },
@@ -1784,11 +5629,12 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "num_slices",
           "code": [
             {
               "language": "NiPype",
-              "argument": "num_slices"
+              "argument": "inputs.num_slices"
             }
           ]
         },
@@ -1796,11 +5642,12 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "time_repetition",
           "code": [
             {
               "language": "NiPype",
-              "argument": "time_repetition"
+              "argument": "inputs.time_repetition"
             }
           ]
         },
@@ -1808,11 +5655,12 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "time_acquisition",
           "code": [
             {
               "language": "NiPype",
-              "argument": "time_acquisition"
+              "argument": "inputs.time_acquisition"
             }
           ]
         },
@@ -1820,11 +5668,12 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "slice_order",
           "code": [
             {
               "language": "NiPype",
-              "argument": "slice_order"
+              "argument": "inputs.slice_order"
             }
           ]
         },
@@ -1832,11 +5681,103 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "ref_slice",
           "code": [
             {
               "language": "NiPype",
-              "argument": "ref_slice"
+              "argument": "inputs.ref_slice"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mfile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_mcr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.paths"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_v8struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "out_prefix",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_prefix"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matlab_cmd"
             }
           ]
         },
@@ -1844,11 +5785,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "timecorrected_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "ref_slice"
+              "argument": "outputs.matlab_cmd"
             }
           ]
         }
@@ -1874,11 +5816,142 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "in_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "inputs.in_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "data_type",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.data_type"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mfile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_mcr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "implicit_masking",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.implicit_masking"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.paths"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_v8struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "fwhm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.fwhm"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "out_prefix",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_prefix"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matlab_cmd"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
             }
           ]
         },
@@ -1886,11 +5959,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "smoothed_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "outputs.ignore_exception"
             }
           ]
         }
@@ -1916,11 +5990,12 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "spm_mat_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "spm_mat_file"
+              "argument": "inputs.spm_mat_file"
             }
           ]
         },
@@ -1928,11 +6003,12 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "stat_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "stat_image"
+              "argument": "inputs.stat_image"
             }
           ]
         },
@@ -1940,11 +6016,181 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "contrast_index",
           "code": [
             {
               "language": "NiPype",
-              "argument": "contrast_index"
+              "argument": "inputs.contrast_index"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "height_threshold",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.height_threshold"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_mcr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "force_activation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.force_activation"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "height_threshold_type",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.height_threshold_type"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.paths"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_topo_fdr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_topo_fdr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matlab_cmd"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mfile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_v8struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "extent_fdr_p_threshold",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.extent_fdr_p_threshold"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "extent_threshold",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.extent_threshold"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_fwe_correction",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_fwe_correction"
             }
           ]
         },
@@ -1952,11 +6198,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "thresholded_map",
           "code": [
             {
               "language": "NiPype",
-              "argument": "contrast_index"
+              "argument": "outputs.use_fwe_correction"
             }
           ]
         },
@@ -1964,11 +6211,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "n_clusters",
           "code": [
             {
               "language": "NiPype",
-              "argument": "contrast_index"
+              "argument": "outputs.use_fwe_correction"
             }
           ]
         },
@@ -1976,11 +6224,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "pre_topo_fdr_map",
           "code": [
             {
               "language": "NiPype",
-              "argument": "contrast_index"
+              "argument": "outputs.use_fwe_correction"
             }
           ]
         },
@@ -1988,11 +6237,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "pre_topo_n_clusters",
           "code": [
             {
               "language": "NiPype",
-              "argument": "contrast_index"
+              "argument": "outputs.use_fwe_correction"
             }
           ]
         },
@@ -2000,11 +6250,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "activation_forced",
           "code": [
             {
               "language": "NiPype",
-              "argument": "contrast_index"
+              "argument": "outputs.use_fwe_correction"
             }
           ]
         },
@@ -2012,11 +6263,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "cluster_forming_thr",
           "code": [
             {
               "language": "NiPype",
-              "argument": "contrast_index"
+              "argument": "outputs.use_fwe_correction"
             }
           ]
         }
@@ -2042,11 +6294,12 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "group1_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "group1_files"
+              "argument": "inputs.group1_files"
             }
           ]
         },
@@ -2054,11 +6307,272 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "group2_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "group2_files"
+              "argument": "inputs.group2_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "covariates",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.covariates"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_mcr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "threshold_mask_relative",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.threshold_mask_relative"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "dependent",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.dependent"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.paths"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "global_normalization",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.global_normalization"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_implicit_threshold",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_implicit_threshold"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "global_calc_omit",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.global_calc_omit"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "unequal_variance",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.unequal_variance"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matlab_cmd"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "threshold_mask_none",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.threshold_mask_none"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "explicit_mask_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.explicit_mask_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "spm_mat_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.spm_mat_dir"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "threshold_mask_absolute",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.threshold_mask_absolute"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "no_grand_mean_scaling",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.no_grand_mean_scaling"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mfile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_v8struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "global_calc_mean",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.global_calc_mean"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "global_calc_values",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.global_calc_values"
             }
           ]
         },
@@ -2066,11 +6580,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "spm_mat_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "group2_files"
+              "argument": "outputs.global_calc_values"
             }
           ]
         }
@@ -2096,11 +6611,506 @@
           "input": true,
           "output": false,
           "visible": true,
+          "editable": true,
           "name": "in_files",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "inputs.in_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "bias_corrected_affine",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.bias_corrected_affine"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "csf_modulated_normalized",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.csf_modulated_normalized"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "spatial_normalization",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.spatial_normalization"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "warping_regularization",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.warping_regularization"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "tissues",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.tissues"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "gm_modulated_normalized",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.gm_modulated_normalized"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "bias_corrected_normalized",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.bias_corrected_normalized"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "gm_normalized",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.gm_normalized"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mfile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mfile"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mrf_weighting",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mrf_weighting"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "pve_label_normalized",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.pve_label_normalized"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "sampling_distance",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.sampling_distance"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_v8struct",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_v8struct"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "dartel_template",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.dartel_template"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "wm_normalized",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.wm_normalized"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "wm_native",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.wm_native"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "pve_label_dartel",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.pve_label_dartel"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "jacobian_determinant",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.jacobian_determinant"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_sanlm_denoising_filter",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_sanlm_denoising_filter"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "use_mcr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.use_mcr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "paths",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.paths"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "csf_native",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.csf_native"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "csf_dartel",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.csf_dartel"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matlab_cmd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matlab_cmd"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "gaussians_per_class",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.gaussians_per_class"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "bias_corrected_native",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.bias_corrected_native"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "gm_native",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.gm_native"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "csf_normalized",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.csf_normalized"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "wm_modulated_normalized",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.wm_modulated_normalized"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "pve_label_native",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.pve_label_native"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "gm_dartel",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.gm_dartel"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "bias_regularization",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.bias_regularization"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "cleanup_partitions",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.cleanup_partitions"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "deformation_field",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.deformation_field"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "display_results",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.display_results"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "bias_fwhm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.bias_fwhm"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "wm_dartel",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.wm_dartel"
             }
           ]
         },
@@ -2108,11 +7118,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "native_class_images",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "outputs.wm_dartel"
             }
           ]
         },
@@ -2120,11 +7131,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "dartel_input_images",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "outputs.wm_dartel"
             }
           ]
         },
@@ -2132,11 +7144,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "normalized_class_images",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "outputs.wm_dartel"
             }
           ]
         },
@@ -2144,11 +7157,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "modulated_class_images",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "outputs.wm_dartel"
             }
           ]
         },
@@ -2156,11 +7170,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "transformation_mat",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "outputs.wm_dartel"
             }
           ]
         },
@@ -2168,11 +7183,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "bias_corrected_images",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "outputs.wm_dartel"
             }
           ]
         },
@@ -2180,11 +7196,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "normalized_bias_corrected_images",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "outputs.wm_dartel"
             }
           ]
         },
@@ -2192,11 +7209,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "pve_label_native_images",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "outputs.wm_dartel"
             }
           ]
         },
@@ -2204,11 +7222,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "pve_label_normalized_images",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "outputs.wm_dartel"
             }
           ]
         },
@@ -2216,11 +7235,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "pve_label_registered_images",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "outputs.wm_dartel"
             }
           ]
         },
@@ -2228,11 +7248,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "forward_deformation_field",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "outputs.wm_dartel"
             }
           ]
         },
@@ -2240,11 +7261,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "inverse_deformation_field",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "outputs.wm_dartel"
             }
           ]
         },
@@ -2252,11 +7274,12 @@
           "input": false,
           "output": true,
           "visible": true,
+          "editable": false,
           "name": "jacobian_determinant_images",
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": "outputs.wm_dartel"
             }
           ]
         }
