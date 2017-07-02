@@ -34,7 +34,6 @@ PortPair::PortPair(
     QGraphicsTextItem(_parent),
     m_node((Node*)_parent),
     m_argument(Argument()),
-    m_secret(false),
     m_input(0),
     m_output(0),
     m_hasFileName(false)
@@ -42,22 +41,26 @@ PortPair::PortPair(
 }
 
 void PortPair::createInputPort(
+        bool _visible
         )
 {
     m_input = new Port((Node*) m_node);
     m_input->setPortType(Port::PortType::INPUT);
     m_input->setOther(m_output);
     m_input->setPortPair(this);
+    m_input->setVisible(_visible);
     if(m_output) m_output->setOther(m_input);
 }
 
 void PortPair::createOutputPort(
+        bool _visible
         )
 {
     m_output = new Port((Node*) m_node);
     m_output->setPortType(Port::PortType::OUTPUT);
     m_output->setOther(m_input);
     m_output->setPortPair(this);
+    m_output->setVisible(_visible);
     if(m_input) m_input->setOther(m_output);
 }
 
@@ -79,19 +82,6 @@ void PortPair::setArgument(
 {
     m_argument = _argument;
     setPlainText(_argument.getName());
-}
-
-void PortPair::setSecret(
-        bool _isSecret
-        )
-{
-    m_secret = _isSecret;
-}
-
-bool PortPair::isSecret(
-        ) const
-{
-    return m_secret;
 }
 
 const QString& PortPair::getName(
@@ -219,10 +209,12 @@ void PortPair::repositionPorts(
 {
     if(m_input)
     {
+//        isVisible() ? m_input->setVisible(true) : m_input->setVisible(false);
         m_input->setPos(-_width / 2 - Port::getRadius(), _height);
     }
     if(m_output)
     {
+//        isVisible() ? m_output->setVisible(true) : m_output->setVisible(false);
         m_output->setPos(_width / 2 + Port::getRadius(), _height);
     }
 }
@@ -288,9 +280,11 @@ void PortPair::toggleVisibility(
         bool _visibility
         )
 {
-    if(m_input) m_input->setVisible(_visibility);
+    if(m_input)  m_input->setVisible(_visibility);
     if(m_output) m_output->setVisible(_visibility);
     setVisible(_visibility);
+    m_argument.setVisible(_visibility);
+    m_node->setPortVisibility(this, _visibility);
     m_node->repositionPorts();
 }
 
@@ -299,6 +293,7 @@ void PortPair::setAsIterator(
         )
 {
     m_argument.setIterator(_iterator);
+    m_node->setPortIterability(this, _iterator);
 }
 
 const QString& PortPair::getFileName(
@@ -311,6 +306,13 @@ bool PortPair::isIterator(
             ) const
 {
     return m_argument.isIterator();
+}
+
+void PortPair::removePort(
+        )
+{
+    m_node->removePort(this);
+    delete this;
 }
 
 PortPair::~PortPair()

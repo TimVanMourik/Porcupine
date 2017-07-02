@@ -57,6 +57,8 @@ SOURCES                                += $$ROOT/main.cpp \
                                           $$ROOT/src/NodeEditor/SelectionBox.cpp \
                                           $$ROOT/src/NodeTreeEditor/NodeTreeEditor.cpp \
                                           $$ROOT/src/NodeTreeEditor/NodeTreeItem.cpp \
+                                          $$ROOT/src/NodeTreeEditor/PortBlock.cpp \
+                                          $$ROOT/src/NodeTreeEditor/PortRow.cpp \
                                           $$ROOT/src/CodeEditor/BashHighlighter.cpp \
                                           $$ROOT/src/CodeEditor/CodeEditor.cpp \
                                           $$ROOT/src/CodeEditor/CodeGenerator.cpp \
@@ -65,7 +67,6 @@ SOURCES                                += $$ROOT/main.cpp \
                                           $$ROOT/src/CodeEditor/SyntaxHighlighter.cpp \
                                           $$ROOT/src/CodeEditor/TvmGenerator.cpp \
                                           $$ROOT/src/CodeEditor/NipypeGenerator.cpp
-                                          $$ROOT/src/CodeEditor/CodeGenerator.cpp
 
 HEADERS                                += $$ROOT/include/MainWindow.hpp \
                                           $$ROOT/include/Settings/Argument.hpp \
@@ -84,6 +85,8 @@ HEADERS                                += $$ROOT/include/MainWindow.hpp \
                                           $$ROOT/include/NodeEditor/SelectionBox.hpp \
                                           $$ROOT/include/NodeTreeEditor/NodeTreeItem.hpp \
                                           $$ROOT/include/NodeTreeEditor/NodeTreeEditor.hpp \
+                                          $$ROOT/include/NodeTreeEditor/PortBlock.hpp \
+                                          $$ROOT/include/NodeTreeEditor/PortRow.hpp \
                                           $$ROOT/include/CodeEditor/BashHighlighter.hpp \
                                           $$ROOT/include/CodeEditor/CodeEditor.hpp \
                                           $$ROOT/include/CodeEditor/SyntaxHighlighter.hpp \

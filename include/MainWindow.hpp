@@ -31,6 +31,7 @@
 /// @brief
 //----------------------------------------------------------------------------------------------------------------------
 
+#include <QJsonObject>
 #include <QMainWindow>
 
 namespace Ui {
@@ -101,6 +102,9 @@ private slots:
     void addNode(
             const NodeSetting* _setting = 0
             );
+    void addNode(
+            const QJsonObject& _object
+            );
     void addPostIt(
             );
     void updateNodeMenu(
@@ -151,6 +155,8 @@ private:
     QAction* m_copyAct;
     QAction* m_pasteAct;
     QAction* m_postitAct;
+
+    QJsonObject m_clipboard;
 
     /// @brief
     QVector<QAction*> m_nodeActs;

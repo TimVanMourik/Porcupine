@@ -321,7 +321,7 @@ void NodeEditor::keyPressEvent(
     QGraphicsView::keyPressEvent(_event);
     switch (_event->key())
     {
-    case Qt::Key_Backspace:
+    case Qt::Key_Delete:
     {
         foreach (QGraphicsItem* item, scene()->items())
         {
@@ -462,6 +462,19 @@ NodeTreeEditor* NodeEditor::getTreeModel(
 }
 
 Node* NodeEditor::addNode(
+        const QJsonObject& _object
+        )
+{
+    Node* node = new Node(this, _object);
+    node->setPos(m_lastClickedPoint);
+    if(m_treeModel)
+    {
+        m_treeModel->addNode(node);
+    }
+    return node;
+}
+
+Node* NodeEditor::addNode(
         const NodeSetting* _setting
         )
 {
@@ -494,6 +507,27 @@ QVector<const Link*> NodeEditor::getLinks(
         }
     }
     return links;
+}
+
+
+QJsonObject NodeEditor::getSelection(
+        bool _destroyOnSelection
+        ) const
+{
+    QJsonObject selection;
+    foreach (QGraphicsItem* item, scene()->items())
+    {
+        if(item->isSelected() && item->type() == Node::Type)
+        {
+            selection = ((Node*) item)->getJson();
+            if(_destroyOnSelection)
+            {
+                m_treeModel->removeNode((Node*) item);
+                delete item;
+            }
+        }
+    }
+    return selection;
 }
 
 NodeEditor::~NodeEditor(

@@ -46,21 +46,16 @@ public:
             QGraphicsItem* _parent = 0
             );
     void createInputPort(
+            bool _visible
             );
     //
     void createOutputPort(
+            bool _visible
             );
     //
     void setArgument(
             const Argument& _argument
             );
-    //
-    void setSecret(
-            bool _isSecret
-            );
-    //
-    bool isSecret(
-            ) const;
     //
     const QString& getName(
             ) const;
@@ -136,13 +131,14 @@ public slots:
     void setAsIterator(
             bool _iterator
             );
+    //
+    void removePort(
+            );
 private:
     //
     Node* m_node;
     //
     Argument m_argument;
-    //
-    bool m_secret;
     //
     Port* m_input;
     //
