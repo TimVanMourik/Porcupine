@@ -113,7 +113,7 @@ signals:
             const QString& _fileName
             );
     //
-    void isConnected(
+    void setConnected(
             bool _connected
             );
 public slots:

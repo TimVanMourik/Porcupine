@@ -101,6 +101,7 @@ const Argument& PortPair::getArgument(
 const QJsonObject& PortPair::toJson(
         )
 {
+    m_argument.updateJson();
     return m_argument.toJson();
 }
 
@@ -318,6 +319,7 @@ void PortPair::removePort(
         )
 {
     m_node->removePort(this);
+    m_node->updateJson();
     delete this;
 }
 

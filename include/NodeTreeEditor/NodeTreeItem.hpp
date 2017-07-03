@@ -48,7 +48,7 @@ class NodeTreeItem : public QFrame
 public:
     ///@todo make sure that the item doesn't flash before moving to the right position
     NodeTreeItem(
-            const Node* _node,
+            Node* _node,
             QWidget* _parent
             );
     //
@@ -112,7 +112,7 @@ signals:
             );
 private:
     //
-    const Node* m_node;
+    Node* m_node;
     //
     QPoint m_startPosition;
     //

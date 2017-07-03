@@ -45,7 +45,6 @@ Argument::Argument(
                 codeJson["argument"].toString(),
                 codeJson["comment" ].toString());
     }
-
 }
 
 void Argument::setName(
@@ -53,6 +52,20 @@ void Argument::setName(
         )
 {
     m_argumentName = _name;
+}
+
+void Argument::setInput(
+        bool _input
+        )
+{
+    m_isInput = _input;
+}
+
+void Argument::setOutput(
+        bool _output
+        )
+{
+    m_isOutput = _output;
 }
 
 bool Argument::isInput(
@@ -139,7 +152,7 @@ QString Argument::getArgument(
     }
 }
 
-const QJsonObject& Argument::toJson(
+void Argument::updateJson(
         )
 {
     m_json["input"   ] = m_isInput;
@@ -149,6 +162,11 @@ const QJsonObject& Argument::toJson(
     m_json["iterator"] = m_isIterator;
     m_json["name"    ] = m_argumentName;
     m_json["value"   ] = m_defaultValue;
+}
+
+const QJsonObject& Argument::toJson(
+        ) const
+{
     return m_json;
 }
 
@@ -157,6 +175,12 @@ const QJsonObject& Argument::getJson(
         ) const
 {
     return m_json;
+}
+
+QList<QString> Argument::getLanguages(
+        )
+{
+    return m_code.keys();
 }
 
 QString Argument::getComment(

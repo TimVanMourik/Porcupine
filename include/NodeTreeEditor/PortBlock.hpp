@@ -44,9 +44,9 @@ public:
             const QVector<PortPair*>&
             );
     //
-//    void addPortRow(
-//            const PortPair*
-//            );
+    void addPortRow(
+            PortPair*
+            );
     //
     void removePortRow(
             PortRow* _row
@@ -64,11 +64,11 @@ public:
 public slots:
 private:
     //
-    QMap<QString, QLineEdit*> m_parameterNames;
+    QMap<QString, PortRow*> m_parameterNames;
     //
     QVector<PortPair*> m_ports;
     //
-    QVector<PortRow*> m_portRows;
+//    QVector<PortRow*> m_portRows;
 };
 
 #endif // PORTBLOCK_HPP

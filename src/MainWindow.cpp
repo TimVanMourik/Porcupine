@@ -83,6 +83,7 @@ MainWindow::MainWindow(
     QSplitter* rightWidget = new QSplitter(Qt::Vertical, mainWidget);
 
     QSplitter* nodeEditor = new QSplitter(Qt::Horizontal, rightWidget);
+    m_nodeEditorWidget->setTabsClosable(true);
     nodeEditor->addWidget(m_nodeEditorWidget);
     nodeEditor->addWidget(m_parameterWidget);
 
@@ -104,13 +105,39 @@ MainWindow::MainWindow(
 
     connect(button, SIGNAL(released()), this, SLOT(nodeToCode()));
     connect(m_nodeEditorWidget, SIGNAL(currentChanged(int)), this, SLOT(setFileAt(int)));
+    connect(m_nodeEditorWidget, SIGNAL(tabCloseRequested(int)), this, SLOT(closeTab(int)));
 
     newFile();
+}
+
+void MainWindow::closeTab(
+        int _index
+        )
+{
+    m_codeEditorWidget->layout()->removeWidget(m_codeEditors     [_index]);
+    m_nodeTreeWidget  ->layout()->removeWidget(m_nodeTreeEditors [_index]);
+    m_parameterWidget ->layout()->removeWidget(m_parameterEditors[_index]);
+    m_nodeTreeWidget  ->layout()->removeWidget(m_codeEditors     [_index]);
+    delete m_codeEditors     [_index];
+    delete m_nodeTreeEditors [_index];
+    delete m_nodeEditors     [_index];
+    delete m_parameterEditors[_index];
+    m_codeEditors.     removeOne(m_codeEditors     [_index]);
+    m_nodeTreeEditors. removeOne(m_nodeTreeEditors [_index]);
+    m_nodeEditors.     removeOne(m_nodeEditors     [_index]);
+    m_parameterEditors.removeOne(m_parameterEditors[_index]);
+
+    if(m_nodeEditorWidget->count() == 0)
+    {
+        newFile();
+    }
+    m_currentFileIndex = m_nodeEditorWidget->currentIndex();
 }
 
 void MainWindow::nodeToCode(
         )
 {
+    m_nodeEditors[m_currentFileIndex]->updateJson();
     const QList<NodeTreeItem*> allNodes = m_nodeTreeEditors[m_currentFileIndex]->getNodeList();
     const QVector<const Link*> allLinks = m_nodeEditors[m_currentFileIndex]->getLinks();
     m_codeEditors[m_currentFileIndex]->generateCode(allNodes, allLinks);

@@ -101,6 +101,9 @@ public:
             );
     //
     const QJsonObject& toJson(
+            ) const;
+    //
+    void updateJson(
             );
     //
     const QVector<PortPair*>& getPorts(

@@ -100,6 +100,9 @@ public:
             const NodeSetting* _setting = 0
             );
     //
+    void updateJson(
+            );
+    //
     PostIt* addPostit(
             );
     //

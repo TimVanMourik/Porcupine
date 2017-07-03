@@ -48,7 +48,7 @@ public:
             );
     //
     void addNode(
-            const Node* _node
+            Node* _node
             );
     //
     void removeNode(
