@@ -23,6 +23,8 @@
 
 #include "assert.h"
 
+#include <QDebug>
+
 #include "Argument.hpp"
 #include "Node.hpp"
 #include "Port.hpp"

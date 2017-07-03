@@ -31,6 +31,7 @@
 
 class QCheckBox;
 class QLineEdit;
+class QPushButton;
 class PortBlock;
 class PortPair;
 
@@ -83,7 +84,7 @@ private:
     //
     QCheckBox* m_iterateCheckbox;
     //
-    QCheckBox* m_deleteButton;
+    QPushButton* m_deleteButton;
 };
 
 #endif // PORTROW_HPP

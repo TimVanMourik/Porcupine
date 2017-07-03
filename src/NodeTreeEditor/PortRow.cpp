@@ -27,6 +27,7 @@
 #include <QJsonArray>
 #include <QLineEdit>
 #include <QMessageBox>
+#include <QPushButton>
 
 #include "PortBlock.hpp"
 #include "PortPair.hpp"
@@ -42,7 +43,7 @@ PortRow::PortRow(
     m_parameterName(new QLineEdit()),
     m_showCheckbox(new QCheckBox()),
     m_iterateCheckbox(0),
-    m_deleteButton(new QCheckBox())
+    m_deleteButton(new QPushButton())
 {
     m_parameterName->setPlaceholderText("<value>");
     QString name = _port->getFileName();
@@ -57,6 +58,7 @@ PortRow::PortRow(
         rowLayout->addWidget(m_iterateCheckbox);
         connect(m_iterateCheckbox, SIGNAL(toggled(bool)), this, SLOT(iteratePort(bool)));
     }
+    m_deleteButton->setText("X");
     rowLayout->addWidget(m_deleteButton);
 
     m_parameterName->setEnabled(_port->getArgument().isVisible());
@@ -64,7 +66,7 @@ PortRow::PortRow(
 
     connect(m_parameterName, SIGNAL(textEdited(QString)),     _port,           SLOT(fileNameChanged(QString)));
     connect(m_showCheckbox,  SIGNAL(toggled(bool)),           this ,           SLOT(showPort(bool)));
-    connect(m_deleteButton,  SIGNAL(toggled(bool)),           this,            SLOT(removePort()));
+    connect(m_deleteButton,  SIGNAL(clicked(bool)),           this,            SLOT(removePort()));
     connect(_port,           SIGNAL(isConnected(bool)),       m_showCheckbox,  SLOT(setDisabled(bool)));
     connect(_port,           SIGNAL(changeFileName(QString)), m_parameterName, SLOT(setText(QString)));
 
@@ -86,6 +88,8 @@ void PortRow::removePort(
     }
 
     m_port->removePort();
+    disconnect(m_showCheckbox,  SIGNAL(toggled(bool)), this, SLOT(showPort(bool)));
+    disconnect(m_deleteButton,  SIGNAL(toggled(bool)), this, SLOT(removePort()));
     m_parent->removeRow(this);
 }
 
