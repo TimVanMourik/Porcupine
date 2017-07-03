@@ -100,14 +100,7 @@ public:
     void repositionPorts(
             );
     //
-    void setPortVisibility(
-            const PortPair* _port,
-            bool _visibility
-            );
-    //
-    void setPortIterability(
-            const PortPair* _port,
-            bool _visibility
+    const QJsonObject& toJson(
             );
     //
     const QVector<PortPair*>& getPorts(

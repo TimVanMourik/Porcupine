@@ -21,6 +21,7 @@
     <http://www.gnu.org/licenses/>.
 */
 
+#include <QDebug>
 #include <QJsonArray>
 
 #include "Argument.hpp"
@@ -136,6 +137,19 @@ QString Argument::getArgument(
     {
         return QString();
     }
+}
+
+const QJsonObject& Argument::toJson(
+        )
+{
+    m_json["input"   ] = m_isInput;
+    m_json["output"  ] = m_isOutput;
+    m_json["visible" ] = m_isVisible;
+    m_json["editable"] = m_isEditable;
+    m_json["iterator"] = m_isIterator;
+    m_json["name"    ] = m_argumentName;
+    m_json["value"   ] = m_defaultValue;
+    return m_json;
 }
 
 

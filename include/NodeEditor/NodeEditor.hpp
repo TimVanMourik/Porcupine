@@ -106,7 +106,7 @@ public:
     QVector<const Link*> getLinks(
             ) const;
     // Return first selected node
-    QJsonObject getSelection(
+    const QJsonObject getSelection(
             bool _destroyOnSelection
             ) const;
     //

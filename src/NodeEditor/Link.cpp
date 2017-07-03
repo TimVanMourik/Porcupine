@@ -23,6 +23,7 @@
 
 #include <assert.h>
 
+#include <QDebug>
 #include <QJsonObject>
 #include <QGraphicsScene>
 #include <QPainter>

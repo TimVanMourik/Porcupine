@@ -23,6 +23,7 @@
 
 #include <iostream>
 
+#include <QDebug>
 #include <QJsonArray>
 #include <QPainter>
 #include <QPointF>
@@ -429,17 +430,20 @@ void NodeEditor::loadFromJson(
     setGeometry(x1, y1, x2, y2);
 
     QMap<quint64, Port*> portMap;
+//    qDebug() << "Loading nodes";
     foreach (QJsonValue nodeValue, _json["nodes"].toArray())
     {
         Node* node = new Node(this);
         node->loadFromJson(nodeValue.toObject(), portMap);
         getTreeModel()->addNode(node);
     }
+//    qDebug() << "Loading links";
     foreach (QJsonValue linkValue, _json["links"].toArray())
     {
         Link* link = new Link(scene());
         link->loadFromJson(linkValue.toObject(), portMap);
     }
+//    qDebug() << "Loading post-its";
     foreach (QJsonValue postitValue, _json["post-its"].toArray())
     {
         PostIt* postit = new PostIt(this);
@@ -510,24 +514,24 @@ QVector<const Link*> NodeEditor::getLinks(
 }
 
 
-QJsonObject NodeEditor::getSelection(
+const QJsonObject NodeEditor::getSelection(
         bool _destroyOnSelection
         ) const
 {
-    QJsonObject selection;
     foreach (QGraphicsItem* item, scene()->items())
     {
         if(item->isSelected() && item->type() == Node::Type)
         {
-            selection = ((Node*) item)->getJson();
+            const QJsonObject selection = ((Node*) item)->toJson();
             if(_destroyOnSelection)
             {
                 m_treeModel->removeNode((Node*) item);
                 delete item;
             }
+            return selection;
         }
     }
-    return selection;
+    return QJsonObject();
 }
 
 NodeEditor::~NodeEditor(

@@ -84,6 +84,9 @@ public:
             const QString& _language
             ) const;
     //
+    const QJsonObject& toJson(
+            );
+    //
     const QJsonObject& getJson(
             ) const;
     //

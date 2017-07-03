@@ -51,6 +51,9 @@ void ParameterEditor::loadFromJson(
         )
 {
     clear();
+    QStringList labels;
+    labels << tr("Parameter") << tr("Value");
+    setHorizontalHeaderLabels(labels);
     int row = 0;
     foreach (QJsonValue keyValuePair, _json["parameters"].toArray())
     {
