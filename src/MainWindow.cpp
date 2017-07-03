@@ -62,7 +62,8 @@ MainWindow::MainWindow(
     m_nodeTreeEditors(0),
     m_codeEditors(0),
     m_parameterEditors(0),
-    m_currentFileIndex(0)
+    m_currentFileIndex(0),
+    m_clipboard(QJsonObject())
 {
     //Create an instance of the NodeLibrary
     NodeLibrary& nodeLibrary = NodeLibrary::getInstance();
@@ -348,16 +349,20 @@ void MainWindow::redoEdit(
 void MainWindow::cutEdit(
         )
 {
+    m_clipboard = m_nodeEditors[m_currentFileIndex]->getSelection(true);
 }
 
 void MainWindow::copyEdit(
         )
 {
+    m_clipboard = m_nodeEditors[m_currentFileIndex]->getSelection(false);
 }
 
 void MainWindow::pasteEdit(
         )
 {
+    if(m_clipboard.isEmpty()) return;
+    m_nodeEditors[m_currentFileIndex]->addNode(m_clipboard);
 }
 
 void MainWindow::addNode(
@@ -365,6 +370,13 @@ void MainWindow::addNode(
         )
 {
     m_nodeEditors[m_currentFileIndex]->addNode(_setting);
+}
+
+void MainWindow::addNode(
+        const QJsonObject& _object
+        )
+{
+    m_nodeEditors[m_currentFileIndex]->addNode(_object);
 }
 
 void MainWindow::addPostIt(
@@ -383,15 +395,15 @@ void MainWindow::setFileAt(
     {
         if(i == m_currentFileIndex)
         {
-            m_nodeTreeWidget->layout()->itemAt(i)->widget()->setVisible(true);
+            m_nodeTreeWidget  ->layout()->itemAt(i)->widget()->setVisible(true);
             m_codeEditorWidget->layout()->itemAt(i)->widget()->setVisible(true);
-            m_parameterWidget->layout()->itemAt(i)->widget()->setVisible(true);
+            m_parameterWidget ->layout()->itemAt(i)->widget()->setVisible(true);
         }
         else
         {
-            m_nodeTreeWidget->layout()->itemAt(i)->widget()->setVisible(false);
+            m_nodeTreeWidget  ->layout()->itemAt(i)->widget()->setVisible(false);
             m_codeEditorWidget->layout()->itemAt(i)->widget()->setVisible(false);
-            m_parameterWidget->layout()->itemAt(i)->widget()->setVisible(false);
+            m_parameterWidget ->layout()->itemAt(i)->widget()->setVisible(false);
         }
     }
 }
@@ -446,7 +458,7 @@ void MainWindow::createActions()
     m_printAct->setStatusTip(tr("Print the document"));
     connect(m_printAct, SIGNAL(triggered()), this, SLOT(printFile()));
 
-    m_loadNodesAct = new QAction(tr("Add Dictionary..."), this);
+    m_loadNodesAct = new QAction(tr("Load Nodes..."), this);
 //    m_loadNodesAct->setShortcuts(QKeySequence::);
     m_loadNodesAct->setStatusTip(tr("Load new nodes into the library"));
     connect(m_loadNodesAct, SIGNAL(triggered()), this, SLOT(loadNewNodes()));

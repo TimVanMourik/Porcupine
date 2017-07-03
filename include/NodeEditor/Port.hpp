@@ -52,7 +52,7 @@ public:
         INPUT = 1,
         OUTPUT = 2
     };
-    //
+    //Node as parent, because positions are relative to node location
     Port(
             const Node* _node = 0
             );

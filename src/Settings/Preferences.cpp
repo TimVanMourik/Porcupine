@@ -29,8 +29,8 @@ Preferences::Preferences() :
     Singleton()
 {
     //Colour settings
-    m_sceneBackgroundBrush      = QBrush(QImage(":/images/repeating-brains.svg"));
-//    m_sceneBackgroundBrush      = QBrush(QImage(":/images/repeating-brains.png"));
+//    m_sceneBackgroundBrush      = QBrush(QImage(":/images/repeating-brains.svg"));
+    m_sceneBackgroundBrush      = QBrush(QImage(":/images/repeating-brains.png"));
 
     QLinearGradient nodeGradient(0.0, 0.0, 0.0, 30);
     nodeGradient.setColorAt(1, QColor(110, 5, 0));

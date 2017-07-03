@@ -62,6 +62,11 @@ public:
             const NodeSetting* _setting = 0
             );
     //
+    Node(
+            NodeEditor* _editor,
+            const QJsonObject& _object
+            );
+    //
     PortPair* addPortPair(
             const Argument& _name,
             bool _initialiseWithDefault = false
@@ -75,6 +80,10 @@ public:
     void addPort(
             const Argument& _argument,
             bool _initialiseWithDefault = false
+            );
+    //
+    void removePort(
+            PortPair* _port
             );
     //
     void addPorts(
@@ -91,6 +100,16 @@ public:
     void repositionPorts(
             );
     //
+    void setPortVisibility(
+            const PortPair* _port,
+            bool _visibility
+            );
+    //
+    void setPortIterability(
+            const PortPair* _port,
+            bool _visibility
+            );
+    //
     const QVector<PortPair*>& getPorts(
             ) const;
     //
@@ -103,9 +122,6 @@ public:
     const NodeAntenna& getAntenna(
             ) const;
     //
-//    const NodeSetting* getSetting(
-//            ) const;
-    //
     const QJsonObject& getJson(
             ) const;
     //
@@ -116,9 +132,6 @@ public:
             const QJsonObject& _json,
             QMap<quint64, Port*>& o_portMap
             );
-    //
-//    QVector<const Node*> getAncestors(
-//            ) const;
     /// @brief returns an in-order list of descendants that are input-output connected via Links.
     QVector<const Node*> getDescendants(
             ) const;
@@ -136,20 +149,16 @@ public:
             const QVariant& _value
             );
     //
+    void initialize(
+            );
+    //
     ~Node(
             );
-//signals:
-//    //
-//    void nodeNameChanged(
-//            const QString& _name
-//            );
 private:
     //
     void loadFromNodeSetting(
             const NodeSetting* _setting
             );
-    //
-//    const NodeSetting* m_setting;
     //
     QJsonObject m_json;
     //

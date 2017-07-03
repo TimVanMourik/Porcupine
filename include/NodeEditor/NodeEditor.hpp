@@ -93,6 +93,10 @@ public:
             ) const;
     //
     Node* addNode(
+            const QJsonObject& _object
+            );
+    //
+    Node* addNode(
             const NodeSetting* _setting = 0
             );
     //
@@ -100,6 +104,10 @@ public:
             );
     //
     QVector<const Link*> getLinks(
+            ) const;
+    // Return first selected node
+    QJsonObject getSelection(
+            bool _destroyOnSelection
             ) const;
     //
     ~NodeEditor(

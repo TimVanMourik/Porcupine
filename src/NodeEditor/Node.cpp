@@ -23,6 +23,7 @@
 
 #include <assert.h>
 
+#include <QDebug>
 #include <QGraphicsItem>
 #include <QGraphicsProxyWidget>
 #include <QGraphicsScene>
@@ -49,15 +50,39 @@ Node::Node(
         const NodeSetting* _setting
         ) :
     QGraphicsPathItem(0),
-//    m_setting(_setting),
     m_json(QJsonObject()),
     m_name(QString()),
     m_nameLabel(new QLineEdit()),
     m_ports(QVector<PortPair*>(0))
 {
+    _editor->scene()->addItem(this);
+    initialize();
+    if(_setting) loadFromNodeSetting(_setting);
+    m_nameLabel->connect((QObject*) m_nameLabel, SIGNAL(textChanged(QString)), (QObject*) &m_antenna, SLOT(catchLabelChanged(QString)));
+}
+
+Node::Node(
+        NodeEditor* _editor,
+        const QJsonObject& _object
+        ) :
+    QGraphicsPathItem(0),
+    m_json(QJsonObject()),
+    m_name(QString()),
+    m_nameLabel(new QLineEdit()),
+    m_ports(QVector<PortPair*>(0))
+{
+    _editor->scene()->addItem(this);
+    initialize();
+    QMap<quint64, Port*> portMap;
+    loadFromJson(_object, portMap);
+    m_nameLabel->connect((QObject*) m_nameLabel, SIGNAL(textChanged(QString)), (QObject*) &m_antenna, SLOT(catchLabelChanged(QString)));
+}
+
+void Node::initialize(
+        )
+{
     m_antenna.setNode(this);
 //    Preferences& preferences = Preferences::getInstance();
-    _editor->scene()->addItem(this);
     QGraphicsProxyWidget* proxy = new QGraphicsProxyWidget(this);
     proxy->setWidget(m_nameLabel);
 
@@ -79,13 +104,6 @@ Node::Node(
     setPen(QPen(Qt::darkRed));
     setFlag(QGraphicsItem::ItemIsMovable);
     setFlag(QGraphicsItem::ItemIsSelectable);
-
-    if(_setting) //false when loaded from file
-    {
-        loadFromNodeSetting(_setting);
-    }
-    m_nameLabel->connect((QObject*) m_nameLabel, SIGNAL(textChanged(QString)), (QObject*) &m_antenna, SLOT(catchLabelChanged(QString)));
-//    connect(m_nameLabel, SIGNAL(textChanged(QString)), this, SLOT(labelNameChanged(QString)));
 }
 
 void Node::loadFromNodeSetting(
@@ -135,8 +153,8 @@ PortPair* Node::addPortPair(
     PortPair* pair = new PortPair(this);
     pair->setArgument(_argument);
     pair->setDefaultTextColor(preferences.m_portTextColor);
-    if(_argument.isInput())   pair->createInputPort();
-    if(_argument.isOutput())  pair->createOutputPort();
+    if(_argument.isInput())   pair->createInputPort(_argument.isVisible());
+    if(_argument.isOutput())  pair->createOutputPort(_argument.isVisible());
     _argument.isVisible() ? pair->setVisible(true) : pair->setVisible(false);
 
     if(_initialiseWithDefault)
@@ -145,6 +163,23 @@ PortPair* Node::addPortPair(
     }
     m_ports.append(pair);
     return pair;
+}
+
+void Node::removePort(
+        PortPair* _port
+        )
+{
+    QJsonArray ports = m_json["ports"].toArray();
+    for(int i = ports.count() - 1; i >= 0; --i)
+    {
+        if(ports.at(i).toObject()["name"].toString().compare(_port->getArgument().getName()) == 0)
+        {
+            ports.removeAt(i);
+        }
+    }
+    m_json["ports"] = ports;
+    m_ports.removeOne(_port);
+    repositionPorts();
 }
 
 void Node::repositionPorts(
@@ -226,12 +261,6 @@ int Node::type(
     return Type;
 }
 
-//const QString& Node::getType(
-//        ) const
-//{
-//    return m_setting->getName();
-//}
-
 const QString& Node::getName(
         ) const
 {
@@ -244,16 +273,46 @@ const NodeAntenna& Node::getAntenna(
     return m_antenna;
 }
 
-//const NodeSetting* Node::getSetting(
-//        ) const
-//{
-//    return m_setting;
-//}
-
 const QJsonObject& Node::getJson(
         ) const
 {
     return m_json;
+}
+
+void Node::setPortVisibility(
+        const PortPair* _port,
+        bool _visibility
+        )
+{
+    QJsonArray ports = m_json["ports"].toArray();
+    for(int i = ports.count() - 1; i >= 0; --i)
+    {
+        if(ports.at(i).toObject()["name"].toString().compare(_port->getArgument().getName()) == 0)
+        {
+            QJsonObject o = ports.at(i).toObject();
+            o["visible"] = _visibility;
+            ports.replace(i, o);
+        }
+    }
+    m_json["ports"] = ports;
+}
+
+void Node::setPortIterability(
+        const PortPair* _port,
+        bool _iterable
+        )
+{
+    QJsonArray ports = m_json["ports"].toArray();
+    for(int i = ports.count() - 1; i >= 0; --i)
+    {
+        if(ports.at(i).toObject()["name"].toString().compare(_port->getArgument().getName()) == 0)
+        {
+            QJsonObject o = ports.at(i).toObject();
+            o["iterator"] = _iterable;
+            ports.replace(i, o);
+        }
+    }
+    m_json["ports"] = ports;
 }
 
 void Node::loadFromJson(
@@ -271,6 +330,7 @@ void Node::loadFromJson(
         PortPair* p = addPortPair(Argument(portObject));
         if(!portObject["value"].isNull())
         {
+            ///@todo check if this is right. If so, put comments.
             p->fileNameChanged(portObject["value"].toString(), false);
             QJsonValue inputPort  = portObject["inputPort"];
             QJsonValue outputPort = portObject["outputPort"];

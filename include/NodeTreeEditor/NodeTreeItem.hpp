@@ -31,6 +31,7 @@
 
 class Node;
 class NodeSetting;
+class PortBlock;
 class PortPair;
 class QDomDocument;
 class QDomElement;
@@ -72,6 +73,9 @@ public:
     const QVector<PortPair*> getPorts(
             ) const;
     //
+//    const NodeSetting* getNodeSetting(
+//            ) const;
+    //
     QVector<const Node*> getDescendants(
             );
     //
@@ -79,7 +83,7 @@ public:
             unsigned int _i
             );
     //
-    QString getFileName(
+    QString getParameterName(
             const QString& _portName
             ) const;
     //
@@ -102,6 +106,9 @@ public slots:
     void setSelected(
             bool _isSelected
             );
+    //
+    void addPort(
+            );
 signals:
     void moved(
             NodeTreeItem* _item
@@ -110,8 +117,6 @@ private:
     //
     const Node* m_node;
     //
-    QMap<QString, QLineEdit*> m_fileNames;
-    //
     QPoint m_startPosition;
     //
     QLabel* m_numberLabel;
@@ -119,6 +124,8 @@ private:
     unsigned int m_number;
     //
     bool m_isSelected;
+    //
+    PortBlock* m_portBlockLayout;
 };
 
 #endif // NODETREEITEM_H

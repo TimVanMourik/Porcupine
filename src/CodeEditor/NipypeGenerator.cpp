@@ -103,7 +103,7 @@ QString NipypeGenerator::itemToCode(
     foreach (QJsonValue portObject, json["ports"].toArray())
     {
         Argument argument = Argument(portObject.toObject());
-        QString filename = _item->getFileName(argument.getName());
+        QString filename = _item->getParameterName(argument.getName());
         //replace filename
         foreach (const QString parameter, parameters.keys())
         {
