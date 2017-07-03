@@ -30,6 +30,7 @@
 
 class QLineEdit;
 class PortPair;
+class PortRow;
 
 class PortBlock : public QFormLayout
 {
@@ -43,19 +44,31 @@ public:
             const QVector<PortPair*>&
             );
     //
+//    void addPortRow(
+//            const PortPair*
+//            );
+    //
+    void removePortRow(
+            PortRow* _row
+            );
+    //
     void saveToJson(
             QJsonObject& o_json
-            ) const;
+            );
     //
     QString getParameterName(
             const QString& _portName
             ) const;
+    //
+
 public slots:
 private:
     //
     QMap<QString, QLineEdit*> m_parameterNames;
     //
     QVector<PortPair*> m_ports;
+    //
+    QVector<PortRow*> m_portRows;
 };
 
 #endif // PORTBLOCK_HPP

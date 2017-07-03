@@ -24,6 +24,7 @@
 //#include <QApplication>
 #include <QComboBox>
 #include <QDrag>
+#include <QDebug>
 #include <QDropEvent>
 #include <QFormLayout>
 #include <QJsonDocument>
@@ -164,6 +165,7 @@ void NodeTreeItem::saveToJson(
     position.append(m_node->pos().y());
     o_json["position"] = position;
 
+//    qDebug() << "Save port block";
     m_portBlockLayout->saveToJson(o_json);
 }
 

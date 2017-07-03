@@ -169,15 +169,6 @@ void Node::removePort(
         PortPair* _port
         )
 {
-    QJsonArray ports = m_json["ports"].toArray();
-    for(int i = ports.count() - 1; i >= 0; --i)
-    {
-        if(ports.at(i).toObject()["name"].toString().compare(_port->getArgument().getName()) == 0)
-        {
-            ports.removeAt(i);
-        }
-    }
-    m_json["ports"] = ports;
     m_ports.removeOne(_port);
     repositionPorts();
 }
@@ -279,42 +270,6 @@ const QJsonObject& Node::getJson(
     return m_json;
 }
 
-void Node::setPortVisibility(
-        const PortPair* _port,
-        bool _visibility
-        )
-{
-    QJsonArray ports = m_json["ports"].toArray();
-    for(int i = ports.count() - 1; i >= 0; --i)
-    {
-        if(ports.at(i).toObject()["name"].toString().compare(_port->getArgument().getName()) == 0)
-        {
-            QJsonObject o = ports.at(i).toObject();
-            o["visible"] = _visibility;
-            ports.replace(i, o);
-        }
-    }
-    m_json["ports"] = ports;
-}
-
-void Node::setPortIterability(
-        const PortPair* _port,
-        bool _iterable
-        )
-{
-    QJsonArray ports = m_json["ports"].toArray();
-    for(int i = ports.count() - 1; i >= 0; --i)
-    {
-        if(ports.at(i).toObject()["name"].toString().compare(_port->getArgument().getName()) == 0)
-        {
-            QJsonObject o = ports.at(i).toObject();
-            o["iterator"] = _iterable;
-            ports.replace(i, o);
-        }
-    }
-    m_json["ports"] = ports;
-}
-
 void Node::loadFromJson(
         const QJsonObject& _json,
         QMap<quint64, Port*>& o_portMap
@@ -324,9 +279,10 @@ void Node::loadFromJson(
     m_json = _json;
     m_name = title.getName();
     m_nameLabel->setText(m_name);
-    setPos(_json["position"].toArray().at(0).toInt(0), _json["position"].toArray().at(0).toInt(1));
+    setPos(_json["position"].toArray().at(0).toInt(0), _json["position"].toArray().at(1).toInt(0));
     foreach (QJsonValue portValue, _json["ports"].toArray()) {
         QJsonObject portObject = portValue.toObject();
+//        qDebug() << portObject;
         PortPair* p = addPortPair(Argument(portObject));
         if(!portObject["value"].isNull())
         {
@@ -334,11 +290,25 @@ void Node::loadFromJson(
             p->fileNameChanged(portObject["value"].toString(), false);
             QJsonValue inputPort  = portObject["inputPort"];
             QJsonValue outputPort = portObject["outputPort"];
+//            qDebug() << p->getInputPort ();
+//            qDebug() << p->getOutputPort();
             if(!inputPort.isNull())  o_portMap[(quint64)  inputPort.toString().toULongLong(0, 16)] = p->getInputPort();
             if(!outputPort.isNull()) o_portMap[(quint64) outputPort.toString().toULongLong(0, 16)] = p->getOutputPort();
         }
     }
     repositionPorts();
+}
+
+const QJsonObject& Node::toJson(
+        )
+{
+    QJsonArray ports;
+    foreach (PortPair* port, m_ports)
+    {
+        ports << port->toJson();
+    }
+    m_json["ports"] = ports;
+    return m_json;
 }
 
 bool Node::hasAncestor(

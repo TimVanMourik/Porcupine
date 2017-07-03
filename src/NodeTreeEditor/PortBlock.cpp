@@ -48,19 +48,29 @@ void PortBlock::addPortBlock(
     m_ports = _ports;
     foreach(PortPair* pair, _ports)
     {
-        addRow(pair->getName(), new PortRow(pair, this));
+        PortRow* row = new PortRow(pair, this);
+        m_portRows << row;
+        addRow(pair->getName(), row);
     }
+}
+
+void PortBlock::removePortRow(
+        PortRow* _row
+        )
+{
+    m_portRows.removeOne(_row);
+    removeRow(_row);
 }
 
 void PortBlock::saveToJson(
         QJsonObject& o_json
-        ) const
+        )
 {
     QJsonArray ports;
-    foreach (const QObject* portObject, children())
+    foreach (PortRow* portRow, m_portRows)
     {
         QJsonObject portJson;
-        ((const PortRow*) portObject)->saveToJson(portJson);
+        portRow->saveToJson(portJson);
         ports << portJson;
     }
     o_json["ports"] = ports;

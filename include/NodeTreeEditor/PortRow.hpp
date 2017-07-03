@@ -50,7 +50,7 @@ public:
     //
     void saveToJson(
             QJsonObject& o_json
-            ) const;
+            );
     //
     QString getParameterName(
             ) const;

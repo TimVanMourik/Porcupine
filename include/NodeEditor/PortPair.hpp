@@ -124,12 +124,15 @@ public slots:
             bool _cascadeUp = true
             );
     //
-    void toggleVisibility(
+    void setVisibility(
             bool _visibility
             );
     //
     void setAsIterator(
             bool _iterator
+            );
+    //
+    const QJsonObject& toJson(
             );
     //
     void removePort(

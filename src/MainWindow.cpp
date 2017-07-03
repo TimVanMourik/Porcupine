@@ -240,8 +240,11 @@ void MainWindow::saveFileToJson(
 
     QJsonObject jsonFile;
     //save all nodes
+//    qDebug() << "Save Tree Editor";
     m_nodeTreeEditors [m_nodeEditorWidget->currentIndex()]->saveToJson(jsonFile);
+//    qDebug() << "Save Node Editor";
     m_nodeEditors     [m_nodeEditorWidget->currentIndex()]->saveToJson(jsonFile);
+//    qDebug() << "Save Parameter Editor";
     m_parameterEditors[m_nodeEditorWidget->currentIndex()]->saveToJson(jsonFile);
 
     QFile file(fileName);
@@ -256,9 +259,9 @@ void MainWindow::saveFileToJson(
 void MainWindow::openFile()
 {
     #ifdef DARWIN // on Mac, the file dialog does not want to close with the native file dialog
-        QFile file(QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("Pipelines (*.pipe)"), 0, QFileDialog::DontUseNativeDialog));
+        QFile file(QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("Pipelines (*.pork)"), 0, QFileDialog::DontUseNativeDialog));
     #else
-        QFile file(QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("Pipelines (*.pipe)"), 0));
+        QFile file(QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("Pipelines (*.pork)"), 0));
     #endif       
 
     QFileInfo fileInfo(file.fileName());
@@ -281,7 +284,7 @@ void MainWindow::openFile()
 //    }
 
     m_nodeEditorWidget->setTabText(m_nodeEditorWidget->currentIndex(), filename);
-    m_nodeEditors[m_nodeEditorWidget->currentIndex()]->loadFromJson(document.object());
+    m_nodeEditors     [m_nodeEditorWidget->currentIndex()]->loadFromJson(document.object());
     m_parameterEditors[m_nodeEditorWidget->currentIndex()]->loadFromJson(document.object());
 }
 

@@ -29,6 +29,7 @@
 #include <QMessageBox>
 #include <QPushButton>
 
+#include "Argument.hpp"
 #include "PortBlock.hpp"
 #include "PortPair.hpp"
 #include "PortRow.hpp"
@@ -90,7 +91,8 @@ void PortRow::removePort(
     m_port->removePort();
     disconnect(m_showCheckbox,  SIGNAL(toggled(bool)), this, SLOT(showPort(bool)));
     disconnect(m_deleteButton,  SIGNAL(toggled(bool)), this, SLOT(removePort()));
-    m_parent->removeRow(this);
+    m_parent->removePortRow(this);
+
 }
 
 void PortRow::iteratePort(
@@ -105,7 +107,7 @@ void PortRow::showPort(
         )
 {
     m_parameterName->setEnabled(_visible);
-    m_port->toggleVisibility(_visible);
+    m_port->setVisibility(_visible);
     if(!_visible && m_iterateCheckbox)
     {
         m_iterateCheckbox->setChecked(false);
@@ -115,13 +117,12 @@ void PortRow::showPort(
 
 void PortRow::saveToJson(
         QJsonObject& o_json
-        ) const
+        )
 {
+    o_json = m_port->toJson();
     o_json["value"]      = m_parameterName->text();
     o_json["inputPort"]  = QString::number((quint64) m_port->getInputPort(), 16);
     o_json["outputPort"] = QString::number((quint64) m_port->getOutputPort(), 16);
-    o_json["visible"]    = m_showCheckbox->isChecked();
-    o_json["iterator"]   = m_iterateCheckbox ? m_iterateCheckbox->isChecked() : false;
 }
 
 QString PortRow::getParameterName(

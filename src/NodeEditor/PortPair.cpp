@@ -98,6 +98,12 @@ const Argument& PortPair::getArgument(
     return m_argument;
 }
 
+const QJsonObject& PortPair::toJson(
+        )
+{
+    return m_argument.toJson();
+}
+
 bool PortPair::hasAncestorPorts(
         )
 {
@@ -278,15 +284,14 @@ void PortPair::fileNameChanged(
 }
 
 
-void PortPair::toggleVisibility(
+void PortPair::setVisibility(
         bool _visibility
         )
 {
+    m_argument.setVisible(_visibility);
     if(m_input)  m_input->setVisible(_visibility);
     if(m_output) m_output->setVisible(_visibility);
     setVisible(_visibility);
-    m_argument.setVisible(_visibility);
-    m_node->setPortVisibility(this, _visibility);
     m_node->repositionPorts();
 }
 
@@ -295,7 +300,6 @@ void PortPair::setAsIterator(
         )
 {
     m_argument.setIterator(_iterator);
-    m_node->setPortIterability(this, _iterator);
 }
 
 const QString& PortPair::getFileName(
