@@ -155,6 +155,16 @@ QString Argument::getArgument(
 void Argument::updateJson(
         )
 {
+    QJsonArray codeArray;
+    for(QMap<QString, Code>::iterator it = m_code.begin(); it != m_code.end(); ++it)
+    {
+        QJsonObject code;
+        code["language"] = it.key();
+        code["argument"] = it.value().argument;
+        code["comment" ] = it.value().comment;
+        codeArray << code;
+    }
+    m_json["code"    ] = codeArray;
     m_json["input"   ] = m_isInput;
     m_json["output"  ] = m_isOutput;
     m_json["visible" ] = m_isVisible;

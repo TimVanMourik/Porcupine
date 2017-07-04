@@ -98,6 +98,9 @@ void PortBlock::addPort(
     {
         return;
     }
+
+    portArgument.updateJson();
+    qDebug() << portArgument.getJson();
     PortPair* p = m_node->addPortPair(portArgument, false);
     m_node->repositionPorts();
     addPortRow(p);
