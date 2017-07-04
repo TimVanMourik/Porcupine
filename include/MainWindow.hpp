@@ -72,6 +72,10 @@ private slots:
             int _tabNumber
             );
     //
+    void closeTab(
+            int _index
+            );
+    //
 //    void saveFileToXml(
 //            );
     //

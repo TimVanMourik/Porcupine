@@ -79,7 +79,7 @@ void Port::addConnection(
         )
 {
     m_connections.append(_newLink);
-    m_pair->isConnected(true);
+    m_pair->setConnected(true);
 }
 
 Port::PortType Port::getPortType(
@@ -171,7 +171,7 @@ void Port::removeLink(
     m_connections.removeOne(_link);
     if(m_connections.length() == 0)
     {
-        m_pair->isConnected(false);
+        m_pair->setConnected(false);
     }
 }
 

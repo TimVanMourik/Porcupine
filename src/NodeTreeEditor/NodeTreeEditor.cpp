@@ -59,7 +59,7 @@ NodeTreeEditor::NodeTreeEditor(
 }
 
 void NodeTreeEditor::addNode(
-        const Node* _node
+        Node* _node
         )
 {
     m_nodes.append(_node);
@@ -287,7 +287,6 @@ QList<int> NodeTreeEditor::nodeIndexInList(
     std::sort(indices.begin(), indices.end());
     return indices;
 }
-
 
 const QList<NodeTreeItem*>& NodeTreeEditor::getNodeList(
         ) const

@@ -299,7 +299,7 @@ void Node::loadFromJson(
     repositionPorts();
 }
 
-const QJsonObject& Node::toJson(
+void Node::updateJson(
         )
 {
     QJsonArray ports;
@@ -308,6 +308,11 @@ const QJsonObject& Node::toJson(
         ports << port->toJson();
     }
     m_json["ports"] = ports;
+}
+
+const QJsonObject& Node::toJson(
+        ) const
+{
     return m_json;
 }
 

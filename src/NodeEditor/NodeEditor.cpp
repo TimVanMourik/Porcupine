@@ -513,6 +513,17 @@ QVector<const Link*> NodeEditor::getLinks(
     return links;
 }
 
+void NodeEditor::updateJson(
+        )
+{
+    foreach (QGraphicsItem* item, scene()->items())
+    {
+        if(item->type() == Node::Type)
+        {
+            ((Node*) item)->updateJson();
+        }
+    }
+}
 
 const QJsonObject NodeEditor::getSelection(
         bool _destroyOnSelection
@@ -522,6 +533,7 @@ const QJsonObject NodeEditor::getSelection(
     {
         if(item->isSelected() && item->type() == Node::Type)
         {
+            ((Node*) item)->updateJson();
             const QJsonObject selection = ((Node*) item)->toJson();
             if(_destroyOnSelection)
             {

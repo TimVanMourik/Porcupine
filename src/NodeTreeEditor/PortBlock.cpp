@@ -46,19 +46,26 @@ void PortBlock::addPortBlock(
         )
 {
     m_ports = _ports;
-    foreach(PortPair* pair, _ports)
+    foreach(PortPair* port, _ports)
     {
-        PortRow* row = new PortRow(pair, this);
-        m_portRows << row;
-        addRow(pair->getName(), row);
+        addPortRow(port);
     }
+}
+
+void PortBlock::addPortRow(
+        PortPair* port
+        )
+{
+    PortRow* row = new PortRow(port, this);
+    m_parameterNames[port->getName()] = row;
+    addRow(port->getName(), row);
 }
 
 void PortBlock::removePortRow(
         PortRow* _row
         )
 {
-    m_portRows.removeOne(_row);
+    m_parameterNames.remove(m_parameterNames.key(_row));
     removeRow(_row);
 }
 
@@ -67,7 +74,7 @@ void PortBlock::saveToJson(
         )
 {
     QJsonArray ports;
-    foreach (PortRow* portRow, m_portRows)
+    foreach (PortRow* portRow, m_parameterNames.values())
     {
         QJsonObject portJson;
         portRow->saveToJson(portJson);
@@ -82,7 +89,7 @@ QString PortBlock::getParameterName(
 {
     if(m_parameterNames[_portName])
     {
-        return m_parameterNames[_portName]->text();
+        return m_parameterNames[_portName]->getParameterName();
     }
     else
     {

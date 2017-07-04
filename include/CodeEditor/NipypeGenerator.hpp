@@ -75,7 +75,7 @@ private:
             const QVector<const Link*>& _linkList
             );
     //
-    QStringList getIteratorFields(
+    QStringList getMapNodeFields(
             const NodeTreeItem* _item
             ) const;
 private:

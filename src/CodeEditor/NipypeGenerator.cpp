@@ -23,6 +23,7 @@
 
 #include <functional>
 
+#include <QDebug>
 #include <QJsonObject>
 #include <QJsonArray>
 
@@ -58,14 +59,17 @@ QString NipypeGenerator::generateCode(
     return code;
 }
 
-QStringList NipypeGenerator::getIteratorFields(
+QStringList NipypeGenerator::getMapNodeFields(
         const NodeTreeItem* _item
         ) const
 {
     QStringList iterFields;
     foreach (const PortPair* pair,  _item->getPorts())
     {
-        if(pair->isIterator()) iterFields << pair->getArgument().getArgument(s_thisLanguage);
+        if(pair->isIterator() && pair->getInputPort()->getConnections().length() != 0)
+        {
+            iterFields << pair->getArgument().getArgument(s_thisLanguage);
+        }
     }
     return iterFields;
 }
@@ -84,26 +88,34 @@ QString NipypeGenerator::itemToCode(
     code.append(QString("#%1\n").arg(title.getComment(s_thisLanguage)));
     code.append(QString("%1 = pe.").arg(nodeName));
 
-    QStringList iterFields = getIteratorFields(_item);
-    if(iterFields.length() == 0) {code.append(QString("Node"));}
-    else                         {code.append(QString("MapNode"));}
-
-    ///@todo if(!isConnected(remove_eyes, functional))
-//    NodeHash_6ffea20 = pe.Node(interface = fsl.BET(), name = 'NodeName_6ffea20')
-//    NodeHash_6ffea20.iterables = [('remove_eyes', [True, False]), ('functional', )[1, 2, 3]]
-
+    QStringList iterFields = getMapNodeFields(_item);
+    if(iterFields.length() == 0)
+    {
+        code.append(QString("Node"));
+    }
+    else
+    {
+        code.append(QString("MapNode"));
+    }
 
     code.append(QString("(interface = %2, ").arg(title.getArgument(s_thisLanguage)));
     code.append(QString("name = 'NodeName_%1'").arg(QString::number((quint64) _item->getNode(), 16)));
 
-    ///@todo remove 'inputs.'
-    if(iterFields.length() == 0) code.append(")\n");
-    else                         code.append(QString(", iterfield = ['%1'])\n").arg(iterFields.join("', '")));
+    if(iterFields.length() == 0)
+    {
+        code.append(")\n");
+    }
+    else
+    {
+        code.append(QString(", iterfield = ['%1'])\n").arg(iterFields.join("', '")));
+    }
 
+    QStringList keyValuePairs;
     foreach (QJsonValue portObject, json["ports"].toArray())
     {
         Argument argument = Argument(portObject.toObject());
         QString filename = _item->getParameterName(argument.getName());
+
         //replace filename
         foreach (const QString parameter, parameters.keys())
         {
@@ -115,9 +127,22 @@ QString NipypeGenerator::itemToCode(
 
         if(!filename.isEmpty())
         {
-            code.append(QString("%1.%2 = %3\n").arg(nodeName, argument.getArgument(s_thisLanguage), filename));
+            if(argument.isIterator())
+            {
+                keyValuePairs << QString("('%1', %2)").arg(argument.getName(), filename);
+            }
+            else
+            {
+                code.append(QString("%1.%2 = %3\n").arg(nodeName, argument.getArgument(s_thisLanguage), filename));
+            }
         }
     }
+
+    if(keyValuePairs.length() != 0)
+    {
+        code.append(QString("%1.iterables = [%2]\n").arg(nodeName, keyValuePairs.join(", ")));
+    }
+
     code.append("\n");
     return code;
 }
@@ -129,8 +154,8 @@ QString NipypeGenerator::linkToCode(
     QString code("");
     QString source =  QString("NodeHash_%1").arg(QString::number((quint64) _link->getPortFrom()->getNode(), 16));
     QString destination =  QString("NodeHash_%1").arg(QString::number((quint64) _link->getPortTo()->getNode(), 16));
-    QString sourceAttribute(_link->getPortFrom()->getPortPair()->getArgument().getArgument("NiPype"));
-    QString destinationAttribute(_link->getPortTo()->getPortPair()->getArgument().getArgument("NiPype"));
+    QString sourceAttribute(   _link->getPortFrom()->getPortPair()->getArgument().getName());
+    QString destinationAttribute(_link->getPortTo()->getPortPair()->getArgument().getName());
     code.append(QString("analysisflow.connect(%1, '%2', %3, '%4')\n").arg(source, sourceAttribute, destination, destinationAttribute));
 
     return code;
@@ -147,8 +172,6 @@ void NipypeGenerator::writePreamble(
     io_code.append("import nipype.interfaces.afni as afni\n");
     io_code.append("import nipype.interfaces.spm as spm\n");
     io_code.append("import nipype.interfaces.utility as utility\n\n");
-
-    io_code.append("import nipype\n\n");
 }
 
 void NipypeGenerator::writeParameters(

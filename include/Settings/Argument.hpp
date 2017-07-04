@@ -62,8 +62,16 @@ public:
             const QString& _name
             );
     //
+    void setInput(
+            bool _input
+            );
+    //
     void setVisible(
             bool _visible
+            );
+    //
+    void setOutput(
+            bool _output
             );
     //
     void setEditable(
@@ -80,12 +88,18 @@ public:
     const QString& getDefault(
             ) const;
     //
+    QList<QString> getLanguages(
+            );
+    //
     QString getArgument(
             const QString& _language
             ) const;
     //
-    const QJsonObject& toJson(
+    void updateJson(
             );
+    //
+    const QJsonObject& toJson(
+            ) const;
     //
     const QJsonObject& getJson(
             ) const;

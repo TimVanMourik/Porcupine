@@ -25,6 +25,7 @@
 #include <QComboBox>
 #include <QDrag>
 #include <QDebug>
+#include <QInputDialog>
 #include <QDropEvent>
 #include <QFormLayout>
 #include <QJsonDocument>
@@ -44,7 +45,7 @@
 #include "PortBlock.hpp"
 
 NodeTreeItem::NodeTreeItem(
-        const Node* _node,
+        Node* _node,
         QWidget* _parent
         ) :
     QFrame(_parent),
@@ -105,16 +106,46 @@ NodeTreeItem::NodeTreeItem(
 
 void NodeTreeItem::addPort()
 {
-    QMessageBox::StandardButton reply = QMessageBox::question(this, QString("Add new port"), QString("This button doesn't work yet!"), QMessageBox::Yes | QMessageBox::No);
-    switch(reply)
+    Argument portArgument;
+    portArgument.setVisible(true);
+    portArgument.setIterator(false);
+    portArgument.setEditable(true);
+    QString portTitle = QInputDialog::getText(this, "Port name", "Please enter the port name");
+    if(portTitle.isEmpty())
     {
-    case QMessageBox::Yes :
-        break;
-    case QMessageBox::No :
-        return;
-    default :
         return;
     }
+    portArgument.setName(portTitle);
+
+    QMessageBox ioBox;
+    ioBox.setText(tr("Do you want an input or output port?"));
+    QAbstractButton* input  = ioBox.addButton(tr("Input"),  QMessageBox::YesRole);
+    QAbstractButton* output = ioBox.addButton(tr("Output"), QMessageBox::NoRole);
+    ioBox.exec();
+
+    Argument title(m_node->getJson()["title"].toObject());
+    if(ioBox.clickedButton() == input)
+    {
+        portArgument.setInput(true);
+        portArgument.setOutput(false);
+        QList<QString> languages = title.getLanguages();
+        foreach (QString language, languages)
+        {
+            portArgument.addCode(language, portTitle);
+        }
+    }
+    else if(ioBox.clickedButton() == output)
+    {
+        portArgument.setInput(false);
+        portArgument.setOutput(true);
+    }
+    else
+    {
+        return;
+    }
+    PortPair* p = m_node->addPortPair(portArgument, false);
+    m_node->repositionPorts();
+    m_portBlockLayout->addPortRow(p);
 }
 
 const QVector<PortPair*> NodeTreeItem::getPorts(

@@ -68,7 +68,7 @@ PortRow::PortRow(
     connect(m_parameterName, SIGNAL(textEdited(QString)),     _port,           SLOT(fileNameChanged(QString)));
     connect(m_showCheckbox,  SIGNAL(toggled(bool)),           this ,           SLOT(showPort(bool)));
     connect(m_deleteButton,  SIGNAL(clicked(bool)),           this,            SLOT(removePort()));
-    connect(_port,           SIGNAL(isConnected(bool)),       m_showCheckbox,  SLOT(setDisabled(bool)));
+    connect(_port,           SIGNAL(setConnected(bool)),      m_showCheckbox,  SLOT(setDisabled(bool)));
     connect(_port,           SIGNAL(changeFileName(QString)), m_parameterName, SLOT(setText(QString)));
 
     initialiseStyleSheets();
