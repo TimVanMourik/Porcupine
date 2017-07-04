@@ -52,8 +52,7 @@ for class_name in ['utility', 'io', 'ants', 'fsl', 'afni', 'spm', 'freesurfer', 
             for m_inp in m_inputs:
                 codeBlock = {
                         'language': cat_nipype,
-                        'argument': 'inputs.' + m_inp,
-                        #'web_url': 'nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.' + class_name + '/' + par_class + '.html'
+                        'argument': m_inp,
                         }
                 port = {
                         'input': True,
@@ -69,7 +68,7 @@ for class_name in ['utility', 'io', 'ants', 'fsl', 'afni', 'spm', 'freesurfer', 
             for m_inp in m_inputs:
                 codeBlock = {
                         'language': cat_nipype,
-                        'argument': 'inputs.' + m_inp
+                        'argument': m_inp
                         }
                 port = {
                         'input': True,
@@ -86,7 +85,7 @@ for class_name in ['utility', 'io', 'ants', 'fsl', 'afni', 'spm', 'freesurfer', 
             for m_out in m_outputs:
                 codeBlock = {
                         'language': cat_nipype,
-                        'argument': 'outputs.' + m_inp
+                        'argument': m_inp
                         }
                 
                 port = {

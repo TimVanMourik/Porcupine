@@ -93,6 +93,11 @@ void PortBlock::addPort(
     {
         portArgument.setInput(false);
         portArgument.setOutput(true);
+        QList<QString> languages = title.getLanguages();
+        foreach (QString language, languages)
+        {
+            portArgument.addCode(language, portTitle);
+        }
     }
     else
     {
@@ -100,7 +105,6 @@ void PortBlock::addPort(
     }
 
     portArgument.updateJson();
-    qDebug() << portArgument.getJson();
     PortPair* p = m_node->addPortPair(portArgument, false);
     m_node->repositionPorts();
     addPortRow(p);

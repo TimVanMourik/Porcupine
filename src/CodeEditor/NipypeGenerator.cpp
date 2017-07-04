@@ -111,9 +111,9 @@ QString NipypeGenerator::itemToCode(
     }
 
     QStringList keyValuePairs;
-    foreach (QJsonValue portObject, json["ports"].toArray())
+    foreach (const PortPair* pair,  _item->getPorts())
     {
-        Argument argument = Argument(portObject.toObject());
+        Argument argument = pair->getArgument();
         QString filename = _item->getParameterName(argument.getName());
 
         //replace filename
@@ -127,13 +127,22 @@ QString NipypeGenerator::itemToCode(
 
         if(!filename.isEmpty())
         {
-            if(argument.isIterator())
+            QString type;
+            if(argument.isInput())
             {
-                keyValuePairs << QString("('%1', %2)").arg(argument.getName(), filename);
+                type = "inputs";
             }
-            else
+            else if(argument.isOutput())
             {
-                code.append(QString("%1.%2 = %3\n").arg(nodeName, argument.getArgument(s_thisLanguage), filename));
+                type = "outputs";
+            }
+            if(!argument.isIterator())
+            {
+                code.append(QString("%1.%2.%3 = %4\n").arg(nodeName, type, argument.getArgument(s_thisLanguage), filename));
+            }
+            else if(pair->getInputPort()->getConnections().length() == 0)
+            {
+                keyValuePairs << QString("('%1', %2)").arg(argument.getArgument(s_thisLanguage), filename);
             }
         }
     }

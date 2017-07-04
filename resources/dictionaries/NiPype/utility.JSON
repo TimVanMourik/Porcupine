@@ -25,7 +25,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.volume1"
+              "argument": "volume1"
             }
           ]
         },
@@ -38,7 +38,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.volume2"
+              "argument": "volume2"
             }
           ]
         },
@@ -51,7 +51,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.ignore_exception"
+              "argument": "ignore_exception"
             }
           ]
         }
@@ -82,7 +82,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.in_file"
+              "argument": "in_file"
             }
           ]
         },
@@ -95,7 +95,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.header"
+              "argument": "header"
             }
           ]
         }
@@ -126,7 +126,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.function_str"
+              "argument": "function_str"
             }
           ]
         },
@@ -139,7 +139,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.ignore_exception"
+              "argument": "ignore_exception"
             }
           ]
         }
@@ -183,11 +183,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "ignore_exception",
+          "name": "ravel_inputs",
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.ignore_exception"
+              "argument": "ravel_inputs"
             }
           ]
         },
@@ -200,20 +200,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.axis"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ravel_inputs",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.ravel_inputs"
+              "argument": "axis"
             }
           ]
         },
@@ -226,7 +213,20 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.no_flatten"
+              "argument": "no_flatten"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
             }
           ]
         },
@@ -239,7 +239,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.no_flatten"
+              "argument": "ignore_exception"
             }
           ]
         }
@@ -270,7 +270,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.in_file"
+              "argument": "in_file"
             }
           ]
         },
@@ -283,7 +283,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.format_string"
+              "argument": "format_string"
             }
           ]
         },
@@ -296,7 +296,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.parse_string"
+              "argument": "parse_string"
             }
           ]
         },
@@ -309,7 +309,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.keep_ext"
+              "argument": "keep_ext"
             }
           ]
         },
@@ -322,7 +322,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.use_fullpath"
+              "argument": "use_fullpath"
             }
           ]
         },
@@ -335,7 +335,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.use_fullpath"
+              "argument": "use_fullpath"
             }
           ]
         }
@@ -366,7 +366,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.inlist"
+              "argument": "inlist"
             }
           ]
         },
@@ -379,7 +379,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.index"
+              "argument": "index"
             }
           ]
         },
@@ -392,7 +392,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.ignore_exception"
+              "argument": "ignore_exception"
             }
           ]
         },
@@ -405,7 +405,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "ignore_exception"
             }
           ]
         }
@@ -436,7 +436,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.inlist"
+              "argument": "inlist"
             }
           ]
         },
@@ -449,7 +449,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.splits"
+              "argument": "splits"
             }
           ]
         },
@@ -462,7 +462,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.ignore_exception"
+              "argument": "ignore_exception"
             }
           ]
         },
@@ -475,7 +475,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.squeeze"
+              "argument": "squeeze"
             }
           ]
         }
