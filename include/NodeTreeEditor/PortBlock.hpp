@@ -24,19 +24,23 @@
 #define PORTBLOCK_HPP
 
 #include <QObject>
-#include <QFormLayout>
+#include <QWidget>
 #include <QMap>
 #include <QVector>
 
+#include "Node.hpp"
+
+class QFormLayout;
 class QLineEdit;
 class PortPair;
 class PortRow;
 
-class PortBlock : public QFormLayout
+class PortBlock : public QWidget
 {
     Q_OBJECT
 public:
     explicit PortBlock(
+            Node* _node,
             QWidget* _parent = 0
             );
     //
@@ -59,10 +63,16 @@ public:
     QString getParameterName(
             const QString& _portName
             ) const;
-    //
 
 public slots:
+    //
+    void addPort(
+            );
 private:
+    //
+    Node* m_node;
+    //
+    QFormLayout* m_layout;
     //
     QMap<QString, PortRow*> m_parameterNames;
     //

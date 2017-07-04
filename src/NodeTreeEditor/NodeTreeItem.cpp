@@ -21,18 +21,15 @@
     <http://www.gnu.org/licenses/>.
 */
 
-//#include <QApplication>
 #include <QComboBox>
 #include <QDrag>
 #include <QDebug>
-#include <QInputDialog>
 #include <QDropEvent>
 #include <QFormLayout>
 #include <QJsonDocument>
 #include <QJsonArray>
 #include <QLabel>
 #include <QLineEdit>
-#include <QMessageBox>
 
 #include <QMimeData>
 #include <QMouseEvent>
@@ -54,16 +51,17 @@ NodeTreeItem::NodeTreeItem(
     m_numberLabel(0),
     m_number(0),
     m_isSelected(false),
-    m_portBlockLayout(0)
+    m_portBlockLayout(new PortBlock(m_node, this))
 {
     QVBoxLayout* mainLayout = new QVBoxLayout(this);
+    mainLayout->setSpacing(0);
+    mainLayout->setContentsMargins(2, 2, 2, 2);
 
     QWidget* headerBlock = new QWidget();
-    QWidget* portBlock = new QWidget();
-    mainLayout->addWidget(headerBlock);
-    mainLayout->addWidget(portBlock);
     QHBoxLayout* headerLayout = new QHBoxLayout(headerBlock);
-    m_portBlockLayout = new PortBlock(portBlock);
+    headerLayout->setSpacing(0);
+    headerLayout->setContentsMargins(10, 10, 20, 0);
+    mainLayout->addWidget(headerBlock);
 
     setFrameShadow(QFrame::Raised);
     setFrameStyle(QFrame::StyledPanel);
@@ -72,11 +70,6 @@ NodeTreeItem::NodeTreeItem(
     setAutoFillBackground(true);
     setPalette(palette);
     show();
-
-    mainLayout->setSpacing(0);
-    mainLayout->setContentsMargins(2, 2, 2, 2);
-    headerLayout->setSpacing(0);
-    headerLayout->setContentsMargins(10, 10, 20, 0);
 
     // headerLayout
     m_numberLabel   = new QLabel(QString::number(m_number));
@@ -92,60 +85,11 @@ NodeTreeItem::NodeTreeItem(
     headerLayout->addWidget(nameTag);
     headerLayout->addWidget(visibilityButton);
 
-    portBlock->setVisible(false);
+    m_portBlockLayout->setVisible(false);
+    mainLayout->addWidget(m_portBlockLayout);
 
-    m_portBlockLayout->addPortBlock(m_node->getPorts());
-
-    QPushButton* addPortButton = new QPushButton("Add port");
-    m_portBlockLayout->addWidget(addPortButton);
-
-    connect(addPortButton, SIGNAL(clicked(bool)), this, SLOT(addPort()));
-    connect(visibilityButton, SIGNAL(toggled(bool)), portBlock, SLOT(setVisible(bool)));
+    connect(visibilityButton, SIGNAL(toggled(bool)), m_portBlockLayout, SLOT(setVisible(bool)));
     connect(&m_node->getAntenna(), SIGNAL(nodeSelected(bool)), this, SLOT(setSelected(bool)));
-}
-
-void NodeTreeItem::addPort()
-{
-    Argument portArgument;
-    portArgument.setVisible(true);
-    portArgument.setIterator(false);
-    portArgument.setEditable(true);
-    QString portTitle = QInputDialog::getText(this, "Port name", "Please enter the port name");
-    if(portTitle.isEmpty())
-    {
-        return;
-    }
-    portArgument.setName(portTitle);
-
-    QMessageBox ioBox;
-    ioBox.setText(tr("Do you want an input or output port?"));
-    QAbstractButton* input  = ioBox.addButton(tr("Input"),  QMessageBox::YesRole);
-    QAbstractButton* output = ioBox.addButton(tr("Output"), QMessageBox::NoRole);
-    ioBox.exec();
-
-    Argument title(m_node->getJson()["title"].toObject());
-    if(ioBox.clickedButton() == input)
-    {
-        portArgument.setInput(true);
-        portArgument.setOutput(false);
-        QList<QString> languages = title.getLanguages();
-        foreach (QString language, languages)
-        {
-            portArgument.addCode(language, portTitle);
-        }
-    }
-    else if(ioBox.clickedButton() == output)
-    {
-        portArgument.setInput(false);
-        portArgument.setOutput(true);
-    }
-    else
-    {
-        return;
-    }
-    PortPair* p = m_node->addPortPair(portArgument, false);
-    m_node->repositionPorts();
-    m_portBlockLayout->addPortRow(p);
 }
 
 const QVector<PortPair*> NodeTreeItem::getPorts(

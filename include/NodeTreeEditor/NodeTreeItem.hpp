@@ -103,9 +103,6 @@ public slots:
     void setSelected(
             bool _isSelected
             );
-    //
-    void addPort(
-            );
 signals:
     void moved(
             NodeTreeItem* _item

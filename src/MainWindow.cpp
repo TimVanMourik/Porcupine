@@ -303,12 +303,7 @@ void MainWindow::openFile()
     QJsonDocument document(QJsonDocument::fromJson(file.readAll()));
     file.close();
 
-    ///@todo if the current file is empty, use it. Otherwise, create a new tab
-//    if(m_nodeEditors[m_tabLayout->currentIndex()]->children().length() != 0)
-//    {
-//        std::cerr << m_nodeEditors[m_tabLayout->currentIndex()]->children().length() << "\n";
     newFile();
-//    }
 
     m_nodeEditorWidget->setTabText(m_nodeEditorWidget->currentIndex(), filename);
     m_nodeEditors     [m_nodeEditorWidget->currentIndex()]->loadFromJson(document.object());
@@ -446,19 +441,19 @@ void MainWindow::createMenus()
     /// @todo Add 'open recent file' to the menu
     m_fileMenu->addAction(m_saveToJsonAct);
     m_fileMenu->addAction(m_printAct);
-    m_fileMenu->addAction(m_loadNodesAct);
     m_fileMenu->addSeparator();
     m_fileMenu->addAction(m_exitAct);
 
     m_editMenu = menuBar()->addMenu(tr("Edit"));
-    m_editMenu->addAction(m_undoAct);
-    m_editMenu->addAction(m_redoAct);
-    m_editMenu->addSeparator();
+//    m_editMenu->addAction(m_undoAct);
+//    m_editMenu->addAction(m_redoAct);
+//    m_editMenu->addSeparator();
     m_editMenu->addAction(m_cutAct);
     m_editMenu->addAction(m_copyAct);
     m_editMenu->addAction(m_pasteAct);
 
     m_nodesMenu = menuBar()->addMenu(tr("Nodes"));
+    m_nodesMenu->addAction(m_loadNodesAct);
 
     m_postitMenu = menuBar()->addMenu(tr("Post-its"));
     m_postitMenu->addAction(m_postitAct);
@@ -488,7 +483,7 @@ void MainWindow::createActions()
     m_printAct->setStatusTip(tr("Print the document"));
     connect(m_printAct, SIGNAL(triggered()), this, SLOT(printFile()));
 
-    m_loadNodesAct = new QAction(tr("Load Nodes..."), this);
+    m_loadNodesAct = new QAction(tr("Load Dictionary..."), this);
 //    m_loadNodesAct->setShortcuts(QKeySequence::);
     m_loadNodesAct->setStatusTip(tr("Load new nodes into the library"));
     connect(m_loadNodesAct, SIGNAL(triggered()), this, SLOT(loadNewNodes()));
