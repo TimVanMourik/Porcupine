@@ -2,8 +2,8 @@
 FROM ubuntu:xenial-20161213
 
 # Pre-cache neurodebian key
-COPY utilities/docker/neurodebian.gpg /root/.neurodebian.gpg
-COPY utilities/docker/Porcupine /root/Porcupine
+COPY docker/neurodebian.gpg /root/.neurodebian.gpg
+
 
 # Prepare environment
 RUN apt-get update && \
