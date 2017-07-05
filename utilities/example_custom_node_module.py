@@ -10,34 +10,6 @@ from nipype.pipeline import Node
 from nipype.interfaces.utility import Function
 
 
-def my_custom_function(in_arg1, in_arg2_default='!'):
-    """ This is a dummy function, just for
-    testing the Porcupine converter.
-
-    Parameters
-    ----------
-    in_arg1 : str
-        String to be concatenated with "Hello ..."
-    in_arg2_default : str
-        String to be concatenated with "Hello {in_arg1}";
-        default = '!'
-    
-    Returns
-    -------
-    out : str
-        Concatenated string
-    """
-
-    out = "Hello %s%s" % (in_arg1, in_arg2_default)
-    return out
-
-MyCustomFunction = Node(interface=Function(input_names=['in_arg1',
-                                                        'in_arg2_default'],
-                                           output_names=['out'],
-                                           function=my_custom_function),
-                        name='MyCustomFunc')
-
-
 def get_scan_info(in_file):
     """ Get useful scan-parameters. 
 

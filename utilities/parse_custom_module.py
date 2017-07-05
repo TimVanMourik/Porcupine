@@ -6,6 +6,7 @@ import os.path as op
 import json
 from nipype2json import node2json
 
+
 def custommodule2json(module_path, verbose=False):
 
     sys.path.append(op.dirname(module_path))
