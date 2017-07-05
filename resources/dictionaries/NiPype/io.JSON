@@ -25,7 +25,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.ignore_exception"
+              "argument": "ignore_exception"
             }
           ]
         }
@@ -56,20 +56,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.root_paths"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "unpack_single",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.unpack_single"
+              "argument": "root_paths"
             }
           ]
         },
@@ -82,33 +69,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "min_depth",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.min_depth"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_regexes",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.ignore_regexes"
+              "argument": "ignore_exception"
             }
           ]
         },
@@ -121,7 +82,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.max_depth"
+              "argument": "max_depth"
             }
           ]
         },
@@ -134,7 +95,46 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.match_regex"
+              "argument": "match_regex"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "min_depth",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "min_depth"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "unpack_single",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "unpack_single"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_regexes",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_regexes"
             }
           ]
         }
@@ -165,7 +165,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.sort_filelist"
+              "argument": "sort_filelist"
             }
           ]
         },
@@ -178,46 +178,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.template"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "base_directory",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.base_directory"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "raise_on_empty",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.raise_on_empty"
+              "argument": "template"
             }
           ]
         },
@@ -230,7 +191,46 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.template_args"
+              "argument": "template_args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "base_directory",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "base_directory"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "raise_on_empty",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "raise_on_empty"
             }
           ]
         }
@@ -257,37 +257,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "creds_path",
+          "name": "ignore_exception",
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.creds_path"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "regexp_substitutions",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.regexp_substitutions"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "_outputs",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs._outputs"
+              "argument": "ignore_exception"
             }
           ]
         },
@@ -300,7 +274,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.local_copy"
+              "argument": "local_copy"
             }
           ]
         },
@@ -313,7 +287,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.base_directory"
+              "argument": "base_directory"
             }
           ]
         },
@@ -322,63 +296,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "bucket",
+          "name": "_outputs",
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.bucket"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "container",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.container"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "encrypt_bucket_keys",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.encrypt_bucket_keys"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "remove_dest_dir",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.remove_dest_dir"
+              "argument": "_outputs"
             }
           ]
         },
@@ -391,7 +313,33 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.strip_dir"
+              "argument": "strip_dir"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "creds_path",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "creds_path"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "bucket",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bucket"
             }
           ]
         },
@@ -404,7 +352,59 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.parameterization"
+              "argument": "parameterization"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "remove_dest_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "remove_dest_dir"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "encrypt_bucket_keys",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "encrypt_bucket_keys"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "regexp_substitutions",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "regexp_substitutions"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "container",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "container"
             }
           ]
         },
@@ -417,7 +417,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.substitutions"
+              "argument": "substitutions"
             }
           ]
         },
@@ -430,7 +430,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.substitutions"
+              "argument": "substitutions"
             }
           ]
         }
@@ -461,7 +461,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.subjects_dir"
+              "argument": "subjects_dir"
             }
           ]
         },
@@ -474,20 +474,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.subject_id"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "hemi",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.hemi"
+              "argument": "subject_id"
             }
           ]
         },
@@ -500,7 +487,20 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.ignore_exception"
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "hemi",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "hemi"
             }
           ]
         },
@@ -513,7 +513,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -526,7 +526,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -539,7 +539,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -552,7 +552,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -565,7 +565,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -578,7 +578,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -591,7 +591,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -604,7 +604,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -617,7 +617,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -630,7 +630,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -643,7 +643,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -656,7 +656,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -669,7 +669,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -682,7 +682,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -695,7 +695,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -708,7 +708,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -721,7 +721,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -734,7 +734,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -747,7 +747,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -760,7 +760,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -773,7 +773,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -786,7 +786,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -799,7 +799,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -812,7 +812,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -825,7 +825,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -838,7 +838,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -851,7 +851,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -864,7 +864,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -877,7 +877,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -890,7 +890,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -903,7 +903,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -916,7 +916,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -929,7 +929,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -942,7 +942,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -955,7 +955,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -968,7 +968,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         },
@@ -981,7 +981,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.ignore_exception"
+              "argument": "hemi"
             }
           ]
         }
@@ -1012,7 +1012,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.ignore_exception"
+              "argument": "ignore_exception"
             }
           ]
         }
@@ -1043,20 +1043,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.in_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.ignore_exception"
+              "argument": "in_file"
             }
           ]
         },
@@ -1069,7 +1056,20 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.defaults"
+              "argument": "defaults"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
             }
           ]
         }
@@ -1100,7 +1100,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.in_dict"
+              "argument": "in_dict"
             }
           ]
         },
@@ -1109,11 +1109,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "_outputs",
+          "name": "out_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs._outputs"
+              "argument": "out_file"
             }
           ]
         },
@@ -1126,7 +1126,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.ignore_exception"
+              "argument": "ignore_exception"
             }
           ]
         },
@@ -1135,11 +1135,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "out_file",
+          "name": "_outputs",
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.out_file"
+              "argument": "_outputs"
             }
           ]
         },
@@ -1152,7 +1152,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outputs.out_file"
+              "argument": "_outputs"
             }
           ]
         }
@@ -1183,7 +1183,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.host"
+              "argument": "host"
             }
           ]
         },
@@ -1196,7 +1196,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.config"
+              "argument": "config"
             }
           ]
         },
@@ -1209,7 +1209,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.database_name"
+              "argument": "database_name"
             }
           ]
         },
@@ -1222,33 +1222,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.table_name"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "password",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.password"
+              "argument": "table_name"
             }
           ]
         },
@@ -1261,7 +1235,33 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.username"
+              "argument": "username"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "password",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "password"
             }
           ]
         }
@@ -1292,7 +1292,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.bucket"
+              "argument": "bucket"
             }
           ]
         },
@@ -1305,7 +1305,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.sort_filelist"
+              "argument": "sort_filelist"
             }
           ]
         },
@@ -1318,46 +1318,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.template"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "anon",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.anon"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "local_directory",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.local_directory"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "raise_on_empty",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.raise_on_empty"
+              "argument": "template"
             }
           ]
         },
@@ -1370,33 +1331,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "region",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.region"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "template_args",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.template_args"
+              "argument": "ignore_exception"
             }
           ]
         },
@@ -1409,7 +1344,72 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.bucket_path"
+              "argument": "bucket_path"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "local_directory",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "local_directory"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "region",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "region"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "anon",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "anon"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "template_args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "template_args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "raise_on_empty",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "raise_on_empty"
             }
           ]
         }
@@ -1440,7 +1440,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.database_file"
+              "argument": "database_file"
             }
           ]
         },
@@ -1453,7 +1453,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.table_name"
+              "argument": "table_name"
             }
           ]
         },
@@ -1466,7 +1466,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.ignore_exception"
+              "argument": "ignore_exception"
             }
           ]
         }
@@ -1497,7 +1497,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.hostname"
+              "argument": "hostname"
             }
           ]
         },
@@ -1510,7 +1510,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.base_directory"
+              "argument": "base_directory"
             }
           ]
         },
@@ -1523,7 +1523,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.sort_filelist"
+              "argument": "sort_filelist"
             }
           ]
         },
@@ -1536,46 +1536,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.template"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "username",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.username"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "raise_on_empty",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.raise_on_empty"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "download_files",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.download_files"
+              "argument": "template"
             }
           ]
         },
@@ -1588,46 +1549,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ssh_log_to_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.ssh_log_to_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "template_expression",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.template_expression"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "template_args",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.template_args"
+              "argument": "ignore_exception"
             }
           ]
         },
@@ -1640,7 +1562,85 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.password"
+              "argument": "password"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ssh_log_to_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ssh_log_to_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "template_expression",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "template_expression"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "template_args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "template_args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "username",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "username"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "raise_on_empty",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "raise_on_empty"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "download_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "download_files"
             }
           ]
         }
@@ -1667,24 +1667,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "sort_filelist",
+          "name": "ignore_exception",
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.sort_filelist"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "raise_on_empty",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.raise_on_empty"
+              "argument": "ignore_exception"
             }
           ]
         },
@@ -1697,20 +1684,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.force_lists"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.ignore_exception"
+              "argument": "force_lists"
             }
           ]
         },
@@ -1723,7 +1697,33 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.base_directory"
+              "argument": "base_directory"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "raise_on_empty",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "raise_on_empty"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "sort_filelist",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "sort_filelist"
             }
           ]
         }
@@ -1754,7 +1754,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.server"
+              "argument": "server"
             }
           ]
         },
@@ -1767,7 +1767,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.config"
+              "argument": "config"
             }
           ]
         },
@@ -1780,7 +1780,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.project_id"
+              "argument": "project_id"
             }
           ]
         },
@@ -1793,7 +1793,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.subject_id"
+              "argument": "subject_id"
             }
           ]
         },
@@ -1806,7 +1806,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.experiment_id"
+              "argument": "experiment_id"
             }
           ]
         },
@@ -1819,72 +1819,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.user"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "pwd",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.pwd"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "reconstruction_id",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.reconstruction_id"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "cache_dir",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.cache_dir"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "_outputs",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs._outputs"
+              "argument": "user"
             }
           ]
         },
@@ -1897,7 +1832,59 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.share"
+              "argument": "share"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "cache_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "cache_dir"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "reconstruction_id",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reconstruction_id"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "_outputs",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "_outputs"
             }
           ]
         },
@@ -1910,7 +1897,20 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.assessor_id"
+              "argument": "assessor_id"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "pwd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "pwd"
             }
           ]
         }
@@ -1941,7 +1941,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.query_template"
+              "argument": "query_template"
             }
           ]
         },
@@ -1954,7 +1954,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.server"
+              "argument": "server"
             }
           ]
         },
@@ -1967,20 +1967,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.config"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "query_template_args",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.query_template_args"
+              "argument": "config"
             }
           ]
         },
@@ -1993,20 +1980,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.user"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "pwd",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputs.pwd"
+              "argument": "user"
             }
           ]
         },
@@ -2019,7 +1993,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.ignore_exception"
+              "argument": "ignore_exception"
             }
           ]
         },
@@ -2032,7 +2006,33 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputs.cache_dir"
+              "argument": "cache_dir"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "query_template_args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "query_template_args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "pwd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "pwd"
             }
           ]
         }
