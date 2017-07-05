@@ -4,7 +4,6 @@ FROM ubuntu:xenial-20161213
 # Pre-cache neurodebian key
 COPY docker/neurodebian.gpg /root/.neurodebian.gpg
 
-
 # Prepare environment
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
@@ -16,6 +15,7 @@ RUN apt-get update && \
                     build-essential \
                     autoconf \
                     libtool \
+		    wget \
                     pkg-config && \
     curl -sSL http://neuro.debian.net/lists/xenial.us-ca.full >> /etc/apt/sources.list.d/neurodebian.sources.list && \
     apt-key add /root/.neurodebian.gpg && \
@@ -23,7 +23,8 @@ RUN apt-get update && \
     apt-get update
 
 # Installing freesurfer
-RUN curl -sSL https://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/6.0.0/freesurfer-Linux-centos6_x86_64-stable-pub-v6.0.0.tar.gz | tar zxv -C /opt \
+RUN wget -q https://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/6.0.0/freesurfer-Linux-centos6_x86_64-stable-pub-v6.0.0.tar.gz --tries=0
+RUN tar -zxf freesurfer-Linux-centos6_x86_64-stable-pub-v6.0.0.tar.gz -C /opt \
     --exclude='freesurfer/trctrain' \
     --exclude='freesurfer/subjects/fsaverage_sym' \
     --exclude='freesurfer/subjects/fsaverage3' \
@@ -90,16 +91,6 @@ RUN mkdir -p /opt/c3d && \
 ENV C3DPATH /opt/c3d/
 ENV PATH $C3DPATH/bin:$PATH
 
-# Installing WEBP tools
-#RUN curl -sSLO "http://downloads.webmproject.org/releases/webp/libwebp-0.5.2-linux-x86-64.tar.gz" && \
-#  tar -xf libwebp-0.5.2-linux-x86-64.tar.gz && cd libwebp-0.5.2-linux-x86-64/bin && \
-#  mv cwebp /usr/local/bin/ && rm -rf libwebp-0.5.2-linux-x86-64
-
-# Installing SVGO
-#RUN curl -sL https://deb.nodesource.com/setup_7.x | bash -
-#RUN apt-get install -y nodejs
-#RUN npm install -g svgo
-
 # Installing and setting up miniconda
 RUN curl -sSLO https://repo.continuum.io/miniconda/Miniconda3-4.3.11-Linux-x86_64.sh && \
     bash Miniconda3-4.3.11-Linux-x86_64.sh -b -p /usr/local/miniconda && \
@@ -119,7 +110,7 @@ ENV PATH=/usr/local/miniconda/bin:$PATH \
 #                     libxml2=2.9.4 \
 #                     libxslt=1.1.29\
 #                     traits=4.6.0 &&  \
- RUN   chmod +x /usr/local/miniconda/bin/* && conda clean --all -y
+RUN chmod +x /usr/local/miniconda/bin/* && conda clean --all -y
 
 # Precaching fonts
 #RUN python -c "from matplotlib import font_manager"
@@ -128,7 +119,7 @@ ENV PATH=/usr/local/miniconda/bin:$PATH \
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
                     git=1:2.7.4-0ubuntu1 \
-                    graphviz=2.38.0-12ubuntu2 && \
+                    graphviz=2.38.0-12ubuntu2 dbus && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Unless otherwise specified each process should only use one thread - nipype
@@ -155,10 +146,17 @@ RUN apt-get update && \
 #    python -c 'from niworkflows.data.getters import get_mni_icbm152_nlin_asym_09c; get_mni_icbm152_nlin_asym_09c()' && \
 #    python -c 'from niworkflows.data.getters import get_ants_oasis_template_ras; get_ants_oasis_template_ras()'
 
-#WORKDIR /root/src/fmriprep
+RUN rm freesurfer-Linux-centos6_x86_64-stable-pub-v6.0.0.tar.gz
 
-#ENTRYPOINT ["/usr/local/miniconda/bin/fmriprep"]
-RUN conda install -y qt
-ENV LD_LIBRARY_PATH=/usr/local/miniconda/lib:$LD_LIBRARY_PATH
 RUN dbus-uuidgen > /etc/machine-id
+COPY docker/Porcupine /root/Porcupine
+COPY docker/lib /root/
+COPY docker/plugins /root/plugins
+ENV LD_LIBRARY_PATH=/root
+ENV QT_QPA_PLATFORM_PLUGIN_PATH=/root/plugins
+
+RUN pip install awscli
+COPY *.py /root/
+RUN ["python", "/root/download_openfmri_data.py", "-d", "ds000105", "-o", "/example_data"]
+
 CMD /root/Porcupine
