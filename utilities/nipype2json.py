@@ -1,186 +1,145 @@
-#import os
+""" nipype2json.py
 
-import json
+Makes a Porcupine-compatible dictionary of nodes.
+Created by Tomas Knapen (Free University, Amsterdam) &
+Lukas Snoek (University of Amsterdam)
+"""
+import inspect
 
-working_dir = '../Resources/Dictionaries/'
-cat_nipype = 'NiPype'
 
-for class_name in ['utility', 'io', 'ants', 'fsl', 'afni', 'spm', 'freesurfer', 'camino', 'mrtrix', 'mne', 'slicer']:
+def node2json(node, module, custom_node=True, category="Custom"):
 
-    exec('import nipype.interfaces.' + class_name + ' as ' + class_name)
-    class_list = [e for e in eval('dir(' + class_name + ')') if e[0].isupper() or e[0].isdigit()]
-    op_class_name = class_name.upper()
+    all_inputs, mandatory_inputs = _get_inputs(node, custom_node)
+    all_outputs = _get_outputs(node, custom_node)
+    descr = _get_descr(node, custom_node)
+    web_url, long_node_title = _get_web_url(node, custom_node)
+    node_name = _get_node_name(node, custom_node)
 
-    nodes = []
-    for cls in class_list:
-        if eval('"input_spec" in dir(' + class_name + '.' + cls + ')'):
-            if cls.endswith('Command'):
-                continue
+    titleBlock = {'name': long_node_title + '.%s' % node_name,
+                  'code': [{'language': category,
+                            'comment': descr,
+                            'web_url': web_url,
+                            'argument': module + '.%s()' % node_name}]}
 
-            long_node_title = op_class_name + '.' + cls
+    ports = []
 
-            nodename = cls
-            all_inputs = eval(class_name+'.'+cls+'.input_spec().traits()').keys()
-            all_inputs = [ai for ai in all_inputs if not ai.startswith('trait')]
+    for inp in all_inputs:
+        codeBlock = {'language': category,
+                     'argument': 'inputs.%s' % inp}
+        is_mandatory = inp in mandatory_inputs
 
-            try:
-                outputs = eval(class_name+'.'+cls+'.output_spec().traits()').keys()
-                m_outputs = [ou for ou in outputs if not ou.startswith('trait')]
-            except TypeError:
-                print('TypeError for outputs')
-                m_outputs = []
+        port = {'input': True,
+                'output': False,
+                'visible': True if is_mandatory else False,
+                'editable': True if is_mandatory else False,
+                'name': inp,
+                'code': [codeBlock]}
+        ports.append(port)
 
-            try:
-                descr = eval(class_name+'.'+cls+'().help(returnhelp=True).splitlines()[0]')
-            except: # for Interfaces without valid descriptions
-                descr = cls
+    for outp in all_outputs:
 
-            titleBlock = {
-                            'name': long_node_title,
-                            'code': [{  
-                                    'language': cat_nipype,
-                                    'comment': descr,
-                                    'argument': class_name + '.' + cls + '()'
-                                    }]
-                         }
-                    
-            ports = []
-            input_strings = []
-            
-            m_inputs = eval(class_name + '.' + cls + '.input_spec().traits(mandatory=True)').keys()
-            #par_class = str(eval(class_name + '.' + cls + '.__class__')).split('.')[-2]
-            for m_inp in m_inputs:
-                codeBlock = {
-                        'language': cat_nipype,
-                        'argument': m_inp,
-                        }
-                port = {
-                        'input': True,
-                        'output': False,
-                        'visible': True,
-                        'editable': True,
-                        'name': m_inp,
-                        'code': [codeBlock]
-                        }
-                ports.append(port);
-                            
-            m_inputs = set(all_inputs) - set(m_inputs)
-            for m_inp in m_inputs:
-                codeBlock = {
-                        'language': cat_nipype,
-                        'argument': m_inp
-                        }
-                port = {
-                        'input': True,
-                        'output': False,
-                        'visible': False,
-                        'editable': False,
-                        'name': m_inp,
-                        'code': [codeBlock]
-                        }
-                ports.append(port);
+        codeBlock = {
+            'language': category,
+            'argument': 'outputs.%s' % outp
+        }
 
-            ## outputs
-            output_strings = []
-            for m_out in m_outputs:
-                codeBlock = {
-                        'language': cat_nipype,
-                        'argument': m_inp
-                        }
-                
-                port = {
-                        'input': False,
-                        'output': True,
-                        'visible': True,
-                        'editable': False,
-                        'name': m_out,
-                        'code': [codeBlock]
-                        }
-                ports.append(port);
-    			
-            #if par_class == op_class_name:
-            this_category = [cat_nipype, op_class_name]
-            #else:
-                #this_category = [cat_nipype, op_class_name, par_class]
-                
-            node = {
-                    'category': this_category,
-                    'title': titleBlock,
-                    'ports': ports
-                    }
+        port = {
+            'input': False,
+            'output': True,
+            'visible': True,
+            'editable': False,
+            'name': outp,
+            'code': [codeBlock]
+        }
+        ports.append(port)
 
-            nodes.append(node)
+    this_category = [category, module]
+    node_to_return = {
+        'category': this_category,
+        'title': titleBlock,
+        'ports': ports
+    }
+    return node_to_return
 
-    with open(class_name + '.JSON', 'w') as outfile:
-        json.dump({'nodes': nodes}, outfile, sort_keys = False, indent = 2)
-    
-    
-#            opfilename = long_node_title + '.node'
-#            with open(os.path.join(working_dir, cat_nipype, opfilename), 'w') as f:
-#                f.write(doc.toprettyxml(indent="  "))
 
-# separate code for the Merge Node
-#class_name = 'utility'
-#exec('import nipype.interfaces.' + class_name + ' as ' + class_name)
-#op_class_name = class_name.upper()
-#cls = 'Merge'
-## outputs first:
-#try:
-#    outputs = eval(class_name+'.'+cls+'.output_spec().traits()').keys()
-#    m_outputs = [ou for ou in outputs if not ou.startswith('trait')]
-#except TypeError:
-#    print 'TypeError for outputs'
-#    m_outputs = []
-#
-#try:
-#    descr = eval(class_name+'.'+cls+'().help(returnhelp=True).splitlines()[0]')
-#except: # for Interfaces without valid descriptions
-#    descr = cls
-#
-#for in_nr in range(1,10):
-#
-#    opfilename = cls + '_%i'%in_nr
-#    m_inputs = ['in%i'%i for i in range(1, in_nr+1)]
-#    long_node_title = op_class_name+'.'+cls+'.%i'%in_nr
-#
-#    ## XML stuff
-#    ## top-level node
-#    node = ET.Element('node')
-#    category = ET.SubElement(node, 'category', {'name': cat_nipype})
-#    subcat = ET.SubElement(category, 'category', {'name': op_class_name})
-#    submergecat = ET.SubElement(subcat, 'category', {'name': cls})
-#
-#    ## title
-#    title = ET.SubElement(node, 'title', {'name': long_node_title})
-#    title_code = ET.SubElement(title, 'code')
-#    language = ET.SubElement(title_code, 'language', {'name': cat_nipype})
-#    comment = ET.SubElement(language, 'comment', {'text': descr})
-#    argument = ET.SubElement(language, 'argument', {'name': class_name+'.'+cls+'()'})
-#
-#    ## inputs
-#    input_strings = []
-#    for m_inp in m_inputs:
-#        input_node = ET.SubElement(node, 'input', {'name': m_inp, 'editable': 'true'})
-#        code = ET.SubElement(input_node, 'code')
-#        language = ET.SubElement(code, 'language', {'name': cat_nipype})
-#        m_input_argument = ET.SubElement(language, 'argument', {'name': m_inp})
-#        input_strings.append(ET.tostring(input_node))
-#
-#    ## outputs
-#    output_strings = []
-#    for m_out in m_outputs:
-#        output_node = ET.SubElement(node, 'output', {'name': m_out, 'editable': 'true'})
-#        code = ET.SubElement(output_node, 'code')
-#        language = ET.SubElement(code, 'language', {'name': cat_nipype})
-#        m_output_argument = ET.SubElement(language, 'argument', {'name': m_out})
-#        output_strings.append(ET.tostring(output_node))
-#
-#
-#    doc = minidom.parseString(ET.tostring(node))
-#
-#    opfilename = long_node_title + '.node'
-#    with open(os.path.join(working_dir, cat_nipype, opfilename), 'w') as f:
-#        f.write(doc.toprettyxml(indent="  "))
-#
-#
-#        
+def _get_inputs(node, custom_node=True):
+
+    if custom_node:
+        TO_SKIP = ['function_str', 'trait_added', 'trait_modified',
+                   'ignore_exception']
+        all_inputs = [inp for inp in node.inputs.traits().keys()
+                      if not inp in TO_SKIP]
+        mandatory_inputs = all_inputs
+    else:
+        all_inputs = [inp for inp in node.input_spec().traits().keys()
+                      if not inp.startswith('trait')]
+        mandatory_inputs = node.input_spec().traits(mandatory=True).keys()
+    return all_inputs, mandatory_inputs
+
+
+def _get_outputs(node, custom_node=True):
+
+    if custom_node:
+        TO_SKIP = ['trait_added', 'trait_modified']
+        if 'return' in node.inputs.function_str:
+            all_outputs = [outp for outp in node.outputs.traits().keys()
+                           if not outp in TO_SKIP]
+        else:
+            all_outputs = []
+    else:
+        if hasattr(node, 'output_spec'):
+            if node.output_spec is not None:
+                all_outputs = [outp for outp in node.output_spec().traits().keys()
+                               if not outp.startswith('trait')]
+            else:
+                print('No outputs for node %s' % node.__name__)
+                all_outputs = []
+        else:
+            print('No outputs for node %s' % node.__name__)
+            all_outputs = []
+
+    return all_outputs
+
+
+def _get_descr(node, custom_node=True):
+
+    if custom_node:
+        descr = node.fullname
+    else:
+        if hasattr(node, 'help'):
+            descr = node.help(returnhelp=True).splitlines()[0]
+        else:
+            descr = node.__name__
+
+    return descr
+
+
+def _get_web_url(node, custom_node):
+
+    if custom_node:
+        return '', "custom"
+    else:
+        web_url = 'nipype.readthedocs.io/en/latest/interfaces/generated/interfaces'
+        module_tree = inspect.getmodule(node).__name__
+        long_node_title = '.'.join([n for n in module_tree.split('.')
+                                    if n not in ('interfaces', 'nipype')])
+        web_url += '.%s' % long_node_title.split('.')[0]
+        if len(long_node_title.split('.')) > 1:
+            web_url += '/%s.html' % long_node_title.split('.')[1]
+            web_url += '#%s' % node.__name__
+        return web_url, long_node_title
+
+
+def _get_node_name(node, custom_node):
+
+    if custom_node:
+        return node.fullname
+    else:
+        return node.__name__
+
+def pyfunc2json():
+    """ Experimental function to convert Python functions
+    directly to Porcupine's JSON format (by converting it)
+    first to a Nipype node. """
+    pass
+
