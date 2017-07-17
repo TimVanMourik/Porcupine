@@ -199,6 +199,8 @@ void MainWindow::loadNewNodes(
 {
     NodeLibrary& nodeLibrary = NodeLibrary::getInstance();
     QStringList fileNames = QFileDialog::getOpenFileNames();
+    if(fileNames.length() == 0) return;
+    qDebug() << fileNames.length();
     foreach(QString name, fileNames)
     {
         QFile file(name);
