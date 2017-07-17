@@ -25,6 +25,10 @@ currentNode = docNode.createElement('qresource');
 currentNode.setAttribute('prefix', '/qss');
 currentNode.appendChild(fileToXML(docNode, 'file', 'visibility_button.qss', 'qss/visibility_button.qss'));
 currentNode.appendChild(fileToXML(docNode, 'file', 'iterator_button.qss',   'qss/iterator_button.qss'));
+currentNode.appendChild(fileToXML(docNode, 'file', 'remove_button.qss',     'qss/remove_button.qss'));
+currentNode.appendChild(fileToXML(docNode, 'file', 'expand_button.qss',     'qss/expand_button.qss'));
+currentNode.appendChild(fileToXML(docNode, 'file', 'port.qss',              'qss/port.qss'));
+currentNode.appendChild(fileToXML(docNode, 'file', 'nodeLabel.qss',         'qss/nodeLabel.qss'));
 
 docRoot.appendChild(currentNode);
 

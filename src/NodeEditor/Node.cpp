@@ -89,7 +89,12 @@ void Node::initialize(
     QPalette palette;
     palette.setColor(QPalette::Text, Qt::white);
     m_nameLabel->setPalette(palette);
-    m_nameLabel->setStyleSheet("* {background-color: rgba(0, 0, 0, 0);}");
+
+    QFile nodeStyle(":/qss/nodeLabel.qss");
+    nodeStyle.open(QFile::ReadOnly);
+    QString nodeSheet = QString::fromLatin1(nodeStyle.readAll());
+    m_nameLabel->setStyleSheet(nodeSheet);
+
     QFont font(scene()->font());
     font.setBold(true);
     m_nameLabel->setFont(font);

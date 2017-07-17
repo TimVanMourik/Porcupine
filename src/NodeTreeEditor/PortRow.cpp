@@ -147,6 +147,11 @@ void PortRow::initialiseStyleSheets(
         QString styleSheetIterator = QString::fromLatin1(fileIterator.readAll());
         m_iterateCheckbox->setStyleSheet(styleSheetIterator);
     }
+
+    QFile fileRemove(":/qss/remove_button.qss");
+    fileRemove.open(QFile::ReadOnly);
+    QString styleSheetRemove = QString::fromLatin1(fileRemove.readAll());
+    m_deleteButton->setStyleSheet(styleSheetRemove);
 }
 
 PortRow::~PortRow()
