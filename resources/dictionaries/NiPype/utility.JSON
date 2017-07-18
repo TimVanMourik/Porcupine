@@ -3,14 +3,15 @@
     {
       "category": [
         "NiPype",
-        "UTILITY"
+        "utility"
       ],
       "title": {
-        "name": "UTILITY.AssertEqual",
+        "name": "utility.AssertEqual",
         "code": [
           {
             "language": "NiPype",
             "comment": "",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.utility/base.html#AssertEqual",
             "argument": "utility.AssertEqual()"
           }
         ]
@@ -25,7 +26,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "volume1"
+              "argument": "inputs.volume1"
             }
           ]
         },
@@ -38,7 +39,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "volume2"
+              "argument": "inputs.volume2"
             }
           ]
         },
@@ -51,7 +52,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": "inputs.ignore_exception"
             }
           ]
         }
@@ -60,14 +61,15 @@
     {
       "category": [
         "NiPype",
-        "UTILITY"
+        "utility"
       ],
       "title": {
-        "name": "UTILITY.CSVReader",
+        "name": "utility.CSVReader",
         "code": [
           {
             "language": "NiPype",
             "comment": "Examples",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.utility/csv.html#CSVReader",
             "argument": "utility.CSVReader()"
           }
         ]
@@ -82,7 +84,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": "inputs.in_file"
             }
           ]
         },
@@ -95,7 +97,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "header"
+              "argument": "inputs.header"
             }
           ]
         }
@@ -104,14 +106,15 @@
     {
       "category": [
         "NiPype",
-        "UTILITY"
+        "utility"
       ],
       "title": {
-        "name": "UTILITY.Function",
+        "name": "utility.Function",
         "code": [
           {
             "language": "NiPype",
-            "comment": "Function",
+            "comment": "Runs arbitrary function as an interface",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.utility/wrappers.html#Function",
             "argument": "utility.Function()"
           }
         ]
@@ -126,7 +129,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "function_str"
+              "argument": "inputs.function_str"
             }
           ]
         },
@@ -139,7 +142,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": "inputs.ignore_exception"
             }
           ]
         }
@@ -148,14 +151,15 @@
     {
       "category": [
         "NiPype",
-        "UTILITY"
+        "utility"
       ],
       "title": {
-        "name": "UTILITY.IdentityInterface",
+        "name": "utility.IdentityInterface",
         "code": [
           {
             "language": "NiPype",
-            "comment": "IdentityInterface",
+            "comment": "Basic interface class generates identity mappings",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.utility/base.html#IdentityInterface",
             "argument": "utility.IdentityInterface()"
           }
         ]
@@ -165,14 +169,15 @@
     {
       "category": [
         "NiPype",
-        "UTILITY"
+        "utility"
       ],
       "title": {
-        "name": "UTILITY.Merge",
+        "name": "utility.Merge",
         "code": [
           {
             "language": "NiPype",
             "comment": "Basic interface class to merge inputs into a single list",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.utility/base.html#Merge",
             "argument": "utility.Merge()"
           }
         ]
@@ -183,24 +188,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "ravel_inputs",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "ravel_inputs"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
           "name": "axis",
           "code": [
             {
               "language": "NiPype",
-              "argument": "axis"
+              "argument": "inputs.axis"
             }
           ]
         },
@@ -213,7 +205,20 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "no_flatten"
+              "argument": "inputs.no_flatten"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ravel_inputs",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ravel_inputs"
             }
           ]
         },
@@ -226,7 +231,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": "inputs.ignore_exception"
             }
           ]
         },
@@ -239,7 +244,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": "outputs.out"
             }
           ]
         }
@@ -248,14 +253,15 @@
     {
       "category": [
         "NiPype",
-        "UTILITY"
+        "utility"
       ],
       "title": {
-        "name": "UTILITY.Rename",
+        "name": "utility.Rename",
         "code": [
           {
             "language": "NiPype",
             "comment": "Change the name of a file based on a mapped format string.",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.utility/base.html#Rename",
             "argument": "utility.Rename()"
           }
         ]
@@ -270,33 +276,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "format_string",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "format_string"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "parse_string",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "parse_string"
+              "argument": "inputs.in_file"
             }
           ]
         },
@@ -309,7 +289,33 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "keep_ext"
+              "argument": "inputs.keep_ext"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "format_string",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.format_string"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "parse_string",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.parse_string"
             }
           ]
         },
@@ -322,7 +328,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_fullpath"
+              "argument": "inputs.use_fullpath"
             }
           ]
         },
@@ -335,7 +341,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_fullpath"
+              "argument": "outputs.out_file"
             }
           ]
         }
@@ -344,14 +350,15 @@
     {
       "category": [
         "NiPype",
-        "UTILITY"
+        "utility"
       ],
       "title": {
-        "name": "UTILITY.Select",
+        "name": "utility.Select",
         "code": [
           {
             "language": "NiPype",
             "comment": "Basic interface class to select specific elements from a list",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.utility/base.html#Select",
             "argument": "utility.Select()"
           }
         ]
@@ -366,7 +373,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inlist"
+              "argument": "inputs.inlist"
             }
           ]
         },
@@ -379,7 +386,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "index"
+              "argument": "inputs.index"
             }
           ]
         },
@@ -392,7 +399,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": "inputs.ignore_exception"
             }
           ]
         },
@@ -405,7 +412,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": "outputs.out"
             }
           ]
         }
@@ -414,14 +421,15 @@
     {
       "category": [
         "NiPype",
-        "UTILITY"
+        "utility"
       ],
       "title": {
-        "name": "UTILITY.Split",
+        "name": "utility.Split",
         "code": [
           {
             "language": "NiPype",
             "comment": "Basic interface class to split lists into multiple outputs",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.utility/base.html#Split",
             "argument": "utility.Split()"
           }
         ]
@@ -436,7 +444,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inlist"
+              "argument": "inputs.inlist"
             }
           ]
         },
@@ -449,20 +457,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "splits"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": "inputs.splits"
             }
           ]
         },
@@ -475,7 +470,20 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "squeeze"
+              "argument": "inputs.squeeze"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
             }
           ]
         }

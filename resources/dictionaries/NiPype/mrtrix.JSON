@@ -3,14 +3,15 @@
     {
       "category": [
         "NiPype",
-        "MRTRIX"
+        "mrtrix"
       ],
       "title": {
-        "name": "MRTRIX.ConstrainedSphericalDeconvolution",
+        "name": "mrtrix.ConstrainedSphericalDeconvolution",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **csdeconv**",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/tensors.html#ConstrainedSphericalDeconvolution",
             "argument": "mrtrix.ConstrainedSphericalDeconvolution()"
           }
         ]
@@ -25,7 +26,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": "inputs.in_file"
             }
           ]
         },
@@ -38,33 +39,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "response_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "encoding_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "encoding_file"
+              "argument": "inputs.response_file"
             }
           ]
         },
@@ -77,98 +52,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_filename"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "directions_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "directions_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "filter_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "filter_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "normalise",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "normalise"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "terminal_output",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "terminal_output"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "maximum_harmonic_order",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "maximum_harmonic_order"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "debug",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "debug"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "environ",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "environ"
+              "argument": "inputs.out_filename"
             }
           ]
         },
@@ -181,7 +65,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_image"
+              "argument": "inputs.mask_image"
             }
           ]
         },
@@ -190,11 +74,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "args",
+          "name": "encoding_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": "inputs.encoding_file"
             }
           ]
         },
@@ -203,11 +87,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "threshold_value",
+          "name": "filter_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "threshold_value"
+              "argument": "inputs.filter_file"
             }
           ]
         },
@@ -220,7 +104,33 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "lambda_value"
+              "argument": "inputs.lambda_value"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "maximum_harmonic_order",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.maximum_harmonic_order"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "threshold_value",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.threshold_value"
             }
           ]
         },
@@ -233,7 +143,98 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "iterations"
+              "argument": "inputs.iterations"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "debug",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.debug"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "directions_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.directions_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "normalise",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.normalise"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
             }
           ]
         },
@@ -246,7 +247,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "iterations"
+              "argument": "outputs.spherical_harmonics_image"
             }
           ]
         }
@@ -255,14 +256,15 @@
     {
       "category": [
         "NiPype",
-        "MRTRIX"
+        "mrtrix"
       ],
       "title": {
-        "name": "MRTRIX.DWI2SphericalHarmonicsImage",
+        "name": "mrtrix.DWI2SphericalHarmonicsImage",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **dwi2SH**",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/tensors.html#DWI2SphericalHarmonicsImage",
             "argument": "mrtrix.DWI2SphericalHarmonicsImage()"
           }
         ]
@@ -277,20 +279,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "encoding_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "encoding_file"
+              "argument": "inputs.in_file"
             }
           ]
         },
@@ -303,72 +292,20 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_filename"
+              "argument": "inputs.out_filename"
             }
           ]
         },
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
+          "visible": true,
+          "editable": true,
+          "name": "encoding_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "environ",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "environ"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "args",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "args"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "normalise",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "normalise"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "terminal_output",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": "inputs.encoding_file"
             }
           ]
         },
@@ -381,7 +318,72 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "maximum_harmonic_order"
+              "argument": "inputs.maximum_harmonic_order"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "normalise",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.normalise"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
             }
           ]
         },
@@ -394,7 +396,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "maximum_harmonic_order"
+              "argument": "outputs.spherical_harmonics_image"
             }
           ]
         }
@@ -403,14 +405,15 @@
     {
       "category": [
         "NiPype",
-        "MRTRIX"
+        "mrtrix"
       ],
       "title": {
-        "name": "MRTRIX.DWI2Tensor",
+        "name": "mrtrix.DWI2Tensor",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **dwi2tensor**",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/preprocess.html#DWI2Tensor",
             "argument": "mrtrix.DWI2Tensor()"
           }
         ]
@@ -425,85 +428,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "debug",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "debug"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_slice_by_volume",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "ignore_slice_by_volume"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "encoding_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "encoding_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "environ",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "environ"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "quiet",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "quiet"
+              "argument": "inputs.in_file"
             }
           ]
         },
@@ -516,7 +441,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_filename"
+              "argument": "inputs.out_filename"
             }
           ]
         },
@@ -525,11 +450,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "args",
+          "name": "encoding_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": "inputs.encoding_file"
             }
           ]
         },
@@ -538,11 +463,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "terminal_output",
+          "name": "ignore_slice_by_volume",
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": "inputs.ignore_slice_by_volume"
             }
           ]
         },
@@ -555,7 +480,85 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_volumes"
+              "argument": "inputs.ignore_volumes"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "quiet",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.quiet"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "debug",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.debug"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
             }
           ]
         },
@@ -568,7 +571,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_volumes"
+              "argument": "outputs.tensor"
             }
           ]
         }
@@ -577,14 +580,15 @@
     {
       "category": [
         "NiPype",
-        "MRTRIX"
+        "mrtrix"
       ],
       "title": {
-        "name": "MRTRIX.DiffusionTensorStreamlineTrack",
+        "name": "mrtrix.DiffusionTensorStreamlineTrack",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **streamtrack**",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/tracking.html#DiffusionTensorStreamlineTrack",
             "argument": "mrtrix.DiffusionTensorStreamlineTrack()"
           }
         ]
@@ -599,7 +603,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "gradient_encoding_file"
+              "argument": "inputs.gradient_encoding_file"
             }
           ]
         },
@@ -612,137 +616,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "mask_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "mask_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "initial_direction",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "initial_direction"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "include_spec",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "include_spec"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "exclude_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "exclude_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "maximum_tract_length",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "maximum_tract_length"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "maximum_number_of_tracks",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "maximum_number_of_tracks"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "no_mask_interpolation",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "no_mask_interpolation"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "minimum_tract_length",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "minimum_tract_length"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "desired_number_of_tracks",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "desired_number_of_tracks"
+              "argument": "inputs.in_file"
             }
           ]
         },
@@ -755,59 +629,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "seed_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "do_not_precompute",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "do_not_precompute"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "initial_cutoff_value",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "initial_cutoff_value"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "out_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "out_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "terminal_output",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": "inputs.seed_file"
             }
           ]
         },
@@ -820,85 +642,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "seed_spec"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "stop",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "stop"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "minimum_radius_of_curvature",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "minimum_radius_of_curvature"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "unidirectional",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "unidirectional"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "environ",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "environ"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "mask_spec",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "mask_spec"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "inputmodel",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputmodel"
+              "argument": "inputs.seed_spec"
             }
           ]
         },
@@ -911,7 +655,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "include_file"
+              "argument": "inputs.include_file"
             }
           ]
         },
@@ -920,11 +664,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "step_size",
+          "name": "include_spec",
           "code": [
             {
               "language": "NiPype",
-              "argument": "step_size"
+              "argument": "inputs.include_spec"
             }
           ]
         },
@@ -933,24 +677,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "cutoff_value",
+          "name": "exclude_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "cutoff_value"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "args",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "args"
+              "argument": "inputs.exclude_file"
             }
           ]
         },
@@ -963,7 +694,280 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "exclude_spec"
+              "argument": "inputs.exclude_spec"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mask_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mask_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mask_spec",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mask_spec"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "inputmodel",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.inputmodel"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "stop",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.stop"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "do_not_precompute",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.do_not_precompute"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "unidirectional",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.unidirectional"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "no_mask_interpolation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.no_mask_interpolation"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "step_size",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.step_size"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "minimum_radius_of_curvature",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.minimum_radius_of_curvature"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "desired_number_of_tracks",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.desired_number_of_tracks"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "maximum_number_of_tracks",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.maximum_number_of_tracks"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "minimum_tract_length",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.minimum_tract_length"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "maximum_tract_length",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.maximum_tract_length"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "cutoff_value",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.cutoff_value"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "initial_cutoff_value",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.initial_cutoff_value"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "initial_direction",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.initial_direction"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
             }
           ]
         },
@@ -976,7 +980,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "exclude_spec"
+              "argument": "outputs.tracked"
             }
           ]
         }
@@ -985,14 +989,15 @@
     {
       "category": [
         "NiPype",
-        "MRTRIX"
+        "mrtrix"
       ],
       "title": {
-        "name": "MRTRIX.Directions2Amplitude",
+        "name": "mrtrix.Directions2Amplitude",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **dir2amp**",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/tensors.html#Directions2Amplitude",
             "argument": "mrtrix.Directions2Amplitude()"
           }
         ]
@@ -1007,7 +1012,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": "inputs.in_file"
             }
           ]
         },
@@ -1020,59 +1025,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "peaks_image"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "environ",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "environ"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "display_info",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "display_info"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "quiet_display",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "quiet_display"
+              "argument": "inputs.peaks_image"
             }
           ]
         },
@@ -1085,7 +1038,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "num_peaks"
+              "argument": "inputs.num_peaks"
             }
           ]
         },
@@ -1098,7 +1051,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "peak_directions"
+              "argument": "inputs.peak_directions"
             }
           ]
         },
@@ -1107,11 +1060,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "out_file",
+          "name": "display_info",
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": "inputs.display_info"
             }
           ]
         },
@@ -1120,24 +1073,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "args",
+          "name": "quiet_display",
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "terminal_output",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": "inputs.quiet_display"
             }
           ]
         },
@@ -1150,7 +1090,72 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "display_debug"
+              "argument": "inputs.display_debug"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
             }
           ]
         },
@@ -1163,7 +1168,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "display_debug"
+              "argument": "outputs.out_file"
             }
           ]
         }
@@ -1172,14 +1177,15 @@
     {
       "category": [
         "NiPype",
-        "MRTRIX"
+        "mrtrix"
       ],
       "title": {
-        "name": "MRTRIX.Erode",
+        "name": "mrtrix.Erode",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **erode**",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/preprocess.html#Erode",
             "argument": "mrtrix.Erode()"
           }
         ]
@@ -1194,72 +1200,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "number_of_passes",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "number_of_passes"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "debug",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "debug"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "environ",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "environ"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "quiet",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "quiet"
+              "argument": "inputs.in_file"
             }
           ]
         },
@@ -1272,7 +1213,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_filename"
+              "argument": "inputs.out_filename"
             }
           ]
         },
@@ -1281,24 +1222,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "args",
+          "name": "number_of_passes",
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "terminal_output",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": "inputs.number_of_passes"
             }
           ]
         },
@@ -1311,7 +1239,85 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "dilate"
+              "argument": "inputs.dilate"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "quiet",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.quiet"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "debug",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.debug"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
             }
           ]
         },
@@ -1324,7 +1330,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "dilate"
+              "argument": "outputs.out_file"
             }
           ]
         }
@@ -1333,14 +1339,15 @@
     {
       "category": [
         "NiPype",
-        "MRTRIX"
+        "mrtrix"
       ],
       "title": {
-        "name": "MRTRIX.EstimateResponseForSH",
+        "name": "mrtrix.EstimateResponseForSH",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **estimate_response**",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/tensors.html#EstimateResponseForSH",
             "argument": "mrtrix.EstimateResponseForSH()"
           }
         ]
@@ -1355,7 +1362,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": "inputs.in_file"
             }
           ]
         },
@@ -1368,20 +1375,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_image"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "encoding_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "encoding_file"
+              "argument": "inputs.mask_image"
             }
           ]
         },
@@ -1394,85 +1388,20 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_filename"
+              "argument": "inputs.out_filename"
             }
           ]
         },
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
+          "visible": true,
+          "editable": true,
+          "name": "encoding_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "debug",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "debug"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "environ",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "environ"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "args",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "args"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "normalise",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "normalise"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "terminal_output",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": "inputs.encoding_file"
             }
           ]
         },
@@ -1485,7 +1414,20 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "maximum_harmonic_order"
+              "argument": "inputs.maximum_harmonic_order"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "normalise",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.normalise"
             }
           ]
         },
@@ -1498,7 +1440,72 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "quiet"
+              "argument": "inputs.quiet"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "debug",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.debug"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
             }
           ]
         },
@@ -1511,7 +1518,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "quiet"
+              "argument": "outputs.response"
             }
           ]
         }
@@ -1520,14 +1527,15 @@
     {
       "category": [
         "NiPype",
-        "MRTRIX"
+        "mrtrix"
       ],
       "title": {
-        "name": "MRTRIX.FSL2MRTrix",
+        "name": "mrtrix.FSL2MRTrix",
         "code": [
           {
             "language": "NiPype",
             "comment": "Converts separate b-values and b-vectors from text files (FSL style) into a",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/tensors.html#FSL2MRTrix",
             "argument": "mrtrix.FSL2MRTrix()"
           }
         ]
@@ -1542,7 +1550,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "bvec_file"
+              "argument": "inputs.bvec_file"
             }
           ]
         },
@@ -1555,20 +1563,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "bval_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "out_encoding_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "out_encoding_file"
+              "argument": "inputs.bval_file"
             }
           ]
         },
@@ -1581,7 +1576,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "invert_x"
+              "argument": "inputs.invert_x"
             }
           ]
         },
@@ -1594,7 +1589,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "invert_y"
+              "argument": "inputs.invert_y"
             }
           ]
         },
@@ -1607,7 +1602,20 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "invert_z"
+              "argument": "inputs.invert_z"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "out_encoding_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_encoding_file"
             }
           ]
         },
@@ -1620,7 +1628,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "invert_z"
+              "argument": "outputs.encoding_file"
             }
           ]
         }
@@ -1629,14 +1637,15 @@
     {
       "category": [
         "NiPype",
-        "MRTRIX"
+        "mrtrix"
       ],
       "title": {
-        "name": "MRTRIX.FilterTracks",
+        "name": "mrtrix.FilterTracks",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **filter_tracks**",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/tracking.html#FilterTracks",
             "argument": "mrtrix.FilterTracks()"
           }
         ]
@@ -1651,111 +1660,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "include_spec",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "include_spec"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "debug",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "debug"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "exclude_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "exclude_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "environ",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "environ"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "no_mask_interpolation",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "no_mask_interpolation"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "minimum_tract_length",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "minimum_tract_length"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "quiet",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "quiet"
+              "argument": "inputs.in_file"
             }
           ]
         },
@@ -1768,7 +1673,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "include_file"
+              "argument": "inputs.include_file"
             }
           ]
         },
@@ -1777,11 +1682,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "out_file",
+          "name": "include_spec",
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": "inputs.include_spec"
             }
           ]
         },
@@ -1790,37 +1695,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "args",
+          "name": "exclude_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "terminal_output",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "terminal_output"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "invert",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "invert"
+              "argument": "inputs.exclude_file"
             }
           ]
         },
@@ -1833,7 +1712,137 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "exclude_spec"
+              "argument": "inputs.exclude_spec"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "minimum_tract_length",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.minimum_tract_length"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "no_mask_interpolation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.no_mask_interpolation"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "invert",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.invert"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "quiet",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.quiet"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "debug",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.debug"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
             }
           ]
         },
@@ -1846,7 +1855,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "exclude_spec"
+              "argument": "outputs.out_file"
             }
           ]
         }
@@ -1855,14 +1864,15 @@
     {
       "category": [
         "NiPype",
-        "MRTRIX"
+        "mrtrix"
       ],
       "title": {
-        "name": "MRTRIX.FindShPeaks",
+        "name": "mrtrix.FindShPeaks",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **find_SH_peaks**",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/tensors.html#FindShPeaks",
             "argument": "mrtrix.FindShPeaks()"
           }
         ]
@@ -1877,7 +1887,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": "inputs.in_file"
             }
           ]
         },
@@ -1890,7 +1900,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "directions_file"
+              "argument": "inputs.directions_file"
             }
           ]
         },
@@ -1903,72 +1913,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "peaks_image"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "peak_threshold",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "peak_threshold"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "environ",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "environ"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "display_info",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "display_info"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "quiet_display",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "quiet_display"
+              "argument": "inputs.peaks_image"
             }
           ]
         },
@@ -1981,7 +1926,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "num_peaks"
+              "argument": "inputs.num_peaks"
             }
           ]
         },
@@ -1994,7 +1939,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "peak_directions"
+              "argument": "inputs.peak_directions"
             }
           ]
         },
@@ -2003,11 +1948,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "out_file",
+          "name": "peak_threshold",
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": "inputs.peak_threshold"
             }
           ]
         },
@@ -2016,11 +1961,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "args",
+          "name": "display_info",
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": "inputs.display_info"
             }
           ]
         },
@@ -2029,11 +1974,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "terminal_output",
+          "name": "quiet_display",
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": "inputs.quiet_display"
             }
           ]
         },
@@ -2046,7 +1991,72 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "display_debug"
+              "argument": "inputs.display_debug"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
             }
           ]
         },
@@ -2059,7 +2069,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "display_debug"
+              "argument": "outputs.out_file"
             }
           ]
         }
@@ -2068,14 +2078,15 @@
     {
       "category": [
         "NiPype",
-        "MRTRIX"
+        "mrtrix"
       ],
       "title": {
-        "name": "MRTRIX.GenerateDirections",
+        "name": "mrtrix.GenerateDirections",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **gendir**",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/tensors.html#GenerateDirections",
             "argument": "mrtrix.GenerateDirections()"
           }
         ]
@@ -2090,46 +2101,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "num_dirs"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "environ",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "environ"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "display_info",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "display_info"
+              "argument": "inputs.num_dirs"
             }
           ]
         },
@@ -2142,20 +2114,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "power"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "quiet_display",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "quiet_display"
+              "argument": "inputs.power"
             }
           ]
         },
@@ -2168,7 +2127,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "niter"
+              "argument": "inputs.niter"
             }
           ]
         },
@@ -2177,11 +2136,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "out_file",
+          "name": "display_info",
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": "inputs.display_info"
             }
           ]
         },
@@ -2190,24 +2149,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "args",
+          "name": "quiet_display",
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "terminal_output",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": "inputs.quiet_display"
             }
           ]
         },
@@ -2220,7 +2166,72 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "display_debug"
+              "argument": "inputs.display_debug"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
             }
           ]
         },
@@ -2233,7 +2244,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "display_debug"
+              "argument": "outputs.out_file"
             }
           ]
         }
@@ -2242,14 +2253,15 @@
     {
       "category": [
         "NiPype",
-        "MRTRIX"
+        "mrtrix"
       ],
       "title": {
-        "name": "MRTRIX.GenerateWhiteMatterMask",
+        "name": "mrtrix.GenerateWhiteMatterMask",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **gen_WM_mask**",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/preprocess.html#GenerateWhiteMatterMask",
             "argument": "mrtrix.GenerateWhiteMatterMask()"
           }
         ]
@@ -2264,7 +2276,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": "inputs.in_file"
             }
           ]
         },
@@ -2277,72 +2289,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "binary_mask"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "encoding_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "encoding_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "noise_level_margin",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "noise_level_margin"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "environ",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "environ"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "args",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "args"
+              "argument": "inputs.binary_mask"
             }
           ]
         },
@@ -2355,7 +2302,59 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_WMProb_filename"
+              "argument": "inputs.out_WMProb_filename"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "encoding_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.encoding_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "noise_level_margin",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.noise_level_margin"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
             }
           ]
         },
@@ -2368,7 +2367,20 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
             }
           ]
         },
@@ -2381,7 +2393,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": "outputs.WMprobabilitymap"
             }
           ]
         }
@@ -2390,14 +2402,15 @@
     {
       "category": [
         "NiPype",
-        "MRTRIX"
+        "mrtrix"
       ],
       "title": {
-        "name": "MRTRIX.MRConvert",
+        "name": "mrtrix.MRConvert",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mrconvert**",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/preprocess.html#MRConvert",
             "argument": "mrtrix.MRConvert()"
           }
         ]
@@ -2412,72 +2425,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "prs",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "prs"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "extension",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "extension"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "voxel_dims",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "voxel_dims"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "extract_at_coordinate",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "extract_at_coordinate"
+              "argument": "inputs.in_file"
             }
           ]
         },
@@ -2490,98 +2438,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_filename"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "resample",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "resample"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "offset_bias",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "offset_bias"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "terminal_output",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "terminal_output"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "output_datatype",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "output_datatype"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "replace_NaN_with_zero",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "replace_NaN_with_zero"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "environ",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "environ"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "layout",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "layout"
+              "argument": "inputs.out_filename"
             }
           ]
         },
@@ -2594,7 +2451,124 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "extract_at_axis"
+              "argument": "inputs.extract_at_axis"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "extract_at_coordinate",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.extract_at_coordinate"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "voxel_dims",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.voxel_dims"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "output_datatype",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.output_datatype"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "extension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.extension"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "layout",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.layout"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "resample",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.resample"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "offset_bias",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.offset_bias"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "replace_NaN_with_zero",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.replace_NaN_with_zero"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "prs",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.prs"
             }
           ]
         },
@@ -2607,7 +2581,46 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
             }
           ]
         },
@@ -2620,7 +2633,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": "outputs.converted"
             }
           ]
         }
@@ -2629,14 +2642,15 @@
     {
       "category": [
         "NiPype",
-        "MRTRIX"
+        "mrtrix"
       ],
       "title": {
-        "name": "MRTRIX.MRMultiply",
+        "name": "mrtrix.MRMultiply",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mrmult**",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/preprocess.html#MRMultiply",
             "argument": "mrtrix.MRMultiply()"
           }
         ]
@@ -2651,59 +2665,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "debug",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "debug"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "environ",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "environ"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "quiet",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "quiet"
+              "argument": "inputs.in_files"
             }
           ]
         },
@@ -2716,7 +2678,33 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_filename"
+              "argument": "inputs.out_filename"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "quiet",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.quiet"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "debug",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.debug"
             }
           ]
         },
@@ -2729,7 +2717,20 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
             }
           ]
         },
@@ -2742,7 +2743,20 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
             }
           ]
         },
@@ -2755,7 +2769,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": "outputs.out_file"
             }
           ]
         }
@@ -2764,14 +2778,15 @@
     {
       "category": [
         "NiPype",
-        "MRTRIX"
+        "mrtrix"
       ],
       "title": {
-        "name": "MRTRIX.MRTrix2TrackVis",
+        "name": "mrtrix.MRTrix2TrackVis",
         "code": [
           {
             "language": "NiPype",
             "comment": "Converts MRtrix (.tck) tract files into TrackVis (.trk) format",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/convert.html#MRTrix2TrackVis",
             "argument": "mrtrix.MRTrix2TrackVis()"
           }
         ]
@@ -2786,33 +2801,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "matrix_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "matrix_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "out_filename",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "out_filename"
+              "argument": "inputs.in_file"
             }
           ]
         },
@@ -2825,7 +2814,20 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "image_file"
+              "argument": "inputs.image_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "matrix_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.matrix_file"
             }
           ]
         },
@@ -2838,7 +2840,20 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "registration_image_file"
+              "argument": "inputs.registration_image_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "out_filename",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_filename"
             }
           ]
         },
@@ -2851,7 +2866,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "registration_image_file"
+              "argument": "outputs.out_file"
             }
           ]
         }
@@ -2860,14 +2875,15 @@
     {
       "category": [
         "NiPype",
-        "MRTRIX"
+        "mrtrix"
       ],
       "title": {
-        "name": "MRTRIX.MRTrixInfo",
+        "name": "mrtrix.MRTrixInfo",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mrinfo**",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/preprocess.html#MRTrixInfo",
             "argument": "mrtrix.MRTrixInfo()"
           }
         ]
@@ -2882,33 +2898,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "terminal_output",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "terminal_output"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "environ",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "environ"
+              "argument": "inputs.in_file"
             }
           ]
         },
@@ -2921,7 +2911,33 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
             }
           ]
         },
@@ -2934,7 +2950,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": "inputs.ignore_exception"
             }
           ]
         }
@@ -2943,14 +2959,15 @@
     {
       "category": [
         "NiPype",
-        "MRTRIX"
+        "mrtrix"
       ],
       "title": {
-        "name": "MRTRIX.MRTrixViewer",
+        "name": "mrtrix.MRTrixViewer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mrview**",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/preprocess.html#MRTrixViewer",
             "argument": "mrtrix.MRTrixViewer()"
           }
         ]
@@ -2965,72 +2982,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "debug",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "debug"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "environ",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "environ"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "args",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "args"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "terminal_output",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": "inputs.in_files"
             }
           ]
         },
@@ -3043,7 +2995,72 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "quiet"
+              "argument": "inputs.quiet"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "debug",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.debug"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
             }
           ]
         }
@@ -3052,14 +3069,15 @@
     {
       "category": [
         "NiPype",
-        "MRTRIX"
+        "mrtrix"
       ],
       "title": {
-        "name": "MRTRIX.MedianFilter3D",
+        "name": "mrtrix.MedianFilter3D",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **median3D**",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/preprocess.html#MedianFilter3D",
             "argument": "mrtrix.MedianFilter3D()"
           }
         ]
@@ -3074,59 +3092,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "debug",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "debug"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "environ",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "environ"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "quiet",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "quiet"
+              "argument": "inputs.in_file"
             }
           ]
         },
@@ -3139,7 +3105,33 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_filename"
+              "argument": "inputs.out_filename"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "quiet",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.quiet"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "debug",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.debug"
             }
           ]
         },
@@ -3152,324 +3144,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "terminal_output",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "terminal_output"
-            }
-          ]
-        },
-        {
-          "input": false,
-          "output": true,
-          "visible": true,
-          "editable": false,
-          "name": "out_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "terminal_output"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "category": [
-        "NiPype",
-        "MRTRIX"
-      ],
-      "title": {
-        "name": "MRTRIX.ProbabilisticSphericallyDeconvolutedStreamlineTrack",
-        "code": [
-          {
-            "language": "NiPype",
-            "comment": "Wraps command **streamtrack**",
-            "argument": "mrtrix.ProbabilisticSphericallyDeconvolutedStreamlineTrack()"
-          }
-        ]
-      },
-      "ports": [
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "in_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "in_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "mask_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "mask_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "initial_direction",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "initial_direction"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "include_spec",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "include_spec"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "maximum_number_of_trials",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "maximum_number_of_trials"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "exclude_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "exclude_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "maximum_tract_length",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "maximum_tract_length"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "maximum_number_of_tracks",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "maximum_number_of_tracks"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "no_mask_interpolation",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "no_mask_interpolation"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "minimum_tract_length",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "minimum_tract_length"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "desired_number_of_tracks",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "desired_number_of_tracks"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "seed_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "seed_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "do_not_precompute",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "do_not_precompute"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "initial_cutoff_value",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "initial_cutoff_value"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "out_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "out_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "terminal_output",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "terminal_output"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "seed_spec",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "seed_spec"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "minimum_radius_of_curvature",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "minimum_radius_of_curvature"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "stop",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "stop"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "unidirectional",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "unidirectional"
+              "argument": "inputs.args"
             }
           ]
         },
@@ -3482,7 +3157,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "environ"
+              "argument": "inputs.environ"
             }
           ]
         },
@@ -3491,11 +3166,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "mask_spec",
+          "name": "terminal_output",
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_spec"
+              "argument": "inputs.terminal_output"
             }
           ]
         },
@@ -3504,11 +3179,95 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "inputmodel",
+          "name": "ignore_exception",
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputmodel"
+              "argument": "inputs.ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputs.out_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "mrtrix"
+      ],
+      "title": {
+        "name": "mrtrix.ProbabilisticSphericallyDeconvolutedStreamlineTrack",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **streamtrack**",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/tracking.html#ProbabilisticSphericallyDeconvolutedStreamlineTrack",
+            "argument": "mrtrix.ProbabilisticSphericallyDeconvolutedStreamlineTrack()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "maximum_number_of_trials",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.maximum_number_of_trials"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "seed_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.seed_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "seed_spec",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.seed_spec"
             }
           ]
         },
@@ -3521,7 +3280,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "include_file"
+              "argument": "inputs.include_file"
             }
           ]
         },
@@ -3530,11 +3289,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "step_size",
+          "name": "include_spec",
           "code": [
             {
               "language": "NiPype",
-              "argument": "step_size"
+              "argument": "inputs.include_spec"
             }
           ]
         },
@@ -3543,24 +3302,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "cutoff_value",
+          "name": "exclude_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "cutoff_value"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "args",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "args"
+              "argument": "inputs.exclude_file"
             }
           ]
         },
@@ -3573,7 +3319,280 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "exclude_spec"
+              "argument": "inputs.exclude_spec"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mask_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mask_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mask_spec",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mask_spec"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "inputmodel",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.inputmodel"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "stop",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.stop"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "do_not_precompute",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.do_not_precompute"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "unidirectional",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.unidirectional"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "no_mask_interpolation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.no_mask_interpolation"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "step_size",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.step_size"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "minimum_radius_of_curvature",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.minimum_radius_of_curvature"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "desired_number_of_tracks",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.desired_number_of_tracks"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "maximum_number_of_tracks",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.maximum_number_of_tracks"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "minimum_tract_length",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.minimum_tract_length"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "maximum_tract_length",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.maximum_tract_length"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "cutoff_value",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.cutoff_value"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "initial_cutoff_value",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.initial_cutoff_value"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "initial_direction",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.initial_direction"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
             }
           ]
         },
@@ -3586,7 +3605,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "exclude_spec"
+              "argument": "outputs.tracked"
             }
           ]
         }
@@ -3595,14 +3614,15 @@
     {
       "category": [
         "NiPype",
-        "MRTRIX"
+        "mrtrix"
       ],
       "title": {
-        "name": "MRTRIX.SphericallyDeconvolutedStreamlineTrack",
+        "name": "mrtrix.SphericallyDeconvolutedStreamlineTrack",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **streamtrack**",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/tracking.html#SphericallyDeconvolutedStreamlineTrack",
             "argument": "mrtrix.SphericallyDeconvolutedStreamlineTrack()"
           }
         ]
@@ -3617,137 +3637,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "mask_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "mask_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "initial_direction",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "initial_direction"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "include_spec",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "include_spec"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "exclude_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "exclude_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "maximum_tract_length",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "maximum_tract_length"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "maximum_number_of_tracks",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "maximum_number_of_tracks"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "no_mask_interpolation",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "no_mask_interpolation"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "minimum_tract_length",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "minimum_tract_length"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "desired_number_of_tracks",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "desired_number_of_tracks"
+              "argument": "inputs.in_file"
             }
           ]
         },
@@ -3760,59 +3650,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "seed_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "do_not_precompute",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "do_not_precompute"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "initial_cutoff_value",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "initial_cutoff_value"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "out_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "out_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "terminal_output",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": "inputs.seed_file"
             }
           ]
         },
@@ -3825,85 +3663,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "seed_spec"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "minimum_radius_of_curvature",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "minimum_radius_of_curvature"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "stop",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "stop"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "unidirectional",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "unidirectional"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "environ",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "environ"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "mask_spec",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "mask_spec"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "inputmodel",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputmodel"
+              "argument": "inputs.seed_spec"
             }
           ]
         },
@@ -3916,7 +3676,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "include_file"
+              "argument": "inputs.include_file"
             }
           ]
         },
@@ -3925,11 +3685,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "step_size",
+          "name": "include_spec",
           "code": [
             {
               "language": "NiPype",
-              "argument": "step_size"
+              "argument": "inputs.include_spec"
             }
           ]
         },
@@ -3938,24 +3698,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "cutoff_value",
+          "name": "exclude_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "cutoff_value"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "args",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "args"
+              "argument": "inputs.exclude_file"
             }
           ]
         },
@@ -3968,7 +3715,280 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "exclude_spec"
+              "argument": "inputs.exclude_spec"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mask_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mask_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mask_spec",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mask_spec"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "inputmodel",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.inputmodel"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "stop",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.stop"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "do_not_precompute",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.do_not_precompute"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "unidirectional",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.unidirectional"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "no_mask_interpolation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.no_mask_interpolation"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "step_size",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.step_size"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "minimum_radius_of_curvature",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.minimum_radius_of_curvature"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "desired_number_of_tracks",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.desired_number_of_tracks"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "maximum_number_of_tracks",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.maximum_number_of_tracks"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "minimum_tract_length",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.minimum_tract_length"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "maximum_tract_length",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.maximum_tract_length"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "cutoff_value",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.cutoff_value"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "initial_cutoff_value",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.initial_cutoff_value"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "initial_direction",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.initial_direction"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
             }
           ]
         },
@@ -3981,7 +4001,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "exclude_spec"
+              "argument": "outputs.tracked"
             }
           ]
         }
@@ -3990,14 +4010,15 @@
     {
       "category": [
         "NiPype",
-        "MRTRIX"
+        "mrtrix"
       ],
       "title": {
-        "name": "MRTRIX.StreamlineTrack",
+        "name": "mrtrix.StreamlineTrack",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **streamtrack**",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/tracking.html#StreamlineTrack",
             "argument": "mrtrix.StreamlineTrack()"
           }
         ]
@@ -4012,137 +4033,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "mask_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "mask_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "initial_direction",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "initial_direction"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "include_spec",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "include_spec"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "exclude_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "exclude_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "maximum_tract_length",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "maximum_tract_length"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "maximum_number_of_tracks",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "maximum_number_of_tracks"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "no_mask_interpolation",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "no_mask_interpolation"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "minimum_tract_length",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "minimum_tract_length"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "desired_number_of_tracks",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "desired_number_of_tracks"
+              "argument": "inputs.in_file"
             }
           ]
         },
@@ -4155,59 +4046,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "seed_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "do_not_precompute",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "do_not_precompute"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "initial_cutoff_value",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "initial_cutoff_value"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "out_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "out_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "terminal_output",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": "inputs.seed_file"
             }
           ]
         },
@@ -4220,85 +4059,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "seed_spec"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "minimum_radius_of_curvature",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "minimum_radius_of_curvature"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "stop",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "stop"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "unidirectional",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "unidirectional"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "environ",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "environ"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "mask_spec",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "mask_spec"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "inputmodel",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "inputmodel"
+              "argument": "inputs.seed_spec"
             }
           ]
         },
@@ -4311,7 +4072,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "include_file"
+              "argument": "inputs.include_file"
             }
           ]
         },
@@ -4320,11 +4081,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "step_size",
+          "name": "include_spec",
           "code": [
             {
               "language": "NiPype",
-              "argument": "step_size"
+              "argument": "inputs.include_spec"
             }
           ]
         },
@@ -4333,24 +4094,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "cutoff_value",
+          "name": "exclude_file",
           "code": [
             {
               "language": "NiPype",
-              "argument": "cutoff_value"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "args",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "args"
+              "argument": "inputs.exclude_file"
             }
           ]
         },
@@ -4363,7 +4111,280 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "exclude_spec"
+              "argument": "inputs.exclude_spec"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mask_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mask_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "mask_spec",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.mask_spec"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "inputmodel",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.inputmodel"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "stop",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.stop"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "do_not_precompute",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.do_not_precompute"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "unidirectional",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.unidirectional"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "no_mask_interpolation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.no_mask_interpolation"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "step_size",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.step_size"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "minimum_radius_of_curvature",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.minimum_radius_of_curvature"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "desired_number_of_tracks",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.desired_number_of_tracks"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "maximum_number_of_tracks",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.maximum_number_of_tracks"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "minimum_tract_length",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.minimum_tract_length"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "maximum_tract_length",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.maximum_tract_length"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "cutoff_value",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.cutoff_value"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "initial_cutoff_value",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.initial_cutoff_value"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "initial_direction",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.initial_direction"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
             }
           ]
         },
@@ -4376,7 +4397,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "exclude_spec"
+              "argument": "outputs.tracked"
             }
           ]
         }
@@ -4385,14 +4406,15 @@
     {
       "category": [
         "NiPype",
-        "MRTRIX"
+        "mrtrix"
       ],
       "title": {
-        "name": "MRTRIX.Tensor2ApparentDiffusion",
+        "name": "mrtrix.Tensor2ApparentDiffusion",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **tensor2ADC**",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/preprocess.html#Tensor2ApparentDiffusion",
             "argument": "mrtrix.Tensor2ApparentDiffusion()"
           }
         ]
@@ -4407,59 +4429,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "debug",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "debug"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "environ",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "environ"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "quiet",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "quiet"
+              "argument": "inputs.in_file"
             }
           ]
         },
@@ -4472,7 +4442,33 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_filename"
+              "argument": "inputs.out_filename"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "quiet",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.quiet"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "debug",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.debug"
             }
           ]
         },
@@ -4485,7 +4481,20 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
             }
           ]
         },
@@ -4498,7 +4507,20 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
             }
           ]
         },
@@ -4511,7 +4533,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": "outputs.ADC"
             }
           ]
         }
@@ -4520,14 +4542,15 @@
     {
       "category": [
         "NiPype",
-        "MRTRIX"
+        "mrtrix"
       ],
       "title": {
-        "name": "MRTRIX.Tensor2FractionalAnisotropy",
+        "name": "mrtrix.Tensor2FractionalAnisotropy",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **tensor2FA**",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/preprocess.html#Tensor2FractionalAnisotropy",
             "argument": "mrtrix.Tensor2FractionalAnisotropy()"
           }
         ]
@@ -4542,59 +4565,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "debug",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "debug"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "environ",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "environ"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "quiet",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "quiet"
+              "argument": "inputs.in_file"
             }
           ]
         },
@@ -4607,7 +4578,33 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_filename"
+              "argument": "inputs.out_filename"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "quiet",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.quiet"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "debug",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.debug"
             }
           ]
         },
@@ -4620,7 +4617,20 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
             }
           ]
         },
@@ -4633,7 +4643,20 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
             }
           ]
         },
@@ -4646,7 +4669,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": "outputs.FA"
             }
           ]
         }
@@ -4655,14 +4678,15 @@
     {
       "category": [
         "NiPype",
-        "MRTRIX"
+        "mrtrix"
       ],
       "title": {
-        "name": "MRTRIX.Tensor2Vector",
+        "name": "mrtrix.Tensor2Vector",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **tensor2vector**",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/preprocess.html#Tensor2Vector",
             "argument": "mrtrix.Tensor2Vector()"
           }
         ]
@@ -4677,59 +4701,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "debug",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "debug"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "environ",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "environ"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "quiet",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "quiet"
+              "argument": "inputs.in_file"
             }
           ]
         },
@@ -4742,7 +4714,33 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_filename"
+              "argument": "inputs.out_filename"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "quiet",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.quiet"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "debug",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.debug"
             }
           ]
         },
@@ -4755,7 +4753,20 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
             }
           ]
         },
@@ -4768,7 +4779,20 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
             }
           ]
         },
@@ -4781,7 +4805,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": "outputs.vector"
             }
           ]
         }
@@ -4790,14 +4814,15 @@
     {
       "category": [
         "NiPype",
-        "MRTRIX"
+        "mrtrix"
       ],
       "title": {
-        "name": "MRTRIX.Threshold",
+        "name": "mrtrix.Threshold",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **threshold**",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/preprocess.html#Threshold",
             "argument": "mrtrix.Threshold()"
           }
         ]
@@ -4812,72 +4837,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "percentage_threshold_value",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "percentage_threshold_value"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "debug",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "debug"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "environ",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "environ"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "quiet",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "quiet"
+              "argument": "inputs.in_file"
             }
           ]
         },
@@ -4890,46 +4850,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_filename"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "replace_zeros_with_NaN",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "replace_zeros_with_NaN"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "args",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "args"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "terminal_output",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": "inputs.out_filename"
             }
           ]
         },
@@ -4942,7 +4863,20 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "absolute_threshold_value"
+              "argument": "inputs.absolute_threshold_value"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "percentage_threshold_value",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.percentage_threshold_value"
             }
           ]
         },
@@ -4955,7 +4889,98 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "invert"
+              "argument": "inputs.invert"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "replace_zeros_with_NaN",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.replace_zeros_with_NaN"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "quiet",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.quiet"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "debug",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.debug"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
             }
           ]
         },
@@ -4968,7 +4993,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "invert"
+              "argument": "outputs.out_file"
             }
           ]
         }
@@ -4977,14 +5002,15 @@
     {
       "category": [
         "NiPype",
-        "MRTRIX"
+        "mrtrix"
       ],
       "title": {
-        "name": "MRTRIX.Tracks2Prob",
+        "name": "mrtrix.Tracks2Prob",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **tracks2prob**",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/tracking.html#Tracks2Prob",
             "argument": "mrtrix.Tracks2Prob()"
           }
         ]
@@ -4999,137 +5025,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "output_datatype",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "output_datatype"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "voxel_dims",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "voxel_dims"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "environ",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "environ"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "colour",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "colour"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "out_filename",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "out_filename"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "resample",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "resample"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "fraction",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "fraction"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "args",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "args"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
-          "name": "terminal_output",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": "inputs.in_file"
             }
           ]
         },
@@ -5142,7 +5038,137 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "template_file"
+              "argument": "inputs.template_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "voxel_dims",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.voxel_dims"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "colour",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.colour"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "fraction",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.fraction"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "output_datatype",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.output_datatype"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "resample",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.resample"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "out_filename",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.out_filename"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inputs.ignore_exception"
             }
           ]
         },
@@ -5155,7 +5181,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "template_file"
+              "argument": "outputs.tract_image"
             }
           ]
         }
