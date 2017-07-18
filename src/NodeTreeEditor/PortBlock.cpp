@@ -54,6 +54,9 @@ PortBlock::PortBlock(
     addPortBlock(m_node->getPorts());
     QPushButton* addPortButton = new QPushButton("Add port");
     layout()->addWidget(addPortButton);
+    //This removes the ugly label background
+//    setObjectName("myObject");
+    setStyleSheet("QLabel {background-color: rgba(0, 0, 0, 0);}");
 
     connect(addPortButton, SIGNAL(clicked(bool)), this, SLOT(addPort()));
 }

@@ -134,20 +134,20 @@ QString PortRow::getParameterName(
 void PortRow::initialiseStyleSheets(
         )
 {
-    QFile fileVisibility(":/qss/visibility_button.qss");
+    QFile fileVisibility(":/qss/visibilityButton.qss");
     fileVisibility.open(QFile::ReadOnly);
     QString styleSheetVisibility = QString::fromLatin1(fileVisibility.readAll());
     m_showCheckbox->setStyleSheet(styleSheetVisibility);
 
     if(m_iterateCheckbox)
     {
-        QFile fileIterator(":/qss/iterator_button.qss");
+        QFile fileIterator(":/qss/iteratorButton.qss");
         fileIterator.open(QFile::ReadOnly);
         QString styleSheetIterator = QString::fromLatin1(fileIterator.readAll());
         m_iterateCheckbox->setStyleSheet(styleSheetIterator);
     }
 
-    QFile fileRemove(":/qss/remove_button.qss");
+    QFile fileRemove(":/qss/removeButton.qss");
     fileRemove.open(QFile::ReadOnly);
     QString styleSheetRemove = QString::fromLatin1(fileRemove.readAll());
     m_deleteButton->setStyleSheet(styleSheetRemove);

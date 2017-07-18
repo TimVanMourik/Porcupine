@@ -53,6 +53,11 @@ NodeTreeItem::NodeTreeItem(
     m_isSelected(false),
     m_portBlockLayout(new PortBlock(m_node, this))
 {
+    QFile file(":/qss/nodeItem.qss");
+    file.open(QFile::ReadOnly);
+    QString styleSheet = QString::fromLatin1(file.readAll());
+    setStyleSheet(styleSheet);
+
     QVBoxLayout* mainLayout = new QVBoxLayout(this);
     mainLayout->setSpacing(0);
     mainLayout->setContentsMargins(2, 2, 2, 2);
@@ -65,22 +70,23 @@ NodeTreeItem::NodeTreeItem(
 
     setFrameShadow(QFrame::Raised);
     setFrameStyle(QFrame::StyledPanel);
-    QPalette palette = QPalette();
-    palette.setColor(QPalette::Background, palette.window().color().darker(110));
-    setAutoFillBackground(true);
-    setPalette(palette);
     show();
+
+    QFile nodeStyle(":/qss/translucentLabel.qss");
+    nodeStyle.open(QFile::ReadOnly);
+    QString nodeSheet = QString::fromLatin1(nodeStyle.readAll());
 
     // headerLayout
     m_numberLabel   = new QLabel(QString::number(m_number));
     QLabel* nameTag = new QLabel(m_node->getName());
+    m_numberLabel->setStyleSheet(nodeSheet);
+    nameTag->setStyleSheet(nodeSheet);
     connect(&m_node->getAntenna(), SIGNAL(nodeNameChanged(QString)), nameTag, SLOT(setText(QString)));
 
     QPushButton* visibilityButton = new QPushButton();
     visibilityButton->setMaximumWidth(18);
-//    visibilityButton->setText("\\/");
     visibilityButton->setCheckable(true);
-    QFile fileRemove(":/qss/expand_button.qss");
+    QFile fileRemove(":/qss/expandButton.qss");
     fileRemove.open(QFile::ReadOnly);
     QString styleSheetRemove = QString::fromLatin1(fileRemove.readAll());
     visibilityButton->setStyleSheet(styleSheetRemove);
@@ -202,13 +208,16 @@ void NodeTreeItem::setSelected(
     m_isSelected = _isSelected;
     if(_isSelected)
     {
-        setObjectName("myObject");
-        setStyleSheet("#myObject {border: 2px solid black;}");
+        setObjectName("selected");
     }
     else
     {
-        setStyleSheet("");
+        setObjectName("");
     }
+    QFile file(":/qss/nodeItem.qss");
+    file.open(QFile::ReadOnly);
+    QString styleSheet = QString::fromLatin1(file.readAll());
+    setStyleSheet(styleSheet);
 }
 
 NodeTreeItem::~NodeTreeItem(
