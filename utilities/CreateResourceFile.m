@@ -20,6 +20,10 @@ currentNode.appendChild(fileToXML(docNode, 'file', 'iterate-hover.png',     'ima
 currentNode.appendChild(fileToXML(docNode, 'file', 'iterate-off-hover.png', 'images/iterate-off-hover.png'));
 currentNode.appendChild(fileToXML(docNode, 'file', 'remove.png',            'images/remove.png'));
 currentNode.appendChild(fileToXML(docNode, 'file', 'remove-hover.png',      'images/remove-hover.png'));
+currentNode.appendChild(fileToXML(docNode, 'file', 'expand.png',            'images/expand.png'));
+currentNode.appendChild(fileToXML(docNode, 'file', 'expand-hover.png',      'images/expand-hover.png'));
+currentNode.appendChild(fileToXML(docNode, 'file', 'shrink.png',            'images/shrink.png'));
+currentNode.appendChild(fileToXML(docNode, 'file', 'shrink-hover.png',      'images/shrink-hover.png'));
 docRoot.appendChild(currentNode);
 
 %
