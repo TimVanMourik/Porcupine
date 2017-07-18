@@ -43,12 +43,13 @@ Just download the installer files. Currently, there is a Windows and a Mac insta
 ## Compilation
 If you want to contribute and hack around yourself, you should first compile it. This is easily done on any platform with <a href="https://www.qt.io/download/" target ="_blank">Qt Creator</a>.
 
-Currently, it's been tested on Mac, Windows and Linux with the latest version of Qt (5.7.0) and Qt Creator (4.1.0). If that's installed, basically pressing the big green button is the only thing you need to make it compile and run.
+Currently, it's been tested on Mac, Windows and Linux with the latest version of Qt (5.8.0) and Qt Creator (4.2.1). If that's installed, basically pressing the big green button is the only thing you need to make it compile and run.
 
 ## Modules
 Porcupine features interfaces to
 * [NiPype](https://github.com/nipy/nipype)
 * My own [fMRI analysis toolbox](https://github.com/TimVanMourik/OpenFmriAnalysis), including layer specific fMRI
+* A tool to create custom python scripts into Porcupine nodes, consistent with the NiPype framework.
 
 ## Porcupine in action: examples that have not yet been created
 {% include feature_row %}
