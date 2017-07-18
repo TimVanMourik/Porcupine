@@ -59,7 +59,6 @@ PortRow::PortRow(
         rowLayout->addWidget(m_iterateCheckbox);
         connect(m_iterateCheckbox, SIGNAL(toggled(bool)), this, SLOT(iteratePort(bool)));
     }
-    m_deleteButton->setText("X");
     rowLayout->addWidget(m_deleteButton);
 
     m_parameterName->setEnabled(_port->getArgument().isVisible());

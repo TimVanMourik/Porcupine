@@ -1,4 +1,10 @@
-QPushButton                { color: black; }
-QPushButton:disabled       { color: grey;  }
-QPushButton:focus:pressed  { color: black; }
-QPushButton:focus          { color: green; }
+QPushButton {
+    border-image: url(:/images/remove.png);
+    spacing: 5px;
+    width: 12px;
+    height: 12px;
+}
+
+QPushButton:hover {
+    border-image: url(:/images/remove-hover.png);
+}
