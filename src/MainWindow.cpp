@@ -200,7 +200,6 @@ void MainWindow::loadNewNodes(
     NodeLibrary& nodeLibrary = NodeLibrary::getInstance();
     QStringList fileNames = QFileDialog::getOpenFileNames();
     if(fileNames.length() == 0) return;
-    qDebug() << fileNames.length();
     foreach(QString name, fileNames)
     {
         QFile file(name);
@@ -213,7 +212,7 @@ void MainWindow::updateNodeMenu(
         const QStringList& _nodes
         )
 {
-    assert(!_nodes.isEmpty());
+    if(_nodes.length() == 0) return;
     NodeLibrary& nodeLibrary = NodeLibrary::getInstance();
     foreach (QString node, _nodes)
     {
@@ -254,6 +253,7 @@ void MainWindow::nodeSlot(
 {
     NodeLibrary& nodeLibrary = NodeLibrary::getInstance();
     QString nodeType = _action->data().toString();
+    if(nodeType.isEmpty()) return;
     const NodeSetting* setting = nodeLibrary.getNodeSetting(nodeType);
     addNode(setting);
 }

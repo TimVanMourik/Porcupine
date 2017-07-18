@@ -77,9 +77,13 @@ NodeTreeItem::NodeTreeItem(
     connect(&m_node->getAntenna(), SIGNAL(nodeNameChanged(QString)), nameTag, SLOT(setText(QString)));
 
     QPushButton* visibilityButton = new QPushButton();
-    visibilityButton->setMaximumWidth(30);
-    visibilityButton->setText("\\/");
+    visibilityButton->setMaximumWidth(18);
+//    visibilityButton->setText("\\/");
     visibilityButton->setCheckable(true);
+    QFile fileRemove(":/qss/expand_button.qss");
+    fileRemove.open(QFile::ReadOnly);
+    QString styleSheetRemove = QString::fromLatin1(fileRemove.readAll());
+    visibilityButton->setStyleSheet(styleSheetRemove);
 
     headerLayout->addWidget(m_numberLabel);
     headerLayout->addWidget(nameTag);
