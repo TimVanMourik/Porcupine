@@ -7,7 +7,30 @@ Lukas Snoek (University of Amsterdam)
 import inspect
 
 
-def node2json(node, module, custom_node=True, category="Custom"):
+def node2json(node, module=None, custom_node=False, category="Custom"):
+    """ Converts nipype nodes to Porcupine-compatible json-files.
+
+    This function takes a Nipype node from a Python module and
+    creates a Porcupine json-file.
+
+    Parameters
+    ----------
+    node : Nipype Node object
+        Nipype node to create a json-dict for.
+    module : str
+        Name of module in which node is contained.
+    custom_node : bool
+        Whether the node is a custom node or a node within
+        the Nipype package.
+    category : str
+        Category of node (default: "Custom") 
+    """
+
+    if module is None:
+        module = "custom"
+
+    if custom_node:
+        category = "Custom"
 
     all_inputs, mandatory_inputs = _get_inputs(node, custom_node)
     all_outputs = _get_outputs(node, custom_node)
@@ -15,7 +38,7 @@ def node2json(node, module, custom_node=True, category="Custom"):
     web_url, long_node_title = _get_web_url(node, custom_node)
     node_name = _get_node_name(node, custom_node)
 
-    titleBlock = {'name': long_node_title + '.%s' % node_name,
+    titleBlock = {'name': '%s.%s' % (module, node_name),
                   'code': [{'language': category,
                             'comment': descr,
                             'web_url': web_url,
