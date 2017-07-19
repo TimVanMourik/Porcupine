@@ -76,7 +76,7 @@ QStringList NipypeGenerator::getMapNodeFields(
 
 QString NipypeGenerator::itemToCode(
         const NodeTreeItem* _item,
-        const QMap<QString, QString>& parameters
+        const QMap<QString, QString>& _parameters
         ) const
 {
     QString code("");
@@ -85,6 +85,9 @@ QString NipypeGenerator::itemToCode(
     if(title.getArgument(s_thisLanguage).isEmpty()) return QString("");
 
     QString nodeName = QString("NodeHash_%1").arg(QString::number((quint64) _item->getNode(), 16));
+
+//    if(exceptionNodes.contains(title.getName())) return exceptionNodetoCode(_item, _parameters);
+
     code += QString("#%1\n").arg(title.getComment(s_thisLanguage));
     code += QString("%1 = pe.").arg(nodeName);
 
@@ -117,7 +120,7 @@ QString NipypeGenerator::itemToCode(
         QString filename = _item->getParameterName(argument.getName());
 
         //replace filename
-        foreach (const QString parameter, parameters.keys())
+        foreach (const QString parameter, _parameters.keys())
         {
             if(filename.contains(QString("$").append(parameter)))
             {

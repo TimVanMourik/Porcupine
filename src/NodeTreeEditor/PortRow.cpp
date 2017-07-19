@@ -25,6 +25,7 @@
 #include <QDebug>
 #include <QFile>
 #include <QJsonArray>
+#include <QLabel>
 #include <QLineEdit>
 #include <QMessageBox>
 #include <QPushButton>
@@ -76,8 +77,21 @@ PortRow::PortRow(
 void PortRow::removePort(
         )
 {
-    QMessageBox::StandardButton reply = QMessageBox::question(this, QString("Are you sure?"), QString("Are you sure you want to remove this port?"), QMessageBox::Yes | QMessageBox::No);
-    switch(reply)
+//    QMessageBox::StandardButton reply = QMessageBox::question(this, QString("Are you sure?"), QString(), QMessageBox::Yes | QMessageBox::No);
+    QMessageBox message;
+//    message.setIconPixmap(QPixmap(":/images/porcupine-sad.png"));
+    message.setIcon(QMessageBox::Question);
+    message.setText("Are you sure you want to remove this port?");
+    message.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+    message.setDefaultButton(QMessageBox::Yes);
+//    QVBoxLayout* messageLayout = new QVBoxLayout();
+
+//    QWidget* w = new QWidget();
+//    QPalette palette;
+//    palette.setBrush(w->backgroundRole(), QBrush(QImage(":/images/porcupine-sad.png")));
+//    qDebug() << message.layout()->itemAt(0);
+
+    switch(message.exec())
     {
     case QMessageBox::Yes :
         break;

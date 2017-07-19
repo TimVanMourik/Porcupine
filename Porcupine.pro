@@ -63,10 +63,11 @@ SOURCES                                += $$ROOT/main.cpp \
                                           $$ROOT/src/CodeEditor/CodeEditor.cpp \
                                           $$ROOT/src/CodeEditor/CodeGenerator.cpp \
                                           $$ROOT/src/CodeEditor/MatlabHighlighter.cpp \
+                                          $$ROOT/src/CodeEditor/NipypeGenerator.cpp \
+                                          $$ROOT/src/CodeEditor/NipypeStupidExceptions.cpp \
                                           $$ROOT/src/CodeEditor/PythonHighlighter.cpp \
                                           $$ROOT/src/CodeEditor/SyntaxHighlighter.cpp \
-                                          $$ROOT/src/CodeEditor/TvmGenerator.cpp \
-                                          $$ROOT/src/CodeEditor/NipypeGenerator.cpp
+                                          $$ROOT/src/CodeEditor/TvmGenerator.cpp
 
 HEADERS                                += $$ROOT/include/MainWindow.hpp \
                                           $$ROOT/include/Settings/Argument.hpp \

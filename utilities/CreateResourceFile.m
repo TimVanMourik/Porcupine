@@ -24,6 +24,8 @@ currentNode.appendChild(fileToXML(docNode, 'file', 'expand.png',            'ima
 currentNode.appendChild(fileToXML(docNode, 'file', 'expand-hover.png',      'images/expand-hover.png'));
 currentNode.appendChild(fileToXML(docNode, 'file', 'shrink.png',            'images/shrink.png'));
 currentNode.appendChild(fileToXML(docNode, 'file', 'shrink-hover.png',      'images/shrink-hover.png'));
+currentNode.appendChild(fileToXML(docNode, 'file', 'porcupine-sad.png',     'images/porcupine-sad.png'));
+currentNode.appendChild(fileToXML(docNode, 'file', 'porcupine-walking.png', 'images/porcupine-walking.png'));
 docRoot.appendChild(currentNode);
 
 %
@@ -33,9 +35,9 @@ currentNode.appendChild(fileToXML(docNode, 'file', 'visibilityButton.qss', 'qss/
 currentNode.appendChild(fileToXML(docNode, 'file', 'iteratorButton.qss',   'qss/iteratorButton.qss'));
 currentNode.appendChild(fileToXML(docNode, 'file', 'removeButton.qss',     'qss/removeButton.qss'));
 currentNode.appendChild(fileToXML(docNode, 'file', 'expandButton.qss',     'qss/expandButton.qss'));
-% currentNode.appendChild(fileToXML(docNode, 'file', 'port.qss',              'qss/port.qss'));
-currentNode.appendChild(fileToXML(docNode, 'file', 'translucentLabel.qss',  'qss/translucentLabel.qss'));
-currentNode.appendChild(fileToXML(docNode, 'file', 'nodeItem.qss',          'qss/nodeItem.qss'));
+currentNode.appendChild(fileToXML(docNode, 'file', 'codeEditor.qss',       'qss/codeEditor.qss'));
+currentNode.appendChild(fileToXML(docNode, 'file', 'translucentLabel.qss', 'qss/translucentLabel.qss'));
+currentNode.appendChild(fileToXML(docNode, 'file', 'nodeItem.qss',         'qss/nodeItem.qss'));
 
 docRoot.appendChild(currentNode);
 
