@@ -53,8 +53,8 @@ QString NipypeGenerator::generateCode(
     writeNodes(code, _nodeList);
     writeLinks(code, _linkList);
 
-    code.append("\n#Run the workflow\n");
-    code.append("analysisflow.run()\n");
+    code += "\n#Run the workflow\n";
+    code += "analysisflow.run()\n";
 
     return code;
 }
@@ -85,29 +85,29 @@ QString NipypeGenerator::itemToCode(
     if(title.getArgument(s_thisLanguage).isEmpty()) return QString("");
 
     QString nodeName = QString("NodeHash_%1").arg(QString::number((quint64) _item->getNode(), 16));
-    code.append(QString("#%1\n").arg(title.getComment(s_thisLanguage)));
-    code.append(QString("%1 = pe.").arg(nodeName));
+    code += QString("#%1\n").arg(title.getComment(s_thisLanguage));
+    code += QString("%1 = pe.").arg(nodeName);
 
     QStringList iterFields = getMapNodeFields(_item);
     if(iterFields.length() == 0)
     {
-        code.append(QString("Node"));
+        code += "Node";
     }
     else
     {
-        code.append(QString("MapNode"));
+        code += "MapNode";
     }
 
-    code.append(QString("(interface = %2, ").arg(title.getArgument(s_thisLanguage)));
-    code.append(QString("name = 'NodeName_%1'").arg(QString::number((quint64) _item->getNode(), 16)));
+    code += QString("(interface = %2, ").arg(title.getArgument(s_thisLanguage));
+    code += QString("name = 'NodeName_%1'").arg(QString::number((quint64) _item->getNode(), 16));
 
     if(iterFields.length() == 0)
     {
-        code.append(")\n");
+        code += ")\n";
     }
     else
     {
-        code.append(QString(", iterfield = ['%1'])\n").arg(iterFields.join("', '")));
+        code += QString(", iterfield = ['%1'])\n").arg(iterFields.join("', '"));
     }
 
     QStringList keyValuePairs;
@@ -138,7 +138,7 @@ QString NipypeGenerator::itemToCode(
             }
             if(!argument.isIterator())
             {
-                code.append(QString("%1.%2.%3 = %4\n").arg(nodeName, type, argument.getArgument(s_thisLanguage), filename));
+                code += QString("%1.%2.%3 = %4\n").arg(nodeName, type, argument.getArgument(s_thisLanguage), filename);
             }
             else if(pair->getInputPort()->getConnections().length() == 0)
             {
@@ -149,10 +149,10 @@ QString NipypeGenerator::itemToCode(
 
     if(keyValuePairs.length() != 0)
     {
-        code.append(QString("%1.iterables = [%2]\n").arg(nodeName, keyValuePairs.join(", ")));
+        code += QString("%1.iterables = [%2]\n").arg(nodeName, keyValuePairs.join(", "));
     }
 
-    code.append("\n");
+    code += "\n";
     return code;
 }
 
@@ -165,7 +165,7 @@ QString NipypeGenerator::linkToCode(
     QString destination =  QString("NodeHash_%1").arg(QString::number((quint64) _link->getPortTo()->getNode(), 16));
     QString sourceAttribute(   _link->getPortFrom()->getPortPair()->getArgument().getName());
     QString destinationAttribute(_link->getPortTo()->getPortPair()->getArgument().getName());
-    code.append(QString("analysisflow.connect(%1, '%2', %3, '%4')\n").arg(source, sourceAttribute, destination, destinationAttribute));
+    code += QString("analysisflow.connect(%1, '%2', %3, '%4')\n").arg(source, sourceAttribute, destination, destinationAttribute);
 
     return code;
 }
@@ -175,12 +175,12 @@ void NipypeGenerator::writePreamble(
         )
 {
     ///@todo make module import dependent on scene nodes
-    io_code.append("import nipype\n");
-    io_code.append("import nipype.pipeline as pe\n");
-    io_code.append("import nipype.interfaces.fsl as fsl\n");
-    io_code.append("import nipype.interfaces.afni as afni\n");
-    io_code.append("import nipype.interfaces.spm as spm\n");
-    io_code.append("import nipype.interfaces.utility as utility\n\n");
+    io_code += "import nipype\n";
+    io_code += "import nipype.pipeline as pe\n";
+    io_code += "import nipype.interfaces.fsl as fsl\n";
+    io_code += "import nipype.interfaces.afni as afni\n";
+    io_code += "import nipype.interfaces.spm as spm\n";
+    io_code += "import nipype.interfaces.utility as utility\n\n";
 }
 
 void NipypeGenerator::writeParameters(
@@ -190,9 +190,9 @@ void NipypeGenerator::writeParameters(
     QMap<QString, QString> parameters = m_editor->getParameters();
     foreach(const QString parameter, parameters.keys())
     {
-        io_code.append(QString("%1 = %2\n").arg(parameter, parameters[parameter]));
+        io_code += QString("%1 = %2\n").arg(parameter, parameters[parameter]);
     }
-    io_code.append("\n");
+    io_code += "\n";
 }
 
 void NipypeGenerator::writeNodes(
@@ -203,7 +203,7 @@ void NipypeGenerator::writeNodes(
     QMap<QString, QString> parameters = m_editor->getParameters();
     foreach(const NodeTreeItem* item, _nodeList)
     {
-        io_code.append(itemToCode(item, parameters));
+        io_code += itemToCode(item, parameters);
     }
 }
 
@@ -212,11 +212,11 @@ void NipypeGenerator::writeLinks(
         const QVector<const Link*>& _linkList
         )
 {
-    io_code.append("#Create a workflow to connect all those nodes\n");
-    io_code.append("analysisflow = nipype.Workflow('MyWorkflow')\n");
+    io_code += "#Create a workflow to connect all those nodes\n";
+    io_code += "analysisflow = nipype.Workflow('MyWorkflow')\n";
     foreach(const Link* link, _linkList)
     {
-        io_code.append(linkToCode(link));
+        io_code += linkToCode(link);
     }
 }
 

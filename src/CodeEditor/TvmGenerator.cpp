@@ -43,7 +43,7 @@ QString TvmGenerator::generateCode(
     QString code;
     foreach(const NodeTreeItem* item, _nodeList)
     {
-        code.append(itemToCode(item));
+        code += itemToCode(item);
     }
     return code;
 }
@@ -56,16 +56,16 @@ QString TvmGenerator::itemToCode(
     QJsonObject json = _item->getJson();
     Argument title(json["title"].toObject());
     if(title.getArgument(s_thisLanguage).isEmpty()) return QString("");
-    code.append(QString("%% %1\n").arg(title.getComment(s_thisLanguage)));
-    code.append(QString("%1 = [];\n").arg(m_configurationVariable));
+    code += QString("%% %1\n").arg(title.getComment(s_thisLanguage));
+    code += QString("%1 = [];\n").arg(m_configurationVariable);
     //add input
     foreach (QJsonValue portObject, json["ports"].toArray())
     {
         Argument argument = Argument(portObject.toObject());
-        code.append(argumentToCode(argument, _item));
+        code += argumentToCode(argument, _item);
     }
     //add function
-    code.append(QString("%1(%2);\n\n").arg(title.getArgument(s_thisLanguage), m_configurationVariable));
+    code += QString("%1(%2);\n\n").arg(title.getArgument(s_thisLanguage), m_configurationVariable);
     return code;
 }
 
@@ -78,13 +78,13 @@ QString TvmGenerator::argumentToCode(
     QString fileName = _item->getParameterName(_argument.getName());
     if(!_argument.getArgument(s_thisLanguage).isEmpty() && !fileName.isEmpty())
     {
-        code.append(QString("%1.%2 = %3;").arg(m_configurationVariable, _argument.getArgument(s_thisLanguage), fileName));
+        code += QString("%1.%2 = %3;").arg(m_configurationVariable, _argument.getArgument(s_thisLanguage), fileName);
         if(!_argument.getComment(s_thisLanguage).isEmpty())
         {
-            code.append("\t% ");
-            code.append(_argument.getComment(s_thisLanguage));
+            code += "\t% ";
+            code += _argument.getComment(s_thisLanguage);
         }
-        code.append("\n");
+        code += "\n";
     }
     return code;
 }
