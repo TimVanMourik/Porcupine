@@ -24,5 +24,5 @@ for class_name in MODULES_TO_PARSE:
             for node in node_list
                      if hasattr(node, 'input_spec')]
 
-    with open(op.join(working_dir, class_name + '.JSONX'), 'w') as outfile:
+    with open(op.join(working_dir, class_name + '.JSON'), 'w') as outfile:
         json.dump({'nodes': nodes_to_save}, outfile, sort_keys=False, indent=2)

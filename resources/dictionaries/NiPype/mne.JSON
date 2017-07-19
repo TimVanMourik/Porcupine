@@ -3,14 +3,15 @@
     {
       "category": [
         "NiPype",
-        "MNE"
+        "mne"
       ],
       "title": {
-        "name": "MNE.WatershedBEM",
+        "name": "mne.WatershedBEM",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mne_watershed_bem**",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mne/base.html#WatershedBEM",
             "argument": "mne.WatershedBEM()"
           }
         ]
@@ -47,19 +48,6 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "ignore_exception",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "ignore_exception"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": false,
           "name": "volume",
           "code": [
             {
@@ -86,11 +74,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "environ",
+          "name": "atlas_mode",
           "code": [
             {
               "language": "NiPype",
-              "argument": "environ"
+              "argument": "atlas_mode"
             }
           ]
         },
@@ -112,6 +100,19 @@
           "output": false,
           "visible": false,
           "editable": false,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
           "name": "terminal_output",
           "code": [
             {
@@ -125,11 +126,11 @@
           "output": false,
           "visible": false,
           "editable": false,
-          "name": "atlas_mode",
+          "name": "ignore_exception",
           "code": [
             {
               "language": "NiPype",
-              "argument": "atlas_mode"
+              "argument": "ignore_exception"
             }
           ]
         },
@@ -142,7 +143,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "atlas_mode"
+              "argument": "mesh_files"
             }
           ]
         },
@@ -155,7 +156,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "atlas_mode"
+              "argument": "brain_surface"
             }
           ]
         },
@@ -168,7 +169,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "atlas_mode"
+              "argument": "inner_skull_surface"
             }
           ]
         },
@@ -181,7 +182,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "atlas_mode"
+              "argument": "outer_skull_surface"
             }
           ]
         },
@@ -194,7 +195,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "atlas_mode"
+              "argument": "outer_skin_surface"
             }
           ]
         },
@@ -207,7 +208,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "atlas_mode"
+              "argument": "fif_file"
             }
           ]
         },
@@ -220,7 +221,7 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "atlas_mode"
+              "argument": "cor_files"
             }
           ]
         }

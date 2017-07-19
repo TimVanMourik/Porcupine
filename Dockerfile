@@ -2,7 +2,7 @@
 FROM ubuntu:xenial-20161213
 
 # Pre-cache neurodebian key
-COPY docker/neurodebian.gpg /root/.neurodebian.gpg
+COPY utilities/docker/neurodebian.gpg /root/.neurodebian.gpg
 
 # Prepare environment
 RUN apt-get update && \
@@ -60,6 +60,7 @@ RUN echo "cHJpbnRmICJrcnp5c3p0b2YuZ29yZ29sZXdza2lAZ21haWwuY29tXG41MTcyXG4gKkN2dW
 # Installing Neurodebian packages (FSL, AFNI, git)
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
+		    dbus \
                     fsl-core=5.0.9-4~nd16.04+1 \
                     afni=16.2.07~dfsg.1-5~nd16.04+1
 
@@ -101,62 +102,51 @@ ENV PATH=/usr/local/miniconda/bin:$PATH \
     LC_ALL=C.UTF-8
 
 # Installing precomputed python packages
-#RUN conda install -y mkl=2017.0.1 mkl-service &&  \
-#    conda install -y numpy=1.12.0 \
-#                     scipy=0.18.1 \
-#                     scikit-learn=0.18.1 \
-#                     matplotlib=2.0.0 \
-#                     pandas=0.19.2 \
-#                     libxml2=2.9.4 \
-#                     libxslt=1.1.29\
-#                     traits=4.6.0 &&  \
+RUN conda install -y mkl=2017.0.1 mkl-service &&  \
+    conda install -y numpy=1.12.0 \
+                     scipy=0.18.1 \
+                     scikit-learn=0.18.1 \
+                     matplotlib=2.0.0 \
+                     pandas=0.19.2 \
+                     libxml2=2.9.4 \
+                     libxslt=1.1.29\
+                     traits=4.6.0 
 RUN chmod +x /usr/local/miniconda/bin/* && conda clean --all -y
 
 # Precaching fonts
-#RUN python -c "from matplotlib import font_manager"
+RUN python -c "from matplotlib import font_manager"
 
 # Installing Ubuntu packages and cleaning up
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
                     git=1:2.7.4-0ubuntu1 \
-                    graphviz=2.38.0-12ubuntu2 dbus && \
+                    graphviz=2.38.0-12ubuntu2 && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Unless otherwise specified each process should only use one thread - nipype
 # will handle parallelization
-#ENV MKL_NUM_THREADS=1 \
-#    OMP_NUM_THREADS=1
+ENV MKL_NUM_THREADS=1 \
+    OMP_NUM_THREADS=1
 
 # Installing dev requirements (packages that are not in pypi)
-#WORKDIR /root/
-#ADD requirements.txt requirements.txt
-#RUN pip install -r requirements.txt && \
-#    rm -rf ~/.cache/pip
+WORKDIR /root/
 
-# Installing FMRIPREP
-#COPY . /root/src/fmriprep
-#RUN cd /root/src/fmriprep && \
-#    pip install .[all] && \
-#    rm -rf ~/.cache/pip
+# Free up some space
+#RUN rm freesurfer-Linux-centos6_x86_64-stable-pub-v6.0.0.tar.gz
 
-# Precaching atlases
-#RUN mkdir /niworkflows_data
-#ENV CRN_SHARED_DATA /niworkflows_data
-#RUN python -c 'from niworkflows.data.getters import get_mni_template_ras; get_mni_template_ras()' && \
-#    python -c 'from niworkflows.data.getters import get_mni_icbm152_nlin_asym_09c; get_mni_icbm152_nlin_asym_09c()' && \
-#    python -c 'from niworkflows.data.getters import get_ants_oasis_template_ras; get_ants_oasis_template_ras()'
-
-RUN rm freesurfer-Linux-centos6_x86_64-stable-pub-v6.0.0.tar.gz
-
+# Some custom fixes for running Porcupine
 RUN dbus-uuidgen > /etc/machine-id
-COPY docker/Porcupine /root/Porcupine
-COPY docker/lib /root/
-COPY docker/plugins /root/plugins
+
+# Copy resources to docker img
+COPY bin/Porcupine /root/Porcupine
+COPY utilities/docker/lib /root/
+COPY utilities/docker/plugins /root/plugins
 ENV LD_LIBRARY_PATH=/root
 ENV QT_QPA_PLATFORM_PLUGIN_PATH=/root/plugins
 
+# To download data from openfmri
 RUN pip install awscli
-COPY *.py /root/
-RUN ["python", "/root/download_openfmri_data.py", "-d", "ds000105", "-o", "/example_data"]
+COPY utilities/*.py /root/
+RUN ["python", "/root/download_openfmri_data.py", "-d", "ds000101", "-o", "/example_data"]
 
 CMD /root/Porcupine

@@ -7,7 +7,30 @@ Lukas Snoek (University of Amsterdam)
 import inspect
 
 
-def node2json(node, module, custom_node=True, category="Custom"):
+def node2json(node, module=None, custom_node=False, category="Custom"):
+    """ Converts nipype nodes to Porcupine-compatible json-files.
+
+    This function takes a Nipype node from a Python module and
+    creates a Porcupine json-file.
+
+    Parameters
+    ----------
+    node : Nipype Node object
+        Nipype node to create a json-dict for.
+    module : str
+        Name of module in which node is contained.
+    custom_node : bool
+        Whether the node is a custom node or a node within
+        the Nipype package.
+    category : str
+        Category of node (default: "Custom") 
+    """
+
+    if module is None:
+        module = "custom"
+
+    if custom_node:
+        category = "Custom"
 
     all_inputs, mandatory_inputs = _get_inputs(node, custom_node)
     all_outputs = _get_outputs(node, custom_node)
@@ -15,7 +38,7 @@ def node2json(node, module, custom_node=True, category="Custom"):
     web_url, long_node_title = _get_web_url(node, custom_node)
     node_name = _get_node_name(node, custom_node)
 
-    titleBlock = {'name': long_node_title + '.%s' % node_name,
+    titleBlock = {'name': '%s.%s' % (module, node_name),
                   'code': [{'language': category,
                             'comment': descr,
                             'web_url': web_url,
@@ -25,7 +48,7 @@ def node2json(node, module, custom_node=True, category="Custom"):
 
     for inp in all_inputs:
         codeBlock = {'language': category,
-                     'argument': 'inputs.%s' % inp}
+                     'argument': inp}
         is_mandatory = inp in mandatory_inputs
 
         port = {'input': True,
@@ -40,7 +63,7 @@ def node2json(node, module, custom_node=True, category="Custom"):
 
         codeBlock = {
             'language': category,
-            'argument': 'outputs.%s' % outp
+            'argument': outp
         }
 
         port = {
@@ -64,16 +87,31 @@ def node2json(node, module, custom_node=True, category="Custom"):
 
 def _get_inputs(node, custom_node=True):
 
+    all_inputs, mandatory_inputs = [], []
     if custom_node:
         TO_SKIP = ['function_str', 'trait_added', 'trait_modified',
                    'ignore_exception']
-        all_inputs = [inp for inp in node.inputs.traits().keys()
-                      if not inp in TO_SKIP]
-        mandatory_inputs = all_inputs
+        all_inputs.extend([inp for inp in node.inputs.traits().keys()
+                           if not inp in TO_SKIP])
+        mandatory_inputs.extend(all_inputs)
     else:
-        all_inputs = [inp for inp in node.input_spec().traits().keys()
-                      if not inp.startswith('trait')]
-        mandatory_inputs = node.input_spec().traits(mandatory=True).keys()
+        init_argspec = inspect.getfullargspec(node.__init__)
+        # Check what type of input_spec it is: TraitedSpec or DynamicTraitedSpec
+        if init_argspec.args != ['self']:
+            # Must be (inherited from) a DynamicTraitedSpec
+            init_argspec.args.pop(0)
+            all_inputs.extend(init_argspec.args)
+            defaults = init_argspec.defaults
+            if defaults is None:
+                defaults = [None]
+            mandatory_inputs.extend([arg for i, arg in enumerate(init_argspec.args)
+                                     if defaults[i] is None])
+
+        # Now, just append regular inputs to all_inputs
+        all_inputs.extend([inp for inp in node.input_spec().traits().keys()
+                           if not inp.startswith('trait')])
+        mandatory_inputs.extend(node.input_spec().traits(mandatory=True).keys())
+    
     return all_inputs, mandatory_inputs
 
 
