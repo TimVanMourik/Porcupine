@@ -48,7 +48,7 @@ def node2json(node, module=None, custom_node=False, category="Custom"):
 
     for inp in all_inputs:
         codeBlock = {'language': category,
-                     'argument': 'inputs.%s' % inp}
+                     'argument': inp}
         is_mandatory = inp in mandatory_inputs
 
         port = {'input': True,
@@ -63,7 +63,7 @@ def node2json(node, module=None, custom_node=False, category="Custom"):
 
         codeBlock = {
             'language': category,
-            'argument': 'outputs.%s' % outp
+            'argument': outp
         }
 
         port = {
@@ -87,16 +87,29 @@ def node2json(node, module=None, custom_node=False, category="Custom"):
 
 def _get_inputs(node, custom_node=True):
 
+    all_inputs, mandatory_inputs = [], []
     if custom_node:
         TO_SKIP = ['function_str', 'trait_added', 'trait_modified',
                    'ignore_exception']
-        all_inputs = [inp for inp in node.inputs.traits().keys()
-                      if not inp in TO_SKIP]
-        mandatory_inputs = all_inputs
+        all_inputs.extend([inp for inp in node.inputs.traits().keys()
+                           if not inp in TO_SKIP])
+        mandatory_inputs.extend(all_inputs)
     else:
-        all_inputs = [inp for inp in node.input_spec().traits().keys()
-                      if not inp.startswith('trait')]
-        mandatory_inputs = node.input_spec().traits(mandatory=True).keys()
+        init_argspec = inspect.getfullargspec(node.__init__)
+        if init_argspec.args != ['self']:
+            # Must be (inherited from) a DynamicTraitedSpec
+            init_argspec.args.pop(0)
+            all_inputs.extend(init_argspec.args)
+            defaults = init_argspec.defaults
+            if defaults is None:
+                defaults = [None]
+            mandatory_inputs.extend([arg for i, arg in enumerate(init_argspec.args)
+                                     if defaults[i] is None])
+
+        all_inputs.extend([inp for inp in node.input_spec().traits().keys()
+                           if not inp.startswith('trait')])
+        mandatory_inputs.extend(node.input_spec().traits(mandatory=True).keys())
+    
     return all_inputs, mandatory_inputs
 
 
