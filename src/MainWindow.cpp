@@ -27,6 +27,7 @@
 
 #include <QApplication>
 #include <QBoxLayout>
+#include <QGroupBox>
 #include <QContextMenuEvent>
 #include <QDebug>
 #include <QFile>
@@ -87,10 +88,17 @@ MainWindow::MainWindow(
     nodeEditor->addWidget(m_nodeEditorWidget);
     nodeEditor->addWidget(m_parameterWidget);
 
+    QPushButton* buttonGenerate = new QPushButton("Generate code");
+    QPushButton* buttonSave = new QPushButton("Save code");
+    QWidget* codeGroup = new QWidget();
+    QVBoxLayout* codeBox = new QVBoxLayout(codeGroup);
+//    codeGroup->setLayout(codeBox);
+    codeBox->addWidget(buttonGenerate);
+    codeBox->addWidget(buttonSave);
+
     QWidget* codeEditor = new QWidget();
     QHBoxLayout* codeLayout = new QHBoxLayout(codeEditor);
-    QPushButton* button = new QPushButton("Generate code");
-    codeLayout->addWidget(button);
+    codeLayout->addWidget(codeGroup);
     codeLayout->addWidget(m_codeEditorWidget);
 
     rightWidget->addWidget(codeEditor);
@@ -103,7 +111,8 @@ MainWindow::MainWindow(
     createMenus();
     loadDefaultNodes();
 
-    connect(button, SIGNAL(released()), this, SLOT(nodeToCode()));
+    connect(buttonGenerate, SIGNAL(released()), this, SLOT(nodeToCode()));
+    connect(buttonSave, SIGNAL(released()), this, SLOT(saveCode()));
     connect(m_nodeEditorWidget, SIGNAL(currentChanged(int)), this, SLOT(setFileAt(int)));
     connect(m_nodeEditorWidget, SIGNAL(tabCloseRequested(int)), this, SLOT(closeTab(int)));
 
@@ -141,6 +150,12 @@ void MainWindow::nodeToCode(
     const QList<NodeTreeItem*> allNodes = m_nodeTreeEditors[m_currentFileIndex]->getNodeList();
     const QVector<const Link*> allLinks = m_nodeEditors[m_currentFileIndex]->getLinks();
     m_codeEditors[m_currentFileIndex]->generateCode(allNodes, allLinks);
+}
+
+void MainWindow::saveCode(
+        )
+{
+    m_codeEditors[m_currentFileIndex]->saveCodeToFile();
 }
 
 void MainWindow::contextMenuEvent(

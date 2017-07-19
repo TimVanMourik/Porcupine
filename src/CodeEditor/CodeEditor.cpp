@@ -21,6 +21,7 @@
     <http://www.gnu.org/licenses/>.
 */
 
+#include <QFileDialog>
 #include <QTextEdit>
 
 #include "CodeEditor.hpp"
@@ -94,6 +95,26 @@ void CodeEditor::generateCode(
             setupTvmEditor();
         }
         m_textEditors[language]->setPlainText(m_codeGenerators[language]->generateCode(_nodeList, _linkList));
+    }
+}
+
+void CodeEditor::saveCodeToFile(
+        )
+{
+    QTextEdit* currentTextEdit = (QTextEdit*) currentWidget();
+    if(currentTextEdit)
+    {
+        QString fileName = QFileDialog::getSaveFileName();
+        if (fileName.isEmpty())
+        {
+            return;
+        }
+        QFile file(fileName);
+        if (file.open(QIODevice::WriteOnly))
+        {
+            file.write(currentTextEdit->toPlainText().toUtf8());
+        }
+        file.close();
     }
 }
 

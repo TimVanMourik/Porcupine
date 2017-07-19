@@ -46,6 +46,9 @@ public:
             const QVector<const Link*>& _linkList = QVector<const Link*>(0)
             );
     //
+    void saveCodeToFile(
+            );
+    //
     void setParameterEditor(
             ParameterEditor* _editor
             );
