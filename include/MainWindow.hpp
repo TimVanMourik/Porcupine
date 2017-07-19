@@ -118,6 +118,9 @@ public slots:
     //
     void nodeToCode(
             );
+    //
+    void saveCode(
+            );
 private:
     void createActions(
             );

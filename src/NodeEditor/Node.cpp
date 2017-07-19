@@ -90,10 +90,10 @@ void Node::initialize(
     palette.setColor(QPalette::Text, Qt::white);
     m_nameLabel->setPalette(palette);
 
-    QFile nodeStyle(":/qss/nodeLabel.qss");
-    nodeStyle.open(QFile::ReadOnly);
-    QString nodeSheet = QString::fromLatin1(nodeStyle.readAll());
-    m_nameLabel->setStyleSheet(nodeSheet);
+    QFile styleFile(":/qss/translucentLabel.qss");
+    styleFile.open(QFile::ReadOnly);
+    QString translucentLabel = QString::fromLatin1(styleFile.readAll());
+    m_nameLabel->setStyleSheet(translucentLabel);
 
     QFont font(scene()->font());
     font.setBold(true);
