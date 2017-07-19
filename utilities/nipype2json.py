@@ -96,6 +96,7 @@ def _get_inputs(node, custom_node=True):
         mandatory_inputs.extend(all_inputs)
     else:
         init_argspec = inspect.getfullargspec(node.__init__)
+        # Check what type of input_spec it is: TraitedSpec or DynamicTraitedSpec
         if init_argspec.args != ['self']:
             # Must be (inherited from) a DynamicTraitedSpec
             init_argspec.args.pop(0)
@@ -106,6 +107,7 @@ def _get_inputs(node, custom_node=True):
             mandatory_inputs.extend([arg for i, arg in enumerate(init_argspec.args)
                                      if defaults[i] is None])
 
+        # Now, just append regular inputs to all_inputs
         all_inputs.extend([inp for inp in node.input_spec().traits().keys()
                            if not inp.startswith('trait')])
         mandatory_inputs.extend(node.input_spec().traits(mandatory=True).keys())
