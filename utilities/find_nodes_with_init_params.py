@@ -2,6 +2,7 @@ import json
 from nipype2json import node2json
 import os.path as op
 from importlib import import_module
+import inspect
 
 category = 'NiPype'
 working_dir = op.join(op.dirname(op.dirname(__file__)),
@@ -23,10 +24,18 @@ for class_name in MODULES_TO_PARSE:
     node_list = [n for n in node_list if not n.__name__.endswith('Command')]
     node_list = [n for n in node_list if n.__name__ not in NODES_TO_EXCLUDE]
 
-    nodes_to_save = [node2json(node, custom_node=False,
-                     module=class_name, category=category)
-            for node in node_list
-                     if hasattr(node, 'input_spec')]
+    for node in [n for n in node_list if hasattr(n, 'input_spec')]:
 
-    with open(op.join(working_dir, class_name + '.JSON'), 'w') as outfile:
-        json.dump({'nodes': nodes_to_save}, outfile, sort_keys=False, indent=2)
+        init_argspec = inspect.getfullargspec(node.__init__)
+        args, defaults = init_argspec.args, init_argspec.defaults
+        defaults = []
+        args = [a for a in init_argspec.args if a not in ['self', 'command', 'from_file']]
+        
+        if args:
+            
+            if module_name != 'spm':
+                try:
+                    node_inst = node()
+                except (TypeError, ValueError):
+                    print(node.__name__)
+                    print(args)
