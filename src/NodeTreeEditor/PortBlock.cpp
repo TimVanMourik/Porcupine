@@ -76,9 +76,10 @@ void PortBlock::addPort(
     portArgument.setName(portTitle);
 
     QMessageBox ioBox;
-    ioBox.setText(tr("Do you want an input or output port?"));
+    ioBox.setText(tr("Do you want an input or output port, or both?"));
     QAbstractButton* input  = ioBox.addButton(tr("Input"),  QMessageBox::YesRole);
-    QAbstractButton* output = ioBox.addButton(tr("Output"), QMessageBox::NoRole);
+    QAbstractButton* output = ioBox.addButton(tr("Output"), QMessageBox::YesRole);
+    QAbstractButton* both   = ioBox.addButton(tr("Both"),   QMessageBox::YesRole);
     ioBox.exec();
 
     Argument title(m_node->getJson()["title"].toObject());
@@ -95,6 +96,16 @@ void PortBlock::addPort(
     else if(ioBox.clickedButton() == output)
     {
         portArgument.setInput(false);
+        portArgument.setOutput(true);
+        QList<QString> languages = title.getLanguages();
+        foreach (QString language, languages)
+        {
+            portArgument.addCode(language, portTitle);
+        }
+    }
+    else if(ioBox.clickedButton() == both)
+    {
+        portArgument.setInput(true);
         portArgument.setOutput(true);
         QList<QString> languages = title.getLanguages();
         foreach (QString language, languages)

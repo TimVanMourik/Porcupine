@@ -72,6 +72,10 @@ public slots:
     void showPort(
             bool _visible
             );
+    //
+    void portConnected(
+            bool _connected
+            );
 private:
     //
     PortBlock* m_parent;

@@ -45,7 +45,6 @@ QString NipypeStupidExceptions::exceptionNodetoCode(
 }
 
 
-
 QString NipypeStupidExceptions::codeForIdentityInterface(
         const NodeTreeItem* _item,
         const QMap<QString, QString>& _parameters
@@ -71,8 +70,18 @@ QString NipypeStupidExceptions::codeForIdentityInterface(
         code += "MapNode";
     }
 
-    code += QString("(interface = %2, ").arg(title.getArgument(s_thisLanguage));
-    code += QString("name = 'NodeName_%1'").arg(QString::number((quint64) _item->getNode(), 16));
+    QStringList fieldNodes;
+    foreach (const PortPair* pair,  _item->getPorts())
+    {
+        Argument argument = pair->getArgument();
+        if(argument.isInput() && argument.isOutput())
+        {
+            fieldNodes << argument.getArgument(s_thisLanguage);
+        }
+    }
+
+    code += QString("(IdentityInterface(fields=['%1").arg(fieldNodes.join("','"));
+    code += QString("']), name = 'NodeName_%1'").arg(QString::number((quint64) _item->getNode(), 16));
 
     if(iterFields.length() == 0)
     {
@@ -98,20 +107,11 @@ QString NipypeStupidExceptions::codeForIdentityInterface(
             }
         }
 
-        if(!filename.isEmpty())
+        if(!filename.isEmpty() && argument.isInput())
         {
-            QString type;
-            if(argument.isInput())
-            {
-                type = "inputs";
-            }
-            else if(argument.isOutput())
-            {
-                type = "outputs";
-            }
             if(!argument.isIterator())
             {
-                code += QString("%1.%2.%3 = %4\n").arg(nodeName, type, argument.getArgument(s_thisLanguage), filename);
+                code += QString("%1.inputs.%3 = %4\n").arg(nodeName, argument.getArgument(s_thisLanguage), filename);
             }
             else if(pair->getInputPort()->getConnections().length() == 0)
             {
@@ -154,8 +154,30 @@ QString NipypeStupidExceptions::codeForSelectFiles(
         code += "MapNode";
     }
 
-    code += QString("(interface = %2, ").arg(title.getArgument(s_thisLanguage));
-    code += QString("name = 'NodeName_%1'").arg(QString::number((quint64) _item->getNode(), 16));
+    QStringList templateDictionary;
+    foreach (const PortPair* pair,  _item->getPorts())
+    {
+        Argument argument = pair->getArgument();
+        QString filename = _item->getParameterName(argument.getName());
+
+        //replace filename
+        foreach (const QString parameter, _parameters.keys())
+        {
+            if(filename.contains(QString("$").append(parameter)))
+            {
+                filename = filename.replace(QString("$").append(parameter), parameter);
+            }
+        }
+        if(!filename.isEmpty() && argument.isInput() && argument.isOutput())
+        {
+            templateDictionary << "'" + argument.getArgument(s_thisLanguage) + "':" + filename;
+        }
+    }
+
+
+    code += QString("(SelectFiles(templates={%1").arg(templateDictionary.join(","));
+    code += QString("}), name = 'NodeName_%1'").arg(QString::number((quint64) _item->getNode(), 16));
+
 
     if(iterFields.length() == 0)
     {
@@ -181,20 +203,11 @@ QString NipypeStupidExceptions::codeForSelectFiles(
             }
         }
 
-        if(!filename.isEmpty())
+        if(!filename.isEmpty() && argument.isInput() && !argument.isOutput())
         {
-            QString type;
-            if(argument.isInput())
-            {
-                type = "inputs";
-            }
-            else if(argument.isOutput())
-            {
-                type = "outputs";
-            }
             if(!argument.isIterator())
             {
-                code += QString("%1.%2.%3 = %4\n").arg(nodeName, type, argument.getArgument(s_thisLanguage), filename);
+                code += QString("%1.inputs.%2 = %3\n").arg(nodeName, argument.getArgument(s_thisLanguage), filename);
             }
             else if(pair->getInputPort()->getConnections().length() == 0)
             {

@@ -48,6 +48,7 @@ PortRow::PortRow(
     m_deleteButton(new QPushButton())
 {
     m_parameterName->setPlaceholderText("<value>");
+    m_parameterName->setAlignment(Qt::AlignLeft);
     QString name = _port->getFileName();
     if(!name.isEmpty()) m_parameterName->setText(name);
     QHBoxLayout* rowLayout = new QHBoxLayout(this);
@@ -62,13 +63,14 @@ PortRow::PortRow(
     }
     rowLayout->addWidget(m_deleteButton);
 
-    m_parameterName->setEnabled(_port->getArgument().isVisible());
+    m_parameterName->setEnabled(_port->getArgument().isEditable());
     m_showCheckbox-> setChecked(_port->getArgument().isVisible());
 
     connect(m_parameterName, SIGNAL(textEdited(QString)),     _port,           SLOT(fileNameChanged(QString)));
     connect(m_showCheckbox,  SIGNAL(toggled(bool)),           this ,           SLOT(showPort(bool)));
     connect(m_deleteButton,  SIGNAL(clicked(bool)),           this,            SLOT(removePort()));
-    connect(_port,           SIGNAL(setConnected(bool)),      m_showCheckbox,  SLOT(setDisabled(bool)));
+//    connect(_port,           SIGNAL(setConnected(bool)),      m_showCheckbox,  SLOT(setDisabled(bool)));
+    connect(_port,           SIGNAL(setConnected(bool)),      this,            SLOT(portConnected(bool)));
     connect(_port,           SIGNAL(changeFileName(QString)), m_parameterName, SLOT(setText(QString)));
 
     initialiseStyleSheets();
@@ -119,7 +121,15 @@ void PortRow::showPort(
         bool _visible
         )
 {
-    m_parameterName->setEnabled(_visible);
+    if(_visible)
+    {
+        m_parameterName->setEnabled(m_port->getArgument().isEditable());
+    }
+    else
+    {
+        m_parameterName->setEnabled(false);
+    }
+
     m_port->setVisibility(_visible);
     if(!_visible && m_iterateCheckbox)
     {
@@ -165,6 +175,20 @@ void PortRow::initialiseStyleSheets(
     fileRemove.open(QFile::ReadOnly);
     QString styleSheetRemove = QString::fromLatin1(fileRemove.readAll());
     m_deleteButton->setStyleSheet(styleSheetRemove);
+}
+
+void PortRow::portConnected(
+        bool _connected
+        )
+{
+    if(_connected)
+    {
+        m_parameterName->setDisabled(true);
+    }
+    else
+    {
+        m_parameterName->setEnabled(m_port->getArgument().isEditable());
+    }
 }
 
 PortRow::~PortRow()

@@ -255,24 +255,25 @@ void PortPair::fileNameChanged(
         bool _cascadeUp
         )
 {
+    Q_UNUSED(_cascadeUp);
     bool fileValid = !_fileName.isEmpty();
     //send file name up the tree
-    if(_cascadeUp && hasAncestorPorts())
-    {
-        foreach (PortPair* port, getAncestorPorts())
-        {
-            port->fileNameChanged(_fileName, true);
-        }
-    }
-    else
+//    if(_cascadeUp && hasAncestorPorts())
+//    {
+//        foreach (PortPair* port, getAncestorPorts())
+//        {
+//            port->fileNameChanged(_fileName, true);
+//        }
+//    }
+//    else
     //then send it down again (such that all branches are reached)
-    {
+//    {
         m_fileName = _fileName;
-        foreach (PortPair* port, getDescendantPorts())
-        {
-            port->fileNameChanged(_fileName, false);
-        }
-    }
+//        foreach (PortPair* port, getDescendantPorts())
+//        {
+//            port->fileNameChanged(_fileName, false);
+//        }
+//    }
     if(m_input)
     {
         m_input->setHasFileName(fileValid);
@@ -281,7 +282,7 @@ void PortPair::fileNameChanged(
     {
         m_output->setHasFileName(fileValid);
     }
-    emit changeFileName(_fileName);
+//    emit changeFileName(_fileName);
 }
 
 

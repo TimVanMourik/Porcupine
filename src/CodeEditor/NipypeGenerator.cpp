@@ -134,20 +134,11 @@ QString NipypeGenerator::itemToCode(
             }
         }
 
-        if(!filename.isEmpty())
+        if(!filename.isEmpty() && argument.isInput())
         {
-            QString type;
-            if(argument.isInput())
-            {
-                type = "inputs";
-            }
-            else if(argument.isOutput())
-            {
-                type = "outputs";
-            }
             if(!argument.isIterator())
             {
-                code += QString("%1.%2.%3 = %4\n").arg(nodeName, type, argument.getArgument(s_thisLanguage), filename);
+                code += QString("%1.inputs.%2 = %3\n").arg(nodeName, argument.getArgument(s_thisLanguage), filename);
             }
             else if(pair->getInputPort()->getConnections().length() == 0)
             {
