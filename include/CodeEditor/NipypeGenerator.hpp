@@ -80,6 +80,8 @@ private:
             ) const;
 private:
     static const QString s_thisLanguage;
+    //
+    static QStringList s_exceptionNodes;
 };
 
 #endif // PYTHONGENERATOR_HPP

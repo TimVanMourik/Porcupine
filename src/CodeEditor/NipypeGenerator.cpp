@@ -28,17 +28,20 @@
 #include <QJsonArray>
 
 #include "CodeEditor.hpp"
+#include "NipypeStupidExceptions.hpp"
 #include "NipypeGenerator.hpp"
 #include "Port.hpp"
 #include "PortPair.hpp"
 
 const QString NipypeGenerator::s_thisLanguage("NiPype");
+QStringList NipypeGenerator::s_exceptionNodes;
 
 NipypeGenerator::NipypeGenerator(
         CodeEditor* _editor
         ) :
     CodeGenerator(_editor)
 {
+    s_exceptionNodes << "utility.IdentityInterface" << "io.SelectFiles" << "io.MySQLSink" << "io.SQLiteSink";
 }
 
 QString NipypeGenerator::generateCode(
@@ -86,8 +89,11 @@ QString NipypeGenerator::itemToCode(
 
     QString nodeName = QString("NodeHash_%1").arg(QString::number((quint64) _item->getNode(), 16));
 
-//    if(exceptionNodes.contains(title.getName())) return exceptionNodetoCode(_item, _parameters);
-
+    if(s_exceptionNodes.contains(title.getName()))
+    {
+        NipypeStupidExceptions& exception = NipypeStupidExceptions::getInstance();
+        return exception.exceptionNodetoCode(_item, _parameters);
+    }
     code += QString("#%1\n").arg(title.getComment(s_thisLanguage));
     code += QString("%1 = pe.").arg(nodeName);
 

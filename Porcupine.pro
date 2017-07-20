@@ -95,7 +95,8 @@ HEADERS                                += $$ROOT/include/MainWindow.hpp \
                                           $$ROOT/include/CodeEditor/PythonHighlighter.hpp \
                                           $$ROOT/include/CodeEditor/TvmGenerator.hpp \
                                           $$ROOT/include/CodeEditor/NipypeGenerator.hpp \
-                                          $$ROOT/include/CodeEditor/CodeGenerator.hpp
+                                          $$ROOT/include/CodeEditor/CodeGenerator.hpp \
+                                          $$ROOT/include/CodeEditor/NipypeStupidExceptions.hpp
 
 RESOURCES                               = $$ROOT/resources/resources.qrc
 
