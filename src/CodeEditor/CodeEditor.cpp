@@ -85,7 +85,11 @@ void CodeEditor::generateCode(
             setupNipypeEditor();
         }
         m_textEditors[language]->setPlainText(m_codeGenerators[language]->generateCode(_nodeList, _linkList));
-        m_textEditors[language]->setStyleSheet("background-image: url(:/images/porcupine-walking.png); background-repeat: none; background-position: center top");
+
+        QFile styleFile(":/qss/codeEditor.qss");
+        styleFile.open(QFile::ReadOnly);
+        QString translucentLabel = QString::fromLatin1(styleFile.readAll());
+        m_textEditors[language]->setStyleSheet(translucentLabel);
     }
 
     language = "TvM";
@@ -96,7 +100,11 @@ void CodeEditor::generateCode(
             setupTvmEditor();
         }
         m_textEditors[language]->setPlainText(m_codeGenerators[language]->generateCode(_nodeList, _linkList));
-        m_textEditors[language]->setStyleSheet("background-image: url(:/images/porcupine-walking.png); background-repeat: none; background-position: center top");
+
+        QFile styleFile(":/qss/codeEditor.qss");
+        styleFile.open(QFile::ReadOnly);
+        QString translucentLabel = QString::fromLatin1(styleFile.readAll());
+        m_textEditors[language]->setStyleSheet(translucentLabel);
     }
 }
 
