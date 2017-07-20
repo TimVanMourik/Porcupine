@@ -10,7 +10,7 @@ working_dir = op.join(op.dirname(op.dirname(__file__)),
 MODULES_TO_PARSE = ['utility', 'io', 'ants', 'fsl', 'afni', 'spm',
                     'freesurfer', 'camino', 'mrtrix', 'mne', 'slicer']
 
-NODES_TO_EXCLUDE = ['Function']
+NODES_TO_EXCLUDE = []
 
 for class_name in MODULES_TO_PARSE:
     #print("Class name: %s" % class_name)

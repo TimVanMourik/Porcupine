@@ -3,7 +3,8 @@
     {
       "category": [
         "NiPype",
-        "utility"
+        "utility",
+        "base"
       ],
       "title": {
         "name": "utility.AssertEqual",
@@ -61,7 +62,8 @@
     {
       "category": [
         "NiPype",
-        "utility"
+        "utility",
+        "csv"
       ],
       "title": {
         "name": "utility.CSVReader",
@@ -106,7 +108,54 @@
     {
       "category": [
         "NiPype",
-        "utility"
+        "utility",
+        "wrappers"
+      ],
+      "title": {
+        "name": "utility.Function",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Runs arbitrary function as an interface",
+            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.utility/wrappers.html#Function",
+            "argument": "utility.Function()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "function_str",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "function_str"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": false,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "utility",
+        "base"
       ],
       "title": {
         "name": "utility.IdentityInterface",
@@ -124,7 +173,8 @@
     {
       "category": [
         "NiPype",
-        "utility"
+        "utility",
+        "base"
       ],
       "title": {
         "name": "utility.Merge",
@@ -208,7 +258,8 @@
     {
       "category": [
         "NiPype",
-        "utility"
+        "utility",
+        "base"
       ],
       "title": {
         "name": "utility.Rename",
@@ -305,7 +356,8 @@
     {
       "category": [
         "NiPype",
-        "utility"
+        "utility",
+        "base"
       ],
       "title": {
         "name": "utility.Select",
@@ -376,7 +428,8 @@
     {
       "category": [
         "NiPype",
-        "utility"
+        "utility",
+        "base"
       ],
       "title": {
         "name": "utility.Split",

@@ -77,6 +77,10 @@ def node2json(node, module=None, custom_node=False, category="Custom"):
         ports.append(port)
 
     this_category = [category, module]
+    submodules = long_node_title.split('.')
+    if len(submodules) > 1:
+        this_category.append(submodules[1])
+
     node_to_return = {
         'category': this_category,
         'title': titleBlock,
@@ -117,10 +121,8 @@ def _get_outputs(node, custom_node=True):
                 all_outputs = [outp for outp in node.output_spec().traits().keys()
                                if not outp.startswith('trait')]
             else:
-                print('No outputs for node %s' % node.__name__)
                 all_outputs = []
         else:
-            print('No outputs for node %s' % node.__name__)
             all_outputs = []
 
     return all_outputs
