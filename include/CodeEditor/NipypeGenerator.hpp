@@ -58,7 +58,8 @@ private:
             ) const;
     //
     void writePreamble(
-            QString& io_code
+            QString& io_code,
+            const QList<NodeTreeItem*>& _nodeList
             );
     //
     void writeParameters(

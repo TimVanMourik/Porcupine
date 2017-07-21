@@ -51,7 +51,7 @@ QString NipypeGenerator::generateCode(
 {
     ///@todo check if there is at least one NiPype module in the scene for given module
     QString code("#This is a NiPype generator. Warning, here be dragons.\n");
-    writePreamble(code);
+    writePreamble(code, _nodeList);
     writeParameters(code);
     writeNodes(code, _nodeList);
     writeLinks(code, _linkList);
@@ -171,16 +171,30 @@ QString NipypeGenerator::linkToCode(
 }
 
 void NipypeGenerator::writePreamble(
-        QString& io_code
+        QString& io_code,
+        const QList<NodeTreeItem*>& _nodeList
         )
 {
     ///@todo make module import dependent on scene nodes
     io_code += "import nipype\n";
     io_code += "import nipype.pipeline as pe\n";
-    io_code += "import nipype.interfaces.fsl as fsl\n";
-    io_code += "import nipype.interfaces.afni as afni\n";
-    io_code += "import nipype.interfaces.spm as spm\n";
-    io_code += "import nipype.interfaces.utility as utility\n\n";
+    QStringList categories;
+    foreach(NodeTreeItem* item, _nodeList)
+    {
+        QJsonObject object = item->getJson();
+        QString category = object["title"].toObject()["code"].toArray().first().toObject()["argument"].toString();
+        QStringList splitted = category.split(".");
+        category = splitted.first();
+        if(!categories.contains(category))
+        {
+            categories << category;
+        }
+    }
+    foreach (QString category, categories)
+    {
+        io_code += QString("import nipype.interfaces.%1 as %1\n").arg(category);
+    }
+    io_code += "\n";
 }
 
 void NipypeGenerator::writeParameters(
