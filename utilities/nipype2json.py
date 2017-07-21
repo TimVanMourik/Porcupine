@@ -54,7 +54,7 @@ def node2json(node, module=None, custom_node=False, category="Custom"):
         port = {'input': True,
                 'output': False,
                 'visible': True if is_mandatory else False,
-                'editable': True if is_mandatory else False,
+                'editable': True,
                 'name': inp,
                 'code': [codeBlock]}
         ports.append(port)
