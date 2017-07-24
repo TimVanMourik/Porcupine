@@ -8,11 +8,11 @@
       ],
       "title": {
         "name": "freesurfer.AddXFormToHeader",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#AddXFormToHeader",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_add_xform_to_header**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#AddXFormToHeader",
             "argument": "freesurfer.AddXFormToHeader()"
           }
         ]
@@ -171,11 +171,11 @@
       ],
       "title": {
         "name": "freesurfer.Aparc2Aseg",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#Aparc2Aseg",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_aparc2aseg**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#Aparc2Aseg",
             "argument": "freesurfer.Aparc2Aseg()"
           }
         ]
@@ -529,11 +529,11 @@
       ],
       "title": {
         "name": "freesurfer.Apas2Aseg",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#Apas2Aseg",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **apas2aseg**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#Apas2Aseg",
             "argument": "freesurfer.Apas2Aseg()"
           }
         ]
@@ -653,11 +653,11 @@
       ],
       "title": {
         "name": "freesurfer.ApplyMask",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#ApplyMask",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_mask**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#ApplyMask",
             "argument": "freesurfer.ApplyMask()"
           }
         ]
@@ -894,11 +894,11 @@
       ],
       "title": {
         "name": "freesurfer.ApplyVolTransform",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#ApplyVolTransform",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_vol2vol**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#ApplyVolTransform",
             "argument": "freesurfer.ApplyVolTransform()"
           }
         ]
@@ -1213,42 +1213,16 @@
       ],
       "title": {
         "name": "freesurfer.BBRegister",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#BBRegister",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **bbregister**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#BBRegister",
             "argument": "freesurfer.BBRegister()"
           }
         ]
       },
       "ports": [
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "init",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "init"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "init_reg_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "init_reg_file"
-            }
-          ]
-        },
         {
           "input": true,
           "output": false,
@@ -1272,6 +1246,32 @@
             {
               "language": "NiPype",
               "argument": "source_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "init",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "init"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "init_reg_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "init_reg_file"
             }
           ]
         },
@@ -1571,11 +1571,11 @@
       ],
       "title": {
         "name": "freesurfer.Binarize",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#Binarize",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_binarize**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#Binarize",
             "argument": "freesurfer.Binarize()"
           }
         ]
@@ -2020,11 +2020,11 @@
       ],
       "title": {
         "name": "freesurfer.CALabel",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#CALabel",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_ca_label**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#CALabel",
             "argument": "freesurfer.CALabel()"
           }
         ]
@@ -2287,11 +2287,11 @@
       ],
       "title": {
         "name": "freesurfer.CANormalize",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#CANormalize",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_ca_normalize**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#CANormalize",
             "argument": "freesurfer.CANormalize()"
           }
         ]
@@ -2489,11 +2489,11 @@
       ],
       "title": {
         "name": "freesurfer.CARegister",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#CARegister",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_ca_register**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#CARegister",
             "argument": "freesurfer.CARegister()"
           }
         ]
@@ -2743,11 +2743,11 @@
       ],
       "title": {
         "name": "freesurfer.CheckTalairachAlignment",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#CheckTalairachAlignment",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **talairach_afd**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#CheckTalairachAlignment",
             "argument": "freesurfer.CheckTalairachAlignment()"
           }
         ]
@@ -2880,11 +2880,11 @@
       ],
       "title": {
         "name": "freesurfer.Concatenate",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#Concatenate",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_concat**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#Concatenate",
             "argument": "freesurfer.Concatenate()"
           }
         ]
@@ -3199,11 +3199,11 @@
       ],
       "title": {
         "name": "freesurfer.ConcatenateLTA",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#ConcatenateLTA",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_concatenate_lta**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#ConcatenateLTA",
             "argument": "freesurfer.ConcatenateLTA()"
           }
         ]
@@ -3336,11 +3336,11 @@
       ],
       "title": {
         "name": "freesurfer.Contrast",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#Contrast",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **pctsurfcon**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#Contrast",
             "argument": "freesurfer.Contrast()"
           }
         ]
@@ -3577,11 +3577,11 @@
       ],
       "title": {
         "name": "freesurfer.Curvature",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#Curvature",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_curvature**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#Curvature",
             "argument": "freesurfer.Curvature()"
           }
         ]
@@ -3779,11 +3779,11 @@
       ],
       "title": {
         "name": "freesurfer.CurvatureStats",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#CurvatureStats",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_curvature_stats**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#CurvatureStats",
             "argument": "freesurfer.CurvatureStats()"
           }
         ]
@@ -4007,11 +4007,11 @@
       ],
       "title": {
         "name": "freesurfer.DICOMConvert",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#DICOMConvert",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_convert**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#DICOMConvert",
             "argument": "freesurfer.DICOMConvert()"
           }
         ]
@@ -4209,11 +4209,11 @@
       ],
       "title": {
         "name": "freesurfer.EMRegister",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/registration.html#EMRegister",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_em_register**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/registration.html#EMRegister",
             "argument": "freesurfer.EMRegister()"
           }
         ]
@@ -4411,11 +4411,11 @@
       ],
       "title": {
         "name": "freesurfer.EditWMwithAseg",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#EditWMwithAseg",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_edit_wm_with_aseg**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#EditWMwithAseg",
             "argument": "freesurfer.EditWMwithAseg()"
           }
         ]
@@ -4574,11 +4574,11 @@
       ],
       "title": {
         "name": "freesurfer.EulerNumber",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#EulerNumber",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_euler_number**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#EulerNumber",
             "argument": "freesurfer.EulerNumber()"
           }
         ]
@@ -4685,11 +4685,11 @@
       ],
       "title": {
         "name": "freesurfer.ExtractMainComponent",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#ExtractMainComponent",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_extract_main_component**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#ExtractMainComponent",
             "argument": "freesurfer.ExtractMainComponent()"
           }
         ]
@@ -4796,11 +4796,11 @@
       ],
       "title": {
         "name": "freesurfer.FitMSParams",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#FitMSParams",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_ms_fitparms**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#FitMSParams",
             "argument": "freesurfer.FitMSParams()"
           }
         ]
@@ -4998,11 +4998,11 @@
       ],
       "title": {
         "name": "freesurfer.FixTopology",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#FixTopology",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_fix_topology**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#FixTopology",
             "argument": "freesurfer.FixTopology()"
           }
         ]
@@ -5239,11 +5239,11 @@
       ],
       "title": {
         "name": "freesurfer.FuseSegmentations",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/longitudinal.html#FuseSegmentations",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_fuse_segmentations**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/longitudinal.html#FuseSegmentations",
             "argument": "freesurfer.FuseSegmentations()"
           }
         ]
@@ -5415,11 +5415,11 @@
       ],
       "title": {
         "name": "freesurfer.GLMFit",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#GLMFit",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_glmfit**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#GLMFit",
             "argument": "freesurfer.GLMFit()"
           }
         ]
@@ -6423,11 +6423,11 @@
       ],
       "title": {
         "name": "freesurfer.Jacobian",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#Jacobian",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_jacobian**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#Jacobian",
             "argument": "freesurfer.Jacobian()"
           }
         ]
@@ -6560,11 +6560,11 @@
       ],
       "title": {
         "name": "freesurfer.Label2Annot",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#Label2Annot",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_label2annot**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#Label2Annot",
             "argument": "freesurfer.Label2Annot()"
           }
         ]
@@ -6775,11 +6775,11 @@
       ],
       "title": {
         "name": "freesurfer.Label2Label",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#Label2Label",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_label2label**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#Label2Label",
             "argument": "freesurfer.Label2Label()"
           }
         ]
@@ -7016,11 +7016,11 @@
       ],
       "title": {
         "name": "freesurfer.Label2Vol",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#Label2Vol",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_label2vol**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#Label2Vol",
             "argument": "freesurfer.Label2Vol()"
           }
         ]
@@ -7361,11 +7361,11 @@
       ],
       "title": {
         "name": "freesurfer.MNIBiasCorrection",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#MNIBiasCorrection",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_nu_correct.mni**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#MNIBiasCorrection",
             "argument": "freesurfer.MNIBiasCorrection()"
           }
         ]
@@ -7589,11 +7589,11 @@
       ],
       "title": {
         "name": "freesurfer.MPRtoMNI305",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/registration.html#MPRtoMNI305",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mpr2mni305**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/registration.html#MPRtoMNI305",
             "argument": "freesurfer.MPRtoMNI305()"
           }
         ]
@@ -7739,11 +7739,11 @@
       ],
       "title": {
         "name": "freesurfer.MRIConvert",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#MRIConvert",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_convert**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#MRIConvert",
             "argument": "freesurfer.MRIConvert()"
           }
         ]
@@ -8916,11 +8916,11 @@
       ],
       "title": {
         "name": "freesurfer.MRIFill",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#MRIFill",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_fill**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#MRIFill",
             "argument": "freesurfer.MRIFill()"
           }
         ]
@@ -9092,11 +9092,11 @@
       ],
       "title": {
         "name": "freesurfer.MRIMarchingCubes",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#MRIMarchingCubes",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_mc**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#MRIMarchingCubes",
             "argument": "freesurfer.MRIMarchingCubes()"
           }
         ]
@@ -9242,11 +9242,11 @@
       ],
       "title": {
         "name": "freesurfer.MRIPretess",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#MRIPretess",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_pretess**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#MRIPretess",
             "argument": "freesurfer.MRIPretess()"
           }
         ]
@@ -9431,11 +9431,11 @@
       ],
       "title": {
         "name": "freesurfer.MRISPreproc",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#MRISPreproc",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_preproc**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#MRISPreproc",
             "argument": "freesurfer.MRISPreproc()"
           }
         ]
@@ -9763,11 +9763,11 @@
       ],
       "title": {
         "name": "freesurfer.MRISPreprocReconAll",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#MRISPreprocReconAll",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_preproc**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#MRISPreprocReconAll",
             "argument": "freesurfer.MRISPreprocReconAll()"
           }
         ]
@@ -10160,11 +10160,11 @@
       ],
       "title": {
         "name": "freesurfer.MRITessellate",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#MRITessellate",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_tessellate**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#MRITessellate",
             "argument": "freesurfer.MRITessellate()"
           }
         ]
@@ -10323,11 +10323,11 @@
       ],
       "title": {
         "name": "freesurfer.MRIsCALabel",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#MRIsCALabel",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_ca_label**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#MRIsCALabel",
             "argument": "freesurfer.MRIsCALabel()"
           }
         ]
@@ -10590,11 +10590,11 @@
       ],
       "title": {
         "name": "freesurfer.MRIsCalc",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#MRIsCalc",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_calc**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#MRIsCalc",
             "argument": "freesurfer.MRIsCalc()"
           }
         ]
@@ -10766,11 +10766,11 @@
       ],
       "title": {
         "name": "freesurfer.MRIsCombine",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#MRIsCombine",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_convert**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#MRIsCombine",
             "argument": "freesurfer.MRIsCombine()"
           }
         ]
@@ -10890,11 +10890,11 @@
       ],
       "title": {
         "name": "freesurfer.MRIsConvert",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#MRIsConvert",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_convert**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#MRIsConvert",
             "argument": "freesurfer.MRIsConvert()"
           }
         ]
@@ -11248,11 +11248,11 @@
       ],
       "title": {
         "name": "freesurfer.MRIsExpand",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#MRIsExpand",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_expand**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#MRIsExpand",
             "argument": "freesurfer.MRIsExpand()"
           }
         ]
@@ -11502,11 +11502,11 @@
       ],
       "title": {
         "name": "freesurfer.MRIsInflate",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#MRIsInflate",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_inflate**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#MRIsInflate",
             "argument": "freesurfer.MRIsInflate()"
           }
         ]
@@ -11665,11 +11665,11 @@
       ],
       "title": {
         "name": "freesurfer.MS_LDA",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#MS_LDA",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_ms_LDA**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#MS_LDA",
             "argument": "freesurfer.MS_LDA()"
           }
         ]
@@ -11893,11 +11893,11 @@
       ],
       "title": {
         "name": "freesurfer.MakeAverageSubject",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#MakeAverageSubject",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **make_average_subject**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#MakeAverageSubject",
             "argument": "freesurfer.MakeAverageSubject()"
           }
         ]
@@ -12017,11 +12017,11 @@
       ],
       "title": {
         "name": "freesurfer.MakeSurfaces",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#MakeSurfaces",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_make_surfaces**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#MakeSurfaces",
             "argument": "freesurfer.MakeSurfaces()"
           }
         ]
@@ -12440,11 +12440,11 @@
       ],
       "title": {
         "name": "freesurfer.Normalize",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#Normalize",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_normalize**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#Normalize",
             "argument": "freesurfer.Normalize()"
           }
         ]
@@ -12616,11 +12616,11 @@
       ],
       "title": {
         "name": "freesurfer.OneSampleTTest",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#OneSampleTTest",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_glmfit**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#OneSampleTTest",
             "argument": "freesurfer.OneSampleTTest()"
           }
         ]
@@ -13624,11 +13624,11 @@
       ],
       "title": {
         "name": "freesurfer.Paint",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/registration.html#Paint",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mrisp_paint**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/registration.html#Paint",
             "argument": "freesurfer.Paint()"
           }
         ]
@@ -13787,11 +13787,11 @@
       ],
       "title": {
         "name": "freesurfer.ParcellationStats",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#ParcellationStats",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_anatomical_stats**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#ParcellationStats",
             "argument": "freesurfer.ParcellationStats()"
           }
         ]
@@ -14197,11 +14197,11 @@
       ],
       "title": {
         "name": "freesurfer.ParseDICOMDir",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#ParseDICOMDir",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_parse_sdcmdir**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#ParseDICOMDir",
             "argument": "freesurfer.ParseDICOMDir()"
           }
         ]
@@ -14347,11 +14347,11 @@
       ],
       "title": {
         "name": "freesurfer.ReconAll",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#ReconAll",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **recon-all**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#ReconAll",
             "argument": "freesurfer.ReconAll()"
           }
         ]
@@ -15498,11 +15498,11 @@
       ],
       "title": {
         "name": "freesurfer.Register",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/registration.html#Register",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_register**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/registration.html#Register",
             "argument": "freesurfer.Register()"
           }
         ]
@@ -15674,11 +15674,11 @@
       ],
       "title": {
         "name": "freesurfer.RegisterAVItoTalairach",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/registration.html#RegisterAVItoTalairach",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **avi2talxfm**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/registration.html#RegisterAVItoTalairach",
             "argument": "freesurfer.RegisterAVItoTalairach()"
           }
         ]
@@ -15837,11 +15837,11 @@
       ],
       "title": {
         "name": "freesurfer.RelabelHypointensities",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#RelabelHypointensities",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_relabel_hypointensities**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#RelabelHypointensities",
             "argument": "freesurfer.RelabelHypointensities()"
           }
         ]
@@ -16000,11 +16000,11 @@
       ],
       "title": {
         "name": "freesurfer.RemoveIntersection",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#RemoveIntersection",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_remove_intersection**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#RemoveIntersection",
             "argument": "freesurfer.RemoveIntersection()"
           }
         ]
@@ -16124,11 +16124,11 @@
       ],
       "title": {
         "name": "freesurfer.RemoveNeck",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#RemoveNeck",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_remove_neck**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#RemoveNeck",
             "argument": "freesurfer.RemoveNeck()"
           }
         ]
@@ -16287,11 +16287,11 @@
       ],
       "title": {
         "name": "freesurfer.Resample",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#Resample",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_convert**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#Resample",
             "argument": "freesurfer.Resample()"
           }
         ]
@@ -16424,11 +16424,11 @@
       ],
       "title": {
         "name": "freesurfer.RobustRegister",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#RobustRegister",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_robust_register**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#RobustRegister",
             "argument": "freesurfer.RobustRegister()"
           }
         ]
@@ -16990,11 +16990,11 @@
       ],
       "title": {
         "name": "freesurfer.RobustTemplate",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/longitudinal.html#RobustTemplate",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_robust_template**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/longitudinal.html#RobustTemplate",
             "argument": "freesurfer.RobustTemplate()"
           }
         ]
@@ -17296,11 +17296,11 @@
       ],
       "title": {
         "name": "freesurfer.SampleToSurface",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#SampleToSurface",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_vol2surf**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#SampleToSurface",
             "argument": "freesurfer.SampleToSurface()"
           }
         ]
@@ -17875,11 +17875,11 @@
       ],
       "title": {
         "name": "freesurfer.SegStats",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#SegStats",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_segstats**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#SegStats",
             "argument": "freesurfer.SegStats()"
           }
         ]
@@ -18532,11 +18532,11 @@
       ],
       "title": {
         "name": "freesurfer.SegStatsReconAll",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#SegStatsReconAll",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_segstats**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#SegStatsReconAll",
             "argument": "freesurfer.SegStatsReconAll()"
           }
         ]
@@ -19345,11 +19345,11 @@
       ],
       "title": {
         "name": "freesurfer.SegmentCC",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#SegmentCC",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_cc**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#SegmentCC",
             "argument": "freesurfer.SegmentCC()"
           }
         ]
@@ -19534,11 +19534,11 @@
       ],
       "title": {
         "name": "freesurfer.SegmentWM",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#SegmentWM",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_segment**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#SegmentWM",
             "argument": "freesurfer.SegmentWM()"
           }
         ]
@@ -19658,11 +19658,11 @@
       ],
       "title": {
         "name": "freesurfer.Smooth",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#Smooth",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_volsmooth**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#Smooth",
             "argument": "freesurfer.Smooth()"
           }
         ]
@@ -19860,11 +19860,11 @@
       ],
       "title": {
         "name": "freesurfer.SmoothTessellation",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#SmoothTessellation",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_smooth**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#SmoothTessellation",
             "argument": "freesurfer.SmoothTessellation()"
           }
         ]
@@ -20140,11 +20140,11 @@
       ],
       "title": {
         "name": "freesurfer.Sphere",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#Sphere",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_sphere**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#Sphere",
             "argument": "freesurfer.Sphere()"
           }
         ]
@@ -20316,11 +20316,11 @@
       ],
       "title": {
         "name": "freesurfer.SphericalAverage",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#SphericalAverage",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_spherical_average**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#SphericalAverage",
             "argument": "freesurfer.SphericalAverage()"
           }
         ]
@@ -20544,11 +20544,11 @@
       ],
       "title": {
         "name": "freesurfer.Surface2VolTransform",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#Surface2VolTransform",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_surf2vol**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#Surface2VolTransform",
             "argument": "freesurfer.Surface2VolTransform()"
           }
         ]
@@ -20785,11 +20785,11 @@
       ],
       "title": {
         "name": "freesurfer.SurfaceSmooth",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#SurfaceSmooth",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_surf2surf**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#SurfaceSmooth",
             "argument": "freesurfer.SurfaceSmooth()"
           }
         ]
@@ -20987,11 +20987,11 @@
       ],
       "title": {
         "name": "freesurfer.SurfaceSnapshots",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#SurfaceSnapshots",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **tksurfer**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#SurfaceSnapshots",
             "argument": "freesurfer.SurfaceSnapshots()"
           }
         ]
@@ -21488,11 +21488,11 @@
       ],
       "title": {
         "name": "freesurfer.SurfaceTransform",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#SurfaceTransform",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_surf2surf**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#SurfaceTransform",
             "argument": "freesurfer.SurfaceTransform()"
           }
         ]
@@ -21729,11 +21729,11 @@
       ],
       "title": {
         "name": "freesurfer.SynthesizeFLASH",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#SynthesizeFLASH",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_synthesize**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#SynthesizeFLASH",
             "argument": "freesurfer.SynthesizeFLASH()"
           }
         ]
@@ -21918,11 +21918,11 @@
       ],
       "title": {
         "name": "freesurfer.TalairachAVI",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#TalairachAVI",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **talairach_avi**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#TalairachAVI",
             "argument": "freesurfer.TalairachAVI()"
           }
         ]
@@ -22081,11 +22081,11 @@
       ],
       "title": {
         "name": "freesurfer.TalairachQC",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#TalairachQC",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **tal_QC_AZS**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#TalairachQC",
             "argument": "freesurfer.TalairachQC()"
           }
         ]
@@ -22192,11 +22192,11 @@
       ],
       "title": {
         "name": "freesurfer.Tkregister2",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#Tkregister2",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **tkregister2**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#Tkregister2",
             "argument": "freesurfer.Tkregister2()"
           }
         ]
@@ -22459,11 +22459,11 @@
       ],
       "title": {
         "name": "freesurfer.UnpackSDICOMDir",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#UnpackSDICOMDir",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **unpacksdcmdir**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#UnpackSDICOMDir",
             "argument": "freesurfer.UnpackSDICOMDir()"
           }
         ]
@@ -22687,11 +22687,11 @@
       ],
       "title": {
         "name": "freesurfer.VolumeMask",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#VolumeMask",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_volmask**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#VolumeMask",
             "argument": "freesurfer.VolumeMask()"
           }
         ]
@@ -22980,11 +22980,11 @@
       ],
       "title": {
         "name": "freesurfer.WatershedSkullStrip",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#WatershedSkullStrip",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_watershed**",
-            "web_url": "nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#WatershedSkullStrip",
             "argument": "freesurfer.WatershedSkullStrip()"
           }
         ]

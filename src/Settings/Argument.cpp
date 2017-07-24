@@ -36,7 +36,8 @@ Argument::Argument(
     m_isEditable  (_json["editable"].toBool()),
     m_isIterator  (_json["iterator"].toBool()),
     m_argumentName(_json["name"    ].toString()),
-    m_defaultValue(_json["value"   ].toString())
+    m_defaultValue(_json["value"   ].toString()),
+    m_webUrl      (_json["web_url" ].toString())
 {
     foreach (QJsonValue code, _json["code"].toArray())
     {
@@ -45,97 +46,6 @@ Argument::Argument(
                 codeJson["argument"].toString(),
                 codeJson["comment" ].toString());
     }
-}
-
-void Argument::setName(
-        const QString& _name
-        )
-{
-    m_argumentName = _name;
-}
-
-void Argument::setInput(
-        bool _input
-        )
-{
-    m_isInput = _input;
-}
-
-void Argument::setOutput(
-        bool _output
-        )
-{
-    m_isOutput = _output;
-}
-
-bool Argument::isInput(
-        ) const
-{
-    return m_isInput;
-}
-
-bool Argument::isOutput(
-        ) const
-{
-    return m_isOutput;
-}
-
-bool Argument::isVisible(
-        ) const
-{
-    return m_isVisible;
-}
-
-bool Argument::isEditable(
-        ) const
-{
-    return m_isEditable;
-}
-
-bool Argument::isIterator(
-        ) const
-{
-    return m_isIterator;
-}
-
-void Argument::setDefault(
-        const QString& _default
-        )
-{
-    m_defaultValue = _default;
-}
-
-void Argument::setVisible(
-        bool _visible
-        )
-{
-    m_isVisible = _visible;
-}
-
-void Argument::setEditable(
-        bool _editable
-        )
-{
-    m_isEditable = _editable;
-}
-
-void Argument::setIterator(
-        bool _iterator
-        )
-{
-    m_isIterator = _iterator;
-}
-
-const QString& Argument::getName(
-        ) const
-{
-    return m_argumentName;
-}
-
-const QString& Argument::getDefault(
-        ) const
-{
-    return m_defaultValue;
 }
 
 QString Argument::getArgument(
@@ -175,13 +85,6 @@ void Argument::updateJson(
 }
 
 const QJsonObject& Argument::toJson(
-        ) const
-{
-    return m_json;
-}
-
-
-const QJsonObject& Argument::getJson(
         ) const
 {
     return m_json;

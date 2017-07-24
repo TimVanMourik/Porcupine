@@ -83,13 +83,13 @@ void PortPair::setArgument(
         )
 {
     m_argument = _argument;
-    setPlainText(_argument.getName());
+    setPlainText(_argument.m_argumentName);
 }
 
 const QString& PortPair::getName(
         ) const
 {
-    return m_argument.getName();
+    return m_argument.m_argumentName;
 }
 
 const Argument& PortPair::getArgument(
@@ -290,7 +290,7 @@ void PortPair::setVisibility(
         bool _visibility
         )
 {
-    m_argument.setVisible(_visibility);
+    m_argument.m_isVisible = _visibility;
     if(m_input)  m_input->setVisible(_visibility);
     if(m_output) m_output->setVisible(_visibility);
     setVisible(_visibility);
@@ -301,7 +301,7 @@ void PortPair::setAsIterator(
         bool _iterator
         )
 {
-    m_argument.setIterator(_iterator);
+    m_argument.m_isIterator = _iterator;
 }
 
 const QString& PortPair::getFileName(
@@ -313,7 +313,7 @@ const QString& PortPair::getFileName(
 bool PortPair::isIterator(
             ) const
 {
-    return m_argument.isIterator();
+    return m_argument.m_isIterator;
 }
 
 void PortPair::removePort(

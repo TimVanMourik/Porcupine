@@ -65,15 +65,15 @@ void PortBlock::addPort(
         )
 {
     Argument portArgument;
-    portArgument.setVisible(true);
-    portArgument.setIterator(false);
-    portArgument.setEditable(true);
+    portArgument.m_isVisible = true;
+    portArgument.m_isIterator = false;
+    portArgument.m_isEditable = true;
     QString portTitle = QInputDialog::getText(this, "Port name", "Please enter the port name");
     if(portTitle.isEmpty())
     {
         return;
     }
-    portArgument.setName(portTitle);
+    portArgument.m_argumentName = portTitle;
 
     QMessageBox ioBox;
     ioBox.setText(tr("Do you want an input or output port, or both?"));
@@ -85,8 +85,8 @@ void PortBlock::addPort(
     Argument title(m_node->getJson()["title"].toObject());
     if(ioBox.clickedButton() == input)
     {
-        portArgument.setInput(true);
-        portArgument.setOutput(false);
+        portArgument.m_isInput  = true;
+        portArgument.m_isOutput = false;
         QList<QString> languages = title.getLanguages();
         foreach (QString language, languages)
         {
@@ -95,8 +95,8 @@ void PortBlock::addPort(
     }
     else if(ioBox.clickedButton() == output)
     {
-        portArgument.setInput(false);
-        portArgument.setOutput(true);
+        portArgument.m_isInput  = false;
+        portArgument.m_isOutput = true;
         QList<QString> languages = title.getLanguages();
         foreach (QString language, languages)
         {
@@ -105,8 +105,8 @@ void PortBlock::addPort(
     }
     else if(ioBox.clickedButton() == both)
     {
-        portArgument.setInput(true);
-        portArgument.setOutput(true);
+        portArgument.m_isInput  = true;
+        portArgument.m_isOutput = true;
         QList<QString> languages = title.getLanguages();
         foreach (QString language, languages)
         {

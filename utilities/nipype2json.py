@@ -39,9 +39,9 @@ def node2json(node, module=None, custom_node=False, category="Custom"):
     node_name = _get_node_name(node, custom_node)
 
     titleBlock = {'name': '%s.%s' % (module, node_name),
+                  'web_url': web_url,
                   'code': [{'language': category,
                             'comment': descr,
-                            'web_url': web_url,
                             'argument': module + '.%s()' % node_name}]}
 
     ports = []
@@ -146,7 +146,7 @@ def _get_web_url(node, custom_node):
     if custom_node:
         return '', "custom"
     else:
-        web_url = 'nipype.readthedocs.io/en/latest/interfaces/generated/interfaces'
+        web_url = 'https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces'
         module_tree = inspect.getmodule(node).__name__
         long_node_title = '.'.join([n for n in module_tree.split('.')
                                     if n not in ('interfaces', 'nipype')])

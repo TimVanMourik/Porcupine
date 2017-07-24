@@ -22,6 +22,7 @@
 */
 
 #include <QComboBox>
+#include <QDesktopServices>
 #include <QDrag>
 #include <QDebug>
 #include <QDropEvent>
@@ -64,8 +65,8 @@ NodeTreeItem::NodeTreeItem(
 
     QWidget* headerBlock = new QWidget();
     QHBoxLayout* headerLayout = new QHBoxLayout(headerBlock);
-    headerLayout->setSpacing(0);
-    headerLayout->setContentsMargins(10, 10, 20, 0);
+//    headerLayout->setSpacing(0);
+//    headerLayout->setContentsMargins(10, 10, 20, 0);
     mainLayout->addWidget(headerBlock);
 
     setFrameShadow(QFrame::Raised);
@@ -78,10 +79,27 @@ NodeTreeItem::NodeTreeItem(
 
     // headerLayout
     m_numberLabel   = new QLabel(QString::number(m_number));
-    QLabel* nameTag = new QLabel(m_node->getName());
     m_numberLabel->setStyleSheet(nodeSheet);
+    headerLayout->addWidget(m_numberLabel);
+
+    QLabel* nameTag = new QLabel(m_node->getName());
     nameTag->setStyleSheet(nodeSheet);
+    headerLayout->addWidget(nameTag);
     connect(&m_node->getAntenna(), SIGNAL(nodeNameChanged(QString)), nameTag, SLOT(setText(QString)));
+
+    QString urlString = m_node->getJson()["title"].toObject()["web_url"].toString();
+    if(!urlString.isEmpty())
+    {
+        QPushButton* urlButton = new QPushButton();
+        urlButton->setMaximumWidth(18);
+        urlButton->setCheckable(true);
+        QFile urlFile(":/qss/webButton.qss");
+        urlFile.open(QFile::ReadOnly);
+        QString urlSheet = QString::fromLatin1(urlFile.readAll());
+        urlButton->setStyleSheet(urlSheet);
+        headerLayout->addWidget(urlButton);
+        connect(urlButton, SIGNAL(clicked()), this, SLOT(openLink()));
+    }
 
     QPushButton* visibilityButton = new QPushButton();
     visibilityButton->setMaximumWidth(18);
@@ -90,9 +108,6 @@ NodeTreeItem::NodeTreeItem(
     fileRemove.open(QFile::ReadOnly);
     QString styleSheetRemove = QString::fromLatin1(fileRemove.readAll());
     visibilityButton->setStyleSheet(styleSheetRemove);
-
-    headerLayout->addWidget(m_numberLabel);
-    headerLayout->addWidget(nameTag);
     headerLayout->addWidget(visibilityButton);
 
     m_portBlockLayout->setVisible(false);
@@ -152,6 +167,14 @@ void NodeTreeItem::saveToJson(
 
 //    qDebug() << "Save port block";
     m_portBlockLayout->saveToJson(o_json);
+}
+
+void NodeTreeItem::openLink(
+        )
+{
+    QString urlString = m_node->getJson()["title"].toObject()["web_url"].toString();
+    QUrl url(urlString);
+    QDesktopServices::openUrl(url);
 }
 
 void NodeTreeItem::mousePressEvent(

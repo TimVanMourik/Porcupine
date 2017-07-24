@@ -57,14 +57,14 @@ PortRow::PortRow(
     if(_port->getInputPort())
     {
         m_iterateCheckbox = new QCheckBox();
-        m_iterateCheckbox->setChecked(_port->getArgument().isIterator());
+        m_iterateCheckbox->setChecked(_port->getArgument().m_isIterator);
         rowLayout->addWidget(m_iterateCheckbox);
         connect(m_iterateCheckbox, SIGNAL(toggled(bool)), this, SLOT(iteratePort(bool)));
     }
     rowLayout->addWidget(m_deleteButton);
 
-    m_parameterName->setEnabled(_port->getArgument().isEditable());
-    m_showCheckbox-> setChecked(_port->getArgument().isVisible());
+    m_parameterName->setEnabled(_port->getArgument().m_isEditable);
+    m_showCheckbox-> setChecked(_port->getArgument().m_isVisible);
 
     connect(m_parameterName, SIGNAL(textEdited(QString)),     _port,           SLOT(fileNameChanged(QString)));
     connect(m_showCheckbox,  SIGNAL(toggled(bool)),           this ,           SLOT(showPort(bool)));
@@ -123,7 +123,7 @@ void PortRow::showPort(
 {
     if(_visible)
     {
-        m_parameterName->setEnabled(m_port->getArgument().isEditable());
+        m_parameterName->setEnabled(m_port->getArgument().m_isEditable);
     }
     else
     {
@@ -187,7 +187,7 @@ void PortRow::portConnected(
     }
     else
     {
-        m_parameterName->setEnabled(m_port->getArgument().isEditable());
+        m_parameterName->setEnabled(m_port->getArgument().m_isEditable);
     }
 }
 

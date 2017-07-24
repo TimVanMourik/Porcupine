@@ -39,55 +39,6 @@ public:
             const QJsonObject& _json = QJsonObject()
             );
     //
-    bool isInput(
-            ) const;
-    //
-    bool isOutput(
-            ) const;
-    //
-    bool isVisible(
-            ) const;
-    //
-    bool isEditable(
-            ) const;
-    //
-    bool isIterator(
-            ) const;
-    //
-    void setName(
-            const QString& _name
-            );
-    //
-    void setDefault(
-            const QString& _name
-            );
-    //
-    void setInput(
-            bool _input
-            );
-    //
-    void setVisible(
-            bool _visible
-            );
-    //
-    void setOutput(
-            bool _output
-            );
-    //
-    void setEditable(
-            bool _editable
-            );
-    //
-    void setIterator(
-            bool _iterator
-            );
-    //
-    const QString& getName(
-            ) const;
-    //
-    const QString& getDefault(
-            ) const;
-    //
     QList<QString> getLanguages(
             );
     //
@@ -116,8 +67,9 @@ public:
             const QString& _argument,
             const QString& _comment = QString("")
             );
-
-private:
+///@brief let's not have getters and setters but just make the elements public
+/// As this class is only for setting and getting, this makes more sense and is more direct
+public:
     //
     QJsonObject m_json;
     //
@@ -134,6 +86,8 @@ private:
     QString m_argumentName;
     //
     QString m_defaultValue;
+    //
+    QString m_webUrl;
     //
     struct Code
     {

@@ -70,9 +70,9 @@ QStringList NodeLibrary::addNodeSetting(
 
         NodeSetting* newNode = new NodeSetting(title, ports, nodeJson);
         newNode->setCategory(categories);
-        m_nodeSettings[title.getName()] = newNode;
-        m_nodeNames << title.getName();
-        newNodes << title.getName();
+        m_nodeSettings[title.m_argumentName] = newNode;
+        m_nodeNames << title.m_argumentName;
+        newNodes << title.m_argumentName;
     }
     return newNodes;
 }

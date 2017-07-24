@@ -89,7 +89,7 @@ QString NipypeGenerator::itemToCode(
 
     QString nodeName = QString("NodeHash_%1").arg(QString::number((quint64) _item->getNode(), 16));
 
-    if(s_exceptionNodes.contains(title.getName()))
+    if(s_exceptionNodes.contains(title.m_argumentName))
     {
         NipypeStupidExceptions& exception = NipypeStupidExceptions::getInstance();
         return exception.exceptionNodetoCode(_item, _parameters);
@@ -123,7 +123,7 @@ QString NipypeGenerator::itemToCode(
     foreach (const PortPair* pair,  _item->getPorts())
     {
         Argument argument = pair->getArgument();
-        QString filename = _item->getParameterName(argument.getName());
+        QString filename = _item->getParameterName(argument.m_argumentName);
 
         //replace filename
         foreach (const QString parameter, _parameters.keys())
@@ -134,9 +134,9 @@ QString NipypeGenerator::itemToCode(
             }
         }
 
-        if(!filename.isEmpty() && argument.isInput())
+        if(!filename.isEmpty() && argument.m_isInput)
         {
-            if(!argument.isIterator())
+            if(!argument.m_isIterator)
             {
                 code += QString("%1.inputs.%2 = %3\n").arg(nodeName, argument.getArgument(s_thisLanguage), filename);
             }
@@ -163,8 +163,8 @@ QString NipypeGenerator::linkToCode(
     QString code("");
     QString source =  QString("NodeHash_%1").arg(QString::number((quint64) _link->getPortFrom()->getNode(), 16));
     QString destination =  QString("NodeHash_%1").arg(QString::number((quint64) _link->getPortTo()->getNode(), 16));
-    QString sourceAttribute(   _link->getPortFrom()->getPortPair()->getArgument().getName());
-    QString destinationAttribute(_link->getPortTo()->getPortPair()->getArgument().getName());
+    QString sourceAttribute(   _link->getPortFrom()->getPortPair()->getArgument().m_argumentName);
+    QString destinationAttribute(_link->getPortTo()->getPortPair()->getArgument().m_argumentName);
     code += QString("analysisflow.connect(%1, '%2', %3, '%4')\n").arg(source, sourceAttribute, destination, destinationAttribute);
 
     return code;

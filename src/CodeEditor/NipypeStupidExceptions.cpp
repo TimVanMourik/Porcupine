@@ -24,7 +24,7 @@ QString NipypeStupidExceptions::exceptionNodetoCode(
 {
     QJsonObject json = _item->getJson();
     Argument title(json["title"].toObject());
-    QString node = title.getName();
+    QString node = title.m_argumentName;
     if (!node.compare("utility.IdentityInterface"))
     {
         return codeForIdentityInterface(_item, _parameters);
@@ -74,7 +74,7 @@ QString NipypeStupidExceptions::codeForIdentityInterface(
     foreach (const PortPair* pair,  _item->getPorts())
     {
         Argument argument = pair->getArgument();
-        if(argument.isInput() && argument.isOutput())
+        if(argument.m_isInput && argument.m_isOutput)
         {
             fieldNodes << argument.getArgument(s_thisLanguage);
         }
@@ -96,7 +96,7 @@ QString NipypeStupidExceptions::codeForIdentityInterface(
     foreach (const PortPair* pair,  _item->getPorts())
     {
         Argument argument = pair->getArgument();
-        QString filename = _item->getParameterName(argument.getName());
+        QString filename = _item->getParameterName(argument.m_argumentName);
 
         //replace filename
         foreach (const QString parameter, _parameters.keys())
@@ -107,9 +107,9 @@ QString NipypeStupidExceptions::codeForIdentityInterface(
             }
         }
 
-        if(!filename.isEmpty() && argument.isInput())
+        if(!filename.isEmpty() && argument.m_isInput)
         {
-            if(!argument.isIterator())
+            if(!argument.m_isIterator)
             {
                 code += QString("%1.inputs.%3 = %4\n").arg(nodeName, argument.getArgument(s_thisLanguage), filename);
             }
@@ -158,7 +158,7 @@ QString NipypeStupidExceptions::codeForSelectFiles(
     foreach (const PortPair* pair,  _item->getPorts())
     {
         Argument argument = pair->getArgument();
-        QString filename = _item->getParameterName(argument.getName());
+        QString filename = _item->getParameterName(argument.m_argumentName);
 
         //replace filename
         foreach (const QString parameter, _parameters.keys())
@@ -168,7 +168,7 @@ QString NipypeStupidExceptions::codeForSelectFiles(
                 filename = filename.replace(QString("$").append(parameter), parameter);
             }
         }
-        if(!filename.isEmpty() && argument.isInput() && argument.isOutput())
+        if(!filename.isEmpty() && argument.m_isInput && argument.m_isOutput)
         {
             templateDictionary << "'" + argument.getArgument(s_thisLanguage) + "':" + filename;
         }
@@ -190,7 +190,7 @@ QString NipypeStupidExceptions::codeForSelectFiles(
     foreach (const PortPair* pair,  _item->getPorts())
     {
         Argument argument = pair->getArgument();
-        QString filename = _item->getParameterName(argument.getName());
+        QString filename = _item->getParameterName(argument.m_argumentName);
 
         //replace filename
         foreach (const QString parameter, _parameters.keys())
@@ -201,9 +201,9 @@ QString NipypeStupidExceptions::codeForSelectFiles(
             }
         }
 
-        if(!filename.isEmpty() && argument.isInput() && !argument.isOutput())
+        if(!filename.isEmpty() && argument.m_isInput && !argument.m_isOutput)
         {
-            if(!argument.isIterator())
+            if(!argument.m_isIterator)
             {
                 code += QString("%1.inputs.%2 = %3\n").arg(nodeName, argument.getArgument(s_thisLanguage), filename);
             }
@@ -252,7 +252,7 @@ QString NipypeStupidExceptions::codeForMySQLSink(
     foreach (const PortPair* pair,  _item->getPorts())
     {
         Argument argument = pair->getArgument();
-        if(argument.isInput() && argument.isOutput())
+        if(argument.m_isInput && argument.m_isOutput)
         {
             fieldNodes << argument.getArgument(s_thisLanguage);
         }
@@ -274,7 +274,7 @@ QString NipypeStupidExceptions::codeForMySQLSink(
     foreach (const PortPair* pair,  _item->getPorts())
     {
         Argument argument = pair->getArgument();
-        QString filename = _item->getParameterName(argument.getName());
+        QString filename = _item->getParameterName(argument.m_argumentName);
 
         //replace filename
         foreach (const QString parameter, _parameters.keys())
@@ -285,9 +285,9 @@ QString NipypeStupidExceptions::codeForMySQLSink(
             }
         }
 
-        if(!filename.isEmpty() && argument.isInput())
+        if(!filename.isEmpty() && argument.m_isInput)
         {
-            if(!argument.isIterator())
+            if(!argument.m_isIterator)
             {
                 code += QString("%1.inputs.%3 = %4\n").arg(nodeName, argument.getArgument(s_thisLanguage), filename);
             }
@@ -336,7 +336,7 @@ QString NipypeStupidExceptions::codeForSQLiteSink(
     foreach (const PortPair* pair,  _item->getPorts())
     {
         Argument argument = pair->getArgument();
-        if(argument.isInput() && argument.isOutput())
+        if(argument.m_isInput && argument.m_isOutput)
         {
             fieldNodes << argument.getArgument(s_thisLanguage);
         }
@@ -358,7 +358,7 @@ QString NipypeStupidExceptions::codeForSQLiteSink(
     foreach (const PortPair* pair,  _item->getPorts())
     {
         Argument argument = pair->getArgument();
-        QString filename = _item->getParameterName(argument.getName());
+        QString filename = _item->getParameterName(argument.m_argumentName);
 
         //replace filename
         foreach (const QString parameter, _parameters.keys())
@@ -369,9 +369,9 @@ QString NipypeStupidExceptions::codeForSQLiteSink(
             }
         }
 
-        if(!filename.isEmpty() && argument.isInput())
+        if(!filename.isEmpty() && argument.m_isInput)
         {
-            if(!argument.isIterator())
+            if(!argument.m_isIterator)
             {
                 code += QString("%1.inputs.%3 = %4\n").arg(nodeName, argument.getArgument(s_thisLanguage), filename);
             }

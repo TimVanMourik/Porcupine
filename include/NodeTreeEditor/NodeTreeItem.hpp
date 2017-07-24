@@ -103,6 +103,9 @@ public slots:
     void setSelected(
             bool _isSelected
             );
+    //
+    void openLink(
+            );
 signals:
     void moved(
             NodeTreeItem* _item

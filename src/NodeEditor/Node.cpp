@@ -118,7 +118,7 @@ void Node::loadFromNodeSetting(
     assert(_setting != 0);
     m_json = _setting->getJson();
     Argument title(m_json["title"].toObject());
-    m_name = title.getName();
+    m_name = title.m_argumentName;
     m_nameLabel->setText(m_name);
 
     QVector<Argument> ports;
@@ -158,13 +158,13 @@ PortPair* Node::addPortPair(
     PortPair* pair = new PortPair(this);
     pair->setArgument(_argument);
     pair->setDefaultTextColor(preferences.m_portTextColor);
-    if(_argument.isInput())   pair->createInputPort(_argument.isVisible());
-    if(_argument.isOutput())  pair->createOutputPort(_argument.isVisible());
-    _argument.isVisible() ? pair->setVisible(true) : pair->setVisible(false);
+    if(_argument.m_isInput)   pair->createInputPort(_argument.m_isVisible);
+    if(_argument.m_isOutput)  pair->createOutputPort(_argument.m_isVisible);
+    _argument.m_isVisible ? pair->setVisible(true) : pair->setVisible(false);
 
     if(_initialiseWithDefault)
     {
-        pair->fileNameChanged(_argument.getDefault(), false);
+        pair->fileNameChanged(_argument.m_defaultValue, false);
     }
     m_ports.append(pair);
     return pair;
@@ -282,7 +282,7 @@ void Node::loadFromJson(
 {
     Argument title(_json["title"].toObject());
     m_json = _json;
-    m_name = title.getName();
+    m_name = title.m_argumentName;
     m_nameLabel->setText(m_name);
     setPos(_json["position"].toArray().at(0).toInt(0), _json["position"].toArray().at(1).toInt(0));
     foreach (QJsonValue portValue, _json["ports"].toArray()) {
