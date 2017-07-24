@@ -112,6 +112,7 @@ RUN conda install -y mkl=2017.0.1 mkl-service &&  \
                      libxslt=1.1.29\
                      traits=4.6.0 
 RUN chmod +x /usr/local/miniconda/bin/* && conda clean --all -y
+RUN echo 'export PATH=/usr/loca/miniconda/bin:$PATH' >> /etc/profile
 
 # Precaching fonts
 RUN python -c "from matplotlib import font_manager"
@@ -141,12 +142,14 @@ RUN dbus-uuidgen > /etc/machine-id
 COPY bin/Porcupine /root/Porcupine
 COPY utilities/docker/lib /root/
 COPY utilities/docker/plugins /root/plugins
-ENV LD_LIBRARY_PATH=/root
+ENV LD_LIBRARY_PATH=/root:$LD_LIBRARY_PATH
 ENV QT_QPA_PLATFORM_PLUGIN_PATH=/root/plugins
 
 # To download data from openfmri
-RUN pip install awscli
+RUN pip install awscli nipype
 COPY utilities/*.py /root/
 RUN ["python", "/root/download_openfmri_data.py", "-d", "ds000101", "-o", "/example_data"]
 
-CMD /root/Porcupine
+RUN rm ../freesurfer-Linux-centos6_x86_64-stable-pub-v6.0.0.tar.gz
+
+CMD /bin/bash
