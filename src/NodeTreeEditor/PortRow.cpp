@@ -63,7 +63,7 @@ PortRow::PortRow(
     }
     rowLayout->addWidget(m_deleteButton);
 
-    m_parameterName->setEnabled(_port->getArgument().m_isEditable);
+    m_parameterName->setEnabled(_port->getArgument().m_isEditable && _port->getArgument().m_isVisible);
     m_showCheckbox-> setChecked(_port->getArgument().m_isVisible);
 
     connect(m_parameterName, SIGNAL(textEdited(QString)),     _port,           SLOT(fileNameChanged(QString)));
