@@ -9,8 +9,6 @@ ROOT                                    = $$_PRO_FILE_PWD_
 
 QT                                     += widgets core gui printsupport
 
-CONFIG                                 += static
-
 macx:{
     QMAKE_MAC_SDK                       = macosx10.12
     QMAKE_MACOSX_DEPLOYMENT_TARGET      = 10.12
