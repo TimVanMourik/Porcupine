@@ -1,0 +1,1315 @@
+{
+  "nodes": [
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "confounds",
+        "confounds"
+      ],
+      "title": {
+        "name": "confounds.ACompCor",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.algorithms/confounds.html#ACompCor",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Anatomical compcor: for inputs and outputs, see CompCor.",
+            "argument": "confounds.ACompCor()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "realigned_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "realigned_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "merge_method",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "merge_method"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask_index",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask_index"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "components_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "components_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_components",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "num_components"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "use_regress_poly",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "use_regress_poly"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "regress_poly_degree",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "regress_poly_degree"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "header_prefix",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "header_prefix"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "components_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "components_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "confounds"
+      ],
+      "title": {
+        "name": "confounds.BaseInterface",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.base",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Implements common interface functionality.",
+            "argument": "confounds.BaseInterface()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "confounds",
+        "confounds"
+      ],
+      "title": {
+        "name": "confounds.CompCor",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.algorithms/confounds.html#CompCor",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Interface with core CompCor computation, used in aCompCor and tCompCor",
+            "argument": "confounds.CompCor()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "realigned_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "realigned_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "merge_method",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "merge_method"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask_index",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask_index"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "components_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "components_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_components",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "num_components"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "use_regress_poly",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "use_regress_poly"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "regress_poly_degree",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "regress_poly_degree"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "header_prefix",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "header_prefix"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "components_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "components_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "confounds",
+        "confounds"
+      ],
+      "title": {
+        "name": "confounds.ComputeDVARS",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.algorithms/confounds.html#ComputeDVARS",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Computes the DVARS.",
+            "argument": "confounds.ComputeDVARS()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_mask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "remove_zerovariance",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "remove_zerovariance"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "save_std",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "save_std"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "save_nstd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "save_nstd"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "save_vxstd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "save_vxstd"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "save_all",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "save_all"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "series_tr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "series_tr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "save_plot",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "save_plot"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "figdpi",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "figdpi"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "figsize",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "figsize"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "figformat",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "figformat"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "intensity_normalization",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "intensity_normalization"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_std",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_std"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_nstd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_nstd"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_vxstd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_vxstd"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_all",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_all"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "avg_std",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "avg_std"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "avg_nstd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "avg_nstd"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "avg_vxstd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "avg_vxstd"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "fig_std",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fig_std"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "fig_nstd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fig_nstd"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "fig_vxstd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fig_vxstd"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "confounds",
+        "confounds"
+      ],
+      "title": {
+        "name": "confounds.FramewiseDisplacement",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.algorithms/confounds.html#FramewiseDisplacement",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Calculate the :abbr:`FD (framewise displacement)` as in [Power2012]_.",
+            "argument": "confounds.FramewiseDisplacement()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "parameter_source",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "parameter_source"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "radius",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "radius"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_figure",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_figure"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "series_tr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "series_tr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "save_plot",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "save_plot"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "normalize",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "normalize"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "figdpi",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "figdpi"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "figsize",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "figsize"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_figure",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_figure"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "fd_average",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fd_average"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "confounds",
+        "confounds"
+      ],
+      "title": {
+        "name": "confounds.NonSteadyStateDetector",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.algorithms/confounds.html#NonSteadyStateDetector",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Returns the number of non-steady state volumes detected at the beginning",
+            "argument": "confounds.NonSteadyStateDetector()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "n_volumes_to_discard",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "n_volumes_to_discard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "confounds",
+        "confounds"
+      ],
+      "title": {
+        "name": "confounds.TCompCor",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.algorithms/confounds.html#TCompCor",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Interface for tCompCor. Computes a ROI mask based on variance of voxels.",
+            "argument": "confounds.TCompCor()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "percentile_threshold",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "percentile_threshold"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "realigned_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "realigned_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "merge_method",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "merge_method"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask_index",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask_index"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "components_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "components_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_components",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "num_components"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "use_regress_poly",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "use_regress_poly"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "regress_poly_degree",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "regress_poly_degree"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "header_prefix",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "header_prefix"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "high_variance_masks",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "high_variance_masks"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "components_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "components_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "confounds",
+        "confounds"
+      ],
+      "title": {
+        "name": "confounds.TSNR",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.algorithms/confounds.html#TSNR",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Computes the time-course SNR for a time series",
+            "argument": "confounds.TSNR()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "regress_poly",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "regress_poly"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "tsnr_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "tsnr_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mean_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mean_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "stddev_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "stddev_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "detrended_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "detrended_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "tsnr_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "tsnr_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "mean_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mean_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "stddev_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "stddev_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "detrended_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "detrended_file"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

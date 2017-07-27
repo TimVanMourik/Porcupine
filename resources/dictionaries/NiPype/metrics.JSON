@@ -1,0 +1,792 @@
+{
+  "nodes": [
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "metrics"
+      ],
+      "title": {
+        "name": "metrics.BaseInterface",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.base",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Implements common interface functionality.",
+            "argument": "metrics.BaseInterface()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "metrics",
+        "metrics"
+      ],
+      "title": {
+        "name": "metrics.Distance",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.algorithms/metrics.html#Distance",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Calculates distance between two volumes.",
+            "argument": "metrics.Distance()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "volume1",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "volume1"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "volume2",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "volume2"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "method",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "method"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask_volume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask_volume"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "distance",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "distance"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "point1",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "point1"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "point2",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "point2"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "histogram",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "histogram"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "metrics",
+        "metrics"
+      ],
+      "title": {
+        "name": "metrics.ErrorMap",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.algorithms/metrics.html#ErrorMap",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Calculates the error (distance) map between two input volumes.",
+            "argument": "metrics.ErrorMap()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_ref",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_ref"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_tst",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_tst"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "metric",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "metric"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_map",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_map"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_map",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_map"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "distance",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "distance"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "metrics",
+        "metrics"
+      ],
+      "title": {
+        "name": "metrics.FuzzyOverlap",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.algorithms/metrics.html#FuzzyOverlap",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Calculates various overlap measures between two maps, using the fuzzy",
+            "argument": "metrics.FuzzyOverlap()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_ref",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_ref"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_tst",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_tst"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "weighting",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "weighting"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "jaccard",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "jaccard"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "dice",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dice"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "diff_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "diff_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "class_fji",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "class_fji"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "class_fdi",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "class_fdi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "metrics",
+        "metrics"
+      ],
+      "title": {
+        "name": "metrics.Overlap",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.algorithms/metrics.html#Overlap",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Calculates Dice and Jaccard's overlap measures between two ROI maps.",
+            "argument": "metrics.Overlap()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "volume1",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "volume1"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "volume2",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "volume2"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask_volume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask_volume"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "bg_overlap",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bg_overlap"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "weighting",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "weighting"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "vol_units",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "vol_units"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "jaccard",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "jaccard"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "dice",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dice"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "roi_ji",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "roi_ji"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "roi_di",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "roi_di"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "volume_difference",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "volume_difference"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "roi_voldiff",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "roi_voldiff"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "labels",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "labels"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "diff_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "diff_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "metrics",
+        "metrics"
+      ],
+      "title": {
+        "name": "metrics.Similarity",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.algorithms/metrics.html#Similarity",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Calculates similarity between two 3D or 4D volumes. Both volumes have to be in",
+            "argument": "metrics.Similarity()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "volume1",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "volume1"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "volume2",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "volume2"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask1",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask1"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask2",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask2"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "metric",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "metric"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "similarity",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "similarity"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,610 @@
+{
+  "nodes": [
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "mesh"
+      ],
+      "title": {
+        "name": "mesh.BaseInterface",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.base",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Implements common interface functionality.",
+            "argument": "mesh.BaseInterface()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "mesh",
+        "mesh"
+      ],
+      "title": {
+        "name": "mesh.ComputeMeshWarp",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.algorithms/mesh.html#ComputeMeshWarp",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Calculates a the vertex-wise warping to get surface2 from surface1.",
+            "argument": "mesh.ComputeMeshWarp()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "surface1",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "surface1"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "surface2",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "surface2"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "metric",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "metric"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "weighting",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "weighting"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_warp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_warp"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "distance",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "distance"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_warp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_warp"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "mesh",
+        "mesh"
+      ],
+      "title": {
+        "name": "mesh.MeshWarpMaths",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.algorithms/mesh.html#MeshWarpMaths",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Performs the most basic mathematical operations on the warping field",
+            "argument": "mesh.MeshWarpMaths()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_surf",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_surf"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "float_trait",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "float_trait"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "operator",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "operator"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "operation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "operation"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_warp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_warp"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_warp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_warp"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "mesh",
+        "mesh"
+      ],
+      "title": {
+        "name": "mesh.P2PDistance",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.algorithms/mesh.html#P2PDistance",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Calculates a point-to-point (p2p) distance between two corresponding",
+            "argument": "mesh.P2PDistance()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "surface1",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "surface1"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "surface2",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "surface2"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "metric",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "metric"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "weighting",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "weighting"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_warp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_warp"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "distance",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "distance"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_warp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_warp"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "mesh",
+        "mesh"
+      ],
+      "title": {
+        "name": "mesh.TVTKBaseInterface",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.algorithms/mesh.html#TVTKBaseInterface",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "A base class for interfaces using VTK",
+            "argument": "mesh.TVTKBaseInterface()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "mesh",
+        "mesh"
+      ],
+      "title": {
+        "name": "mesh.WarpPoints",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.algorithms/mesh.html#WarpPoints",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Applies a displacement field to a point set given in vtk format.",
+            "argument": "mesh.WarpPoints()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "points",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "points"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "warp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "warp"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "interp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "interp"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_points",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_points"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_points",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_points"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

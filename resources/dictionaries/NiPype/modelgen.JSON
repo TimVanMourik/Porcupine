@@ -1,0 +1,685 @@
+{
+  "nodes": [
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "modelgen"
+      ],
+      "title": {
+        "name": "modelgen.BaseInterface",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.base",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Implements common interface functionality.",
+            "argument": "modelgen.BaseInterface()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "modelgen",
+        "modelgen"
+      ],
+      "title": {
+        "name": "modelgen.SpecifyModel",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.algorithms/modelgen.html#SpecifyModel",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Makes a model specification compatible with spm/fsl designers.",
+            "argument": "modelgen.SpecifyModel()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "subject_info",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_info"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "event_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "event_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "realignment_parameters",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "realignment_parameters"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "parameter_source",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "parameter_source"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "outlier_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outlier_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "functional_runs",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "functional_runs"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "input_units",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "input_units"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "high_pass_filter_cutoff",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "high_pass_filter_cutoff"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "time_repetition",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "time_repetition"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "session_info",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "session_info"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "modelgen",
+        "modelgen"
+      ],
+      "title": {
+        "name": "modelgen.SpecifySPMModel",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.algorithms/modelgen.html#SpecifySPMModel",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Adds SPM specific options to SpecifyModel",
+            "argument": "modelgen.SpecifySPMModel()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "concatenate_runs",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "concatenate_runs"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "output_units",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "output_units"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "subject_info",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_info"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "event_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "event_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "realignment_parameters",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "realignment_parameters"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "parameter_source",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "parameter_source"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "outlier_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outlier_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "functional_runs",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "functional_runs"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "input_units",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "input_units"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "high_pass_filter_cutoff",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "high_pass_filter_cutoff"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "time_repetition",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "time_repetition"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "session_info",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "session_info"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "modelgen",
+        "modelgen"
+      ],
+      "title": {
+        "name": "modelgen.SpecifySparseModel",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.algorithms/modelgen.html#SpecifySparseModel",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Specify a sparse model that is compatible with spm/fsl designers",
+            "argument": "modelgen.SpecifySparseModel()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "time_acquisition",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "time_acquisition"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "volumes_in_cluster",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "volumes_in_cluster"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "model_hrf",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "model_hrf"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "stimuli_as_impulses",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "stimuli_as_impulses"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "use_temporal_deriv",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "use_temporal_deriv"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "scale_regressors",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "scale_regressors"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "scan_onset",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "scan_onset"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "save_plot",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "save_plot"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "subject_info",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_info"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "event_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "event_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "realignment_parameters",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "realignment_parameters"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "parameter_source",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "parameter_source"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "outlier_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outlier_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "functional_runs",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "functional_runs"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "input_units",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "input_units"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "high_pass_filter_cutoff",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "high_pass_filter_cutoff"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "time_repetition",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "time_repetition"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "sparse_png_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "sparse_png_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "sparse_svg_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "sparse_svg_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "session_info",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "session_info"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

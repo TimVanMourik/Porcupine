@@ -7,7 +7,7 @@ Lukas Snoek (University of Amsterdam)
 import inspect
 
 
-def node2json(node, module=None, custom_node=False, category="Custom"):
+def node2json(node, module=None, module_type='interfaces', custom_node=False, category="Custom"):
     """ Converts nipype nodes to Porcupine-compatible json-files.
 
     This function takes a Nipype node from a Python module and
@@ -76,7 +76,7 @@ def node2json(node, module=None, custom_node=False, category="Custom"):
         }
         ports.append(port)
 
-    this_category = [category, module]
+    this_category = [category, module_type, module]
     submodules = long_node_title.split('.')
     if len(submodules) > 1:
         this_category.append(submodules[1])
