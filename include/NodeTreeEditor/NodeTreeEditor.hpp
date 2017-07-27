@@ -29,8 +29,6 @@
 #include <QScrollArea>
 #include <QStandardItemModel>
 
-#include "Hider.hpp"
-
 class Node;
 class NodeTreeItem;
 class CodeEditor;

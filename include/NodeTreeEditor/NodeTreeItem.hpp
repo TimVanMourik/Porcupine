@@ -26,8 +26,10 @@
 
 #include <QGraphicsPathItem>
 #include <QPoint>
+#include <QPushButton>
 #include <QStandardItem>
 #include <QFrame>
+#include <QUrl>
 
 class Node;
 class NodeSetting;
@@ -39,9 +41,6 @@ class QLabel;
 class QLineEdit;
 class QVBoxLayout;
 
-#include "Hider.hpp"
-
-#include <QPushButton>
 class NodeTreeItem : public QFrame
 {
     Q_OBJECT
@@ -113,6 +112,8 @@ signals:
 private:
     //
     Node* m_node;
+    //
+    QUrl m_url;
     //
     QPoint m_startPosition;
     //

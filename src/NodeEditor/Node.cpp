@@ -284,7 +284,8 @@ void Node::loadFromJson(
     m_json = _json;
     m_name = title.m_argumentName;
     m_nameLabel->setText(m_name);
-    setPos(_json["position"].toArray().at(0).toInt(0), _json["position"].toArray().at(1).toInt(0));
+    QJsonArray position = _json["position"].toArray();
+    setPos(position.at(0).toDouble(0), position.at(1).toDouble(0));
     foreach (QJsonValue portValue, _json["ports"].toArray()) {
         QJsonObject portObject = portValue.toObject();
 //        qDebug() << portObject;

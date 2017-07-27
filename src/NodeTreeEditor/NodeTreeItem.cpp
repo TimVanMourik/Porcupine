@@ -48,6 +48,7 @@ NodeTreeItem::NodeTreeItem(
         ) :
     QFrame(_parent),
     m_node(_node),
+    m_url(m_node->getJson()["title"].toObject()["web_url"].toString()),
     m_startPosition(QPoint()),
     m_numberLabel(0),
     m_number(0),
@@ -87,8 +88,7 @@ NodeTreeItem::NodeTreeItem(
     headerLayout->addWidget(nameTag);
     connect(&m_node->getAntenna(), SIGNAL(nodeNameChanged(QString)), nameTag, SLOT(setText(QString)));
 
-    QString urlString = m_node->getJson()["title"].toObject()["web_url"].toString();
-    if(!urlString.isEmpty())
+    if(!m_url.isEmpty())
     {
         QPushButton* urlButton = new QPushButton();
         urlButton->setMaximumWidth(18);
@@ -172,9 +172,7 @@ void NodeTreeItem::saveToJson(
 void NodeTreeItem::openLink(
         )
 {
-    QString urlString = m_node->getJson()["title"].toObject()["web_url"].toString();
-    QUrl url(urlString);
-    QDesktopServices::openUrl(url);
+    QDesktopServices::openUrl(m_url);
 }
 
 void NodeTreeItem::mousePressEvent(
