@@ -183,10 +183,15 @@ void PortRow::portConnected(
 {
     if(_connected)
     {
-        m_parameterName->setDisabled(true);
+        m_showCheckbox->setDisabled(true);
+        if(m_port->getArgument().m_isOutput && !m_port->getArgument().m_isInput)
+        {
+            m_parameterName->setDisabled(true);
+        }
     }
     else
     {
+        m_showCheckbox->setDisabled(false);
         m_parameterName->setEnabled(m_port->getArgument().m_isEditable);
     }
 }

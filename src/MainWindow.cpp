@@ -183,7 +183,7 @@ void MainWindow::loadDefaultNodes(
     NodeLibrary& nodeLibrary = NodeLibrary::getInstance();
 
     QStringList toolboxNames;
-//    toolboxNames << QString(":/dictionaries/TvM/dict_%1.JSON");
+    toolboxNames << QString(":/dictionaries/TvM/dict_%1.JSON");
     toolboxNames << QString(":/dictionaries/NiPype/dict_%1.JSON");
     unsigned int framePadding = 3;
     foreach (QString toolbox, toolboxNames)
