@@ -36,11 +36,14 @@ def node2json(node, module=None, custom_node=False, category="Custom"):
     all_outputs = _get_outputs(node, custom_node)
     descr = _get_descr(node, custom_node)
 
-    this_category = [category, module.split('.')[1]]
+    if module.split('.')[0] == 'algorithms':
+        this_category = [category, 'algorithms', module.split('.')[1]]
+    else:
+        this_category = [category, module.split('.')[1]]
+
     if not custom_node:
         sub_modules = _get_submodule(node)[1:]
-        if sub_modules and sub_modules[0] != this_category[1]:
-            print(sub_modules)
+        if sub_modules and sub_modules[0] != this_category[-1]:
             this_category.extend(sub_modules)
 
     web_url = _get_web_url(node, module, custom_node)
