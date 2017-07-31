@@ -12,7 +12,6 @@ def filter_nodes(node_list):
 
     return node_list
 
-
 category = 'NiPype'
 working_dir = op.join(op.dirname(op.dirname(__file__)),
                       'resources', 'dictionaries', category)
@@ -23,7 +22,7 @@ MODULES_TO_PARSE = ['interfaces.' + m for m in MODULES_TO_PARSE]
 MODULES_TO_PARSE.extend(['algorithms.' + m for m in ['confounds', 'icc', 'mesh', 'metrics',
                                                      'misc', 'modelgen', 'rapidart']])
 
-NODES_TO_EXCLUDE = []
+NODES_TO_EXCLUDE = ['BaseInterface', 'IOBase']
 
 for class_name in MODULES_TO_PARSE:
     module = import_module("nipype.%s" % class_name)
@@ -40,5 +39,3 @@ for class_name in MODULES_TO_PARSE:
 
     with open(op.join(working_dir, class_name.split('.')[1] + '.JSON'), 'w') as outfile:
         json.dump({'nodes': nodes_to_save}, outfile, sort_keys=False, indent=2)
-
-

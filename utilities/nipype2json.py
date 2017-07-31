@@ -23,7 +23,7 @@ def node2json(node, module=None, custom_node=False, category="Custom"):
         Whether the node is a custom node or a node within
         the Nipype package.
     category : str
-        Category of node (default: "Custom") 
+        Category of node (default: "Custom")
     """
 
     if module is None:
@@ -38,7 +38,10 @@ def node2json(node, module=None, custom_node=False, category="Custom"):
 
     this_category = [category, module.split('.')[1]]
     if not custom_node:
-        this_category.append(_get_submodule(node)[-1])
+        sub_modules = _get_submodule(node)[1:]
+        if sub_modules and sub_modules[0] != this_category[1]:
+            print(sub_modules)
+            this_category.extend(sub_modules)
 
     web_url = _get_web_url(node, module, custom_node)
     node_name = _get_node_name(node, custom_node)
@@ -145,7 +148,7 @@ def _get_web_url(node, module, custom_node):
 
     if custom_node:
         return ''
-    
+
     is_algo = module.split('.')[0] == 'algorithms'
 
     web_url = 'https://nipype.readthedocs.io/en/latest/interfaces/generated/'
@@ -174,6 +177,7 @@ def _get_node_name(node, custom_node):
     else:
         return node.__name__
 
+
 def _get_submodule(node):
 
     module_tree = inspect.getmodule(node).__name__
@@ -187,4 +191,3 @@ def pyfunc2json():
     directly to Porcupine's JSON format (by converting it)
     first to a Nipype node. """
     pass
-
