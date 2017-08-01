@@ -149,7 +149,11 @@ void PortBlock::removePortRow(
         )
 {
     m_parameterNames.remove(m_parameterNames.key(_row));
-    m_layout->removeRow(_row);
+    // The lines below can be replaced by the remove row line once Qt 5.8.0 is default
+    int i = m_layout->indexOf(_row);
+    delete m_layout->takeAt(i)->widget();
+    delete m_layout->takeAt(i - 1)->widget();
+//    m_layout->removeRow(_row);
 }
 
 void PortBlock::saveToJson(
