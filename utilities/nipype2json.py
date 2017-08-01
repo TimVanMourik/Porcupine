@@ -23,7 +23,7 @@ def node2json(node, module=None, custom_node=False, category="Custom"):
         Whether the node is a custom node or a node within
         the Nipype package.
     category : str
-        Category of node (default: "Custom") 
+        Category of node (default: "Custom")
     """
 
     if module is None:
@@ -35,14 +35,25 @@ def node2json(node, module=None, custom_node=False, category="Custom"):
     all_inputs, mandatory_inputs = _get_inputs(node, custom_node)
     all_outputs = _get_outputs(node, custom_node)
     descr = _get_descr(node, custom_node)
-    web_url, long_node_title = _get_web_url(node, custom_node)
+
+    if module.split('.')[0] == 'algorithms':
+        this_category = [category, 'algorithms', module.split('.')[1]]
+    else:
+        this_category = [category, module.split('.')[1]]
+
+    if not custom_node:
+        sub_modules = _get_submodule(node)[1:]
+        if sub_modules and sub_modules[0] != this_category[-1]:
+            this_category.extend(sub_modules)
+
+    web_url = _get_web_url(node, module, custom_node)
     node_name = _get_node_name(node, custom_node)
 
-    titleBlock = {'name': '%s.%s' % (module, node_name),
+    titleBlock = {'name': '%s.%s' % (module.split('.')[1], node_name),
                   'web_url': web_url,
                   'code': [{'language': category,
                             'comment': descr,
-                            'argument': module + '.%s()' % node_name}]}
+                            'argument': module.split('.')[1] + '.%s()' % node_name}]}
 
     ports = []
 
@@ -75,11 +86,6 @@ def node2json(node, module=None, custom_node=False, category="Custom"):
             'code': [codeBlock]
         }
         ports.append(port)
-
-    this_category = [category, module]
-    submodules = long_node_title.split('.')
-    if len(submodules) > 1:
-        this_category.append(submodules[1])
 
     node_to_return = {
         'category': this_category,
@@ -141,20 +147,30 @@ def _get_descr(node, custom_node=True):
     return descr
 
 
-def _get_web_url(node, custom_node):
+def _get_web_url(node, module, custom_node):
 
     if custom_node:
-        return '', "custom"
-    else:
-        web_url = 'https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces'
-        module_tree = inspect.getmodule(node).__name__
-        long_node_title = '.'.join([n for n in module_tree.split('.')
-                                    if n not in ('interfaces', 'nipype')])
-        web_url += '.%s' % long_node_title.split('.')[0]
-        if len(long_node_title.split('.')) > 1:
-            web_url += '/%s.html' % long_node_title.split('.')[1]
-            web_url += '#%s' % node.__name__
-        return web_url, long_node_title
+        return ''
+
+    is_algo = module.split('.')[0] == 'algorithms'
+
+    web_url = 'https://nipype.readthedocs.io/en/latest/interfaces/generated/'
+    if is_algo:
+        module = 'nipype.' + module
+
+    web_url += module
+    all_sub_modules = _get_submodule(node)
+
+    if len(all_sub_modules) > 1:
+
+        if not is_algo:
+            web_url += '/%s.html' % all_sub_modules[1]
+        else:
+            web_url += '.html'
+
+        web_url += '#%s' % node.__name__.lower()
+
+    return web_url
 
 
 def _get_node_name(node, custom_node):
@@ -164,9 +180,17 @@ def _get_node_name(node, custom_node):
     else:
         return node.__name__
 
+
+def _get_submodule(node):
+
+    module_tree = inspect.getmodule(node).__name__
+    all_sub_modules = [n for n in module_tree.split('.')
+                       if n not in ('interfaces', 'nipype')]
+    return all_sub_modules
+
+
 def pyfunc2json():
     """ Experimental function to convert Python functions
     directly to Porcupine's JSON format (by converting it)
     first to a Nipype node. """
     pass
-

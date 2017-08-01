@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "icc"
+      ],
+      "title": {
+        "name": "icc.ICC",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.icc.html#icc",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Calculates Interclass Correlation Coefficient (3,1) as defined in",
+            "argument": "icc.ICC()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "subjects_sessions",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subjects_sessions"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "icc_map",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "icc_map"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "session_var_map",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "session_var_map"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "subject_var_map",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_var_map"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

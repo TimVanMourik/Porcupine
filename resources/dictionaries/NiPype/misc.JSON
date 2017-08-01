@@ -1,0 +1,1820 @@
+{
+  "nodes": [
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "misc"
+      ],
+      "title": {
+        "name": "misc.AddCSVColumn",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.misc.html#addcsvcolumn",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Short interface to add an extra column and field to a text file",
+            "argument": "misc.AddCSVColumn()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "extra_column_heading",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "extra_column_heading"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "extra_field",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "extra_field"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "csv_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "csv_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "misc"
+      ],
+      "title": {
+        "name": "misc.AddCSVRow",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.misc.html#addcsvrow",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Simple interface to add an extra row to a csv file",
+            "argument": "misc.AddCSVRow()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "_outputs",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "_outputs"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "csv_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "csv_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "misc"
+      ],
+      "title": {
+        "name": "misc.AddNoise",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.misc.html#addnoise",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Corrupts with noise the input image",
+            "argument": "misc.AddNoise()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "in_mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_mask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "snr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "snr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "dist",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dist"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "bg_dist",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bg_dist"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "misc"
+      ],
+      "title": {
+        "name": "misc.CalculateNormalizedMoments",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.misc.html#calculatenormalizedmoments",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Calculates moments of timeseries.",
+            "argument": "misc.CalculateNormalizedMoments()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "timeseries_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "timeseries_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "moment",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "moment"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "moments",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "moments"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "misc"
+      ],
+      "title": {
+        "name": "misc.CreateNifti",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.misc.html#createnifti",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Creates a nifti volume",
+            "argument": "misc.CreateNifti()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "data_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "data_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "header_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "header_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "affine",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "affine"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "nifti_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "nifti_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "misc"
+      ],
+      "title": {
+        "name": "misc.Distance",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.misc.html#distance",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Calculates distance between two volumes.",
+            "argument": "misc.Distance()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "volume1",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "volume1"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "volume2",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "volume2"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "method",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "method"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask_volume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask_volume"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "distance",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "distance"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "point1",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "point1"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "point2",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "point2"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "histogram",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "histogram"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "misc"
+      ],
+      "title": {
+        "name": "misc.FuzzyOverlap",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.misc.html#fuzzyoverlap",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Calculates various overlap measures between two maps, using a fuzzy",
+            "argument": "misc.FuzzyOverlap()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_ref",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_ref"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_tst",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_tst"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "weighting",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "weighting"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "jaccard",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "jaccard"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "dice",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dice"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "diff_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "diff_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "class_fji",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "class_fji"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "class_fdi",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "class_fdi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "misc"
+      ],
+      "title": {
+        "name": "misc.Gunzip",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.misc.html#gunzip",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Gunzip wrapper",
+            "argument": "misc.Gunzip()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "misc"
+      ],
+      "title": {
+        "name": "misc.Matlab2CSV",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.misc.html#matlab2csv",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Simple interface to save the components of a MATLAB .mat file as a text",
+            "argument": "misc.Matlab2CSV()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "reshape_matrix",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reshape_matrix"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "csv_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "csv_files"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "misc"
+      ],
+      "title": {
+        "name": "misc.MergeCSVFiles",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.misc.html#mergecsvfiles",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "This interface is designed to facilitate data loading in the R environment.",
+            "argument": "misc.MergeCSVFiles()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "column_headings",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "column_headings"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "row_headings",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "row_headings"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "row_heading_title",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "row_heading_title"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "extra_column_heading",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "extra_column_heading"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "extra_field",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "extra_field"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "csv_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "csv_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "misc"
+      ],
+      "title": {
+        "name": "misc.MergeROIs",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.misc.html#mergerois",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Splits a 3D image in small chunks to enable parallel processing.",
+            "argument": "misc.MergeROIs()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "in_index",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_index"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "in_reference",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_reference"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "merged_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "merged_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "misc"
+      ],
+      "title": {
+        "name": "misc.ModifyAffine",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.misc.html#modifyaffine",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Left multiplies the affine matrix with a specified values. Saves the volume",
+            "argument": "misc.ModifyAffine()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "volumes",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "volumes"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "transformation_matrix",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transformation_matrix"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "transformed_volumes",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transformed_volumes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "misc"
+      ],
+      "title": {
+        "name": "misc.NormalizeProbabilityMapSet",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.misc.html#normalizeprobabilitymapset",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Returns the input tissue probability maps (tpms, aka volume fractions)",
+            "argument": "misc.NormalizeProbabilityMapSet()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "in_mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_mask"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_files"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "misc"
+      ],
+      "title": {
+        "name": "misc.Overlap",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.misc.html#overlap",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Calculates various overlap measures between two maps.",
+            "argument": "misc.Overlap()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "volume1",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "volume1"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "volume2",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "volume2"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask_volume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask_volume"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "bg_overlap",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bg_overlap"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "weighting",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "weighting"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "vol_units",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "vol_units"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "jaccard",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "jaccard"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "dice",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dice"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "roi_ji",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "roi_ji"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "roi_di",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "roi_di"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "volume_difference",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "volume_difference"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "roi_voldiff",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "roi_voldiff"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "labels",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "labels"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "diff_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "diff_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "misc"
+      ],
+      "title": {
+        "name": "misc.PickAtlas",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.misc.html#pickatlas",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Returns ROI masks given an atlas and a list of labels. Supports dilation",
+            "argument": "misc.PickAtlas()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "atlas",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "atlas"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "labels",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "labels"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "hemi",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "hemi"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dilation_size",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dilation_size"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "output_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "output_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "mask_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "misc"
+      ],
+      "title": {
+        "name": "misc.SimpleThreshold",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.misc.html#simplethreshold",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Applies a threshold to input volumes",
+            "argument": "misc.SimpleThreshold()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "volumes",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "volumes"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "threshold",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "threshold"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "thresholded_volumes",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "thresholded_volumes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "misc"
+      ],
+      "title": {
+        "name": "misc.SplitROIs",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.misc.html#splitrois",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Splits a 3D image in small chunks to enable parallel processing.",
+            "argument": "misc.SplitROIs()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "in_mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_mask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "roi_size",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "roi_size"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_files"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_masks",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_masks"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_index",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_index"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "algorithms",
+        "misc"
+      ],
+      "title": {
+        "name": "misc.TSNR",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.misc.html#tsnr",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": ".. deprecated:: 0.12.1",
+            "argument": "misc.TSNR()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "regress_poly",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "regress_poly"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "tsnr_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "tsnr_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mean_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mean_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "stddev_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "stddev_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "detrended_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "detrended_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "tsnr_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "tsnr_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "mean_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mean_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "stddev_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "stddev_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "detrended_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "detrended_file"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
