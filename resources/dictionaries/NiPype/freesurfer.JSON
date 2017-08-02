@@ -14,6 +14,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_add_xform_to_header**",
             "argument": "freesurfer.AddXFormToHeader()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -177,6 +181,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_aparc2aseg**",
             "argument": "freesurfer.Aparc2Aseg()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -535,6 +543,10 @@
             "language": "NiPype",
             "comment": "Wraps command **apas2aseg**",
             "argument": "freesurfer.Apas2Aseg()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -659,6 +671,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_mask**",
             "argument": "freesurfer.ApplyMask()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -900,6 +916,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_vol2vol**",
             "argument": "freesurfer.ApplyVolTransform()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -1219,36 +1239,14 @@
             "language": "NiPype",
             "comment": "Wraps command **bbregister**",
             "argument": "freesurfer.BBRegister()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
       "ports": [
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "init",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "init"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "init_reg_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "init_reg_file"
-            }
-          ]
-        },
         {
           "input": true,
           "output": false,
@@ -1272,6 +1270,32 @@
             {
               "language": "NiPype",
               "argument": "source_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "init",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "init"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "init_reg_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "init_reg_file"
             }
           ]
         },
@@ -1577,6 +1601,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_binarize**",
             "argument": "freesurfer.Binarize()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -2026,6 +2054,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_ca_label**",
             "argument": "freesurfer.CALabel()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -2293,6 +2325,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_ca_normalize**",
             "argument": "freesurfer.CANormalize()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -2495,6 +2531,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_ca_register**",
             "argument": "freesurfer.CARegister()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -2749,6 +2789,10 @@
             "language": "NiPype",
             "comment": "Wraps command **talairach_afd**",
             "argument": "freesurfer.CheckTalairachAlignment()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -2886,6 +2930,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_concat**",
             "argument": "freesurfer.Concatenate()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -3205,6 +3253,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_concatenate_lta**",
             "argument": "freesurfer.ConcatenateLTA()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -3342,6 +3394,10 @@
             "language": "NiPype",
             "comment": "Wraps command **pctsurfcon**",
             "argument": "freesurfer.Contrast()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -3583,6 +3639,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mris_curvature**",
             "argument": "freesurfer.Curvature()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -3785,6 +3845,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mris_curvature_stats**",
             "argument": "freesurfer.CurvatureStats()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -4013,6 +4077,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_convert**",
             "argument": "freesurfer.DICOMConvert()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -4215,6 +4283,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_em_register**",
             "argument": "freesurfer.EMRegister()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -4417,6 +4489,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_edit_wm_with_aseg**",
             "argument": "freesurfer.EditWMwithAseg()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -4580,6 +4656,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mris_euler_number**",
             "argument": "freesurfer.EulerNumber()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -4691,6 +4771,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mris_extract_main_component**",
             "argument": "freesurfer.ExtractMainComponent()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -4802,6 +4886,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_ms_fitparms**",
             "argument": "freesurfer.FitMSParams()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -5004,6 +5092,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mris_fix_topology**",
             "argument": "freesurfer.FixTopology()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -5245,6 +5337,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_fuse_segmentations**",
             "argument": "freesurfer.FuseSegmentations()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -5421,6 +5517,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_glmfit**",
             "argument": "freesurfer.GLMFit()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -6429,6 +6529,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mris_jacobian**",
             "argument": "freesurfer.Jacobian()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -6566,6 +6670,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mris_label2annot**",
             "argument": "freesurfer.Label2Annot()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -6781,6 +6889,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_label2label**",
             "argument": "freesurfer.Label2Label()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -7022,6 +7134,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_label2vol**",
             "argument": "freesurfer.Label2Vol()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -7367,6 +7483,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_nu_correct.mni**",
             "argument": "freesurfer.MNIBiasCorrection()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -7595,6 +7715,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mpr2mni305**",
             "argument": "freesurfer.MPRtoMNI305()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -7745,6 +7869,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_convert**",
             "argument": "freesurfer.MRIConvert()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -8922,6 +9050,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_fill**",
             "argument": "freesurfer.MRIFill()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -9098,6 +9230,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_mc**",
             "argument": "freesurfer.MRIMarchingCubes()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -9248,6 +9384,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_pretess**",
             "argument": "freesurfer.MRIPretess()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -9437,6 +9577,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mris_preproc**",
             "argument": "freesurfer.MRISPreproc()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -9769,6 +9913,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mris_preproc**",
             "argument": "freesurfer.MRISPreprocReconAll()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -10166,6 +10314,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_tessellate**",
             "argument": "freesurfer.MRITessellate()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -10329,6 +10481,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mris_ca_label**",
             "argument": "freesurfer.MRIsCALabel()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -10596,6 +10752,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mris_calc**",
             "argument": "freesurfer.MRIsCalc()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -10772,6 +10932,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mris_convert**",
             "argument": "freesurfer.MRIsCombine()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -10896,6 +11060,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mris_convert**",
             "argument": "freesurfer.MRIsConvert()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -11254,6 +11422,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mris_expand**",
             "argument": "freesurfer.MRIsExpand()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -11508,6 +11680,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mris_inflate**",
             "argument": "freesurfer.MRIsInflate()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -11671,6 +11847,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_ms_LDA**",
             "argument": "freesurfer.MS_LDA()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -11899,6 +12079,10 @@
             "language": "NiPype",
             "comment": "Wraps command **make_average_subject**",
             "argument": "freesurfer.MakeAverageSubject()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -12023,6 +12207,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mris_make_surfaces**",
             "argument": "freesurfer.MakeSurfaces()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -12446,6 +12634,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_normalize**",
             "argument": "freesurfer.Normalize()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -12622,6 +12814,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_glmfit**",
             "argument": "freesurfer.OneSampleTTest()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -13630,6 +13826,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mrisp_paint**",
             "argument": "freesurfer.Paint()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -13793,6 +13993,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mris_anatomical_stats**",
             "argument": "freesurfer.ParcellationStats()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -14203,6 +14407,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_parse_sdcmdir**",
             "argument": "freesurfer.ParseDICOMDir()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -14353,6 +14561,10 @@
             "language": "NiPype",
             "comment": "Wraps command **recon-all**",
             "argument": "freesurfer.ReconAll()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -15504,6 +15716,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mris_register**",
             "argument": "freesurfer.Register()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -15680,6 +15896,10 @@
             "language": "NiPype",
             "comment": "Wraps command **avi2talxfm**",
             "argument": "freesurfer.RegisterAVItoTalairach()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -15843,6 +16063,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_relabel_hypointensities**",
             "argument": "freesurfer.RelabelHypointensities()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -16006,6 +16230,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mris_remove_intersection**",
             "argument": "freesurfer.RemoveIntersection()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -16130,6 +16358,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_remove_neck**",
             "argument": "freesurfer.RemoveNeck()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -16293,6 +16525,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_convert**",
             "argument": "freesurfer.Resample()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -16430,6 +16666,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_robust_register**",
             "argument": "freesurfer.RobustRegister()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -16996,6 +17236,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_robust_template**",
             "argument": "freesurfer.RobustTemplate()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -17302,6 +17546,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_vol2surf**",
             "argument": "freesurfer.SampleToSurface()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -17881,6 +18129,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_segstats**",
             "argument": "freesurfer.SegStats()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -18538,6 +18790,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_segstats**",
             "argument": "freesurfer.SegStatsReconAll()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -19351,6 +19607,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_cc**",
             "argument": "freesurfer.SegmentCC()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -19540,6 +19800,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_segment**",
             "argument": "freesurfer.SegmentWM()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -19664,6 +19928,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mris_volsmooth**",
             "argument": "freesurfer.Smooth()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -19866,6 +20134,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mris_smooth**",
             "argument": "freesurfer.SmoothTessellation()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -20146,6 +20418,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mris_sphere**",
             "argument": "freesurfer.Sphere()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -20322,6 +20598,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mris_spherical_average**",
             "argument": "freesurfer.SphericalAverage()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -20550,6 +20830,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_surf2vol**",
             "argument": "freesurfer.Surface2VolTransform()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -20791,6 +21075,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_surf2surf**",
             "argument": "freesurfer.SurfaceSmooth()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -20993,6 +21281,10 @@
             "language": "NiPype",
             "comment": "Wraps command **tksurfer**",
             "argument": "freesurfer.SurfaceSnapshots()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -21494,6 +21786,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_surf2surf**",
             "argument": "freesurfer.SurfaceTransform()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -21735,6 +22031,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_synthesize**",
             "argument": "freesurfer.SynthesizeFLASH()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -21924,6 +22224,10 @@
             "language": "NiPype",
             "comment": "Wraps command **talairach_avi**",
             "argument": "freesurfer.TalairachAVI()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -22087,6 +22391,10 @@
             "language": "NiPype",
             "comment": "Wraps command **tal_QC_AZS**",
             "argument": "freesurfer.TalairachQC()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -22198,6 +22506,10 @@
             "language": "NiPype",
             "comment": "Wraps command **tkregister2**",
             "argument": "freesurfer.Tkregister2()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -22465,6 +22777,10 @@
             "language": "NiPype",
             "comment": "Wraps command **unpacksdcmdir**",
             "argument": "freesurfer.UnpackSDICOMDir()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -22693,6 +23009,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mris_volmask**",
             "argument": "freesurfer.VolumeMask()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },
@@ -22986,6 +23306,10 @@
             "language": "NiPype",
             "comment": "Wraps command **mri_watershed**",
             "argument": "freesurfer.WatershedSkullStrip()"
+          },
+          {
+            "language": "Docker",
+            "argument": "--freesurfer version=6.0.0 min=true"
           }
         ]
       },

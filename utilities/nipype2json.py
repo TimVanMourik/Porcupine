@@ -54,6 +54,11 @@ def node2json(node, module=None, custom_node=False, category="Custom"):
                   'code': [{'language': category,
                             'comment': descr,
                             'argument': module.split('.')[1] + '.%s()' % node_name}]}
+    
+    dockerCode = _docker_block(module.split('.')[1])
+    if not dockerCode == '':
+        titleBlock['code'].append({'language': 'Docker',
+                                   'argument': dockerCode})
 
     ports = []
 
@@ -188,6 +193,19 @@ def _get_submodule(node):
                        if n not in ('interfaces', 'nipype')]
     return all_sub_modules
 
+
+DOCKER_DICTIONARY = {'afni': '--afni version=latest',
+                     'ants': '--ants version=2.2.0',
+                     'freesurfer': '--freesurfer version=6.0.0 min=true',
+                     'fsl': '--fsl version=5.0.10',
+                     'mrtrix': ' '}
+
+def _docker_block(module):
+    try:
+        return DOCKER_DICTIONARY[module]
+    except:
+        return ''
+    
 
 def pyfunc2json():
     """ Experimental function to convert Python functions
