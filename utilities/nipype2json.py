@@ -198,7 +198,7 @@ DOCKER_DICTIONARY = {'afni': '--afni version=latest',
                      'ants': '--ants version=2.2.0',
                      'freesurfer': '--freesurfer version=6.0.0 min=true',
                      'fsl': '--fsl version=5.0.10',
-                     'mrtrix': ' '}
+                     'mrtrix': '--mrtrix3'}
 
 def _docker_block(module):
     try:
