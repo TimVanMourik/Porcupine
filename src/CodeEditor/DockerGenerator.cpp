@@ -44,6 +44,7 @@ QString DockerGenerator::generateCode(
 
     QString code("");
     code += "docker run --rm kaczmarj/neurodocker generate \\\n";
+    code += "--base timvanmourik/porcupine --pkg-manager apt \\\n";
     QStringList uniqueDockerCommands;
     foreach (const NodeTreeItem* item, _nodeList)
     {
@@ -59,10 +60,11 @@ QString DockerGenerator::generateCode(
     {
         code += command + " \\\n";
     }
-    code += "-o Dockerfile\n\n";
+    QString dockerFile("Dockerfile");
+    code += QString("> %1\n\n").arg(dockerFile);
 
     code += "# Build Docker image using the saved Dockerfile.\n";
-    code += "docker build -t myimage -f Dockerfile .";
+    code += QString("docker build -t myimage -f %1 .").arg(dockerFile);
 
     code += "\n";
     return code;
