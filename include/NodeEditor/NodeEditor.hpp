@@ -113,12 +113,21 @@ public:
             bool _destroyOnSelection
             ) const;
     //
+    const QString& getFileName(
+            );
+    //
     ~NodeEditor(
             );
 signals:
+    //
     void linkCreated(
             const Node* _from,
             const Node* _to
+            );
+public slots:
+    //
+    void setFileName(
+            const QString& _fileName
             );
 private:
     //
@@ -140,6 +149,8 @@ private:
     float m_scalingFactor;
     //
     QPointF m_lastClickedPoint;
+    //
+    QString m_fileName;
     //
 //    SelectionBox* m_newSelection;
     //

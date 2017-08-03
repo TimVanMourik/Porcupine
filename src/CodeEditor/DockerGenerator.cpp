@@ -39,7 +39,6 @@ QString DockerGenerator::generateCode(
             const QVector<const Link*>& _linkList
             )
 {
-    Q_UNUSED(_nodeList);
     Q_UNUSED(_linkList);
 
     QString code("");
@@ -60,6 +59,7 @@ QString DockerGenerator::generateCode(
     {
         code += command + " \\\n";
     }
+
     QString dockerFile("Dockerfile");
     code += QString("> %1\n\n").arg(dockerFile);
 

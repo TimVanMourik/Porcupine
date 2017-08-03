@@ -276,8 +276,16 @@ void MainWindow::nodeSlot(
 void MainWindow::saveFileToJson(
         )
 {
-    QString fileName = QFileDialog::getSaveFileName();
-    if (fileName.isEmpty())
+    QString filters("Pipeline files (*.pork);;All files (*.*)");
+    QString defaultFilter("Pipeline files (*.pork)");
+    QFileDialog fileDialog(0, "Save file", QDir::currentPath(), filters);
+    fileDialog.setAcceptMode(QFileDialog::AcceptSave);
+    fileDialog.selectNameFilter(defaultFilter);
+    fileDialog.selectFile(m_nodeEditors[m_nodeEditorWidget->currentIndex()]->getFileName());
+    fileDialog.exec();
+
+    QString fileName = fileDialog.selectedFiles().first();
+    if(!fileName.length())
     {
         return;
     }
@@ -302,29 +310,33 @@ void MainWindow::saveFileToJson(
 
 void MainWindow::openFile()
 {
-    #ifdef DARWIN // on Mac, the file dialog does not want to close with the native file dialog
-        QFile file(QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("Pipelines (*.pork)"), 0, QFileDialog::DontUseNativeDialog));
-    #else
-        QFile file(QFileDialog::getOpenFileName(this, tr("Open file"), QDir::homePath(), tr("Pipelines (*.pork)"), 0));
-    #endif       
+    QString filters("Pipeline files (*.pork);;All files (*.*)");
+    QString defaultFilter("Pipeline files (*.pork)");
+    QFileDialog fileDialog(0, "Open file", QDir::currentPath(), filters);
+    fileDialog.selectNameFilter(defaultFilter);
+    fileDialog.setAcceptMode(QFileDialog::AcceptOpen);
+    fileDialog.setFileMode(QFileDialog::ExistingFiles);
+    fileDialog.selectFile(m_nodeEditors[m_nodeEditorWidget->currentIndex()]->getFileName());
+    fileDialog.exec();
 
-    QFileInfo fileInfo(file.fileName());
-    QString filename(fileInfo.fileName());
-    QCoreApplication::processEvents();
-
-    if (!file.open(QIODevice::ReadOnly))
+    foreach (const QString& fileName, fileDialog.selectedFiles())
     {
-        std::cerr << "Error: cannot open file\n";
-        return;
+        QFile file(fileName);
+        QFileInfo fileInfo(file.fileName());
+        if (!file.open(QIODevice::ReadOnly))
+        {
+            std::cerr << "Error: cannot open file\n";
+            return;
+        }
+        QJsonDocument document(QJsonDocument::fromJson(file.readAll()));
+        file.close();
+
+        newFile();
+        m_nodeEditorWidget->setTabText(m_nodeEditorWidget->currentIndex(),  fileInfo.fileName());
+        m_nodeEditors     [m_nodeEditorWidget->currentIndex()]->setFileName(fileInfo.fileName());
+        m_nodeEditors     [m_nodeEditorWidget->currentIndex()]->loadFromJson(document.object());
+        m_parameterEditors[m_nodeEditorWidget->currentIndex()]->loadFromJson(document.object());
     }
-    QJsonDocument document(QJsonDocument::fromJson(file.readAll()));
-    file.close();
-
-    newFile();
-
-    m_nodeEditorWidget->setTabText(m_nodeEditorWidget->currentIndex(), filename);
-    m_nodeEditors     [m_nodeEditorWidget->currentIndex()]->loadFromJson(document.object());
-    m_parameterEditors[m_nodeEditorWidget->currentIndex()]->loadFromJson(document.object());
 }
 
 void MainWindow::printFile(
@@ -365,7 +377,9 @@ void MainWindow::newFile(
 
     //Add it to a new tab
     m_currentFileIndex = m_nodeEditors.length() - 1;
-    m_nodeEditorWidget->addTab(m_nodeEditors[m_currentFileIndex], tr("Untitled"));
+    QString fileName = tr("Untitled.pork");
+    m_nodeEditors[m_currentFileIndex]->setFileName(fileName);
+    m_nodeEditorWidget->addTab(m_nodeEditors[m_currentFileIndex], fileName);
     m_nodeTreeWidget    ->layout()->addWidget(m_nodeTreeEditors[m_currentFileIndex]);
     m_codeEditorWidget  ->layout()->addWidget(m_codeEditors[m_currentFileIndex]);
     m_parameterWidget   ->layout()->addWidget(m_parameterEditors[m_currentFileIndex]);

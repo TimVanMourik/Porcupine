@@ -48,6 +48,7 @@ NodeEditor::NodeEditor(
     m_newLink(0),
     m_scalingFactor(1),
     m_lastClickedPoint(QPointF(0, 0)),
+    m_fileName(QString()),
 //    m_newSelection(0),
     m_treeModel(0)
 {
@@ -69,6 +70,19 @@ void NodeEditor::install(
     scene->installEventFilter(this);
 
     show();
+}
+
+const QString& NodeEditor::getFileName(
+        )
+{
+    return m_fileName;
+}
+
+void NodeEditor::setFileName(
+        const QString& _fileName
+        )
+{
+    m_fileName = _fileName;
 }
 
 void NodeEditor::printScene(
