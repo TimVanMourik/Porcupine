@@ -57,8 +57,12 @@ QString DockerGenerator::generateCode(
     }
     foreach (const QString& command, uniqueDockerCommands)
     {
-        code += command + "\\\n";
+        code += command + " \\\n";
     }
+    code += "-o Dockerfile\n\n";
+
+    code += "# Build Docker image using the saved Dockerfile.\n";
+    code += "docker build -t myimage -f Dockerfile .";
 
     code += "\n";
     return code;
