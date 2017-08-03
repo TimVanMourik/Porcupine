@@ -77,6 +77,9 @@ private:
     void setupNipypeEditor(
             );
     //
+    void setupDockerEditor(
+            );
+    //
     ParameterEditor* m_parameterEditor;
     //
     QMap<QString, QTextEdit*> m_textEditors;

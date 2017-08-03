@@ -21,6 +21,7 @@
     <http://www.gnu.org/licenses/>.
 */
 
+#include <QDebug>
 #include <QFileDialog>
 #include <QTextEdit>
 
@@ -31,6 +32,7 @@
 #include "PythonHighlighter.hpp"
 #include "TvmGenerator.hpp"
 #include "NipypeGenerator.hpp"
+#include "DockerGenerator.hpp"
 #include "ParameterEditor.hpp"
 
 CodeEditor::CodeEditor(
@@ -106,6 +108,21 @@ void CodeEditor::generateCode(
         QString translucentLabel = QString::fromLatin1(styleFile.readAll());
         m_textEditors[language]->setStyleSheet(translucentLabel);
     }
+
+    language = "Docker";
+    if(isPresentInEditor(language, _nodeList))
+    {
+        if(!m_textEditors[language])
+        {
+            setupDockerEditor();
+        }
+        m_textEditors[language]->setPlainText(m_codeGenerators[language]->generateCode(_nodeList, _linkList));
+
+        QFile styleFile(":/qss/codeEditor.qss");
+        styleFile.open(QFile::ReadOnly);
+        QString translucentLabel = QString::fromLatin1(styleFile.readAll());
+        m_textEditors[language]->setStyleSheet(translucentLabel);
+    }
 }
 
 void CodeEditor::saveCodeToFile(
@@ -150,7 +167,6 @@ void CodeEditor::setupTvmEditor(
     addTab(m_textEditors[matlab], matlab);
 }
 
-
 void CodeEditor::setupNipypeEditor(
         )
 {
@@ -171,6 +187,27 @@ void CodeEditor::setupNipypeEditor(
     m_codeGenerators[python] = new NipypeGenerator(this);
     addTab(m_textEditors[python], python);
 }
+
+void CodeEditor::setupDockerEditor(
+        )
+{
+    const int tabWidth = 4;
+    QString docker("Docker");
+    m_programmingLanguages << docker;
+    QFont dockerFont = QFont("Courier", 10);
+    dockerFont.setStyleHint(QFont::Monospace);
+    dockerFont.setFixedPitch(true);
+    QFontMetrics dockerMetric(dockerFont);
+
+    QTextEdit* dockerEditor = new QTextEdit(this);
+    dockerEditor->setFont(dockerFont);
+    dockerEditor->setTabStopWidth(tabWidth * dockerMetric.width(' '));
+
+    m_textEditors[docker] = dockerEditor;
+    m_codeGenerators[docker] = new DockerGenerator(this);
+    addTab(m_textEditors[docker], docker);
+}
+
 
 CodeEditor::~CodeEditor()
 {

@@ -65,7 +65,8 @@ SOURCES                                += $$ROOT/main.cpp \
                                           $$ROOT/src/CodeEditor/NipypeStupidExceptions.cpp \
                                           $$ROOT/src/CodeEditor/PythonHighlighter.cpp \
                                           $$ROOT/src/CodeEditor/SyntaxHighlighter.cpp \
-                                          $$ROOT/src/CodeEditor/TvmGenerator.cpp
+                                          $$ROOT/src/CodeEditor/TvmGenerator.cpp \
+                                          $$ROOT/src/CodeEditor/DockerGenerator.cpp
 
 HEADERS                                += $$ROOT/include/MainWindow.hpp \
                                           $$ROOT/include/Settings/Argument.hpp \
@@ -94,7 +95,8 @@ HEADERS                                += $$ROOT/include/MainWindow.hpp \
                                           $$ROOT/include/CodeEditor/TvmGenerator.hpp \
                                           $$ROOT/include/CodeEditor/NipypeGenerator.hpp \
                                           $$ROOT/include/CodeEditor/CodeGenerator.hpp \
-                                          $$ROOT/include/CodeEditor/NipypeStupidExceptions.hpp
+                                          $$ROOT/include/CodeEditor/NipypeStupidExceptions.hpp \
+                                          $$ROOT/include/CodeEditor/DockerGenerator.hpp
 
 RESOURCES                               = $$ROOT/resources/resources.qrc
 
