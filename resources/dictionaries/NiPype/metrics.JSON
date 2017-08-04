@@ -184,19 +184,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "mask",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "mask"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "metric",
@@ -204,6 +191,19 @@
             {
               "language": "NiPype",
               "argument": "metric"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask"
             }
           ]
         },
@@ -458,13 +458,13 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
+          "visible": true,
           "editable": true,
-          "name": "mask_volume",
+          "name": "bg_overlap",
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_volume"
+              "argument": "bg_overlap"
             }
           ]
         },
@@ -473,11 +473,24 @@
           "output": false,
           "visible": true,
           "editable": true,
-          "name": "bg_overlap",
+          "name": "vol_units",
           "code": [
             {
               "language": "NiPype",
-              "argument": "bg_overlap"
+              "argument": "vol_units"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask_volume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask_volume"
             }
           ]
         },
@@ -504,19 +517,6 @@
             {
               "language": "NiPype",
               "argument": "weighting"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "vol_units",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "vol_units"
             }
           ]
         },

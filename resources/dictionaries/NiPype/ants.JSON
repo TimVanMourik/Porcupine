@@ -25,19 +25,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "dimension",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "dimension"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "fixed_image",
@@ -77,32 +64,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "metric_weight",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "metric_weight"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "radius",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "radius"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "output_transform_prefix",
@@ -123,6 +84,45 @@
             {
               "language": "NiPype",
               "argument": "transformation_model"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dimension"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "metric_weight",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "metric_weight"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "radius",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "radius"
             }
           ]
         },
@@ -465,19 +465,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "dimension",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "dimension"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "fixed_image",
@@ -498,6 +485,19 @@
             {
               "language": "NiPype",
               "argument": "moving_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dimension"
             }
           ]
         },
@@ -671,19 +671,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "dimension",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "dimension"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "target_image",
@@ -717,6 +704,19 @@
             {
               "language": "NiPype",
               "argument": "atlas_segmentation_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dimension"
             }
           ]
         },
@@ -1072,6 +1072,45 @@
         {
           "input": true,
           "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "input_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "input_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "reference_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reference_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "transforms",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transforms"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
           "visible": false,
           "editable": true,
           "name": "dimension",
@@ -1092,19 +1131,6 @@
             {
               "language": "NiPype",
               "argument": "input_image_type"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "input_image",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "input_image"
             }
           ]
         },
@@ -1137,19 +1163,6 @@
         {
           "input": true,
           "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "reference_image",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "reference_image"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": false,
           "editable": true,
           "name": "interpolation",
@@ -1170,19 +1183,6 @@
             {
               "language": "NiPype",
               "argument": "interpolation_parameters"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "transforms",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "transforms"
             }
           ]
         },
@@ -1343,19 +1343,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "dimension",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "dimension"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "input_file",
@@ -1369,19 +1356,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "output_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "output_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "transforms",
@@ -1389,6 +1363,32 @@
             {
               "language": "NiPype",
               "argument": "transforms"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dimension"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "output_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "output_file"
             }
           ]
         },
@@ -1510,19 +1510,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "dimension",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "dimension"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "intensity_images",
@@ -1562,19 +1549,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "prior_probability_images",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "prior_probability_images"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "number_of_tissue_classes",
@@ -1582,6 +1556,32 @@
             {
               "language": "NiPype",
               "argument": "number_of_tissue_classes"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dimension"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "prior_probability_images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "prior_probability_images"
             }
           ]
         },
@@ -2052,19 +2052,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "output_average_image",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "output_average_image"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "normalize",
@@ -2085,6 +2072,19 @@
             {
               "language": "NiPype",
               "argument": "images"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "output_average_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "output_average_image"
             }
           ]
         },
@@ -2193,19 +2193,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "dimension",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "dimension"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "anatomical_image",
@@ -2239,6 +2226,19 @@
             {
               "language": "NiPype",
               "argument": "brain_probability_mask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dimension"
             }
           ]
         },
@@ -2685,32 +2685,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "output_image",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "output_image"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "mask_image",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "mask_image"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "colormap",
@@ -2718,19 +2692,6 @@
             {
               "language": "NiPype",
               "argument": "colormap"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "custom_color_map_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "custom_color_map_file"
             }
           ]
         },
@@ -2757,6 +2718,45 @@
             {
               "language": "NiPype",
               "argument": "maximum_input"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "output_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "output_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "custom_color_map_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "custom_color_map_file"
             }
           ]
         },
@@ -2891,19 +2891,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "dimension",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "dimension"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "anatomical_image",
@@ -2956,6 +2943,32 @@
         {
           "input": true,
           "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "t1_registration_template",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "t1_registration_template"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dimension"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
           "visible": false,
           "editable": true,
           "name": "out_prefix",
@@ -2976,19 +2989,6 @@
             {
               "language": "NiPype",
               "argument": "image_suffix"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "t1_registration_template",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "t1_registration_template"
             }
           ]
         },
@@ -3821,13 +3821,13 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
+          "visible": true,
           "editable": true,
-          "name": "dimension",
+          "name": "input_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "dimension"
+              "argument": "input_image"
             }
           ]
         },
@@ -3836,11 +3836,24 @@
           "output": false,
           "visible": true,
           "editable": true,
-          "name": "input_image",
+          "name": "save_noise",
           "code": [
             {
               "language": "NiPype",
-              "argument": "input_image"
+              "argument": "save_noise"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dimension"
             }
           ]
         },
@@ -3880,19 +3893,6 @@
             {
               "language": "NiPype",
               "argument": "output_image"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "save_noise",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "save_noise"
             }
           ]
         },
@@ -4105,6 +4105,19 @@
         {
           "input": true,
           "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "output_label_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "output_label_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
           "visible": false,
           "editable": true,
           "name": "method",
@@ -4138,19 +4151,6 @@
             {
               "language": "NiPype",
               "argument": "beta"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "output_label_image",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "output_label_image"
             }
           ]
         },
@@ -4684,13 +4684,13 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
+          "visible": true,
           "editable": true,
-          "name": "dimension",
+          "name": "input_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "dimension"
+              "argument": "input_image"
             }
           ]
         },
@@ -4699,11 +4699,24 @@
           "output": false,
           "visible": true,
           "editable": true,
-          "name": "input_image",
+          "name": "save_bias",
           "code": [
             {
               "language": "NiPype",
-              "argument": "input_image"
+              "argument": "save_bias"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dimension"
             }
           ]
         },
@@ -4808,19 +4821,6 @@
             {
               "language": "NiPype",
               "argument": "convergence_threshold"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "save_bias",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "save_bias"
             }
           ]
         },
@@ -4955,19 +4955,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "dimension",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "dimension"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "fixed_image",
@@ -4981,13 +4968,13 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
+          "visible": true,
           "editable": true,
-          "name": "fixed_image_mask",
+          "name": "moving_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "fixed_image_mask"
+              "argument": "moving_image"
             }
           ]
         },
@@ -4996,11 +4983,89 @@
           "output": false,
           "visible": true,
           "editable": true,
-          "name": "moving_image",
+          "name": "metric",
           "code": [
             {
               "language": "NiPype",
-              "argument": "moving_image"
+              "argument": "metric"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "metric_weight",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "metric_weight"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "transforms",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transforms"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "smoothing_sigmas",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "smoothing_sigmas"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "shrink_factors",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "shrink_factors"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dimension"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "fixed_image_mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fixed_image_mask"
             }
           ]
         },
@@ -5111,19 +5176,6 @@
         {
           "input": true,
           "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "metric",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "metric"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": false,
           "editable": true,
           "name": "metric_weight_item_trait",
@@ -5144,19 +5196,6 @@
             {
               "language": "NiPype",
               "argument": "metric_weight_stage_trait"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "metric_weight",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "metric_weight"
             }
           ]
         },
@@ -5384,19 +5423,6 @@
         {
           "input": true,
           "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "transforms",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "transforms"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": false,
           "editable": true,
           "name": "transform_parameters",
@@ -5423,19 +5449,6 @@
         {
           "input": true,
           "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "smoothing_sigmas",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "smoothing_sigmas"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": false,
           "editable": true,
           "name": "sigma_units",
@@ -5443,19 +5456,6 @@
             {
               "language": "NiPype",
               "argument": "sigma_units"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "shrink_factors",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "shrink_factors"
             }
           ]
         },
@@ -5772,13 +5772,13 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
+          "visible": true,
           "editable": true,
-          "name": "dimension",
+          "name": "input_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "dimension"
+              "argument": "input_image"
             }
           ]
         },
@@ -5787,11 +5787,24 @@
           "output": false,
           "visible": true,
           "editable": true,
-          "name": "input_image",
+          "name": "transformation_series",
           "code": [
             {
               "language": "NiPype",
-              "argument": "input_image"
+              "argument": "transformation_series"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dimension"
             }
           ]
         },
@@ -5883,19 +5896,6 @@
             {
               "language": "NiPype",
               "argument": "use_bspline"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "transformation_series",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "transformation_series"
             }
           ]
         },
@@ -6017,13 +6017,13 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
+          "visible": true,
           "editable": true,
-          "name": "dimension",
+          "name": "input_image",
           "code": [
             {
               "language": "NiPype",
-              "argument": "dimension"
+              "argument": "input_image"
             }
           ]
         },
@@ -6032,11 +6032,24 @@
           "output": false,
           "visible": true,
           "editable": true,
-          "name": "input_image",
+          "name": "transformation_series",
           "code": [
             {
               "language": "NiPype",
-              "argument": "input_image"
+              "argument": "transformation_series"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dimension"
             }
           ]
         },
@@ -6115,19 +6128,6 @@
             {
               "language": "NiPype",
               "argument": "use_bspline"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "transformation_series",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "transformation_series"
             }
           ]
         },

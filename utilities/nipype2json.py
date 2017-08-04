@@ -54,9 +54,9 @@ def node2json(node, module=None, custom_node=False, category="Custom"):
                   'code': [{'language': category,
                             'comment': descr,
                             'argument': module.split('.')[1] + '.%s()' % node_name}]}
-    
+
     dockerCode = _docker_block(module.split('.')[1])
-    if not dockerCode == '':
+    if dockerCode is not None:
         titleBlock['code'].append({'language': 'Docker',
                                    'argument': dockerCode})
 
@@ -74,6 +74,8 @@ def node2json(node, module=None, custom_node=False, category="Custom"):
                 'name': inp,
                 'code': [codeBlock]}
         ports.append(port)
+
+    ports = sorted(ports, reverse=True, key=lambda p: p['visible'])
 
     for outp in all_outputs:
 
@@ -160,11 +162,13 @@ def _get_web_url(node, module, custom_node):
     is_algo = module.split('.')[0] == 'algorithms'
 
     web_url = 'https://nipype.readthedocs.io/en/latest/interfaces/generated/'
-    if is_algo:
+
+    all_sub_modules = _get_submodule(node)
+
+    if is_algo or len(all_sub_modules) < 2:
         module = 'nipype.' + module
 
     web_url += module
-    all_sub_modules = _get_submodule(node)
 
     if len(all_sub_modules) > 1:
 
@@ -174,6 +178,8 @@ def _get_web_url(node, module, custom_node):
             web_url += '.html'
 
         web_url += '#%s' % node.__name__.lower()
+    else:
+        web_url += '.html#%s' % node.__name__.lower()
 
     return web_url
 
@@ -200,12 +206,13 @@ DOCKER_DICTIONARY = {'afni': '--afni version=latest',
                      'fsl': '--fsl version=5.0.10',
                      'mrtrix': '--mrtrix3'}
 
+
 def _docker_block(module):
     try:
         return DOCKER_DICTIONARY[module]
-    except:
-        return ''
-    
+    except KeyError:
+        return None
+
 
 def pyfunc2json():
     """ Experimental function to convert Python functions

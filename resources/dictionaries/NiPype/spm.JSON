@@ -2334,19 +2334,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "spm_mat_dir",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "spm_mat_dir"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "timing_units",
@@ -2367,6 +2354,45 @@
             {
               "language": "NiPype",
               "argument": "interscan_interval"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "session_info",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "session_info"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "bases",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bases"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "spm_mat_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "spm_mat_dir"
             }
           ]
         },
@@ -2399,19 +2425,6 @@
         {
           "input": true,
           "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "session_info",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "session_info"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": false,
           "editable": true,
           "name": "factor_info",
@@ -2419,19 +2432,6 @@
             {
               "language": "NiPype",
               "argument": "factor_info"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "bases",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "bases"
             }
           ]
         },
@@ -3252,6 +3252,19 @@
         {
           "input": true,
           "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "parameter_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "parameter_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
           "visible": false,
           "editable": true,
           "name": "jobtype",
@@ -3272,19 +3285,6 @@
             {
               "language": "NiPype",
               "argument": "apply_to_files"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "parameter_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "parameter_file"
             }
           ]
         },
@@ -3623,19 +3623,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "apply_to_files",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "apply_to_files"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "deformation_file",
@@ -3643,6 +3630,19 @@
             {
               "language": "NiPype",
               "argument": "deformation_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "apply_to_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "apply_to_files"
             }
           ]
         },

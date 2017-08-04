@@ -7,7 +7,7 @@
       ],
       "title": {
         "name": "io.DataFinder",
-        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.io",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#datafinder",
         "code": [
           {
             "language": "NiPype",
@@ -117,7 +117,7 @@
       ],
       "title": {
         "name": "io.DataGrabber",
-        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.io",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#datagrabber",
         "code": [
           {
             "language": "NiPype",
@@ -127,32 +127,6 @@
         ]
       },
       "ports": [
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "base_directory",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "base_directory"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "raise_on_empty",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "raise_on_empty"
-            }
-          ]
-        },
         {
           "input": true,
           "output": false,
@@ -176,6 +150,32 @@
             {
               "language": "NiPype",
               "argument": "template"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "base_directory",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "base_directory"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "raise_on_empty",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "raise_on_empty"
             }
           ]
         },
@@ -214,7 +214,7 @@
       ],
       "title": {
         "name": "io.DataSink",
-        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.io",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#datasink",
         "code": [
           {
             "language": "NiPype",
@@ -415,7 +415,7 @@
       ],
       "title": {
         "name": "io.FreeSurferSource",
-        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.io",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#freesurfersource",
         "code": [
           {
             "language": "NiPype",
@@ -967,7 +967,7 @@
       ],
       "title": {
         "name": "io.JSONFileGrabber",
-        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.io",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#jsonfilegrabber",
         "code": [
           {
             "language": "NiPype",
@@ -1025,7 +1025,7 @@
       ],
       "title": {
         "name": "io.JSONFileSink",
-        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.io",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#jsonfilesink",
         "code": [
           {
             "language": "NiPype",
@@ -1109,7 +1109,7 @@
       ],
       "title": {
         "name": "io.MySQLSink",
-        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.io",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#mysqlsink",
         "code": [
           {
             "language": "NiPype",
@@ -1219,7 +1219,7 @@
       ],
       "title": {
         "name": "io.S3DataGrabber",
-        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.io",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#s3datagrabber",
         "code": [
           {
             "language": "NiPype",
@@ -1229,6 +1229,45 @@
         ]
       },
       "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "bucket",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "bucket"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "sort_filelist",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "sort_filelist"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "template",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "template"
+            }
+          ]
+        },
         {
           "input": true,
           "output": false,
@@ -1252,19 +1291,6 @@
             {
               "language": "NiPype",
               "argument": "region"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "bucket",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "bucket"
             }
           ]
         },
@@ -1310,32 +1336,6 @@
         {
           "input": true,
           "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "sort_filelist",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "sort_filelist"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "template",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "template"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": false,
           "editable": true,
           "name": "template_args",
@@ -1368,7 +1368,7 @@
       ],
       "title": {
         "name": "io.SQLiteSink",
-        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.io",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#sqlitesink",
         "code": [
           {
             "language": "NiPype",
@@ -1426,7 +1426,7 @@
       ],
       "title": {
         "name": "io.SSHDataGrabber",
-        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.io",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#sshdatagrabber",
         "code": [
           {
             "language": "NiPype",
@@ -1446,6 +1446,45 @@
             {
               "language": "NiPype",
               "argument": "hostname"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "base_directory",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "base_directory"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "sort_filelist",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "sort_filelist"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "template",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "template"
             }
           ]
         },
@@ -1491,19 +1530,6 @@
         {
           "input": true,
           "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "base_directory",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "base_directory"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": false,
           "editable": true,
           "name": "template_expression",
@@ -1543,32 +1569,6 @@
         {
           "input": true,
           "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "sort_filelist",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "sort_filelist"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "template",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "template"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": false,
           "editable": true,
           "name": "template_args",
@@ -1601,7 +1601,7 @@
       ],
       "title": {
         "name": "io.SelectFiles",
-        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.io",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#selectfiles",
         "code": [
           {
             "language": "NiPype",
@@ -1685,7 +1685,7 @@
       ],
       "title": {
         "name": "io.XNATSink",
-        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.io",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#xnatsink",
         "code": [
           {
             "language": "NiPype",
@@ -1695,19 +1695,6 @@
         ]
       },
       "ports": [
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "_outputs",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "_outputs"
-            }
-          ]
-        },
         {
           "input": true,
           "output": false,
@@ -1724,32 +1711,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "user",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "user"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "pwd",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "pwd"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "config",
@@ -1757,19 +1718,6 @@
             {
               "language": "NiPype",
               "argument": "config"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "cache_dir",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "cache_dir"
             }
           ]
         },
@@ -1809,6 +1757,58 @@
             {
               "language": "NiPype",
               "argument": "experiment_id"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "_outputs",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "_outputs"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "user",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "user"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "pwd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "pwd"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "cache_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "cache_dir"
             }
           ]
         },
@@ -1873,7 +1873,7 @@
       ],
       "title": {
         "name": "io.XNATSource",
-        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.io",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#xnatsource",
         "code": [
           {
             "language": "NiPype",
@@ -1899,13 +1899,13 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
+          "visible": true,
           "editable": true,
-          "name": "query_template_args",
+          "name": "server",
           "code": [
             {
               "language": "NiPype",
-              "argument": "query_template_args"
+              "argument": "server"
             }
           ]
         },
@@ -1914,11 +1914,24 @@
           "output": false,
           "visible": true,
           "editable": true,
-          "name": "server",
+          "name": "config",
           "code": [
             {
               "language": "NiPype",
-              "argument": "server"
+              "argument": "config"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "query_template_args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "query_template_args"
             }
           ]
         },
@@ -1945,19 +1958,6 @@
             {
               "language": "NiPype",
               "argument": "pwd"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "config",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "config"
             }
           ]
         },

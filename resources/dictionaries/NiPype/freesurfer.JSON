@@ -940,19 +940,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "transformed_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "transformed_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "target_file",
@@ -973,19 +960,6 @@
             {
               "language": "NiPype",
               "argument": "tal"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "tal_resolution",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "tal_resolution"
             }
           ]
         },
@@ -1064,6 +1038,32 @@
             {
               "language": "NiPype",
               "argument": "subject"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "transformed_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transformed_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "tal_resolution",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "tal_resolution"
             }
           ]
         },
@@ -1278,6 +1278,19 @@
           "output": false,
           "visible": true,
           "editable": true,
+          "name": "contrast_type",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "contrast_type"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
           "name": "init",
           "code": [
             {
@@ -1289,26 +1302,13 @@
         {
           "input": true,
           "output": false,
-          "visible": true,
+          "visible": false,
           "editable": true,
           "name": "init_reg_file",
           "code": [
             {
               "language": "NiPype",
               "argument": "init_reg_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "contrast_type",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "contrast_type"
             }
           ]
         },
@@ -2349,19 +2349,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "out_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "out_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "atlas",
@@ -2382,6 +2369,19 @@
             {
               "language": "NiPype",
               "argument": "transform"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
             }
           ]
         },
@@ -3856,19 +3856,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "surface",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "surface"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "curvfile1",
@@ -3915,6 +3902,19 @@
             {
               "language": "NiPype",
               "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "surface",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "surface"
             }
           ]
         },
@@ -5348,19 +5348,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "subject_id",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "subject_id"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "timepoints",
@@ -5420,6 +5407,19 @@
             {
               "language": "NiPype",
               "argument": "in_norms"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "subject_id",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "subject_id"
             }
           ]
         },
@@ -5528,19 +5528,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "glm_dir",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "glm_dir"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "in_file",
@@ -5548,6 +5535,19 @@
             {
               "language": "NiPype",
               "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "glm_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "glm_dir"
             }
           ]
         },
@@ -7880,6 +7880,19 @@
         {
           "input": true,
           "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
           "visible": false,
           "editable": true,
           "name": "read_only",
@@ -8576,19 +8589,6 @@
             {
               "language": "NiPype",
               "argument": "invert_contrast"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "in_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "in_file"
             }
           ]
         },
@@ -9588,19 +9588,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "out_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "out_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "target",
@@ -9621,6 +9608,19 @@
             {
               "language": "NiPype",
               "argument": "hemi"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
             }
           ]
         },
@@ -9924,6 +9924,32 @@
         {
           "input": true,
           "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "target",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "target"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "hemi",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "hemi"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
           "visible": false,
           "editable": true,
           "name": "surf_measure_file",
@@ -10009,32 +10035,6 @@
             {
               "language": "NiPype",
               "argument": "out_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "target",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "target"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "hemi",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "hemi"
             }
           ]
         },
@@ -11071,6 +11071,45 @@
         {
           "input": true,
           "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "out_datatype",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_datatype"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
           "visible": false,
           "editable": true,
           "name": "annot_file",
@@ -11260,45 +11299,6 @@
             {
               "language": "NiPype",
               "argument": "origname"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "in_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "in_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "out_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "out_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "out_datatype",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "out_datatype"
             }
           ]
         },
@@ -11897,6 +11897,19 @@
         {
           "input": true,
           "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "images",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "images"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
           "visible": false,
           "editable": true,
           "name": "label_file",
@@ -11956,19 +11969,6 @@
             {
               "language": "NiPype",
               "argument": "use_weights"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "images",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "images"
             }
           ]
         },
@@ -12825,19 +12825,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "glm_dir",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "glm_dir"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "in_file",
@@ -12845,6 +12832,19 @@
             {
               "language": "NiPype",
               "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "glm_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "glm_dir"
             }
           ]
         },
@@ -16382,19 +16382,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "out_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "out_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "transform",
@@ -16415,6 +16402,19 @@
             {
               "language": "NiPype",
               "argument": "template"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
             }
           ]
         },
@@ -16549,19 +16549,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "resampled_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "resampled_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "voxel_size",
@@ -16569,6 +16556,19 @@
             {
               "language": "NiPype",
               "argument": "voxel_size"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "resampled_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "resampled_file"
             }
           ]
         },
@@ -16697,6 +16697,32 @@
             {
               "language": "NiPype",
               "argument": "target_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "auto_sens",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "auto_sens"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "outlier_sens",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outlier_sens"
             }
           ]
         },
@@ -16840,32 +16866,6 @@
             {
               "language": "NiPype",
               "argument": "half_targ_xfm"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "auto_sens",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "auto_sens"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "outlier_sens",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "outlier_sens"
             }
           ]
         },
@@ -17570,19 +17570,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "reference_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "reference_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "hemi",
@@ -17590,19 +17577,6 @@
             {
               "language": "NiPype",
               "argument": "hemi"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "surface",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "surface"
             }
           ]
         },
@@ -17648,6 +17622,58 @@
         {
           "input": true,
           "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "sampling_method",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "sampling_method"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "projection_stem",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "projection_stem"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "reference_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reference_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "surface",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "surface"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
           "visible": false,
           "editable": true,
           "name": "apply_rot",
@@ -17687,19 +17713,6 @@
         {
           "input": true,
           "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "sampling_method",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "sampling_method"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": false,
           "editable": true,
           "name": "sampling_range",
@@ -17720,19 +17733,6 @@
             {
               "language": "NiPype",
               "argument": "sampling_units"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "projection_stem",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "projection_stem"
             }
           ]
         },
@@ -18827,19 +18827,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "presurf_seg",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "presurf_seg"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "transform",
@@ -18931,32 +18918,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "aseg",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "aseg"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "copy_inputs",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "copy_inputs"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "segmentation_file",
@@ -18990,6 +18951,45 @@
             {
               "language": "NiPype",
               "argument": "surf_label"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "presurf_seg",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "presurf_seg"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "aseg",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "aseg"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "copy_inputs",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "copy_inputs"
             }
           ]
         },
@@ -19644,19 +19644,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "out_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "out_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "out_rotation",
@@ -19677,6 +19664,19 @@
             {
               "language": "NiPype",
               "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
             }
           ]
         },
@@ -19965,6 +19965,32 @@
         {
           "input": true,
           "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "surface_fwhm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "surface_fwhm"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "num_iters",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "num_iters"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
           "visible": false,
           "editable": true,
           "name": "smoothed_file",
@@ -19998,32 +20024,6 @@
             {
               "language": "NiPype",
               "argument": "proj_frac"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "surface_fwhm",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "surface_fwhm"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "num_iters",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "num_iters"
             }
           ]
         },
@@ -20609,32 +20609,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "out_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "out_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "in_average",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "in_average"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "in_surf",
@@ -20694,6 +20668,32 @@
             {
               "language": "NiPype",
               "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "in_average",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_average"
             }
           ]
         },
@@ -20867,19 +20867,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "transformed_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "transformed_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "reg_file",
@@ -20887,6 +20874,19 @@
             {
               "language": "NiPype",
               "argument": "reg_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "transformed_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "transformed_file"
             }
           ]
         },
@@ -22042,19 +22042,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "fixed_weighting",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "fixed_weighting"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "tr",
@@ -22114,6 +22101,19 @@
             {
               "language": "NiPype",
               "argument": "pd_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "fixed_weighting",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fixed_weighting"
             }
           ]
         },
@@ -22517,6 +22517,32 @@
         {
           "input": true,
           "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "moving_image",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "moving_image"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "reg_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reg_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
           "visible": false,
           "editable": true,
           "name": "target_image",
@@ -22537,19 +22563,6 @@
             {
               "language": "NiPype",
               "argument": "fstarg"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "moving_image",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "moving_image"
             }
           ]
         },
@@ -22589,19 +22602,6 @@
             {
               "language": "NiPype",
               "argument": "noedit"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "reg_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "reg_file"
             }
           ]
         },
@@ -22801,19 +22801,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "output_dir",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "output_dir"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "run_info",
@@ -22847,6 +22834,19 @@
             {
               "language": "NiPype",
               "argument": "seq_config"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "output_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "output_dir"
             }
           ]
         },
@@ -23124,19 +23124,6 @@
         {
           "input": true,
           "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "aseg",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "aseg"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
           "visible": true,
           "editable": true,
           "name": "subject_id",
@@ -23144,6 +23131,19 @@
             {
               "language": "NiPype",
               "argument": "subject_id"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "aseg",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "aseg"
             }
           ]
         },
