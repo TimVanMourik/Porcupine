@@ -1,11 +1,245 @@
 {
     "links": [
         {
-            "from": "1a46030",
-            "to": "4c719a0"
+            "from": "38b4970",
+            "to": "5ff2780"
+        },
+        {
+            "from": "2a71f40",
+            "to": "37f7e90"
         }
     ],
     "nodes": [
+        {
+            "category": [
+                "NiPype",
+                "io"
+            ],
+            "ports": [
+                {
+                    "code": [
+                        {
+                            "argument": "anon",
+                            "comment": "",
+                            "language": "NiPype"
+                        }
+                    ],
+                    "editable": true,
+                    "input": true,
+                    "inputPort": "294d800",
+                    "iterator": false,
+                    "name": "anon",
+                    "output": false,
+                    "outputPort": "0",
+                    "value": "True",
+                    "visible": true
+                },
+                {
+                    "code": [
+                        {
+                            "argument": "bucket",
+                            "comment": "",
+                            "language": "NiPype"
+                        }
+                    ],
+                    "editable": true,
+                    "input": true,
+                    "inputPort": "28f5890",
+                    "iterator": false,
+                    "name": "bucket",
+                    "output": false,
+                    "outputPort": "0",
+                    "value": "'openneuro'",
+                    "visible": true
+                },
+                {
+                    "code": [
+                        {
+                            "argument": "bucket_path",
+                            "comment": "",
+                            "language": "NiPype"
+                        }
+                    ],
+                    "editable": true,
+                    "input": true,
+                    "inputPort": "2955680",
+                    "iterator": false,
+                    "name": "bucket_path",
+                    "output": false,
+                    "outputPort": "0",
+                    "value": "'ds000101/ds000101_R2.0.0/uncompressed/'",
+                    "visible": true
+                },
+                {
+                    "code": [
+                        {
+                            "argument": "ignore_exception",
+                            "comment": "",
+                            "language": "NiPype"
+                        }
+                    ],
+                    "editable": true,
+                    "input": true,
+                    "inputPort": "2965dc0",
+                    "iterator": false,
+                    "name": "ignore_exception",
+                    "output": false,
+                    "outputPort": "0",
+                    "value": "",
+                    "visible": false
+                },
+                {
+                    "code": [
+                        {
+                            "argument": "local_directory",
+                            "comment": "",
+                            "language": "NiPype"
+                        }
+                    ],
+                    "editable": true,
+                    "input": true,
+                    "inputPort": "2959760",
+                    "iterator": false,
+                    "name": "local_directory",
+                    "output": false,
+                    "outputPort": "0",
+                    "value": "'/tmp'",
+                    "visible": true
+                },
+                {
+                    "code": [
+                        {
+                            "argument": "outfiles",
+                            "comment": "",
+                            "language": "Docker"
+                        },
+                        {
+                            "argument": "outfiles",
+                            "comment": "",
+                            "language": "NiPype"
+                        }
+                    ],
+                    "editable": true,
+                    "input": false,
+                    "inputPort": "0",
+                    "iterator": false,
+                    "name": "outfiles",
+                    "output": true,
+                    "outputPort": "2a71f40",
+                    "value": "",
+                    "visible": true
+                },
+                {
+                    "code": [
+                        {
+                            "argument": "raise_on_empty",
+                            "comment": "",
+                            "language": "NiPype"
+                        }
+                    ],
+                    "editable": true,
+                    "input": true,
+                    "inputPort": "295d8d0",
+                    "iterator": false,
+                    "name": "raise_on_empty",
+                    "output": false,
+                    "outputPort": "0",
+                    "value": "",
+                    "visible": false
+                },
+                {
+                    "code": [
+                        {
+                            "argument": "region",
+                            "comment": "",
+                            "language": "NiPype"
+                        }
+                    ],
+                    "editable": true,
+                    "input": true,
+                    "inputPort": "2951740",
+                    "iterator": false,
+                    "name": "region",
+                    "output": false,
+                    "outputPort": "0",
+                    "value": "",
+                    "visible": false
+                },
+                {
+                    "code": [
+                        {
+                            "argument": "sort_filelist",
+                            "comment": "",
+                            "language": "NiPype"
+                        }
+                    ],
+                    "editable": true,
+                    "input": true,
+                    "inputPort": "29468c0",
+                    "iterator": false,
+                    "name": "sort_filelist",
+                    "output": false,
+                    "outputPort": "0",
+                    "value": "True",
+                    "visible": true
+                },
+                {
+                    "code": [
+                        {
+                            "argument": "template",
+                            "comment": "",
+                            "language": "NiPype"
+                        }
+                    ],
+                    "editable": true,
+                    "input": true,
+                    "inputPort": "2949860",
+                    "iterator": false,
+                    "name": "template",
+                    "output": false,
+                    "outputPort": "0",
+                    "value": "'sub-01/anat/sub-01_T1w.nii.gz'",
+                    "visible": true
+                },
+                {
+                    "code": [
+                        {
+                            "argument": "template_args",
+                            "comment": "",
+                            "language": "NiPype"
+                        }
+                    ],
+                    "editable": true,
+                    "input": true,
+                    "inputPort": "2961990",
+                    "iterator": false,
+                    "name": "template_args",
+                    "output": false,
+                    "outputPort": "0",
+                    "value": "",
+                    "visible": false
+                }
+            ],
+            "position": [
+                -1248,
+                -454
+            ],
+            "title": {
+                "code": [
+                    {
+                        "argument": "io.S3DataGrabber()",
+                        "comment": "Generic datagrabber module that wraps around glob in an",
+                        "language": "NiPype"
+                    },
+                    {
+                        "argument": "NiPype, io",
+                        "language": "Docker"
+                    }
+                ],
+                "name": "io.S3DataGrabber",
+                "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#s3datagrabber"
+            }
+        },
         {
             "category": [
                 "NiPype",
@@ -23,7 +257,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1a34c90",
+                    "inputPort": "38a4330",
                     "iterator": false,
                     "name": "args",
                     "output": false,
@@ -41,7 +275,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1a07e40",
+                    "inputPort": "381c650",
                     "iterator": false,
                     "name": "center",
                     "output": false,
@@ -59,7 +293,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1a39a60",
+                    "inputPort": "38a83f0",
                     "iterator": false,
                     "name": "environ",
                     "output": false,
@@ -77,7 +311,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "19fb3a0",
+                    "inputPort": "3810190",
                     "iterator": false,
                     "name": "frac",
                     "output": false,
@@ -95,7 +329,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1a20b60",
+                    "inputPort": "3898090",
                     "iterator": false,
                     "name": "functional",
                     "output": false,
@@ -113,7 +347,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1a40ca0",
+                    "inputPort": "38b0710",
                     "iterator": false,
                     "name": "ignore_exception",
                     "output": false,
@@ -131,12 +365,12 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "19e4430",
+                    "inputPort": "37f7e90",
                     "iterator": false,
                     "name": "in_file",
                     "output": false,
                     "outputPort": "0",
-                    "value": "$in_file",
+                    "value": "",
                     "visible": true
                 },
                 {
@@ -153,7 +387,7 @@
                     "iterator": false,
                     "name": "inskull_mask_file",
                     "output": true,
-                    "outputPort": "1a557d0",
+                    "outputPort": "38c4f50",
                     "value": "",
                     "visible": true
                 },
@@ -171,7 +405,7 @@
                     "iterator": false,
                     "name": "inskull_mesh_file",
                     "output": true,
-                    "outputPort": "1a59650",
+                    "outputPort": "38c91b0",
                     "value": "",
                     "visible": true
                 },
@@ -185,7 +419,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "19ef440",
+                    "inputPort": "3803e60",
                     "iterator": false,
                     "name": "mask",
                     "output": false,
@@ -207,7 +441,7 @@
                     "iterator": false,
                     "name": "mask_file",
                     "output": true,
-                    "outputPort": "1a4a0f0",
+                    "outputPort": "38b8a50",
                     "value": "",
                     "visible": true
                 },
@@ -221,7 +455,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1a10050",
+                    "inputPort": "38247f0",
                     "iterator": false,
                     "name": "mesh",
                     "output": false,
@@ -243,7 +477,7 @@
                     "iterator": false,
                     "name": "meshfile",
                     "output": true,
-                    "outputPort": "1a52410",
+                    "outputPort": "38c0d70",
                     "value": "",
                     "visible": true
                 },
@@ -257,7 +491,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "19f72c0",
+                    "inputPort": "380bfe0",
                     "iterator": false,
                     "name": "no_output",
                     "output": false,
@@ -279,7 +513,7 @@
                     "iterator": false,
                     "name": "out_file",
                     "output": true,
-                    "outputPort": "1a46030",
+                    "outputPort": "38b4970",
                     "value": "",
                     "visible": true
                 },
@@ -293,7 +527,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "19eb4b0",
+                    "inputPort": "3800140",
                     "iterator": false,
                     "name": "outline",
                     "output": false,
@@ -315,7 +549,7 @@
                     "iterator": false,
                     "name": "outline_file",
                     "output": true,
-                    "outputPort": "1a4d0d0",
+                    "outputPort": "38bcb30",
                     "value": "",
                     "visible": true
                 },
@@ -329,7 +563,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1a318d0",
+                    "inputPort": "38a0250",
                     "iterator": false,
                     "name": "output_type",
                     "output": false,
@@ -351,7 +585,7 @@
                     "iterator": false,
                     "name": "outskin_mask_file",
                     "output": true,
-                    "outputPort": "1a66510",
+                    "outputPort": "38d6050",
                     "value": "",
                     "visible": true
                 },
@@ -369,7 +603,7 @@
                     "iterator": false,
                     "name": "outskin_mesh_file",
                     "output": true,
-                    "outputPort": "1a6b340",
+                    "outputPort": "38da2b0",
                     "value": "",
                     "visible": true
                 },
@@ -387,7 +621,7 @@
                     "iterator": false,
                     "name": "outskull_mask_file",
                     "output": true,
-                    "outputPort": "1a5e190",
+                    "outputPort": "38cdca0",
                     "value": "",
                     "visible": true
                 },
@@ -405,7 +639,7 @@
                     "iterator": false,
                     "name": "outskull_mesh_file",
                     "output": true,
-                    "outputPort": "1a62260",
+                    "outputPort": "38d1db0",
                     "value": "",
                     "visible": true
                 },
@@ -419,7 +653,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1a17e10",
+                    "inputPort": "382c970",
                     "iterator": false,
                     "name": "padding",
                     "output": false,
@@ -437,7 +671,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1a03560",
+                    "inputPort": "3818590",
                     "iterator": false,
                     "name": "radius",
                     "output": false,
@@ -455,7 +689,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1a2d7c0",
+                    "inputPort": "389c170",
                     "iterator": false,
                     "name": "reduce_bias",
                     "output": false,
@@ -473,7 +707,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "19f8bc0",
+                    "inputPort": "38310c0",
                     "iterator": false,
                     "name": "remove_eyes",
                     "output": false,
@@ -491,7 +725,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1a13d30",
+                    "inputPort": "38288b0",
                     "iterator": false,
                     "name": "robust",
                     "output": false,
@@ -509,7 +743,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "19f3380",
+                    "inputPort": "3807f20",
                     "iterator": false,
                     "name": "skull",
                     "output": false,
@@ -531,7 +765,7 @@
                     "iterator": false,
                     "name": "skull_mask_file",
                     "output": true,
-                    "outputPort": "1a6edd0",
+                    "outputPort": "38de510",
                     "value": "",
                     "visible": true
                 },
@@ -545,7 +779,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1a21490",
+                    "inputPort": "388fee0",
                     "iterator": false,
                     "name": "surfaces",
                     "output": false,
@@ -563,7 +797,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1a25580",
+                    "inputPort": "3893fb0",
                     "iterator": false,
                     "name": "t2_guided",
                     "output": false,
@@ -581,7 +815,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1a3ce20",
+                    "inputPort": "38ac4c0",
                     "iterator": false,
                     "name": "terminal_output",
                     "output": false,
@@ -599,7 +833,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1a0cc90",
+                    "inputPort": "3820710",
                     "iterator": false,
                     "name": "threshold",
                     "output": false,
@@ -617,7 +851,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "19ff6f0",
+                    "inputPort": "3814290",
                     "iterator": false,
                     "name": "vertical_gradient",
                     "output": false,
@@ -627,8 +861,8 @@
                 }
             ],
             "position": [
-                -519.5000058889386,
-                -128.10000378131838
+                -897,
+                -297
             ],
             "title": {
                 "code": [
@@ -636,10 +870,14 @@
                         "argument": "fsl.BET()",
                         "comment": "Wraps command **bet**",
                         "language": "NiPype"
+                    },
+                    {
+                        "argument": "NiPype, fsl",
+                        "language": "Docker"
                     }
                 ],
                 "name": "fsl.BET",
-                "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/preprocess.html#BET"
+                "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/preprocess.html#bet"
             }
         },
         {
@@ -651,6 +889,29 @@
                 {
                     "code": [
                         {
+                            "argument": "BET_results",
+                            "comment": "",
+                            "language": "Docker"
+                        },
+                        {
+                            "argument": "BET_results",
+                            "comment": "",
+                            "language": "NiPype"
+                        }
+                    ],
+                    "editable": true,
+                    "input": true,
+                    "inputPort": "5ff2780",
+                    "iterator": false,
+                    "name": "BET_results",
+                    "output": false,
+                    "outputPort": "0",
+                    "value": "",
+                    "visible": true
+                },
+                {
+                    "code": [
+                        {
                             "argument": "_outputs",
                             "comment": "",
                             "language": "NiPype"
@@ -658,7 +919,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1d89d10",
+                    "inputPort": "1f72170",
                     "iterator": false,
                     "name": "_outputs",
                     "output": false,
@@ -676,30 +937,12 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1d36ab0",
+                    "inputPort": "201abc0",
                     "iterator": false,
                     "name": "base_directory",
                     "output": false,
                     "outputPort": "0",
-                    "value": "$out_dir",
-                    "visible": true
-                },
-                {
-                    "code": [
-                        {
-                            "argument": "betted_file",
-                            "comment": "",
-                            "language": "NiPype"
-                        }
-                    ],
-                    "editable": true,
-                    "input": true,
-                    "inputPort": "4c719a0",
-                    "iterator": false,
-                    "name": "betted_file",
-                    "output": false,
-                    "outputPort": "0",
-                    "value": "",
+                    "value": "'/tmp'",
                     "visible": true
                 },
                 {
@@ -712,7 +955,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1d99e60",
+                    "inputPort": "42305a0",
                     "iterator": false,
                     "name": "bucket",
                     "output": false,
@@ -730,7 +973,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1da02e0",
+                    "inputPort": "60d3ba0",
                     "iterator": false,
                     "name": "container",
                     "output": false,
@@ -748,7 +991,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1d91de0",
+                    "inputPort": "1fc8ad0",
                     "iterator": false,
                     "name": "creds_path",
                     "output": false,
@@ -766,7 +1009,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1d960b0",
+                    "inputPort": "600ed10",
                     "iterator": false,
                     "name": "encrypt_bucket_keys",
                     "output": false,
@@ -784,7 +1027,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1e02400",
+                    "inputPort": "5e1d690",
                     "iterator": false,
                     "name": "ignore_exception",
                     "output": false,
@@ -802,7 +1045,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1dfe4a0",
+                    "inputPort": "60b4e40",
                     "iterator": false,
                     "name": "local_copy",
                     "output": false,
@@ -824,7 +1067,7 @@
                     "iterator": false,
                     "name": "out_file",
                     "output": true,
-                    "outputPort": "1e064e0",
+                    "outputPort": "5f19260",
                     "value": "",
                     "visible": true
                 },
@@ -838,7 +1081,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1e71660",
+                    "inputPort": "41ffc90",
                     "iterator": false,
                     "name": "parameterization",
                     "output": false,
@@ -856,7 +1099,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1d85b10",
+                    "inputPort": "5e4cd50",
                     "iterator": false,
                     "name": "regexp_substitutions",
                     "output": false,
@@ -874,7 +1117,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1d8e080",
+                    "inputPort": "5fb9e70",
                     "iterator": false,
                     "name": "remove_dest_dir",
                     "output": false,
@@ -892,7 +1135,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1e753c0",
+                    "inputPort": "60e1bc0",
                     "iterator": false,
                     "name": "strip_dir",
                     "output": false,
@@ -910,7 +1153,7 @@
                     ],
                     "editable": true,
                     "input": true,
-                    "inputPort": "1e794a0",
+                    "inputPort": "60b3130",
                     "iterator": false,
                     "name": "substitutions",
                     "output": false,
@@ -920,8 +1163,8 @@
                 }
             ],
             "position": [
-                -141.50000402927367,
-                -135.10000254154187
+                -530,
+                -266
             ],
             "title": {
                 "code": [
@@ -929,10 +1172,14 @@
                         "argument": "io.DataSink()",
                         "comment": "Generic datasink module to store structured outputs",
                         "language": "NiPype"
+                    },
+                    {
+                        "argument": "NiPype, io",
+                        "language": "Docker"
                     }
                 ],
                 "name": "io.DataSink",
-                "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.io"
+                "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#datasink"
             }
         }
     ],
@@ -940,14 +1187,6 @@
         {
             "key": "WorkingDirectory",
             "value": "\"~/Porcupipelines/ThisStudy\""
-        },
-        {
-            "key": "in_file",
-            "value": "\"/home/lukas/Porcupine/example_workflows/example_data/sub-01/anat/sub-01_T1w.nii.gz\""
-        },
-        {
-            "key": "out_dir",
-            "value": "\"/home/lukas/Porcupine/example_workflows/simple_example/out\""
         }
     ],
     "post-its": [
@@ -955,7 +1194,7 @@
     "size": [
         0,
         0,
-        963,
+        1128,
         697
     ]
 }
