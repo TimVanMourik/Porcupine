@@ -1,0 +1,13 @@
+#--------------------------
+# Install FreeSurfer v6.0.0
+#--------------------------
+# Install version minimized for recon-all
+# See https://github.com/freesurfer/freesurfer/issues/70
+RUN apt-get update -qq && apt-get install -yq --no-install-recommends bc libgomp1 libxmu6 libxt6 tcsh \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
+    && echo "Downloading minimized FreeSurfer ..." \
+    && curl -sSL https://dl.dropbox.com/s/nnzcfttc41qvt31/recon-all-freesurfer6-3.min.tgz | tar xz -C /opt \
+    && sed -i '$isource $FREESURFER_HOME/SetUpFreeSurfer.sh' $ND_ENTRYPOINT
+ENV FREESURFER_HOME=/opt/freesurfer
+
