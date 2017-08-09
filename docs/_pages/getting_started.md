@@ -35,21 +35,13 @@ feature_row:
 
 
 # Porcupine
-This program is meant for creating analysis pipelines for fMRI analysis (and perhaps for in the future). At the moment, this works only for NiPype pipelines, but interfaces to other packages are also in development.
-
-## Installation
-Just download the installer files. Currently, there is a Windows and a Mac installer. Also,  it can be run within a docker image.
-
-## Compilation
-If you want to contribute and hack around yourself, you should first compile it. This is easily done on any platform with <a href="https://www.qt.io/download/" target ="_blank">Qt Creator</a>.
-
-Currently, it's been tested on Mac, Windows and Linux with the latest version of Qt (5.8.0) and Qt Creator (4.2.1). If that's installed, basically pressing the big green button is the only thing you need to make it compile and run.
+This program is meant for creating analysis pipelines for fMRI analysis. By dragging and dropping modules into an editor, you can simply create a workflow. The code for your analysis is automatically generated. Just download the installer files and get started. Currently, there is a Windows and a Mac installer. Also, it can be run within a docker image.
 
 ## Modules
-Porcupine features interfaces to
-* [NiPype](https://github.com/nipy/nipype)
+Porcupine features modules to create a pipeline for:
+* [NiPype](https://github.com/nipy/nipype), which itself connects to all major MRI analysis software packages
+* [neurodocker](https://github.com/kaczmarj/neurodocker), a tool to automatically create Docker files
 * My own [fMRI analysis toolbox](https://github.com/TimVanMourik/OpenFmriAnalysis), including layer specific fMRI
-* A tool to create custom python scripts into Porcupine nodes, consistent with the NiPype framework.
 
 ## Porcupine in action: examples that have not yet been created
 {% include feature_row %}

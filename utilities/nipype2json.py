@@ -199,6 +199,7 @@ def _get_submodule(node):
                        if n not in ('interfaces', 'nipype')]
     return all_sub_modules
 
+<<<<<<< HEAD
 
 DOCKER_DICTIONARY = {'afni': '--afni version=latest',
                      'ants': '--ants version=2.2.0',
@@ -214,6 +215,9 @@ def _docker_block(module):
         return None
 
 
+=======
+	
+>>>>>>> master
 def pyfunc2json():
     """ Experimental function to convert Python functions
     directly to Porcupine's JSON format (by converting it)

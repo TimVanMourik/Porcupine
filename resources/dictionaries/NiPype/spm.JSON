@@ -14,6 +14,10 @@
             "language": "NiPype",
             "comment": "",
             "argument": "spm.Analyze2nii()"
+          },
+          {
+            "language": "Docker",
+            "argument": "NiPype, spm"
           }
         ]
       },
@@ -216,6 +220,10 @@
             "language": "NiPype",
             "comment": "Uses spm to apply inverse deformation stored in a .mat file or a",
             "argument": "spm.ApplyInverseDeformation()"
+          },
+          {
+            "language": "Docker",
+            "argument": "NiPype, spm"
           }
         ]
       },
@@ -418,6 +426,10 @@
             "language": "NiPype",
             "comment": "Uses SPM to apply transform stored in a .mat file to given file",
             "argument": "spm.ApplyTransform()"
+          },
+          {
+            "language": "Docker",
+            "argument": "NiPype, spm"
           }
         ]
       },
@@ -568,6 +580,10 @@
             "language": "NiPype",
             "comment": "Uses SPM (spm_coreg) to calculate the transform mapping",
             "argument": "spm.CalcCoregAffine()"
+          },
+          {
+            "language": "Docker",
+            "argument": "NiPype, spm"
           }
         ]
       },
@@ -744,6 +760,10 @@
             "language": "NiPype",
             "comment": "Use spm_coreg for estimating cross-modality rigid body alignment",
             "argument": "spm.Coregister()"
+          },
+          {
+            "language": "Docker",
+            "argument": "NiPype, spm"
           }
         ]
       },
@@ -1024,6 +1044,10 @@
             "language": "NiPype",
             "comment": "Apply a flow field estimated by DARTEL to create warped images",
             "argument": "spm.CreateWarped()"
+          },
+          {
+            "language": "Docker",
+            "argument": "NiPype, spm"
           }
         ]
       },
@@ -1200,6 +1224,10 @@
             "language": "NiPype",
             "comment": "Use spm DARTEL to create a template and flow fields",
             "argument": "spm.DARTEL()"
+          },
+          {
+            "language": "Docker",
+            "argument": "NiPype, spm"
           }
         ]
       },
@@ -1402,6 +1430,10 @@
             "language": "NiPype",
             "comment": "Use spm DARTEL to normalize data to MNI space",
             "argument": "spm.DARTELNorm2MNI()"
+          },
+          {
+            "language": "Docker",
+            "argument": "NiPype, spm"
           }
         ]
       },
@@ -1617,6 +1649,10 @@
             "language": "NiPype",
             "comment": "Uses spm to convert DICOM files to nii or img+hdr.",
             "argument": "spm.DicomImport()"
+          },
+          {
+            "language": "Docker",
+            "argument": "NiPype, spm"
           }
         ]
       },
@@ -1793,6 +1829,10 @@
             "language": "NiPype",
             "comment": "Use spm_contrasts to estimate contrasts of interest",
             "argument": "spm.EstimateContrast()"
+          },
+          {
+            "language": "Docker",
+            "argument": "NiPype, spm"
           }
         ]
       },
@@ -2034,6 +2074,10 @@
             "language": "NiPype",
             "comment": "Use spm_spm to estimate the parameters of a model",
             "argument": "spm.EstimateModel()"
+          },
+          {
+            "language": "Docker",
+            "argument": "NiPype, spm"
           }
         ]
       },
@@ -2327,6 +2371,10 @@
             "language": "NiPype",
             "comment": "Generate an SPM design matrix",
             "argument": "spm.Level1Design()"
+          },
+          {
+            "language": "Docker",
+            "argument": "NiPype, spm"
           }
         ]
       },
@@ -2607,6 +2655,10 @@
             "language": "NiPype",
             "comment": "Create SPM design for multiple regression",
             "argument": "spm.MultipleRegressionDesign()"
+          },
+          {
+            "language": "Docker",
+            "argument": "NiPype, spm"
           }
         ]
       },
@@ -2913,6 +2965,10 @@
             "language": "NiPype",
             "comment": "Use spm_preproc8 (New Segment) to separate structural images into",
             "argument": "spm.NewSegment()"
+          },
+          {
+            "language": "Docker",
+            "argument": "NiPype, spm"
           }
         ]
       },
@@ -3219,6 +3275,10 @@
             "language": "NiPype",
             "comment": "use spm_normalise for warping an image to a template",
             "argument": "spm.Normalize()"
+          },
+          {
+            "language": "Docker",
+            "argument": "NiPype, spm"
           }
         ]
       },
@@ -3603,6 +3663,10 @@
             "language": "NiPype",
             "comment": "uses SPM12's new Normalise routine for warping an image to a template.",
             "argument": "spm.Normalize12()"
+          },
+          {
+            "language": "Docker",
+            "argument": "NiPype, spm"
           }
         ]
       },
@@ -3935,6 +3999,10 @@
             "language": "NiPype",
             "comment": "Create SPM design for one sample t-test",
             "argument": "spm.OneSampleTTestDesign()"
+          },
+          {
+            "language": "Docker",
+            "argument": "NiPype, spm"
           }
         ]
       },
@@ -4215,6 +4283,10 @@
             "language": "NiPype",
             "comment": "Create SPM design for paired t-test",
             "argument": "spm.PairedTTestDesign()"
+          },
+          {
+            "language": "Docker",
+            "argument": "NiPype, spm"
           }
         ]
       },
@@ -4521,6 +4593,10 @@
             "language": "NiPype",
             "comment": "Use spm_realign for estimating within modality rigid body alignment",
             "argument": "spm.Realign()"
+          },
+          {
+            "language": "Docker",
+            "argument": "NiPype, spm"
           }
         ]
       },
@@ -4853,6 +4929,10 @@
             "language": "NiPype",
             "comment": "uses  spm_reslice to resample in_file into space of space_defining",
             "argument": "spm.Reslice()"
+          },
+          {
+            "language": "Docker",
+            "argument": "NiPype, spm"
           }
         ]
       },
@@ -5016,6 +5096,10 @@
             "language": "NiPype",
             "comment": "Uses spm to reslice a volume to a target image space or to a provided",
             "argument": "spm.ResliceToReference()"
+          },
+          {
+            "language": "Docker",
+            "argument": "NiPype, spm"
           }
         ]
       },
@@ -5192,6 +5276,10 @@
             "language": "NiPype",
             "comment": "use spm_segment to separate structural images into different",
             "argument": "spm.Segment()"
+          },
+          {
+            "language": "Docker",
+            "argument": "NiPype, spm"
           }
         ]
       },
@@ -5654,6 +5742,10 @@
             "language": "NiPype",
             "comment": "Use spm to perform slice timing correction.",
             "argument": "spm.SliceTiming()"
+          },
+          {
+            "language": "Docker",
+            "argument": "NiPype, spm"
           }
         ]
       },
@@ -5856,6 +5948,10 @@
             "language": "NiPype",
             "comment": "Use spm_smooth for 3D Gaussian smoothing of image volumes.",
             "argument": "spm.Smooth()"
+          },
+          {
+            "language": "Docker",
+            "argument": "NiPype, spm"
           }
         ]
       },
@@ -6032,6 +6128,10 @@
             "language": "NiPype",
             "comment": "Topological FDR thresholding based on cluster extent/size. Smoothness is",
             "argument": "spm.Threshold()"
+          },
+          {
+            "language": "Docker",
+            "argument": "NiPype, spm"
           }
         ]
       },
@@ -6338,6 +6438,10 @@
             "language": "NiPype",
             "comment": "Create SPM design for two sample t-test",
             "argument": "spm.TwoSampleTTestDesign()"
+          },
+          {
+            "language": "Docker",
+            "argument": "NiPype, spm"
           }
         ]
       },
@@ -6657,6 +6761,10 @@
             "language": "NiPype",
             "comment": "Use VBM8 toolbox to separate structural images into different",
             "argument": "spm.VBMSegment()"
+          },
+          {
+            "language": "Docker",
+            "argument": "NiPype, spm"
           }
         ]
       },
