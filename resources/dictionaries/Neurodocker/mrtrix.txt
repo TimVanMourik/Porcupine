@@ -1,0 +1,8 @@
+#----------------
+# Install MRtrix3
+#----------------
+RUN echo "Downloading MRtrix3 ..." \
+    && curl -sSL --retry 5 https://dl.dropbox.com/s/2g008aaaeht3m45/mrtrix3-Linux-centos6.tar.gz \
+    | tar zx -C /opt
+ENV PATH=/opt/mrtrix3/bin:$PATH
+

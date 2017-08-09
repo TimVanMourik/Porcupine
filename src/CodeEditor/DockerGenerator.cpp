@@ -40,33 +40,44 @@ QString DockerGenerator::generateCode(
             )
 {
     Q_UNUSED(_linkList);
-
     QString code("");
-    code += "docker run --rm kaczmarj/neurodocker generate \\\n";
-    code += "--base timvanmourik/porcupine --pkg-manager apt \\\n";
-    QStringList uniqueDockerCommands;
+
+    QStringList dockerModules;
+    QStringList dockerModuleFiles;
     foreach (const NodeTreeItem* item, _nodeList)
     {
         QJsonObject json = item->getJson();
         Argument title(json["title"].toObject());
-        QString dockerArgument = title.getArgument(s_thisLanguage);
-        if(!dockerArgument.isEmpty() && !uniqueDockerCommands.contains(dockerArgument))
+        QStringList dockerArguments = title.getArgument(s_thisLanguage).remove(' ').split(',');
+        foreach (QString dockerArgument, dockerArguments)
         {
-            uniqueDockerCommands << dockerArgument;
+            if(!dockerArgument.isEmpty() && !dockerModules.contains(dockerArgument))
+            {
+                dockerModules << dockerArgument;
+                QString file = QString(":/dictionaries/Neurodocker/%1.txt").arg(dockerArgument);
+                if(QFile(file).exists())
+                {
+                    dockerModuleFiles << file;
+                }
+            }
         }
     }
-    foreach (const QString& command, uniqueDockerCommands)
+    if(dockerModuleFiles.length() != 0)
     {
-        code += command + " \\\n";
+        QString preambleFile(":/dictionaries/Neurodocker/preamble.txt");
+        QFile preamble(preambleFile);
+        preamble.open(QIODevice::ReadOnly);
+        code += preamble.readAll();
+        preamble.close();
+
+        foreach(QString module, dockerModuleFiles)
+        {
+            QFile file(module);
+            file.open(QIODevice::ReadOnly);
+            code += file.readAll();
+            file.close();
+        }
     }
-
-    QString dockerFile("Dockerfile");
-    code += QString("> %1\n\n").arg(dockerFile);
-
-    code += "# Build Docker image using the saved Dockerfile.\n";
-    code += QString("docker build -t myimage -f %1 .").arg(dockerFile);
-
-    code += "\n";
     return code;
 }
 

@@ -69,6 +69,23 @@ currentNode.setAttribute('prefix', prefix);
 currentNode.appendChild(fileToXML(docNode, 'file', 'dict_000.JSON',   strrep(fullfile(directory, 'tvm.JSON'), '\', '/')));
 docRoot.appendChild(currentNode);
 
+%% Add Neurodocker nodes
+prefix = 'dictionaries/Neurodocker';
+directory = fullfile('../resources', prefix);
+currentNode = docNode.createElement('qresource');
+currentNode.setAttribute('prefix', prefix);
+
+files = dir([directory '/*.txt']);
+files = {files(:).name};
+
+for i = 1:length(files)
+    fileNode = docNode.createElement('file');
+    fileNode.setAttribute('alias', sprintf('dict_%03d.json', i - 1));
+    [~, file, ~] = fileparts(files{i});
+    currentNode.appendChild(fileToXML(docNode, 'file', strrep(fullfile([file, '.txt']), '\', '/'),   strrep(fullfile(directory, [file, '.txt']), '\', '/')));
+end
+docRoot.appendChild(currentNode);
+
 %%
 xmlFileName = fullfile(saveLocation, 'resources.qrc');
 xmlwrite(xmlFileName, docNode);
