@@ -41,7 +41,7 @@ NipypeGenerator::NipypeGenerator(
         ) :
     CodeGenerator(_editor)
 {
-    s_exceptionNodes << "utility.IdentityInterface" << "io.SelectFiles" << "io.MySQLSink" << "io.SQLiteSink";
+    s_exceptionNodes << "utility.IdentityInterface" << "io.SelectFiles" << "io.MySQLSink" << "io.SQLiteSink" << "io.S3DataGrabber";
 }
 
 QString NipypeGenerator::generateCode(

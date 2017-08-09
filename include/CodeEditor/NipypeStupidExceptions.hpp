@@ -35,6 +35,11 @@ public:
             const NodeTreeItem* _item,
             const QMap<QString, QString>& parameter
             ) const;
+    //
+    QString codeForS3DataGrabber(
+            const NodeTreeItem* _item,
+            const QMap<QString, QString>& parameter
+            ) const;
 
 
 NipypeStupidExceptions(

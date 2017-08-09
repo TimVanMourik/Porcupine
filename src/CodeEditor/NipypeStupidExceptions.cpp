@@ -41,6 +41,10 @@ QString NipypeStupidExceptions::exceptionNodetoCode(
     {
         return codeForSQLiteSink(_item, _parameters);
     }
+    else if (!node.compare("io.S3DataGrabber"))
+    {
+        return codeForS3DataGrabber(_item, _parameters);
+    }
     return QString("");
 }
 
@@ -374,6 +378,110 @@ QString NipypeStupidExceptions::codeForSQLiteSink(
             if(!argument.m_isIterator)
             {
                 code += QString("%1.inputs.%3 = %4\n").arg(nodeName, argument.getArgument(s_thisLanguage), filename);
+            }
+            else if(pair->getInputPort()->getConnections().length() == 0)
+            {
+                keyValuePairs << QString("('%1', %2)").arg(argument.getArgument(s_thisLanguage), filename);
+            }
+        }
+    }
+
+    if(keyValuePairs.length() != 0)
+    {
+        code += QString("%1.iterables = [%2]\n").arg(nodeName, keyValuePairs.join(", "));
+    }
+
+    code += "\n";
+    return code;
+}
+
+QString NipypeStupidExceptions::codeForS3DataGrabber(
+        const NodeTreeItem* _item,
+        const QMap<QString, QString>& _parameters
+        ) const
+{
+    QString code("");
+    QJsonObject json = _item->getJson();
+    Argument title(json["title"].toObject());
+    if(title.getArgument(s_thisLanguage).isEmpty()) return QString("");
+
+    QString nodeName = QString("NodeHash_%1").arg(QString::number((quint64) _item->getNode(), 16));
+
+    code += QString("#%1\n").arg(title.getComment(s_thisLanguage));
+    code += QString("%1 = pe.").arg(nodeName);
+
+    QStringList iterFields = getMapNodeFields(_item);
+    if(iterFields.length() == 0)
+    {
+        code += "Node";
+    }
+    else
+    {
+        code += "MapNode";
+    }
+
+    QStringList infieldNodes;
+    foreach (const PortPair* pair,  _item->getPorts())
+    {
+        Argument argument = pair->getArgument();
+        if(argument.m_isInput)
+        {
+            infieldNodes << argument.getArgument(s_thisLanguage);
+        }
+    }
+    QStringList outfieldNodes;
+    foreach (const PortPair* pair,  _item->getPorts())
+    {
+        Argument argument = pair->getArgument();
+        if(argument.m_isOutput)
+        {
+            outfieldNodes << argument.getArgument(s_thisLanguage);
+        }
+    }
+    code += QString("(io.S3DataGrabber(");
+    if(infieldNodes.length())
+    {
+        code += QString("infields=['%1']").arg(infieldNodes.join("','"));
+    }
+    if(infieldNodes.length() && outfieldNodes.length())
+    {
+        code += ", ";
+    }
+    if(outfieldNodes.length())
+    {
+        code += QString("outfields=['%1']").arg(outfieldNodes.join("','"));
+    }
+    code += QString("), name = 'NodeName_%1'").arg(QString::number((quint64) _item->getNode(), 16));
+
+    if(iterFields.length() == 0)
+    {
+        code += ")\n";
+    }
+    else
+    {
+        code += QString(", iterfield = ['%1'])\n").arg(iterFields.join("', '"));
+    }
+
+    QStringList keyValuePairs;
+    foreach (const PortPair* pair,  _item->getPorts())
+    {
+        Argument argument = pair->getArgument();
+        QString filename = _item->getParameterName(argument.m_argumentName);
+
+        //replace filename
+        foreach (const QString parameter, _parameters.keys())
+        {
+            if(filename.contains(QString("$").append(parameter)))
+            {
+                filename = filename.replace(QString("$").append(parameter), parameter);
+            }
+        }
+
+        if(!filename.isEmpty() && argument.m_isInput)
+        {
+            if(!argument.m_isIterator)
+            {
+                code += QString("%1.inputs.%2 = %3\n").arg(nodeName, argument.getArgument(s_thisLanguage), filename);
             }
             else if(pair->getInputPort()->getConnections().length() == 0)
             {
