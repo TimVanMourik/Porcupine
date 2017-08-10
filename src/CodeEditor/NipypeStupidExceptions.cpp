@@ -420,13 +420,18 @@ QString NipypeStupidExceptions::codeForS3DataGrabber(
         code += "MapNode";
     }
 
+    QStringList standardPorts;
+    standardPorts << "anon" << "region" << "bucket" << "bucket_path" << "local_directory" << "raise_on_empty" << "sort_filelist" << "template" << "template_args" << "ignore_exception";
     QStringList infieldNodes;
     foreach (const PortPair* pair,  _item->getPorts())
     {
         Argument argument = pair->getArgument();
         if(argument.m_isInput)
         {
-            infieldNodes << argument.getArgument(s_thisLanguage);
+            if(!standardPorts.contains(argument.getArgument(s_thisLanguage)))
+            {
+                infieldNodes << argument.getArgument(s_thisLanguage);
+            }
         }
     }
     QStringList outfieldNodes;
@@ -435,7 +440,10 @@ QString NipypeStupidExceptions::codeForS3DataGrabber(
         Argument argument = pair->getArgument();
         if(argument.m_isOutput)
         {
-            outfieldNodes << argument.getArgument(s_thisLanguage);
+            if(!standardPorts.contains(argument.getArgument(s_thisLanguage)))
+            {
+                outfieldNodes << argument.getArgument(s_thisLanguage);
+            }
         }
     }
     code += QString("(io.S3DataGrabber(");
