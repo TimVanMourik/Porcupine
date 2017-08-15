@@ -8,10 +8,11 @@
       "title": {
         "name": "events2design.tsv2subjectinfo",
         "web_url": "",
+        "import": "import sys\nsys.path.append('/media/lukas/goliath/Porcupine/example_workflows/firstlevel')\nimport events2design",
         "code": [
           {
             "language": "Custom",
-            "comment": "tsv2subjectinfo",
+            "comment": "Custom interface wrapping function tsv2subjectinfo",
             "argument": "events2design.tsv2subjectinfo()"
           }
         ]
