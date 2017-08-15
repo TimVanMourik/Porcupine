@@ -5,9 +5,11 @@ Created by Tomas Knapen (Free University, Amsterdam) &
 Lukas Snoek (University of Amsterdam)
 """
 import inspect
+import importlib
+import os.path as op
 
 
-def node2json(node, module=None, custom_node=False, category="Custom"):
+def node2json(node, module=None, custom_node=False, category="Custom", module_path=None):
     """ Converts nipype nodes to Porcupine-compatible json-files.
 
     This function takes a Nipype node from a Python module and
@@ -24,6 +26,8 @@ def node2json(node, module=None, custom_node=False, category="Custom"):
         the Nipype package.
     category : str
         Category of node (default: "Custom")
+    module_path : str
+        Path to module (only relevant for custom modules)
     """
 
     if module is None:
@@ -52,9 +56,11 @@ def node2json(node, module=None, custom_node=False, category="Custom"):
 
     web_url = _get_web_url(node, module, custom_node)
     node_name = _get_node_name(node, custom_node)
+    import_statement = _get_import_statement(node, module, module_path)
 
     titleBlock = {'name': '%s.%s' % (this_category[-1], node_name),
                   'web_url': web_url,
+                  'import': import_statement,
                   'code': [{'language': category,
                             'comment': descr,
                             'argument': this_category[-1] + '.%s()' % node_name}]}
@@ -127,11 +133,9 @@ def _get_outputs(node, custom_node=True):
 
     if custom_node:
         TO_SKIP = ['trait_added', 'trait_modified']
-        if 'return' in node.inputs.function_str:
-            all_outputs = [outp for outp in node.outputs.traits().keys()
-                           if not outp in TO_SKIP]
-        else:
-            all_outputs = []
+        outputs = list(node.aggregate_outputs().traits().keys())
+        all_outputs = [outp for outp in outputs
+                       if not outp in TO_SKIP]
     else:
         if hasattr(node, 'output_spec'):
             if node.output_spec is not None:
@@ -148,7 +152,8 @@ def _get_outputs(node, custom_node=True):
 def _get_descr(node, custom_node=True):
 
     if custom_node:
-        descr = node.fullname
+        name = _get_node_name(node, custom_node=True)
+        descr = 'Custom interface wrapping function %s' % name
     else:
         if hasattr(node, 'help'):
             descr = node.help(returnhelp=True).splitlines()[0]
@@ -191,9 +196,24 @@ def _get_web_url(node, module, custom_node):
 def _get_node_name(node, custom_node):
 
     if custom_node:
-        return node.fullname
+        function_code = node.inputs.function_str
+        name = function_code.split(':')[0].split('(')[0].split(' ')[-1]
+        return name
     else:
         return node.__name__
+
+
+def _get_import_statement(node, module, module_path):
+
+    try:
+        importlib.import_module('nipype.' + module)
+        import_statement = "import nipype.%s as %s" % (module, module.split('.')[-1])
+    except ImportError:
+        import_statement = "import sys\nsys.path.append('%s')\nimport %s"
+        import_statement = import_statement % (op.abspath(op.dirname(module_path)), module)
+
+    return import_statement
+
 
 
 def _get_submodule(node):
