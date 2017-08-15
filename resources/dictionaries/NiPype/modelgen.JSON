@@ -9,15 +9,12 @@
       "title": {
         "name": "modelgen.SpecifyModel",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.modelgen.html#specifymodel",
+        "import": "import nipype.algorithms.modelgen as modelgen",
         "code": [
           {
             "language": "NiPype",
             "comment": "Makes a model specification compatible with spm/fsl designers.",
             "argument": "modelgen.SpecifyModel()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, modelgen"
           }
         ]
       },
@@ -176,15 +173,12 @@
       "title": {
         "name": "modelgen.SpecifySPMModel",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.modelgen.html#specifyspmmodel",
+        "import": "import nipype.algorithms.modelgen as modelgen",
         "code": [
           {
             "language": "NiPype",
             "comment": "Adds SPM specific options to SpecifyModel",
             "argument": "modelgen.SpecifySPMModel()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, modelgen"
           }
         ]
       },
@@ -369,15 +363,12 @@
       "title": {
         "name": "modelgen.SpecifySparseModel",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.modelgen.html#specifysparsemodel",
+        "import": "import nipype.algorithms.modelgen as modelgen",
         "code": [
           {
             "language": "NiPype",
             "comment": "Specify a sparse model that is compatible with spm/fsl designers",
             "argument": "modelgen.SpecifySparseModel()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, modelgen"
           }
         ]
       },

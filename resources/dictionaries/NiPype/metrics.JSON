@@ -9,15 +9,12 @@
       "title": {
         "name": "metrics.Distance",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.metrics.html#distance",
+        "import": "import nipype.algorithms.metrics as metrics",
         "code": [
           {
             "language": "NiPype",
             "comment": "Calculates distance between two volumes.",
             "argument": "metrics.Distance()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, metrics"
           }
         ]
       },
@@ -150,15 +147,12 @@
       "title": {
         "name": "metrics.ErrorMap",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.metrics.html#errormap",
+        "import": "import nipype.algorithms.metrics as metrics",
         "code": [
           {
             "language": "NiPype",
             "comment": "Calculates the error (distance) map between two input volumes.",
             "argument": "metrics.ErrorMap()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, metrics"
           }
         ]
       },
@@ -278,15 +272,12 @@
       "title": {
         "name": "metrics.FuzzyOverlap",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.metrics.html#fuzzyoverlap",
+        "import": "import nipype.algorithms.metrics as metrics",
         "code": [
           {
             "language": "NiPype",
             "comment": "Calculates various overlap measures between two maps, using the fuzzy",
             "argument": "metrics.FuzzyOverlap()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, metrics"
           }
         ]
       },
@@ -432,15 +423,12 @@
       "title": {
         "name": "metrics.Overlap",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.metrics.html#overlap",
+        "import": "import nipype.algorithms.metrics as metrics",
         "code": [
           {
             "language": "NiPype",
             "comment": "Calculates Dice and Jaccard's overlap measures between two ROI maps.",
             "argument": "metrics.Overlap()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, metrics"
           }
         ]
       },
@@ -664,15 +652,12 @@
       "title": {
         "name": "metrics.Similarity",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.metrics.html#similarity",
+        "import": "import nipype.algorithms.metrics as metrics",
         "code": [
           {
             "language": "NiPype",
             "comment": "Calculates similarity between two 3D or 4D volumes. Both volumes have to be in",
             "argument": "metrics.Similarity()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, metrics"
           }
         ]
       },

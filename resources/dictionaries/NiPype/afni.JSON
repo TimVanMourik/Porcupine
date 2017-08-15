@@ -7,17 +7,14 @@
         "utils"
       ],
       "title": {
-        "name": "afni.AFNItoNIFTI",
+        "name": "utils.AFNItoNIFTI",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/utils.html#afnitonifti",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dAFNItoNIFTI**",
-            "argument": "afni.AFNItoNIFTI()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "utils.AFNItoNIFTI()"
           }
         ]
       },
@@ -187,17 +184,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "afni.Allineate",
+        "name": "preprocess.Allineate",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#allineate",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dAllineate**",
-            "argument": "afni.Allineate()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.Allineate()"
           }
         ]
       },
@@ -835,17 +829,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "afni.AutoTcorrelate",
+        "name": "preprocess.AutoTcorrelate",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#autotcorrelate",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dAutoTcorrelate**",
-            "argument": "afni.AutoTcorrelate()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.AutoTcorrelate()"
           }
         ]
       },
@@ -1028,17 +1019,14 @@
         "utils"
       ],
       "title": {
-        "name": "afni.Autobox",
+        "name": "utils.Autobox",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/utils.html#autobox",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dAutobox**",
-            "argument": "afni.Autobox()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "utils.Autobox()"
           }
         ]
       },
@@ -1260,17 +1248,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "afni.Automask",
+        "name": "preprocess.Automask",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#automask",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dAutomask**",
-            "argument": "afni.Automask()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.Automask()"
           }
         ]
       },
@@ -1450,20 +1435,207 @@
       "category": [
         "NiPype",
         "afni",
+        "utils"
+      ],
+      "title": {
+        "name": "utils.Axialize",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/utils.html#axialize",
+        "import": "import nipype.interfaces.afni as afni",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **3daxialize**",
+            "argument": "utils.Axialize()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "verb",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "verb"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "sagittal",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "sagittal"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "coronal",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "coronal"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "axial",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "axial"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "orientation",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "orientation"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "outputtype",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputtype"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "afni",
         "preprocess"
       ],
       "title": {
-        "name": "afni.Bandpass",
+        "name": "preprocess.Bandpass",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#bandpass",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dBandpass**",
-            "argument": "afni.Bandpass()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.Bandpass()"
           }
         ]
       },
@@ -1763,17 +1935,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "afni.BlurInMask",
+        "name": "preprocess.BlurInMask",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#blurinmask",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dBlurInMask**",
-            "argument": "afni.BlurInMask()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.BlurInMask()"
           }
         ]
       },
@@ -1982,17 +2151,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "afni.BlurToFWHM",
+        "name": "preprocess.BlurToFWHM",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#blurtofwhm",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dBlurToFWHM**",
-            "argument": "afni.BlurToFWHM()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.BlurToFWHM()"
           }
         ]
       },
@@ -2175,17 +2341,14 @@
         "utils"
       ],
       "title": {
-        "name": "afni.BrickStat",
+        "name": "utils.BrickStat",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/utils.html#brickstat",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dBrickStat**",
-            "argument": "afni.BrickStat()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "utils.BrickStat()"
           }
         ]
       },
@@ -2226,6 +2389,84 @@
             {
               "language": "NiPype",
               "argument": "min"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "slow",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "slow"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "max",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "max"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mean",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mean"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "sum",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "sum"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "var",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "var"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "percentile",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "percentile"
             }
           ]
         },
@@ -2303,17 +2544,14 @@
         "utils"
       ],
       "title": {
-        "name": "afni.Calc",
+        "name": "utils.Calc",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/utils.html#calc",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dcalc**",
-            "argument": "afni.Calc()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "utils.Calc()"
           }
         ]
       },
@@ -2519,20 +2757,272 @@
       "category": [
         "NiPype",
         "afni",
+        "utils"
+      ],
+      "title": {
+        "name": "utils.Cat",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/utils.html#cat",
+        "import": "import nipype.interfaces.afni as afni",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **1dcat**",
+            "argument": "utils.Cat()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "omitconst",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "omitconst"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "keepfree",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "keepfree"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_format",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_format"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "stack",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "stack"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "sel",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "sel"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_int",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_int"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_nice",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_nice"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_double",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_double"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_fint",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_fint"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_cint",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_cint"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "outputtype",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputtype"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "afni",
         "preprocess"
       ],
       "title": {
-        "name": "afni.ClipLevel",
+        "name": "preprocess.ClipLevel",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#cliplevel",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dClipLevel**",
-            "argument": "afni.ClipLevel()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.ClipLevel()"
           }
         ]
       },
@@ -2663,17 +3153,14 @@
         "utils"
       ],
       "title": {
-        "name": "afni.Copy",
+        "name": "utils.Copy",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/utils.html#copy",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dcopy**",
-            "argument": "afni.Copy()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "utils.Copy()"
           }
         ]
       },
@@ -2788,20 +3275,688 @@
       "category": [
         "NiPype",
         "afni",
+        "model"
+      ],
+      "title": {
+        "name": "model.Deconvolve",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/model.html#deconvolve",
+        "import": "import nipype.interfaces.afni as afni",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **3dDeconvolve**",
+            "argument": "model.Deconvolve()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "sat",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "sat"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "trans",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "trans"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "noblock",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "noblock"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "force_TR",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "force_TR"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "input1D",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "input1D"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "TR_1D",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "TR_1D"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "legendre",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "legendre"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "nolegendre",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "nolegendre"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "nodmbase",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "nodmbase"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dmbase",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dmbase"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "svd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "svd"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "nosvd",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "nosvd"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "rmsmin",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "rmsmin"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "nocond",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "nocond"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "singvals",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "singvals"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "goforit",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "goforit"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "allzero_OK",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "allzero_OK"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dname",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dname"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "automask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "automask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "STATmask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "STATmask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "censor",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "censor"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "polort",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "polort"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ortvec",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ortvec"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "x1D",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "x1D"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "x1D_stop",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "x1D_stop"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "jobs",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "jobs"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "fout",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fout"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "rout",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "rout"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "tout",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "tout"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "vout",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "vout"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "global_times",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "global_times"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "local_times",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "local_times"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_stimts",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "num_stimts"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "stim_times",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "stim_times"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "stim_label",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "stim_label"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "stim_times_subtract",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "stim_times_subtract"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_glt",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "num_glt"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "gltsym",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "gltsym"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "glt_label",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "glt_label"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "outputtype",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputtype"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "reml_script",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "reml_script"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "x1D",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "x1D"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "afni",
         "preprocess"
       ],
       "title": {
-        "name": "afni.DegreeCentrality",
+        "name": "preprocess.DegreeCentrality",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#degreecentrality",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dDegreeCentrality**",
-            "argument": "afni.DegreeCentrality()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.DegreeCentrality()"
           }
         ]
       },
@@ -3023,17 +4178,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "afni.Despike",
+        "name": "preprocess.Despike",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#despike",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dDespike**",
-            "argument": "afni.Despike()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.Despike()"
           }
         ]
       },
@@ -3151,17 +4303,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "afni.Detrend",
+        "name": "preprocess.Detrend",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#detrend",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dDetrend**",
-            "argument": "afni.Detrend()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.Detrend()"
           }
         ]
       },
@@ -3279,17 +4428,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "afni.ECM",
+        "name": "preprocess.ECM",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#ecm",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dECM**",
-            "argument": "afni.ECM()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.ECM()"
           }
         ]
       },
@@ -3576,17 +4722,217 @@
         "utils"
       ],
       "title": {
-        "name": "afni.Eval",
+        "name": "utils.Edge3",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/utils.html#edge3",
+        "import": "import nipype.interfaces.afni as afni",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **3dedge3**",
+            "argument": "utils.Edge3()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "datum",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "datum"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "fscale",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fscale"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "gscale",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "gscale"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "nscale",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "nscale"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "scale_floats",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "scale_floats"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "verbose",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "verbose"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "outputtype",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputtype"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "afni",
+        "utils"
+      ],
+      "title": {
+        "name": "utils.Eval",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/utils.html#eval",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **1deval**",
-            "argument": "afni.Eval()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "utils.Eval()"
           }
         ]
       },
@@ -3808,17 +5154,14 @@
         "utils"
       ],
       "title": {
-        "name": "afni.FWHMx",
+        "name": "utils.FWHMx",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/utils.html#fwhmx",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dFWHMx**",
-            "argument": "afni.FWHMx()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "utils.FWHMx()"
           }
         ]
       },
@@ -4144,17 +5487,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "afni.Fim",
+        "name": "preprocess.Fim",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#fim",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dfim+**",
-            "argument": "afni.Fim()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.Fim()"
           }
         ]
       },
@@ -4311,17 +5651,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "afni.Fourier",
+        "name": "preprocess.Fourier",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#fourier",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dFourier**",
-            "argument": "afni.Fourier()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.Fourier()"
           }
         ]
       },
@@ -4475,20 +5812,155 @@
       "category": [
         "NiPype",
         "afni",
+        "utils"
+      ],
+      "title": {
+        "name": "utils.GCOR",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/utils.html#gcor",
+        "import": "import nipype.interfaces.afni as afni",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **@compute_gcor**",
+            "argument": "utils.GCOR()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "nfirst",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "nfirst"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "no_demean",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "no_demean"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "afni",
         "preprocess"
       ],
       "title": {
-        "name": "afni.Hist",
+        "name": "preprocess.Hist",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#hist",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dHist**",
-            "argument": "afni.Hist()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.Hist()"
           }
         ]
       },
@@ -4697,17 +6169,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "afni.LFCD",
+        "name": "preprocess.LFCD",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#lfcd",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dLFCD**",
-            "argument": "afni.LFCD()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.LFCD()"
           }
         ]
       },
@@ -4890,17 +6359,14 @@
         "utils"
       ],
       "title": {
-        "name": "afni.MaskTool",
+        "name": "utils.MaskTool",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/utils.html#masktool",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dmask_tool**",
-            "argument": "afni.MaskTool()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "utils.MaskTool()"
           }
         ]
       },
@@ -5135,17 +6601,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "afni.Maskave",
+        "name": "preprocess.Maskave",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#maskave",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dmaskave**",
-            "argument": "afni.Maskave()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.Maskave()"
           }
         ]
       },
@@ -5289,17 +6752,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "afni.Means",
+        "name": "preprocess.Means",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#means",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dMean**",
-            "argument": "afni.Means()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.Means()"
           }
         ]
       },
@@ -5534,17 +6994,14 @@
         "utils"
       ],
       "title": {
-        "name": "afni.Merge",
+        "name": "utils.Merge",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/utils.html#merge",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dmerge**",
-            "argument": "afni.Merge()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "utils.Merge()"
           }
         ]
       },
@@ -5688,17 +7145,14 @@
         "utils"
       ],
       "title": {
-        "name": "afni.Notes",
+        "name": "utils.Notes",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/utils.html#notes",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dNotes**",
-            "argument": "afni.Notes()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "utils.Notes()"
           }
         ]
       },
@@ -5878,20 +7332,233 @@
       "category": [
         "NiPype",
         "afni",
+        "utils"
+      ],
+      "title": {
+        "name": "utils.NwarpApply",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/utils.html#nwarpapply",
+        "import": "import nipype.interfaces.afni as afni",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **3dNwarpApply**",
+            "argument": "utils.NwarpApply()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "warp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "warp"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "inv_warp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inv_warp"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "master",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "master"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "interp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "interp"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ainterp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ainterp"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "short",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "short"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "quiet",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "quiet"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "verb",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "verb"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "afni",
         "preprocess"
       ],
       "title": {
-        "name": "afni.OutlierCount",
+        "name": "preprocess.OutlierCount",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#outliercount",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dToutcount**",
-            "argument": "afni.OutlierCount()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.OutlierCount()"
           }
         ]
       },
@@ -6139,17 +7806,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "afni.QualityIndex",
+        "name": "preprocess.QualityIndex",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#qualityindex",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dTqual**",
-            "argument": "afni.QualityIndex()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.QualityIndex()"
           }
         ]
       },
@@ -6345,17 +8009,750 @@
         "preprocess"
       ],
       "title": {
-        "name": "afni.QwarpPlusMinus",
+        "name": "preprocess.Qwarp",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#qwarp",
+        "import": "import nipype.interfaces.afni as afni",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **3dQwarp**",
+            "argument": "preprocess.Qwarp()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "base_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "base_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "resample",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "resample"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "nowarp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "nowarp"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "iwarp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "iwarp"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "pear",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "pear"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "noneg",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "noneg"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "nopenalty",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "nopenalty"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "penfac",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "penfac"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "noweight",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "noweight"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "weight",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "weight"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "wball",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "wball"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "wmask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "wmask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_weight_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_weight_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "blur",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "blur"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "pblur",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "pblur"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "emask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "emask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "noXdis",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "noXdis"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "noYdis",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "noYdis"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "noZdis",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "noZdis"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "iniwarp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "iniwarp"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "inilev",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "inilev"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "minpatch",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "minpatch"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "maxlev",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "maxlev"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "gridlist",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "gridlist"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "allsave",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "allsave"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "duplo",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "duplo"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "workhard",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "workhard"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "Qfinal",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "Qfinal"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "Qonly",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "Qonly"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "plusminus",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "plusminus"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "nopad",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "nopad"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "nopadWARP",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "nopadWARP"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "expad",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "expad"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ballopt",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ballopt"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "baxopt",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "baxopt"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "verb",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "verb"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "quiet",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "quiet"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "overwrite",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "overwrite"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "lpc",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "lpc"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "lpa",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "lpa"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "hel",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "hel"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mi",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mi"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "nmi",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "nmi"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "outputtype",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputtype"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "warped_source",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "warped_source"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "warped_base",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "warped_base"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "source_warp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "source_warp"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "base_warp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "base_warp"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "weights",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "weights"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "afni",
+        "preprocess"
+      ],
+      "title": {
+        "name": "preprocess.QwarpPlusMinus",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#qwarpplusminus",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dQwarp -prefix Qwarp.nii.gz -plusminus**",
-            "argument": "afni.QwarpPlusMinus()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.QwarpPlusMinus()"
           }
         ]
       },
@@ -6564,17 +8961,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "afni.ROIStats",
+        "name": "preprocess.ROIStats",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#roistats",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dROIstats**",
-            "argument": "afni.ROIStats()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.ROIStats()"
           }
         ]
       },
@@ -6705,17 +9099,14 @@
         "utils"
       ],
       "title": {
-        "name": "afni.Refit",
+        "name": "utils.Refit",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/utils.html#refit",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3drefit**",
-            "argument": "afni.Refit()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "utils.Refit()"
           }
         ]
       },
@@ -6908,20 +9299,727 @@
       "category": [
         "NiPype",
         "afni",
+        "model"
+      ],
+      "title": {
+        "name": "model.Remlfit",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/model.html#remlfit",
+        "import": "import nipype.interfaces.afni as afni",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **3dREMLfit**",
+            "argument": "model.Remlfit()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "matrix",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "matrix"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "polort",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "polort"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "matim",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "matim"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "automask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "automask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "STATmask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "STATmask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "addbase",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "addbase"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "slibase",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "slibase"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "slibase_sm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "slibase_sm"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "usetemp",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "usetemp"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "nodmbase",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "nodmbase"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dsort",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dsort"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dsort_nods",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dsort_nods"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "fout",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fout"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "rout",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "rout"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "tout",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "tout"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "nofdr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "nofdr"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "nobout",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "nobout"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "gltsym",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "gltsym"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "var_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "var_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "rbeta_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "rbeta_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "glt_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "glt_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "fitts_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fitts_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "errts_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "errts_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "wherr_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "wherr_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "quiet",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "quiet"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "verb",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "verb"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ovar",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ovar"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "obeta",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "obeta"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "obuck",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "obuck"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "oglt",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "oglt"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ofitts",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ofitts"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "oerrts",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "oerrts"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "outputtype",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputtype"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "var_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "var_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "rbeta_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "rbeta_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "glt_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "glt_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "fitts_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fitts_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "errts_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "errts_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "wherr_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "wherr_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "ovar",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ovar"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "obeta",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "obeta"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "obuck",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "obuck"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "oglt",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "oglt"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "ofitts",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ofitts"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "oerrts",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "oerrts"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "afni",
         "utils"
       ],
       "title": {
-        "name": "afni.Resample",
+        "name": "utils.Resample",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/utils.html#resample",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dresample**",
-            "argument": "afni.Resample()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "utils.Resample()"
           }
         ]
       },
@@ -7091,17 +10189,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "afni.Retroicor",
+        "name": "preprocess.Retroicor",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#retroicor",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dretroicor**",
-            "argument": "afni.Retroicor()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.Retroicor()"
           }
         ]
       },
@@ -7297,17 +10392,14 @@
         "svm"
       ],
       "title": {
-        "name": "afni.SVMTest",
+        "name": "svm.SVMTest",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/svm.html#svmtest",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dsvm**",
-            "argument": "afni.SVMTest()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "svm.SVMTest()"
           }
         ]
       },
@@ -7516,17 +10608,14 @@
         "svm"
       ],
       "title": {
-        "name": "afni.SVMTrain",
+        "name": "svm.SVMTrain",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/svm.html#svmtrain",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dsvm**",
-            "argument": "afni.SVMTrain()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "svm.SVMTrain()"
           }
         ]
       },
@@ -7813,17 +10902,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "afni.Seg",
+        "name": "preprocess.Seg",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#seg",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dSeg**",
-            "argument": "afni.Seg()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.Seg()"
           }
         ]
       },
@@ -8045,17 +11131,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "afni.SkullStrip",
+        "name": "preprocess.SkullStrip",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#skullstrip",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dSkullStrip**",
-            "argument": "afni.SkullStrip()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.SkullStrip()"
           }
         ]
       },
@@ -8173,17 +11256,14 @@
         "utils"
       ],
       "title": {
-        "name": "afni.TCat",
+        "name": "utils.TCat",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/utils.html#tcat",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dTcat**",
-            "argument": "afni.TCat()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "utils.TCat()"
           }
         ]
       },
@@ -8314,17 +11394,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "afni.TCorr1D",
+        "name": "preprocess.TCorr1D",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#tcorr1d",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dTcorr1D**",
-            "argument": "afni.TCorr1D()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.TCorr1D()"
           }
         ]
       },
@@ -8507,17 +11584,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "afni.TCorrMap",
+        "name": "preprocess.TCorrMap",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#tcorrmap",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dTcorrMap**",
-            "argument": "afni.TCorrMap()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.TCorrMap()"
           }
         ]
       },
@@ -9103,17 +12177,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "afni.TCorrelate",
+        "name": "preprocess.TCorrelate",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#tcorrelate",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dTcorrelate**",
-            "argument": "afni.TCorrelate()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.TCorrelate()"
           }
         ]
       },
@@ -9270,17 +12341,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "afni.TShift",
+        "name": "preprocess.TShift",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#tshift",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dTshift**",
-            "argument": "afni.TShift()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.TShift()"
           }
         ]
       },
@@ -9502,17 +12570,14 @@
         "utils"
       ],
       "title": {
-        "name": "afni.TStat",
+        "name": "utils.TStat",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/utils.html#tstat",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dTstat**",
-            "argument": "afni.TStat()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "utils.TStat()"
           }
         ]
       },
@@ -9656,17 +12721,14 @@
         "utils"
       ],
       "title": {
-        "name": "afni.To3D",
+        "name": "utils.To3D",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/utils.html#to3d",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **to3d**",
-            "argument": "afni.To3D()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "utils.To3D()"
           }
         ]
       },
@@ -9849,17 +12911,14 @@
         "utils"
       ],
       "title": {
-        "name": "afni.Unifize",
+        "name": "utils.Unifize",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/utils.html#unifize",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dUnifize**",
-            "argument": "afni.Unifize()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "utils.Unifize()"
           }
         ]
       },
@@ -10068,17 +13127,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "afni.Volreg",
+        "name": "preprocess.Volreg",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#volreg",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dvolreg**",
-            "argument": "afni.Volreg()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.Volreg()"
           }
         ]
       },
@@ -10339,17 +13395,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "afni.Warp",
+        "name": "preprocess.Warp",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/preprocess.html#warp",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dWarp**",
-            "argument": "afni.Warp()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "preprocess.Warp()"
           }
         ]
       },
@@ -10571,17 +13624,14 @@
         "utils"
       ],
       "title": {
-        "name": "afni.ZCutUp",
+        "name": "utils.ZCutUp",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/utils.html#zcutup",
+        "import": "import nipype.interfaces.afni as afni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **3dZcutup**",
-            "argument": "afni.ZCutUp()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, afni"
+            "argument": "utils.ZCutUp()"
           }
         ]
       },
@@ -10622,6 +13672,464 @@
             {
               "language": "NiPype",
               "argument": "keep"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "outputtype",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputtype"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "afni",
+        "utils"
+      ],
+      "title": {
+        "name": "utils.Zcat",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/utils.html#zcat",
+        "import": "import nipype.interfaces.afni as afni",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **3dZcat**",
+            "argument": "utils.Zcat()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "datum",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "datum"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "verb",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "verb"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "fscale",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fscale"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "nscale",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "nscale"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "outputtype",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "outputtype"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "afni",
+        "utils"
+      ],
+      "title": {
+        "name": "utils.Zeropad",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.afni/utils.html#zeropad",
+        "import": "import nipype.interfaces.afni as afni",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **3dZeropad**",
+            "argument": "utils.Zeropad()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_files"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "I",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "I"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "S",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "S"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "A",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "A"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "P",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "P"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "L",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "L"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "R",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "R"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "z",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "z"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "RL",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "RL"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "AP",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "AP"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "IS",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "IS"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mm"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "master",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "master"
             }
           ]
         },

@@ -9,15 +9,12 @@
       "title": {
         "name": "confounds.ACompCor",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.confounds.html#acompcor",
+        "import": "import nipype.algorithms.confounds as confounds",
         "code": [
           {
             "language": "NiPype",
             "comment": "Anatomical compcor: for inputs and outputs, see CompCor.",
             "argument": "confounds.ACompCor()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, confounds"
           }
         ]
       },
@@ -105,6 +102,19 @@
           "output": false,
           "visible": false,
           "editable": true,
+          "name": "pre_filter",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "pre_filter"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
           "name": "use_regress_poly",
           "code": [
             {
@@ -144,6 +154,58 @@
           "output": false,
           "visible": false,
           "editable": true,
+          "name": "high_pass_cutoff",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "high_pass_cutoff"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "repetition_time",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "repetition_time"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "save_pre_filter",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "save_pre_filter"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_initial_volumes",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_initial_volumes"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
           "name": "ignore_exception",
           "code": [
             {
@@ -162,6 +224,19 @@
             {
               "language": "NiPype",
               "argument": "components_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "pre_filter_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "pre_filter_file"
             }
           ]
         }
@@ -176,15 +251,12 @@
       "title": {
         "name": "confounds.CompCor",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.confounds.html#compcor",
+        "import": "import nipype.algorithms.confounds as confounds",
         "code": [
           {
             "language": "NiPype",
             "comment": "Interface with core CompCor computation, used in aCompCor and tCompCor",
             "argument": "confounds.CompCor()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, confounds"
           }
         ]
       },
@@ -272,6 +344,19 @@
           "output": false,
           "visible": false,
           "editable": true,
+          "name": "pre_filter",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "pre_filter"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
           "name": "use_regress_poly",
           "code": [
             {
@@ -311,6 +396,58 @@
           "output": false,
           "visible": false,
           "editable": true,
+          "name": "high_pass_cutoff",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "high_pass_cutoff"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "repetition_time",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "repetition_time"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "save_pre_filter",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "save_pre_filter"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_initial_volumes",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_initial_volumes"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
           "name": "ignore_exception",
           "code": [
             {
@@ -331,6 +468,19 @@
               "argument": "components_file"
             }
           ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "pre_filter_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "pre_filter_file"
+            }
+          ]
         }
       ]
     },
@@ -343,15 +493,12 @@
       "title": {
         "name": "confounds.ComputeDVARS",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.confounds.html#computedvars",
+        "import": "import nipype.algorithms.confounds as confounds",
         "code": [
           {
             "language": "NiPype",
             "comment": "Computes the DVARS.",
             "argument": "confounds.ComputeDVARS()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, confounds"
           }
         ]
       },
@@ -679,15 +826,12 @@
       "title": {
         "name": "confounds.FramewiseDisplacement",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.confounds.html#framewisedisplacement",
+        "import": "import nipype.algorithms.confounds as confounds",
         "code": [
           {
             "language": "NiPype",
             "comment": "Calculate the :abbr:`FD (framewise displacement)` as in [Power2012]_.",
             "argument": "confounds.FramewiseDisplacement()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, confounds"
           }
         ]
       },
@@ -885,15 +1029,12 @@
       "title": {
         "name": "confounds.NonSteadyStateDetector",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.confounds.html#nonsteadystatedetector",
+        "import": "import nipype.algorithms.confounds as confounds",
         "code": [
           {
             "language": "NiPype",
             "comment": "Returns the number of non-steady state volumes detected at the beginning",
             "argument": "confounds.NonSteadyStateDetector()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, confounds"
           }
         ]
       },
@@ -948,15 +1089,12 @@
       "title": {
         "name": "confounds.TCompCor",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.confounds.html#tcompcor",
+        "import": "import nipype.algorithms.confounds as confounds",
         "code": [
           {
             "language": "NiPype",
             "comment": "Interface for tCompCor. Computes a ROI mask based on variance of voxels.",
             "argument": "confounds.TCompCor()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, confounds"
           }
         ]
       },
@@ -1057,6 +1195,19 @@
           "output": false,
           "visible": false,
           "editable": true,
+          "name": "pre_filter",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "pre_filter"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
           "name": "use_regress_poly",
           "code": [
             {
@@ -1088,6 +1239,58 @@
             {
               "language": "NiPype",
               "argument": "header_prefix"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "high_pass_cutoff",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "high_pass_cutoff"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "repetition_time",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "repetition_time"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "save_pre_filter",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "save_pre_filter"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_initial_volumes",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_initial_volumes"
             }
           ]
         },
@@ -1129,6 +1332,19 @@
               "argument": "components_file"
             }
           ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "pre_filter_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "pre_filter_file"
+            }
+          ]
         }
       ]
     },
@@ -1141,15 +1357,12 @@
       "title": {
         "name": "confounds.TSNR",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.confounds.html#tsnr",
+        "import": "import nipype.algorithms.confounds as confounds",
         "code": [
           {
             "language": "NiPype",
             "comment": "Computes the time-course SNR for a time series",
             "argument": "confounds.TSNR()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, confounds"
           }
         ]
       },

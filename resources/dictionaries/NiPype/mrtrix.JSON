@@ -7,17 +7,14 @@
         "tensors"
       ],
       "title": {
-        "name": "mrtrix.ConstrainedSphericalDeconvolution",
+        "name": "tensors.ConstrainedSphericalDeconvolution",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/tensors.html#constrainedsphericaldeconvolution",
+        "import": "import nipype.interfaces.mrtrix as mrtrix",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **csdeconv**",
-            "argument": "mrtrix.ConstrainedSphericalDeconvolution()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": "tensors.ConstrainedSphericalDeconvolution()"
           }
         ]
       },
@@ -265,17 +262,14 @@
         "tensors"
       ],
       "title": {
-        "name": "mrtrix.DWI2SphericalHarmonicsImage",
+        "name": "tensors.DWI2SphericalHarmonicsImage",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/tensors.html#dwi2sphericalharmonicsimage",
+        "import": "import nipype.interfaces.mrtrix as mrtrix",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **dwi2SH**",
-            "argument": "mrtrix.DWI2SphericalHarmonicsImage()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": "tensors.DWI2SphericalHarmonicsImage()"
           }
         ]
       },
@@ -419,17 +413,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "mrtrix.DWI2Tensor",
+        "name": "preprocess.DWI2Tensor",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/preprocess.html#dwi2tensor",
+        "import": "import nipype.interfaces.mrtrix as mrtrix",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **dwi2tensor**",
-            "argument": "mrtrix.DWI2Tensor()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": "preprocess.DWI2Tensor()"
           }
         ]
       },
@@ -599,17 +590,14 @@
         "tracking"
       ],
       "title": {
-        "name": "mrtrix.DiffusionTensorStreamlineTrack",
+        "name": "tracking.DiffusionTensorStreamlineTrack",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/tracking.html#diffusiontensorstreamlinetrack",
+        "import": "import nipype.interfaces.mrtrix as mrtrix",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **streamtrack**",
-            "argument": "mrtrix.DiffusionTensorStreamlineTrack()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": "tracking.DiffusionTensorStreamlineTrack()"
           }
         ]
       },
@@ -1013,17 +1001,14 @@
         "tensors"
       ],
       "title": {
-        "name": "mrtrix.Directions2Amplitude",
+        "name": "tensors.Directions2Amplitude",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/tensors.html#directions2amplitude",
+        "import": "import nipype.interfaces.mrtrix as mrtrix",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **dir2amp**",
-            "argument": "mrtrix.Directions2Amplitude()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": "tensors.Directions2Amplitude()"
           }
         ]
       },
@@ -1206,17 +1191,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "mrtrix.Erode",
+        "name": "preprocess.Erode",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/preprocess.html#erode",
+        "import": "import nipype.interfaces.mrtrix as mrtrix",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **erode**",
-            "argument": "mrtrix.Erode()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": "preprocess.Erode()"
           }
         ]
       },
@@ -1373,17 +1355,14 @@
         "tensors"
       ],
       "title": {
-        "name": "mrtrix.EstimateResponseForSH",
+        "name": "tensors.EstimateResponseForSH",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/tensors.html#estimateresponseforsh",
+        "import": "import nipype.interfaces.mrtrix as mrtrix",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **estimate_response**",
-            "argument": "mrtrix.EstimateResponseForSH()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": "tensors.EstimateResponseForSH()"
           }
         ]
       },
@@ -1566,17 +1545,14 @@
         "tensors"
       ],
       "title": {
-        "name": "mrtrix.FSL2MRTrix",
+        "name": "tensors.FSL2MRTrix",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/tensors.html#fsl2mrtrix",
+        "import": "import nipype.interfaces.mrtrix as mrtrix",
         "code": [
           {
             "language": "NiPype",
             "comment": "Converts separate b-values and b-vectors from text files (FSL style) into a",
-            "argument": "mrtrix.FSL2MRTrix()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": "tensors.FSL2MRTrix()"
           }
         ]
       },
@@ -1681,17 +1657,14 @@
         "tracking"
       ],
       "title": {
-        "name": "mrtrix.FilterTracks",
+        "name": "tracking.FilterTracks",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/tracking.html#filtertracks",
+        "import": "import nipype.interfaces.mrtrix as mrtrix",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **filter_tracks**",
-            "argument": "mrtrix.FilterTracks()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": "tracking.FilterTracks()"
           }
         ]
       },
@@ -1913,17 +1886,14 @@
         "tensors"
       ],
       "title": {
-        "name": "mrtrix.FindShPeaks",
+        "name": "tensors.FindShPeaks",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/tensors.html#findshpeaks",
+        "import": "import nipype.interfaces.mrtrix as mrtrix",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **find_SH_peaks**",
-            "argument": "mrtrix.FindShPeaks()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": "tensors.FindShPeaks()"
           }
         ]
       },
@@ -2132,17 +2102,14 @@
         "tensors"
       ],
       "title": {
-        "name": "mrtrix.GenerateDirections",
+        "name": "tensors.GenerateDirections",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/tensors.html#generatedirections",
+        "import": "import nipype.interfaces.mrtrix as mrtrix",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **gendir**",
-            "argument": "mrtrix.GenerateDirections()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": "tensors.GenerateDirections()"
           }
         ]
       },
@@ -2312,17 +2279,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "mrtrix.GenerateWhiteMatterMask",
+        "name": "preprocess.GenerateWhiteMatterMask",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/preprocess.html#generatewhitemattermask",
+        "import": "import nipype.interfaces.mrtrix as mrtrix",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **gen_WM_mask**",
-            "argument": "mrtrix.GenerateWhiteMatterMask()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": "preprocess.GenerateWhiteMatterMask()"
           }
         ]
       },
@@ -2466,17 +2430,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "mrtrix.MRConvert",
+        "name": "preprocess.MRConvert",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/preprocess.html#mrconvert",
+        "import": "import nipype.interfaces.mrtrix as mrtrix",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mrconvert**",
-            "argument": "mrtrix.MRConvert()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": "preprocess.MRConvert()"
           }
         ]
       },
@@ -2711,17 +2672,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "mrtrix.MRMultiply",
+        "name": "preprocess.MRMultiply",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/preprocess.html#mrmultiply",
+        "import": "import nipype.interfaces.mrtrix as mrtrix",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mrmult**",
-            "argument": "mrtrix.MRMultiply()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": "preprocess.MRMultiply()"
           }
         ]
       },
@@ -2852,17 +2810,14 @@
         "convert"
       ],
       "title": {
-        "name": "mrtrix.MRTrix2TrackVis",
+        "name": "convert.MRTrix2TrackVis",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/convert.html#mrtrix2trackvis",
+        "import": "import nipype.interfaces.mrtrix as mrtrix",
         "code": [
           {
             "language": "NiPype",
             "comment": "Converts MRtrix (.tck) tract files into TrackVis (.trk) format",
-            "argument": "mrtrix.MRTrix2TrackVis()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": "convert.MRTrix2TrackVis()"
           }
         ]
       },
@@ -2954,17 +2909,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "mrtrix.MRTrixInfo",
+        "name": "preprocess.MRTrixInfo",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/preprocess.html#mrtrixinfo",
+        "import": "import nipype.interfaces.mrtrix as mrtrix",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mrinfo**",
-            "argument": "mrtrix.MRTrixInfo()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": "preprocess.MRTrixInfo()"
           }
         ]
       },
@@ -3043,17 +2995,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "mrtrix.MRTrixViewer",
+        "name": "preprocess.MRTrixViewer",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/preprocess.html#mrtrixviewer",
+        "import": "import nipype.interfaces.mrtrix as mrtrix",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mrview**",
-            "argument": "mrtrix.MRTrixViewer()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": "preprocess.MRTrixViewer()"
           }
         ]
       },
@@ -3158,17 +3107,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "mrtrix.MedianFilter3D",
+        "name": "preprocess.MedianFilter3D",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/preprocess.html#medianfilter3d",
+        "import": "import nipype.interfaces.mrtrix as mrtrix",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **median3D**",
-            "argument": "mrtrix.MedianFilter3D()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": "preprocess.MedianFilter3D()"
           }
         ]
       },
@@ -3299,17 +3245,14 @@
         "tracking"
       ],
       "title": {
-        "name": "mrtrix.ProbabilisticSphericallyDeconvolutedStreamlineTrack",
+        "name": "tracking.ProbabilisticSphericallyDeconvolutedStreamlineTrack",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/tracking.html#probabilisticsphericallydeconvolutedstreamlinetrack",
+        "import": "import nipype.interfaces.mrtrix as mrtrix",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **streamtrack**",
-            "argument": "mrtrix.ProbabilisticSphericallyDeconvolutedStreamlineTrack()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": "tracking.ProbabilisticSphericallyDeconvolutedStreamlineTrack()"
           }
         ]
       },
@@ -3713,17 +3656,14 @@
         "tracking"
       ],
       "title": {
-        "name": "mrtrix.SphericallyDeconvolutedStreamlineTrack",
+        "name": "tracking.SphericallyDeconvolutedStreamlineTrack",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/tracking.html#sphericallydeconvolutedstreamlinetrack",
+        "import": "import nipype.interfaces.mrtrix as mrtrix",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **streamtrack**",
-            "argument": "mrtrix.SphericallyDeconvolutedStreamlineTrack()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": "tracking.SphericallyDeconvolutedStreamlineTrack()"
           }
         ]
       },
@@ -4114,17 +4054,14 @@
         "tracking"
       ],
       "title": {
-        "name": "mrtrix.StreamlineTrack",
+        "name": "tracking.StreamlineTrack",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/tracking.html#streamlinetrack",
+        "import": "import nipype.interfaces.mrtrix as mrtrix",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **streamtrack**",
-            "argument": "mrtrix.StreamlineTrack()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": "tracking.StreamlineTrack()"
           }
         ]
       },
@@ -4515,17 +4452,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "mrtrix.Tensor2ApparentDiffusion",
+        "name": "preprocess.Tensor2ApparentDiffusion",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/preprocess.html#tensor2apparentdiffusion",
+        "import": "import nipype.interfaces.mrtrix as mrtrix",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **tensor2ADC**",
-            "argument": "mrtrix.Tensor2ApparentDiffusion()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": "preprocess.Tensor2ApparentDiffusion()"
           }
         ]
       },
@@ -4656,17 +4590,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "mrtrix.Tensor2FractionalAnisotropy",
+        "name": "preprocess.Tensor2FractionalAnisotropy",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/preprocess.html#tensor2fractionalanisotropy",
+        "import": "import nipype.interfaces.mrtrix as mrtrix",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **tensor2FA**",
-            "argument": "mrtrix.Tensor2FractionalAnisotropy()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": "preprocess.Tensor2FractionalAnisotropy()"
           }
         ]
       },
@@ -4797,17 +4728,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "mrtrix.Tensor2Vector",
+        "name": "preprocess.Tensor2Vector",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/preprocess.html#tensor2vector",
+        "import": "import nipype.interfaces.mrtrix as mrtrix",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **tensor2vector**",
-            "argument": "mrtrix.Tensor2Vector()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": "preprocess.Tensor2Vector()"
           }
         ]
       },
@@ -4938,17 +4866,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "mrtrix.Threshold",
+        "name": "preprocess.Threshold",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/preprocess.html#threshold",
+        "import": "import nipype.interfaces.mrtrix as mrtrix",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **threshold**",
-            "argument": "mrtrix.Threshold()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": "preprocess.Threshold()"
           }
         ]
       },
@@ -5131,17 +5056,14 @@
         "tracking"
       ],
       "title": {
-        "name": "mrtrix.Tracks2Prob",
+        "name": "tracking.Tracks2Prob",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/tracking.html#tracks2prob",
+        "import": "import nipype.interfaces.mrtrix as mrtrix",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **tracks2prob**",
-            "argument": "mrtrix.Tracks2Prob()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": "tracking.Tracks2Prob()"
           }
         ]
       },

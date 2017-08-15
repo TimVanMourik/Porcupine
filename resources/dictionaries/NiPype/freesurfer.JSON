@@ -7,17 +7,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.AddXFormToHeader",
+        "name": "utils.AddXFormToHeader",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#addxformtoheader",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_add_xform_to_header**",
-            "argument": "freesurfer.AddXFormToHeader()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.AddXFormToHeader()"
           }
         ]
       },
@@ -174,17 +171,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.Aparc2Aseg",
+        "name": "utils.Aparc2Aseg",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#aparc2aseg",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_aparc2aseg**",
-            "argument": "freesurfer.Aparc2Aseg()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.Aparc2Aseg()"
           }
         ]
       },
@@ -536,17 +530,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.Apas2Aseg",
+        "name": "utils.Apas2Aseg",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#apas2aseg",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **apas2aseg**",
-            "argument": "freesurfer.Apas2Aseg()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.Apas2Aseg()"
           }
         ]
       },
@@ -664,17 +655,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.ApplyMask",
+        "name": "utils.ApplyMask",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#applymask",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_mask**",
-            "argument": "freesurfer.ApplyMask()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.ApplyMask()"
           }
         ]
       },
@@ -909,17 +897,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "freesurfer.ApplyVolTransform",
+        "name": "preprocess.ApplyVolTransform",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#applyvoltransform",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_vol2vol**",
-            "argument": "freesurfer.ApplyVolTransform()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "preprocess.ApplyVolTransform()"
           }
         ]
       },
@@ -1232,17 +1217,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "freesurfer.BBRegister",
+        "name": "preprocess.BBRegister",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#bbregister",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **bbregister**",
-            "argument": "freesurfer.BBRegister()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "preprocess.BBRegister()"
           }
         ]
       },
@@ -1594,17 +1576,14 @@
         "model"
       ],
       "title": {
-        "name": "freesurfer.Binarize",
+        "name": "model.Binarize",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#binarize",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_binarize**",
-            "argument": "freesurfer.Binarize()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "model.Binarize()"
           }
         ]
       },
@@ -2047,17 +2026,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "freesurfer.CALabel",
+        "name": "preprocess.CALabel",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#calabel",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_ca_label**",
-            "argument": "freesurfer.CALabel()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "preprocess.CALabel()"
           }
         ]
       },
@@ -2318,17 +2294,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "freesurfer.CANormalize",
+        "name": "preprocess.CANormalize",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#canormalize",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_ca_normalize**",
-            "argument": "freesurfer.CANormalize()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "preprocess.CANormalize()"
           }
         ]
       },
@@ -2524,17 +2497,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "freesurfer.CARegister",
+        "name": "preprocess.CARegister",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#caregister",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_ca_register**",
-            "argument": "freesurfer.CARegister()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "preprocess.CARegister()"
           }
         ]
       },
@@ -2782,17 +2752,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.CheckTalairachAlignment",
+        "name": "utils.CheckTalairachAlignment",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#checktalairachalignment",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **talairach_afd**",
-            "argument": "freesurfer.CheckTalairachAlignment()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.CheckTalairachAlignment()"
           }
         ]
       },
@@ -2923,17 +2890,14 @@
         "model"
       ],
       "title": {
-        "name": "freesurfer.Concatenate",
+        "name": "model.Concatenate",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#concatenate",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_concat**",
-            "argument": "freesurfer.Concatenate()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "model.Concatenate()"
           }
         ]
       },
@@ -3246,17 +3210,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "freesurfer.ConcatenateLTA",
+        "name": "preprocess.ConcatenateLTA",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#concatenatelta",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_concatenate_lta**",
-            "argument": "freesurfer.ConcatenateLTA()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "preprocess.ConcatenateLTA()"
           }
         ]
       },
@@ -3387,17 +3348,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.Contrast",
+        "name": "utils.Contrast",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#contrast",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **pctsurfcon**",
-            "argument": "freesurfer.Contrast()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.Contrast()"
           }
         ]
       },
@@ -3632,17 +3590,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.Curvature",
+        "name": "utils.Curvature",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#curvature",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_curvature**",
-            "argument": "freesurfer.Curvature()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.Curvature()"
           }
         ]
       },
@@ -3838,17 +3793,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.CurvatureStats",
+        "name": "utils.CurvatureStats",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#curvaturestats",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_curvature_stats**",
-            "argument": "freesurfer.CurvatureStats()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.CurvatureStats()"
           }
         ]
       },
@@ -4070,17 +4022,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "freesurfer.DICOMConvert",
+        "name": "preprocess.DICOMConvert",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#dicomconvert",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_convert**",
-            "argument": "freesurfer.DICOMConvert()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "preprocess.DICOMConvert()"
           }
         ]
       },
@@ -4276,17 +4225,14 @@
         "registration"
       ],
       "title": {
-        "name": "freesurfer.EMRegister",
+        "name": "registration.EMRegister",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/registration.html#emregister",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_em_register**",
-            "argument": "freesurfer.EMRegister()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "registration.EMRegister()"
           }
         ]
       },
@@ -4482,17 +4428,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "freesurfer.EditWMwithAseg",
+        "name": "preprocess.EditWMwithAseg",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#editwmwithaseg",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_edit_wm_with_aseg**",
-            "argument": "freesurfer.EditWMwithAseg()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "preprocess.EditWMwithAseg()"
           }
         ]
       },
@@ -4649,17 +4592,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.EulerNumber",
+        "name": "utils.EulerNumber",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#eulernumber",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_euler_number**",
-            "argument": "freesurfer.EulerNumber()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.EulerNumber()"
           }
         ]
       },
@@ -4764,17 +4704,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.ExtractMainComponent",
+        "name": "utils.ExtractMainComponent",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#extractmaincomponent",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_extract_main_component**",
-            "argument": "freesurfer.ExtractMainComponent()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.ExtractMainComponent()"
           }
         ]
       },
@@ -4879,17 +4816,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "freesurfer.FitMSParams",
+        "name": "preprocess.FitMSParams",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#fitmsparams",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_ms_fitparms**",
-            "argument": "freesurfer.FitMSParams()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "preprocess.FitMSParams()"
           }
         ]
       },
@@ -5085,17 +5019,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.FixTopology",
+        "name": "utils.FixTopology",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#fixtopology",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_fix_topology**",
-            "argument": "freesurfer.FixTopology()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.FixTopology()"
           }
         ]
       },
@@ -5330,17 +5261,14 @@
         "longitudinal"
       ],
       "title": {
-        "name": "freesurfer.FuseSegmentations",
+        "name": "longitudinal.FuseSegmentations",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/longitudinal.html#fusesegmentations",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_fuse_segmentations**",
-            "argument": "freesurfer.FuseSegmentations()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "longitudinal.FuseSegmentations()"
           }
         ]
       },
@@ -5510,17 +5438,14 @@
         "model"
       ],
       "title": {
-        "name": "freesurfer.GLMFit",
+        "name": "model.GLMFit",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#glmfit",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_glmfit**",
-            "argument": "freesurfer.GLMFit()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "model.GLMFit()"
           }
         ]
       },
@@ -6522,17 +6447,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.Jacobian",
+        "name": "utils.Jacobian",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#jacobian",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_jacobian**",
-            "argument": "freesurfer.Jacobian()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.Jacobian()"
           }
         ]
       },
@@ -6663,17 +6585,14 @@
         "model"
       ],
       "title": {
-        "name": "freesurfer.Label2Annot",
+        "name": "model.Label2Annot",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#label2annot",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_label2annot**",
-            "argument": "freesurfer.Label2Annot()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "model.Label2Annot()"
           }
         ]
       },
@@ -6882,17 +6801,14 @@
         "model"
       ],
       "title": {
-        "name": "freesurfer.Label2Label",
+        "name": "model.Label2Label",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#label2label",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_label2label**",
-            "argument": "freesurfer.Label2Label()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "model.Label2Label()"
           }
         ]
       },
@@ -7127,17 +7043,14 @@
         "model"
       ],
       "title": {
-        "name": "freesurfer.Label2Vol",
+        "name": "model.Label2Vol",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#label2vol",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_label2vol**",
-            "argument": "freesurfer.Label2Vol()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "model.Label2Vol()"
           }
         ]
       },
@@ -7476,17 +7389,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "freesurfer.MNIBiasCorrection",
+        "name": "preprocess.MNIBiasCorrection",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#mnibiascorrection",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_nu_correct.mni**",
-            "argument": "freesurfer.MNIBiasCorrection()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "preprocess.MNIBiasCorrection()"
           }
         ]
       },
@@ -7708,17 +7618,14 @@
         "registration"
       ],
       "title": {
-        "name": "freesurfer.MPRtoMNI305",
+        "name": "registration.MPRtoMNI305",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/registration.html#mprtomni305",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mpr2mni305**",
-            "argument": "freesurfer.MPRtoMNI305()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "registration.MPRtoMNI305()"
           }
         ]
       },
@@ -7862,17 +7769,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "freesurfer.MRIConvert",
+        "name": "preprocess.MRIConvert",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#mriconvert",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_convert**",
-            "argument": "freesurfer.MRIConvert()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "preprocess.MRIConvert()"
           }
         ]
       },
@@ -9043,17 +8947,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.MRIFill",
+        "name": "utils.MRIFill",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#mrifill",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_fill**",
-            "argument": "freesurfer.MRIFill()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.MRIFill()"
           }
         ]
       },
@@ -9223,17 +9124,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.MRIMarchingCubes",
+        "name": "utils.MRIMarchingCubes",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#mrimarchingcubes",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_mc**",
-            "argument": "freesurfer.MRIMarchingCubes()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.MRIMarchingCubes()"
           }
         ]
       },
@@ -9377,17 +9275,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.MRIPretess",
+        "name": "utils.MRIPretess",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#mripretess",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_pretess**",
-            "argument": "freesurfer.MRIPretess()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.MRIPretess()"
           }
         ]
       },
@@ -9570,17 +9465,14 @@
         "model"
       ],
       "title": {
-        "name": "freesurfer.MRISPreproc",
+        "name": "model.MRISPreproc",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#mrispreproc",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_preproc**",
-            "argument": "freesurfer.MRISPreproc()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "model.MRISPreproc()"
           }
         ]
       },
@@ -9906,17 +9798,14 @@
         "model"
       ],
       "title": {
-        "name": "freesurfer.MRISPreprocReconAll",
+        "name": "model.MRISPreprocReconAll",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#mrispreprocreconall",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_preproc**",
-            "argument": "freesurfer.MRISPreprocReconAll()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "model.MRISPreprocReconAll()"
           }
         ]
       },
@@ -10307,17 +10196,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.MRITessellate",
+        "name": "utils.MRITessellate",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#mritessellate",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_tessellate**",
-            "argument": "freesurfer.MRITessellate()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.MRITessellate()"
           }
         ]
       },
@@ -10474,17 +10360,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "freesurfer.MRIsCALabel",
+        "name": "preprocess.MRIsCALabel",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#mriscalabel",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_ca_label**",
-            "argument": "freesurfer.MRIsCALabel()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "preprocess.MRIsCALabel()"
           }
         ]
       },
@@ -10745,17 +10628,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.MRIsCalc",
+        "name": "utils.MRIsCalc",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#mriscalc",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_calc**",
-            "argument": "freesurfer.MRIsCalc()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.MRIsCalc()"
           }
         ]
       },
@@ -10925,17 +10805,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.MRIsCombine",
+        "name": "utils.MRIsCombine",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#mriscombine",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_convert**",
-            "argument": "freesurfer.MRIsCombine()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.MRIsCombine()"
           }
         ]
       },
@@ -11053,17 +10930,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.MRIsConvert",
+        "name": "utils.MRIsConvert",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#mrisconvert",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_convert**",
-            "argument": "freesurfer.MRIsConvert()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.MRIsConvert()"
           }
         ]
       },
@@ -11415,17 +11289,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.MRIsExpand",
+        "name": "utils.MRIsExpand",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#mrisexpand",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_expand**",
-            "argument": "freesurfer.MRIsExpand()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.MRIsExpand()"
           }
         ]
       },
@@ -11673,17 +11544,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.MRIsInflate",
+        "name": "utils.MRIsInflate",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#mrisinflate",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_inflate**",
-            "argument": "freesurfer.MRIsInflate()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.MRIsInflate()"
           }
         ]
       },
@@ -11840,17 +11708,14 @@
         "model"
       ],
       "title": {
-        "name": "freesurfer.MS_LDA",
+        "name": "model.MS_LDA",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#ms_lda",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_ms_LDA**",
-            "argument": "freesurfer.MS_LDA()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "model.MS_LDA()"
           }
         ]
       },
@@ -12072,17 +11937,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.MakeAverageSubject",
+        "name": "utils.MakeAverageSubject",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#makeaveragesubject",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **make_average_subject**",
-            "argument": "freesurfer.MakeAverageSubject()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.MakeAverageSubject()"
           }
         ]
       },
@@ -12200,17 +12062,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.MakeSurfaces",
+        "name": "utils.MakeSurfaces",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#makesurfaces",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_make_surfaces**",
-            "argument": "freesurfer.MakeSurfaces()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.MakeSurfaces()"
           }
         ]
       },
@@ -12627,17 +12486,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "freesurfer.Normalize",
+        "name": "preprocess.Normalize",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#normalize",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_normalize**",
-            "argument": "freesurfer.Normalize()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "preprocess.Normalize()"
           }
         ]
       },
@@ -12807,17 +12663,14 @@
         "model"
       ],
       "title": {
-        "name": "freesurfer.OneSampleTTest",
+        "name": "model.OneSampleTTest",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#onesamplettest",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_glmfit**",
-            "argument": "freesurfer.OneSampleTTest()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "model.OneSampleTTest()"
           }
         ]
       },
@@ -13819,17 +13672,14 @@
         "registration"
       ],
       "title": {
-        "name": "freesurfer.Paint",
+        "name": "registration.Paint",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/registration.html#paint",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mrisp_paint**",
-            "argument": "freesurfer.Paint()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "registration.Paint()"
           }
         ]
       },
@@ -13986,17 +13836,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.ParcellationStats",
+        "name": "utils.ParcellationStats",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#parcellationstats",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_anatomical_stats**",
-            "argument": "freesurfer.ParcellationStats()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.ParcellationStats()"
           }
         ]
       },
@@ -14400,17 +14247,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "freesurfer.ParseDICOMDir",
+        "name": "preprocess.ParseDICOMDir",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#parsedicomdir",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_parse_sdcmdir**",
-            "argument": "freesurfer.ParseDICOMDir()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "preprocess.ParseDICOMDir()"
           }
         ]
       },
@@ -14554,17 +14398,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "freesurfer.ReconAll",
+        "name": "preprocess.ReconAll",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#reconall",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **recon-all**",
-            "argument": "freesurfer.ReconAll()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "preprocess.ReconAll()"
           }
         ]
       },
@@ -15709,17 +15550,14 @@
         "registration"
       ],
       "title": {
-        "name": "freesurfer.Register",
+        "name": "registration.Register",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/registration.html#register",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_register**",
-            "argument": "freesurfer.Register()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "registration.Register()"
           }
         ]
       },
@@ -15889,17 +15727,14 @@
         "registration"
       ],
       "title": {
-        "name": "freesurfer.RegisterAVItoTalairach",
+        "name": "registration.RegisterAVItoTalairach",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/registration.html#registeravitotalairach",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **avi2talxfm**",
-            "argument": "freesurfer.RegisterAVItoTalairach()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "registration.RegisterAVItoTalairach()"
           }
         ]
       },
@@ -16056,17 +15891,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.RelabelHypointensities",
+        "name": "utils.RelabelHypointensities",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#relabelhypointensities",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_relabel_hypointensities**",
-            "argument": "freesurfer.RelabelHypointensities()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.RelabelHypointensities()"
           }
         ]
       },
@@ -16223,17 +16055,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.RemoveIntersection",
+        "name": "utils.RemoveIntersection",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#removeintersection",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_remove_intersection**",
-            "argument": "freesurfer.RemoveIntersection()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.RemoveIntersection()"
           }
         ]
       },
@@ -16351,17 +16180,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.RemoveNeck",
+        "name": "utils.RemoveNeck",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#removeneck",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_remove_neck**",
-            "argument": "freesurfer.RemoveNeck()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.RemoveNeck()"
           }
         ]
       },
@@ -16518,17 +16344,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "freesurfer.Resample",
+        "name": "preprocess.Resample",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#resample",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_convert**",
-            "argument": "freesurfer.Resample()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "preprocess.Resample()"
           }
         ]
       },
@@ -16659,17 +16482,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "freesurfer.RobustRegister",
+        "name": "preprocess.RobustRegister",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#robustregister",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_robust_register**",
-            "argument": "freesurfer.RobustRegister()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "preprocess.RobustRegister()"
           }
         ]
       },
@@ -17229,17 +17049,14 @@
         "longitudinal"
       ],
       "title": {
-        "name": "freesurfer.RobustTemplate",
+        "name": "longitudinal.RobustTemplate",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/longitudinal.html#robusttemplate",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_robust_template**",
-            "argument": "freesurfer.RobustTemplate()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "longitudinal.RobustTemplate()"
           }
         ]
       },
@@ -17431,6 +17248,19 @@
           "output": false,
           "visible": false,
           "editable": true,
+          "name": "num_threads",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "num_threads"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
           "name": "subjects_dir",
           "code": [
             {
@@ -17539,17 +17369,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.SampleToSurface",
+        "name": "utils.SampleToSurface",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#sampletosurface",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_vol2surf**",
-            "argument": "freesurfer.SampleToSurface()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.SampleToSurface()"
           }
         ]
       },
@@ -18122,17 +17949,14 @@
         "model"
       ],
       "title": {
-        "name": "freesurfer.SegStats",
+        "name": "model.SegStats",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#segstats",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_segstats**",
-            "argument": "freesurfer.SegStats()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "model.SegStats()"
           }
         ]
       },
@@ -18783,17 +18607,14 @@
         "model"
       ],
       "title": {
-        "name": "freesurfer.SegStatsReconAll",
+        "name": "model.SegStatsReconAll",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#segstatsreconall",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_segstats**",
-            "argument": "freesurfer.SegStatsReconAll()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "model.SegStatsReconAll()"
           }
         ]
       },
@@ -19600,17 +19421,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "freesurfer.SegmentCC",
+        "name": "preprocess.SegmentCC",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#segmentcc",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_cc**",
-            "argument": "freesurfer.SegmentCC()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "preprocess.SegmentCC()"
           }
         ]
       },
@@ -19793,17 +19611,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "freesurfer.SegmentWM",
+        "name": "preprocess.SegmentWM",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#segmentwm",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_segment**",
-            "argument": "freesurfer.SegmentWM()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "preprocess.SegmentWM()"
           }
         ]
       },
@@ -19921,17 +19736,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "freesurfer.Smooth",
+        "name": "preprocess.Smooth",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#smooth",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_volsmooth**",
-            "argument": "freesurfer.Smooth()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "preprocess.Smooth()"
           }
         ]
       },
@@ -20127,17 +19939,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.SmoothTessellation",
+        "name": "utils.SmoothTessellation",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#smoothtessellation",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_smooth**",
-            "argument": "freesurfer.SmoothTessellation()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.SmoothTessellation()"
           }
         ]
       },
@@ -20411,17 +20220,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.Sphere",
+        "name": "utils.Sphere",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#sphere",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_sphere**",
-            "argument": "freesurfer.Sphere()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.Sphere()"
           }
         ]
       },
@@ -20591,17 +20397,14 @@
         "model"
       ],
       "title": {
-        "name": "freesurfer.SphericalAverage",
+        "name": "model.SphericalAverage",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/model.html#sphericalaverage",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_spherical_average**",
-            "argument": "freesurfer.SphericalAverage()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "model.SphericalAverage()"
           }
         ]
       },
@@ -20823,17 +20626,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.Surface2VolTransform",
+        "name": "utils.Surface2VolTransform",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#surface2voltransform",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_surf2vol**",
-            "argument": "freesurfer.Surface2VolTransform()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.Surface2VolTransform()"
           }
         ]
       },
@@ -21068,17 +20868,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.SurfaceSmooth",
+        "name": "utils.SurfaceSmooth",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#surfacesmooth",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_surf2surf**",
-            "argument": "freesurfer.SurfaceSmooth()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.SurfaceSmooth()"
           }
         ]
       },
@@ -21274,17 +21071,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.SurfaceSnapshots",
+        "name": "utils.SurfaceSnapshots",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#surfacesnapshots",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **tksurfer**",
-            "argument": "freesurfer.SurfaceSnapshots()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.SurfaceSnapshots()"
           }
         ]
       },
@@ -21779,17 +21573,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.SurfaceTransform",
+        "name": "utils.SurfaceTransform",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#surfacetransform",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_surf2surf**",
-            "argument": "freesurfer.SurfaceTransform()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.SurfaceTransform()"
           }
         ]
       },
@@ -22024,17 +21815,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "freesurfer.SynthesizeFLASH",
+        "name": "preprocess.SynthesizeFLASH",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#synthesizeflash",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_synthesize**",
-            "argument": "freesurfer.SynthesizeFLASH()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "preprocess.SynthesizeFLASH()"
           }
         ]
       },
@@ -22217,17 +22005,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.TalairachAVI",
+        "name": "utils.TalairachAVI",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#talairachavi",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **talairach_avi**",
-            "argument": "freesurfer.TalairachAVI()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.TalairachAVI()"
           }
         ]
       },
@@ -22384,17 +22169,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.TalairachQC",
+        "name": "utils.TalairachQC",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#talairachqc",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **tal_QC_AZS**",
-            "argument": "freesurfer.TalairachQC()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.TalairachQC()"
           }
         ]
       },
@@ -22499,17 +22281,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.Tkregister2",
+        "name": "utils.Tkregister2",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#tkregister2",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **tkregister2**",
-            "argument": "freesurfer.Tkregister2()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.Tkregister2()"
           }
         ]
       },
@@ -22770,17 +22549,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "freesurfer.UnpackSDICOMDir",
+        "name": "preprocess.UnpackSDICOMDir",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#unpacksdicomdir",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **unpacksdcmdir**",
-            "argument": "freesurfer.UnpackSDICOMDir()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "preprocess.UnpackSDICOMDir()"
           }
         ]
       },
@@ -23002,17 +22778,14 @@
         "utils"
       ],
       "title": {
-        "name": "freesurfer.VolumeMask",
+        "name": "utils.VolumeMask",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/utils.html#volumemask",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mris_volmask**",
-            "argument": "freesurfer.VolumeMask()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "utils.VolumeMask()"
           }
         ]
       },
@@ -23299,17 +23072,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "freesurfer.WatershedSkullStrip",
+        "name": "preprocess.WatershedSkullStrip",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.freesurfer/preprocess.html#watershedskullstrip",
+        "import": "import nipype.interfaces.freesurfer as freesurfer",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mri_watershed**",
-            "argument": "freesurfer.WatershedSkullStrip()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, freesurfer"
+            "argument": "preprocess.WatershedSkullStrip()"
           }
         ]
       },

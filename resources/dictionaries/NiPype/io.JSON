@@ -8,15 +8,12 @@
       "title": {
         "name": "io.DataFinder",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#datafinder",
+        "import": "import nipype.interfaces.io as io",
         "code": [
           {
             "language": "NiPype",
             "comment": "Search for paths that match a given regular expression. Allows a less",
             "argument": "io.DataFinder()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, io"
           }
         ]
       },
@@ -122,15 +119,12 @@
       "title": {
         "name": "io.DataGrabber",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#datagrabber",
+        "import": "import nipype.interfaces.io as io",
         "code": [
           {
             "language": "NiPype",
             "comment": "Generic datagrabber module that wraps around glob in an",
             "argument": "io.DataGrabber()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, io"
           }
         ]
       },
@@ -223,15 +217,12 @@
       "title": {
         "name": "io.DataSink",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#datasink",
+        "import": "import nipype.interfaces.io as io",
         "code": [
           {
             "language": "NiPype",
             "comment": "Generic datasink module to store structured outputs",
             "argument": "io.DataSink()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, io"
           }
         ]
       },
@@ -428,15 +419,12 @@
       "title": {
         "name": "io.FreeSurferSource",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#freesurfersource",
+        "import": "import nipype.interfaces.io as io",
         "code": [
           {
             "language": "NiPype",
             "comment": "Generates freesurfer subject info from their directories",
             "argument": "io.FreeSurferSource()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, io"
           }
         ]
       },
@@ -984,15 +972,12 @@
       "title": {
         "name": "io.JSONFileGrabber",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#jsonfilegrabber",
+        "import": "import nipype.interfaces.io as io",
         "code": [
           {
             "language": "NiPype",
             "comment": "Datagrabber interface that loads a json file and generates an output for",
             "argument": "io.JSONFileGrabber()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, io"
           }
         ]
       },
@@ -1046,15 +1031,12 @@
       "title": {
         "name": "io.JSONFileSink",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#jsonfilesink",
+        "import": "import nipype.interfaces.io as io",
         "code": [
           {
             "language": "NiPype",
             "comment": "Very simple frontend for storing values into a JSON file.",
             "argument": "io.JSONFileSink()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, io"
           }
         ]
       },
@@ -1134,15 +1116,12 @@
       "title": {
         "name": "io.MySQLSink",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#mysqlsink",
+        "import": "import nipype.interfaces.io as io",
         "code": [
           {
             "language": "NiPype",
             "comment": "Very simple frontend for storing values into MySQL database.",
             "argument": "io.MySQLSink()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, io"
           }
         ]
       },
@@ -1248,15 +1227,12 @@
       "title": {
         "name": "io.S3DataGrabber",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#s3datagrabber",
+        "import": "import nipype.interfaces.io as io",
         "code": [
           {
             "language": "NiPype",
             "comment": "Generic datagrabber module that wraps around glob in an",
             "argument": "io.S3DataGrabber()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, io"
           }
         ]
       },
@@ -1401,15 +1377,12 @@
       "title": {
         "name": "io.SQLiteSink",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#sqlitesink",
+        "import": "import nipype.interfaces.io as io",
         "code": [
           {
             "language": "NiPype",
             "comment": "Very simple frontend for storing values into SQLite database.",
             "argument": "io.SQLiteSink()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, io"
           }
         ]
       },
@@ -1463,15 +1436,12 @@
       "title": {
         "name": "io.SSHDataGrabber",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#sshdatagrabber",
+        "import": "import nipype.interfaces.io as io",
         "code": [
           {
             "language": "NiPype",
             "comment": "Extension of DataGrabber module that downloads the file list and",
             "argument": "io.SSHDataGrabber()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, io"
           }
         ]
       },
@@ -1642,15 +1612,12 @@
       "title": {
         "name": "io.SelectFiles",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#selectfiles",
+        "import": "import nipype.interfaces.io as io",
         "code": [
           {
             "language": "NiPype",
             "comment": "Flexibly collect data from disk to feed into workflows.",
             "argument": "io.SelectFiles()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, io"
           }
         ]
       },
@@ -1730,15 +1697,12 @@
       "title": {
         "name": "io.XNATSink",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#xnatsink",
+        "import": "import nipype.interfaces.io as io",
         "code": [
           {
             "language": "NiPype",
             "comment": "Generic datasink module that takes a directory containing a",
             "argument": "io.XNATSink()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, io"
           }
         ]
       },
@@ -1922,15 +1886,12 @@
       "title": {
         "name": "io.XNATSource",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#xnatsource",
+        "import": "import nipype.interfaces.io as io",
         "code": [
           {
             "language": "NiPype",
             "comment": "Generic XNATSource module that wraps around the pyxnat module in",
             "argument": "io.XNATSource()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, io"
           }
         ]
       },

@@ -7,17 +7,14 @@
         "convert"
       ],
       "title": {
-        "name": "camino.AnalyzeHeader",
+        "name": "convert.AnalyzeHeader",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/convert.html#analyzeheader",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **analyzeheader**",
-            "argument": "camino.AnalyzeHeader()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "convert.AnalyzeHeader()"
           }
         ]
       },
@@ -382,17 +379,14 @@
         "dti"
       ],
       "title": {
-        "name": "camino.ComputeEigensystem",
+        "name": "dti.ComputeEigensystem",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/dti.html#computeeigensystem",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **dteig**",
-            "argument": "camino.ComputeEigensystem()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "dti.ComputeEigensystem()"
           }
         ]
       },
@@ -549,17 +543,14 @@
         "dti"
       ],
       "title": {
-        "name": "camino.ComputeFractionalAnisotropy",
+        "name": "dti.ComputeFractionalAnisotropy",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/dti.html#computefractionalanisotropy",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fa**",
-            "argument": "camino.ComputeFractionalAnisotropy()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "dti.ComputeFractionalAnisotropy()"
           }
         ]
       },
@@ -716,17 +707,14 @@
         "dti"
       ],
       "title": {
-        "name": "camino.ComputeMeanDiffusivity",
+        "name": "dti.ComputeMeanDiffusivity",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/dti.html#computemeandiffusivity",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **md**",
-            "argument": "camino.ComputeMeanDiffusivity()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "dti.ComputeMeanDiffusivity()"
           }
         ]
       },
@@ -883,17 +871,14 @@
         "dti"
       ],
       "title": {
-        "name": "camino.ComputeTensorTrace",
+        "name": "dti.ComputeTensorTrace",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/dti.html#computetensortrace",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **trd**",
-            "argument": "camino.ComputeTensorTrace()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "dti.ComputeTensorTrace()"
           }
         ]
       },
@@ -1050,17 +1035,14 @@
         "connectivity"
       ],
       "title": {
-        "name": "camino.Conmat",
+        "name": "connectivity.Conmat",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/connectivity.html#conmat",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **conmat**",
-            "argument": "camino.Conmat()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "connectivity.Conmat()"
           }
         ]
       },
@@ -1243,17 +1225,14 @@
         "convert"
       ],
       "title": {
-        "name": "camino.DT2NIfTI",
+        "name": "convert.DT2NIfTI",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/convert.html#dt2nifti",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **dt2nii**",
-            "argument": "camino.DT2NIfTI()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "convert.DT2NIfTI()"
           }
         ]
       },
@@ -1397,17 +1376,14 @@
         "dti"
       ],
       "title": {
-        "name": "camino.DTIFit",
+        "name": "dti.DTIFit",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/dti.html#dtifit",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **dtfit**",
-            "argument": "camino.DTIFit()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "dti.DTIFit()"
           }
         ]
       },
@@ -1551,17 +1527,14 @@
         "dti"
       ],
       "title": {
-        "name": "camino.DTLUTGen",
+        "name": "dti.DTLUTGen",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/dti.html#dtlutgen",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **dtlutgen**",
-            "argument": "camino.DTLUTGen()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "dti.DTLUTGen()"
           }
         ]
       },
@@ -1796,17 +1769,14 @@
         "dti"
       ],
       "title": {
-        "name": "camino.DTMetric",
+        "name": "dti.DTMetric",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/dti.html#dtmetric",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **dtshape**",
-            "argument": "camino.DTMetric()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "dti.DTMetric()"
           }
         ]
       },
@@ -1963,17 +1933,14 @@
         "convert"
       ],
       "title": {
-        "name": "camino.FSL2Scheme",
+        "name": "convert.FSL2Scheme",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/convert.html#fsl2scheme",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fsl2scheme**",
-            "argument": "camino.FSL2Scheme()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "convert.FSL2Scheme()"
           }
         ]
       },
@@ -2195,17 +2162,14 @@
         "convert"
       ],
       "title": {
-        "name": "camino.Image2Voxel",
+        "name": "convert.Image2Voxel",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/convert.html#image2voxel",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **image2voxel**",
-            "argument": "camino.Image2Voxel()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "convert.Image2Voxel()"
           }
         ]
       },
@@ -2323,17 +2287,14 @@
         "utils"
       ],
       "title": {
-        "name": "camino.ImageStats",
+        "name": "utils.ImageStats",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/utils.html#imagestats",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **imagestats**",
-            "argument": "camino.ImageStats()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "utils.ImageStats()"
           }
         ]
       },
@@ -2464,17 +2425,14 @@
         "odf"
       ],
       "title": {
-        "name": "camino.LinRecon",
+        "name": "odf.LinRecon",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/odf.html#linrecon",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **linrecon**",
-            "argument": "camino.LinRecon()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "odf.LinRecon()"
           }
         ]
       },
@@ -2644,17 +2602,14 @@
         "odf"
       ],
       "title": {
-        "name": "camino.MESD",
+        "name": "odf.MESD",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/odf.html#mesd",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mesd**",
-            "argument": "camino.MESD()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "odf.MESD()"
           }
         ]
       },
@@ -2850,17 +2805,14 @@
         "dti"
       ],
       "title": {
-        "name": "camino.ModelFit",
+        "name": "dti.ModelFit",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/dti.html#modelfit",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **modelfit**",
-            "argument": "camino.ModelFit()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "dti.ModelFit()"
           }
         ]
       },
@@ -3147,17 +3099,14 @@
         "convert"
       ],
       "title": {
-        "name": "camino.NIfTIDT2Camino",
+        "name": "convert.NIfTIDT2Camino",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/convert.html#niftidt2camino",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **niftidt2camino**",
-            "argument": "camino.NIfTIDT2Camino()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "convert.NIfTIDT2Camino()"
           }
         ]
       },
@@ -3340,17 +3289,14 @@
         "dti"
       ],
       "title": {
-        "name": "camino.PicoPDFs",
+        "name": "dti.PicoPDFs",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/dti.html#picopdfs",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **picopdfs**",
-            "argument": "camino.PicoPDFs()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "dti.PicoPDFs()"
           }
         ]
       },
@@ -3533,17 +3479,14 @@
         "convert"
       ],
       "title": {
-        "name": "camino.ProcStreamlines",
+        "name": "convert.ProcStreamlines",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/convert.html#procstreamlines",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **procstreamlines**",
-            "argument": "camino.ProcStreamlines()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "convert.ProcStreamlines()"
           }
         ]
       },
@@ -4051,17 +3994,14 @@
         "odf"
       ],
       "title": {
-        "name": "camino.QBallMX",
+        "name": "odf.QBallMX",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/odf.html#qballmx",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **qballmx**",
-            "argument": "camino.QBallMX()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "odf.QBallMX()"
           }
         ]
       },
@@ -4231,17 +4171,14 @@
         "calib"
       ],
       "title": {
-        "name": "camino.SFLUTGen",
+        "name": "calib.SFLUTGen",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/calib.html#sflutgen",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **sflutgen**",
-            "argument": "camino.SFLUTGen()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "calib.SFLUTGen()"
           }
         ]
       },
@@ -4450,17 +4387,14 @@
         "calib"
       ],
       "title": {
-        "name": "camino.SFPICOCalibData",
+        "name": "calib.SFPICOCalibData",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/calib.html#sfpicocalibdata",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **sfpicocalibdata**",
-            "argument": "camino.SFPICOCalibData()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "calib.SFPICOCalibData()"
           }
         ]
       },
@@ -4734,17 +4668,14 @@
         "odf"
       ],
       "title": {
-        "name": "camino.SFPeaks",
+        "name": "odf.SFPeaks",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/odf.html#sfpeaks",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **sfpeaks**",
-            "argument": "camino.SFPeaks()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "odf.SFPeaks()"
           }
         ]
       },
@@ -5005,17 +4936,14 @@
         "convert"
       ],
       "title": {
-        "name": "camino.Shredder",
+        "name": "convert.Shredder",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/convert.html#shredder",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **shredder**",
-            "argument": "camino.Shredder()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "convert.Shredder()"
           }
         ]
       },
@@ -5159,17 +5087,14 @@
         "dti"
       ],
       "title": {
-        "name": "camino.Track",
+        "name": "dti.Track",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/dti.html#track",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **track**",
-            "argument": "camino.Track()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "dti.Track()"
           }
         ]
       },
@@ -5508,17 +5433,14 @@
         "dti"
       ],
       "title": {
-        "name": "camino.TrackBallStick",
+        "name": "dti.TrackBallStick",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/dti.html#trackballstick",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **track**",
-            "argument": "camino.TrackBallStick()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "dti.TrackBallStick()"
           }
         ]
       },
@@ -5857,17 +5779,14 @@
         "dti"
       ],
       "title": {
-        "name": "camino.TrackBayesDirac",
+        "name": "dti.TrackBayesDirac",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/dti.html#trackbayesdirac",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **track**",
-            "argument": "camino.TrackBayesDirac()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "dti.TrackBayesDirac()"
           }
         ]
       },
@@ -6323,17 +6242,14 @@
         "dti"
       ],
       "title": {
-        "name": "camino.TrackBedpostxDeter",
+        "name": "dti.TrackBedpostxDeter",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/dti.html#trackbedpostxdeter",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **track**",
-            "argument": "camino.TrackBedpostxDeter()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "dti.TrackBedpostxDeter()"
           }
         ]
       },
@@ -6698,17 +6614,14 @@
         "dti"
       ],
       "title": {
-        "name": "camino.TrackBedpostxProba",
+        "name": "dti.TrackBedpostxProba",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/dti.html#trackbedpostxproba",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **track**",
-            "argument": "camino.TrackBedpostxProba()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "dti.TrackBedpostxProba()"
           }
         ]
       },
@@ -7086,17 +6999,14 @@
         "dti"
       ],
       "title": {
-        "name": "camino.TrackBootstrap",
+        "name": "dti.TrackBootstrap",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/dti.html#trackbootstrap",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **track**",
-            "argument": "camino.TrackBootstrap()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "dti.TrackBootstrap()"
           }
         ]
       },
@@ -7500,17 +7410,14 @@
         "dti"
       ],
       "title": {
-        "name": "camino.TrackDT",
+        "name": "dti.TrackDT",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/dti.html#trackdt",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **track**",
-            "argument": "camino.TrackDT()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "dti.TrackDT()"
           }
         ]
       },
@@ -7849,17 +7756,14 @@
         "dti"
       ],
       "title": {
-        "name": "camino.TrackPICo",
+        "name": "dti.TrackPICo",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/dti.html#trackpico",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **track**",
-            "argument": "camino.TrackPICo()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "dti.TrackPICo()"
           }
         ]
       },
@@ -8224,17 +8128,14 @@
         "convert"
       ],
       "title": {
-        "name": "camino.TractShredder",
+        "name": "convert.TractShredder",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/convert.html#tractshredder",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **tractshredder**",
-            "argument": "camino.TractShredder()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "convert.TractShredder()"
           }
         ]
       },
@@ -8378,17 +8279,14 @@
         "convert"
       ],
       "title": {
-        "name": "camino.VtkStreamlines",
+        "name": "convert.VtkStreamlines",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.camino/convert.html#vtkstreamlines",
+        "import": "import nipype.interfaces.camino as camino",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **vtkstreamlines**",
-            "argument": "camino.VtkStreamlines()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, camino"
+            "argument": "convert.VtkStreamlines()"
           }
         ]
       },

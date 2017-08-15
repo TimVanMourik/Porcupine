@@ -7,17 +7,14 @@
         "base"
       ],
       "title": {
-        "name": "mne.WatershedBEM",
+        "name": "base.WatershedBEM",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mne/base.html#watershedbem",
+        "import": "import nipype.interfaces.mne as mne",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mne_watershed_bem**",
-            "argument": "mne.WatershedBEM()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, mne"
+            "argument": "base.WatershedBEM()"
           }
         ]
       },

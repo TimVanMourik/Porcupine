@@ -7,17 +7,14 @@
         "maths"
       ],
       "title": {
-        "name": "fsl.AR1Image",
+        "name": "maths.AR1Image",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/maths.html#ar1image",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslmaths**",
-            "argument": "fsl.AR1Image()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "maths.AR1Image()"
           }
         ]
       },
@@ -187,17 +184,14 @@
         "fix"
       ],
       "title": {
-        "name": "fsl.AccuracyTester",
+        "name": "fix.AccuracyTester",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/fix.html#accuracytester",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **None**",
-            "argument": "fsl.AccuracyTester()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "fix.AccuracyTester()"
           }
         ]
       },
@@ -315,17 +309,14 @@
         "maths"
       ],
       "title": {
-        "name": "fsl.ApplyMask",
+        "name": "maths.ApplyMask",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/maths.html#applymask",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslmaths**",
-            "argument": "fsl.ApplyMask()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "maths.ApplyMask()"
           }
         ]
       },
@@ -495,17 +486,14 @@
         "epi"
       ],
       "title": {
-        "name": "fsl.ApplyTOPUP",
+        "name": "epi.ApplyTOPUP",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/epi.html#applytopup",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **applytopup**",
-            "argument": "fsl.ApplyTOPUP()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "epi.ApplyTOPUP()"
           }
         ]
       },
@@ -714,17 +702,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "fsl.ApplyWarp",
+        "name": "preprocess.ApplyWarp",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/preprocess.html#applywarp",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **applywarp**",
-            "argument": "fsl.ApplyWarp()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "preprocess.ApplyWarp()"
           }
         ]
       },
@@ -985,17 +970,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "fsl.ApplyXFM",
+        "name": "preprocess.ApplyXFM",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/preprocess.html#applyxfm",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **flirt**",
-            "argument": "fsl.ApplyXFM()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "preprocess.ApplyXFM()"
           }
         ]
       },
@@ -1724,17 +1706,14 @@
         "utils"
       ],
       "title": {
-        "name": "fsl.AvScale",
+        "name": "utils.AvScale",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/utils.html#avscale",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **avscale**",
-            "argument": "fsl.AvScale()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "utils.AvScale()"
           }
         ]
       },
@@ -1969,17 +1948,14 @@
         "possum"
       ],
       "title": {
-        "name": "fsl.B0Calc",
+        "name": "possum.B0Calc",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/possum.html#b0calc",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **b0calc**",
-            "argument": "fsl.B0Calc()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "possum.B0Calc()"
           }
         ]
       },
@@ -2253,17 +2229,14 @@
         "dti"
       ],
       "title": {
-        "name": "fsl.BEDPOSTX5",
+        "name": "dti.BEDPOSTX5",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/dti.html#bedpostx5",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **bedpostx**",
-            "argument": "fsl.BEDPOSTX5()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "dti.BEDPOSTX5()"
           }
         ]
       },
@@ -2823,17 +2796,14 @@
         "dti"
       ],
       "title": {
-        "name": "fsl.BEDPOSTX5",
+        "name": "dti.BEDPOSTX5",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/dti.html#bedpostx5",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **bedpostx**",
-            "argument": "fsl.BEDPOSTX5()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "dti.BEDPOSTX5()"
           }
         ]
       },
@@ -3393,17 +3363,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "fsl.BET",
+        "name": "preprocess.BET",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/preprocess.html#bet",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **bet**",
-            "argument": "fsl.BET()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "preprocess.BET()"
           }
         ]
       },
@@ -3872,17 +3839,14 @@
         "maths"
       ],
       "title": {
-        "name": "fsl.BinaryMaths",
+        "name": "maths.BinaryMaths",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/maths.html#binarymaths",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslmaths**",
-            "argument": "fsl.BinaryMaths()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "maths.BinaryMaths()"
           }
         ]
       },
@@ -4078,17 +4042,14 @@
         "maths"
       ],
       "title": {
-        "name": "fsl.ChangeDataType",
+        "name": "maths.ChangeDataType",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/maths.html#changedatatype",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslmaths**",
-            "argument": "fsl.ChangeDataType()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "maths.ChangeDataType()"
           }
         ]
       },
@@ -4245,17 +4206,14 @@
         "fix"
       ],
       "title": {
-        "name": "fsl.Classifier",
+        "name": "fix.Classifier",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/fix.html#classifier",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **None**",
-            "argument": "fsl.Classifier()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "fix.Classifier()"
           }
         ]
       },
@@ -4386,17 +4344,14 @@
         "fix"
       ],
       "title": {
-        "name": "fsl.Cleaner",
+        "name": "fix.Cleaner",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/fix.html#cleaner",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **None**",
-            "argument": "fsl.Cleaner()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "fix.Cleaner()"
           }
         ]
       },
@@ -4566,17 +4521,14 @@
         "model"
       ],
       "title": {
-        "name": "fsl.Cluster",
+        "name": "model.Cluster",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/model.html#cluster",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **cluster**",
-            "argument": "fsl.Cluster()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "model.Cluster()"
           }
         ]
       },
@@ -5084,17 +5036,14 @@
         "utils"
       ],
       "title": {
-        "name": "fsl.Complex",
+        "name": "utils.Complex",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/utils.html#complex",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslcomplex**",
-            "argument": "fsl.Complex()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "utils.Complex()"
           }
         ]
       },
@@ -5485,17 +5434,14 @@
         "model"
       ],
       "title": {
-        "name": "fsl.ContrastMgr",
+        "name": "model.ContrastMgr",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/model.html#contrastmgr",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **contrast_mgr**",
-            "argument": "fsl.ContrastMgr()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "model.ContrastMgr()"
           }
         ]
       },
@@ -5769,17 +5715,14 @@
         "utils"
       ],
       "title": {
-        "name": "fsl.ConvertWarp",
+        "name": "utils.ConvertWarp",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/utils.html#convertwarp",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **convertwarp**",
-            "argument": "fsl.ConvertWarp()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "utils.ConvertWarp()"
           }
         ]
       },
@@ -6079,17 +6022,14 @@
         "utils"
       ],
       "title": {
-        "name": "fsl.ConvertXFM",
+        "name": "utils.ConvertXFM",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/utils.html#convertxfm",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **convert_xfm**",
-            "argument": "fsl.ConvertXFM()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "utils.ConvertXFM()"
           }
         ]
       },
@@ -6259,17 +6199,14 @@
         "utils"
       ],
       "title": {
-        "name": "fsl.CopyGeom",
+        "name": "utils.CopyGeom",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/utils.html#copygeom",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslcpgeom**",
-            "argument": "fsl.CopyGeom()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "utils.CopyGeom()"
           }
         ]
       },
@@ -6400,17 +6337,14 @@
         "dti"
       ],
       "title": {
-        "name": "fsl.DTIFit",
+        "name": "dti.DTIFit",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/dti.html#dtifit",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **dtifit**",
-            "argument": "fsl.DTIFit()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "dti.DTIFit()"
           }
         ]
       },
@@ -6840,17 +6774,14 @@
         "maths"
       ],
       "title": {
-        "name": "fsl.DilateImage",
+        "name": "maths.DilateImage",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/maths.html#dilateimage",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslmaths**",
-            "argument": "fsl.DilateImage()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "maths.DilateImage()"
           }
         ]
       },
@@ -7059,17 +6990,14 @@
         "dti"
       ],
       "title": {
-        "name": "fsl.DistanceMap",
+        "name": "dti.DistanceMap",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/dti.html#distancemap",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **distancemap**",
-            "argument": "fsl.DistanceMap()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "dti.DistanceMap()"
           }
         ]
       },
@@ -7239,17 +7167,14 @@
         "epi"
       ],
       "title": {
-        "name": "fsl.EPIDeWarp",
+        "name": "epi.EPIDeWarp",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/epi.html#epidewarp",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **epidewarp.fsl**",
-            "argument": "fsl.EPIDeWarp()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "epi.EPIDeWarp()"
           }
         ]
       },
@@ -7549,17 +7474,14 @@
         "epi"
       ],
       "title": {
-        "name": "fsl.Eddy",
+        "name": "epi.Eddy",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/epi.html#eddy",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **eddy_openmp**",
-            "argument": "fsl.Eddy()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "epi.Eddy()"
           }
         ]
       },
@@ -8080,17 +8002,14 @@
         "epi"
       ],
       "title": {
-        "name": "fsl.EddyCorrect",
+        "name": "epi.EddyCorrect",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/epi.html#eddycorrect",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **eddy_correct**",
-            "argument": "fsl.EddyCorrect()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "epi.EddyCorrect()"
           }
         ]
       },
@@ -8221,17 +8140,14 @@
         "epi"
       ],
       "title": {
-        "name": "fsl.EpiReg",
+        "name": "epi.EpiReg",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/epi.html#epireg",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **epi_reg**",
-            "argument": "fsl.EpiReg()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "epi.EpiReg()"
           }
         ]
       },
@@ -8648,17 +8564,14 @@
         "maths"
       ],
       "title": {
-        "name": "fsl.ErodeImage",
+        "name": "maths.ErodeImage",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/maths.html#erodeimage",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslmaths**",
-            "argument": "fsl.ErodeImage()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "maths.ErodeImage()"
           }
         ]
       },
@@ -8867,17 +8780,14 @@
         "utils"
       ],
       "title": {
-        "name": "fsl.ExtractROI",
+        "name": "utils.ExtractROI",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/utils.html#extractroi",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslroi**",
-            "argument": "fsl.ExtractROI()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "utils.ExtractROI()"
           }
         ]
       },
@@ -9112,17 +9022,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "fsl.FAST",
+        "name": "preprocess.FAST",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/preprocess.html#fast",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fast**",
-            "argument": "fsl.FAST()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "preprocess.FAST()"
           }
         ]
       },
@@ -9591,17 +9498,14 @@
         "model"
       ],
       "title": {
-        "name": "fsl.FEAT",
+        "name": "model.FEAT",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/model.html#feat",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **feat**",
-            "argument": "fsl.FEAT()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "model.FEAT()"
           }
         ]
       },
@@ -9706,17 +9610,14 @@
         "model"
       ],
       "title": {
-        "name": "fsl.FEATModel",
+        "name": "model.FEATModel",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/model.html#featmodel",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **feat_model**",
-            "argument": "fsl.FEATModel()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "model.FEATModel()"
           }
         ]
       },
@@ -9886,17 +9787,14 @@
         "model"
       ],
       "title": {
-        "name": "fsl.FEATRegister",
+        "name": "model.FEATRegister",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/model.html#featregister",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Register feat directories to a specific standard",
-            "argument": "fsl.FEATRegister()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "model.FEATRegister()"
           }
         ]
       },
@@ -9975,17 +9873,14 @@
         "model"
       ],
       "title": {
-        "name": "fsl.FILMGLS",
+        "name": "model.FILMGLS",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/model.html#filmgls",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **film_gls**",
-            "argument": "fsl.FILMGLS()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "model.FILMGLS()"
           }
         ]
       },
@@ -10480,17 +10375,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "fsl.FIRST",
+        "name": "preprocess.FIRST",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/preprocess.html#first",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **run_first_all**",
-            "argument": "fsl.FIRST()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "preprocess.FIRST()"
           }
         ]
       },
@@ -10738,17 +10630,14 @@
         "model"
       ],
       "title": {
-        "name": "fsl.FLAMEO",
+        "name": "model.FLAMEO",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/model.html#flameo",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **flameo**",
-            "argument": "fsl.FLAMEO()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "model.FLAMEO()"
           }
         ]
       },
@@ -11217,17 +11106,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "fsl.FLIRT",
+        "name": "preprocess.FLIRT",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/preprocess.html#flirt",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **flirt**",
-            "argument": "fsl.FLIRT()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "preprocess.FLIRT()"
           }
         ]
       },
@@ -11956,17 +11842,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "fsl.FNIRT",
+        "name": "preprocess.FNIRT",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/preprocess.html#fnirt",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fnirt**",
-            "argument": "fsl.FNIRT()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "preprocess.FNIRT()"
           }
         ]
       },
@@ -12669,17 +12552,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "fsl.FUGUE",
+        "name": "preprocess.FUGUE",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/preprocess.html#fugue",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fugue**",
-            "argument": "fsl.FUGUE()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "preprocess.FUGUE()"
           }
         ]
       },
@@ -13226,17 +13106,14 @@
         "fix"
       ],
       "title": {
-        "name": "fsl.FeatureExtractor",
+        "name": "fix.FeatureExtractor",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/fix.html#featureextractor",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **None**",
-            "argument": "fsl.FeatureExtractor()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "fix.FeatureExtractor()"
           }
         ]
       },
@@ -13328,17 +13205,14 @@
         "utils"
       ],
       "title": {
-        "name": "fsl.FilterRegressor",
+        "name": "utils.FilterRegressor",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/utils.html#filterregressor",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fsl_regfilt**",
-            "argument": "fsl.FilterRegressor()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "utils.FilterRegressor()"
           }
         ]
       },
@@ -13534,17 +13408,14 @@
         "dti"
       ],
       "title": {
-        "name": "fsl.FindTheBiggest",
+        "name": "dti.FindTheBiggest",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/dti.html#findthebiggest",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **find_the_biggest**",
-            "argument": "fsl.FindTheBiggest()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "dti.FindTheBiggest()"
           }
         ]
       },
@@ -13662,17 +13533,14 @@
         "model"
       ],
       "title": {
-        "name": "fsl.GLM",
+        "name": "model.GLM",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/model.html#glm",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fsl_glm**",
-            "argument": "fsl.GLM()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "model.GLM()"
           }
         ]
       },
@@ -14177,20 +14045,272 @@
       "category": [
         "NiPype",
         "fsl",
+        "aroma"
+      ],
+      "title": {
+        "name": "aroma.ICA_AROMA",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/aroma.html#ica_aroma",
+        "import": "import nipype.interfaces.fsl as fsl",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Wraps command **ICA_AROMA.py**",
+            "argument": "aroma.ICA_AROMA()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "feat_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "feat_dir"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "motion_parameters",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "motion_parameters"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "denoise_type",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "denoise_type"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_dir"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mask"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dim",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "dim"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "TR",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "TR"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "melodic_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "melodic_dir"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mat_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "mat_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "fnirt_warp_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "fnirt_warp_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "args"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "environ"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "terminal_output"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "ignore_exception"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "aggr_denoised_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "aggr_denoised_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "nonaggr_denoised_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "nonaggr_denoised_file"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_dir",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "NiPype",
+        "fsl",
         "utils"
       ],
       "title": {
-        "name": "fsl.ImageMaths",
+        "name": "utils.ImageMaths",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/utils.html#imagemaths",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslmaths**",
-            "argument": "fsl.ImageMaths()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "utils.ImageMaths()"
           }
         ]
       },
@@ -14360,17 +14480,14 @@
         "utils"
       ],
       "title": {
-        "name": "fsl.ImageMeants",
+        "name": "utils.ImageMeants",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/utils.html#imagemeants",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslmeants**",
-            "argument": "fsl.ImageMeants()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "utils.ImageMeants()"
           }
         ]
       },
@@ -14592,17 +14709,14 @@
         "utils"
       ],
       "title": {
-        "name": "fsl.ImageStats",
+        "name": "utils.ImageStats",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/utils.html#imagestats",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslstats**",
-            "argument": "fsl.ImageStats()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "utils.ImageStats()"
           }
         ]
       },
@@ -14746,17 +14860,14 @@
         "utils"
       ],
       "title": {
-        "name": "fsl.InvWarp",
+        "name": "utils.InvWarp",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/utils.html#invwarp",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **invwarp**",
-            "argument": "fsl.InvWarp()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "utils.InvWarp()"
           }
         ]
       },
@@ -14978,17 +15089,14 @@
         "maths"
       ],
       "title": {
-        "name": "fsl.IsotropicSmooth",
+        "name": "maths.IsotropicSmooth",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/maths.html#isotropicsmooth",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslmaths**",
-            "argument": "fsl.IsotropicSmooth()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "maths.IsotropicSmooth()"
           }
         ]
       },
@@ -15171,17 +15279,14 @@
         "model"
       ],
       "title": {
-        "name": "fsl.L2Model",
+        "name": "model.L2Model",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/model.html#l2model",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Generate subject specific second level model",
-            "argument": "fsl.L2Model()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "model.L2Model()"
           }
         ]
       },
@@ -15260,17 +15365,14 @@
         "model"
       ],
       "title": {
-        "name": "fsl.Level1Design",
+        "name": "model.Level1Design",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/model.html#level1design",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Generate FEAT specific files",
-            "argument": "fsl.Level1Design()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "model.Level1Design()"
           }
         ]
       },
@@ -15401,17 +15503,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "fsl.MCFLIRT",
+        "name": "preprocess.MCFLIRT",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/preprocess.html#mcflirt",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mcflirt**",
-            "argument": "fsl.MCFLIRT()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "preprocess.MCFLIRT()"
           }
         ]
       },
@@ -15841,17 +15940,14 @@
         "model"
       ],
       "title": {
-        "name": "fsl.MELODIC",
+        "name": "model.MELODIC",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/model.html#melodic",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **melodic**",
-            "argument": "fsl.MELODIC()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "model.MELODIC()"
           }
         ]
       },
@@ -16580,17 +16676,14 @@
         "dti"
       ],
       "title": {
-        "name": "fsl.MakeDyadicVectors",
+        "name": "dti.MakeDyadicVectors",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/dti.html#makedyadicvectors",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **make_dyadic_vectors**",
-            "argument": "fsl.MakeDyadicVectors()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "dti.MakeDyadicVectors()"
           }
         ]
       },
@@ -16760,17 +16853,14 @@
         "maths"
       ],
       "title": {
-        "name": "fsl.MaxnImage",
+        "name": "maths.MaxnImage",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/maths.html#maxnimage",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslmaths**",
-            "argument": "fsl.MaxnImage()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "maths.MaxnImage()"
           }
         ]
       },
@@ -16940,17 +17030,14 @@
         "maths"
       ],
       "title": {
-        "name": "fsl.MeanImage",
+        "name": "maths.MeanImage",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/maths.html#meanimage",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslmaths**",
-            "argument": "fsl.MeanImage()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "maths.MeanImage()"
           }
         ]
       },
@@ -17120,17 +17207,14 @@
         "maths"
       ],
       "title": {
-        "name": "fsl.MedianImage",
+        "name": "maths.MedianImage",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/maths.html#medianimage",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslmaths**",
-            "argument": "fsl.MedianImage()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "maths.MedianImage()"
           }
         ]
       },
@@ -17300,17 +17384,14 @@
         "utils"
       ],
       "title": {
-        "name": "fsl.Merge",
+        "name": "utils.Merge",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/utils.html#merge",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslmerge**",
-            "argument": "fsl.Merge()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "utils.Merge()"
           }
         ]
       },
@@ -17454,17 +17535,14 @@
         "maths"
       ],
       "title": {
-        "name": "fsl.MinImage",
+        "name": "maths.MinImage",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/maths.html#minimage",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslmaths**",
-            "argument": "fsl.MinImage()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "maths.MinImage()"
           }
         ]
       },
@@ -17634,17 +17712,14 @@
         "utils"
       ],
       "title": {
-        "name": "fsl.MotionOutliers",
+        "name": "utils.MotionOutliers",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/utils.html#motionoutliers",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fsl_motion_outliers**",
-            "argument": "fsl.MotionOutliers()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "utils.MotionOutliers()"
           }
         ]
       },
@@ -17879,17 +17954,14 @@
         "maths"
       ],
       "title": {
-        "name": "fsl.MultiImageMaths",
+        "name": "maths.MultiImageMaths",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/maths.html#multiimagemaths",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslmaths**",
-            "argument": "fsl.MultiImageMaths()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "maths.MultiImageMaths()"
           }
         ]
       },
@@ -18072,17 +18144,14 @@
         "model"
       ],
       "title": {
-        "name": "fsl.MultipleRegressDesign",
+        "name": "model.MultipleRegressDesign",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/model.html#multipleregressdesign",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Generate multiple regression design",
-            "argument": "fsl.MultipleRegressDesign()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "model.MultipleRegressDesign()"
           }
         ]
       },
@@ -18200,17 +18269,14 @@
         "utils"
       ],
       "title": {
-        "name": "fsl.Overlay",
+        "name": "utils.Overlay",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/utils.html#overlay",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **overlay**",
-            "argument": "fsl.Overlay()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "utils.Overlay()"
           }
         ]
       },
@@ -18471,17 +18537,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "fsl.PRELUDE",
+        "name": "preprocess.PRELUDE",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/preprocess.html#prelude",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **prelude**",
-            "argument": "fsl.PRELUDE()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "preprocess.PRELUDE()"
           }
         ]
       },
@@ -18781,17 +18844,14 @@
         "maths"
       ],
       "title": {
-        "name": "fsl.PercentileImage",
+        "name": "maths.PercentileImage",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/maths.html#percentileimage",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslmaths**",
-            "argument": "fsl.PercentileImage()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "maths.PercentileImage()"
           }
         ]
       },
@@ -18974,17 +19034,14 @@
         "utils"
       ],
       "title": {
-        "name": "fsl.PlotMotionParams",
+        "name": "utils.PlotMotionParams",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/utils.html#plotmotionparams",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fsl_tsplot**",
-            "argument": "fsl.PlotMotionParams()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "utils.PlotMotionParams()"
           }
         ]
       },
@@ -19141,17 +19198,14 @@
         "utils"
       ],
       "title": {
-        "name": "fsl.PlotTimeSeries",
+        "name": "utils.PlotTimeSeries",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/utils.html#plottimeseries",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fsl_tsplot**",
-            "argument": "fsl.PlotTimeSeries()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "utils.PlotTimeSeries()"
           }
         ]
       },
@@ -19438,17 +19492,14 @@
         "utils"
       ],
       "title": {
-        "name": "fsl.PowerSpectrum",
+        "name": "utils.PowerSpectrum",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/utils.html#powerspectrum",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslpspec**",
-            "argument": "fsl.PowerSpectrum()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "utils.PowerSpectrum()"
           }
         ]
       },
@@ -19566,17 +19617,14 @@
         "epi"
       ],
       "title": {
-        "name": "fsl.PrepareFieldmap",
+        "name": "epi.PrepareFieldmap",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/epi.html#preparefieldmap",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fsl_prepare_fieldmap**",
-            "argument": "fsl.PrepareFieldmap()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "epi.PrepareFieldmap()"
           }
         ]
       },
@@ -19746,17 +19794,14 @@
         "dti"
       ],
       "title": {
-        "name": "fsl.ProbTrackX",
+        "name": "dti.ProbTrackX",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/dti.html#probtrackx",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **probtrackx**",
-            "argument": "fsl.ProbTrackX()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "dti.ProbTrackX()"
           }
         ]
       },
@@ -20368,17 +20413,14 @@
         "dti"
       ],
       "title": {
-        "name": "fsl.ProbTrackX2",
+        "name": "dti.ProbTrackX2",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/dti.html#probtrackx2",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **probtrackx2**",
-            "argument": "fsl.ProbTrackX2()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "dti.ProbTrackX2()"
           }
         ]
       },
@@ -21237,17 +21279,14 @@
         "dti"
       ],
       "title": {
-        "name": "fsl.ProjThresh",
+        "name": "dti.ProjThresh",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/dti.html#projthresh",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **proj_thresh**",
-            "argument": "fsl.ProjThresh()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "dti.ProjThresh()"
           }
         ]
       },
@@ -21365,17 +21404,14 @@
         "model"
       ],
       "title": {
-        "name": "fsl.Randomise",
+        "name": "model.Randomise",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/model.html#randomise",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **randomise**",
-            "argument": "fsl.Randomise()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "model.Randomise()"
           }
         ]
       },
@@ -21883,17 +21919,14 @@
         "utils"
       ],
       "title": {
-        "name": "fsl.Reorient2Std",
+        "name": "utils.Reorient2Std",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/utils.html#reorient2std",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslreorient2std**",
-            "argument": "fsl.Reorient2Std()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "utils.Reorient2Std()"
           }
         ]
       },
@@ -22011,17 +22044,14 @@
         "utils"
       ],
       "title": {
-        "name": "fsl.RobustFOV",
+        "name": "utils.RobustFOV",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/utils.html#robustfov",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **robustfov**",
-            "argument": "fsl.RobustFOV()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "utils.RobustFOV()"
           }
         ]
       },
@@ -22178,17 +22208,14 @@
         "model"
       ],
       "title": {
-        "name": "fsl.SMM",
+        "name": "model.SMM",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/model.html#smm",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **mm --ld=logdir**",
-            "argument": "fsl.SMM()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "model.SMM()"
           }
         ]
       },
@@ -22345,17 +22372,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "fsl.SUSAN",
+        "name": "preprocess.SUSAN",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/preprocess.html#susan",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **susan**",
-            "argument": "fsl.SUSAN()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "preprocess.SUSAN()"
           }
         ]
       },
@@ -22538,17 +22562,14 @@
         "epi"
       ],
       "title": {
-        "name": "fsl.SigLoss",
+        "name": "epi.SigLoss",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/epi.html#sigloss",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **sigloss**",
-            "argument": "fsl.SigLoss()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "epi.SigLoss()"
           }
         ]
       },
@@ -22705,17 +22726,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "fsl.SliceTimer",
+        "name": "preprocess.SliceTimer",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/preprocess.html#slicetimer",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **slicetimer**",
-            "argument": "fsl.SliceTimer()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "preprocess.SliceTimer()"
           }
         ]
       },
@@ -22924,17 +22942,14 @@
         "utils"
       ],
       "title": {
-        "name": "fsl.Slicer",
+        "name": "utils.Slicer",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/utils.html#slicer",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **slicer**",
-            "argument": "fsl.Slicer()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "utils.Slicer()"
           }
         ]
       },
@@ -23247,17 +23262,14 @@
         "utils"
       ],
       "title": {
-        "name": "fsl.Smooth",
+        "name": "utils.Smooth",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/utils.html#smooth",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslmaths**",
-            "argument": "fsl.Smooth()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "utils.Smooth()"
           }
         ]
       },
@@ -23401,17 +23413,14 @@
         "model"
       ],
       "title": {
-        "name": "fsl.SmoothEstimate",
+        "name": "model.SmoothEstimate",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/model.html#smoothestimate",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **smoothest**",
-            "argument": "fsl.SmoothEstimate()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "model.SmoothEstimate()"
           }
         ]
       },
@@ -23581,17 +23590,14 @@
         "maths"
       ],
       "title": {
-        "name": "fsl.SpatialFilter",
+        "name": "maths.SpatialFilter",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/maths.html#spatialfilter",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslmaths**",
-            "argument": "fsl.SpatialFilter()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "maths.SpatialFilter()"
           }
         ]
       },
@@ -23800,17 +23806,14 @@
         "utils"
       ],
       "title": {
-        "name": "fsl.Split",
+        "name": "utils.Split",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/utils.html#split",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslsplit**",
-            "argument": "fsl.Split()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "utils.Split()"
           }
         ]
       },
@@ -23941,17 +23944,14 @@
         "utils"
       ],
       "title": {
-        "name": "fsl.SwapDimensions",
+        "name": "utils.SwapDimensions",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/utils.html#swapdimensions",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslswapdim**",
-            "argument": "fsl.SwapDimensions()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "utils.SwapDimensions()"
           }
         ]
       },
@@ -24082,17 +24082,14 @@
         "epi"
       ],
       "title": {
-        "name": "fsl.TOPUP",
+        "name": "epi.TOPUP",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/epi.html#topup",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **topup**",
-            "argument": "fsl.TOPUP()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "epi.TOPUP()"
           }
         ]
       },
@@ -24185,6 +24182,19 @@
             {
               "language": "NiPype",
               "argument": "out_warp_prefix"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_mat_prefix",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_mat_prefix"
             }
           ]
         },
@@ -24570,6 +24580,19 @@
           "output": true,
           "visible": true,
           "editable": false,
+          "name": "out_mats",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": "out_mats"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
           "name": "out_corrected",
           "code": [
             {
@@ -24600,17 +24623,14 @@
         "maths"
       ],
       "title": {
-        "name": "fsl.TemporalFilter",
+        "name": "maths.TemporalFilter",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/maths.html#temporalfilter",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslmaths**",
-            "argument": "fsl.TemporalFilter()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "maths.TemporalFilter()"
           }
         ]
       },
@@ -24793,17 +24813,14 @@
         "maths"
       ],
       "title": {
-        "name": "fsl.Threshold",
+        "name": "maths.Threshold",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/maths.html#threshold",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslmaths**",
-            "argument": "fsl.Threshold()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "maths.Threshold()"
           }
         ]
       },
@@ -25012,17 +25029,14 @@
         "dti"
       ],
       "title": {
-        "name": "fsl.TractSkeleton",
+        "name": "dti.TractSkeleton",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/dti.html#tractskeleton",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **tbss_skeleton**",
-            "argument": "fsl.TractSkeleton()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "dti.TractSkeleton()"
           }
         ]
       },
@@ -25270,17 +25284,14 @@
         "fix"
       ],
       "title": {
-        "name": "fsl.Training",
+        "name": "fix.Training",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/fix.html#training",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **None**",
-            "argument": "fsl.Training()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "fix.Training()"
           }
         ]
       },
@@ -25398,17 +25409,14 @@
         "fix"
       ],
       "title": {
-        "name": "fsl.TrainingSetCreator",
+        "name": "fix.TrainingSetCreator",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/fix.html#trainingsetcreator",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Goes through set of provided melodic output directories, to find all",
-            "argument": "fsl.TrainingSetCreator()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "fix.TrainingSetCreator()"
           }
         ]
       },
@@ -25461,17 +25469,14 @@
         "maths"
       ],
       "title": {
-        "name": "fsl.UnaryMaths",
+        "name": "maths.UnaryMaths",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/maths.html#unarymaths",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fslmaths**",
-            "argument": "fsl.UnaryMaths()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "maths.UnaryMaths()"
           }
         ]
       },
@@ -25641,17 +25646,14 @@
         "dti"
       ],
       "title": {
-        "name": "fsl.VecReg",
+        "name": "dti.VecReg",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/dti.html#vecreg",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **vecreg**",
-            "argument": "fsl.VecReg()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "dti.VecReg()"
           }
         ]
       },
@@ -25873,17 +25875,14 @@
         "utils"
       ],
       "title": {
-        "name": "fsl.WarpPoints",
+        "name": "utils.WarpPoints",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/utils.html#warppoints",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **img2imgcoord**",
-            "argument": "fsl.WarpPoints()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "utils.WarpPoints()"
           }
         ]
       },
@@ -26066,17 +26065,14 @@
         "utils"
       ],
       "title": {
-        "name": "fsl.WarpPointsToStd",
+        "name": "utils.WarpPointsToStd",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/utils.html#warppointstostd",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **img2stdcoord**",
-            "argument": "fsl.WarpPointsToStd()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "utils.WarpPointsToStd()"
           }
         ]
       },
@@ -26272,17 +26268,14 @@
         "utils"
       ],
       "title": {
-        "name": "fsl.WarpUtils",
+        "name": "utils.WarpUtils",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/utils.html#warputils",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **fnirtfileutils**",
-            "argument": "fsl.WarpUtils()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "utils.WarpUtils()"
           }
         ]
       },
@@ -26504,17 +26497,14 @@
         "dti"
       ],
       "title": {
-        "name": "fsl.XFibres5",
+        "name": "dti.XFibres5",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/dti.html#xfibres5",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **xfibres**",
-            "argument": "fsl.XFibres5()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "dti.XFibres5()"
           }
         ]
       },
@@ -27009,17 +26999,14 @@
         "dti"
       ],
       "title": {
-        "name": "fsl.XFibres5",
+        "name": "dti.XFibres5",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/dti.html#xfibres5",
+        "import": "import nipype.interfaces.fsl as fsl",
         "code": [
           {
             "language": "NiPype",
             "comment": "Wraps command **xfibres**",
-            "argument": "fsl.XFibres5()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, fsl"
+            "argument": "dti.XFibres5()"
           }
         ]
       },

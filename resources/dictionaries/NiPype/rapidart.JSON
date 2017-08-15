@@ -9,15 +9,12 @@
       "title": {
         "name": "rapidart.ArtifactDetect",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.rapidart.html#artifactdetect",
+        "import": "import nipype.algorithms.rapidart as rapidart",
         "code": [
           {
             "language": "NiPype",
             "comment": "Detects outliers in a functional imaging series",
             "argument": "rapidart.ArtifactDetect()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, rapidart"
           }
         ]
       },
@@ -358,15 +355,12 @@
       "title": {
         "name": "rapidart.StimulusCorrelation",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.rapidart.html#stimuluscorrelation",
+        "import": "import nipype.algorithms.rapidart as rapidart",
         "code": [
           {
             "language": "NiPype",
             "comment": "Determines if stimuli are correlated with motion or intensity",
             "argument": "rapidart.StimulusCorrelation()"
-          },
-          {
-            "language": "Docker",
-            "argument": "NiPype, rapidart"
           }
         ]
       },
