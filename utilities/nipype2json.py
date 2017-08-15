@@ -36,10 +36,14 @@ def node2json(node, module=None, custom_node=False, category="Custom"):
     all_outputs = _get_outputs(node, custom_node)
     descr = _get_descr(node, custom_node)
 
+    this_category = [category]
     if module.split('.')[0] == 'algorithms':
-        this_category = [category, 'algorithms', module.split('.')[1]]
+        this_category.append('algorithms')
+
+    if custom_node:
+        this_category.append(module)
     else:
-        this_category = [category, module.split('.')[1]]
+        this_category.append(module.split('.')[1])
 
     if not custom_node:
         sub_modules = _get_submodule(node)[1:]
@@ -49,13 +53,13 @@ def node2json(node, module=None, custom_node=False, category="Custom"):
     web_url = _get_web_url(node, module, custom_node)
     node_name = _get_node_name(node, custom_node)
 
-    titleBlock = {'name': '%s.%s' % (module.split('.')[1], node_name),
+    titleBlock = {'name': '%s.%s' % (this_category[-1], node_name),
                   'web_url': web_url,
                   'code': [{'language': category,
                             'comment': descr,
-                            'argument': module.split('.')[1] + '.%s()' % node_name}]}
+                            'argument': this_category[-1] + '.%s()' % node_name}]}
 
-    dockerCode = _docker_block(module.split('.')[1])
+    dockerCode = _docker_block(this_category[-1])
     if dockerCode is not None:
         titleBlock['code'].append({'language': 'Docker',
                                    'argument': dockerCode})
@@ -199,8 +203,6 @@ def _get_submodule(node):
                        if n not in ('interfaces', 'nipype')]
     return all_sub_modules
 
-<<<<<<< HEAD
-
 DOCKER_DICTIONARY = {'afni': '--afni version=latest',
                      'ants': '--ants version=2.2.0',
                      'freesurfer': '--freesurfer version=6.0.0 min=true',
@@ -215,9 +217,6 @@ def _docker_block(module):
         return None
 
 
-=======
-	
->>>>>>> master
 def pyfunc2json():
     """ Experimental function to convert Python functions
     directly to Porcupine's JSON format (by converting it)
