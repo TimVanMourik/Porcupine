@@ -8,10 +8,8 @@ import nipype.interfaces.fsl as fsl
 
 import sys
 sys.path.append('/media/lukas/goliath/Porcupine/example_workflows/firstlevel')
-import events2design
-from nipype.interfaces.utility import Function
-NodeHash_8eb7a30 = pe.Node(Function(function=events2design.tsv2subjectinfo, output_names=['subject_info']), name='NodeName_8eb7a30')
-
+from events2design import Tsv2subjectinfo
+NodeHash_8eb7a30 = pe.Node(Tsv2subjectinfo, name='NodeName_8eb7a30')
 WorkingDirectory = "~/Porcupipelines/ThisStudy"
 
 #Generic datagrabber module that wraps around glob in an
@@ -56,6 +54,15 @@ NodeHash_8ec0000.inputs.contrasts = [('con-incon', 'T', ['congruent_correct', 'c
 #Wraps command **feat_model**
 NodeHash_742dbe0 = pe.Node(interface = fsl.FEATModel(), name = 'NodeName_742dbe0')
 
+#Wraps command **fslmaths**
+NodeHash_4c7bc30 = pe.Node(interface = fsl.MeanImage(), name = 'NodeName_4c7bc30')
+NodeHash_4c7bc30.inputs.dimension = 'T'
+
+#Wraps command **fslmaths**
+NodeHash_3dc1c00 = pe.Node(interface = fsl.ImageMaths(), name = 'NodeName_3dc1c00')
+NodeHash_3dc1c00.inputs.op_string = '-add'
+NodeHash_3dc1c00.inputs.suffix = '_hp'
+
 #Wraps command **film_gls**
 NodeHash_5178890 = pe.Node(interface = fsl.FILMGLS(), name = 'NodeName_5178890')
 
@@ -65,9 +72,12 @@ NodeHash_8ed1fd0.inputs.base_directory = '/tmp'
 
 #Create a workflow to connect all those nodes
 analysisflow = nipype.Workflow('MyWorkflow')
-analysisflow.connect(NodeHash_5178890, 'results_dir', NodeHash_8ed1fd0, 'results')
-analysisflow.connect(NodeHash_7b7fb70, 'out_file', NodeHash_5178890, 'in_file')
+analysisflow.connect(NodeHash_3dc1c00, 'out_file', NodeHash_5178890, 'in_file')
 analysisflow.connect(NodeHash_7b7fb70, 'out_file', NodeHash_3167ee0, 'functional_runs')
+analysisflow.connect(NodeHash_7b7fb70, 'out_file', NodeHash_3dc1c00, 'in_file2')
+analysisflow.connect(NodeHash_4c7bc30, 'out_file', NodeHash_3dc1c00, 'in_file')
+analysisflow.connect(NodeHash_2a3d2c0, 'out_file', NodeHash_4c7bc30, 'in_file')
+analysisflow.connect(NodeHash_5178890, 'results_dir', NodeHash_8ed1fd0, 'results')
 analysisflow.connect(NodeHash_2a3d2c0, 'out_file', NodeHash_7b7fb70, 'in_file')
 analysisflow.connect(NodeHash_742dbe0, 'design_file', NodeHash_5178890, 'design_file')
 analysisflow.connect(NodeHash_742dbe0, 'con_file', NodeHash_5178890, 'tcon_file')
