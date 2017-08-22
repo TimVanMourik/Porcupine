@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "category": [
+        "Custom",
+        "example_custom_node_module"
+      ],
+      "title": {
+        "name": "example_custom_node_module.get_scan_info",
+        "web_url": "",
+        "code": [
+          {
+            "language": "Custom",
+            "comment": "Custom interface wrapping function get_scan_info",
+            "argument": {
+              "name": "example_custom_node_module.get_scan_info()",
+              "import": "sys.path.append('/media/lukas/goliath/Porcupine/utilities')\nimport example_custom_node_module"
+            }
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "Custom",
+              "argument": {
+                "name": "in_file"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "TR",
+          "code": [
+            {
+              "language": "Custom",
+              "argument": {
+                "name": "TR"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
