@@ -42,13 +42,19 @@ Argument::Argument(
     foreach (QJsonValue code, _json["code"].toArray())
     {
         QJsonObject codeJson = code.toObject();
+        QMap<QString, QString> argumentList;
+        QJsonObject arguments = codeJson["argument"].toObject();
+        foreach (QString key, arguments.keys())
+        {
+            argumentList[key] = arguments[key].toString();
+        }
         addCode(codeJson["language"].toString(),
-                codeJson["argument"].toString(),
+                argumentList,
                 codeJson["comment" ].toString());
     }
 }
 
-QString Argument::getArgument(
+QMap<QString, QString> Argument::getArgument(
         const QString& _language
         ) const
 {
@@ -58,7 +64,7 @@ QString Argument::getArgument(
     }
     else
     {
-        return QString();
+        return QMap<QString, QString>();
     }
 }
 
@@ -70,7 +76,7 @@ void Argument::updateJson(
     {
         QJsonObject code;
         code["language"] = it.key();
-        code["argument"] = it.value().argument;
+        code["argument"] = map2Json(it.value().argument);
         code["comment" ] = it.value().comment;
         codeArray << code;
     }
@@ -82,6 +88,18 @@ void Argument::updateJson(
     m_json["iterator"] = m_isIterator;
     m_json["name"    ] = m_argumentName;
     m_json["value"   ] = m_defaultValue;
+}
+
+QJsonObject Argument::map2Json(
+        const QMap<QString, QString>& _argument
+        )
+{
+    QJsonObject object;
+    foreach (QString key, _argument.keys())
+    {
+        object[key] = _argument[key];
+    }
+    return object;
 }
 
 const QJsonObject& Argument::toJson(
@@ -112,11 +130,11 @@ QString Argument::getComment(
 
 void Argument::addCode(
         const QString& _language,
-        const QString& _function,
+        const QMap<QString, QString>& _argument,
         const QString& _comment
         )
 {
     m_code[_language] = Code();
-    m_code[_language].argument = _function;
+    m_code[_language].argument = _argument;
     m_code[_language].comment  = _comment;
 }

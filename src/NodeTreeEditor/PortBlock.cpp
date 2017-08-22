@@ -90,7 +90,9 @@ void PortBlock::addPort(
         QList<QString> languages = title.getLanguages();
         foreach (QString language, languages)
         {
-            portArgument.addCode(language, portTitle);
+            QMap<QString, QString> argument;
+            argument["name"] = portTitle;
+            portArgument.addCode(language, argument);
         }
     }
     else if(ioBox.clickedButton() == output)
@@ -100,7 +102,9 @@ void PortBlock::addPort(
         QList<QString> languages = title.getLanguages();
         foreach (QString language, languages)
         {
-            portArgument.addCode(language, portTitle);
+            QMap<QString, QString> argument;
+            argument["name"] = portTitle;
+            portArgument.addCode(language, argument);
         }
     }
     else if(ioBox.clickedButton() == both)
@@ -110,7 +114,9 @@ void PortBlock::addPort(
         QList<QString> languages = title.getLanguages();
         foreach (QString language, languages)
         {
-            portArgument.addCode(language, portTitle);
+            QMap<QString, QString> argument;
+            argument["name"] = portTitle;
+            portArgument.addCode(language, argument);
         }
     }
     else

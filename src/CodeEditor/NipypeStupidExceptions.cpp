@@ -57,7 +57,7 @@ QString NipypeStupidExceptions::codeForIdentityInterface(
     QString code("");
     QJsonObject json = _item->getJson();
     Argument title(json["title"].toObject());
-    if(title.getArgument(s_thisLanguage).isEmpty()) return QString("");
+    if(title.getArgument(s_thisLanguage)["name"].isEmpty()) return QString("");
 
     QString nodeName = QString("NodeHash_%1").arg(QString::number((quint64) _item->getNode(), 16));
 
@@ -80,7 +80,7 @@ QString NipypeStupidExceptions::codeForIdentityInterface(
         Argument argument = pair->getArgument();
         if(argument.m_isInput && argument.m_isOutput)
         {
-            fieldNodes << argument.getArgument(s_thisLanguage);
+            fieldNodes << argument.getArgument(s_thisLanguage)["name"];
         }
     }
 
@@ -115,11 +115,11 @@ QString NipypeStupidExceptions::codeForIdentityInterface(
         {
             if(!argument.m_isIterator)
             {
-                code += QString("%1.inputs.%3 = %4\n").arg(nodeName, argument.getArgument(s_thisLanguage), filename);
+                code += QString("%1.inputs.%3 = %4\n").arg(nodeName, argument.getArgument(s_thisLanguage)["name"], filename);
             }
             else if(pair->getInputPort()->getConnections().length() == 0)
             {
-                keyValuePairs << QString("('%1', %2)").arg(argument.getArgument(s_thisLanguage), filename);
+                keyValuePairs << QString("('%1', %2)").arg(argument.getArgument(s_thisLanguage)["name"], filename);
             }
         }
     }
@@ -141,7 +141,7 @@ QString NipypeStupidExceptions::codeForSelectFiles(
     QString code("");
     QJsonObject json = _item->getJson();
     Argument title(json["title"].toObject());
-    if(title.getArgument(s_thisLanguage).isEmpty()) return QString("");
+    if(title.getArgument(s_thisLanguage)["name"].isEmpty()) return QString("");
 
     QString nodeName = QString("NodeHash_%1").arg(QString::number((quint64) _item->getNode(), 16));
 
@@ -174,7 +174,7 @@ QString NipypeStupidExceptions::codeForSelectFiles(
         }
         if(!filename.isEmpty() && argument.m_isInput && argument.m_isOutput)
         {
-            templateDictionary << "'" + argument.getArgument(s_thisLanguage) + "':" + filename;
+            templateDictionary << "'" + argument.getArgument(s_thisLanguage)["name"] + "':" + filename;
         }
     }
 
@@ -209,11 +209,11 @@ QString NipypeStupidExceptions::codeForSelectFiles(
         {
             if(!argument.m_isIterator)
             {
-                code += QString("%1.inputs.%2 = %3\n").arg(nodeName, argument.getArgument(s_thisLanguage), filename);
+                code += QString("%1.inputs.%2 = %3\n").arg(nodeName, argument.getArgument(s_thisLanguage)["name"], filename);
             }
             else if(pair->getInputPort()->getConnections().length() == 0)
             {
-                keyValuePairs << QString("('%1', %2)").arg(argument.getArgument(s_thisLanguage), filename);
+                keyValuePairs << QString("('%1', %2)").arg(argument.getArgument(s_thisLanguage)["name"], filename);
             }
         }
     }
@@ -235,7 +235,7 @@ QString NipypeStupidExceptions::codeForMySQLSink(
     QString code("");
     QJsonObject json = _item->getJson();
     Argument title(json["title"].toObject());
-    if(title.getArgument(s_thisLanguage).isEmpty()) return QString("");
+    if(title.getArgument(s_thisLanguage)["name"].isEmpty()) return QString("");
 
     QString nodeName = QString("NodeHash_%1").arg(QString::number((quint64) _item->getNode(), 16));
 
@@ -258,11 +258,11 @@ QString NipypeStupidExceptions::codeForMySQLSink(
         Argument argument = pair->getArgument();
         if(argument.m_isInput && argument.m_isOutput)
         {
-            fieldNodes << argument.getArgument(s_thisLanguage);
+            fieldNodes << argument.getArgument(s_thisLanguage)["name"];
         }
     }
 
-    code += QString("(io.MySQLSink(input_names=['%1").arg(title.getArgument(fieldNodes.join("','")));
+    code += QString("(io.MySQLSink(input_names=['%1").arg(fieldNodes.join("','"));
     code += QString("']), name = 'NodeName_%1'").arg(QString::number((quint64) _item->getNode(), 16));
 
     if(iterFields.length() == 0)
@@ -293,11 +293,11 @@ QString NipypeStupidExceptions::codeForMySQLSink(
         {
             if(!argument.m_isIterator)
             {
-                code += QString("%1.inputs.%3 = %4\n").arg(nodeName, argument.getArgument(s_thisLanguage), filename);
+                code += QString("%1.inputs.%3 = %4\n").arg(nodeName, argument.getArgument(s_thisLanguage)["name"], filename);
             }
             else if(pair->getInputPort()->getConnections().length() == 0)
             {
-                keyValuePairs << QString("('%1', %2)").arg(argument.getArgument(s_thisLanguage), filename);
+                keyValuePairs << QString("('%1', %2)").arg(argument.getArgument(s_thisLanguage)["name"], filename);
             }
         }
     }
@@ -319,7 +319,7 @@ QString NipypeStupidExceptions::codeForSQLiteSink(
     QString code("");
     QJsonObject json = _item->getJson();
     Argument title(json["title"].toObject());
-    if(title.getArgument(s_thisLanguage).isEmpty()) return QString("");
+    if(title.getArgument(s_thisLanguage)["name"].isEmpty()) return QString("");
 
     QString nodeName = QString("NodeHash_%1").arg(QString::number((quint64) _item->getNode(), 16));
 
@@ -342,11 +342,11 @@ QString NipypeStupidExceptions::codeForSQLiteSink(
         Argument argument = pair->getArgument();
         if(argument.m_isInput && argument.m_isOutput)
         {
-            fieldNodes << argument.getArgument(s_thisLanguage);
+            fieldNodes << argument.getArgument(s_thisLanguage)["name"];
         }
     }
 
-    code += QString("(io.SQLiteSink(input_names=['%1").arg(title.getArgument(fieldNodes.join("','")));
+    code += QString("(io.SQLiteSink(input_names=['%1").arg(fieldNodes.join("','"));
     code += QString("']), name = 'NodeName_%1'").arg(QString::number((quint64) _item->getNode(), 16));
 
     if(iterFields.length() == 0)
@@ -377,11 +377,11 @@ QString NipypeStupidExceptions::codeForSQLiteSink(
         {
             if(!argument.m_isIterator)
             {
-                code += QString("%1.inputs.%3 = %4\n").arg(nodeName, argument.getArgument(s_thisLanguage), filename);
+                code += QString("%1.inputs.%3 = %4\n").arg(nodeName, argument.getArgument(s_thisLanguage)["name"], filename);
             }
             else if(pair->getInputPort()->getConnections().length() == 0)
             {
-                keyValuePairs << QString("('%1', %2)").arg(argument.getArgument(s_thisLanguage), filename);
+                keyValuePairs << QString("('%1', %2)").arg(argument.getArgument(s_thisLanguage)["name"], filename);
             }
         }
     }
@@ -403,7 +403,7 @@ QString NipypeStupidExceptions::codeForS3DataGrabber(
     QString code("");
     QJsonObject json = _item->getJson();
     Argument title(json["title"].toObject());
-    if(title.getArgument(s_thisLanguage).isEmpty()) return QString("");
+    if(title.getArgument(s_thisLanguage)["name"].isEmpty()) return QString("");
 
     QString nodeName = QString("NodeHash_%1").arg(QString::number((quint64) _item->getNode(), 16));
 
@@ -428,9 +428,9 @@ QString NipypeStupidExceptions::codeForS3DataGrabber(
         Argument argument = pair->getArgument();
         if(argument.m_isInput)
         {
-            if(!standardPorts.contains(argument.getArgument(s_thisLanguage)))
+            if(!standardPorts.contains(argument.getArgument(s_thisLanguage)["name"]))
             {
-                infieldNodes << argument.getArgument(s_thisLanguage);
+                infieldNodes << argument.getArgument(s_thisLanguage)["name"];
             }
         }
     }
@@ -440,9 +440,9 @@ QString NipypeStupidExceptions::codeForS3DataGrabber(
         Argument argument = pair->getArgument();
         if(argument.m_isOutput)
         {
-            if(!standardPorts.contains(argument.getArgument(s_thisLanguage)))
+            if(!standardPorts.contains(argument.getArgument(s_thisLanguage)["name"]))
             {
-                outfieldNodes << argument.getArgument(s_thisLanguage);
+                outfieldNodes << argument.getArgument(s_thisLanguage)["name"];
             }
         }
     }
@@ -489,11 +489,11 @@ QString NipypeStupidExceptions::codeForS3DataGrabber(
         {
             if(!argument.m_isIterator)
             {
-                code += QString("%1.inputs.%2 = %3\n").arg(nodeName, argument.getArgument(s_thisLanguage), filename);
+                code += QString("%1.inputs.%2 = %3\n").arg(nodeName, argument.getArgument(s_thisLanguage)["name"], filename);
             }
             else if(pair->getInputPort()->getConnections().length() == 0)
             {
-                keyValuePairs << QString("('%1', %2)").arg(argument.getArgument(s_thisLanguage), filename);
+                keyValuePairs << QString("('%1', %2)").arg(argument.getArgument(s_thisLanguage)["name"], filename);
             }
         }
     }
@@ -516,7 +516,7 @@ QStringList NipypeStupidExceptions::getMapNodeFields(
     {
         if(pair->isIterator() && pair->getInputPort()->getConnections().length() != 0)
         {
-            iterFields << pair->getArgument().getArgument(s_thisLanguage);
+            iterFields << pair->getArgument().getArgument(s_thisLanguage)["name"];
         }
     }
     return iterFields;

@@ -41,8 +41,8 @@ public:
     //
     QList<QString> getLanguages(
             );
-    //
-    QString getArgument(
+    // not const & because it would return a temporary
+    QMap<QString, QString> getArgument(
             const QString& _language
             ) const;
     //
@@ -64,8 +64,13 @@ public:
     //
     void addCode(
             const QString& _language,
-            const QString& _argument,
+            const QMap<QString, QString>& _argument,
             const QString& _comment = QString("")
+            );
+private:
+    //
+    QJsonObject map2Json(
+            const QMap<QString, QString>& _argument
             );
 ///@brief let's not have getters and setters but just make the elements public
 /// As this class is only for setting and getting, this makes more sense and is more direct
@@ -91,7 +96,7 @@ public:
     //
     struct Code
     {
-        QString argument;
+        QMap<QString, QString> argument;
         QString comment;
     };
     //
