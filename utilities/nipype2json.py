@@ -58,31 +58,51 @@ def node2json(node, module=None, custom_node=False, category="Custom", module_pa
     node_name = _get_node_name(node, custom_node)
     import_statement = _get_import_statement(node, module, module_path)
 
-    titleBlock = {'name': '%s.%s' % (this_category[-1], node_name),
-                  'web_url': web_url,
-                  'import': import_statement,
-                  'code': [{'language': category,
-                            'comment': descr,
-                            'argument': this_category[-1] + '.%s()' % node_name}]}
+    titleBlock = {
+
+        'name': '%s.%s' % (this_category[-1], node_name),
+        'web_url': web_url,
+        'code': [{
+            'language': category,
+            'comment': descr,
+            'argument': {
+                "name": this_category[-1] + '.%s()' % node_name,
+                "import": import_statement
+            }
+        }]
+    }
 
     dockerCode = _docker_block(this_category[-1])
     if dockerCode is not None:
-        titleBlock['code'].append({'language': 'Docker',
-                                   'argument': dockerCode})
+        
+        titleBlock['code'].append({
+            'language': 'Docker',
+            'argument': {
+                "name": dockerCode
+            }
+        })
 
     ports = []
 
     for inp in all_inputs:
-        codeBlock = {'language': category,
-                     'argument': inp}
+        codeBlock = {
+            'language': category,
+            'argument': {
+                "name": inp
+            }
+        }
+
         is_mandatory = inp in mandatory_inputs
 
-        port = {'input': True,
-                'output': False,
-                'visible': True if is_mandatory else False,
-                'editable': True,
-                'name': inp,
-                'code': [codeBlock]}
+        port = {
+            'input': True,
+            'output': False,
+            'visible': True if is_mandatory else False,
+            'editable': True,
+            'name': inp,
+            'code': [codeBlock]
+        }
+
         ports.append(port)
 
     ports = sorted(ports, reverse=True, key=lambda p: p['visible'])
@@ -91,7 +111,9 @@ def node2json(node, module=None, custom_node=False, category="Custom", module_pa
 
         codeBlock = {
             'language': category,
-            'argument': outp
+            'argument': {
+                "name": outp
+            }
         }
 
         port = {
@@ -209,7 +231,7 @@ def _get_import_statement(node, module, module_path):
         importlib.import_module('nipype.' + module)
         import_statement = "import nipype.%s as %s" % (module, module.split('.')[-1])
     except ImportError:
-        import_statement = "import sys\nsys.path.append('%s')\nimport %s"
+        import_statement = "sys.path.append('%s')\nimport %s"
         import_statement = import_statement % (op.abspath(op.dirname(module_path)), module)
 
     return import_statement
@@ -222,6 +244,7 @@ def _get_submodule(node):
     all_sub_modules = [n for n in module_tree.split('.')
                        if n not in ('interfaces', 'nipype')]
     return all_sub_modules
+
 
 DOCKER_DICTIONARY = {'afni': '--afni version=latest',
                      'ants': '--ants version=2.2.0',

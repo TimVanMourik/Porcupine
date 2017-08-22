@@ -9,12 +9,14 @@
       "title": {
         "name": "confounds.ACompCor",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.confounds.html#acompcor",
-        "import": "import nipype.algorithms.confounds as confounds",
         "code": [
           {
             "language": "NiPype",
             "comment": "Anatomical compcor: for inputs and outputs, see CompCor.",
-            "argument": "confounds.ACompCor()"
+            "argument": {
+              "name": "confounds.ACompCor()",
+              "import": "import nipype.algorithms.confounds as confounds"
+            }
           }
         ]
       },
@@ -28,7 +30,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "realigned_file"
+              "argument": {
+                "name": "realigned_file"
+              }
             }
           ]
         },
@@ -41,7 +45,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_files"
+              "argument": {
+                "name": "mask_files"
+              }
             }
           ]
         },
@@ -54,7 +60,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "merge_method"
+              "argument": {
+                "name": "merge_method"
+              }
             }
           ]
         },
@@ -67,7 +75,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_index"
+              "argument": {
+                "name": "mask_index"
+              }
             }
           ]
         },
@@ -80,7 +90,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "components_file"
+              "argument": {
+                "name": "components_file"
+              }
             }
           ]
         },
@@ -93,7 +105,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "num_components"
+              "argument": {
+                "name": "num_components"
+              }
             }
           ]
         },
@@ -106,7 +120,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "pre_filter"
+              "argument": {
+                "name": "pre_filter"
+              }
             }
           ]
         },
@@ -119,7 +135,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_regress_poly"
+              "argument": {
+                "name": "use_regress_poly"
+              }
             }
           ]
         },
@@ -132,7 +150,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "regress_poly_degree"
+              "argument": {
+                "name": "regress_poly_degree"
+              }
             }
           ]
         },
@@ -145,7 +165,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "header_prefix"
+              "argument": {
+                "name": "header_prefix"
+              }
             }
           ]
         },
@@ -158,7 +180,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "high_pass_cutoff"
+              "argument": {
+                "name": "high_pass_cutoff"
+              }
             }
           ]
         },
@@ -171,7 +195,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "repetition_time"
+              "argument": {
+                "name": "repetition_time"
+              }
             }
           ]
         },
@@ -184,7 +210,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "save_pre_filter"
+              "argument": {
+                "name": "save_pre_filter"
+              }
             }
           ]
         },
@@ -197,7 +225,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_initial_volumes"
+              "argument": {
+                "name": "ignore_initial_volumes"
+              }
             }
           ]
         },
@@ -210,7 +240,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -223,7 +255,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "components_file"
+              "argument": {
+                "name": "components_file"
+              }
             }
           ]
         },
@@ -236,7 +270,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "pre_filter_file"
+              "argument": {
+                "name": "pre_filter_file"
+              }
             }
           ]
         }
@@ -251,12 +287,14 @@
       "title": {
         "name": "confounds.CompCor",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.confounds.html#compcor",
-        "import": "import nipype.algorithms.confounds as confounds",
         "code": [
           {
             "language": "NiPype",
             "comment": "Interface with core CompCor computation, used in aCompCor and tCompCor",
-            "argument": "confounds.CompCor()"
+            "argument": {
+              "name": "confounds.CompCor()",
+              "import": "import nipype.algorithms.confounds as confounds"
+            }
           }
         ]
       },
@@ -270,7 +308,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "realigned_file"
+              "argument": {
+                "name": "realigned_file"
+              }
             }
           ]
         },
@@ -283,7 +323,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_files"
+              "argument": {
+                "name": "mask_files"
+              }
             }
           ]
         },
@@ -296,7 +338,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "merge_method"
+              "argument": {
+                "name": "merge_method"
+              }
             }
           ]
         },
@@ -309,7 +353,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_index"
+              "argument": {
+                "name": "mask_index"
+              }
             }
           ]
         },
@@ -322,7 +368,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "components_file"
+              "argument": {
+                "name": "components_file"
+              }
             }
           ]
         },
@@ -335,7 +383,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "num_components"
+              "argument": {
+                "name": "num_components"
+              }
             }
           ]
         },
@@ -348,7 +398,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "pre_filter"
+              "argument": {
+                "name": "pre_filter"
+              }
             }
           ]
         },
@@ -361,7 +413,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_regress_poly"
+              "argument": {
+                "name": "use_regress_poly"
+              }
             }
           ]
         },
@@ -374,7 +428,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "regress_poly_degree"
+              "argument": {
+                "name": "regress_poly_degree"
+              }
             }
           ]
         },
@@ -387,7 +443,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "header_prefix"
+              "argument": {
+                "name": "header_prefix"
+              }
             }
           ]
         },
@@ -400,7 +458,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "high_pass_cutoff"
+              "argument": {
+                "name": "high_pass_cutoff"
+              }
             }
           ]
         },
@@ -413,7 +473,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "repetition_time"
+              "argument": {
+                "name": "repetition_time"
+              }
             }
           ]
         },
@@ -426,7 +488,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "save_pre_filter"
+              "argument": {
+                "name": "save_pre_filter"
+              }
             }
           ]
         },
@@ -439,7 +503,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_initial_volumes"
+              "argument": {
+                "name": "ignore_initial_volumes"
+              }
             }
           ]
         },
@@ -452,7 +518,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -465,7 +533,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "components_file"
+              "argument": {
+                "name": "components_file"
+              }
             }
           ]
         },
@@ -478,7 +548,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "pre_filter_file"
+              "argument": {
+                "name": "pre_filter_file"
+              }
             }
           ]
         }
@@ -493,12 +565,14 @@
       "title": {
         "name": "confounds.ComputeDVARS",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.confounds.html#computedvars",
-        "import": "import nipype.algorithms.confounds as confounds",
         "code": [
           {
             "language": "NiPype",
             "comment": "Computes the DVARS.",
-            "argument": "confounds.ComputeDVARS()"
+            "argument": {
+              "name": "confounds.ComputeDVARS()",
+              "import": "import nipype.algorithms.confounds as confounds"
+            }
           }
         ]
       },
@@ -512,7 +586,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -525,7 +601,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_mask"
+              "argument": {
+                "name": "in_mask"
+              }
             }
           ]
         },
@@ -538,7 +616,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "remove_zerovariance"
+              "argument": {
+                "name": "remove_zerovariance"
+              }
             }
           ]
         },
@@ -551,7 +631,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "save_std"
+              "argument": {
+                "name": "save_std"
+              }
             }
           ]
         },
@@ -564,7 +646,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "save_nstd"
+              "argument": {
+                "name": "save_nstd"
+              }
             }
           ]
         },
@@ -577,7 +661,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "save_vxstd"
+              "argument": {
+                "name": "save_vxstd"
+              }
             }
           ]
         },
@@ -590,7 +676,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "save_all"
+              "argument": {
+                "name": "save_all"
+              }
             }
           ]
         },
@@ -603,7 +691,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "series_tr"
+              "argument": {
+                "name": "series_tr"
+              }
             }
           ]
         },
@@ -616,7 +706,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "save_plot"
+              "argument": {
+                "name": "save_plot"
+              }
             }
           ]
         },
@@ -629,7 +721,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "figdpi"
+              "argument": {
+                "name": "figdpi"
+              }
             }
           ]
         },
@@ -642,7 +736,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "figsize"
+              "argument": {
+                "name": "figsize"
+              }
             }
           ]
         },
@@ -655,7 +751,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "figformat"
+              "argument": {
+                "name": "figformat"
+              }
             }
           ]
         },
@@ -668,7 +766,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "intensity_normalization"
+              "argument": {
+                "name": "intensity_normalization"
+              }
             }
           ]
         },
@@ -681,7 +781,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -694,7 +796,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_std"
+              "argument": {
+                "name": "out_std"
+              }
             }
           ]
         },
@@ -707,7 +811,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_nstd"
+              "argument": {
+                "name": "out_nstd"
+              }
             }
           ]
         },
@@ -720,7 +826,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_vxstd"
+              "argument": {
+                "name": "out_vxstd"
+              }
             }
           ]
         },
@@ -733,7 +841,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_all"
+              "argument": {
+                "name": "out_all"
+              }
             }
           ]
         },
@@ -746,7 +856,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "avg_std"
+              "argument": {
+                "name": "avg_std"
+              }
             }
           ]
         },
@@ -759,7 +871,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "avg_nstd"
+              "argument": {
+                "name": "avg_nstd"
+              }
             }
           ]
         },
@@ -772,7 +886,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "avg_vxstd"
+              "argument": {
+                "name": "avg_vxstd"
+              }
             }
           ]
         },
@@ -785,7 +901,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "fig_std"
+              "argument": {
+                "name": "fig_std"
+              }
             }
           ]
         },
@@ -798,7 +916,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "fig_nstd"
+              "argument": {
+                "name": "fig_nstd"
+              }
             }
           ]
         },
@@ -811,7 +931,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "fig_vxstd"
+              "argument": {
+                "name": "fig_vxstd"
+              }
             }
           ]
         }
@@ -826,12 +948,14 @@
       "title": {
         "name": "confounds.FramewiseDisplacement",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.confounds.html#framewisedisplacement",
-        "import": "import nipype.algorithms.confounds as confounds",
         "code": [
           {
             "language": "NiPype",
             "comment": "Calculate the :abbr:`FD (framewise displacement)` as in [Power2012]_.",
-            "argument": "confounds.FramewiseDisplacement()"
+            "argument": {
+              "name": "confounds.FramewiseDisplacement()",
+              "import": "import nipype.algorithms.confounds as confounds"
+            }
           }
         ]
       },
@@ -845,7 +969,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -858,7 +984,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "parameter_source"
+              "argument": {
+                "name": "parameter_source"
+              }
             }
           ]
         },
@@ -871,7 +999,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "radius"
+              "argument": {
+                "name": "radius"
+              }
             }
           ]
         },
@@ -884,7 +1014,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         },
@@ -897,7 +1029,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_figure"
+              "argument": {
+                "name": "out_figure"
+              }
             }
           ]
         },
@@ -910,7 +1044,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "series_tr"
+              "argument": {
+                "name": "series_tr"
+              }
             }
           ]
         },
@@ -923,7 +1059,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "save_plot"
+              "argument": {
+                "name": "save_plot"
+              }
             }
           ]
         },
@@ -936,7 +1074,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "normalize"
+              "argument": {
+                "name": "normalize"
+              }
             }
           ]
         },
@@ -949,7 +1089,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "figdpi"
+              "argument": {
+                "name": "figdpi"
+              }
             }
           ]
         },
@@ -962,7 +1104,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "figsize"
+              "argument": {
+                "name": "figsize"
+              }
             }
           ]
         },
@@ -975,7 +1119,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -988,7 +1134,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         },
@@ -1001,7 +1149,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_figure"
+              "argument": {
+                "name": "out_figure"
+              }
             }
           ]
         },
@@ -1014,7 +1164,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "fd_average"
+              "argument": {
+                "name": "fd_average"
+              }
             }
           ]
         }
@@ -1029,12 +1181,14 @@
       "title": {
         "name": "confounds.NonSteadyStateDetector",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.confounds.html#nonsteadystatedetector",
-        "import": "import nipype.algorithms.confounds as confounds",
         "code": [
           {
             "language": "NiPype",
             "comment": "Returns the number of non-steady state volumes detected at the beginning",
-            "argument": "confounds.NonSteadyStateDetector()"
+            "argument": {
+              "name": "confounds.NonSteadyStateDetector()",
+              "import": "import nipype.algorithms.confounds as confounds"
+            }
           }
         ]
       },
@@ -1048,7 +1202,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -1061,7 +1217,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -1074,7 +1232,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "n_volumes_to_discard"
+              "argument": {
+                "name": "n_volumes_to_discard"
+              }
             }
           ]
         }
@@ -1089,12 +1249,14 @@
       "title": {
         "name": "confounds.TCompCor",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.confounds.html#tcompcor",
-        "import": "import nipype.algorithms.confounds as confounds",
         "code": [
           {
             "language": "NiPype",
             "comment": "Interface for tCompCor. Computes a ROI mask based on variance of voxels.",
-            "argument": "confounds.TCompCor()"
+            "argument": {
+              "name": "confounds.TCompCor()",
+              "import": "import nipype.algorithms.confounds as confounds"
+            }
           }
         ]
       },
@@ -1108,7 +1270,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "realigned_file"
+              "argument": {
+                "name": "realigned_file"
+              }
             }
           ]
         },
@@ -1121,7 +1285,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "percentile_threshold"
+              "argument": {
+                "name": "percentile_threshold"
+              }
             }
           ]
         },
@@ -1134,7 +1300,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_files"
+              "argument": {
+                "name": "mask_files"
+              }
             }
           ]
         },
@@ -1147,7 +1315,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "merge_method"
+              "argument": {
+                "name": "merge_method"
+              }
             }
           ]
         },
@@ -1160,7 +1330,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_index"
+              "argument": {
+                "name": "mask_index"
+              }
             }
           ]
         },
@@ -1173,7 +1345,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "components_file"
+              "argument": {
+                "name": "components_file"
+              }
             }
           ]
         },
@@ -1186,7 +1360,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "num_components"
+              "argument": {
+                "name": "num_components"
+              }
             }
           ]
         },
@@ -1199,7 +1375,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "pre_filter"
+              "argument": {
+                "name": "pre_filter"
+              }
             }
           ]
         },
@@ -1212,7 +1390,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_regress_poly"
+              "argument": {
+                "name": "use_regress_poly"
+              }
             }
           ]
         },
@@ -1225,7 +1405,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "regress_poly_degree"
+              "argument": {
+                "name": "regress_poly_degree"
+              }
             }
           ]
         },
@@ -1238,7 +1420,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "header_prefix"
+              "argument": {
+                "name": "header_prefix"
+              }
             }
           ]
         },
@@ -1251,7 +1435,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "high_pass_cutoff"
+              "argument": {
+                "name": "high_pass_cutoff"
+              }
             }
           ]
         },
@@ -1264,7 +1450,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "repetition_time"
+              "argument": {
+                "name": "repetition_time"
+              }
             }
           ]
         },
@@ -1277,7 +1465,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "save_pre_filter"
+              "argument": {
+                "name": "save_pre_filter"
+              }
             }
           ]
         },
@@ -1290,7 +1480,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_initial_volumes"
+              "argument": {
+                "name": "ignore_initial_volumes"
+              }
             }
           ]
         },
@@ -1303,7 +1495,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -1316,7 +1510,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "high_variance_masks"
+              "argument": {
+                "name": "high_variance_masks"
+              }
             }
           ]
         },
@@ -1329,7 +1525,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "components_file"
+              "argument": {
+                "name": "components_file"
+              }
             }
           ]
         },
@@ -1342,7 +1540,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "pre_filter_file"
+              "argument": {
+                "name": "pre_filter_file"
+              }
             }
           ]
         }
@@ -1357,12 +1557,14 @@
       "title": {
         "name": "confounds.TSNR",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.confounds.html#tsnr",
-        "import": "import nipype.algorithms.confounds as confounds",
         "code": [
           {
             "language": "NiPype",
             "comment": "Computes the time-course SNR for a time series",
-            "argument": "confounds.TSNR()"
+            "argument": {
+              "name": "confounds.TSNR()",
+              "import": "import nipype.algorithms.confounds as confounds"
+            }
           }
         ]
       },
@@ -1376,7 +1578,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -1389,7 +1593,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "regress_poly"
+              "argument": {
+                "name": "regress_poly"
+              }
             }
           ]
         },
@@ -1402,7 +1608,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "tsnr_file"
+              "argument": {
+                "name": "tsnr_file"
+              }
             }
           ]
         },
@@ -1415,7 +1623,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mean_file"
+              "argument": {
+                "name": "mean_file"
+              }
             }
           ]
         },
@@ -1428,7 +1638,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "stddev_file"
+              "argument": {
+                "name": "stddev_file"
+              }
             }
           ]
         },
@@ -1441,7 +1653,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "detrended_file"
+              "argument": {
+                "name": "detrended_file"
+              }
             }
           ]
         },
@@ -1454,7 +1668,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -1467,7 +1683,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "tsnr_file"
+              "argument": {
+                "name": "tsnr_file"
+              }
             }
           ]
         },
@@ -1480,7 +1698,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mean_file"
+              "argument": {
+                "name": "mean_file"
+              }
             }
           ]
         },
@@ -1493,7 +1713,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "stddev_file"
+              "argument": {
+                "name": "stddev_file"
+              }
             }
           ]
         },
@@ -1506,7 +1728,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "detrended_file"
+              "argument": {
+                "name": "detrended_file"
+              }
             }
           ]
         }

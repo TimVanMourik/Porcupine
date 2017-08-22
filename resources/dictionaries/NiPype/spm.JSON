@@ -9,12 +9,14 @@
       "title": {
         "name": "utils.Analyze2nii",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/utils.html#analyze2nii",
-        "import": "import nipype.interfaces.spm as spm",
         "code": [
           {
             "language": "NiPype",
             "comment": "",
-            "argument": "utils.Analyze2nii()"
+            "argument": {
+              "name": "utils.Analyze2nii()",
+              "import": "import nipype.interfaces.spm as spm"
+            }
           }
         ]
       },
@@ -28,7 +30,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "analyze_file"
+              "argument": {
+                "name": "analyze_file"
+              }
             }
           ]
         },
@@ -41,7 +45,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -54,7 +60,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -67,7 +75,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -80,7 +90,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -93,7 +105,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -106,7 +120,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -119,7 +135,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "nifti_file"
+              "argument": {
+                "name": "nifti_file"
+              }
             }
           ]
         },
@@ -132,7 +150,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -145,7 +165,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -158,7 +180,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -171,7 +195,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -184,7 +210,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -197,7 +225,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         }
@@ -212,12 +242,14 @@
       "title": {
         "name": "utils.ApplyInverseDeformation",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/utils.html#applyinversedeformation",
-        "import": "import nipype.interfaces.spm as spm",
         "code": [
           {
             "language": "NiPype",
             "comment": "Uses spm to apply inverse deformation stored in a .mat file or a",
-            "argument": "utils.ApplyInverseDeformation()"
+            "argument": {
+              "name": "utils.ApplyInverseDeformation()",
+              "import": "import nipype.interfaces.spm as spm"
+            }
           }
         ]
       },
@@ -231,7 +263,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": {
+                "name": "in_files"
+              }
             }
           ]
         },
@@ -244,7 +278,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "target"
+              "argument": {
+                "name": "target"
+              }
             }
           ]
         },
@@ -257,7 +293,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "deformation"
+              "argument": {
+                "name": "deformation"
+              }
             }
           ]
         },
@@ -270,7 +308,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "deformation_field"
+              "argument": {
+                "name": "deformation_field"
+              }
             }
           ]
         },
@@ -283,7 +323,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "interpolation"
+              "argument": {
+                "name": "interpolation"
+              }
             }
           ]
         },
@@ -296,7 +338,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "bounding_box"
+              "argument": {
+                "name": "bounding_box"
+              }
             }
           ]
         },
@@ -309,7 +353,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "voxel_sizes"
+              "argument": {
+                "name": "voxel_sizes"
+              }
             }
           ]
         },
@@ -322,7 +368,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -335,7 +383,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -348,7 +398,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -361,7 +413,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -374,7 +428,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -387,7 +443,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -400,7 +458,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_files"
+              "argument": {
+                "name": "out_files"
+              }
             }
           ]
         }
@@ -415,12 +475,14 @@
       "title": {
         "name": "utils.ApplyTransform",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/utils.html#applytransform",
-        "import": "import nipype.interfaces.spm as spm",
         "code": [
           {
             "language": "NiPype",
             "comment": "Uses SPM to apply transform stored in a .mat file to given file",
-            "argument": "utils.ApplyTransform()"
+            "argument": {
+              "name": "utils.ApplyTransform()",
+              "import": "import nipype.interfaces.spm as spm"
+            }
           }
         ]
       },
@@ -434,7 +496,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -447,7 +511,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mat"
+              "argument": {
+                "name": "mat"
+              }
             }
           ]
         },
@@ -460,7 +526,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         },
@@ -473,7 +541,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -486,7 +556,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -499,7 +571,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -512,7 +586,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -525,7 +601,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -538,7 +616,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -551,7 +631,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         }
@@ -566,12 +648,14 @@
       "title": {
         "name": "utils.CalcCoregAffine",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/utils.html#calccoregaffine",
-        "import": "import nipype.interfaces.spm as spm",
         "code": [
           {
             "language": "NiPype",
             "comment": "Uses SPM (spm_coreg) to calculate the transform mapping",
-            "argument": "utils.CalcCoregAffine()"
+            "argument": {
+              "name": "utils.CalcCoregAffine()",
+              "import": "import nipype.interfaces.spm as spm"
+            }
           }
         ]
       },
@@ -585,7 +669,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "target"
+              "argument": {
+                "name": "target"
+              }
             }
           ]
         },
@@ -598,7 +684,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "moving"
+              "argument": {
+                "name": "moving"
+              }
             }
           ]
         },
@@ -611,7 +699,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mat"
+              "argument": {
+                "name": "mat"
+              }
             }
           ]
         },
@@ -624,7 +714,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "invmat"
+              "argument": {
+                "name": "invmat"
+              }
             }
           ]
         },
@@ -637,7 +729,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -650,7 +744,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -663,7 +759,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -676,7 +774,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -689,7 +789,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -702,7 +804,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -715,7 +819,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mat"
+              "argument": {
+                "name": "mat"
+              }
             }
           ]
         },
@@ -728,7 +834,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "invmat"
+              "argument": {
+                "name": "invmat"
+              }
             }
           ]
         }
@@ -743,12 +851,14 @@
       "title": {
         "name": "preprocess.Coregister",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/preprocess.html#coregister",
-        "import": "import nipype.interfaces.spm as spm",
         "code": [
           {
             "language": "NiPype",
             "comment": "Use spm_coreg for estimating cross-modality rigid body alignment",
-            "argument": "preprocess.Coregister()"
+            "argument": {
+              "name": "preprocess.Coregister()",
+              "import": "import nipype.interfaces.spm as spm"
+            }
           }
         ]
       },
@@ -762,7 +872,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "target"
+              "argument": {
+                "name": "target"
+              }
             }
           ]
         },
@@ -775,7 +887,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "source"
+              "argument": {
+                "name": "source"
+              }
             }
           ]
         },
@@ -788,7 +902,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "jobtype"
+              "argument": {
+                "name": "jobtype"
+              }
             }
           ]
         },
@@ -801,7 +917,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "apply_to_files"
+              "argument": {
+                "name": "apply_to_files"
+              }
             }
           ]
         },
@@ -814,7 +932,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "cost_function"
+              "argument": {
+                "name": "cost_function"
+              }
             }
           ]
         },
@@ -827,7 +947,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "fwhm"
+              "argument": {
+                "name": "fwhm"
+              }
             }
           ]
         },
@@ -840,7 +962,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "separation"
+              "argument": {
+                "name": "separation"
+              }
             }
           ]
         },
@@ -853,7 +977,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "tolerance"
+              "argument": {
+                "name": "tolerance"
+              }
             }
           ]
         },
@@ -866,7 +992,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "write_interp"
+              "argument": {
+                "name": "write_interp"
+              }
             }
           ]
         },
@@ -879,7 +1007,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "write_wrap"
+              "argument": {
+                "name": "write_wrap"
+              }
             }
           ]
         },
@@ -892,7 +1022,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "write_mask"
+              "argument": {
+                "name": "write_mask"
+              }
             }
           ]
         },
@@ -905,7 +1037,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_prefix"
+              "argument": {
+                "name": "out_prefix"
+              }
             }
           ]
         },
@@ -918,7 +1052,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -931,7 +1067,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -944,7 +1082,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -957,7 +1097,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -970,7 +1112,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -983,7 +1127,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -996,7 +1142,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "coregistered_source"
+              "argument": {
+                "name": "coregistered_source"
+              }
             }
           ]
         },
@@ -1009,7 +1157,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "coregistered_files"
+              "argument": {
+                "name": "coregistered_files"
+              }
             }
           ]
         }
@@ -1024,12 +1174,14 @@
       "title": {
         "name": "preprocess.CreateWarped",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/preprocess.html#createwarped",
-        "import": "import nipype.interfaces.spm as spm",
         "code": [
           {
             "language": "NiPype",
             "comment": "Apply a flow field estimated by DARTEL to create warped images",
-            "argument": "preprocess.CreateWarped()"
+            "argument": {
+              "name": "preprocess.CreateWarped()",
+              "import": "import nipype.interfaces.spm as spm"
+            }
           }
         ]
       },
@@ -1043,7 +1195,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "image_files"
+              "argument": {
+                "name": "image_files"
+              }
             }
           ]
         },
@@ -1056,7 +1210,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "flowfield_files"
+              "argument": {
+                "name": "flowfield_files"
+              }
             }
           ]
         },
@@ -1069,7 +1225,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "iterations"
+              "argument": {
+                "name": "iterations"
+              }
             }
           ]
         },
@@ -1082,7 +1240,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "interp"
+              "argument": {
+                "name": "interp"
+              }
             }
           ]
         },
@@ -1095,7 +1255,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "modulate"
+              "argument": {
+                "name": "modulate"
+              }
             }
           ]
         },
@@ -1108,7 +1270,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -1121,7 +1285,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -1134,7 +1300,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -1147,7 +1315,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -1160,7 +1330,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -1173,7 +1345,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -1186,7 +1360,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "warped_files"
+              "argument": {
+                "name": "warped_files"
+              }
             }
           ]
         }
@@ -1201,12 +1377,14 @@
       "title": {
         "name": "preprocess.DARTEL",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/preprocess.html#dartel",
-        "import": "import nipype.interfaces.spm as spm",
         "code": [
           {
             "language": "NiPype",
             "comment": "Use spm DARTEL to create a template and flow fields",
-            "argument": "preprocess.DARTEL()"
+            "argument": {
+              "name": "preprocess.DARTEL()",
+              "import": "import nipype.interfaces.spm as spm"
+            }
           }
         ]
       },
@@ -1220,7 +1398,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "image_files"
+              "argument": {
+                "name": "image_files"
+              }
             }
           ]
         },
@@ -1233,7 +1413,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "template_prefix"
+              "argument": {
+                "name": "template_prefix"
+              }
             }
           ]
         },
@@ -1246,7 +1428,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "regularization_form"
+              "argument": {
+                "name": "regularization_form"
+              }
             }
           ]
         },
@@ -1259,7 +1443,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "iteration_parameters"
+              "argument": {
+                "name": "iteration_parameters"
+              }
             }
           ]
         },
@@ -1272,7 +1458,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "optimization_parameters"
+              "argument": {
+                "name": "optimization_parameters"
+              }
             }
           ]
         },
@@ -1285,7 +1473,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -1298,7 +1488,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -1311,7 +1503,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -1324,7 +1518,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -1337,7 +1533,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -1350,7 +1548,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -1363,7 +1563,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "final_template_file"
+              "argument": {
+                "name": "final_template_file"
+              }
             }
           ]
         },
@@ -1376,7 +1578,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "template_files"
+              "argument": {
+                "name": "template_files"
+              }
             }
           ]
         },
@@ -1389,7 +1593,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "dartel_flow_fields"
+              "argument": {
+                "name": "dartel_flow_fields"
+              }
             }
           ]
         }
@@ -1404,12 +1610,14 @@
       "title": {
         "name": "preprocess.DARTELNorm2MNI",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/preprocess.html#dartelnorm2mni",
-        "import": "import nipype.interfaces.spm as spm",
         "code": [
           {
             "language": "NiPype",
             "comment": "Use spm DARTEL to normalize data to MNI space",
-            "argument": "preprocess.DARTELNorm2MNI()"
+            "argument": {
+              "name": "preprocess.DARTELNorm2MNI()",
+              "import": "import nipype.interfaces.spm as spm"
+            }
           }
         ]
       },
@@ -1423,7 +1631,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "template_file"
+              "argument": {
+                "name": "template_file"
+              }
             }
           ]
         },
@@ -1436,7 +1646,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "flowfield_files"
+              "argument": {
+                "name": "flowfield_files"
+              }
             }
           ]
         },
@@ -1449,7 +1661,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "apply_to_files"
+              "argument": {
+                "name": "apply_to_files"
+              }
             }
           ]
         },
@@ -1462,7 +1676,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "voxel_size"
+              "argument": {
+                "name": "voxel_size"
+              }
             }
           ]
         },
@@ -1475,7 +1691,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "bounding_box"
+              "argument": {
+                "name": "bounding_box"
+              }
             }
           ]
         },
@@ -1488,7 +1706,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "modulate"
+              "argument": {
+                "name": "modulate"
+              }
             }
           ]
         },
@@ -1501,7 +1721,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "fwhm"
+              "argument": {
+                "name": "fwhm"
+              }
             }
           ]
         },
@@ -1514,7 +1736,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -1527,7 +1751,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -1540,7 +1766,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -1553,7 +1781,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -1566,7 +1796,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -1579,7 +1811,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -1592,7 +1826,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "normalized_files"
+              "argument": {
+                "name": "normalized_files"
+              }
             }
           ]
         },
@@ -1605,7 +1841,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "normalization_parameter_file"
+              "argument": {
+                "name": "normalization_parameter_file"
+              }
             }
           ]
         }
@@ -1620,12 +1858,14 @@
       "title": {
         "name": "utils.DicomImport",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/utils.html#dicomimport",
-        "import": "import nipype.interfaces.spm as spm",
         "code": [
           {
             "language": "NiPype",
             "comment": "Uses spm to convert DICOM files to nii or img+hdr.",
-            "argument": "utils.DicomImport()"
+            "argument": {
+              "name": "utils.DicomImport()",
+              "import": "import nipype.interfaces.spm as spm"
+            }
           }
         ]
       },
@@ -1639,7 +1879,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": {
+                "name": "in_files"
+              }
             }
           ]
         },
@@ -1652,7 +1894,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "output_dir_struct"
+              "argument": {
+                "name": "output_dir_struct"
+              }
             }
           ]
         },
@@ -1665,7 +1909,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "output_dir"
+              "argument": {
+                "name": "output_dir"
+              }
             }
           ]
         },
@@ -1678,7 +1924,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "format"
+              "argument": {
+                "name": "format"
+              }
             }
           ]
         },
@@ -1691,7 +1939,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "icedims"
+              "argument": {
+                "name": "icedims"
+              }
             }
           ]
         },
@@ -1704,7 +1954,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -1717,7 +1969,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -1730,7 +1984,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -1743,7 +1999,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -1756,7 +2014,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -1769,7 +2029,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -1782,7 +2044,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_files"
+              "argument": {
+                "name": "out_files"
+              }
             }
           ]
         }
@@ -1797,12 +2061,14 @@
       "title": {
         "name": "model.EstimateContrast",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/model.html#estimatecontrast",
-        "import": "import nipype.interfaces.spm as spm",
         "code": [
           {
             "language": "NiPype",
             "comment": "Use spm_contrasts to estimate contrasts of interest",
-            "argument": "model.EstimateContrast()"
+            "argument": {
+              "name": "model.EstimateContrast()",
+              "import": "import nipype.interfaces.spm as spm"
+            }
           }
         ]
       },
@@ -1816,7 +2082,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "spm_mat_file"
+              "argument": {
+                "name": "spm_mat_file"
+              }
             }
           ]
         },
@@ -1829,7 +2097,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "contrasts"
+              "argument": {
+                "name": "contrasts"
+              }
             }
           ]
         },
@@ -1842,7 +2112,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "beta_images"
+              "argument": {
+                "name": "beta_images"
+              }
             }
           ]
         },
@@ -1855,7 +2127,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "residual_image"
+              "argument": {
+                "name": "residual_image"
+              }
             }
           ]
         },
@@ -1868,7 +2142,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_derivs"
+              "argument": {
+                "name": "use_derivs"
+              }
             }
           ]
         },
@@ -1881,7 +2157,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "group_contrast"
+              "argument": {
+                "name": "group_contrast"
+              }
             }
           ]
         },
@@ -1894,7 +2172,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -1907,7 +2187,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -1920,7 +2202,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -1933,7 +2217,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -1946,7 +2232,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -1959,7 +2247,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -1972,7 +2262,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "con_images"
+              "argument": {
+                "name": "con_images"
+              }
             }
           ]
         },
@@ -1985,7 +2277,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "spmT_images"
+              "argument": {
+                "name": "spmT_images"
+              }
             }
           ]
         },
@@ -1998,7 +2292,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ess_images"
+              "argument": {
+                "name": "ess_images"
+              }
             }
           ]
         },
@@ -2011,7 +2307,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "spmF_images"
+              "argument": {
+                "name": "spmF_images"
+              }
             }
           ]
         },
@@ -2024,7 +2322,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "spm_mat_file"
+              "argument": {
+                "name": "spm_mat_file"
+              }
             }
           ]
         }
@@ -2039,12 +2339,14 @@
       "title": {
         "name": "model.EstimateModel",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/model.html#estimatemodel",
-        "import": "import nipype.interfaces.spm as spm",
         "code": [
           {
             "language": "NiPype",
             "comment": "Use spm_spm to estimate the parameters of a model",
-            "argument": "model.EstimateModel()"
+            "argument": {
+              "name": "model.EstimateModel()",
+              "import": "import nipype.interfaces.spm as spm"
+            }
           }
         ]
       },
@@ -2058,7 +2360,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "spm_mat_file"
+              "argument": {
+                "name": "spm_mat_file"
+              }
             }
           ]
         },
@@ -2071,7 +2375,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "estimation_method"
+              "argument": {
+                "name": "estimation_method"
+              }
             }
           ]
         },
@@ -2084,7 +2390,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "write_residuals"
+              "argument": {
+                "name": "write_residuals"
+              }
             }
           ]
         },
@@ -2097,7 +2405,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "flags"
+              "argument": {
+                "name": "flags"
+              }
             }
           ]
         },
@@ -2110,7 +2420,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -2123,7 +2435,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -2136,7 +2450,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -2149,7 +2465,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -2162,7 +2480,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -2175,7 +2495,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -2188,7 +2510,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_image"
+              "argument": {
+                "name": "mask_image"
+              }
             }
           ]
         },
@@ -2201,7 +2525,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "beta_images"
+              "argument": {
+                "name": "beta_images"
+              }
             }
           ]
         },
@@ -2214,7 +2540,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "residual_image"
+              "argument": {
+                "name": "residual_image"
+              }
             }
           ]
         },
@@ -2227,7 +2555,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "residual_images"
+              "argument": {
+                "name": "residual_images"
+              }
             }
           ]
         },
@@ -2240,7 +2570,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "RPVimage"
+              "argument": {
+                "name": "RPVimage"
+              }
             }
           ]
         },
@@ -2253,7 +2585,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "spm_mat_file"
+              "argument": {
+                "name": "spm_mat_file"
+              }
             }
           ]
         },
@@ -2266,7 +2600,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "labels"
+              "argument": {
+                "name": "labels"
+              }
             }
           ]
         },
@@ -2279,7 +2615,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "SDerror"
+              "argument": {
+                "name": "SDerror"
+              }
             }
           ]
         },
@@ -2292,7 +2630,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ARcoef"
+              "argument": {
+                "name": "ARcoef"
+              }
             }
           ]
         },
@@ -2305,7 +2645,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "Cbetas"
+              "argument": {
+                "name": "Cbetas"
+              }
             }
           ]
         },
@@ -2318,7 +2660,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "SDbetas"
+              "argument": {
+                "name": "SDbetas"
+              }
             }
           ]
         }
@@ -2333,12 +2677,14 @@
       "title": {
         "name": "model.Level1Design",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/model.html#level1design",
-        "import": "import nipype.interfaces.spm as spm",
         "code": [
           {
             "language": "NiPype",
             "comment": "Generate an SPM design matrix",
-            "argument": "model.Level1Design()"
+            "argument": {
+              "name": "model.Level1Design()",
+              "import": "import nipype.interfaces.spm as spm"
+            }
           }
         ]
       },
@@ -2352,7 +2698,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "timing_units"
+              "argument": {
+                "name": "timing_units"
+              }
             }
           ]
         },
@@ -2365,7 +2713,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "interscan_interval"
+              "argument": {
+                "name": "interscan_interval"
+              }
             }
           ]
         },
@@ -2378,7 +2728,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "session_info"
+              "argument": {
+                "name": "session_info"
+              }
             }
           ]
         },
@@ -2391,7 +2743,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "bases"
+              "argument": {
+                "name": "bases"
+              }
             }
           ]
         },
@@ -2404,7 +2758,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "spm_mat_dir"
+              "argument": {
+                "name": "spm_mat_dir"
+              }
             }
           ]
         },
@@ -2417,7 +2773,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "microtime_resolution"
+              "argument": {
+                "name": "microtime_resolution"
+              }
             }
           ]
         },
@@ -2430,7 +2788,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "microtime_onset"
+              "argument": {
+                "name": "microtime_onset"
+              }
             }
           ]
         },
@@ -2443,7 +2803,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "factor_info"
+              "argument": {
+                "name": "factor_info"
+              }
             }
           ]
         },
@@ -2456,7 +2818,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "volterra_expansion_order"
+              "argument": {
+                "name": "volterra_expansion_order"
+              }
             }
           ]
         },
@@ -2469,7 +2833,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "global_intensity_normalization"
+              "argument": {
+                "name": "global_intensity_normalization"
+              }
             }
           ]
         },
@@ -2482,7 +2848,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_image"
+              "argument": {
+                "name": "mask_image"
+              }
             }
           ]
         },
@@ -2495,7 +2863,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_threshold"
+              "argument": {
+                "name": "mask_threshold"
+              }
             }
           ]
         },
@@ -2508,7 +2878,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "model_serial_correlations"
+              "argument": {
+                "name": "model_serial_correlations"
+              }
             }
           ]
         },
@@ -2521,7 +2893,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -2534,7 +2908,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -2547,7 +2923,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -2560,7 +2938,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -2573,7 +2953,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -2586,7 +2968,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -2599,7 +2983,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "spm_mat_file"
+              "argument": {
+                "name": "spm_mat_file"
+              }
             }
           ]
         }
@@ -2614,12 +3000,14 @@
       "title": {
         "name": "model.MultipleRegressionDesign",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/model.html#multipleregressiondesign",
-        "import": "import nipype.interfaces.spm as spm",
         "code": [
           {
             "language": "NiPype",
             "comment": "Create SPM design for multiple regression",
-            "argument": "model.MultipleRegressionDesign()"
+            "argument": {
+              "name": "model.MultipleRegressionDesign()",
+              "import": "import nipype.interfaces.spm as spm"
+            }
           }
         ]
       },
@@ -2633,7 +3021,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": {
+                "name": "in_files"
+              }
             }
           ]
         },
@@ -2646,7 +3036,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "include_intercept"
+              "argument": {
+                "name": "include_intercept"
+              }
             }
           ]
         },
@@ -2659,7 +3051,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "user_covariates"
+              "argument": {
+                "name": "user_covariates"
+              }
             }
           ]
         },
@@ -2672,7 +3066,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "spm_mat_dir"
+              "argument": {
+                "name": "spm_mat_dir"
+              }
             }
           ]
         },
@@ -2685,7 +3081,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "covariates"
+              "argument": {
+                "name": "covariates"
+              }
             }
           ]
         },
@@ -2698,7 +3096,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "threshold_mask_none"
+              "argument": {
+                "name": "threshold_mask_none"
+              }
             }
           ]
         },
@@ -2711,7 +3111,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "threshold_mask_absolute"
+              "argument": {
+                "name": "threshold_mask_absolute"
+              }
             }
           ]
         },
@@ -2724,7 +3126,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "threshold_mask_relative"
+              "argument": {
+                "name": "threshold_mask_relative"
+              }
             }
           ]
         },
@@ -2737,7 +3141,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_implicit_threshold"
+              "argument": {
+                "name": "use_implicit_threshold"
+              }
             }
           ]
         },
@@ -2750,7 +3156,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "explicit_mask_file"
+              "argument": {
+                "name": "explicit_mask_file"
+              }
             }
           ]
         },
@@ -2763,7 +3171,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "global_calc_omit"
+              "argument": {
+                "name": "global_calc_omit"
+              }
             }
           ]
         },
@@ -2776,7 +3186,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "global_calc_mean"
+              "argument": {
+                "name": "global_calc_mean"
+              }
             }
           ]
         },
@@ -2789,7 +3201,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "global_calc_values"
+              "argument": {
+                "name": "global_calc_values"
+              }
             }
           ]
         },
@@ -2802,7 +3216,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "no_grand_mean_scaling"
+              "argument": {
+                "name": "no_grand_mean_scaling"
+              }
             }
           ]
         },
@@ -2815,7 +3231,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "global_normalization"
+              "argument": {
+                "name": "global_normalization"
+              }
             }
           ]
         },
@@ -2828,7 +3246,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -2841,7 +3261,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -2854,7 +3276,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -2867,7 +3291,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -2880,7 +3306,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -2893,7 +3321,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -2906,7 +3336,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "spm_mat_file"
+              "argument": {
+                "name": "spm_mat_file"
+              }
             }
           ]
         }
@@ -2921,12 +3353,14 @@
       "title": {
         "name": "preprocess.NewSegment",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/preprocess.html#newsegment",
-        "import": "import nipype.interfaces.spm as spm",
         "code": [
           {
             "language": "NiPype",
             "comment": "Use spm_preproc8 (New Segment) to separate structural images into",
-            "argument": "preprocess.NewSegment()"
+            "argument": {
+              "name": "preprocess.NewSegment()",
+              "import": "import nipype.interfaces.spm as spm"
+            }
           }
         ]
       },
@@ -2940,7 +3374,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "channel_files"
+              "argument": {
+                "name": "channel_files"
+              }
             }
           ]
         },
@@ -2953,7 +3389,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "channel_info"
+              "argument": {
+                "name": "channel_info"
+              }
             }
           ]
         },
@@ -2966,7 +3404,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "tissues"
+              "argument": {
+                "name": "tissues"
+              }
             }
           ]
         },
@@ -2979,7 +3419,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "affine_regularization"
+              "argument": {
+                "name": "affine_regularization"
+              }
             }
           ]
         },
@@ -2992,7 +3434,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "warping_regularization"
+              "argument": {
+                "name": "warping_regularization"
+              }
             }
           ]
         },
@@ -3005,7 +3449,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "sampling_distance"
+              "argument": {
+                "name": "sampling_distance"
+              }
             }
           ]
         },
@@ -3018,7 +3464,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "write_deformation_fields"
+              "argument": {
+                "name": "write_deformation_fields"
+              }
             }
           ]
         },
@@ -3031,7 +3479,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -3044,7 +3494,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -3057,7 +3509,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -3070,7 +3524,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -3083,7 +3539,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -3096,7 +3554,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -3109,7 +3569,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "native_class_images"
+              "argument": {
+                "name": "native_class_images"
+              }
             }
           ]
         },
@@ -3122,7 +3584,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "dartel_input_images"
+              "argument": {
+                "name": "dartel_input_images"
+              }
             }
           ]
         },
@@ -3135,7 +3599,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "normalized_class_images"
+              "argument": {
+                "name": "normalized_class_images"
+              }
             }
           ]
         },
@@ -3148,7 +3614,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "modulated_class_images"
+              "argument": {
+                "name": "modulated_class_images"
+              }
             }
           ]
         },
@@ -3161,7 +3629,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "transformation_mat"
+              "argument": {
+                "name": "transformation_mat"
+              }
             }
           ]
         },
@@ -3174,7 +3644,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "bias_corrected_images"
+              "argument": {
+                "name": "bias_corrected_images"
+              }
             }
           ]
         },
@@ -3187,7 +3659,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "bias_field_images"
+              "argument": {
+                "name": "bias_field_images"
+              }
             }
           ]
         },
@@ -3200,7 +3674,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "forward_deformation_field"
+              "argument": {
+                "name": "forward_deformation_field"
+              }
             }
           ]
         },
@@ -3213,7 +3689,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inverse_deformation_field"
+              "argument": {
+                "name": "inverse_deformation_field"
+              }
             }
           ]
         }
@@ -3228,12 +3706,14 @@
       "title": {
         "name": "preprocess.Normalize",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/preprocess.html#normalize",
-        "import": "import nipype.interfaces.spm as spm",
         "code": [
           {
             "language": "NiPype",
             "comment": "use spm_normalise for warping an image to a template",
-            "argument": "preprocess.Normalize()"
+            "argument": {
+              "name": "preprocess.Normalize()",
+              "import": "import nipype.interfaces.spm as spm"
+            }
           }
         ]
       },
@@ -3247,7 +3727,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "template"
+              "argument": {
+                "name": "template"
+              }
             }
           ]
         },
@@ -3260,7 +3742,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "source"
+              "argument": {
+                "name": "source"
+              }
             }
           ]
         },
@@ -3273,7 +3757,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "parameter_file"
+              "argument": {
+                "name": "parameter_file"
+              }
             }
           ]
         },
@@ -3286,7 +3772,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "jobtype"
+              "argument": {
+                "name": "jobtype"
+              }
             }
           ]
         },
@@ -3299,7 +3787,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "apply_to_files"
+              "argument": {
+                "name": "apply_to_files"
+              }
             }
           ]
         },
@@ -3312,7 +3802,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "source_weight"
+              "argument": {
+                "name": "source_weight"
+              }
             }
           ]
         },
@@ -3325,7 +3817,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "template_weight"
+              "argument": {
+                "name": "template_weight"
+              }
             }
           ]
         },
@@ -3338,7 +3832,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "source_image_smoothing"
+              "argument": {
+                "name": "source_image_smoothing"
+              }
             }
           ]
         },
@@ -3351,7 +3847,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "template_image_smoothing"
+              "argument": {
+                "name": "template_image_smoothing"
+              }
             }
           ]
         },
@@ -3364,7 +3862,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "affine_regularization_type"
+              "argument": {
+                "name": "affine_regularization_type"
+              }
             }
           ]
         },
@@ -3377,7 +3877,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "DCT_period_cutoff"
+              "argument": {
+                "name": "DCT_period_cutoff"
+              }
             }
           ]
         },
@@ -3390,7 +3892,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "nonlinear_iterations"
+              "argument": {
+                "name": "nonlinear_iterations"
+              }
             }
           ]
         },
@@ -3403,7 +3907,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "nonlinear_regularization"
+              "argument": {
+                "name": "nonlinear_regularization"
+              }
             }
           ]
         },
@@ -3416,7 +3922,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "write_preserve"
+              "argument": {
+                "name": "write_preserve"
+              }
             }
           ]
         },
@@ -3429,7 +3937,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "write_bounding_box"
+              "argument": {
+                "name": "write_bounding_box"
+              }
             }
           ]
         },
@@ -3442,7 +3952,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "write_voxel_sizes"
+              "argument": {
+                "name": "write_voxel_sizes"
+              }
             }
           ]
         },
@@ -3455,7 +3967,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "write_interp"
+              "argument": {
+                "name": "write_interp"
+              }
             }
           ]
         },
@@ -3468,7 +3982,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "write_wrap"
+              "argument": {
+                "name": "write_wrap"
+              }
             }
           ]
         },
@@ -3481,7 +3997,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_prefix"
+              "argument": {
+                "name": "out_prefix"
+              }
             }
           ]
         },
@@ -3494,7 +4012,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -3507,7 +4027,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -3520,7 +4042,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -3533,7 +4057,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -3546,7 +4072,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -3559,7 +4087,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -3572,7 +4102,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "normalization_parameters"
+              "argument": {
+                "name": "normalization_parameters"
+              }
             }
           ]
         },
@@ -3585,7 +4117,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "normalized_source"
+              "argument": {
+                "name": "normalized_source"
+              }
             }
           ]
         },
@@ -3598,7 +4132,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "normalized_files"
+              "argument": {
+                "name": "normalized_files"
+              }
             }
           ]
         }
@@ -3613,12 +4149,14 @@
       "title": {
         "name": "preprocess.Normalize12",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/preprocess.html#normalize12",
-        "import": "import nipype.interfaces.spm as spm",
         "code": [
           {
             "language": "NiPype",
             "comment": "uses SPM12's new Normalise routine for warping an image to a template.",
-            "argument": "preprocess.Normalize12()"
+            "argument": {
+              "name": "preprocess.Normalize12()",
+              "import": "import nipype.interfaces.spm as spm"
+            }
           }
         ]
       },
@@ -3632,7 +4170,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "image_to_align"
+              "argument": {
+                "name": "image_to_align"
+              }
             }
           ]
         },
@@ -3645,7 +4185,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "deformation_file"
+              "argument": {
+                "name": "deformation_file"
+              }
             }
           ]
         },
@@ -3658,7 +4200,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "apply_to_files"
+              "argument": {
+                "name": "apply_to_files"
+              }
             }
           ]
         },
@@ -3671,7 +4215,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "jobtype"
+              "argument": {
+                "name": "jobtype"
+              }
             }
           ]
         },
@@ -3684,7 +4230,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "bias_regularization"
+              "argument": {
+                "name": "bias_regularization"
+              }
             }
           ]
         },
@@ -3697,7 +4245,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "bias_fwhm"
+              "argument": {
+                "name": "bias_fwhm"
+              }
             }
           ]
         },
@@ -3710,7 +4260,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "tpm"
+              "argument": {
+                "name": "tpm"
+              }
             }
           ]
         },
@@ -3723,7 +4275,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "affine_regularization_type"
+              "argument": {
+                "name": "affine_regularization_type"
+              }
             }
           ]
         },
@@ -3736,7 +4290,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "warping_regularization"
+              "argument": {
+                "name": "warping_regularization"
+              }
             }
           ]
         },
@@ -3749,7 +4305,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "smoothness"
+              "argument": {
+                "name": "smoothness"
+              }
             }
           ]
         },
@@ -3762,7 +4320,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "sampling_distance"
+              "argument": {
+                "name": "sampling_distance"
+              }
             }
           ]
         },
@@ -3775,7 +4335,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "write_bounding_box"
+              "argument": {
+                "name": "write_bounding_box"
+              }
             }
           ]
         },
@@ -3788,7 +4350,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "write_voxel_sizes"
+              "argument": {
+                "name": "write_voxel_sizes"
+              }
             }
           ]
         },
@@ -3801,7 +4365,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "write_interp"
+              "argument": {
+                "name": "write_interp"
+              }
             }
           ]
         },
@@ -3814,7 +4380,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_prefix"
+              "argument": {
+                "name": "out_prefix"
+              }
             }
           ]
         },
@@ -3827,7 +4395,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -3840,7 +4410,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -3853,7 +4425,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -3866,7 +4440,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -3879,7 +4455,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -3892,7 +4470,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -3905,7 +4485,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "deformation_field"
+              "argument": {
+                "name": "deformation_field"
+              }
             }
           ]
         },
@@ -3918,7 +4500,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "normalized_image"
+              "argument": {
+                "name": "normalized_image"
+              }
             }
           ]
         },
@@ -3931,7 +4515,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "normalized_files"
+              "argument": {
+                "name": "normalized_files"
+              }
             }
           ]
         }
@@ -3946,12 +4532,14 @@
       "title": {
         "name": "model.OneSampleTTestDesign",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/model.html#onesamplettestdesign",
-        "import": "import nipype.interfaces.spm as spm",
         "code": [
           {
             "language": "NiPype",
             "comment": "Create SPM design for one sample t-test",
-            "argument": "model.OneSampleTTestDesign()"
+            "argument": {
+              "name": "model.OneSampleTTestDesign()",
+              "import": "import nipype.interfaces.spm as spm"
+            }
           }
         ]
       },
@@ -3965,7 +4553,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": {
+                "name": "in_files"
+              }
             }
           ]
         },
@@ -3978,7 +4568,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "spm_mat_dir"
+              "argument": {
+                "name": "spm_mat_dir"
+              }
             }
           ]
         },
@@ -3991,7 +4583,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "covariates"
+              "argument": {
+                "name": "covariates"
+              }
             }
           ]
         },
@@ -4004,7 +4598,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "threshold_mask_none"
+              "argument": {
+                "name": "threshold_mask_none"
+              }
             }
           ]
         },
@@ -4017,7 +4613,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "threshold_mask_absolute"
+              "argument": {
+                "name": "threshold_mask_absolute"
+              }
             }
           ]
         },
@@ -4030,7 +4628,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "threshold_mask_relative"
+              "argument": {
+                "name": "threshold_mask_relative"
+              }
             }
           ]
         },
@@ -4043,7 +4643,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_implicit_threshold"
+              "argument": {
+                "name": "use_implicit_threshold"
+              }
             }
           ]
         },
@@ -4056,7 +4658,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "explicit_mask_file"
+              "argument": {
+                "name": "explicit_mask_file"
+              }
             }
           ]
         },
@@ -4069,7 +4673,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "global_calc_omit"
+              "argument": {
+                "name": "global_calc_omit"
+              }
             }
           ]
         },
@@ -4082,7 +4688,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "global_calc_mean"
+              "argument": {
+                "name": "global_calc_mean"
+              }
             }
           ]
         },
@@ -4095,7 +4703,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "global_calc_values"
+              "argument": {
+                "name": "global_calc_values"
+              }
             }
           ]
         },
@@ -4108,7 +4718,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "no_grand_mean_scaling"
+              "argument": {
+                "name": "no_grand_mean_scaling"
+              }
             }
           ]
         },
@@ -4121,7 +4733,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "global_normalization"
+              "argument": {
+                "name": "global_normalization"
+              }
             }
           ]
         },
@@ -4134,7 +4748,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -4147,7 +4763,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -4160,7 +4778,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -4173,7 +4793,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -4186,7 +4808,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -4199,7 +4823,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -4212,7 +4838,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "spm_mat_file"
+              "argument": {
+                "name": "spm_mat_file"
+              }
             }
           ]
         }
@@ -4227,12 +4855,14 @@
       "title": {
         "name": "model.PairedTTestDesign",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/model.html#pairedttestdesign",
-        "import": "import nipype.interfaces.spm as spm",
         "code": [
           {
             "language": "NiPype",
             "comment": "Create SPM design for paired t-test",
-            "argument": "model.PairedTTestDesign()"
+            "argument": {
+              "name": "model.PairedTTestDesign()",
+              "import": "import nipype.interfaces.spm as spm"
+            }
           }
         ]
       },
@@ -4246,7 +4876,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paired_files"
+              "argument": {
+                "name": "paired_files"
+              }
             }
           ]
         },
@@ -4259,7 +4891,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "grand_mean_scaling"
+              "argument": {
+                "name": "grand_mean_scaling"
+              }
             }
           ]
         },
@@ -4272,7 +4906,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ancova"
+              "argument": {
+                "name": "ancova"
+              }
             }
           ]
         },
@@ -4285,7 +4921,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "spm_mat_dir"
+              "argument": {
+                "name": "spm_mat_dir"
+              }
             }
           ]
         },
@@ -4298,7 +4936,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "covariates"
+              "argument": {
+                "name": "covariates"
+              }
             }
           ]
         },
@@ -4311,7 +4951,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "threshold_mask_none"
+              "argument": {
+                "name": "threshold_mask_none"
+              }
             }
           ]
         },
@@ -4324,7 +4966,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "threshold_mask_absolute"
+              "argument": {
+                "name": "threshold_mask_absolute"
+              }
             }
           ]
         },
@@ -4337,7 +4981,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "threshold_mask_relative"
+              "argument": {
+                "name": "threshold_mask_relative"
+              }
             }
           ]
         },
@@ -4350,7 +4996,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_implicit_threshold"
+              "argument": {
+                "name": "use_implicit_threshold"
+              }
             }
           ]
         },
@@ -4363,7 +5011,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "explicit_mask_file"
+              "argument": {
+                "name": "explicit_mask_file"
+              }
             }
           ]
         },
@@ -4376,7 +5026,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "global_calc_omit"
+              "argument": {
+                "name": "global_calc_omit"
+              }
             }
           ]
         },
@@ -4389,7 +5041,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "global_calc_mean"
+              "argument": {
+                "name": "global_calc_mean"
+              }
             }
           ]
         },
@@ -4402,7 +5056,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "global_calc_values"
+              "argument": {
+                "name": "global_calc_values"
+              }
             }
           ]
         },
@@ -4415,7 +5071,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "no_grand_mean_scaling"
+              "argument": {
+                "name": "no_grand_mean_scaling"
+              }
             }
           ]
         },
@@ -4428,7 +5086,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "global_normalization"
+              "argument": {
+                "name": "global_normalization"
+              }
             }
           ]
         },
@@ -4441,7 +5101,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -4454,7 +5116,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -4467,7 +5131,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -4480,7 +5146,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -4493,7 +5161,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -4506,7 +5176,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -4519,7 +5191,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "spm_mat_file"
+              "argument": {
+                "name": "spm_mat_file"
+              }
             }
           ]
         }
@@ -4534,12 +5208,14 @@
       "title": {
         "name": "preprocess.Realign",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/preprocess.html#realign",
-        "import": "import nipype.interfaces.spm as spm",
         "code": [
           {
             "language": "NiPype",
             "comment": "Use spm_realign for estimating within modality rigid body alignment",
-            "argument": "preprocess.Realign()"
+            "argument": {
+              "name": "preprocess.Realign()",
+              "import": "import nipype.interfaces.spm as spm"
+            }
           }
         ]
       },
@@ -4553,7 +5229,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": {
+                "name": "in_files"
+              }
             }
           ]
         },
@@ -4566,7 +5244,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "jobtype"
+              "argument": {
+                "name": "jobtype"
+              }
             }
           ]
         },
@@ -4579,7 +5259,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "quality"
+              "argument": {
+                "name": "quality"
+              }
             }
           ]
         },
@@ -4592,7 +5274,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "fwhm"
+              "argument": {
+                "name": "fwhm"
+              }
             }
           ]
         },
@@ -4605,7 +5289,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "separation"
+              "argument": {
+                "name": "separation"
+              }
             }
           ]
         },
@@ -4618,7 +5304,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "register_to_mean"
+              "argument": {
+                "name": "register_to_mean"
+              }
             }
           ]
         },
@@ -4631,7 +5319,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "weight_img"
+              "argument": {
+                "name": "weight_img"
+              }
             }
           ]
         },
@@ -4644,7 +5334,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "interp"
+              "argument": {
+                "name": "interp"
+              }
             }
           ]
         },
@@ -4657,7 +5349,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "wrap"
+              "argument": {
+                "name": "wrap"
+              }
             }
           ]
         },
@@ -4670,7 +5364,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "write_which"
+              "argument": {
+                "name": "write_which"
+              }
             }
           ]
         },
@@ -4683,7 +5379,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "write_interp"
+              "argument": {
+                "name": "write_interp"
+              }
             }
           ]
         },
@@ -4696,7 +5394,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "write_wrap"
+              "argument": {
+                "name": "write_wrap"
+              }
             }
           ]
         },
@@ -4709,7 +5409,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "write_mask"
+              "argument": {
+                "name": "write_mask"
+              }
             }
           ]
         },
@@ -4722,7 +5424,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_prefix"
+              "argument": {
+                "name": "out_prefix"
+              }
             }
           ]
         },
@@ -4735,7 +5439,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -4748,7 +5454,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -4761,7 +5469,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -4774,7 +5484,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -4787,7 +5499,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -4800,7 +5514,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -4813,7 +5529,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mean_image"
+              "argument": {
+                "name": "mean_image"
+              }
             }
           ]
         },
@@ -4826,7 +5544,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "modified_in_files"
+              "argument": {
+                "name": "modified_in_files"
+              }
             }
           ]
         },
@@ -4839,7 +5559,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "realigned_files"
+              "argument": {
+                "name": "realigned_files"
+              }
             }
           ]
         },
@@ -4852,7 +5574,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "realignment_parameters"
+              "argument": {
+                "name": "realignment_parameters"
+              }
             }
           ]
         }
@@ -4867,12 +5591,14 @@
       "title": {
         "name": "utils.Reslice",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/utils.html#reslice",
-        "import": "import nipype.interfaces.spm as spm",
         "code": [
           {
             "language": "NiPype",
             "comment": "uses  spm_reslice to resample in_file into space of space_defining",
-            "argument": "utils.Reslice()"
+            "argument": {
+              "name": "utils.Reslice()",
+              "import": "import nipype.interfaces.spm as spm"
+            }
           }
         ]
       },
@@ -4886,7 +5612,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -4899,7 +5627,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "space_defining"
+              "argument": {
+                "name": "space_defining"
+              }
             }
           ]
         },
@@ -4912,7 +5642,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "interp"
+              "argument": {
+                "name": "interp"
+              }
             }
           ]
         },
@@ -4925,7 +5657,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         },
@@ -4938,7 +5672,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -4951,7 +5687,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -4964,7 +5702,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -4977,7 +5717,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -4990,7 +5732,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -5003,7 +5747,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -5016,7 +5762,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         }
@@ -5031,12 +5779,14 @@
       "title": {
         "name": "utils.ResliceToReference",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/utils.html#reslicetoreference",
-        "import": "import nipype.interfaces.spm as spm",
         "code": [
           {
             "language": "NiPype",
             "comment": "Uses spm to reslice a volume to a target image space or to a provided",
-            "argument": "utils.ResliceToReference()"
+            "argument": {
+              "name": "utils.ResliceToReference()",
+              "import": "import nipype.interfaces.spm as spm"
+            }
           }
         ]
       },
@@ -5050,7 +5800,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": {
+                "name": "in_files"
+              }
             }
           ]
         },
@@ -5063,7 +5815,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "target"
+              "argument": {
+                "name": "target"
+              }
             }
           ]
         },
@@ -5076,7 +5830,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "interpolation"
+              "argument": {
+                "name": "interpolation"
+              }
             }
           ]
         },
@@ -5089,7 +5845,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "bounding_box"
+              "argument": {
+                "name": "bounding_box"
+              }
             }
           ]
         },
@@ -5102,7 +5860,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "voxel_sizes"
+              "argument": {
+                "name": "voxel_sizes"
+              }
             }
           ]
         },
@@ -5115,7 +5875,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -5128,7 +5890,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -5141,7 +5905,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -5154,7 +5920,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -5167,7 +5935,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -5180,7 +5950,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -5193,7 +5965,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_files"
+              "argument": {
+                "name": "out_files"
+              }
             }
           ]
         }
@@ -5208,12 +5982,14 @@
       "title": {
         "name": "preprocess.Segment",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/preprocess.html#segment",
-        "import": "import nipype.interfaces.spm as spm",
         "code": [
           {
             "language": "NiPype",
             "comment": "use spm_segment to separate structural images into different",
-            "argument": "preprocess.Segment()"
+            "argument": {
+              "name": "preprocess.Segment()",
+              "import": "import nipype.interfaces.spm as spm"
+            }
           }
         ]
       },
@@ -5227,7 +6003,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "data"
+              "argument": {
+                "name": "data"
+              }
             }
           ]
         },
@@ -5240,7 +6018,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "gm_output_type"
+              "argument": {
+                "name": "gm_output_type"
+              }
             }
           ]
         },
@@ -5253,7 +6033,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "wm_output_type"
+              "argument": {
+                "name": "wm_output_type"
+              }
             }
           ]
         },
@@ -5266,7 +6048,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "csf_output_type"
+              "argument": {
+                "name": "csf_output_type"
+              }
             }
           ]
         },
@@ -5279,7 +6063,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "save_bias_corrected"
+              "argument": {
+                "name": "save_bias_corrected"
+              }
             }
           ]
         },
@@ -5292,7 +6078,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "clean_masks"
+              "argument": {
+                "name": "clean_masks"
+              }
             }
           ]
         },
@@ -5305,7 +6093,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "tissue_prob_maps"
+              "argument": {
+                "name": "tissue_prob_maps"
+              }
             }
           ]
         },
@@ -5318,7 +6108,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "gaussians_per_class"
+              "argument": {
+                "name": "gaussians_per_class"
+              }
             }
           ]
         },
@@ -5331,7 +6123,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "affine_regularization"
+              "argument": {
+                "name": "affine_regularization"
+              }
             }
           ]
         },
@@ -5344,7 +6138,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "warping_regularization"
+              "argument": {
+                "name": "warping_regularization"
+              }
             }
           ]
         },
@@ -5357,7 +6153,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "warp_frequency_cutoff"
+              "argument": {
+                "name": "warp_frequency_cutoff"
+              }
             }
           ]
         },
@@ -5370,7 +6168,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "bias_regularization"
+              "argument": {
+                "name": "bias_regularization"
+              }
             }
           ]
         },
@@ -5383,7 +6183,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "bias_fwhm"
+              "argument": {
+                "name": "bias_fwhm"
+              }
             }
           ]
         },
@@ -5396,7 +6198,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "sampling_distance"
+              "argument": {
+                "name": "sampling_distance"
+              }
             }
           ]
         },
@@ -5409,7 +6213,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_image"
+              "argument": {
+                "name": "mask_image"
+              }
             }
           ]
         },
@@ -5422,7 +6228,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -5435,7 +6243,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -5448,7 +6258,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -5461,7 +6273,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -5474,7 +6288,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -5487,7 +6303,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -5500,7 +6318,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "native_gm_image"
+              "argument": {
+                "name": "native_gm_image"
+              }
             }
           ]
         },
@@ -5513,7 +6333,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "normalized_gm_image"
+              "argument": {
+                "name": "normalized_gm_image"
+              }
             }
           ]
         },
@@ -5526,7 +6348,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "modulated_gm_image"
+              "argument": {
+                "name": "modulated_gm_image"
+              }
             }
           ]
         },
@@ -5539,7 +6363,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "native_wm_image"
+              "argument": {
+                "name": "native_wm_image"
+              }
             }
           ]
         },
@@ -5552,7 +6378,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "normalized_wm_image"
+              "argument": {
+                "name": "normalized_wm_image"
+              }
             }
           ]
         },
@@ -5565,7 +6393,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "modulated_wm_image"
+              "argument": {
+                "name": "modulated_wm_image"
+              }
             }
           ]
         },
@@ -5578,7 +6408,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "native_csf_image"
+              "argument": {
+                "name": "native_csf_image"
+              }
             }
           ]
         },
@@ -5591,7 +6423,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "normalized_csf_image"
+              "argument": {
+                "name": "normalized_csf_image"
+              }
             }
           ]
         },
@@ -5604,7 +6438,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "modulated_csf_image"
+              "argument": {
+                "name": "modulated_csf_image"
+              }
             }
           ]
         },
@@ -5617,7 +6453,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "modulated_input_image"
+              "argument": {
+                "name": "modulated_input_image"
+              }
             }
           ]
         },
@@ -5630,7 +6468,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "bias_corrected_image"
+              "argument": {
+                "name": "bias_corrected_image"
+              }
             }
           ]
         },
@@ -5643,7 +6483,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "transformation_mat"
+              "argument": {
+                "name": "transformation_mat"
+              }
             }
           ]
         },
@@ -5656,7 +6498,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inverse_transformation_mat"
+              "argument": {
+                "name": "inverse_transformation_mat"
+              }
             }
           ]
         }
@@ -5671,12 +6515,14 @@
       "title": {
         "name": "preprocess.SliceTiming",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/preprocess.html#slicetiming",
-        "import": "import nipype.interfaces.spm as spm",
         "code": [
           {
             "language": "NiPype",
             "comment": "Use spm to perform slice timing correction.",
-            "argument": "preprocess.SliceTiming()"
+            "argument": {
+              "name": "preprocess.SliceTiming()",
+              "import": "import nipype.interfaces.spm as spm"
+            }
           }
         ]
       },
@@ -5690,7 +6536,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": {
+                "name": "in_files"
+              }
             }
           ]
         },
@@ -5703,7 +6551,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "num_slices"
+              "argument": {
+                "name": "num_slices"
+              }
             }
           ]
         },
@@ -5716,7 +6566,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "time_repetition"
+              "argument": {
+                "name": "time_repetition"
+              }
             }
           ]
         },
@@ -5729,7 +6581,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "time_acquisition"
+              "argument": {
+                "name": "time_acquisition"
+              }
             }
           ]
         },
@@ -5742,7 +6596,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "slice_order"
+              "argument": {
+                "name": "slice_order"
+              }
             }
           ]
         },
@@ -5755,7 +6611,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ref_slice"
+              "argument": {
+                "name": "ref_slice"
+              }
             }
           ]
         },
@@ -5768,7 +6626,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_prefix"
+              "argument": {
+                "name": "out_prefix"
+              }
             }
           ]
         },
@@ -5781,7 +6641,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -5794,7 +6656,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -5807,7 +6671,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -5820,7 +6686,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -5833,7 +6701,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -5846,7 +6716,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -5859,7 +6731,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "timecorrected_files"
+              "argument": {
+                "name": "timecorrected_files"
+              }
             }
           ]
         }
@@ -5874,12 +6748,14 @@
       "title": {
         "name": "preprocess.Smooth",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/preprocess.html#smooth",
-        "import": "import nipype.interfaces.spm as spm",
         "code": [
           {
             "language": "NiPype",
             "comment": "Use spm_smooth for 3D Gaussian smoothing of image volumes.",
-            "argument": "preprocess.Smooth()"
+            "argument": {
+              "name": "preprocess.Smooth()",
+              "import": "import nipype.interfaces.spm as spm"
+            }
           }
         ]
       },
@@ -5893,7 +6769,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": {
+                "name": "in_files"
+              }
             }
           ]
         },
@@ -5906,7 +6784,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "fwhm"
+              "argument": {
+                "name": "fwhm"
+              }
             }
           ]
         },
@@ -5919,7 +6799,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "data_type"
+              "argument": {
+                "name": "data_type"
+              }
             }
           ]
         },
@@ -5932,7 +6814,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "implicit_masking"
+              "argument": {
+                "name": "implicit_masking"
+              }
             }
           ]
         },
@@ -5945,7 +6829,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_prefix"
+              "argument": {
+                "name": "out_prefix"
+              }
             }
           ]
         },
@@ -5958,7 +6844,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -5971,7 +6859,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -5984,7 +6874,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -5997,7 +6889,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -6010,7 +6904,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -6023,7 +6919,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -6036,7 +6934,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "smoothed_files"
+              "argument": {
+                "name": "smoothed_files"
+              }
             }
           ]
         }
@@ -6051,12 +6951,14 @@
       "title": {
         "name": "model.Threshold",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/model.html#threshold",
-        "import": "import nipype.interfaces.spm as spm",
         "code": [
           {
             "language": "NiPype",
             "comment": "Topological FDR thresholding based on cluster extent/size. Smoothness is",
-            "argument": "model.Threshold()"
+            "argument": {
+              "name": "model.Threshold()",
+              "import": "import nipype.interfaces.spm as spm"
+            }
           }
         ]
       },
@@ -6070,7 +6972,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "spm_mat_file"
+              "argument": {
+                "name": "spm_mat_file"
+              }
             }
           ]
         },
@@ -6083,7 +6987,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "stat_image"
+              "argument": {
+                "name": "stat_image"
+              }
             }
           ]
         },
@@ -6096,7 +7002,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "contrast_index"
+              "argument": {
+                "name": "contrast_index"
+              }
             }
           ]
         },
@@ -6109,7 +7017,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_fwe_correction"
+              "argument": {
+                "name": "use_fwe_correction"
+              }
             }
           ]
         },
@@ -6122,7 +7032,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_topo_fdr"
+              "argument": {
+                "name": "use_topo_fdr"
+              }
             }
           ]
         },
@@ -6135,7 +7047,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "height_threshold"
+              "argument": {
+                "name": "height_threshold"
+              }
             }
           ]
         },
@@ -6148,7 +7062,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "height_threshold_type"
+              "argument": {
+                "name": "height_threshold_type"
+              }
             }
           ]
         },
@@ -6161,7 +7077,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "extent_fdr_p_threshold"
+              "argument": {
+                "name": "extent_fdr_p_threshold"
+              }
             }
           ]
         },
@@ -6174,7 +7092,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "extent_threshold"
+              "argument": {
+                "name": "extent_threshold"
+              }
             }
           ]
         },
@@ -6187,7 +7107,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "force_activation"
+              "argument": {
+                "name": "force_activation"
+              }
             }
           ]
         },
@@ -6200,7 +7122,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -6213,7 +7137,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -6226,7 +7152,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -6239,7 +7167,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -6252,7 +7182,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -6265,7 +7197,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -6278,7 +7212,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "thresholded_map"
+              "argument": {
+                "name": "thresholded_map"
+              }
             }
           ]
         },
@@ -6291,7 +7227,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "n_clusters"
+              "argument": {
+                "name": "n_clusters"
+              }
             }
           ]
         },
@@ -6304,7 +7242,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "pre_topo_fdr_map"
+              "argument": {
+                "name": "pre_topo_fdr_map"
+              }
             }
           ]
         },
@@ -6317,7 +7257,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "pre_topo_n_clusters"
+              "argument": {
+                "name": "pre_topo_n_clusters"
+              }
             }
           ]
         },
@@ -6330,7 +7272,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "activation_forced"
+              "argument": {
+                "name": "activation_forced"
+              }
             }
           ]
         },
@@ -6343,7 +7287,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "cluster_forming_thr"
+              "argument": {
+                "name": "cluster_forming_thr"
+              }
             }
           ]
         }
@@ -6358,12 +7304,14 @@
       "title": {
         "name": "model.TwoSampleTTestDesign",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/model.html#twosamplettestdesign",
-        "import": "import nipype.interfaces.spm as spm",
         "code": [
           {
             "language": "NiPype",
             "comment": "Create SPM design for two sample t-test",
-            "argument": "model.TwoSampleTTestDesign()"
+            "argument": {
+              "name": "model.TwoSampleTTestDesign()",
+              "import": "import nipype.interfaces.spm as spm"
+            }
           }
         ]
       },
@@ -6377,7 +7325,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "group1_files"
+              "argument": {
+                "name": "group1_files"
+              }
             }
           ]
         },
@@ -6390,7 +7340,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "group2_files"
+              "argument": {
+                "name": "group2_files"
+              }
             }
           ]
         },
@@ -6403,7 +7355,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "dependent"
+              "argument": {
+                "name": "dependent"
+              }
             }
           ]
         },
@@ -6416,7 +7370,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "unequal_variance"
+              "argument": {
+                "name": "unequal_variance"
+              }
             }
           ]
         },
@@ -6429,7 +7385,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "spm_mat_dir"
+              "argument": {
+                "name": "spm_mat_dir"
+              }
             }
           ]
         },
@@ -6442,7 +7400,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "covariates"
+              "argument": {
+                "name": "covariates"
+              }
             }
           ]
         },
@@ -6455,7 +7415,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "threshold_mask_none"
+              "argument": {
+                "name": "threshold_mask_none"
+              }
             }
           ]
         },
@@ -6468,7 +7430,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "threshold_mask_absolute"
+              "argument": {
+                "name": "threshold_mask_absolute"
+              }
             }
           ]
         },
@@ -6481,7 +7445,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "threshold_mask_relative"
+              "argument": {
+                "name": "threshold_mask_relative"
+              }
             }
           ]
         },
@@ -6494,7 +7460,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_implicit_threshold"
+              "argument": {
+                "name": "use_implicit_threshold"
+              }
             }
           ]
         },
@@ -6507,7 +7475,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "explicit_mask_file"
+              "argument": {
+                "name": "explicit_mask_file"
+              }
             }
           ]
         },
@@ -6520,7 +7490,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "global_calc_omit"
+              "argument": {
+                "name": "global_calc_omit"
+              }
             }
           ]
         },
@@ -6533,7 +7505,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "global_calc_mean"
+              "argument": {
+                "name": "global_calc_mean"
+              }
             }
           ]
         },
@@ -6546,7 +7520,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "global_calc_values"
+              "argument": {
+                "name": "global_calc_values"
+              }
             }
           ]
         },
@@ -6559,7 +7535,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "no_grand_mean_scaling"
+              "argument": {
+                "name": "no_grand_mean_scaling"
+              }
             }
           ]
         },
@@ -6572,7 +7550,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "global_normalization"
+              "argument": {
+                "name": "global_normalization"
+              }
             }
           ]
         },
@@ -6585,7 +7565,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -6598,7 +7580,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -6611,7 +7595,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -6624,7 +7610,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -6637,7 +7625,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -6650,7 +7640,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -6663,7 +7655,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "spm_mat_file"
+              "argument": {
+                "name": "spm_mat_file"
+              }
             }
           ]
         }
@@ -6678,12 +7672,14 @@
       "title": {
         "name": "preprocess.VBMSegment",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/preprocess.html#vbmsegment",
-        "import": "import nipype.interfaces.spm as spm",
         "code": [
           {
             "language": "NiPype",
             "comment": "Use VBM8 toolbox to separate structural images into different",
-            "argument": "preprocess.VBMSegment()"
+            "argument": {
+              "name": "preprocess.VBMSegment()",
+              "import": "import nipype.interfaces.spm as spm"
+            }
           }
         ]
       },
@@ -6697,7 +7693,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": {
+                "name": "in_files"
+              }
             }
           ]
         },
@@ -6710,7 +7708,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "tissues"
+              "argument": {
+                "name": "tissues"
+              }
             }
           ]
         },
@@ -6723,7 +7723,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "gaussians_per_class"
+              "argument": {
+                "name": "gaussians_per_class"
+              }
             }
           ]
         },
@@ -6736,7 +7738,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "bias_regularization"
+              "argument": {
+                "name": "bias_regularization"
+              }
             }
           ]
         },
@@ -6749,7 +7753,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "bias_fwhm"
+              "argument": {
+                "name": "bias_fwhm"
+              }
             }
           ]
         },
@@ -6762,7 +7768,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "sampling_distance"
+              "argument": {
+                "name": "sampling_distance"
+              }
             }
           ]
         },
@@ -6775,7 +7783,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "warping_regularization"
+              "argument": {
+                "name": "warping_regularization"
+              }
             }
           ]
         },
@@ -6788,7 +7798,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "spatial_normalization"
+              "argument": {
+                "name": "spatial_normalization"
+              }
             }
           ]
         },
@@ -6801,7 +7813,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "dartel_template"
+              "argument": {
+                "name": "dartel_template"
+              }
             }
           ]
         },
@@ -6814,7 +7828,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_sanlm_denoising_filter"
+              "argument": {
+                "name": "use_sanlm_denoising_filter"
+              }
             }
           ]
         },
@@ -6827,7 +7843,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mrf_weighting"
+              "argument": {
+                "name": "mrf_weighting"
+              }
             }
           ]
         },
@@ -6840,7 +7858,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "cleanup_partitions"
+              "argument": {
+                "name": "cleanup_partitions"
+              }
             }
           ]
         },
@@ -6853,7 +7873,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "display_results"
+              "argument": {
+                "name": "display_results"
+              }
             }
           ]
         },
@@ -6866,7 +7888,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "gm_native"
+              "argument": {
+                "name": "gm_native"
+              }
             }
           ]
         },
@@ -6879,7 +7903,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "gm_normalized"
+              "argument": {
+                "name": "gm_normalized"
+              }
             }
           ]
         },
@@ -6892,7 +7918,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "gm_modulated_normalized"
+              "argument": {
+                "name": "gm_modulated_normalized"
+              }
             }
           ]
         },
@@ -6905,7 +7933,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "gm_dartel"
+              "argument": {
+                "name": "gm_dartel"
+              }
             }
           ]
         },
@@ -6918,7 +7948,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "wm_native"
+              "argument": {
+                "name": "wm_native"
+              }
             }
           ]
         },
@@ -6931,7 +7963,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "wm_normalized"
+              "argument": {
+                "name": "wm_normalized"
+              }
             }
           ]
         },
@@ -6944,7 +7978,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "wm_modulated_normalized"
+              "argument": {
+                "name": "wm_modulated_normalized"
+              }
             }
           ]
         },
@@ -6957,7 +7993,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "wm_dartel"
+              "argument": {
+                "name": "wm_dartel"
+              }
             }
           ]
         },
@@ -6970,7 +8008,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "csf_native"
+              "argument": {
+                "name": "csf_native"
+              }
             }
           ]
         },
@@ -6983,7 +8023,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "csf_normalized"
+              "argument": {
+                "name": "csf_normalized"
+              }
             }
           ]
         },
@@ -6996,7 +8038,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "csf_modulated_normalized"
+              "argument": {
+                "name": "csf_modulated_normalized"
+              }
             }
           ]
         },
@@ -7009,7 +8053,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "csf_dartel"
+              "argument": {
+                "name": "csf_dartel"
+              }
             }
           ]
         },
@@ -7022,7 +8068,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "bias_corrected_native"
+              "argument": {
+                "name": "bias_corrected_native"
+              }
             }
           ]
         },
@@ -7035,7 +8083,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "bias_corrected_normalized"
+              "argument": {
+                "name": "bias_corrected_normalized"
+              }
             }
           ]
         },
@@ -7048,7 +8098,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "bias_corrected_affine"
+              "argument": {
+                "name": "bias_corrected_affine"
+              }
             }
           ]
         },
@@ -7061,7 +8113,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "pve_label_native"
+              "argument": {
+                "name": "pve_label_native"
+              }
             }
           ]
         },
@@ -7074,7 +8128,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "pve_label_normalized"
+              "argument": {
+                "name": "pve_label_normalized"
+              }
             }
           ]
         },
@@ -7087,7 +8143,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "pve_label_dartel"
+              "argument": {
+                "name": "pve_label_dartel"
+              }
             }
           ]
         },
@@ -7100,7 +8158,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "jacobian_determinant"
+              "argument": {
+                "name": "jacobian_determinant"
+              }
             }
           ]
         },
@@ -7113,7 +8173,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "deformation_field"
+              "argument": {
+                "name": "deformation_field"
+              }
             }
           ]
         },
@@ -7126,7 +8188,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matlab_cmd"
+              "argument": {
+                "name": "matlab_cmd"
+              }
             }
           ]
         },
@@ -7139,7 +8203,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "paths"
+              "argument": {
+                "name": "paths"
+              }
             }
           ]
         },
@@ -7152,7 +8218,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mfile"
+              "argument": {
+                "name": "mfile"
+              }
             }
           ]
         },
@@ -7165,7 +8233,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_mcr"
+              "argument": {
+                "name": "use_mcr"
+              }
             }
           ]
         },
@@ -7178,7 +8248,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_v8struct"
+              "argument": {
+                "name": "use_v8struct"
+              }
             }
           ]
         },
@@ -7191,7 +8263,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -7204,7 +8278,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "native_class_images"
+              "argument": {
+                "name": "native_class_images"
+              }
             }
           ]
         },
@@ -7217,7 +8293,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "dartel_input_images"
+              "argument": {
+                "name": "dartel_input_images"
+              }
             }
           ]
         },
@@ -7230,7 +8308,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "normalized_class_images"
+              "argument": {
+                "name": "normalized_class_images"
+              }
             }
           ]
         },
@@ -7243,7 +8323,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "modulated_class_images"
+              "argument": {
+                "name": "modulated_class_images"
+              }
             }
           ]
         },
@@ -7256,7 +8338,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "transformation_mat"
+              "argument": {
+                "name": "transformation_mat"
+              }
             }
           ]
         },
@@ -7269,7 +8353,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "bias_corrected_images"
+              "argument": {
+                "name": "bias_corrected_images"
+              }
             }
           ]
         },
@@ -7282,7 +8368,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "normalized_bias_corrected_images"
+              "argument": {
+                "name": "normalized_bias_corrected_images"
+              }
             }
           ]
         },
@@ -7295,7 +8383,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "pve_label_native_images"
+              "argument": {
+                "name": "pve_label_native_images"
+              }
             }
           ]
         },
@@ -7308,7 +8398,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "pve_label_normalized_images"
+              "argument": {
+                "name": "pve_label_normalized_images"
+              }
             }
           ]
         },
@@ -7321,7 +8413,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "pve_label_registered_images"
+              "argument": {
+                "name": "pve_label_registered_images"
+              }
             }
           ]
         },
@@ -7334,7 +8428,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "forward_deformation_field"
+              "argument": {
+                "name": "forward_deformation_field"
+              }
             }
           ]
         },
@@ -7347,7 +8443,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inverse_deformation_field"
+              "argument": {
+                "name": "inverse_deformation_field"
+              }
             }
           ]
         },
@@ -7360,7 +8458,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "jacobian_determinant_images"
+              "argument": {
+                "name": "jacobian_determinant_images"
+              }
             }
           ]
         }

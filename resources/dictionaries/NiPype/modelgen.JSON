@@ -9,12 +9,14 @@
       "title": {
         "name": "modelgen.SpecifyModel",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.modelgen.html#specifymodel",
-        "import": "import nipype.algorithms.modelgen as modelgen",
         "code": [
           {
             "language": "NiPype",
             "comment": "Makes a model specification compatible with spm/fsl designers.",
-            "argument": "modelgen.SpecifyModel()"
+            "argument": {
+              "name": "modelgen.SpecifyModel()",
+              "import": "import nipype.algorithms.modelgen as modelgen"
+            }
           }
         ]
       },
@@ -28,7 +30,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "subject_info"
+              "argument": {
+                "name": "subject_info"
+              }
             }
           ]
         },
@@ -41,7 +45,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "event_files"
+              "argument": {
+                "name": "event_files"
+              }
             }
           ]
         },
@@ -54,7 +60,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "functional_runs"
+              "argument": {
+                "name": "functional_runs"
+              }
             }
           ]
         },
@@ -67,7 +75,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "input_units"
+              "argument": {
+                "name": "input_units"
+              }
             }
           ]
         },
@@ -80,7 +90,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "high_pass_filter_cutoff"
+              "argument": {
+                "name": "high_pass_filter_cutoff"
+              }
             }
           ]
         },
@@ -93,7 +105,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "time_repetition"
+              "argument": {
+                "name": "time_repetition"
+              }
             }
           ]
         },
@@ -106,7 +120,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "realignment_parameters"
+              "argument": {
+                "name": "realignment_parameters"
+              }
             }
           ]
         },
@@ -119,7 +135,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "parameter_source"
+              "argument": {
+                "name": "parameter_source"
+              }
             }
           ]
         },
@@ -132,7 +150,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outlier_files"
+              "argument": {
+                "name": "outlier_files"
+              }
             }
           ]
         },
@@ -145,7 +165,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -158,7 +180,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "session_info"
+              "argument": {
+                "name": "session_info"
+              }
             }
           ]
         }
@@ -173,12 +197,14 @@
       "title": {
         "name": "modelgen.SpecifySPMModel",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.modelgen.html#specifyspmmodel",
-        "import": "import nipype.algorithms.modelgen as modelgen",
         "code": [
           {
             "language": "NiPype",
             "comment": "Adds SPM specific options to SpecifyModel",
-            "argument": "modelgen.SpecifySPMModel()"
+            "argument": {
+              "name": "modelgen.SpecifySPMModel()",
+              "import": "import nipype.algorithms.modelgen as modelgen"
+            }
           }
         ]
       },
@@ -192,7 +218,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "subject_info"
+              "argument": {
+                "name": "subject_info"
+              }
             }
           ]
         },
@@ -205,7 +233,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "event_files"
+              "argument": {
+                "name": "event_files"
+              }
             }
           ]
         },
@@ -218,7 +248,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "functional_runs"
+              "argument": {
+                "name": "functional_runs"
+              }
             }
           ]
         },
@@ -231,7 +263,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "input_units"
+              "argument": {
+                "name": "input_units"
+              }
             }
           ]
         },
@@ -244,7 +278,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "high_pass_filter_cutoff"
+              "argument": {
+                "name": "high_pass_filter_cutoff"
+              }
             }
           ]
         },
@@ -257,7 +293,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "time_repetition"
+              "argument": {
+                "name": "time_repetition"
+              }
             }
           ]
         },
@@ -270,7 +308,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "concatenate_runs"
+              "argument": {
+                "name": "concatenate_runs"
+              }
             }
           ]
         },
@@ -283,7 +323,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "output_units"
+              "argument": {
+                "name": "output_units"
+              }
             }
           ]
         },
@@ -296,7 +338,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "realignment_parameters"
+              "argument": {
+                "name": "realignment_parameters"
+              }
             }
           ]
         },
@@ -309,7 +353,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "parameter_source"
+              "argument": {
+                "name": "parameter_source"
+              }
             }
           ]
         },
@@ -322,7 +368,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outlier_files"
+              "argument": {
+                "name": "outlier_files"
+              }
             }
           ]
         },
@@ -335,7 +383,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -348,7 +398,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "session_info"
+              "argument": {
+                "name": "session_info"
+              }
             }
           ]
         }
@@ -363,12 +415,14 @@
       "title": {
         "name": "modelgen.SpecifySparseModel",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.algorithms.modelgen.html#specifysparsemodel",
-        "import": "import nipype.algorithms.modelgen as modelgen",
         "code": [
           {
             "language": "NiPype",
             "comment": "Specify a sparse model that is compatible with spm/fsl designers",
-            "argument": "modelgen.SpecifySparseModel()"
+            "argument": {
+              "name": "modelgen.SpecifySparseModel()",
+              "import": "import nipype.algorithms.modelgen as modelgen"
+            }
           }
         ]
       },
@@ -382,7 +436,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "time_acquisition"
+              "argument": {
+                "name": "time_acquisition"
+              }
             }
           ]
         },
@@ -395,7 +451,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "subject_info"
+              "argument": {
+                "name": "subject_info"
+              }
             }
           ]
         },
@@ -408,7 +466,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "event_files"
+              "argument": {
+                "name": "event_files"
+              }
             }
           ]
         },
@@ -421,7 +481,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "functional_runs"
+              "argument": {
+                "name": "functional_runs"
+              }
             }
           ]
         },
@@ -434,7 +496,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "input_units"
+              "argument": {
+                "name": "input_units"
+              }
             }
           ]
         },
@@ -447,7 +511,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "high_pass_filter_cutoff"
+              "argument": {
+                "name": "high_pass_filter_cutoff"
+              }
             }
           ]
         },
@@ -460,7 +526,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "time_repetition"
+              "argument": {
+                "name": "time_repetition"
+              }
             }
           ]
         },
@@ -473,7 +541,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "volumes_in_cluster"
+              "argument": {
+                "name": "volumes_in_cluster"
+              }
             }
           ]
         },
@@ -486,7 +556,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "model_hrf"
+              "argument": {
+                "name": "model_hrf"
+              }
             }
           ]
         },
@@ -499,7 +571,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "stimuli_as_impulses"
+              "argument": {
+                "name": "stimuli_as_impulses"
+              }
             }
           ]
         },
@@ -512,7 +586,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_temporal_deriv"
+              "argument": {
+                "name": "use_temporal_deriv"
+              }
             }
           ]
         },
@@ -525,7 +601,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "scale_regressors"
+              "argument": {
+                "name": "scale_regressors"
+              }
             }
           ]
         },
@@ -538,7 +616,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "scan_onset"
+              "argument": {
+                "name": "scan_onset"
+              }
             }
           ]
         },
@@ -551,7 +631,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "save_plot"
+              "argument": {
+                "name": "save_plot"
+              }
             }
           ]
         },
@@ -564,7 +646,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "realignment_parameters"
+              "argument": {
+                "name": "realignment_parameters"
+              }
             }
           ]
         },
@@ -577,7 +661,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "parameter_source"
+              "argument": {
+                "name": "parameter_source"
+              }
             }
           ]
         },
@@ -590,7 +676,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outlier_files"
+              "argument": {
+                "name": "outlier_files"
+              }
             }
           ]
         },
@@ -603,7 +691,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -616,7 +706,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "sparse_png_file"
+              "argument": {
+                "name": "sparse_png_file"
+              }
             }
           ]
         },
@@ -629,7 +721,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "sparse_svg_file"
+              "argument": {
+                "name": "sparse_svg_file"
+              }
             }
           ]
         },
@@ -642,7 +736,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "session_info"
+              "argument": {
+                "name": "session_info"
+              }
             }
           ]
         }
