@@ -10,7 +10,7 @@ import os.path as op
 from copy import copy
 
 
-def node2json(node, module=None, custom_node=False, category="Custom", module_path=None):
+def node2json(node, node_name=None, module=None, custom_node=False, module_path=None):
     """ Converts nipype nodes to Porcupine-compatible json-files.
 
     This function takes a Nipype node from a Python module and
@@ -31,16 +31,18 @@ def node2json(node, module=None, custom_node=False, category="Custom", module_pa
         Path to module (only relevant for custom modules)
     """
 
-    if module is None:
-        module = "custom"
+    if node_name is None and custom_node:
+        raise ValueError("Cannot infer node-name from custom-nodes! Please "
+                         "set the argument `node_name` correctly!")
 
-    if custom_node:
-        category = "Custom"
+    if node_name is None:
+        node_name = _get_node_name(node)
 
     all_inputs, mandatory_inputs = _get_inputs(node, custom_node)
     all_outputs = _get_outputs(node, custom_node)
-    descr = _get_descr(node, custom_node)
+    descr = _get_descr(node, node_name, custom_node)
 
+    category = 'NiPype'
     this_category = [category]
     if module.split('.')[0] == 'algorithms':
         this_category.append('algorithms')
@@ -58,8 +60,8 @@ def node2json(node, module=None, custom_node=False, category="Custom", module_pa
             this_category.extend(sub_modules)
 
     web_url = _get_web_url(node, module, custom_node)
-    node_name = _get_node_name(node, custom_node)
     import_statement = _get_import_statement(node, module, module_path)
+    init_statement = _get_init_statement(interface_name, node_name, custom_node)
 
     titleBlock = {
 
@@ -69,14 +71,18 @@ def node2json(node, module=None, custom_node=False, category="Custom", module_pa
             'language': category,
             'comment': descr,
             'argument': {
-                "name": interface_name[-1] + '.%s()' % node_name,
+                "name": init_statement,
                 "import": import_statement
             }
         }]
     }
 
-	titleBlock['code'].append({'language': 'Docker',
-							   'argument': 'NiPype, ' + module.split('.')[1]})
+    titleBlock['code'].append({
+        'language': 'Docker',
+        'argument': {
+            "name": ", ".join(interface_name)
+        }
+    })
 
     ports = []
 
@@ -167,11 +173,10 @@ def _get_outputs(node, custom_node=True):
     return all_outputs
 
 
-def _get_descr(node, custom_node=True):
+def _get_descr(node, node_name, custom_node):
 
     if custom_node:
-        name = _get_node_name(node, custom_node=True)
-        descr = 'Custom interface wrapping function %s' % name
+        descr = 'Custom interface wrapping function %s' % node_name
     else:
         if hasattr(node, 'help'):
             descr = node.help(returnhelp=True).splitlines()[0]
@@ -211,14 +216,9 @@ def _get_web_url(node, module, custom_node):
     return web_url
 
 
-def _get_node_name(node, custom_node):
+def _get_node_name(node):
 
-    if custom_node:
-        function_code = node.inputs.function_str
-        name = function_code.split(':')[0].split('(')[0].split(' ')[-1]
-        return name
-    else:
-        return node.__name__
+    return node.__name__
 
 
 def _get_import_statement(node, module, module_path):
@@ -232,7 +232,17 @@ def _get_import_statement(node, module, module_path):
 
     return import_statement
 
-	
+
+def _get_init_statement(interface_name, node_name, custom_node):
+
+    if custom_node:
+        init_statement = interface_name[-1] + '.%s' % node_name
+    else:
+        init_statement = interface_name[-1] + '.%s()' % node_name
+
+    return init_statement
+
+
 def _get_submodule(node):
 
     module_tree = inspect.getmodule(node).__name__

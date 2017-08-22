@@ -2,19 +2,25 @@
   "nodes": [
     {
       "category": [
-        "Custom",
+        "NiPype",
         "example_custom_node_module"
       ],
       "title": {
-        "name": "example_custom_node_module.get_scan_info",
+        "name": "example_custom_node_module.GetScanInfo",
         "web_url": "",
         "code": [
           {
-            "language": "Custom",
-            "comment": "Custom interface wrapping function get_scan_info",
+            "language": "NiPype",
+            "comment": "Custom interface wrapping function GetScanInfo",
             "argument": {
-              "name": "example_custom_node_module.get_scan_info()",
+              "name": "example_custom_node_module.GetScanInfo",
               "import": "sys.path.append('/media/lukas/goliath/Porcupine/utilities')\nimport example_custom_node_module"
+            }
+          },
+          {
+            "language": "Docker",
+            "argument": {
+              "name": "NiPype, example_custom_node_module"
             }
           }
         ]
@@ -28,7 +34,7 @@
           "name": "in_file",
           "code": [
             {
-              "language": "Custom",
+              "language": "NiPype",
               "argument": {
                 "name": "in_file"
               }
@@ -43,7 +49,7 @@
           "name": "TR",
           "code": [
             {
-              "language": "Custom",
+              "language": "NiPype",
               "argument": {
                 "name": "TR"
               }

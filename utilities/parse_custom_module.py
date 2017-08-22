@@ -18,19 +18,17 @@ def custommodule2json(module_path, verbose=False):
 
     jsons = []
     for node in dir(module):
-        
         node_inst = getattr(module, node)
-        if isinstance(node_inst, Function):
         
-            fstr = node_inst.inputs.function_str
-            name = fstr.split(':')[0].split('(')[0].split(' ')[1]
+        if isinstance(node_inst, Function):
+
+            name = str(node)
 
             if verbose:
                 print("Adding node '%s'" % name)
             
-            jsons.append(node2json(node_inst, custom_node=True,
-                                   module=module_name,
-                                   category='Custom', module_path=module_path))
+            jsons.append(node2json(node_inst, node_name=name, custom_node=True, 
+                                   module=module_name, module_path=module_path))
 
     out_fn = op.abspath(op.join(op.dirname(module_path), module_name + '.JSON'))
     print("Writing nodes to %s ..." % out_fn, end='')
