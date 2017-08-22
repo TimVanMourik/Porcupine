@@ -7,6 +7,7 @@ Lukas Snoek (University of Amsterdam)
 import inspect
 import importlib
 import os.path as op
+from copy import copy
 
 
 def node2json(node, module=None, custom_node=False, category="Custom", module_path=None):
@@ -49,6 +50,8 @@ def node2json(node, module=None, custom_node=False, category="Custom", module_pa
     else:
         this_category.append(module.split('.')[1])
 
+    interface_name = copy(this_category)
+
     if not custom_node:
         sub_modules = _get_submodule(node)[1:]
         if sub_modules and sub_modules[0] != this_category[-1]:
@@ -60,13 +63,13 @@ def node2json(node, module=None, custom_node=False, category="Custom", module_pa
 
     titleBlock = {
 
-        'name': '%s.%s' % (this_category[-1], node_name),
+        'name': '%s.%s' % (interface_name[-1], node_name),
         'web_url': web_url,
         'code': [{
             'language': category,
             'comment': descr,
             'argument': {
-                "name": this_category[-1] + '.%s()' % node_name,
+                "name": interface_name[-1] + '.%s()' % node_name,
                 "import": import_statement
             }
         }]

@@ -7,14 +7,14 @@
         "utils"
       ],
       "title": {
-        "name": "utils.Analyze2nii",
+        "name": "spm.Analyze2nii",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/utils.html#analyze2nii",
         "code": [
           {
             "language": "NiPype",
             "comment": "",
             "argument": {
-              "name": "utils.Analyze2nii()",
+              "name": "spm.Analyze2nii()",
               "import": "import nipype.interfaces.spm as spm"
             }
           }
@@ -240,14 +240,14 @@
         "utils"
       ],
       "title": {
-        "name": "utils.ApplyInverseDeformation",
+        "name": "spm.ApplyInverseDeformation",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/utils.html#applyinversedeformation",
         "code": [
           {
             "language": "NiPype",
             "comment": "Uses spm to apply inverse deformation stored in a .mat file or a",
             "argument": {
-              "name": "utils.ApplyInverseDeformation()",
+              "name": "spm.ApplyInverseDeformation()",
               "import": "import nipype.interfaces.spm as spm"
             }
           }
@@ -473,14 +473,14 @@
         "utils"
       ],
       "title": {
-        "name": "utils.ApplyTransform",
+        "name": "spm.ApplyTransform",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/utils.html#applytransform",
         "code": [
           {
             "language": "NiPype",
             "comment": "Uses SPM to apply transform stored in a .mat file to given file",
             "argument": {
-              "name": "utils.ApplyTransform()",
+              "name": "spm.ApplyTransform()",
               "import": "import nipype.interfaces.spm as spm"
             }
           }
@@ -646,14 +646,14 @@
         "utils"
       ],
       "title": {
-        "name": "utils.CalcCoregAffine",
+        "name": "spm.CalcCoregAffine",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/utils.html#calccoregaffine",
         "code": [
           {
             "language": "NiPype",
             "comment": "Uses SPM (spm_coreg) to calculate the transform mapping",
             "argument": {
-              "name": "utils.CalcCoregAffine()",
+              "name": "spm.CalcCoregAffine()",
               "import": "import nipype.interfaces.spm as spm"
             }
           }
@@ -849,14 +849,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "preprocess.Coregister",
+        "name": "spm.Coregister",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/preprocess.html#coregister",
         "code": [
           {
             "language": "NiPype",
             "comment": "Use spm_coreg for estimating cross-modality rigid body alignment",
             "argument": {
-              "name": "preprocess.Coregister()",
+              "name": "spm.Coregister()",
               "import": "import nipype.interfaces.spm as spm"
             }
           }
@@ -1172,14 +1172,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "preprocess.CreateWarped",
+        "name": "spm.CreateWarped",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/preprocess.html#createwarped",
         "code": [
           {
             "language": "NiPype",
             "comment": "Apply a flow field estimated by DARTEL to create warped images",
             "argument": {
-              "name": "preprocess.CreateWarped()",
+              "name": "spm.CreateWarped()",
               "import": "import nipype.interfaces.spm as spm"
             }
           }
@@ -1375,14 +1375,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "preprocess.DARTEL",
+        "name": "spm.DARTEL",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/preprocess.html#dartel",
         "code": [
           {
             "language": "NiPype",
             "comment": "Use spm DARTEL to create a template and flow fields",
             "argument": {
-              "name": "preprocess.DARTEL()",
+              "name": "spm.DARTEL()",
               "import": "import nipype.interfaces.spm as spm"
             }
           }
@@ -1608,14 +1608,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "preprocess.DARTELNorm2MNI",
+        "name": "spm.DARTELNorm2MNI",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/preprocess.html#dartelnorm2mni",
         "code": [
           {
             "language": "NiPype",
             "comment": "Use spm DARTEL to normalize data to MNI space",
             "argument": {
-              "name": "preprocess.DARTELNorm2MNI()",
+              "name": "spm.DARTELNorm2MNI()",
               "import": "import nipype.interfaces.spm as spm"
             }
           }
@@ -1856,14 +1856,14 @@
         "utils"
       ],
       "title": {
-        "name": "utils.DicomImport",
+        "name": "spm.DicomImport",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/utils.html#dicomimport",
         "code": [
           {
             "language": "NiPype",
             "comment": "Uses spm to convert DICOM files to nii or img+hdr.",
             "argument": {
-              "name": "utils.DicomImport()",
+              "name": "spm.DicomImport()",
               "import": "import nipype.interfaces.spm as spm"
             }
           }
@@ -2059,14 +2059,14 @@
         "model"
       ],
       "title": {
-        "name": "model.EstimateContrast",
+        "name": "spm.EstimateContrast",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/model.html#estimatecontrast",
         "code": [
           {
             "language": "NiPype",
             "comment": "Use spm_contrasts to estimate contrasts of interest",
             "argument": {
-              "name": "model.EstimateContrast()",
+              "name": "spm.EstimateContrast()",
               "import": "import nipype.interfaces.spm as spm"
             }
           }
@@ -2337,14 +2337,14 @@
         "model"
       ],
       "title": {
-        "name": "model.EstimateModel",
+        "name": "spm.EstimateModel",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/model.html#estimatemodel",
         "code": [
           {
             "language": "NiPype",
             "comment": "Use spm_spm to estimate the parameters of a model",
             "argument": {
-              "name": "model.EstimateModel()",
+              "name": "spm.EstimateModel()",
               "import": "import nipype.interfaces.spm as spm"
             }
           }
@@ -2675,14 +2675,14 @@
         "model"
       ],
       "title": {
-        "name": "model.Level1Design",
+        "name": "spm.Level1Design",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/model.html#level1design",
         "code": [
           {
             "language": "NiPype",
             "comment": "Generate an SPM design matrix",
             "argument": {
-              "name": "model.Level1Design()",
+              "name": "spm.Level1Design()",
               "import": "import nipype.interfaces.spm as spm"
             }
           }
@@ -2998,14 +2998,14 @@
         "model"
       ],
       "title": {
-        "name": "model.MultipleRegressionDesign",
+        "name": "spm.MultipleRegressionDesign",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/model.html#multipleregressiondesign",
         "code": [
           {
             "language": "NiPype",
             "comment": "Create SPM design for multiple regression",
             "argument": {
-              "name": "model.MultipleRegressionDesign()",
+              "name": "spm.MultipleRegressionDesign()",
               "import": "import nipype.interfaces.spm as spm"
             }
           }
@@ -3351,14 +3351,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "preprocess.NewSegment",
+        "name": "spm.NewSegment",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/preprocess.html#newsegment",
         "code": [
           {
             "language": "NiPype",
             "comment": "Use spm_preproc8 (New Segment) to separate structural images into",
             "argument": {
-              "name": "preprocess.NewSegment()",
+              "name": "spm.NewSegment()",
               "import": "import nipype.interfaces.spm as spm"
             }
           }
@@ -3704,14 +3704,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "preprocess.Normalize",
+        "name": "spm.Normalize",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/preprocess.html#normalize",
         "code": [
           {
             "language": "NiPype",
             "comment": "use spm_normalise for warping an image to a template",
             "argument": {
-              "name": "preprocess.Normalize()",
+              "name": "spm.Normalize()",
               "import": "import nipype.interfaces.spm as spm"
             }
           }
@@ -4147,14 +4147,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "preprocess.Normalize12",
+        "name": "spm.Normalize12",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/preprocess.html#normalize12",
         "code": [
           {
             "language": "NiPype",
             "comment": "uses SPM12's new Normalise routine for warping an image to a template.",
             "argument": {
-              "name": "preprocess.Normalize12()",
+              "name": "spm.Normalize12()",
               "import": "import nipype.interfaces.spm as spm"
             }
           }
@@ -4530,14 +4530,14 @@
         "model"
       ],
       "title": {
-        "name": "model.OneSampleTTestDesign",
+        "name": "spm.OneSampleTTestDesign",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/model.html#onesamplettestdesign",
         "code": [
           {
             "language": "NiPype",
             "comment": "Create SPM design for one sample t-test",
             "argument": {
-              "name": "model.OneSampleTTestDesign()",
+              "name": "spm.OneSampleTTestDesign()",
               "import": "import nipype.interfaces.spm as spm"
             }
           }
@@ -4853,14 +4853,14 @@
         "model"
       ],
       "title": {
-        "name": "model.PairedTTestDesign",
+        "name": "spm.PairedTTestDesign",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/model.html#pairedttestdesign",
         "code": [
           {
             "language": "NiPype",
             "comment": "Create SPM design for paired t-test",
             "argument": {
-              "name": "model.PairedTTestDesign()",
+              "name": "spm.PairedTTestDesign()",
               "import": "import nipype.interfaces.spm as spm"
             }
           }
@@ -5206,14 +5206,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "preprocess.Realign",
+        "name": "spm.Realign",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/preprocess.html#realign",
         "code": [
           {
             "language": "NiPype",
             "comment": "Use spm_realign for estimating within modality rigid body alignment",
             "argument": {
-              "name": "preprocess.Realign()",
+              "name": "spm.Realign()",
               "import": "import nipype.interfaces.spm as spm"
             }
           }
@@ -5589,14 +5589,14 @@
         "utils"
       ],
       "title": {
-        "name": "utils.Reslice",
+        "name": "spm.Reslice",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/utils.html#reslice",
         "code": [
           {
             "language": "NiPype",
             "comment": "uses  spm_reslice to resample in_file into space of space_defining",
             "argument": {
-              "name": "utils.Reslice()",
+              "name": "spm.Reslice()",
               "import": "import nipype.interfaces.spm as spm"
             }
           }
@@ -5777,14 +5777,14 @@
         "utils"
       ],
       "title": {
-        "name": "utils.ResliceToReference",
+        "name": "spm.ResliceToReference",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/utils.html#reslicetoreference",
         "code": [
           {
             "language": "NiPype",
             "comment": "Uses spm to reslice a volume to a target image space or to a provided",
             "argument": {
-              "name": "utils.ResliceToReference()",
+              "name": "spm.ResliceToReference()",
               "import": "import nipype.interfaces.spm as spm"
             }
           }
@@ -5980,14 +5980,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "preprocess.Segment",
+        "name": "spm.Segment",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/preprocess.html#segment",
         "code": [
           {
             "language": "NiPype",
             "comment": "use spm_segment to separate structural images into different",
             "argument": {
-              "name": "preprocess.Segment()",
+              "name": "spm.Segment()",
               "import": "import nipype.interfaces.spm as spm"
             }
           }
@@ -6513,14 +6513,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "preprocess.SliceTiming",
+        "name": "spm.SliceTiming",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/preprocess.html#slicetiming",
         "code": [
           {
             "language": "NiPype",
             "comment": "Use spm to perform slice timing correction.",
             "argument": {
-              "name": "preprocess.SliceTiming()",
+              "name": "spm.SliceTiming()",
               "import": "import nipype.interfaces.spm as spm"
             }
           }
@@ -6746,14 +6746,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "preprocess.Smooth",
+        "name": "spm.Smooth",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/preprocess.html#smooth",
         "code": [
           {
             "language": "NiPype",
             "comment": "Use spm_smooth for 3D Gaussian smoothing of image volumes.",
             "argument": {
-              "name": "preprocess.Smooth()",
+              "name": "spm.Smooth()",
               "import": "import nipype.interfaces.spm as spm"
             }
           }
@@ -6949,14 +6949,14 @@
         "model"
       ],
       "title": {
-        "name": "model.Threshold",
+        "name": "spm.Threshold",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/model.html#threshold",
         "code": [
           {
             "language": "NiPype",
             "comment": "Topological FDR thresholding based on cluster extent/size. Smoothness is",
             "argument": {
-              "name": "model.Threshold()",
+              "name": "spm.Threshold()",
               "import": "import nipype.interfaces.spm as spm"
             }
           }
@@ -7302,14 +7302,14 @@
         "model"
       ],
       "title": {
-        "name": "model.TwoSampleTTestDesign",
+        "name": "spm.TwoSampleTTestDesign",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/model.html#twosamplettestdesign",
         "code": [
           {
             "language": "NiPype",
             "comment": "Create SPM design for two sample t-test",
             "argument": {
-              "name": "model.TwoSampleTTestDesign()",
+              "name": "spm.TwoSampleTTestDesign()",
               "import": "import nipype.interfaces.spm as spm"
             }
           }
@@ -7670,14 +7670,14 @@
         "preprocess"
       ],
       "title": {
-        "name": "preprocess.VBMSegment",
+        "name": "spm.VBMSegment",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.spm/preprocess.html#vbmsegment",
         "code": [
           {
             "language": "NiPype",
             "comment": "Use VBM8 toolbox to separate structural images into different",
             "argument": {
-              "name": "preprocess.VBMSegment()",
+              "name": "spm.VBMSegment()",
               "import": "import nipype.interfaces.spm as spm"
             }
           }
