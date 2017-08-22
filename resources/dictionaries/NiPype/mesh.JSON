@@ -13,11 +13,16 @@
           {
             "language": "NiPype",
             "comment": "Calculates a the vertex-wise warping to get surface2 from surface1.",
-            "argument": "mesh.ComputeMeshWarp()"
+            "argument": {
+              "name": "mesh.ComputeMeshWarp()",
+              "import": "import nipype.algorithms.mesh as mesh"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mesh"
+            "argument": {
+              "name": "NiPype, algorithms, mesh"
+            }
           }
         ]
       },
@@ -31,7 +36,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "surface1"
+              "argument": {
+                "name": "surface1"
+              }
             }
           ]
         },
@@ -44,7 +51,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "surface2"
+              "argument": {
+                "name": "surface2"
+              }
             }
           ]
         },
@@ -57,7 +66,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "metric"
+              "argument": {
+                "name": "metric"
+              }
             }
           ]
         },
@@ -70,7 +81,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "weighting"
+              "argument": {
+                "name": "weighting"
+              }
             }
           ]
         },
@@ -83,7 +96,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_warp"
+              "argument": {
+                "name": "out_warp"
+              }
             }
           ]
         },
@@ -96,7 +111,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         },
@@ -109,7 +126,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -122,7 +141,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "distance"
+              "argument": {
+                "name": "distance"
+              }
             }
           ]
         },
@@ -135,7 +156,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_warp"
+              "argument": {
+                "name": "out_warp"
+              }
             }
           ]
         },
@@ -148,7 +171,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         }
@@ -167,11 +192,16 @@
           {
             "language": "NiPype",
             "comment": "Performs the most basic mathematical operations on the warping field",
-            "argument": "mesh.MeshWarpMaths()"
+            "argument": {
+              "name": "mesh.MeshWarpMaths()",
+              "import": "import nipype.algorithms.mesh as mesh"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mesh"
+            "argument": {
+              "name": "NiPype, algorithms, mesh"
+            }
           }
         ]
       },
@@ -185,20 +215,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_surf"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "float_trait",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "float_trait"
+              "argument": {
+                "name": "in_surf"
+              }
             }
           ]
         },
@@ -211,7 +230,24 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "operator"
+              "argument": {
+                "name": "operator"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "float_trait",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "float_trait"
+              }
             }
           ]
         },
@@ -224,7 +260,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "operation"
+              "argument": {
+                "name": "operation"
+              }
             }
           ]
         },
@@ -237,7 +275,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_warp"
+              "argument": {
+                "name": "out_warp"
+              }
             }
           ]
         },
@@ -250,7 +290,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         },
@@ -263,7 +305,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -276,7 +320,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_warp"
+              "argument": {
+                "name": "out_warp"
+              }
             }
           ]
         },
@@ -289,7 +335,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         }
@@ -308,11 +356,16 @@
           {
             "language": "NiPype",
             "comment": "Calculates a point-to-point (p2p) distance between two corresponding",
-            "argument": "mesh.P2PDistance()"
+            "argument": {
+              "name": "mesh.P2PDistance()",
+              "import": "import nipype.algorithms.mesh as mesh"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mesh"
+            "argument": {
+              "name": "NiPype, algorithms, mesh"
+            }
           }
         ]
       },
@@ -326,7 +379,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "surface1"
+              "argument": {
+                "name": "surface1"
+              }
             }
           ]
         },
@@ -339,7 +394,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "surface2"
+              "argument": {
+                "name": "surface2"
+              }
             }
           ]
         },
@@ -352,7 +409,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "metric"
+              "argument": {
+                "name": "metric"
+              }
             }
           ]
         },
@@ -365,7 +424,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "weighting"
+              "argument": {
+                "name": "weighting"
+              }
             }
           ]
         },
@@ -378,7 +439,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_warp"
+              "argument": {
+                "name": "out_warp"
+              }
             }
           ]
         },
@@ -391,7 +454,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         },
@@ -404,7 +469,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -417,7 +484,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "distance"
+              "argument": {
+                "name": "distance"
+              }
             }
           ]
         },
@@ -430,7 +499,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_warp"
+              "argument": {
+                "name": "out_warp"
+              }
             }
           ]
         },
@@ -443,7 +514,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         }
@@ -462,11 +535,16 @@
           {
             "language": "NiPype",
             "comment": "A base class for interfaces using VTK",
-            "argument": "mesh.TVTKBaseInterface()"
+            "argument": {
+              "name": "mesh.TVTKBaseInterface()",
+              "import": "import nipype.algorithms.mesh as mesh"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mesh"
+            "argument": {
+              "name": "NiPype, algorithms, mesh"
+            }
           }
         ]
       },
@@ -480,7 +558,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         }
@@ -499,11 +579,16 @@
           {
             "language": "NiPype",
             "comment": "Applies a displacement field to a point set given in vtk format.",
-            "argument": "mesh.WarpPoints()"
+            "argument": {
+              "name": "mesh.WarpPoints()",
+              "import": "import nipype.algorithms.mesh as mesh"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mesh"
+            "argument": {
+              "name": "NiPype, algorithms, mesh"
+            }
           }
         ]
       },
@@ -517,7 +602,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "points"
+              "argument": {
+                "name": "points"
+              }
             }
           ]
         },
@@ -530,7 +617,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "warp"
+              "argument": {
+                "name": "warp"
+              }
             }
           ]
         },
@@ -543,7 +632,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "interp"
+              "argument": {
+                "name": "interp"
+              }
             }
           ]
         },
@@ -556,7 +647,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_points"
+              "argument": {
+                "name": "out_points"
+              }
             }
           ]
         },
@@ -569,7 +662,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -582,7 +677,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_points"
+              "argument": {
+                "name": "out_points"
+              }
             }
           ]
         }

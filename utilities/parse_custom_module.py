@@ -5,6 +5,7 @@ import importlib
 import os.path as op
 import json
 from nipype2json import node2json
+from nipype.interfaces.utility import Function
 
 
 def custommodule2json(module_path, verbose=False):
@@ -17,18 +18,17 @@ def custommodule2json(module_path, verbose=False):
 
     jsons = []
     for node in dir(module):
-        
         node_inst = getattr(module, node)
-        node_class = node_inst.__class__
         
-        if str(node_class) == "<class 'nipype.pipeline.engine.nodes.Node'>":
-                
+        if isinstance(node_inst, Function):
+
+            name = str(node)
+
             if verbose:
-                print("Adding node '%s'" % node)
+                print("Adding node '%s'" % name)
             
-            jsons.append(node2json(node_inst, custom_node=True,
-                                   module=module_name,
-                                   category='Custom'))
+            jsons.append(node2json(node_inst, node_name=name, custom_node=True, 
+                                   module=module_name, module_path=module_path))
 
     out_fn = op.abspath(op.join(op.dirname(module_path), module_name + '.JSON'))
     print("Writing nodes to %s ..." % out_fn, end='')

@@ -13,11 +13,16 @@
           {
             "language": "NiPype",
             "comment": "Wraps command **mne_watershed_bem**",
-            "argument": "mne.WatershedBEM()"
+            "argument": {
+              "name": "mne.WatershedBEM()",
+              "import": "import nipype.interfaces.mne as mne"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mne"
+            "argument": {
+              "name": "NiPype, mne"
+            }
           }
         ]
       },
@@ -31,7 +36,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "subject_id"
+              "argument": {
+                "name": "subject_id"
+              }
             }
           ]
         },
@@ -44,7 +51,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "subjects_dir"
+              "argument": {
+                "name": "subjects_dir"
+              }
             }
           ]
         },
@@ -57,7 +66,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "volume"
+              "argument": {
+                "name": "volume"
+              }
             }
           ]
         },
@@ -70,7 +81,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "overwrite"
+              "argument": {
+                "name": "overwrite"
+              }
             }
           ]
         },
@@ -83,7 +96,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "atlas_mode"
+              "argument": {
+                "name": "atlas_mode"
+              }
             }
           ]
         },
@@ -96,7 +111,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": {
+                "name": "args"
+              }
             }
           ]
         },
@@ -109,7 +126,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "environ"
+              "argument": {
+                "name": "environ"
+              }
             }
           ]
         },
@@ -122,7 +141,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": {
+                "name": "terminal_output"
+              }
             }
           ]
         },
@@ -135,7 +156,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -148,7 +171,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mesh_files"
+              "argument": {
+                "name": "mesh_files"
+              }
             }
           ]
         },
@@ -161,7 +186,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "brain_surface"
+              "argument": {
+                "name": "brain_surface"
+              }
             }
           ]
         },
@@ -174,7 +201,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inner_skull_surface"
+              "argument": {
+                "name": "inner_skull_surface"
+              }
             }
           ]
         },
@@ -187,7 +216,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outer_skull_surface"
+              "argument": {
+                "name": "outer_skull_surface"
+              }
             }
           ]
         },
@@ -200,7 +231,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outer_skin_surface"
+              "argument": {
+                "name": "outer_skin_surface"
+              }
             }
           ]
         },
@@ -213,7 +246,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "fif_file"
+              "argument": {
+                "name": "fif_file"
+              }
             }
           ]
         },
@@ -226,7 +261,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "cor_files"
+              "argument": {
+                "name": "cor_files"
+              }
             }
           ]
         }

@@ -13,11 +13,16 @@
           {
             "language": "NiPype",
             "comment": "Wraps command **csdeconv**",
-            "argument": "mrtrix.ConstrainedSphericalDeconvolution()"
+            "argument": {
+              "name": "mrtrix.ConstrainedSphericalDeconvolution()",
+              "import": "import nipype.interfaces.mrtrix as mrtrix"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": {
+              "name": "NiPype, mrtrix"
+            }
           }
         ]
       },
@@ -31,7 +36,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -44,7 +51,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "response_file"
+              "argument": {
+                "name": "response_file"
+              }
             }
           ]
         },
@@ -57,7 +66,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_filename"
+              "argument": {
+                "name": "out_filename"
+              }
             }
           ]
         },
@@ -70,7 +81,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_image"
+              "argument": {
+                "name": "mask_image"
+              }
             }
           ]
         },
@@ -83,7 +96,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "encoding_file"
+              "argument": {
+                "name": "encoding_file"
+              }
             }
           ]
         },
@@ -96,7 +111,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "filter_file"
+              "argument": {
+                "name": "filter_file"
+              }
             }
           ]
         },
@@ -109,7 +126,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "lambda_value"
+              "argument": {
+                "name": "lambda_value"
+              }
             }
           ]
         },
@@ -122,7 +141,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "maximum_harmonic_order"
+              "argument": {
+                "name": "maximum_harmonic_order"
+              }
             }
           ]
         },
@@ -135,7 +156,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "threshold_value"
+              "argument": {
+                "name": "threshold_value"
+              }
             }
           ]
         },
@@ -148,7 +171,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "iterations"
+              "argument": {
+                "name": "iterations"
+              }
             }
           ]
         },
@@ -161,7 +186,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "debug"
+              "argument": {
+                "name": "debug"
+              }
             }
           ]
         },
@@ -174,7 +201,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "directions_file"
+              "argument": {
+                "name": "directions_file"
+              }
             }
           ]
         },
@@ -187,7 +216,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "normalise"
+              "argument": {
+                "name": "normalise"
+              }
             }
           ]
         },
@@ -200,7 +231,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": {
+                "name": "args"
+              }
             }
           ]
         },
@@ -213,7 +246,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "environ"
+              "argument": {
+                "name": "environ"
+              }
             }
           ]
         },
@@ -226,7 +261,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": {
+                "name": "terminal_output"
+              }
             }
           ]
         },
@@ -239,7 +276,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -252,7 +291,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "spherical_harmonics_image"
+              "argument": {
+                "name": "spherical_harmonics_image"
+              }
             }
           ]
         }
@@ -271,11 +312,16 @@
           {
             "language": "NiPype",
             "comment": "Wraps command **dwi2SH**",
-            "argument": "mrtrix.DWI2SphericalHarmonicsImage()"
+            "argument": {
+              "name": "mrtrix.DWI2SphericalHarmonicsImage()",
+              "import": "import nipype.interfaces.mrtrix as mrtrix"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": {
+              "name": "NiPype, mrtrix"
+            }
           }
         ]
       },
@@ -289,20 +335,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "out_filename",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "out_filename"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -315,7 +350,24 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "encoding_file"
+              "argument": {
+                "name": "encoding_file"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_filename",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "out_filename"
+              }
             }
           ]
         },
@@ -328,7 +380,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "maximum_harmonic_order"
+              "argument": {
+                "name": "maximum_harmonic_order"
+              }
             }
           ]
         },
@@ -341,7 +395,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "normalise"
+              "argument": {
+                "name": "normalise"
+              }
             }
           ]
         },
@@ -354,7 +410,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": {
+                "name": "args"
+              }
             }
           ]
         },
@@ -367,7 +425,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "environ"
+              "argument": {
+                "name": "environ"
+              }
             }
           ]
         },
@@ -380,7 +440,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": {
+                "name": "terminal_output"
+              }
             }
           ]
         },
@@ -393,7 +455,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -406,7 +470,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "spherical_harmonics_image"
+              "argument": {
+                "name": "spherical_harmonics_image"
+              }
             }
           ]
         }
@@ -425,11 +491,16 @@
           {
             "language": "NiPype",
             "comment": "Wraps command **dwi2tensor**",
-            "argument": "mrtrix.DWI2Tensor()"
+            "argument": {
+              "name": "mrtrix.DWI2Tensor()",
+              "import": "import nipype.interfaces.mrtrix as mrtrix"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": {
+              "name": "NiPype, mrtrix"
+            }
           }
         ]
       },
@@ -443,7 +514,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -456,7 +529,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_filename"
+              "argument": {
+                "name": "out_filename"
+              }
             }
           ]
         },
@@ -469,7 +544,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "encoding_file"
+              "argument": {
+                "name": "encoding_file"
+              }
             }
           ]
         },
@@ -482,7 +559,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_slice_by_volume"
+              "argument": {
+                "name": "ignore_slice_by_volume"
+              }
             }
           ]
         },
@@ -495,7 +574,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_volumes"
+              "argument": {
+                "name": "ignore_volumes"
+              }
             }
           ]
         },
@@ -508,7 +589,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "quiet"
+              "argument": {
+                "name": "quiet"
+              }
             }
           ]
         },
@@ -521,7 +604,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "debug"
+              "argument": {
+                "name": "debug"
+              }
             }
           ]
         },
@@ -534,7 +619,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": {
+                "name": "args"
+              }
             }
           ]
         },
@@ -547,7 +634,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "environ"
+              "argument": {
+                "name": "environ"
+              }
             }
           ]
         },
@@ -560,7 +649,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": {
+                "name": "terminal_output"
+              }
             }
           ]
         },
@@ -573,7 +664,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -586,7 +679,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "tensor"
+              "argument": {
+                "name": "tensor"
+              }
             }
           ]
         }
@@ -605,11 +700,16 @@
           {
             "language": "NiPype",
             "comment": "Wraps command **streamtrack**",
-            "argument": "mrtrix.DiffusionTensorStreamlineTrack()"
+            "argument": {
+              "name": "mrtrix.DiffusionTensorStreamlineTrack()",
+              "import": "import nipype.interfaces.mrtrix as mrtrix"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": {
+              "name": "NiPype, mrtrix"
+            }
           }
         ]
       },
@@ -623,7 +723,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "gradient_encoding_file"
+              "argument": {
+                "name": "gradient_encoding_file"
+              }
             }
           ]
         },
@@ -636,7 +738,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -649,7 +753,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "seed_file"
+              "argument": {
+                "name": "seed_file"
+              }
             }
           ]
         },
@@ -662,7 +768,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "seed_spec"
+              "argument": {
+                "name": "seed_spec"
+              }
             }
           ]
         },
@@ -675,7 +783,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "include_file"
+              "argument": {
+                "name": "include_file"
+              }
             }
           ]
         },
@@ -688,7 +798,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "include_spec"
+              "argument": {
+                "name": "include_spec"
+              }
             }
           ]
         },
@@ -701,7 +813,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "exclude_file"
+              "argument": {
+                "name": "exclude_file"
+              }
             }
           ]
         },
@@ -714,7 +828,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "exclude_spec"
+              "argument": {
+                "name": "exclude_spec"
+              }
             }
           ]
         },
@@ -727,7 +843,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_file"
+              "argument": {
+                "name": "mask_file"
+              }
             }
           ]
         },
@@ -740,7 +858,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_spec"
+              "argument": {
+                "name": "mask_spec"
+              }
             }
           ]
         },
@@ -753,7 +873,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputmodel"
+              "argument": {
+                "name": "inputmodel"
+              }
             }
           ]
         },
@@ -766,7 +888,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "stop"
+              "argument": {
+                "name": "stop"
+              }
             }
           ]
         },
@@ -779,7 +903,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "do_not_precompute"
+              "argument": {
+                "name": "do_not_precompute"
+              }
             }
           ]
         },
@@ -792,7 +918,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "unidirectional"
+              "argument": {
+                "name": "unidirectional"
+              }
             }
           ]
         },
@@ -805,7 +933,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "no_mask_interpolation"
+              "argument": {
+                "name": "no_mask_interpolation"
+              }
             }
           ]
         },
@@ -818,7 +948,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "step_size"
+              "argument": {
+                "name": "step_size"
+              }
             }
           ]
         },
@@ -831,7 +963,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "minimum_radius_of_curvature"
+              "argument": {
+                "name": "minimum_radius_of_curvature"
+              }
             }
           ]
         },
@@ -844,7 +978,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "desired_number_of_tracks"
+              "argument": {
+                "name": "desired_number_of_tracks"
+              }
             }
           ]
         },
@@ -857,7 +993,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "maximum_number_of_tracks"
+              "argument": {
+                "name": "maximum_number_of_tracks"
+              }
             }
           ]
         },
@@ -870,7 +1008,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "minimum_tract_length"
+              "argument": {
+                "name": "minimum_tract_length"
+              }
             }
           ]
         },
@@ -883,7 +1023,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "maximum_tract_length"
+              "argument": {
+                "name": "maximum_tract_length"
+              }
             }
           ]
         },
@@ -896,7 +1038,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "cutoff_value"
+              "argument": {
+                "name": "cutoff_value"
+              }
             }
           ]
         },
@@ -909,7 +1053,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "initial_cutoff_value"
+              "argument": {
+                "name": "initial_cutoff_value"
+              }
             }
           ]
         },
@@ -922,7 +1068,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "initial_direction"
+              "argument": {
+                "name": "initial_direction"
+              }
             }
           ]
         },
@@ -935,7 +1083,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         },
@@ -948,7 +1098,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": {
+                "name": "args"
+              }
             }
           ]
         },
@@ -961,7 +1113,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "environ"
+              "argument": {
+                "name": "environ"
+              }
             }
           ]
         },
@@ -974,7 +1128,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": {
+                "name": "terminal_output"
+              }
             }
           ]
         },
@@ -987,7 +1143,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -1000,7 +1158,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "tracked"
+              "argument": {
+                "name": "tracked"
+              }
             }
           ]
         }
@@ -1019,11 +1179,16 @@
           {
             "language": "NiPype",
             "comment": "Wraps command **dir2amp**",
-            "argument": "mrtrix.Directions2Amplitude()"
+            "argument": {
+              "name": "mrtrix.Directions2Amplitude()",
+              "import": "import nipype.interfaces.mrtrix as mrtrix"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": {
+              "name": "NiPype, mrtrix"
+            }
           }
         ]
       },
@@ -1037,7 +1202,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -1050,7 +1217,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "peaks_image"
+              "argument": {
+                "name": "peaks_image"
+              }
             }
           ]
         },
@@ -1063,7 +1232,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "num_peaks"
+              "argument": {
+                "name": "num_peaks"
+              }
             }
           ]
         },
@@ -1076,7 +1247,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "peak_directions"
+              "argument": {
+                "name": "peak_directions"
+              }
             }
           ]
         },
@@ -1089,7 +1262,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "display_info"
+              "argument": {
+                "name": "display_info"
+              }
             }
           ]
         },
@@ -1102,7 +1277,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "quiet_display"
+              "argument": {
+                "name": "quiet_display"
+              }
             }
           ]
         },
@@ -1115,7 +1292,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "display_debug"
+              "argument": {
+                "name": "display_debug"
+              }
             }
           ]
         },
@@ -1128,7 +1307,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         },
@@ -1141,7 +1322,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": {
+                "name": "args"
+              }
             }
           ]
         },
@@ -1154,7 +1337,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "environ"
+              "argument": {
+                "name": "environ"
+              }
             }
           ]
         },
@@ -1167,7 +1352,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": {
+                "name": "terminal_output"
+              }
             }
           ]
         },
@@ -1180,7 +1367,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -1193,7 +1382,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         }
@@ -1212,11 +1403,16 @@
           {
             "language": "NiPype",
             "comment": "Wraps command **erode**",
-            "argument": "mrtrix.Erode()"
+            "argument": {
+              "name": "mrtrix.Erode()",
+              "import": "import nipype.interfaces.mrtrix as mrtrix"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": {
+              "name": "NiPype, mrtrix"
+            }
           }
         ]
       },
@@ -1230,7 +1426,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -1243,7 +1441,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_filename"
+              "argument": {
+                "name": "out_filename"
+              }
             }
           ]
         },
@@ -1256,7 +1456,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "number_of_passes"
+              "argument": {
+                "name": "number_of_passes"
+              }
             }
           ]
         },
@@ -1269,7 +1471,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "dilate"
+              "argument": {
+                "name": "dilate"
+              }
             }
           ]
         },
@@ -1282,7 +1486,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "quiet"
+              "argument": {
+                "name": "quiet"
+              }
             }
           ]
         },
@@ -1295,7 +1501,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "debug"
+              "argument": {
+                "name": "debug"
+              }
             }
           ]
         },
@@ -1308,7 +1516,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": {
+                "name": "args"
+              }
             }
           ]
         },
@@ -1321,7 +1531,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "environ"
+              "argument": {
+                "name": "environ"
+              }
             }
           ]
         },
@@ -1334,7 +1546,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": {
+                "name": "terminal_output"
+              }
             }
           ]
         },
@@ -1347,7 +1561,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -1360,7 +1576,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         }
@@ -1379,11 +1597,16 @@
           {
             "language": "NiPype",
             "comment": "Wraps command **estimate_response**",
-            "argument": "mrtrix.EstimateResponseForSH()"
+            "argument": {
+              "name": "mrtrix.EstimateResponseForSH()",
+              "import": "import nipype.interfaces.mrtrix as mrtrix"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": {
+              "name": "NiPype, mrtrix"
+            }
           }
         ]
       },
@@ -1397,7 +1620,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -1410,20 +1635,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_image"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "out_filename",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "out_filename"
+              "argument": {
+                "name": "mask_image"
+              }
             }
           ]
         },
@@ -1436,7 +1650,24 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "encoding_file"
+              "argument": {
+                "name": "encoding_file"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_filename",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "out_filename"
+              }
             }
           ]
         },
@@ -1449,7 +1680,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "maximum_harmonic_order"
+              "argument": {
+                "name": "maximum_harmonic_order"
+              }
             }
           ]
         },
@@ -1462,7 +1695,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "normalise"
+              "argument": {
+                "name": "normalise"
+              }
             }
           ]
         },
@@ -1475,7 +1710,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "quiet"
+              "argument": {
+                "name": "quiet"
+              }
             }
           ]
         },
@@ -1488,7 +1725,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "debug"
+              "argument": {
+                "name": "debug"
+              }
             }
           ]
         },
@@ -1501,7 +1740,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": {
+                "name": "args"
+              }
             }
           ]
         },
@@ -1514,7 +1755,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "environ"
+              "argument": {
+                "name": "environ"
+              }
             }
           ]
         },
@@ -1527,7 +1770,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": {
+                "name": "terminal_output"
+              }
             }
           ]
         },
@@ -1540,7 +1785,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -1553,7 +1800,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "response"
+              "argument": {
+                "name": "response"
+              }
             }
           ]
         }
@@ -1572,11 +1821,16 @@
           {
             "language": "NiPype",
             "comment": "Converts separate b-values and b-vectors from text files (FSL style) into a",
-            "argument": "mrtrix.FSL2MRTrix()"
+            "argument": {
+              "name": "mrtrix.FSL2MRTrix()",
+              "import": "import nipype.interfaces.mrtrix as mrtrix"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": {
+              "name": "NiPype, mrtrix"
+            }
           }
         ]
       },
@@ -1590,7 +1844,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "bvec_file"
+              "argument": {
+                "name": "bvec_file"
+              }
             }
           ]
         },
@@ -1603,7 +1859,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "bval_file"
+              "argument": {
+                "name": "bval_file"
+              }
             }
           ]
         },
@@ -1616,7 +1874,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "invert_x"
+              "argument": {
+                "name": "invert_x"
+              }
             }
           ]
         },
@@ -1629,7 +1889,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "invert_y"
+              "argument": {
+                "name": "invert_y"
+              }
             }
           ]
         },
@@ -1642,7 +1904,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "invert_z"
+              "argument": {
+                "name": "invert_z"
+              }
             }
           ]
         },
@@ -1655,7 +1919,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_encoding_file"
+              "argument": {
+                "name": "out_encoding_file"
+              }
             }
           ]
         },
@@ -1668,7 +1934,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "encoding_file"
+              "argument": {
+                "name": "encoding_file"
+              }
             }
           ]
         }
@@ -1687,11 +1955,16 @@
           {
             "language": "NiPype",
             "comment": "Wraps command **filter_tracks**",
-            "argument": "mrtrix.FilterTracks()"
+            "argument": {
+              "name": "mrtrix.FilterTracks()",
+              "import": "import nipype.interfaces.mrtrix as mrtrix"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": {
+              "name": "NiPype, mrtrix"
+            }
           }
         ]
       },
@@ -1705,7 +1978,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -1718,7 +1993,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "include_file"
+              "argument": {
+                "name": "include_file"
+              }
             }
           ]
         },
@@ -1731,7 +2008,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "include_spec"
+              "argument": {
+                "name": "include_spec"
+              }
             }
           ]
         },
@@ -1744,7 +2023,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "exclude_file"
+              "argument": {
+                "name": "exclude_file"
+              }
             }
           ]
         },
@@ -1757,7 +2038,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "exclude_spec"
+              "argument": {
+                "name": "exclude_spec"
+              }
             }
           ]
         },
@@ -1770,7 +2053,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "minimum_tract_length"
+              "argument": {
+                "name": "minimum_tract_length"
+              }
             }
           ]
         },
@@ -1783,7 +2068,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         },
@@ -1796,7 +2083,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "no_mask_interpolation"
+              "argument": {
+                "name": "no_mask_interpolation"
+              }
             }
           ]
         },
@@ -1809,7 +2098,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "invert"
+              "argument": {
+                "name": "invert"
+              }
             }
           ]
         },
@@ -1822,7 +2113,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "quiet"
+              "argument": {
+                "name": "quiet"
+              }
             }
           ]
         },
@@ -1835,7 +2128,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "debug"
+              "argument": {
+                "name": "debug"
+              }
             }
           ]
         },
@@ -1848,7 +2143,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": {
+                "name": "args"
+              }
             }
           ]
         },
@@ -1861,7 +2158,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "environ"
+              "argument": {
+                "name": "environ"
+              }
             }
           ]
         },
@@ -1874,7 +2173,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": {
+                "name": "terminal_output"
+              }
             }
           ]
         },
@@ -1887,7 +2188,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -1900,7 +2203,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         }
@@ -1919,11 +2224,16 @@
           {
             "language": "NiPype",
             "comment": "Wraps command **find_SH_peaks**",
-            "argument": "mrtrix.FindShPeaks()"
+            "argument": {
+              "name": "mrtrix.FindShPeaks()",
+              "import": "import nipype.interfaces.mrtrix as mrtrix"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": {
+              "name": "NiPype, mrtrix"
+            }
           }
         ]
       },
@@ -1937,7 +2247,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -1950,7 +2262,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "directions_file"
+              "argument": {
+                "name": "directions_file"
+              }
             }
           ]
         },
@@ -1963,7 +2277,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "peaks_image"
+              "argument": {
+                "name": "peaks_image"
+              }
             }
           ]
         },
@@ -1976,7 +2292,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "num_peaks"
+              "argument": {
+                "name": "num_peaks"
+              }
             }
           ]
         },
@@ -1989,7 +2307,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "peak_directions"
+              "argument": {
+                "name": "peak_directions"
+              }
             }
           ]
         },
@@ -2002,7 +2322,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "peak_threshold"
+              "argument": {
+                "name": "peak_threshold"
+              }
             }
           ]
         },
@@ -2015,7 +2337,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "display_info"
+              "argument": {
+                "name": "display_info"
+              }
             }
           ]
         },
@@ -2028,7 +2352,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "quiet_display"
+              "argument": {
+                "name": "quiet_display"
+              }
             }
           ]
         },
@@ -2041,7 +2367,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "display_debug"
+              "argument": {
+                "name": "display_debug"
+              }
             }
           ]
         },
@@ -2054,7 +2382,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         },
@@ -2067,7 +2397,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": {
+                "name": "args"
+              }
             }
           ]
         },
@@ -2080,7 +2412,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "environ"
+              "argument": {
+                "name": "environ"
+              }
             }
           ]
         },
@@ -2093,7 +2427,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": {
+                "name": "terminal_output"
+              }
             }
           ]
         },
@@ -2106,7 +2442,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -2119,7 +2457,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         }
@@ -2138,11 +2478,16 @@
           {
             "language": "NiPype",
             "comment": "Wraps command **gendir**",
-            "argument": "mrtrix.GenerateDirections()"
+            "argument": {
+              "name": "mrtrix.GenerateDirections()",
+              "import": "import nipype.interfaces.mrtrix as mrtrix"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": {
+              "name": "NiPype, mrtrix"
+            }
           }
         ]
       },
@@ -2156,7 +2501,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "num_dirs"
+              "argument": {
+                "name": "num_dirs"
+              }
             }
           ]
         },
@@ -2169,7 +2516,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "power"
+              "argument": {
+                "name": "power"
+              }
             }
           ]
         },
@@ -2182,7 +2531,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "niter"
+              "argument": {
+                "name": "niter"
+              }
             }
           ]
         },
@@ -2195,7 +2546,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "display_info"
+              "argument": {
+                "name": "display_info"
+              }
             }
           ]
         },
@@ -2208,7 +2561,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "quiet_display"
+              "argument": {
+                "name": "quiet_display"
+              }
             }
           ]
         },
@@ -2221,7 +2576,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "display_debug"
+              "argument": {
+                "name": "display_debug"
+              }
             }
           ]
         },
@@ -2234,7 +2591,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         },
@@ -2247,7 +2606,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": {
+                "name": "args"
+              }
             }
           ]
         },
@@ -2260,7 +2621,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "environ"
+              "argument": {
+                "name": "environ"
+              }
             }
           ]
         },
@@ -2273,7 +2636,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": {
+                "name": "terminal_output"
+              }
             }
           ]
         },
@@ -2286,7 +2651,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -2299,7 +2666,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         }
@@ -2318,11 +2687,16 @@
           {
             "language": "NiPype",
             "comment": "Wraps command **gen_WM_mask**",
-            "argument": "mrtrix.GenerateWhiteMatterMask()"
+            "argument": {
+              "name": "mrtrix.GenerateWhiteMatterMask()",
+              "import": "import nipype.interfaces.mrtrix as mrtrix"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": {
+              "name": "NiPype, mrtrix"
+            }
           }
         ]
       },
@@ -2336,7 +2710,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -2349,20 +2725,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "binary_mask"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "out_WMProb_filename",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "out_WMProb_filename"
+              "argument": {
+                "name": "binary_mask"
+              }
             }
           ]
         },
@@ -2375,7 +2740,24 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "encoding_file"
+              "argument": {
+                "name": "encoding_file"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_WMProb_filename",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "out_WMProb_filename"
+              }
             }
           ]
         },
@@ -2388,7 +2770,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "noise_level_margin"
+              "argument": {
+                "name": "noise_level_margin"
+              }
             }
           ]
         },
@@ -2401,7 +2785,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": {
+                "name": "args"
+              }
             }
           ]
         },
@@ -2414,7 +2800,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "environ"
+              "argument": {
+                "name": "environ"
+              }
             }
           ]
         },
@@ -2427,7 +2815,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": {
+                "name": "terminal_output"
+              }
             }
           ]
         },
@@ -2440,7 +2830,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -2453,7 +2845,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "WMprobabilitymap"
+              "argument": {
+                "name": "WMprobabilitymap"
+              }
             }
           ]
         }
@@ -2472,11 +2866,16 @@
           {
             "language": "NiPype",
             "comment": "Wraps command **mrconvert**",
-            "argument": "mrtrix.MRConvert()"
+            "argument": {
+              "name": "mrtrix.MRConvert()",
+              "import": "import nipype.interfaces.mrtrix as mrtrix"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": {
+              "name": "NiPype, mrtrix"
+            }
           }
         ]
       },
@@ -2490,7 +2889,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -2503,7 +2904,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_filename"
+              "argument": {
+                "name": "out_filename"
+              }
             }
           ]
         },
@@ -2516,7 +2919,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "extract_at_axis"
+              "argument": {
+                "name": "extract_at_axis"
+              }
             }
           ]
         },
@@ -2529,7 +2934,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "extract_at_coordinate"
+              "argument": {
+                "name": "extract_at_coordinate"
+              }
             }
           ]
         },
@@ -2542,7 +2949,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "voxel_dims"
+              "argument": {
+                "name": "voxel_dims"
+              }
             }
           ]
         },
@@ -2555,7 +2964,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "output_datatype"
+              "argument": {
+                "name": "output_datatype"
+              }
             }
           ]
         },
@@ -2568,7 +2979,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "extension"
+              "argument": {
+                "name": "extension"
+              }
             }
           ]
         },
@@ -2581,7 +2994,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "layout"
+              "argument": {
+                "name": "layout"
+              }
             }
           ]
         },
@@ -2594,7 +3009,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "resample"
+              "argument": {
+                "name": "resample"
+              }
             }
           ]
         },
@@ -2607,7 +3024,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "offset_bias"
+              "argument": {
+                "name": "offset_bias"
+              }
             }
           ]
         },
@@ -2620,7 +3039,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "replace_NaN_with_zero"
+              "argument": {
+                "name": "replace_NaN_with_zero"
+              }
             }
           ]
         },
@@ -2633,7 +3054,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "prs"
+              "argument": {
+                "name": "prs"
+              }
             }
           ]
         },
@@ -2646,7 +3069,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": {
+                "name": "args"
+              }
             }
           ]
         },
@@ -2659,7 +3084,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "environ"
+              "argument": {
+                "name": "environ"
+              }
             }
           ]
         },
@@ -2672,7 +3099,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": {
+                "name": "terminal_output"
+              }
             }
           ]
         },
@@ -2685,7 +3114,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -2698,7 +3129,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "converted"
+              "argument": {
+                "name": "converted"
+              }
             }
           ]
         }
@@ -2717,11 +3150,16 @@
           {
             "language": "NiPype",
             "comment": "Wraps command **mrmult**",
-            "argument": "mrtrix.MRMultiply()"
+            "argument": {
+              "name": "mrtrix.MRMultiply()",
+              "import": "import nipype.interfaces.mrtrix as mrtrix"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": {
+              "name": "NiPype, mrtrix"
+            }
           }
         ]
       },
@@ -2735,7 +3173,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": {
+                "name": "in_files"
+              }
             }
           ]
         },
@@ -2748,7 +3188,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_filename"
+              "argument": {
+                "name": "out_filename"
+              }
             }
           ]
         },
@@ -2761,7 +3203,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "quiet"
+              "argument": {
+                "name": "quiet"
+              }
             }
           ]
         },
@@ -2774,7 +3218,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "debug"
+              "argument": {
+                "name": "debug"
+              }
             }
           ]
         },
@@ -2787,7 +3233,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": {
+                "name": "args"
+              }
             }
           ]
         },
@@ -2800,7 +3248,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "environ"
+              "argument": {
+                "name": "environ"
+              }
             }
           ]
         },
@@ -2813,7 +3263,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": {
+                "name": "terminal_output"
+              }
             }
           ]
         },
@@ -2826,7 +3278,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -2839,7 +3293,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         }
@@ -2858,11 +3314,16 @@
           {
             "language": "NiPype",
             "comment": "Converts MRtrix (.tck) tract files into TrackVis (.trk) format",
-            "argument": "mrtrix.MRTrix2TrackVis()"
+            "argument": {
+              "name": "mrtrix.MRTrix2TrackVis()",
+              "import": "import nipype.interfaces.mrtrix as mrtrix"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": {
+              "name": "NiPype, mrtrix"
+            }
           }
         ]
       },
@@ -2876,7 +3337,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -2889,7 +3352,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "image_file"
+              "argument": {
+                "name": "image_file"
+              }
             }
           ]
         },
@@ -2902,7 +3367,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "matrix_file"
+              "argument": {
+                "name": "matrix_file"
+              }
             }
           ]
         },
@@ -2915,7 +3382,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "registration_image_file"
+              "argument": {
+                "name": "registration_image_file"
+              }
             }
           ]
         },
@@ -2928,7 +3397,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_filename"
+              "argument": {
+                "name": "out_filename"
+              }
             }
           ]
         },
@@ -2941,7 +3412,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         }
@@ -2960,11 +3433,16 @@
           {
             "language": "NiPype",
             "comment": "Wraps command **mrinfo**",
-            "argument": "mrtrix.MRTrixInfo()"
+            "argument": {
+              "name": "mrtrix.MRTrixInfo()",
+              "import": "import nipype.interfaces.mrtrix as mrtrix"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": {
+              "name": "NiPype, mrtrix"
+            }
           }
         ]
       },
@@ -2978,7 +3456,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -2991,7 +3471,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": {
+                "name": "args"
+              }
             }
           ]
         },
@@ -3004,7 +3486,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "environ"
+              "argument": {
+                "name": "environ"
+              }
             }
           ]
         },
@@ -3017,7 +3501,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": {
+                "name": "terminal_output"
+              }
             }
           ]
         },
@@ -3030,7 +3516,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         }
@@ -3049,11 +3537,16 @@
           {
             "language": "NiPype",
             "comment": "Wraps command **mrview**",
-            "argument": "mrtrix.MRTrixViewer()"
+            "argument": {
+              "name": "mrtrix.MRTrixViewer()",
+              "import": "import nipype.interfaces.mrtrix as mrtrix"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": {
+              "name": "NiPype, mrtrix"
+            }
           }
         ]
       },
@@ -3067,7 +3560,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": {
+                "name": "in_files"
+              }
             }
           ]
         },
@@ -3080,7 +3575,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "quiet"
+              "argument": {
+                "name": "quiet"
+              }
             }
           ]
         },
@@ -3093,7 +3590,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "debug"
+              "argument": {
+                "name": "debug"
+              }
             }
           ]
         },
@@ -3106,7 +3605,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": {
+                "name": "args"
+              }
             }
           ]
         },
@@ -3119,7 +3620,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "environ"
+              "argument": {
+                "name": "environ"
+              }
             }
           ]
         },
@@ -3132,7 +3635,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": {
+                "name": "terminal_output"
+              }
             }
           ]
         },
@@ -3145,7 +3650,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         }
@@ -3164,11 +3671,16 @@
           {
             "language": "NiPype",
             "comment": "Wraps command **median3D**",
-            "argument": "mrtrix.MedianFilter3D()"
+            "argument": {
+              "name": "mrtrix.MedianFilter3D()",
+              "import": "import nipype.interfaces.mrtrix as mrtrix"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": {
+              "name": "NiPype, mrtrix"
+            }
           }
         ]
       },
@@ -3182,7 +3694,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -3195,7 +3709,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_filename"
+              "argument": {
+                "name": "out_filename"
+              }
             }
           ]
         },
@@ -3208,7 +3724,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "quiet"
+              "argument": {
+                "name": "quiet"
+              }
             }
           ]
         },
@@ -3221,7 +3739,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "debug"
+              "argument": {
+                "name": "debug"
+              }
             }
           ]
         },
@@ -3234,7 +3754,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": {
+                "name": "args"
+              }
             }
           ]
         },
@@ -3247,7 +3769,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "environ"
+              "argument": {
+                "name": "environ"
+              }
             }
           ]
         },
@@ -3260,7 +3784,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": {
+                "name": "terminal_output"
+              }
             }
           ]
         },
@@ -3273,7 +3799,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -3286,7 +3814,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         }
@@ -3305,28 +3835,20 @@
           {
             "language": "NiPype",
             "comment": "Wraps command **streamtrack**",
-            "argument": "mrtrix.ProbabilisticSphericallyDeconvolutedStreamlineTrack()"
+            "argument": {
+              "name": "mrtrix.ProbabilisticSphericallyDeconvolutedStreamlineTrack()",
+              "import": "import nipype.interfaces.mrtrix as mrtrix"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": {
+              "name": "NiPype, mrtrix"
+            }
           }
         ]
       },
       "ports": [
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "maximum_number_of_trials",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "maximum_number_of_trials"
-            }
-          ]
-        },
         {
           "input": true,
           "output": false,
@@ -3336,7 +3858,24 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "maximum_number_of_trials",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "maximum_number_of_trials"
+              }
             }
           ]
         },
@@ -3349,7 +3888,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "seed_file"
+              "argument": {
+                "name": "seed_file"
+              }
             }
           ]
         },
@@ -3362,7 +3903,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "seed_spec"
+              "argument": {
+                "name": "seed_spec"
+              }
             }
           ]
         },
@@ -3375,7 +3918,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "include_file"
+              "argument": {
+                "name": "include_file"
+              }
             }
           ]
         },
@@ -3388,7 +3933,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "include_spec"
+              "argument": {
+                "name": "include_spec"
+              }
             }
           ]
         },
@@ -3401,7 +3948,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "exclude_file"
+              "argument": {
+                "name": "exclude_file"
+              }
             }
           ]
         },
@@ -3414,7 +3963,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "exclude_spec"
+              "argument": {
+                "name": "exclude_spec"
+              }
             }
           ]
         },
@@ -3427,7 +3978,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_file"
+              "argument": {
+                "name": "mask_file"
+              }
             }
           ]
         },
@@ -3440,7 +3993,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_spec"
+              "argument": {
+                "name": "mask_spec"
+              }
             }
           ]
         },
@@ -3453,7 +4008,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputmodel"
+              "argument": {
+                "name": "inputmodel"
+              }
             }
           ]
         },
@@ -3466,7 +4023,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "stop"
+              "argument": {
+                "name": "stop"
+              }
             }
           ]
         },
@@ -3479,7 +4038,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "do_not_precompute"
+              "argument": {
+                "name": "do_not_precompute"
+              }
             }
           ]
         },
@@ -3492,7 +4053,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "unidirectional"
+              "argument": {
+                "name": "unidirectional"
+              }
             }
           ]
         },
@@ -3505,7 +4068,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "no_mask_interpolation"
+              "argument": {
+                "name": "no_mask_interpolation"
+              }
             }
           ]
         },
@@ -3518,7 +4083,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "step_size"
+              "argument": {
+                "name": "step_size"
+              }
             }
           ]
         },
@@ -3531,7 +4098,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "minimum_radius_of_curvature"
+              "argument": {
+                "name": "minimum_radius_of_curvature"
+              }
             }
           ]
         },
@@ -3544,7 +4113,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "desired_number_of_tracks"
+              "argument": {
+                "name": "desired_number_of_tracks"
+              }
             }
           ]
         },
@@ -3557,7 +4128,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "maximum_number_of_tracks"
+              "argument": {
+                "name": "maximum_number_of_tracks"
+              }
             }
           ]
         },
@@ -3570,7 +4143,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "minimum_tract_length"
+              "argument": {
+                "name": "minimum_tract_length"
+              }
             }
           ]
         },
@@ -3583,7 +4158,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "maximum_tract_length"
+              "argument": {
+                "name": "maximum_tract_length"
+              }
             }
           ]
         },
@@ -3596,7 +4173,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "cutoff_value"
+              "argument": {
+                "name": "cutoff_value"
+              }
             }
           ]
         },
@@ -3609,7 +4188,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "initial_cutoff_value"
+              "argument": {
+                "name": "initial_cutoff_value"
+              }
             }
           ]
         },
@@ -3622,7 +4203,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "initial_direction"
+              "argument": {
+                "name": "initial_direction"
+              }
             }
           ]
         },
@@ -3635,7 +4218,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         },
@@ -3648,7 +4233,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": {
+                "name": "args"
+              }
             }
           ]
         },
@@ -3661,7 +4248,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "environ"
+              "argument": {
+                "name": "environ"
+              }
             }
           ]
         },
@@ -3674,7 +4263,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": {
+                "name": "terminal_output"
+              }
             }
           ]
         },
@@ -3687,7 +4278,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -3700,7 +4293,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "tracked"
+              "argument": {
+                "name": "tracked"
+              }
             }
           ]
         }
@@ -3719,11 +4314,16 @@
           {
             "language": "NiPype",
             "comment": "Wraps command **streamtrack**",
-            "argument": "mrtrix.SphericallyDeconvolutedStreamlineTrack()"
+            "argument": {
+              "name": "mrtrix.SphericallyDeconvolutedStreamlineTrack()",
+              "import": "import nipype.interfaces.mrtrix as mrtrix"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": {
+              "name": "NiPype, mrtrix"
+            }
           }
         ]
       },
@@ -3737,7 +4337,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -3750,7 +4352,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "seed_file"
+              "argument": {
+                "name": "seed_file"
+              }
             }
           ]
         },
@@ -3763,7 +4367,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "seed_spec"
+              "argument": {
+                "name": "seed_spec"
+              }
             }
           ]
         },
@@ -3776,7 +4382,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "include_file"
+              "argument": {
+                "name": "include_file"
+              }
             }
           ]
         },
@@ -3789,7 +4397,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "include_spec"
+              "argument": {
+                "name": "include_spec"
+              }
             }
           ]
         },
@@ -3802,7 +4412,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "exclude_file"
+              "argument": {
+                "name": "exclude_file"
+              }
             }
           ]
         },
@@ -3815,7 +4427,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "exclude_spec"
+              "argument": {
+                "name": "exclude_spec"
+              }
             }
           ]
         },
@@ -3828,7 +4442,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_file"
+              "argument": {
+                "name": "mask_file"
+              }
             }
           ]
         },
@@ -3841,7 +4457,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_spec"
+              "argument": {
+                "name": "mask_spec"
+              }
             }
           ]
         },
@@ -3854,7 +4472,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputmodel"
+              "argument": {
+                "name": "inputmodel"
+              }
             }
           ]
         },
@@ -3867,7 +4487,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "stop"
+              "argument": {
+                "name": "stop"
+              }
             }
           ]
         },
@@ -3880,7 +4502,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "do_not_precompute"
+              "argument": {
+                "name": "do_not_precompute"
+              }
             }
           ]
         },
@@ -3893,7 +4517,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "unidirectional"
+              "argument": {
+                "name": "unidirectional"
+              }
             }
           ]
         },
@@ -3906,7 +4532,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "no_mask_interpolation"
+              "argument": {
+                "name": "no_mask_interpolation"
+              }
             }
           ]
         },
@@ -3919,7 +4547,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "step_size"
+              "argument": {
+                "name": "step_size"
+              }
             }
           ]
         },
@@ -3932,7 +4562,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "minimum_radius_of_curvature"
+              "argument": {
+                "name": "minimum_radius_of_curvature"
+              }
             }
           ]
         },
@@ -3945,7 +4577,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "desired_number_of_tracks"
+              "argument": {
+                "name": "desired_number_of_tracks"
+              }
             }
           ]
         },
@@ -3958,7 +4592,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "maximum_number_of_tracks"
+              "argument": {
+                "name": "maximum_number_of_tracks"
+              }
             }
           ]
         },
@@ -3971,7 +4607,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "minimum_tract_length"
+              "argument": {
+                "name": "minimum_tract_length"
+              }
             }
           ]
         },
@@ -3984,7 +4622,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "maximum_tract_length"
+              "argument": {
+                "name": "maximum_tract_length"
+              }
             }
           ]
         },
@@ -3997,7 +4637,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "cutoff_value"
+              "argument": {
+                "name": "cutoff_value"
+              }
             }
           ]
         },
@@ -4010,7 +4652,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "initial_cutoff_value"
+              "argument": {
+                "name": "initial_cutoff_value"
+              }
             }
           ]
         },
@@ -4023,7 +4667,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "initial_direction"
+              "argument": {
+                "name": "initial_direction"
+              }
             }
           ]
         },
@@ -4036,7 +4682,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         },
@@ -4049,7 +4697,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": {
+                "name": "args"
+              }
             }
           ]
         },
@@ -4062,7 +4712,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "environ"
+              "argument": {
+                "name": "environ"
+              }
             }
           ]
         },
@@ -4075,7 +4727,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": {
+                "name": "terminal_output"
+              }
             }
           ]
         },
@@ -4088,7 +4742,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -4101,7 +4757,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "tracked"
+              "argument": {
+                "name": "tracked"
+              }
             }
           ]
         }
@@ -4120,11 +4778,16 @@
           {
             "language": "NiPype",
             "comment": "Wraps command **streamtrack**",
-            "argument": "mrtrix.StreamlineTrack()"
+            "argument": {
+              "name": "mrtrix.StreamlineTrack()",
+              "import": "import nipype.interfaces.mrtrix as mrtrix"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": {
+              "name": "NiPype, mrtrix"
+            }
           }
         ]
       },
@@ -4138,7 +4801,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -4151,7 +4816,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "seed_file"
+              "argument": {
+                "name": "seed_file"
+              }
             }
           ]
         },
@@ -4164,7 +4831,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "seed_spec"
+              "argument": {
+                "name": "seed_spec"
+              }
             }
           ]
         },
@@ -4177,7 +4846,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "include_file"
+              "argument": {
+                "name": "include_file"
+              }
             }
           ]
         },
@@ -4190,7 +4861,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "include_spec"
+              "argument": {
+                "name": "include_spec"
+              }
             }
           ]
         },
@@ -4203,7 +4876,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "exclude_file"
+              "argument": {
+                "name": "exclude_file"
+              }
             }
           ]
         },
@@ -4216,7 +4891,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "exclude_spec"
+              "argument": {
+                "name": "exclude_spec"
+              }
             }
           ]
         },
@@ -4229,7 +4906,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_file"
+              "argument": {
+                "name": "mask_file"
+              }
             }
           ]
         },
@@ -4242,7 +4921,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_spec"
+              "argument": {
+                "name": "mask_spec"
+              }
             }
           ]
         },
@@ -4255,7 +4936,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inputmodel"
+              "argument": {
+                "name": "inputmodel"
+              }
             }
           ]
         },
@@ -4268,7 +4951,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "stop"
+              "argument": {
+                "name": "stop"
+              }
             }
           ]
         },
@@ -4281,7 +4966,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "do_not_precompute"
+              "argument": {
+                "name": "do_not_precompute"
+              }
             }
           ]
         },
@@ -4294,7 +4981,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "unidirectional"
+              "argument": {
+                "name": "unidirectional"
+              }
             }
           ]
         },
@@ -4307,7 +4996,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "no_mask_interpolation"
+              "argument": {
+                "name": "no_mask_interpolation"
+              }
             }
           ]
         },
@@ -4320,7 +5011,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "step_size"
+              "argument": {
+                "name": "step_size"
+              }
             }
           ]
         },
@@ -4333,7 +5026,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "minimum_radius_of_curvature"
+              "argument": {
+                "name": "minimum_radius_of_curvature"
+              }
             }
           ]
         },
@@ -4346,7 +5041,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "desired_number_of_tracks"
+              "argument": {
+                "name": "desired_number_of_tracks"
+              }
             }
           ]
         },
@@ -4359,7 +5056,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "maximum_number_of_tracks"
+              "argument": {
+                "name": "maximum_number_of_tracks"
+              }
             }
           ]
         },
@@ -4372,7 +5071,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "minimum_tract_length"
+              "argument": {
+                "name": "minimum_tract_length"
+              }
             }
           ]
         },
@@ -4385,7 +5086,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "maximum_tract_length"
+              "argument": {
+                "name": "maximum_tract_length"
+              }
             }
           ]
         },
@@ -4398,7 +5101,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "cutoff_value"
+              "argument": {
+                "name": "cutoff_value"
+              }
             }
           ]
         },
@@ -4411,7 +5116,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "initial_cutoff_value"
+              "argument": {
+                "name": "initial_cutoff_value"
+              }
             }
           ]
         },
@@ -4424,7 +5131,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "initial_direction"
+              "argument": {
+                "name": "initial_direction"
+              }
             }
           ]
         },
@@ -4437,7 +5146,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         },
@@ -4450,7 +5161,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": {
+                "name": "args"
+              }
             }
           ]
         },
@@ -4463,7 +5176,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "environ"
+              "argument": {
+                "name": "environ"
+              }
             }
           ]
         },
@@ -4476,7 +5191,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": {
+                "name": "terminal_output"
+              }
             }
           ]
         },
@@ -4489,7 +5206,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -4502,7 +5221,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "tracked"
+              "argument": {
+                "name": "tracked"
+              }
             }
           ]
         }
@@ -4521,11 +5242,16 @@
           {
             "language": "NiPype",
             "comment": "Wraps command **tensor2ADC**",
-            "argument": "mrtrix.Tensor2ApparentDiffusion()"
+            "argument": {
+              "name": "mrtrix.Tensor2ApparentDiffusion()",
+              "import": "import nipype.interfaces.mrtrix as mrtrix"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": {
+              "name": "NiPype, mrtrix"
+            }
           }
         ]
       },
@@ -4539,7 +5265,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -4552,7 +5280,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_filename"
+              "argument": {
+                "name": "out_filename"
+              }
             }
           ]
         },
@@ -4565,7 +5295,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "quiet"
+              "argument": {
+                "name": "quiet"
+              }
             }
           ]
         },
@@ -4578,7 +5310,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "debug"
+              "argument": {
+                "name": "debug"
+              }
             }
           ]
         },
@@ -4591,7 +5325,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": {
+                "name": "args"
+              }
             }
           ]
         },
@@ -4604,7 +5340,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "environ"
+              "argument": {
+                "name": "environ"
+              }
             }
           ]
         },
@@ -4617,7 +5355,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": {
+                "name": "terminal_output"
+              }
             }
           ]
         },
@@ -4630,7 +5370,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -4643,7 +5385,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ADC"
+              "argument": {
+                "name": "ADC"
+              }
             }
           ]
         }
@@ -4662,11 +5406,16 @@
           {
             "language": "NiPype",
             "comment": "Wraps command **tensor2FA**",
-            "argument": "mrtrix.Tensor2FractionalAnisotropy()"
+            "argument": {
+              "name": "mrtrix.Tensor2FractionalAnisotropy()",
+              "import": "import nipype.interfaces.mrtrix as mrtrix"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": {
+              "name": "NiPype, mrtrix"
+            }
           }
         ]
       },
@@ -4680,7 +5429,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -4693,7 +5444,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_filename"
+              "argument": {
+                "name": "out_filename"
+              }
             }
           ]
         },
@@ -4706,7 +5459,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "quiet"
+              "argument": {
+                "name": "quiet"
+              }
             }
           ]
         },
@@ -4719,7 +5474,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "debug"
+              "argument": {
+                "name": "debug"
+              }
             }
           ]
         },
@@ -4732,7 +5489,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": {
+                "name": "args"
+              }
             }
           ]
         },
@@ -4745,7 +5504,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "environ"
+              "argument": {
+                "name": "environ"
+              }
             }
           ]
         },
@@ -4758,7 +5519,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": {
+                "name": "terminal_output"
+              }
             }
           ]
         },
@@ -4771,7 +5534,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -4784,7 +5549,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "FA"
+              "argument": {
+                "name": "FA"
+              }
             }
           ]
         }
@@ -4803,11 +5570,16 @@
           {
             "language": "NiPype",
             "comment": "Wraps command **tensor2vector**",
-            "argument": "mrtrix.Tensor2Vector()"
+            "argument": {
+              "name": "mrtrix.Tensor2Vector()",
+              "import": "import nipype.interfaces.mrtrix as mrtrix"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": {
+              "name": "NiPype, mrtrix"
+            }
           }
         ]
       },
@@ -4821,7 +5593,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -4834,7 +5608,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_filename"
+              "argument": {
+                "name": "out_filename"
+              }
             }
           ]
         },
@@ -4847,7 +5623,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "quiet"
+              "argument": {
+                "name": "quiet"
+              }
             }
           ]
         },
@@ -4860,7 +5638,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "debug"
+              "argument": {
+                "name": "debug"
+              }
             }
           ]
         },
@@ -4873,7 +5653,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": {
+                "name": "args"
+              }
             }
           ]
         },
@@ -4886,7 +5668,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "environ"
+              "argument": {
+                "name": "environ"
+              }
             }
           ]
         },
@@ -4899,7 +5683,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": {
+                "name": "terminal_output"
+              }
             }
           ]
         },
@@ -4912,7 +5698,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -4925,7 +5713,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "vector"
+              "argument": {
+                "name": "vector"
+              }
             }
           ]
         }
@@ -4944,11 +5734,16 @@
           {
             "language": "NiPype",
             "comment": "Wraps command **threshold**",
-            "argument": "mrtrix.Threshold()"
+            "argument": {
+              "name": "mrtrix.Threshold()",
+              "import": "import nipype.interfaces.mrtrix as mrtrix"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": {
+              "name": "NiPype, mrtrix"
+            }
           }
         ]
       },
@@ -4962,7 +5757,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -4975,7 +5772,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_filename"
+              "argument": {
+                "name": "out_filename"
+              }
             }
           ]
         },
@@ -4988,7 +5787,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "absolute_threshold_value"
+              "argument": {
+                "name": "absolute_threshold_value"
+              }
             }
           ]
         },
@@ -5001,7 +5802,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "percentage_threshold_value"
+              "argument": {
+                "name": "percentage_threshold_value"
+              }
             }
           ]
         },
@@ -5014,7 +5817,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "invert"
+              "argument": {
+                "name": "invert"
+              }
             }
           ]
         },
@@ -5027,7 +5832,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "replace_zeros_with_NaN"
+              "argument": {
+                "name": "replace_zeros_with_NaN"
+              }
             }
           ]
         },
@@ -5040,7 +5847,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "quiet"
+              "argument": {
+                "name": "quiet"
+              }
             }
           ]
         },
@@ -5053,7 +5862,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "debug"
+              "argument": {
+                "name": "debug"
+              }
             }
           ]
         },
@@ -5066,7 +5877,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": {
+                "name": "args"
+              }
             }
           ]
         },
@@ -5079,7 +5892,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "environ"
+              "argument": {
+                "name": "environ"
+              }
             }
           ]
         },
@@ -5092,7 +5907,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": {
+                "name": "terminal_output"
+              }
             }
           ]
         },
@@ -5105,7 +5922,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -5118,7 +5937,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         }
@@ -5137,11 +5958,16 @@
           {
             "language": "NiPype",
             "comment": "Wraps command **tracks2prob**",
-            "argument": "mrtrix.Tracks2Prob()"
+            "argument": {
+              "name": "mrtrix.Tracks2Prob()",
+              "import": "import nipype.interfaces.mrtrix as mrtrix"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, mrtrix"
+            "argument": {
+              "name": "NiPype, mrtrix"
+            }
           }
         ]
       },
@@ -5155,7 +5981,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -5168,7 +5996,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "template_file"
+              "argument": {
+                "name": "template_file"
+              }
             }
           ]
         },
@@ -5181,7 +6011,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "voxel_dims"
+              "argument": {
+                "name": "voxel_dims"
+              }
             }
           ]
         },
@@ -5194,7 +6026,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "colour"
+              "argument": {
+                "name": "colour"
+              }
             }
           ]
         },
@@ -5207,7 +6041,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "fraction"
+              "argument": {
+                "name": "fraction"
+              }
             }
           ]
         },
@@ -5220,7 +6056,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "output_datatype"
+              "argument": {
+                "name": "output_datatype"
+              }
             }
           ]
         },
@@ -5233,7 +6071,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "resample"
+              "argument": {
+                "name": "resample"
+              }
             }
           ]
         },
@@ -5246,7 +6086,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_filename"
+              "argument": {
+                "name": "out_filename"
+              }
             }
           ]
         },
@@ -5259,7 +6101,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "args"
+              "argument": {
+                "name": "args"
+              }
             }
           ]
         },
@@ -5272,7 +6116,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "environ"
+              "argument": {
+                "name": "environ"
+              }
             }
           ]
         },
@@ -5285,7 +6131,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "terminal_output"
+              "argument": {
+                "name": "terminal_output"
+              }
             }
           ]
         },
@@ -5298,7 +6146,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -5311,7 +6161,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "tract_image"
+              "argument": {
+                "name": "tract_image"
+              }
             }
           ]
         }

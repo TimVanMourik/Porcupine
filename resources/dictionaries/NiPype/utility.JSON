@@ -13,11 +13,16 @@
           {
             "language": "NiPype",
             "comment": "",
-            "argument": "utility.AssertEqual()"
+            "argument": {
+              "name": "utility.AssertEqual()",
+              "import": "import nipype.interfaces.utility as utility"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, utility"
+            "argument": {
+              "name": "NiPype, utility"
+            }
           }
         ]
       },
@@ -31,7 +36,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "volume1"
+              "argument": {
+                "name": "volume1"
+              }
             }
           ]
         },
@@ -44,7 +51,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "volume2"
+              "argument": {
+                "name": "volume2"
+              }
             }
           ]
         },
@@ -57,7 +66,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         }
@@ -76,11 +87,16 @@
           {
             "language": "NiPype",
             "comment": "Examples",
-            "argument": "utility.CSVReader()"
+            "argument": {
+              "name": "utility.CSVReader()",
+              "import": "import nipype.interfaces.utility as utility"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, utility"
+            "argument": {
+              "name": "NiPype, utility"
+            }
           }
         ]
       },
@@ -94,7 +110,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -107,7 +125,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "header"
+              "argument": {
+                "name": "header"
+              }
             }
           ]
         }
@@ -126,11 +146,16 @@
           {
             "language": "NiPype",
             "comment": "Runs arbitrary function as an interface",
-            "argument": "utility.Function()"
+            "argument": {
+              "name": "utility.Function()",
+              "import": "import nipype.interfaces.utility as utility"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, utility"
+            "argument": {
+              "name": "NiPype, utility"
+            }
           }
         ]
       },
@@ -144,7 +169,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "function_str"
+              "argument": {
+                "name": "function_str"
+              }
             }
           ]
         },
@@ -157,7 +184,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         }
@@ -176,11 +205,16 @@
           {
             "language": "NiPype",
             "comment": "Basic interface class generates identity mappings",
-            "argument": "utility.IdentityInterface()"
+            "argument": {
+              "name": "utility.IdentityInterface()",
+              "import": "import nipype.interfaces.utility as utility"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, utility"
+            "argument": {
+              "name": "NiPype, utility"
+            }
           }
         ]
       },
@@ -199,11 +233,16 @@
           {
             "language": "NiPype",
             "comment": "Basic interface class to merge inputs into a single list",
-            "argument": "utility.Merge()"
+            "argument": {
+              "name": "utility.Merge()",
+              "import": "import nipype.interfaces.utility as utility"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, utility"
+            "argument": {
+              "name": "NiPype, utility"
+            }
           }
         ]
       },
@@ -217,7 +256,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "axis"
+              "argument": {
+                "name": "axis"
+              }
             }
           ]
         },
@@ -230,7 +271,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "no_flatten"
+              "argument": {
+                "name": "no_flatten"
+              }
             }
           ]
         },
@@ -243,7 +286,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ravel_inputs"
+              "argument": {
+                "name": "ravel_inputs"
+              }
             }
           ]
         },
@@ -256,7 +301,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -269,7 +316,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out"
+              "argument": {
+                "name": "out"
+              }
             }
           ]
         }
@@ -288,11 +337,16 @@
           {
             "language": "NiPype",
             "comment": "Change the name of a file based on a mapped format string.",
-            "argument": "utility.Rename()"
+            "argument": {
+              "name": "utility.Rename()",
+              "import": "import nipype.interfaces.utility as utility"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, utility"
+            "argument": {
+              "name": "NiPype, utility"
+            }
           }
         ]
       },
@@ -306,20 +360,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "keep_ext",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "keep_ext"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -332,7 +375,24 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "format_string"
+              "argument": {
+                "name": "format_string"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "keep_ext",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "keep_ext"
+              }
             }
           ]
         },
@@ -345,7 +405,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "parse_string"
+              "argument": {
+                "name": "parse_string"
+              }
             }
           ]
         },
@@ -358,7 +420,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "use_fullpath"
+              "argument": {
+                "name": "use_fullpath"
+              }
             }
           ]
         },
@@ -371,7 +435,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         }
@@ -390,11 +456,16 @@
           {
             "language": "NiPype",
             "comment": "Basic interface class to select specific elements from a list",
-            "argument": "utility.Select()"
+            "argument": {
+              "name": "utility.Select()",
+              "import": "import nipype.interfaces.utility as utility"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, utility"
+            "argument": {
+              "name": "NiPype, utility"
+            }
           }
         ]
       },
@@ -408,7 +479,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inlist"
+              "argument": {
+                "name": "inlist"
+              }
             }
           ]
         },
@@ -421,7 +494,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "index"
+              "argument": {
+                "name": "index"
+              }
             }
           ]
         },
@@ -434,7 +509,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -447,7 +524,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out"
+              "argument": {
+                "name": "out"
+              }
             }
           ]
         }
@@ -466,11 +545,16 @@
           {
             "language": "NiPype",
             "comment": "Basic interface class to split lists into multiple outputs",
-            "argument": "utility.Split()"
+            "argument": {
+              "name": "utility.Split()",
+              "import": "import nipype.interfaces.utility as utility"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, utility"
+            "argument": {
+              "name": "NiPype, utility"
+            }
           }
         ]
       },
@@ -484,7 +568,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "inlist"
+              "argument": {
+                "name": "inlist"
+              }
             }
           ]
         },
@@ -497,7 +583,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "splits"
+              "argument": {
+                "name": "splits"
+              }
             }
           ]
         },
@@ -510,7 +598,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "squeeze"
+              "argument": {
+                "name": "squeeze"
+              }
             }
           ]
         },
@@ -523,7 +613,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         }

@@ -13,11 +13,16 @@
           {
             "language": "NiPype",
             "comment": "Detects outliers in a functional imaging series",
-            "argument": "rapidart.ArtifactDetect()"
+            "argument": {
+              "name": "rapidart.ArtifactDetect()",
+              "import": "import nipype.algorithms.rapidart as rapidart"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, rapidart"
+            "argument": {
+              "name": "NiPype, algorithms, rapidart"
+            }
           }
         ]
       },
@@ -31,7 +36,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "realigned_files"
+              "argument": {
+                "name": "realigned_files"
+              }
             }
           ]
         },
@@ -44,7 +51,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "realignment_parameters"
+              "argument": {
+                "name": "realignment_parameters"
+              }
             }
           ]
         },
@@ -57,33 +66,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "parameter_source"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "use_differences",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "use_differences"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "use_norm",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "use_norm"
+              "argument": {
+                "name": "parameter_source"
+              }
             }
           ]
         },
@@ -96,7 +81,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "norm_threshold"
+              "argument": {
+                "name": "norm_threshold"
+              }
             }
           ]
         },
@@ -109,7 +96,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "rotation_threshold"
+              "argument": {
+                "name": "rotation_threshold"
+              }
             }
           ]
         },
@@ -122,7 +111,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "translation_threshold"
+              "argument": {
+                "name": "translation_threshold"
+              }
             }
           ]
         },
@@ -135,7 +126,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "zintensity_threshold"
+              "argument": {
+                "name": "zintensity_threshold"
+              }
             }
           ]
         },
@@ -148,7 +141,39 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_type"
+              "argument": {
+                "name": "mask_type"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "use_differences",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "use_differences"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "use_norm",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "use_norm"
+              }
             }
           ]
         },
@@ -161,7 +186,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_file"
+              "argument": {
+                "name": "mask_file"
+              }
             }
           ]
         },
@@ -174,7 +201,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_threshold"
+              "argument": {
+                "name": "mask_threshold"
+              }
             }
           ]
         },
@@ -187,7 +216,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "intersect_mask"
+              "argument": {
+                "name": "intersect_mask"
+              }
             }
           ]
         },
@@ -200,7 +231,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "save_plot"
+              "argument": {
+                "name": "save_plot"
+              }
             }
           ]
         },
@@ -213,7 +246,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "plot_type"
+              "argument": {
+                "name": "plot_type"
+              }
             }
           ]
         },
@@ -226,7 +261,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "bound_by_brainmask"
+              "argument": {
+                "name": "bound_by_brainmask"
+              }
             }
           ]
         },
@@ -239,7 +276,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "global_threshold"
+              "argument": {
+                "name": "global_threshold"
+              }
             }
           ]
         },
@@ -252,7 +291,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -265,7 +306,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "outlier_files"
+              "argument": {
+                "name": "outlier_files"
+              }
             }
           ]
         },
@@ -278,7 +321,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "intensity_files"
+              "argument": {
+                "name": "intensity_files"
+              }
             }
           ]
         },
@@ -291,7 +336,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "norm_files"
+              "argument": {
+                "name": "norm_files"
+              }
             }
           ]
         },
@@ -304,7 +351,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "statistic_files"
+              "argument": {
+                "name": "statistic_files"
+              }
             }
           ]
         },
@@ -317,7 +366,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "plot_files"
+              "argument": {
+                "name": "plot_files"
+              }
             }
           ]
         },
@@ -330,7 +381,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_files"
+              "argument": {
+                "name": "mask_files"
+              }
             }
           ]
         },
@@ -343,7 +396,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "displacement_files"
+              "argument": {
+                "name": "displacement_files"
+              }
             }
           ]
         }
@@ -362,11 +417,16 @@
           {
             "language": "NiPype",
             "comment": "Determines if stimuli are correlated with motion or intensity",
-            "argument": "rapidart.StimulusCorrelation()"
+            "argument": {
+              "name": "rapidart.StimulusCorrelation()",
+              "import": "import nipype.algorithms.rapidart as rapidart"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, rapidart"
+            "argument": {
+              "name": "NiPype, algorithms, rapidart"
+            }
           }
         ]
       },
@@ -380,7 +440,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "realignment_parameters"
+              "argument": {
+                "name": "realignment_parameters"
+              }
             }
           ]
         },
@@ -393,7 +455,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "intensity_values"
+              "argument": {
+                "name": "intensity_values"
+              }
             }
           ]
         },
@@ -406,7 +470,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "spm_mat_file"
+              "argument": {
+                "name": "spm_mat_file"
+              }
             }
           ]
         },
@@ -419,7 +485,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "concatenated_design"
+              "argument": {
+                "name": "concatenated_design"
+              }
             }
           ]
         },
@@ -432,7 +500,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -445,7 +515,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "stimcorr_files"
+              "argument": {
+                "name": "stimcorr_files"
+              }
             }
           ]
         }

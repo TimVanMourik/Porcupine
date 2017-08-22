@@ -13,11 +13,16 @@
           {
             "language": "NiPype",
             "comment": "Short interface to add an extra column and field to a text file",
-            "argument": "misc.AddCSVColumn()"
+            "argument": {
+              "name": "misc.AddCSVColumn()",
+              "import": "import nipype.algorithms.misc as misc"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, misc"
+            "argument": {
+              "name": "NiPype, algorithms, misc"
+            }
           }
         ]
       },
@@ -31,7 +36,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -44,7 +51,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         },
@@ -57,7 +66,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "extra_column_heading"
+              "argument": {
+                "name": "extra_column_heading"
+              }
             }
           ]
         },
@@ -70,7 +81,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "extra_field"
+              "argument": {
+                "name": "extra_field"
+              }
             }
           ]
         },
@@ -83,7 +96,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "csv_file"
+              "argument": {
+                "name": "csv_file"
+              }
             }
           ]
         }
@@ -102,11 +117,16 @@
           {
             "language": "NiPype",
             "comment": "Simple interface to add an extra row to a csv file",
-            "argument": "misc.AddCSVRow()"
+            "argument": {
+              "name": "misc.AddCSVRow()",
+              "import": "import nipype.algorithms.misc as misc"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, misc"
+            "argument": {
+              "name": "NiPype, algorithms, misc"
+            }
           }
         ]
       },
@@ -120,7 +140,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -133,7 +155,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "_outputs"
+              "argument": {
+                "name": "_outputs"
+              }
             }
           ]
         },
@@ -146,7 +170,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -159,7 +185,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "csv_file"
+              "argument": {
+                "name": "csv_file"
+              }
             }
           ]
         }
@@ -178,11 +206,16 @@
           {
             "language": "NiPype",
             "comment": "Corrupts with noise the input image",
-            "argument": "misc.AddNoise()"
+            "argument": {
+              "name": "misc.AddNoise()",
+              "import": "import nipype.algorithms.misc as misc"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, misc"
+            "argument": {
+              "name": "NiPype, algorithms, misc"
+            }
           }
         ]
       },
@@ -196,33 +229,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "in_mask",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "in_mask"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "snr",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "snr"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -235,7 +244,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "dist"
+              "argument": {
+                "name": "dist"
+              }
             }
           ]
         },
@@ -248,7 +259,39 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "bg_dist"
+              "argument": {
+                "name": "bg_dist"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "in_mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "in_mask"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "snr",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "snr"
+              }
             }
           ]
         },
@@ -261,7 +304,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         },
@@ -274,7 +319,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         }
@@ -293,11 +340,16 @@
           {
             "language": "NiPype",
             "comment": "Calculates moments of timeseries.",
-            "argument": "misc.CalculateNormalizedMoments()"
+            "argument": {
+              "name": "misc.CalculateNormalizedMoments()",
+              "import": "import nipype.algorithms.misc as misc"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, misc"
+            "argument": {
+              "name": "NiPype, algorithms, misc"
+            }
           }
         ]
       },
@@ -311,7 +363,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "timeseries_file"
+              "argument": {
+                "name": "timeseries_file"
+              }
             }
           ]
         },
@@ -324,7 +378,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "moment"
+              "argument": {
+                "name": "moment"
+              }
             }
           ]
         },
@@ -337,7 +393,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "moments"
+              "argument": {
+                "name": "moments"
+              }
             }
           ]
         }
@@ -356,11 +414,16 @@
           {
             "language": "NiPype",
             "comment": "Creates a nifti volume",
-            "argument": "misc.CreateNifti()"
+            "argument": {
+              "name": "misc.CreateNifti()",
+              "import": "import nipype.algorithms.misc as misc"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, misc"
+            "argument": {
+              "name": "NiPype, algorithms, misc"
+            }
           }
         ]
       },
@@ -374,7 +437,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "data_file"
+              "argument": {
+                "name": "data_file"
+              }
             }
           ]
         },
@@ -387,7 +452,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "header_file"
+              "argument": {
+                "name": "header_file"
+              }
             }
           ]
         },
@@ -400,7 +467,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "affine"
+              "argument": {
+                "name": "affine"
+              }
             }
           ]
         },
@@ -413,7 +482,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -426,7 +497,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "nifti_file"
+              "argument": {
+                "name": "nifti_file"
+              }
             }
           ]
         }
@@ -445,11 +518,16 @@
           {
             "language": "NiPype",
             "comment": "Calculates distance between two volumes.",
-            "argument": "misc.Distance()"
+            "argument": {
+              "name": "misc.Distance()",
+              "import": "import nipype.algorithms.misc as misc"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, misc"
+            "argument": {
+              "name": "NiPype, algorithms, misc"
+            }
           }
         ]
       },
@@ -463,7 +541,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "volume1"
+              "argument": {
+                "name": "volume1"
+              }
             }
           ]
         },
@@ -476,7 +556,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "volume2"
+              "argument": {
+                "name": "volume2"
+              }
             }
           ]
         },
@@ -489,7 +571,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "method"
+              "argument": {
+                "name": "method"
+              }
             }
           ]
         },
@@ -502,7 +586,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_volume"
+              "argument": {
+                "name": "mask_volume"
+              }
             }
           ]
         },
@@ -515,7 +601,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -528,7 +616,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "distance"
+              "argument": {
+                "name": "distance"
+              }
             }
           ]
         },
@@ -541,7 +631,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "point1"
+              "argument": {
+                "name": "point1"
+              }
             }
           ]
         },
@@ -554,7 +646,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "point2"
+              "argument": {
+                "name": "point2"
+              }
             }
           ]
         },
@@ -567,7 +661,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "histogram"
+              "argument": {
+                "name": "histogram"
+              }
             }
           ]
         }
@@ -586,11 +682,16 @@
           {
             "language": "NiPype",
             "comment": "Calculates various overlap measures between two maps, using a fuzzy",
-            "argument": "misc.FuzzyOverlap()"
+            "argument": {
+              "name": "misc.FuzzyOverlap()",
+              "import": "import nipype.algorithms.misc as misc"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, misc"
+            "argument": {
+              "name": "NiPype, algorithms, misc"
+            }
           }
         ]
       },
@@ -604,7 +705,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_ref"
+              "argument": {
+                "name": "in_ref"
+              }
             }
           ]
         },
@@ -617,7 +720,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_tst"
+              "argument": {
+                "name": "in_tst"
+              }
             }
           ]
         },
@@ -630,7 +735,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "weighting"
+              "argument": {
+                "name": "weighting"
+              }
             }
           ]
         },
@@ -643,7 +750,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         },
@@ -656,7 +765,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -669,7 +780,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "jaccard"
+              "argument": {
+                "name": "jaccard"
+              }
             }
           ]
         },
@@ -682,7 +795,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "dice"
+              "argument": {
+                "name": "dice"
+              }
             }
           ]
         },
@@ -695,7 +810,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "diff_file"
+              "argument": {
+                "name": "diff_file"
+              }
             }
           ]
         },
@@ -708,7 +825,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "class_fji"
+              "argument": {
+                "name": "class_fji"
+              }
             }
           ]
         },
@@ -721,7 +840,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "class_fdi"
+              "argument": {
+                "name": "class_fdi"
+              }
             }
           ]
         }
@@ -740,11 +861,16 @@
           {
             "language": "NiPype",
             "comment": "Gunzip wrapper",
-            "argument": "misc.Gunzip()"
+            "argument": {
+              "name": "misc.Gunzip()",
+              "import": "import nipype.algorithms.misc as misc"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, misc"
+            "argument": {
+              "name": "NiPype, algorithms, misc"
+            }
           }
         ]
       },
@@ -758,7 +884,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -771,7 +899,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -784,7 +914,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         }
@@ -803,11 +935,16 @@
           {
             "language": "NiPype",
             "comment": "Simple interface to save the components of a MATLAB .mat file as a text",
-            "argument": "misc.Matlab2CSV()"
+            "argument": {
+              "name": "misc.Matlab2CSV()",
+              "import": "import nipype.algorithms.misc as misc"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, misc"
+            "argument": {
+              "name": "NiPype, algorithms, misc"
+            }
           }
         ]
       },
@@ -821,7 +958,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -834,7 +973,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "reshape_matrix"
+              "argument": {
+                "name": "reshape_matrix"
+              }
             }
           ]
         },
@@ -847,7 +988,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "csv_files"
+              "argument": {
+                "name": "csv_files"
+              }
             }
           ]
         }
@@ -866,11 +1009,16 @@
           {
             "language": "NiPype",
             "comment": "This interface is designed to facilitate data loading in the R environment.",
-            "argument": "misc.MergeCSVFiles()"
+            "argument": {
+              "name": "misc.MergeCSVFiles()",
+              "import": "import nipype.algorithms.misc as misc"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, misc"
+            "argument": {
+              "name": "NiPype, algorithms, misc"
+            }
           }
         ]
       },
@@ -884,7 +1032,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": {
+                "name": "in_files"
+              }
             }
           ]
         },
@@ -897,7 +1047,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         },
@@ -910,7 +1062,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "column_headings"
+              "argument": {
+                "name": "column_headings"
+              }
             }
           ]
         },
@@ -923,7 +1077,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "row_headings"
+              "argument": {
+                "name": "row_headings"
+              }
             }
           ]
         },
@@ -936,7 +1092,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "row_heading_title"
+              "argument": {
+                "name": "row_heading_title"
+              }
             }
           ]
         },
@@ -949,7 +1107,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "extra_column_heading"
+              "argument": {
+                "name": "extra_column_heading"
+              }
             }
           ]
         },
@@ -962,7 +1122,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "extra_field"
+              "argument": {
+                "name": "extra_field"
+              }
             }
           ]
         },
@@ -975,7 +1137,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "csv_file"
+              "argument": {
+                "name": "csv_file"
+              }
             }
           ]
         }
@@ -994,11 +1158,16 @@
           {
             "language": "NiPype",
             "comment": "Splits a 3D image in small chunks to enable parallel processing.",
-            "argument": "misc.MergeROIs()"
+            "argument": {
+              "name": "misc.MergeROIs()",
+              "import": "import nipype.algorithms.misc as misc"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, misc"
+            "argument": {
+              "name": "NiPype, algorithms, misc"
+            }
           }
         ]
       },
@@ -1012,7 +1181,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": {
+                "name": "in_files"
+              }
             }
           ]
         },
@@ -1025,7 +1196,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_index"
+              "argument": {
+                "name": "in_index"
+              }
             }
           ]
         },
@@ -1038,7 +1211,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_reference"
+              "argument": {
+                "name": "in_reference"
+              }
             }
           ]
         },
@@ -1051,7 +1226,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "merged_file"
+              "argument": {
+                "name": "merged_file"
+              }
             }
           ]
         }
@@ -1070,11 +1247,16 @@
           {
             "language": "NiPype",
             "comment": "Left multiplies the affine matrix with a specified values. Saves the volume",
-            "argument": "misc.ModifyAffine()"
+            "argument": {
+              "name": "misc.ModifyAffine()",
+              "import": "import nipype.algorithms.misc as misc"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, misc"
+            "argument": {
+              "name": "NiPype, algorithms, misc"
+            }
           }
         ]
       },
@@ -1088,7 +1270,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "volumes"
+              "argument": {
+                "name": "volumes"
+              }
             }
           ]
         },
@@ -1101,7 +1285,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "transformation_matrix"
+              "argument": {
+                "name": "transformation_matrix"
+              }
             }
           ]
         },
@@ -1114,7 +1300,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -1127,7 +1315,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "transformed_volumes"
+              "argument": {
+                "name": "transformed_volumes"
+              }
             }
           ]
         }
@@ -1146,11 +1336,16 @@
           {
             "language": "NiPype",
             "comment": "Returns the input tissue probability maps (tpms, aka volume fractions)",
-            "argument": "misc.NormalizeProbabilityMapSet()"
+            "argument": {
+              "name": "misc.NormalizeProbabilityMapSet()",
+              "import": "import nipype.algorithms.misc as misc"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, misc"
+            "argument": {
+              "name": "NiPype, algorithms, misc"
+            }
           }
         ]
       },
@@ -1164,7 +1359,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_files"
+              "argument": {
+                "name": "in_files"
+              }
             }
           ]
         },
@@ -1177,7 +1374,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_mask"
+              "argument": {
+                "name": "in_mask"
+              }
             }
           ]
         },
@@ -1190,7 +1389,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_files"
+              "argument": {
+                "name": "out_files"
+              }
             }
           ]
         }
@@ -1209,11 +1410,16 @@
           {
             "language": "NiPype",
             "comment": "Calculates various overlap measures between two maps.",
-            "argument": "misc.Overlap()"
+            "argument": {
+              "name": "misc.Overlap()",
+              "import": "import nipype.algorithms.misc as misc"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, misc"
+            "argument": {
+              "name": "NiPype, algorithms, misc"
+            }
           }
         ]
       },
@@ -1227,7 +1433,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "volume1"
+              "argument": {
+                "name": "volume1"
+              }
             }
           ]
         },
@@ -1240,20 +1448,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "volume2"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "mask_volume",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "mask_volume"
+              "argument": {
+                "name": "volume2"
+              }
             }
           ]
         },
@@ -1266,33 +1463,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "bg_overlap"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "out_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "out_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "weighting",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "weighting"
+              "argument": {
+                "name": "bg_overlap"
+              }
             }
           ]
         },
@@ -1305,7 +1478,54 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "vol_units"
+              "argument": {
+                "name": "vol_units"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask_volume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "mask_volume"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "out_file"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "weighting",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "weighting"
+              }
             }
           ]
         },
@@ -1318,7 +1538,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -1331,7 +1553,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "jaccard"
+              "argument": {
+                "name": "jaccard"
+              }
             }
           ]
         },
@@ -1344,7 +1568,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "dice"
+              "argument": {
+                "name": "dice"
+              }
             }
           ]
         },
@@ -1357,7 +1583,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "roi_ji"
+              "argument": {
+                "name": "roi_ji"
+              }
             }
           ]
         },
@@ -1370,7 +1598,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "roi_di"
+              "argument": {
+                "name": "roi_di"
+              }
             }
           ]
         },
@@ -1383,7 +1613,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "volume_difference"
+              "argument": {
+                "name": "volume_difference"
+              }
             }
           ]
         },
@@ -1396,7 +1628,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "roi_voldiff"
+              "argument": {
+                "name": "roi_voldiff"
+              }
             }
           ]
         },
@@ -1409,7 +1643,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "labels"
+              "argument": {
+                "name": "labels"
+              }
             }
           ]
         },
@@ -1422,7 +1658,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "diff_file"
+              "argument": {
+                "name": "diff_file"
+              }
             }
           ]
         }
@@ -1441,11 +1679,16 @@
           {
             "language": "NiPype",
             "comment": "Returns ROI masks given an atlas and a list of labels. Supports dilation",
-            "argument": "misc.PickAtlas()"
+            "argument": {
+              "name": "misc.PickAtlas()",
+              "import": "import nipype.algorithms.misc as misc"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, misc"
+            "argument": {
+              "name": "NiPype, algorithms, misc"
+            }
           }
         ]
       },
@@ -1459,7 +1702,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "atlas"
+              "argument": {
+                "name": "atlas"
+              }
             }
           ]
         },
@@ -1472,7 +1717,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "labels"
+              "argument": {
+                "name": "labels"
+              }
             }
           ]
         },
@@ -1485,7 +1732,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "hemi"
+              "argument": {
+                "name": "hemi"
+              }
             }
           ]
         },
@@ -1498,7 +1747,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "dilation_size"
+              "argument": {
+                "name": "dilation_size"
+              }
             }
           ]
         },
@@ -1511,7 +1762,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "output_file"
+              "argument": {
+                "name": "output_file"
+              }
             }
           ]
         },
@@ -1524,7 +1777,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -1537,7 +1792,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_file"
+              "argument": {
+                "name": "mask_file"
+              }
             }
           ]
         }
@@ -1556,11 +1813,16 @@
           {
             "language": "NiPype",
             "comment": "Applies a threshold to input volumes",
-            "argument": "misc.SimpleThreshold()"
+            "argument": {
+              "name": "misc.SimpleThreshold()",
+              "import": "import nipype.algorithms.misc as misc"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, misc"
+            "argument": {
+              "name": "NiPype, algorithms, misc"
+            }
           }
         ]
       },
@@ -1574,7 +1836,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "volumes"
+              "argument": {
+                "name": "volumes"
+              }
             }
           ]
         },
@@ -1587,7 +1851,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "threshold"
+              "argument": {
+                "name": "threshold"
+              }
             }
           ]
         },
@@ -1600,7 +1866,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -1613,7 +1881,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "thresholded_volumes"
+              "argument": {
+                "name": "thresholded_volumes"
+              }
             }
           ]
         }
@@ -1632,11 +1902,16 @@
           {
             "language": "NiPype",
             "comment": "Splits a 3D image in small chunks to enable parallel processing.",
-            "argument": "misc.SplitROIs()"
+            "argument": {
+              "name": "misc.SplitROIs()",
+              "import": "import nipype.algorithms.misc as misc"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, misc"
+            "argument": {
+              "name": "NiPype, algorithms, misc"
+            }
           }
         ]
       },
@@ -1650,7 +1925,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -1663,7 +1940,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_mask"
+              "argument": {
+                "name": "in_mask"
+              }
             }
           ]
         },
@@ -1676,7 +1955,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "roi_size"
+              "argument": {
+                "name": "roi_size"
+              }
             }
           ]
         },
@@ -1689,7 +1970,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_files"
+              "argument": {
+                "name": "out_files"
+              }
             }
           ]
         },
@@ -1702,7 +1985,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_masks"
+              "argument": {
+                "name": "out_masks"
+              }
             }
           ]
         },
@@ -1715,7 +2000,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_index"
+              "argument": {
+                "name": "out_index"
+              }
             }
           ]
         }
@@ -1734,11 +2021,16 @@
           {
             "language": "NiPype",
             "comment": ".. deprecated:: 0.12.1",
-            "argument": "misc.TSNR()"
+            "argument": {
+              "name": "misc.TSNR()",
+              "import": "import nipype.algorithms.misc as misc"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, misc"
+            "argument": {
+              "name": "NiPype, algorithms, misc"
+            }
           }
         ]
       },
@@ -1752,7 +2044,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_file"
+              "argument": {
+                "name": "in_file"
+              }
             }
           ]
         },
@@ -1765,7 +2059,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "regress_poly"
+              "argument": {
+                "name": "regress_poly"
+              }
             }
           ]
         },
@@ -1778,7 +2074,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "tsnr_file"
+              "argument": {
+                "name": "tsnr_file"
+              }
             }
           ]
         },
@@ -1791,7 +2089,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mean_file"
+              "argument": {
+                "name": "mean_file"
+              }
             }
           ]
         },
@@ -1804,7 +2104,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "stddev_file"
+              "argument": {
+                "name": "stddev_file"
+              }
             }
           ]
         },
@@ -1817,7 +2119,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "detrended_file"
+              "argument": {
+                "name": "detrended_file"
+              }
             }
           ]
         },
@@ -1830,7 +2134,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -1843,7 +2149,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "tsnr_file"
+              "argument": {
+                "name": "tsnr_file"
+              }
             }
           ]
         },
@@ -1856,7 +2164,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mean_file"
+              "argument": {
+                "name": "mean_file"
+              }
             }
           ]
         },
@@ -1869,7 +2179,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "stddev_file"
+              "argument": {
+                "name": "stddev_file"
+              }
             }
           ]
         },
@@ -1882,7 +2194,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "detrended_file"
+              "argument": {
+                "name": "detrended_file"
+              }
             }
           ]
         }

@@ -55,7 +55,7 @@ QString TvmGenerator::itemToCode(
     QString code("");
     QJsonObject json = _item->getJson();
     Argument title(json["title"].toObject());
-    if(title.getArgument(s_thisLanguage).isEmpty()) return QString("");
+    if(title.getArgument(s_thisLanguage)["name"].isEmpty()) return QString("");
     code += QString("%% %1\n").arg(title.getComment(s_thisLanguage));
     code += QString("%1 = [];\n").arg(m_configurationVariable);
     //add input
@@ -65,7 +65,7 @@ QString TvmGenerator::itemToCode(
         code += argumentToCode(argument, _item);
     }
     //add function
-    code += QString("%1(%2);\n\n").arg(title.getArgument(s_thisLanguage), m_configurationVariable);
+    code += QString("%1(%2);\n\n").arg(title.getArgument(s_thisLanguage)["name"], m_configurationVariable);
     return code;
 }
 
@@ -76,9 +76,9 @@ QString TvmGenerator::argumentToCode(
 {
     QString code("");
     QString fileName = _item->getParameterName(_argument.m_argumentName);
-    if(!_argument.getArgument(s_thisLanguage).isEmpty() && !fileName.isEmpty())
+    if(!_argument.getArgument(s_thisLanguage)["name"].isEmpty() && !fileName.isEmpty())
     {
-        code += QString("%1.%2 = %3;").arg(m_configurationVariable, _argument.getArgument(s_thisLanguage), fileName);
+        code += QString("%1.%2 = %3;").arg(m_configurationVariable, _argument.getArgument(s_thisLanguage)["name"], fileName);
         if(!_argument.getComment(s_thisLanguage).isEmpty())
         {
             code += "\t% ";

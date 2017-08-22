@@ -13,11 +13,16 @@
           {
             "language": "NiPype",
             "comment": "Makes a model specification compatible with spm/fsl designers.",
-            "argument": "modelgen.SpecifyModel()"
+            "argument": {
+              "name": "modelgen.SpecifyModel()",
+              "import": "import nipype.algorithms.modelgen as modelgen"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, modelgen"
+            "argument": {
+              "name": "NiPype, algorithms, modelgen"
+            }
           }
         ]
       },
@@ -31,7 +36,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "subject_info"
+              "argument": {
+                "name": "subject_info"
+              }
             }
           ]
         },
@@ -44,46 +51,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "event_files"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "realignment_parameters",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "realignment_parameters"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "parameter_source",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "parameter_source"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "outlier_files",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "outlier_files"
+              "argument": {
+                "name": "event_files"
+              }
             }
           ]
         },
@@ -96,7 +66,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "functional_runs"
+              "argument": {
+                "name": "functional_runs"
+              }
             }
           ]
         },
@@ -109,7 +81,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "input_units"
+              "argument": {
+                "name": "input_units"
+              }
             }
           ]
         },
@@ -122,7 +96,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "high_pass_filter_cutoff"
+              "argument": {
+                "name": "high_pass_filter_cutoff"
+              }
             }
           ]
         },
@@ -135,7 +111,54 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "time_repetition"
+              "argument": {
+                "name": "time_repetition"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "realignment_parameters",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "realignment_parameters"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "parameter_source",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "parameter_source"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "outlier_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "outlier_files"
+              }
             }
           ]
         },
@@ -148,7 +171,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -161,7 +186,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "session_info"
+              "argument": {
+                "name": "session_info"
+              }
             }
           ]
         }
@@ -180,41 +207,20 @@
           {
             "language": "NiPype",
             "comment": "Adds SPM specific options to SpecifyModel",
-            "argument": "modelgen.SpecifySPMModel()"
+            "argument": {
+              "name": "modelgen.SpecifySPMModel()",
+              "import": "import nipype.algorithms.modelgen as modelgen"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, modelgen"
+            "argument": {
+              "name": "NiPype, algorithms, modelgen"
+            }
           }
         ]
       },
       "ports": [
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "concatenate_runs",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "concatenate_runs"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "output_units",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "output_units"
-            }
-          ]
-        },
         {
           "input": true,
           "output": false,
@@ -224,7 +230,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "subject_info"
+              "argument": {
+                "name": "subject_info"
+              }
             }
           ]
         },
@@ -237,46 +245,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "event_files"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "realignment_parameters",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "realignment_parameters"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "parameter_source",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "parameter_source"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "outlier_files",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "outlier_files"
+              "argument": {
+                "name": "event_files"
+              }
             }
           ]
         },
@@ -289,7 +260,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "functional_runs"
+              "argument": {
+                "name": "functional_runs"
+              }
             }
           ]
         },
@@ -302,7 +275,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "input_units"
+              "argument": {
+                "name": "input_units"
+              }
             }
           ]
         },
@@ -315,7 +290,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "high_pass_filter_cutoff"
+              "argument": {
+                "name": "high_pass_filter_cutoff"
+              }
             }
           ]
         },
@@ -328,7 +305,84 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "time_repetition"
+              "argument": {
+                "name": "time_repetition"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "concatenate_runs",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "concatenate_runs"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "output_units",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "output_units"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "realignment_parameters",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "realignment_parameters"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "parameter_source",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "parameter_source"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "outlier_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "outlier_files"
+              }
             }
           ]
         },
@@ -341,7 +395,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -354,7 +410,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "session_info"
+              "argument": {
+                "name": "session_info"
+              }
             }
           ]
         }
@@ -373,11 +431,16 @@
           {
             "language": "NiPype",
             "comment": "Specify a sparse model that is compatible with spm/fsl designers",
-            "argument": "modelgen.SpecifySparseModel()"
+            "argument": {
+              "name": "modelgen.SpecifySparseModel()",
+              "import": "import nipype.algorithms.modelgen as modelgen"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, modelgen"
+            "argument": {
+              "name": "NiPype, algorithms, modelgen"
+            }
           }
         ]
       },
@@ -391,98 +454,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "time_acquisition"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "volumes_in_cluster",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "volumes_in_cluster"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "model_hrf",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "model_hrf"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "stimuli_as_impulses",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "stimuli_as_impulses"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "use_temporal_deriv",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "use_temporal_deriv"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "scale_regressors",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "scale_regressors"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "scan_onset",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "scan_onset"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "save_plot",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "save_plot"
+              "argument": {
+                "name": "time_acquisition"
+              }
             }
           ]
         },
@@ -495,7 +469,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "subject_info"
+              "argument": {
+                "name": "subject_info"
+              }
             }
           ]
         },
@@ -508,46 +484,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "event_files"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "realignment_parameters",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "realignment_parameters"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "parameter_source",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "parameter_source"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "outlier_files",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "outlier_files"
+              "argument": {
+                "name": "event_files"
+              }
             }
           ]
         },
@@ -560,7 +499,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "functional_runs"
+              "argument": {
+                "name": "functional_runs"
+              }
             }
           ]
         },
@@ -573,7 +514,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "input_units"
+              "argument": {
+                "name": "input_units"
+              }
             }
           ]
         },
@@ -586,7 +529,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "high_pass_filter_cutoff"
+              "argument": {
+                "name": "high_pass_filter_cutoff"
+              }
             }
           ]
         },
@@ -599,7 +544,159 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "time_repetition"
+              "argument": {
+                "name": "time_repetition"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "volumes_in_cluster",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "volumes_in_cluster"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "model_hrf",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "model_hrf"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "stimuli_as_impulses",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "stimuli_as_impulses"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "use_temporal_deriv",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "use_temporal_deriv"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "scale_regressors",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "scale_regressors"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "scan_onset",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "scan_onset"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "save_plot",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "save_plot"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "realignment_parameters",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "realignment_parameters"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "parameter_source",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "parameter_source"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "outlier_files",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "outlier_files"
+              }
             }
           ]
         },
@@ -612,7 +709,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -625,7 +724,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "sparse_png_file"
+              "argument": {
+                "name": "sparse_png_file"
+              }
             }
           ]
         },
@@ -638,7 +739,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "sparse_svg_file"
+              "argument": {
+                "name": "sparse_svg_file"
+              }
             }
           ]
         },
@@ -651,7 +754,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "session_info"
+              "argument": {
+                "name": "session_info"
+              }
             }
           ]
         }

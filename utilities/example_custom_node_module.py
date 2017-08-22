@@ -33,7 +33,6 @@ def get_scan_info(in_file):
     return TR
 
 
-GetScanInfo = Node(interface=Function(input_names=['in_file'],
-                                      output_names=['TR'],
-                                      function=get_scan_info),
-                   name='GetScanInfo')
+GetScanInfo = Function(input_names=['in_file'],
+                       output_names=['TR'],
+                       function=get_scan_info)

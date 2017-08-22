@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "category": [
+        "NiPype",
+        "example_custom_node_module"
+      ],
+      "title": {
+        "name": "example_custom_node_module.GetScanInfo",
+        "web_url": "",
+        "code": [
+          {
+            "language": "NiPype",
+            "comment": "Custom interface wrapping function GetScanInfo",
+            "argument": {
+              "name": "example_custom_node_module.GetScanInfo",
+              "import": "sys.path.append('/media/lukas/goliath/Porcupine/utilities')\nimport example_custom_node_module"
+            }
+          },
+          {
+            "language": "Docker",
+            "argument": {
+              "name": "NiPype, example_custom_node_module"
+            }
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "in_file"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "TR",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "TR"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

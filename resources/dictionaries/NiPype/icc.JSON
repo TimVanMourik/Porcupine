@@ -13,11 +13,16 @@
           {
             "language": "NiPype",
             "comment": "Calculates Interclass Correlation Coefficient (3,1) as defined in",
-            "argument": "icc.ICC()"
+            "argument": {
+              "name": "icc.ICC()",
+              "import": "import nipype.algorithms.icc as icc"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, icc"
+            "argument": {
+              "name": "NiPype, algorithms, icc"
+            }
           }
         ]
       },
@@ -31,7 +36,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "subjects_sessions"
+              "argument": {
+                "name": "subjects_sessions"
+              }
             }
           ]
         },
@@ -44,7 +51,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask"
+              "argument": {
+                "name": "mask"
+              }
             }
           ]
         },
@@ -57,7 +66,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -70,7 +81,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "icc_map"
+              "argument": {
+                "name": "icc_map"
+              }
             }
           ]
         },
@@ -83,7 +96,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "session_var_map"
+              "argument": {
+                "name": "session_var_map"
+              }
             }
           ]
         },
@@ -96,7 +111,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "subject_var_map"
+              "argument": {
+                "name": "subject_var_map"
+              }
             }
           ]
         }

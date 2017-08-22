@@ -28,7 +28,7 @@ for class_name in MODULES_TO_PARSE:
     module = import_module("nipype.%s" % class_name)
     module_name = module.__name__
     print("Processing module: %s" % module_name)
-    
+
     node_list = [getattr(module, n) for n in dir(module)
                  if n[0].isupper() or n[0].isdigit()]
     node_list = filter_nodes(node_list)

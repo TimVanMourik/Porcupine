@@ -1,0 +1,63 @@
+{
+  "nodes": [
+    {
+      "category": [
+        "Custom",
+        "events2design"
+      ],
+      "title": {
+        "name": "events2design.tsv2subjectinfo",
+        "web_url": "",
+        "import": "import sys\nsys.path.append('/media/lukas/goliath/Porcupine/example_workflows/firstlevel')\nimport events2design",
+        "code": [
+          {
+            "language": "Custom",
+            "comment": "Custom interface wrapping function tsv2subjectinfo",
+            "argument": "events2design.tsv2subjectinfo()"
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "Custom",
+              "argument": "in_file"
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "exclude",
+          "code": [
+            {
+              "language": "Custom",
+              "argument": "exclude"
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "subject_info",
+          "code": [
+            {
+              "language": "Custom",
+              "argument": "subject_info"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

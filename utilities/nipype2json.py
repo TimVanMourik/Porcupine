@@ -5,9 +5,12 @@ Created by Tomas Knapen (Free University, Amsterdam) &
 Lukas Snoek (University of Amsterdam)
 """
 import inspect
+import importlib
+import os.path as op
+from copy import copy
 
 
-def node2json(node, module=None, custom_node=False, category="Custom"):
+def node2json(node, node_name=None, module=None, custom_node=False, module_path=None):
     """ Converts nipype nodes to Porcupine-compatible json-files.
 
     This function takes a Nipype node from a Python module and
@@ -24,22 +27,32 @@ def node2json(node, module=None, custom_node=False, category="Custom"):
         the Nipype package.
     category : str
         Category of node (default: "Custom")
+    module_path : str
+        Path to module (only relevant for custom modules)
     """
 
-    if module is None:
-        module = "custom"
+    if node_name is None and custom_node:
+        raise ValueError("Cannot infer node-name from custom-nodes! Please "
+                         "set the argument `node_name` correctly!")
 
-    if custom_node:
-        category = "Custom"
+    if node_name is None:
+        node_name = _get_node_name(node)
 
     all_inputs, mandatory_inputs = _get_inputs(node, custom_node)
     all_outputs = _get_outputs(node, custom_node)
-    descr = _get_descr(node, custom_node)
+    descr = _get_descr(node, node_name, custom_node)
 
+    category = 'NiPype'
+    this_category = [category]
     if module.split('.')[0] == 'algorithms':
-        this_category = [category, 'algorithms', module.split('.')[1]]
+        this_category.append('algorithms')
+
+    if custom_node:
+        this_category.append(module)
     else:
-        this_category = [category, module.split('.')[1]]
+        this_category.append(module.split('.')[1])
+
+    interface_name = copy(this_category)
 
     if not custom_node:
         sub_modules = _get_submodule(node)[1:]
@@ -47,37 +60,62 @@ def node2json(node, module=None, custom_node=False, category="Custom"):
             this_category.extend(sub_modules)
 
     web_url = _get_web_url(node, module, custom_node)
-    node_name = _get_node_name(node, custom_node)
+    import_statement = _get_import_statement(node, module, module_path)
+    init_statement = _get_init_statement(interface_name, node_name, custom_node)
 
-    titleBlock = {'name': '%s.%s' % (module.split('.')[1], node_name),
-                  'web_url': web_url,
-                  'code': [{'language': category,
-                            'comment': descr,
-                            'argument': module.split('.')[1] + '.%s()' % node_name}]}
-    
-    titleBlock['code'].append({'language': 'Docker',
-                               'argument': 'NiPype, ' + module.split('.')[1]})
+    titleBlock = {
+
+        'name': '%s.%s' % (interface_name[-1], node_name),
+        'web_url': web_url,
+        'code': [{
+            'language': category,
+            'comment': descr,
+            'argument': {
+                "name": init_statement,
+                "import": import_statement
+            }
+        }]
+    }
+
+    titleBlock['code'].append({
+        'language': 'Docker',
+        'argument': {
+            "name": ", ".join(interface_name)
+        }
+    })
 
     ports = []
 
     for inp in all_inputs:
-        codeBlock = {'language': category,
-                     'argument': inp}
+        codeBlock = {
+            'language': category,
+            'argument': {
+                "name": inp
+            }
+        }
+
         is_mandatory = inp in mandatory_inputs
 
-        port = {'input': True,
-                'output': False,
-                'visible': True if is_mandatory else False,
-                'editable': True,
-                'name': inp,
-                'code': [codeBlock]}
+        port = {
+            'input': True,
+            'output': False,
+            'visible': True if is_mandatory else False,
+            'editable': True,
+            'name': inp,
+            'code': [codeBlock]
+        }
+
         ports.append(port)
+
+    ports = sorted(ports, reverse=True, key=lambda p: p['visible'])
 
     for outp in all_outputs:
 
         codeBlock = {
             'language': category,
-            'argument': outp
+            'argument': {
+                "name": outp
+            }
         }
 
         port = {
@@ -119,11 +157,9 @@ def _get_outputs(node, custom_node=True):
 
     if custom_node:
         TO_SKIP = ['trait_added', 'trait_modified']
-        if 'return' in node.inputs.function_str:
-            all_outputs = [outp for outp in node.outputs.traits().keys()
-                           if not outp in TO_SKIP]
-        else:
-            all_outputs = []
+        outputs = list(node.aggregate_outputs().traits().keys())
+        all_outputs = [outp for outp in outputs
+                       if not outp in TO_SKIP]
     else:
         if hasattr(node, 'output_spec'):
             if node.output_spec is not None:
@@ -137,10 +173,10 @@ def _get_outputs(node, custom_node=True):
     return all_outputs
 
 
-def _get_descr(node, custom_node=True):
+def _get_descr(node, node_name, custom_node):
 
     if custom_node:
-        descr = node.fullname
+        descr = 'Custom interface wrapping function %s' % node_name
     else:
         if hasattr(node, 'help'):
             descr = node.help(returnhelp=True).splitlines()[0]
@@ -158,11 +194,13 @@ def _get_web_url(node, module, custom_node):
     is_algo = module.split('.')[0] == 'algorithms'
 
     web_url = 'https://nipype.readthedocs.io/en/latest/interfaces/generated/'
-    if is_algo:
+
+    all_sub_modules = _get_submodule(node)
+
+    if is_algo or len(all_sub_modules) < 2:
         module = 'nipype.' + module
 
     web_url += module
-    all_sub_modules = _get_submodule(node)
 
     if len(all_sub_modules) > 1:
 
@@ -172,16 +210,37 @@ def _get_web_url(node, module, custom_node):
             web_url += '.html'
 
         web_url += '#%s' % node.__name__.lower()
+    else:
+        web_url += '.html#%s' % node.__name__.lower()
 
     return web_url
 
 
-def _get_node_name(node, custom_node):
+def _get_node_name(node):
+
+    return node.__name__
+
+
+def _get_import_statement(node, module, module_path):
+
+    try:
+        importlib.import_module('nipype.' + module)
+        import_statement = "import nipype.%s as %s" % (module, module.split('.')[-1])
+    except ImportError:
+        import_statement = "sys.path.append('%s')\nimport %s"
+        import_statement = import_statement % (op.abspath(op.dirname(module_path)), module)
+
+    return import_statement
+
+
+def _get_init_statement(interface_name, node_name, custom_node):
 
     if custom_node:
-        return node.fullname
+        init_statement = interface_name[-1] + '.%s' % node_name
     else:
-        return node.__name__
+        init_statement = interface_name[-1] + '.%s()' % node_name
+
+    return init_statement
 
 
 def _get_submodule(node):
@@ -191,7 +250,7 @@ def _get_submodule(node):
                        if n not in ('interfaces', 'nipype')]
     return all_sub_modules
 
-	
+
 def pyfunc2json():
     """ Experimental function to convert Python functions
     directly to Porcupine's JSON format (by converting it)

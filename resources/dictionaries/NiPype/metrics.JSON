@@ -13,11 +13,16 @@
           {
             "language": "NiPype",
             "comment": "Calculates distance between two volumes.",
-            "argument": "metrics.Distance()"
+            "argument": {
+              "name": "metrics.Distance()",
+              "import": "import nipype.algorithms.metrics as metrics"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, metrics"
+            "argument": {
+              "name": "NiPype, algorithms, metrics"
+            }
           }
         ]
       },
@@ -31,7 +36,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "volume1"
+              "argument": {
+                "name": "volume1"
+              }
             }
           ]
         },
@@ -44,7 +51,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "volume2"
+              "argument": {
+                "name": "volume2"
+              }
             }
           ]
         },
@@ -57,7 +66,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "method"
+              "argument": {
+                "name": "method"
+              }
             }
           ]
         },
@@ -70,7 +81,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask_volume"
+              "argument": {
+                "name": "mask_volume"
+              }
             }
           ]
         },
@@ -83,7 +96,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -96,7 +111,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "distance"
+              "argument": {
+                "name": "distance"
+              }
             }
           ]
         },
@@ -109,7 +126,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "point1"
+              "argument": {
+                "name": "point1"
+              }
             }
           ]
         },
@@ -122,7 +141,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "point2"
+              "argument": {
+                "name": "point2"
+              }
             }
           ]
         },
@@ -135,7 +156,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "histogram"
+              "argument": {
+                "name": "histogram"
+              }
             }
           ]
         }
@@ -154,11 +177,16 @@
           {
             "language": "NiPype",
             "comment": "Calculates the error (distance) map between two input volumes.",
-            "argument": "metrics.ErrorMap()"
+            "argument": {
+              "name": "metrics.ErrorMap()",
+              "import": "import nipype.algorithms.metrics as metrics"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, metrics"
+            "argument": {
+              "name": "NiPype, algorithms, metrics"
+            }
           }
         ]
       },
@@ -172,7 +200,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_ref"
+              "argument": {
+                "name": "in_ref"
+              }
             }
           ]
         },
@@ -185,20 +215,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_tst"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "mask",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "mask"
+              "argument": {
+                "name": "in_tst"
+              }
             }
           ]
         },
@@ -211,7 +230,24 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "metric"
+              "argument": {
+                "name": "metric"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "mask"
+              }
             }
           ]
         },
@@ -224,7 +260,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_map"
+              "argument": {
+                "name": "out_map"
+              }
             }
           ]
         },
@@ -237,7 +275,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -250,7 +290,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_map"
+              "argument": {
+                "name": "out_map"
+              }
             }
           ]
         },
@@ -263,7 +305,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "distance"
+              "argument": {
+                "name": "distance"
+              }
             }
           ]
         }
@@ -282,11 +326,16 @@
           {
             "language": "NiPype",
             "comment": "Calculates various overlap measures between two maps, using the fuzzy",
-            "argument": "metrics.FuzzyOverlap()"
+            "argument": {
+              "name": "metrics.FuzzyOverlap()",
+              "import": "import nipype.algorithms.metrics as metrics"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, metrics"
+            "argument": {
+              "name": "NiPype, algorithms, metrics"
+            }
           }
         ]
       },
@@ -300,7 +349,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_ref"
+              "argument": {
+                "name": "in_ref"
+              }
             }
           ]
         },
@@ -313,7 +364,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "in_tst"
+              "argument": {
+                "name": "in_tst"
+              }
             }
           ]
         },
@@ -326,7 +379,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "weighting"
+              "argument": {
+                "name": "weighting"
+              }
             }
           ]
         },
@@ -339,7 +394,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "out_file"
+              "argument": {
+                "name": "out_file"
+              }
             }
           ]
         },
@@ -352,7 +409,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -365,7 +424,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "jaccard"
+              "argument": {
+                "name": "jaccard"
+              }
             }
           ]
         },
@@ -378,7 +439,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "dice"
+              "argument": {
+                "name": "dice"
+              }
             }
           ]
         },
@@ -391,7 +454,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "diff_file"
+              "argument": {
+                "name": "diff_file"
+              }
             }
           ]
         },
@@ -404,7 +469,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "class_fji"
+              "argument": {
+                "name": "class_fji"
+              }
             }
           ]
         },
@@ -417,7 +484,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "class_fdi"
+              "argument": {
+                "name": "class_fdi"
+              }
             }
           ]
         }
@@ -436,11 +505,16 @@
           {
             "language": "NiPype",
             "comment": "Calculates Dice and Jaccard's overlap measures between two ROI maps.",
-            "argument": "metrics.Overlap()"
+            "argument": {
+              "name": "metrics.Overlap()",
+              "import": "import nipype.algorithms.metrics as metrics"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, metrics"
+            "argument": {
+              "name": "NiPype, algorithms, metrics"
+            }
           }
         ]
       },
@@ -454,7 +528,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "volume1"
+              "argument": {
+                "name": "volume1"
+              }
             }
           ]
         },
@@ -467,20 +543,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "volume2"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "mask_volume",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "mask_volume"
+              "argument": {
+                "name": "volume2"
+              }
             }
           ]
         },
@@ -493,33 +558,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "bg_overlap"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "out_file",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "out_file"
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": false,
-          "editable": true,
-          "name": "weighting",
-          "code": [
-            {
-              "language": "NiPype",
-              "argument": "weighting"
+              "argument": {
+                "name": "bg_overlap"
+              }
             }
           ]
         },
@@ -532,7 +573,54 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "vol_units"
+              "argument": {
+                "name": "vol_units"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask_volume",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "mask_volume"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_file",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "out_file"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "weighting",
+          "code": [
+            {
+              "language": "NiPype",
+              "argument": {
+                "name": "weighting"
+              }
             }
           ]
         },
@@ -545,7 +633,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -558,7 +648,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "jaccard"
+              "argument": {
+                "name": "jaccard"
+              }
             }
           ]
         },
@@ -571,7 +663,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "dice"
+              "argument": {
+                "name": "dice"
+              }
             }
           ]
         },
@@ -584,7 +678,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "roi_ji"
+              "argument": {
+                "name": "roi_ji"
+              }
             }
           ]
         },
@@ -597,7 +693,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "roi_di"
+              "argument": {
+                "name": "roi_di"
+              }
             }
           ]
         },
@@ -610,7 +708,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "volume_difference"
+              "argument": {
+                "name": "volume_difference"
+              }
             }
           ]
         },
@@ -623,7 +723,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "roi_voldiff"
+              "argument": {
+                "name": "roi_voldiff"
+              }
             }
           ]
         },
@@ -636,7 +738,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "labels"
+              "argument": {
+                "name": "labels"
+              }
             }
           ]
         },
@@ -649,7 +753,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "diff_file"
+              "argument": {
+                "name": "diff_file"
+              }
             }
           ]
         }
@@ -668,11 +774,16 @@
           {
             "language": "NiPype",
             "comment": "Calculates similarity between two 3D or 4D volumes. Both volumes have to be in",
-            "argument": "metrics.Similarity()"
+            "argument": {
+              "name": "metrics.Similarity()",
+              "import": "import nipype.algorithms.metrics as metrics"
+            }
           },
           {
             "language": "Docker",
-            "argument": "NiPype, metrics"
+            "argument": {
+              "name": "NiPype, algorithms, metrics"
+            }
           }
         ]
       },
@@ -686,7 +797,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "volume1"
+              "argument": {
+                "name": "volume1"
+              }
             }
           ]
         },
@@ -699,7 +812,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "volume2"
+              "argument": {
+                "name": "volume2"
+              }
             }
           ]
         },
@@ -712,7 +827,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask1"
+              "argument": {
+                "name": "mask1"
+              }
             }
           ]
         },
@@ -725,7 +842,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "mask2"
+              "argument": {
+                "name": "mask2"
+              }
             }
           ]
         },
@@ -738,7 +857,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "metric"
+              "argument": {
+                "name": "metric"
+              }
             }
           ]
         },
@@ -751,7 +872,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "ignore_exception"
+              "argument": {
+                "name": "ignore_exception"
+              }
             }
           ]
         },
@@ -764,7 +887,9 @@
           "code": [
             {
               "language": "NiPype",
-              "argument": "similarity"
+              "argument": {
+                "name": "similarity"
+              }
             }
           ]
         }

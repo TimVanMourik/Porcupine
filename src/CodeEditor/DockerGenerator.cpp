@@ -48,7 +48,7 @@ QString DockerGenerator::generateCode(
     {
         QJsonObject json = item->getJson();
         Argument title(json["title"].toObject());
-        QStringList dockerArguments = title.getArgument(s_thisLanguage).remove(' ').split(',');
+        QStringList dockerArguments = title.getArgument(s_thisLanguage)["name"].remove(' ').split(',');
         foreach (QString dockerArgument, dockerArguments)
         {
             if(!dockerArgument.isEmpty() && !dockerModules.contains(dockerArgument))

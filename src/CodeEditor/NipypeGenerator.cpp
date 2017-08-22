@@ -71,7 +71,7 @@ QStringList NipypeGenerator::getMapNodeFields(
     {
         if(pair->isIterator() && pair->getInputPort()->getConnections().length() != 0)
         {
-            iterFields << pair->getArgument().getArgument(s_thisLanguage);
+            iterFields << pair->getArgument().getArgument(s_thisLanguage)["name"];
         }
     }
     return iterFields;
@@ -85,7 +85,7 @@ QString NipypeGenerator::itemToCode(
     QString code("");
     QJsonObject json = _item->getJson();
     Argument title(json["title"].toObject());
-    if(title.getArgument(s_thisLanguage).isEmpty()) return QString("");
+    if(title.getArgument(s_thisLanguage)["name"].isEmpty()) return QString("");
 
     QString nodeName = QString("NodeHash_%1").arg(QString::number((quint64) _item->getNode(), 16));
 
@@ -107,7 +107,7 @@ QString NipypeGenerator::itemToCode(
         code += "MapNode";
     }
 
-    code += QString("(interface = %2, ").arg(title.getArgument(s_thisLanguage));
+    code += QString("(interface = %2, ").arg(title.getArgument(s_thisLanguage)["name"]);
     code += QString("name = 'NodeName_%1'").arg(QString::number((quint64) _item->getNode(), 16));
 
     if(iterFields.length() == 0)
@@ -138,11 +138,11 @@ QString NipypeGenerator::itemToCode(
         {
             if(!argument.m_isIterator)
             {
-                code += QString("%1.inputs.%2 = %3\n").arg(nodeName, argument.getArgument(s_thisLanguage), filename);
+                code += QString("%1.inputs.%2 = %3\n").arg(nodeName, argument.getArgument(s_thisLanguage)["name"], filename);
             }
             else if(pair->getInputPort()->getConnections().length() == 0)
             {
-                keyValuePairs << QString("('%1', %2)").arg(argument.getArgument(s_thisLanguage), filename);
+                keyValuePairs << QString("('%1', %2)").arg(argument.getArgument(s_thisLanguage)["name"], filename);
             }
         }
     }
@@ -176,23 +176,19 @@ void NipypeGenerator::writePreamble(
         )
 {
     ///@todo make module import dependent on scene nodes
+    io_code += "import sys\n";
     io_code += "import nipype\n";
     io_code += "import nipype.pipeline as pe\n";
-    QStringList categories;
+    QStringList imports;
     foreach(NodeTreeItem* item, _nodeList)
     {
-        QJsonObject object = item->getJson();
-        QString category = object["title"].toObject()["code"].toArray().first().toObject()["argument"].toString();
-        QStringList splitted = category.split(".");
-        category = splitted.first();
-        if(!categories.contains(category))
+        Argument title(item->getJson()["title"].toObject());
+        QString import = title.getArgument(s_thisLanguage)["import"];
+        if(!imports.contains(import))
         {
-            categories << category;
+            imports << import;
+            io_code += import + "\n";
         }
-    }
-    foreach (QString category, categories)
-    {
-        io_code += QString("import nipype.interfaces.%1 as %1\n").arg(category);
     }
     io_code += "\n";
 }
