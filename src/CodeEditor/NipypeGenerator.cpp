@@ -186,7 +186,7 @@ void NipypeGenerator::writePreamble(
         QString import = title.getArgument(s_thisLanguage)["import"];
         if(!imports.contains(import))
         {
-            io_code += import;
+            io_code += import + "\n";
         }
     }
     io_code += "\n";
