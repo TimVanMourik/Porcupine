@@ -12,7 +12,7 @@ def filter_nodes(node_list):
 
     return node_list
 
-category = 'NiPype'
+category = 'Nipype'
 working_dir = op.join(op.dirname(op.dirname(__file__)),
                       'resources', 'dictionaries', category)
 
