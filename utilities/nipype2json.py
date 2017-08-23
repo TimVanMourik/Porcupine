@@ -42,7 +42,7 @@ def node2json(node, node_name=None, module=None, custom_node=False, module_path=
     all_outputs = _get_outputs(node, custom_node)
     descr = _get_descr(node, node_name, custom_node)
 
-    category = 'NiPype'
+    category = 'Nipype'
     this_category = [category]
     if module.split('.')[0] == 'algorithms':
         this_category.append('algorithms')
