@@ -79,7 +79,7 @@ void CodeEditor::generateCode(
         )
 {
     QString language;
-    language = "NiPype";
+    language = "Nipype";
     if(isPresentInEditor(language, _nodeList))
     {
         if(!m_textEditors[language])
@@ -171,7 +171,7 @@ void CodeEditor::setupNipypeEditor(
         )
 {
     const int tabWidth = 4;
-    QString python("NiPype");
+    QString python("Nipype");
     m_programmingLanguages << python;
     QFont pythonFont = QFont("Courier", 10);
     pythonFont.setStyleHint(QFont::Monospace);

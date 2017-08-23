@@ -55,10 +55,7 @@ QString NipypeGenerator::generateCode(
     writeParameters(code);
     writeNodes(code, _nodeList);
     writeLinks(code, _linkList);
-
-    code += "\n#Run the workflow\n";
-    code += "analysisflow.run()\n";
-
+    writePostamble(code);
     return code;
 }
 
@@ -228,6 +225,17 @@ void NipypeGenerator::writeLinks(
     {
         io_code += linkToCode(link);
     }
+}
+
+void NipypeGenerator::writePostamble(
+        QString& io_code
+        )
+{
+    io_code += "\n#Run the workflow\n";
+    io_code += "plugin = 'MultiProc' #adjust your desired plugin here\n";
+    io_code += "plugin_args = {'n_procs': 1} #adjust to your number of cores\n";
+    io_code += "analysisflow.write_graph(graph2use='flat', format='png', simple_form=False)";
+    io_code += "analysisflow.run(plugin=plugin, plugin_args=plugin_args)\n";
 }
 
 NipypeGenerator::~NipypeGenerator()

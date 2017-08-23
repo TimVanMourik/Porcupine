@@ -20,6 +20,6 @@ RUN conda install -y mkl=2017.0.1 mkl-service &&  \
                      libxslt=1.1.29\
                      traits=4.6.0
 RUN chmod +x /usr/local/miniconda/bin/* && conda clean --all -y
-RUN echo 'export PATH=/usr/loca/miniconda/bin:$PATH' >> /etc/profile
+RUN echo 'export PATH=/usr/local/miniconda/bin:$PATH' >> /etc/profile
 RUN pip install nipype
 
