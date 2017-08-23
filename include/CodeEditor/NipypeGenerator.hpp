@@ -76,6 +76,10 @@ private:
             const QVector<const Link*>& _linkList
             );
     //
+    void writePostamble(
+            QString& io_code
+            );
+    //
     QStringList getMapNodeFields(
             const NodeTreeItem* _item
             ) const;
