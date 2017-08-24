@@ -33,7 +33,7 @@
 #include "Port.hpp"
 #include "PortPair.hpp"
 
-const QString NipypeGenerator::s_thisLanguage("NiPype");
+const QString NipypeGenerator::s_thisLanguage("Nipype");
 QStringList NipypeGenerator::s_exceptionNodes;
 
 NipypeGenerator::NipypeGenerator(
@@ -49,8 +49,8 @@ QString NipypeGenerator::generateCode(
             const QVector<const Link*>& _linkList
             )
 {
-    ///@todo check if there is at least one NiPype module in the scene for given module
-    QString code("#This is a NiPype generator. Warning, here be dragons.\n");
+    ///@todo check if there is at least one Nipype module in the scene for given module
+    QString code("#This is a Nipype generator. Warning, here be dragons.\n");
     writePreamble(code, _nodeList);
     writeParameters(code);
     writeNodes(code, _nodeList);
