@@ -234,7 +234,7 @@ void NipypeGenerator::writePostamble(
     io_code += "\n#Run the workflow\n";
     io_code += "plugin = 'MultiProc' #adjust your desired plugin here\n";
     io_code += "plugin_args = {'n_procs': 1} #adjust to your number of cores\n";
-    io_code += "analysisflow.write_graph(graph2use='flat', format='png', simple_form=False)";
+    io_code += "analysisflow.write_graph(graph2use='flat', format='png', simple_form=False)\n";
     io_code += "analysisflow.run(plugin=plugin, plugin_args=plugin_args)\n";
 }
 
