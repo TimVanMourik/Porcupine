@@ -44,8 +44,8 @@ currentNode.appendChild(fileToXML(docNode, 'file', 'webButton.qss',        'qss/
 
 docRoot.appendChild(currentNode);
 
-%% Add NiPype nodes
-prefix = 'dictionaries/NiPype';
+%% Add Nipype nodes
+prefix = 'dictionaries/Nipype';
 directory = fullfile('../resources', prefix);
 currentNode = docNode.createElement('qresource');
 currentNode.setAttribute('prefix', prefix);
