@@ -21,8 +21,8 @@
     <http://www.gnu.org/licenses/>.
 */
 
-#ifndef NODEANTENNA_H
-#define NODEANTENNA_H
+#ifndef NODEANTENNA_HPP
+#define NODEANTENNA_HPP
 
 #include <QObject>
 
@@ -71,4 +71,4 @@ private:
     Node* m_node;
 };
 
-#endif // NODEANTENNA_H
+#endif // NODEANTENNA_HPP
