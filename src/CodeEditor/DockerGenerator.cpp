@@ -21,6 +21,7 @@
 */
 
 #include <QDebug>
+#include <QFile>
 
 #include "DockerGenerator.hpp"
 #include "PortPair.hpp"
