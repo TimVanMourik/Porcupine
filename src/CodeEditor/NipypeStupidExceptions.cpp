@@ -10,7 +10,7 @@
 #include "Port.hpp"
 #include "PortPair.hpp"
 
-const QString NipypeStupidExceptions::s_thisLanguage("NiPype");
+const QString NipypeStupidExceptions::s_thisLanguage("Nipype");
 
 NipypeStupidExceptions::NipypeStupidExceptions() :
     Singleton()
