@@ -1482,6 +1482,21 @@
           "output": false,
           "visible": true,
           "editable": true,
+          "name": "contrast_type",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "contrast_type"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
           "name": "init",
           "code": [
             {
@@ -1495,7 +1510,7 @@
         {
           "input": true,
           "output": false,
-          "visible": true,
+          "visible": false,
           "editable": true,
           "name": "init_reg_file",
           "code": [
@@ -1503,21 +1518,6 @@
               "language": "Nipype",
               "argument": {
                 "name": "init_reg_file"
-              }
-            }
-          ]
-        },
-        {
-          "input": true,
-          "output": false,
-          "visible": true,
-          "editable": true,
-          "name": "contrast_type",
-          "code": [
-            {
-              "language": "Nipype",
-              "argument": {
-                "name": "contrast_type"
               }
             }
           ]
@@ -20183,6 +20183,21 @@
               "language": "Nipype",
               "argument": {
                 "name": "in_intensity_scales"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_threads",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "num_threads"
               }
             }
           ]
