@@ -35,12 +35,12 @@ Tsv2subjectinfo = Function(function=tsv2subjectinfo, input_names=['in_file', 'ex
         	               output_names=['subject_info'])
 
 
-def getpercentthresh(value, percentage):
+def getpercentthresh(in_val, percentage):
     return percentage * value
 
-
+    
 Getpercentthresh = Function(function=getpercentthresh, input_names=['value', 'percentage'],
-                            output_names=['value'])
+                            output_names=['out_val'])
 
 
 def getinormscale(medianval):
