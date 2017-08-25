@@ -33,3 +33,27 @@ def tsv2subjectinfo(in_file, exclude=None):
 
 Tsv2subjectinfo = Function(function=tsv2subjectinfo, input_names=['in_file', 'exclude'],
         	               output_names=['subject_info'])
+
+
+def getpercentthresh(value, percentage):
+    return percentage * value
+
+
+Getpercentthresh = Function(function=getpercentthresh, input_names=['value', 'percentage'],
+                            output_names=['value'])
+
+
+def getinormscale(medianval):
+    return 10000. / medianval
+
+
+Getinormscale = Function(function=getinormscale, input_names=['medianval'],
+                         output_names=['value'])
+
+
+def getusan(in_file, brightness_thresh):
+    return [(in_file, brightness_thresh)]
+
+
+Getusan = Function(function=getusan, input_names=['in_file', 'brightness_thresh'],
+                   output_names=['usan'])

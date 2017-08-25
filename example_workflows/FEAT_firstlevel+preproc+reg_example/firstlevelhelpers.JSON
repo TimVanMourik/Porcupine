@@ -1,0 +1,281 @@
+{
+  "nodes": [
+    {
+      "category": [
+        "Custom",
+        "firstlevelhelpers"
+      ],
+      "title": {
+        "name": "firstlevelhelpers.Getinormscale",
+        "web_url": "",
+        "code": [
+          {
+            "language": "Nipype",
+            "comment": "Custom interface wrapping function Getinormscale",
+            "argument": {
+              "name": "firstlevelhelpers.Getinormscale",
+              "import": "sys.path.append('/media/lukas/goliath/Porcupine/example_workflows/firstlevel')\nimport firstlevelhelpers"
+            }
+          },
+          {
+            "language": "Docker",
+            "argument": {
+              "name": "Custom, firstlevelhelpers"
+            }
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "medianval",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "medianval"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "value",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "value"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "Custom",
+        "firstlevelhelpers"
+      ],
+      "title": {
+        "name": "firstlevelhelpers.Getpercentthresh",
+        "web_url": "",
+        "code": [
+          {
+            "language": "Nipype",
+            "comment": "Custom interface wrapping function Getpercentthresh",
+            "argument": {
+              "name": "firstlevelhelpers.Getpercentthresh",
+              "import": "sys.path.append('/media/lukas/goliath/Porcupine/example_workflows/firstlevel')\nimport firstlevelhelpers"
+            }
+          },
+          {
+            "language": "Docker",
+            "argument": {
+              "name": "Custom, firstlevelhelpers"
+            }
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "value",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "value"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "percentage",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "percentage"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "value",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "value"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "Custom",
+        "firstlevelhelpers"
+      ],
+      "title": {
+        "name": "firstlevelhelpers.Getusan",
+        "web_url": "",
+        "code": [
+          {
+            "language": "Nipype",
+            "comment": "Custom interface wrapping function Getusan",
+            "argument": {
+              "name": "firstlevelhelpers.Getusan",
+              "import": "sys.path.append('/media/lukas/goliath/Porcupine/example_workflows/firstlevel')\nimport firstlevelhelpers"
+            }
+          },
+          {
+            "language": "Docker",
+            "argument": {
+              "name": "Custom, firstlevelhelpers"
+            }
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "in_file"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "brightness_thresh",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "brightness_thresh"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "usan",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "usan"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "Custom",
+        "firstlevelhelpers"
+      ],
+      "title": {
+        "name": "firstlevelhelpers.Tsv2subjectinfo",
+        "web_url": "",
+        "code": [
+          {
+            "language": "Nipype",
+            "comment": "Custom interface wrapping function Tsv2subjectinfo",
+            "argument": {
+              "name": "firstlevelhelpers.Tsv2subjectinfo",
+              "import": "sys.path.append('/media/lukas/goliath/Porcupine/example_workflows/firstlevel')\nimport firstlevelhelpers"
+            }
+          },
+          {
+            "language": "Docker",
+            "argument": {
+              "name": "Custom, firstlevelhelpers"
+            }
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "in_file"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "exclude",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "exclude"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "subject_info",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "subject_info"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
