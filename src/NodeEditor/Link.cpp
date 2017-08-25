@@ -159,12 +159,25 @@ void Link::loadFromJson(
     assert(pointerFrom != 0);
     assert(pointerTo   != 0);
 
-    Port* p;
-    p = _portMap[pointerFrom];
-    setPortFrom(p);
-    p = _portMap[pointerTo];
-    setPortTo(p);
+    Port* pIn, *pOut;
+    pIn  = _portMap[pointerTo];
+    pOut = _portMap[pointerFrom];
+    if(!pIn)
+    {
+        qDebug() << "Oops, this input port does not exist";
+        delete this;
+        return;
+    }
+    if(!pOut)
+    {
+        qDebug() << "Oops, this output port does not exist";
+        delete this;
+        return;
+    }
+    setPortFrom(pOut);
+    setPortTo(pIn);
 
+    ///@todo if pointer is incorrect, this will result in a segmentation fault
     _portMap[pointerFrom]->addConnection(this);
     _portMap[pointerTo  ]->addConnection(this);
     setPositionFromPorts();

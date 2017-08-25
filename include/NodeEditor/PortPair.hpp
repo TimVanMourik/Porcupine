@@ -21,8 +21,8 @@
     <http://www.gnu.org/licenses/>.
 */
 
-#ifndef PORTPAIR_H
-#define PORTPAIR_H
+#ifndef PORTPAIR_HPP
+#define PORTPAIR_HPP
 
 #include <QGraphicsTextItem>
 #include "Argument.hpp"
@@ -152,4 +152,4 @@ private:
     bool m_hasFileName;
 };
 
-#endif // PORTPAIR_H
+#endif // PORTPAIR_HPP
