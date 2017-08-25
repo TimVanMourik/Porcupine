@@ -347,7 +347,14 @@ void MainWindow::printFile(
     printer.setOrientation(QPrinter::Landscape);
     printer.setOutputFormat(QPrinter::PdfFormat);
 
-    QString fileName = QFileDialog::getSaveFileName();
+    QString filters("PDF files (*.pdf);;All files (*.*)");
+    QString defaultFilter("PDF files (*.pdf)");
+    QFileDialog fileDialog(0, "Save file to PDF", QDir::currentPath(), filters);
+    fileDialog.setAcceptMode(QFileDialog::AcceptSave);
+    fileDialog.selectNameFilter(defaultFilter);
+    fileDialog.exec();
+
+    QString fileName = fileDialog.selectedFiles().first();
     if (fileName.isEmpty())
     {
 //        qDebug() << "No file name was chosen. Ergo, no file will be saved.";
@@ -509,7 +516,7 @@ void MainWindow::createActions()
     m_saveToJsonAct->setStatusTip(tr("Save the document as XML-file to disk"));
     connect(m_saveToJsonAct, SIGNAL(triggered()), this, SLOT(saveFileToJson()));
 
-    m_printAct = new QAction(tr("Print..."), this);
+    m_printAct = new QAction(tr("Print to PDF..."), this);
     m_printAct->setShortcuts(QKeySequence::Print);
     m_printAct->setStatusTip(tr("Print the document"));
     connect(m_printAct, SIGNAL(triggered()), this, SLOT(printFile()));
