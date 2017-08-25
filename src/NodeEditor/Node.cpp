@@ -119,6 +119,7 @@ void Node::loadFromNodeSetting(
     m_json = _setting->getJson();
     Argument title(m_json["title"].toObject());
     m_name = title.m_argumentName;
+    m_baseName = title.m_baseName;
     m_nameLabel->setText(m_name);
 
     QVector<Argument> ports;
@@ -261,6 +262,12 @@ const QString& Node::getName(
         ) const
 {
     return m_name;
+}
+
+const QString& Node::getBaseName(
+        ) const
+{
+    return m_baseName;
 }
 
 const NodeAntenna& Node::getAntenna(

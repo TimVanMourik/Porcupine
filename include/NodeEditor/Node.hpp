@@ -112,6 +112,9 @@ public:
     const QString& getType(
             ) const;
     //
+    const QString& getBaseName(
+            ) const;
+    //
     const QString& getName(
             ) const;
     //
@@ -159,6 +162,8 @@ private:
     QJsonObject m_json;
     //
     QString m_name;
+    //
+    QString m_baseName;
     // As Node is not a QObject derivative, but we would still like to use signals and slots, transmissions go via an antenna
     // Another way to appraoch the problem is multiple inheritance.
     NodeAntenna m_antenna;

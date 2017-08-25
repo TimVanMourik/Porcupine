@@ -36,9 +36,14 @@ Argument::Argument(
     m_isEditable  (_json["editable"].toBool()),
     m_isIterator  (_json["iterator"].toBool()),
     m_argumentName(_json["name"    ].toString()),
+    m_baseName    (_json["base"    ].toString()),
     m_defaultValue(_json["value"   ].toString()),
     m_webUrl      (_json["web_url" ].toString())
 {
+    if(m_baseName.isEmpty())
+    {
+        m_baseName = m_argumentName;
+    }
     foreach (QJsonValue code, _json["code"].toArray())
     {
         QJsonObject codeJson = code.toObject();
@@ -87,6 +92,7 @@ void Argument::updateJson(
     m_json["editable"] = m_isEditable;
     m_json["iterator"] = m_isIterator;
     m_json["name"    ] = m_argumentName;
+    m_json["base"    ] = m_baseName;
     m_json["value"   ] = m_defaultValue;
 }
 

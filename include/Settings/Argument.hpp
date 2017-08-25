@@ -90,6 +90,8 @@ public:
     //
     QString m_argumentName;
     //
+    QString m_baseName;
+    //
     QString m_defaultValue;
     //
     QString m_webUrl;
