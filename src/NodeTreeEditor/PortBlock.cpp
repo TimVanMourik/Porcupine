@@ -25,6 +25,7 @@
 #include <QFile>
 #include <QInputDialog>
 #include <QJsonArray>
+#include <QLabel>
 #include <QLineEdit>
 #include <QMessageBox>
 #include <QFormLayout>
@@ -52,6 +53,15 @@ PortBlock::PortBlock(
     m_layout->setLabelAlignment(Qt::AlignBottom);
 
     addPortBlock(m_node->getPorts());
+    QLabel* baseNameLabel = new QLabel(m_node->getBaseName());
+    baseNameLabel->setStyleSheet("QLabel { color : rgb(0.7, 0.7, 0.7); }");
+    QFont labelFont;
+    labelFont.setItalic(true);
+    labelFont.setPixelSize(10);
+
+    baseNameLabel->setFont(labelFont);
+    layout()->addWidget(baseNameLabel);
+    layout()->setAlignment(baseNameLabel, Qt::AlignCenter);
     QPushButton* addPortButton = new QPushButton("Add port");
     layout()->addWidget(addPortButton);
     //This removes the ugly label background
