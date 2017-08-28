@@ -7,7 +7,7 @@
 
 ROOT                                    = $$_PRO_FILE_PWD_
 
-QT                                     += widgets core gui printsupport
+QT                                     += widgets core gui printsupport svg
 
 macx:{
     QMAKE_MAC_SDK                       = macosx10.12
