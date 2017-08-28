@@ -80,7 +80,7 @@ NodeHash_a717470.inputs.searchr_y = [-90, 90]
 NodeHash_a717470.inputs.searchr_z = [-90, 90]
 
 #Wraps command **fnirt**
-NodeHash_e5fda50 = pe.MapNode(interface = fsl.FNIRT(), name = 'NodeName_e5fda50', iterfield = ['affine_file', 'in_file', 'ref_file', 'refmask_file'])
+NodeHash_e5fda50 = pe.MapNode(interface = fsl.FNIRT(), name = 'NodeName_e5fda50', iterfield = ['affine_file', 'in_file'])
 NodeHash_e5fda50.inputs.config_file = 'T1_2_MNI152_2mm'
 NodeHash_e5fda50.inputs.warp_resolution = (10, 10, 10)
 
