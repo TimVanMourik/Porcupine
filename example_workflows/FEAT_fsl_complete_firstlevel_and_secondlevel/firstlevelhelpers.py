@@ -35,7 +35,7 @@ Tsv2subjectinfo = Function(function=tsv2subjectinfo, input_names=['in_file', 'ex
         	               output_names=['subject_info'])
 
 
-def getpercentthresh(in_val, percentage):
+def getpercentthresh(value, percentage):
     return percentage * value
 
     
