@@ -9,23 +9,23 @@ header:
   overlay_image: /_pages/assets/images/pipeline_lq.jpg
 
 feature_row:
-  - image_path: /_pages/assets/images/afni_skullstrip_workflow.png
+  - image_path: /_pages/assets/images/afni_skullstrip_workflow_resize.png
     alt: "example"
-    title: "Skullstrip workflow"
+    title: "Skullstripping"
     excerpt: "Example of ANFI/ANTs-based skullstrip workflow"
-    #url: "/_pages/assets/example_pipeline/"
+    url: "https://github.com/TimVanMourik/Porcupine/tree/example_workflows/example_workflows/skullstrip_afni_ants_example"
     #btn_label: "Human Connectome"
-  - image_path: /_pages/assets/images/fsl_restingstate_preproc_workflow.png
+  - image_path: /_pages/assets/images/fsl_restingstate_preproc_workflow_resize.png
     alt: "example"
-    title: "Resting-state preprocessing workflow"
+    title: "rs-fMRI preprocessing"
     excerpt: "Example of an FSL-based rs-fMRI preprocessing workflow"
-    #url: "/_pages/assets/example_pipeline/"
+    url: "https://github.com/TimVanMourik/Porcupine/tree/example_workflows/example_workflows/firstlevel_fsl_and_custom_modules_example"
     #btn_label: "Human Connectome"
-  - image_path: /_pages/assets/images/pipeline_example.jpg
+  - image_path: /_pages/assets/images/FEAT_analysis_resize.png
     alt: "example"
-    title: "Other famous Study"
-    excerpt: "An example of a pipeline."
-    #url: "/_pages/assets/example_pipeline/"
+    title: "FSL FEAT reconstruction"
+    excerpt: "A full reconstruction a first-level + group-level FSL analysis"
+    url: "https://github.com/TimVanMourik/Porcupine/tree/example_workflows/example_workflows/FEAT_fsl_complete_firstlevel_and_secondlevel"
     #btn_label: "Human Connectome"
 
 #climo:
