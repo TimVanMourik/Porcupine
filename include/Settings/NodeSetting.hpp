@@ -43,7 +43,6 @@ public:
     //
     NodeSetting(
             const Argument& _title,
-            const QVector<Argument>& _ports,
             const QJsonObject& _json
             );
     //
@@ -51,13 +50,7 @@ public:
             const QColor& _colour
               );
     //
-//    const QString& getName(
-//            ) const;
-    //
     const Argument& getTitle(
-            ) const;
-    //
-    const QVector<Argument>& getPorts(
             ) const;
     //
     const QJsonObject& getJson(
@@ -77,8 +70,6 @@ private:
     Argument m_title;
     //
     QJsonObject m_json;
-    //
-    QVector<Argument> m_ports;
     //
     QStringList m_category;
     //

@@ -156,7 +156,7 @@ void PortBlock::addPortRow(
         )
 {
     PortRow* row = new PortRow(port, this);
-    m_parameterNames[port->getName()] = row;
+    m_parameterNames[port->getCounter()] = row;
     m_layout->addRow(port->getName(), row);
 }
 
@@ -187,12 +187,12 @@ void PortBlock::saveToJson(
 }
 
 QString PortBlock::getParameterName(
-        const QString& _portName
+        unsigned int _portId
         ) const
 {
-    if(m_parameterNames[_portName])
+    if(m_parameterNames[_portId])
     {
-        return m_parameterNames[_portName]->getParameterName();
+        return m_parameterNames[_portId]->getParameterName();
     }
     else
     {

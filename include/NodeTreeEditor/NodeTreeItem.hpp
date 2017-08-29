@@ -80,7 +80,7 @@ public:
             );
     //
     QString getParameterName(
-            const QString& _portName
+            unsigned int _portId
             ) const;
     //
     void mousePressEvent(

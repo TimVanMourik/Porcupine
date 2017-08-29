@@ -30,15 +30,16 @@ Argument::Argument(
         const QJsonObject& _json
         ) :
     m_json(_json),
-    m_isInput     (_json["input"   ].toBool()),
-    m_isOutput    (_json["output"  ].toBool()),
-    m_isVisible   (_json["visible" ].toBool()),
-    m_isEditable  (_json["editable"].toBool()),
-    m_isIterator  (_json["iterator"].toBool()),
-    m_argumentName(_json["name"    ].toString()),
-    m_baseName    (_json["base"    ].toString()),
-    m_defaultValue(_json["value"   ].toString()),
-    m_webUrl      (_json["web_url" ].toString())
+    m_isInput     (_json["input"   ].toBool(false)),
+    m_isOutput    (_json["output"  ].toBool(false)),
+    m_isVisible   (_json["visible" ].toBool(true)),
+    m_isEditable  (_json["editable"].toBool(true)),
+    m_isIterator  (_json["iterator"].toBool(false)),
+    m_id          (_json["id"      ].toInt(0)),
+    m_argumentName(_json["name"    ].toString("")),
+    m_baseName    (_json["base"    ].toString("")),
+    m_defaultValue(_json["value"   ].toString("")),
+    m_webUrl      (_json["web_url" ].toString(""))
 {
     if(m_baseName.isEmpty())
     {
@@ -92,6 +93,7 @@ void Argument::updateJson(
     m_json["editable"] = m_isEditable;
     m_json["iterator"] = m_isIterator;
     m_json["name"    ] = m_argumentName;
+    m_json["id"      ] = (int)m_id;
     m_json["base"    ] = m_baseName;
     m_json["value"   ] = m_defaultValue;
 }

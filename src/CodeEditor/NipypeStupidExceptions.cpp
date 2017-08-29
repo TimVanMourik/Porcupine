@@ -100,7 +100,7 @@ QString NipypeStupidExceptions::codeForIdentityInterface(
     foreach (const PortPair* pair,  _item->getPorts())
     {
         Argument argument = pair->getArgument();
-        QString filename = _item->getParameterName(argument.m_argumentName);
+        QString filename = _item->getParameterName(argument.m_id);
 
         //replace filename
         foreach (const QString parameter, _parameters.keys())
@@ -162,7 +162,7 @@ QString NipypeStupidExceptions::codeForSelectFiles(
     foreach (const PortPair* pair,  _item->getPorts())
     {
         Argument argument = pair->getArgument();
-        QString filename = _item->getParameterName(argument.m_argumentName);
+        QString filename = _item->getParameterName(argument.m_id);
 
         //replace filename
         foreach (const QString parameter, _parameters.keys())
@@ -194,7 +194,7 @@ QString NipypeStupidExceptions::codeForSelectFiles(
     foreach (const PortPair* pair,  _item->getPorts())
     {
         Argument argument = pair->getArgument();
-        QString filename = _item->getParameterName(argument.m_argumentName);
+        QString filename = _item->getParameterName(argument.m_id);
 
         //replace filename
         foreach (const QString parameter, _parameters.keys())
@@ -278,7 +278,7 @@ QString NipypeStupidExceptions::codeForMySQLSink(
     foreach (const PortPair* pair,  _item->getPorts())
     {
         Argument argument = pair->getArgument();
-        QString filename = _item->getParameterName(argument.m_argumentName);
+        QString filename = _item->getParameterName(argument.m_id);
 
         //replace filename
         foreach (const QString parameter, _parameters.keys())
@@ -362,7 +362,7 @@ QString NipypeStupidExceptions::codeForSQLiteSink(
     foreach (const PortPair* pair,  _item->getPorts())
     {
         Argument argument = pair->getArgument();
-        QString filename = _item->getParameterName(argument.m_argumentName);
+        QString filename = _item->getParameterName(argument.m_id);
 
         //replace filename
         foreach (const QString parameter, _parameters.keys())
@@ -474,7 +474,7 @@ QString NipypeStupidExceptions::codeForS3DataGrabber(
     foreach (const PortPair* pair,  _item->getPorts())
     {
         Argument argument = pair->getArgument();
-        QString filename = _item->getParameterName(argument.m_argumentName);
+        QString filename = _item->getParameterName(argument.m_id);
 
         //replace filename
         foreach (const QString parameter, _parameters.keys())

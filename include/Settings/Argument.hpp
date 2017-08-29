@@ -88,6 +88,8 @@ public:
     //
     bool m_isIterator;
     //
+    unsigned int m_id;
+    //
     QString m_argumentName;
     //
     QString m_baseName;

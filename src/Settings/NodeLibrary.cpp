@@ -62,13 +62,7 @@ QStringList NodeLibrary::addNodeSetting(
         }
 
         Argument title(nodeJson["title"].toObject());
-        QVector<Argument> ports;
-        foreach (QJsonValue portObject, nodeJson["ports"].toArray())
-        {
-            ports << Argument(portObject.toObject());
-        }
-
-        NodeSetting* newNode = new NodeSetting(title, ports, nodeJson);
+        NodeSetting* newNode = new NodeSetting(title, nodeJson);
         newNode->setCategory(categories);
         m_nodeSettings[title.m_argumentName] = newNode;
         m_nodeNames << title.m_argumentName;

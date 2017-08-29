@@ -68,7 +68,7 @@ void NodeEditor::install(
     setScene(scene);
     //makes sure that all events from the scene are passed on to the editor
     scene->installEventFilter(this);
-
+//    scene->setItemIndexMethod(QGraphicsScene::NoIndex);
     show();
 }
 
