@@ -83,6 +83,7 @@ NodeHash_a717470.inputs.searchr_z = [-90, 90]
 NodeHash_e5fda50 = pe.MapNode(interface = fsl.FNIRT(), name = 'NodeName_e5fda50', iterfield = ['affine_file', 'in_file'])
 NodeHash_e5fda50.inputs.config_file = 'T1_2_MNI152_2mm'
 NodeHash_e5fda50.inputs.warp_resolution = (10, 10, 10)
+NodeHash_e5fda50.inputs.field_file = True
 
 #Wraps command **fslroi**
 NodeHash_c0aecc0 = pe.MapNode(interface = fsl.ExtractROI(), name = 'NodeName_c0aecc0', iterfield = ['in_file'])
@@ -240,7 +241,7 @@ NodeHash_2a4718a0 = pe.MapNode(interface = fsl.ApplyWarp(), name = 'NodeName_2a4
 NodeHash_2a4718a0.inputs.interp = 'trilinear'
 
 #Wraps command **applywarp**
-NodeHash_2fa5d960 = pe.MapNode(interface = fsl.ApplyWarp(), name = 'NodeName_2fa5d960', iterfield = ['in_file', 'ref_file', 'field_file', 'premat'])
+NodeHash_2fa5d960 = pe.MapNode(interface = fsl.ApplyWarp(), name = 'NodeName_2fa5d960', iterfield = ['in_file', 'field_file', 'premat'])
 NodeHash_2fa5d960.inputs.interp = 'trilinear'
 
 #Wraps command **fslmerge**
@@ -269,6 +270,8 @@ NodeHash_4576d910.inputs.pthreshold = 0.05
 
 #Create a workflow to connect all those nodes
 analysisflow = nipype.Workflow('MyWorkflow')
+analysisflow.connect(NodeHash_e5fda50, 'field_file', NodeHash_2a4718a0, 'field_file')
+analysisflow.connect(NodeHash_e5fda50, 'field_file', NodeHash_2fa5d960, 'field_file')
 analysisflow.connect(NodeHash_28c1ae60, 'volume', NodeHash_4576d910, 'volume')
 analysisflow.connect(NodeHash_28c1ae60, 'dlh', NodeHash_4576d910, 'dlh')
 analysisflow.connect(NodeHash_1d9e5dc0, 'merged_file', NodeHash_4576d910, 'cope_file')
@@ -285,8 +288,6 @@ analysisflow.connect(NodeHash_58c74a0, 'MNI_mask', NodeHash_4239cdb0, 'mask_file
 analysisflow.connect(NodeHash_1d9e5dc0, 'merged_file', NodeHash_4239cdb0, 'cope_file')
 analysisflow.connect(NodeHash_2fa5d960, 'out_file', NodeHash_23af6d10, 'in_files')
 analysisflow.connect(NodeHash_2a4718a0, 'out_file', NodeHash_1d9e5dc0, 'in_files')
-analysisflow.connect(NodeHash_e5fda50, 'field_file', NodeHash_2a4718a0, 'field_file')
-analysisflow.connect(NodeHash_e5fda50, 'field_file', NodeHash_2fa5d960, 'field_file')
 analysisflow.connect(NodeHash_15c985f0, 'out_file', NodeHash_2fa5d960, 'premat')
 analysisflow.connect(NodeHash_15c985f0, 'out_file', NodeHash_2a4718a0, 'premat')
 analysisflow.connect(NodeHash_23687a90, 'out', NodeHash_2a4718a0, 'in_file')
@@ -364,4 +365,5 @@ analysisflow.connect(NodeHash_c0aecc0, 'roi_file', NodeHash_12fdde80, 'in_file')
 plugin = 'MultiProc' #adjust your desired plugin here
 plugin_args = {'n_procs': 10} #adjust to your number of cores
 analysisflow.write_graph(graph2use='flat', format='png', simple_form=False)
+analysisflow.base_dir = '/media/lukas/goliath/Porcupine/example_workflows/FEAT_fsl_complete_firstlevel_and_secondlevel'
 analysisflow.run(plugin=plugin, plugin_args=plugin_args)

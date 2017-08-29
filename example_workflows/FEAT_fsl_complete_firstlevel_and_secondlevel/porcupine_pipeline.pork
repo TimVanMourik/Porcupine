@@ -1,6 +1,14 @@
 {
     "links": [
         {
+            "from": "d5b40b0",
+            "to": "2c71a7e0"
+        },
+        {
+            "from": "d5b40b0",
+            "to": "3371220"
+        },
+        {
             "from": "3e779380",
             "to": "2f98edc0"
         },
@@ -63,14 +71,6 @@
         {
             "from": "3028bfc0",
             "to": "42315f90"
-        },
-        {
-            "from": "d5b40b0",
-            "to": "2c71a7e0"
-        },
-        {
-            "from": "d5b40b0",
-            "to": "3371220"
         },
         {
             "from": "15cdce70",
@@ -4880,8 +4880,15 @@
                     "visible": false
                 },
                 {
-                    "base": "field_file",
+                    "base": "",
                     "code": [
+                        {
+                            "argument": {
+                                "name": "field_file"
+                            },
+                            "comment": "",
+                            "language": "Docker"
+                        },
                         {
                             "argument": {
                                 "name": "field_file"
@@ -4890,14 +4897,14 @@
                             "language": "Nipype"
                         }
                     ],
-                    "editable": false,
-                    "input": false,
-                    "inputPort": "0",
+                    "editable": true,
+                    "input": true,
+                    "inputPort": "3de83a30",
                     "iterator": false,
                     "name": "field_file",
-                    "output": true,
-                    "outputPort": "d5b40b0",
-                    "value": "",
+                    "output": false,
+                    "outputPort": "0",
+                    "value": "True",
                     "visible": true
                 },
                 {
@@ -5292,7 +5299,7 @@
                     "editable": true,
                     "input": true,
                     "inputPort": "c3b3560",
-                    "iterator": true,
+                    "iterator": false,
                     "name": "ref_file",
                     "output": false,
                     "outputPort": "0",
@@ -5334,7 +5341,7 @@
                     "editable": true,
                     "input": true,
                     "inputPort": "bcb1070",
-                    "iterator": true,
+                    "iterator": false,
                     "name": "refmask_file",
                     "output": false,
                     "outputPort": "0",
@@ -5637,8 +5644,8 @@
                 }
             ],
             "position": [
-                955.3864538453497,
-                1432.7024807926884
+                1021.0943028367283,
+                1504.3375663723054
             ],
             "title": {
                 "code": [
@@ -6492,7 +6499,7 @@
                     "editable": true,
                     "input": true,
                     "inputPort": "11abc890",
-                    "iterator": false,
+                    "iterator": true,
                     "name": "in_file",
                     "output": false,
                     "outputPort": "0",
@@ -7131,8 +7138,8 @@
                 }
             ],
             "position": [
-                -2810.0263298278373,
-                706.632825761313
+                -2801.137475930482,
+                696.6328651267892
             ],
             "title": {
                 "code": [
@@ -17905,7 +17912,7 @@
                 }
             ],
             "position": [
-                1764.8026620358125,
+                1766.3268120248185,
                 1233.5003798884263
             ],
             "title": {
@@ -18223,7 +18230,7 @@
                     "editable": true,
                     "input": true,
                     "inputPort": "2bedfd20",
-                    "iterator": true,
+                    "iterator": false,
                     "name": "ref_file",
                     "output": false,
                     "outputPort": "0",
@@ -20818,7 +20825,7 @@
     "size": [
         0,
         0,
-        1230,
+        1086,
         697
     ]
 }
