@@ -302,7 +302,11 @@ void Node::loadPortsFromJson(
     foreach (QJsonValue portValue, _portArray)
     {
         QJsonObject o = portValue.toObject();
-        if(!o.contains("id"))
+        if(o.contains("id"))
+        {
+            id = o["id"].toInt();
+        }
+        else
         {
             o["id"] = (int) ++id;
         }
