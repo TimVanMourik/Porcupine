@@ -4,9 +4,8 @@ layout: splash
 author_profile: true
 
 header:
-  overlay_color: "#000"
   overlay_filter: "0.1"
-  overlay_image: /_pages/assets/images/porcupine_walking.jpg
+  overlay_image: /assets/images/porcupine_walking.jpg
   cta_label: "Download"
   cta_url: "https://github.com/TimVanMourik/Porcupine/releases/latest"
 
