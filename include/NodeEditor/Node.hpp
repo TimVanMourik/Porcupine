@@ -86,11 +86,6 @@ public:
             PortPair* _port
             );
     //
-    void addPorts(
-            const QVector<Argument>& _arguments,
-            bool _initialiseWithDefault = false
-            );
-    //
     void paint(
             QPainter* _painter,
             const QStyleOptionGraphicsItem* _option,
@@ -129,6 +124,11 @@ public:
     //
     void loadFromJson(
             const QJsonObject& _json,
+            QMap<quint64, Port*>& o_portMap
+            );
+    //
+    void loadPortsFromJson(
+            const QJsonArray& _json,
             QMap<quint64, Port*>& o_portMap
             );
     /// @brief returns an in-order list of descendants that are input-output connected via Links.

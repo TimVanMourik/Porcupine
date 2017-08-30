@@ -124,10 +124,10 @@ const QVector<PortPair*> NodeTreeItem::getPorts(
 }
 
 QString NodeTreeItem::getParameterName(
-        const QString& _portName
+        unsigned int _portId
         ) const
 {
-    return m_portBlockLayout->getParameterName(_portName);
+    return m_portBlockLayout->getParameterName(_portId);
 }
 
 bool NodeTreeItem::isAncestorOf(

@@ -351,12 +351,12 @@ void MainWindow::exportFile(
     fileDialog.selectNameFilter(defaultFilter);
     fileDialog.exec();
 
-    QString fileName = fileDialog.selectedFiles().first();
-    if (fileName.isEmpty())
+    if(fileDialog.selectedFiles().isEmpty() || fileDialog.selectedFiles().first().isEmpty())
     {
 //        qDebug() << "No file name was chosen. Ergo, no file will be saved.";
         return;
     }
+    QString fileName = fileDialog.selectedFiles().first();
     if (fileName.endsWith(".pdf"))
     {
         QPrinter printer(QPrinter::HighResolution);

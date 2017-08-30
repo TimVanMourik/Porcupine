@@ -120,7 +120,7 @@ QString NipypeGenerator::itemToCode(
     foreach (const PortPair* pair,  _item->getPorts())
     {
         Argument argument = pair->getArgument();
-        QString filename = _item->getParameterName(argument.m_argumentName);
+        QString filename = _item->getParameterName(argument.m_id);
 
         //replace filename
         foreach (const QString parameter, _parameters.keys())

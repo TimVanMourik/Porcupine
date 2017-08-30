@@ -75,7 +75,7 @@ QString TvmGenerator::argumentToCode(
         ) const
 {
     QString code("");
-    QString fileName = _item->getParameterName(_argument.m_argumentName);
+    QString fileName = _item->getParameterName(_argument.m_id);
     if(!_argument.getArgument(s_thisLanguage)["name"].isEmpty() && !fileName.isEmpty())
     {
         code += QString("%1.%2 = %3;").arg(m_configurationVariable, _argument.getArgument(s_thisLanguage)["name"], fileName);

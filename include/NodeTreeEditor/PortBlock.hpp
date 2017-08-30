@@ -61,7 +61,7 @@ public:
             );
     //
     QString getParameterName(
-            const QString& _portName
+            unsigned int _portId
             ) const;
 
 public slots:
@@ -74,7 +74,7 @@ private:
     //
     QFormLayout* m_layout;
     //
-    QMap<QString, PortRow*> m_parameterNames;
+    QMap<unsigned int, PortRow*> m_parameterNames;
     //
     QVector<PortPair*> m_ports;
     //

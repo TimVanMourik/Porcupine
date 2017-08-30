@@ -92,6 +92,12 @@ const QString& PortPair::getName(
     return m_argument.m_argumentName;
 }
 
+unsigned int PortPair::getCounter(
+        ) const
+{
+    return m_argument.m_id;
+}
+
 const Argument& PortPair::getArgument(
         ) const
 {

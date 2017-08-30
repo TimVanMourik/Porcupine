@@ -60,6 +60,9 @@ public:
     const QString& getName(
             ) const;
     //
+    unsigned int getCounter(
+            ) const;
+    //
     const Argument& getArgument(
             ) const;
     //
