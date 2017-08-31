@@ -1,6 +1,6 @@
 ---
 title: "FEAT reconstruction"
-excerpt: "An Porcupine-pipeline reconstructing FSL FEAT's analysis pipeline."
+excerpt: "A Porcupine-pipeline reconstructing FSL FEAT's analysis pipeline."
 header:
   teaser: assets/images/examples/FEAT_porcupine_graph.png
 layout: single
