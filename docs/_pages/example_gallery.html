@@ -1,0 +1,14 @@
+---
+layout: archive
+title: "Example gallery"
+permalink: /examples/
+author_profile: false
+---
+
+<br>
+
+<div class="grid__wrapper">
+  {% for post in site.examples %}
+    {% include archive-single.html type="grid" %}
+  {% endfor %}
+</div>

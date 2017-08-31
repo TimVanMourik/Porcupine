@@ -11593,12 +11593,12 @@
           "output": false,
           "visible": false,
           "editable": true,
-          "name": "design_file",
+          "name": "threshold",
           "code": [
             {
               "language": "Nipype",
               "argument": {
-                "name": "design_file"
+                "name": "threshold"
               }
             }
           ]
@@ -11608,12 +11608,72 @@
           "output": false,
           "visible": false,
           "editable": true,
-          "name": "threshold",
+          "name": "tcon_file",
           "code": [
             {
               "language": "Nipype",
               "argument": {
-                "name": "threshold"
+                "name": "tcon_file"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "fcon_file",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "fcon_file"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mode",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "mode"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "surface",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "surface"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "design_file",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "design_file"
               }
             }
           ]
@@ -11953,21 +12013,6 @@
           "output": true,
           "visible": true,
           "editable": false,
-          "name": "corrections",
-          "code": [
-            {
-              "language": "Nipype",
-              "argument": {
-                "name": "corrections"
-              }
-            }
-          ]
-        },
-        {
-          "input": false,
-          "output": true,
-          "visible": true,
-          "editable": false,
           "name": "thresholdac",
           "code": [
             {
@@ -11989,6 +12034,96 @@
               "language": "Nipype",
               "argument": {
                 "name": "logfile"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "copes",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "copes"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "varcopes",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "varcopes"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "zstats",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "zstats"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "tstats",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "tstats"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "fstats",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "fstats"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "zfstats",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "zfstats"
               }
             }
           ]
@@ -16270,6 +16405,305 @@
               "language": "Nipype",
               "argument": {
                 "name": "out_vnscales"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "Nipype",
+        "fsl",
+        "aroma"
+      ],
+      "title": {
+        "name": "fsl.ICA_AROMA",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/aroma.html#ica_aroma",
+        "code": [
+          {
+            "language": "Nipype",
+            "comment": "Wraps command **ICA_AROMA.py**",
+            "argument": {
+              "name": "fsl.ICA_AROMA()",
+              "import": "import nipype.interfaces.fsl as fsl"
+            }
+          },
+          {
+            "language": "Docker",
+            "argument": {
+              "name": "Nipype, fsl"
+            }
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "feat_dir",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "feat_dir"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "in_file"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "motion_parameters",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "motion_parameters"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "denoise_type",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "denoise_type"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "out_dir",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "out_dir"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mask",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "mask"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dim",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "dim"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "TR",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "TR"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "melodic_dir",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "melodic_dir"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "mat_file",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "mat_file"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "fnirt_warp_file",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "fnirt_warp_file"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "args"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "environ"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "terminal_output"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "ignore_exception"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "aggr_denoised_file",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "aggr_denoised_file"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "nonaggr_denoised_file",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "nonaggr_denoised_file"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_dir",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "out_dir"
               }
             }
           ]
@@ -27892,6 +28326,21 @@
           "output": false,
           "visible": false,
           "editable": true,
+          "name": "out_mat_prefix",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "out_mat_prefix"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
           "name": "out_jac_prefix",
           "code": [
             {
@@ -28318,6 +28767,21 @@
               "language": "Nipype",
               "argument": {
                 "name": "out_jacs"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "out_mats",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "out_mats"
               }
             }
           ]

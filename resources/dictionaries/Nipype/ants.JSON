@@ -5223,6 +5223,275 @@
       "category": [
         "Nipype",
         "ants",
+        "registration"
+      ],
+      "title": {
+        "name": "ants.MeasureImageSimilarity",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.ants/registration.html#measureimagesimilarity",
+        "code": [
+          {
+            "language": "Nipype",
+            "comment": "Wraps command **MeasureImageSimilarity**",
+            "argument": {
+              "name": "ants.MeasureImageSimilarity()",
+              "import": "import nipype.interfaces.ants as ants"
+            }
+          },
+          {
+            "language": "Docker",
+            "argument": {
+              "name": "Nipype, ants"
+            }
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "fixed_image",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "fixed_image"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "moving_image",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "moving_image"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "metric",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "metric"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "radius_or_number_of_bins",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "radius_or_number_of_bins"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "sampling_percentage",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "sampling_percentage"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "dimension",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "dimension"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "metric_weight",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "metric_weight"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "sampling_strategy",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "sampling_strategy"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "fixed_image_mask",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "fixed_image_mask"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "moving_image_mask",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "moving_image_mask"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "num_threads",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "num_threads"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "args",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "args"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "environ",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "environ"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "terminal_output",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "terminal_output"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "ignore_exception",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "ignore_exception"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "similarity",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "similarity"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "Nipype",
+        "ants",
         "utils"
       ],
       "title": {
@@ -5451,6 +5720,21 @@
               "language": "Nipype",
               "argument": {
                 "name": "save_bias"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "copy_header",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "copy_header"
               }
             }
           ]
@@ -5879,12 +6163,42 @@
           "output": false,
           "visible": false,
           "editable": true,
+          "name": "fixed_image_masks",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "fixed_image_masks"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
           "name": "moving_image_mask",
           "code": [
             {
               "language": "Nipype",
               "argument": {
                 "name": "moving_image_mask"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "moving_image_masks",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "moving_image_masks"
               }
             }
           ]
@@ -6290,6 +6604,21 @@
               "language": "Nipype",
               "argument": {
                 "name": "transform_parameters"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": false,
+          "editable": true,
+          "name": "restrict_deformation",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "restrict_deformation"
               }
             }
           ]

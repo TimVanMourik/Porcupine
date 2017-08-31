@@ -1,52 +1,57 @@
 ---
 layout: splash
 author_profile: false
+title: Getting started
 
 header:
   overlay_color: "#000"
   overlay_filter: "0.1"
-  overlay_image: /_pages/assets/images/pipeline_lq.jpg
-
-feature_row:
-  - image_path: /_pages/assets/images/pipeline_example.jpg
-    alt: "example"
-    title: "Human Connectome"
-    excerpt: "An example of a pipeline."
-    #url: "/_pages/assets/example_pipeline/"
-    #btn_label: "Human Connectome"
-  - image_path: /_pages/assets/images/pipeline_example.jpg
-    alt: "example"
-    title: "NeuroImage"
-    excerpt: "An example of a pipeline."
-    #url: "/_pages/assets/example_pipeline/"
-    #btn_label: "Human Connectome"
-  - image_path: /_pages/assets/images/pipeline_example.jpg
-    alt: "example"
-    title: "Other famous Study"
-    excerpt: "An example of a pipeline."
-    #url: "/_pages/assets/example_pipeline/"
-    #btn_label: "Human Connectome"
-
-#climo:
-#  - image_path: /_pages/assets/images/climo_porcupine.jpg
-#    url: https://lizclimo.tumblr.com" target="_blank
-#    alt: Liz Climo
+  overlay_image: /assets/images/pipeline_lq.jpg
 ---
 
+# What is Porcupine?
+Porcupine is a software package that offers a graphical user interface (GUI) to
+build reproducible analysis pipelines for (f)MRI data. In Porcupine, you can
+create analysis pipelines by connecting "nodes" (analysis operations) to
+each other. For example, one could create a preprocessing pipeline for structural
+MRI, in which a "skullstripping node" (e.g. FSL's `BET` or AFNI's `3dSkullstrip`)
+is connected to a "segmentation node" (e.g. FSL's `FAST` or SPM's `NewSegment`).
 
-# Porcupine
-This program is meant for creating analysis pipelines for fMRI analysis. By dragging and dropping modules into an editor, you can simply create a workflow. The code for your analysis is automatically generated. Just download the installer files and get started. Currently, there is a Windows and a Mac installer. Also, it can be run within a docker image.
+{% include figure image_path="/assets/images/example_anat_wf.png"
+ alt="this is a placeholder image" caption="Example of a Porcupine workflow connecting FSL's BET and FAST." %}
 
-## Modules
-Porcupine features modules to create a pipeline for:
-* [NiPype](https://github.com/nipy/nipype), which itself connects to all major MRI analysis software packages
-* [neurodocker](https://github.com/kaczmarj/neurodocker), a tool to automatically create Docker files
-* My own [fMRI analysis toolbox](https://github.com/TimVanMourik/OpenFmriAnalysis), including layer specific fMRI
+## Why Porcupine?
+While there are existing pipeline packages (such as LONI and Nipype), these packages
+often require extensive technical knowledge and skills, which makes it difficult
+for researchers unfamiliar with these computational practices to start building
+analysis pipelines. However, describing one's analysis pipeline in code is
+essential in improving transparency and reproducibility in (neuro)science.
 
-## Porcupine in action: examples that have not yet been created
-{% include feature_row %}
+Porcupine provides the best of both worlds: while it allows researchers to build
+pipelines using Porcupine's GUI, it also generates the code that is needed to
+run the pipeline created in the GUI. Currently, Porcupine supports two
+pipeline-frameworks: [Nipype](https://nipype.readthedocs.io/en/latest/),
+a Python-based pipelining package, and my own [Laminar Analysis Toolbox](https://github.com/TimVanMourik/OpenFmriAnalysis).
 
-## Documentation
-Documentation will follow, but most of the program is quite straightforward. Just drag in your modules, wire them up, and your analyis code is automatically generated.
+In the image below, you can see the Porcupine-workflow (left) and the Porcupine-generated
+Nipype code (right) side-by-side.
 
-{% include feature_row id="climo"  type="center" %}
+{% include figure image_path="/assets/images/pork_py.png"
+ alt="this is a placeholder image" caption="Porcupine generates the code necessary to run your pipeline." %}
+
+## Porcupine improves reproducibility
+For Nipype-based pipelines, Porcupine doesn't only create the *code* corresponding
+to your pipeline, but also a *Dockerfile* that complements your pipeline. Building
+this Dockerfile creates a Docker-image that - together with your Porcupine-generated code -
+makes your pipeline completely reproducible from beginning to end.
+
+{% include figure image_path="/assets/images/docker_code.png"
+ alt="this is a placeholder image" caption="Porcupine also generates a Dockerfile complementary to your pipeline." %}
+
+# Get started!
+To get started with building pipelines in Porcupine, [download](/_pages/download) and install
+Porcupine first. We provide installers for Windows, Linux, and Mac OS. Then,
+check out our [example gallery](/examples) for inspiration or check out our
+[documentation](/documentation) for more information on how to work with Porcupine.
+
+{% include feature_row id="climo" type="center" %}

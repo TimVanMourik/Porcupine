@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "category": [
+        "Custom",
+        "firstlevelhelpers"
+      ],
+      "title": {
+        "name": "firstlevelhelpers.Tsv2subjectinfo",
+        "web_url": "",
+        "code": [
+          {
+            "language": "Nipype",
+            "comment": "Custom interface wrapping function Tsv2subjectinfo",
+            "argument": {
+              "name": "firstlevelhelpers.Tsv2subjectinfo",
+              "import": "sys.path.append('/media/lukas/goliath/Porcupine/example_workflows/firstlevel_fsl_and_custom_modules_example')\nimport firstlevelhelpers"
+            }
+          },
+          {
+            "language": "Docker",
+            "argument": {
+              "name": "Custom, firstlevelhelpers"
+            }
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "in_file",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "in_file"
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "output": false,
+          "visible": true,
+          "editable": true,
+          "name": "exclude",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "exclude"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "subject_info",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "subject_info"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
