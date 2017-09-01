@@ -5,6 +5,7 @@ layout: single
 author_profile : false
 categories:
   - 4. Advanced usage
+permalink: /documentation/advanced/custom-nodes
 ---
 
 How to load custom nodes.

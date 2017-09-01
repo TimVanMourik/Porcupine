@@ -5,26 +5,27 @@ layout: single
 author_profile : false
 categories:
   - 1. Basics
+permalink: documentation/basics/intro
 ---
 
-## General documentation
-Some general info about documentation
-- different panes, different uses
-  - node-editor pane
-  - workflow-editor pane
-  - parameter-editor
-  - code-generator pane
-- post-its
-- loading/saving
+Porcupine is software that allows you to create analysis pipelines visually
+using a drag-and-drop interface, which Porcupine then converts to code for you!
+In order to effectively use Porcupine, you have to understand the different
+windows (which we call "editors") in Porcupine. In the figure below (click to enlarge),
+you see an example pipeline and its representation in Porcupine, which is
+split up in four "editors":
 
-Now, we'll highlight how to use the following frameworks:
-- Nipype
-- ...
+1. the **workflow**-editor
+2. the **node**-editor
+3. the **code**-editor
+4. the **parameter**-editor.
 
-### Nipype documentation
-- General info
-- Exceptions (how to add ports etc)
-- General nodes
-- Iterables
-- MapNodes
-- add-your-own-module
+<figure>
+	<a href="{{ site.url }}{{ site.baseurl }}/documentation/images/porcupine_windows.png"><img
+    src="{{ site.url }}{{ site.baseurl }}/{{ example_path }}/documentation/images/porcupine_windows.png"></a>
+	<figcaption>The Porcupine GUI featuring its four "editors".</figcaption>
+</figure>
+
+In the "Basics" section of the documentation, we'll work you through the basics
+of Porcupine by explaining each editor and how it relates to the process of
+building a fully functioning and reproducibly pipeline in Porcupine!
