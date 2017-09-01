@@ -39,6 +39,7 @@
 #include <QMenuBar>
 #include <QPainter>
 #include <QPrinter>
+#include <QSvgGenerator>
 #include <QPushButton>
 #include <QSlider>
 #include <QSplitter>
@@ -184,7 +185,7 @@ void MainWindow::loadDefaultNodes(
 
     QStringList toolboxNames;
     toolboxNames << QString(":/dictionaries/TvM/dict_%1.JSON");
-    toolboxNames << QString(":/dictionaries/NiPype/dict_%1.JSON");
+    toolboxNames << QString(":/dictionaries/Nipype/dict_%1.JSON");
     unsigned int framePadding = 3;
     foreach (QString toolbox, toolboxNames)
     {
@@ -339,31 +340,63 @@ void MainWindow::openFile()
     }
 }
 
-void MainWindow::printFile(
+void MainWindow::exportFile(
         )
 {
-    QPrinter printer(QPrinter::HighResolution);
-    printer.setPageSize(QPrinter::A4);
-    printer.setOrientation(QPrinter::Landscape);
-    printer.setOutputFormat(QPrinter::PdfFormat);
 
-    QString fileName = QFileDialog::getSaveFileName();
-    if (fileName.isEmpty())
+    QString filters("PDF files (*.pdf);;SVG files (*.svg)");
+    QString defaultFilter("PDF files (*.pdf)");
+    QFileDialog fileDialog(0, "Export file", QDir::currentPath(), filters);
+    fileDialog.setAcceptMode(QFileDialog::AcceptSave);
+    fileDialog.selectNameFilter(defaultFilter);
+    fileDialog.exec();
+
+    if(fileDialog.selectedFiles().isEmpty() || fileDialog.selectedFiles().first().isEmpty())
     {
 //        qDebug() << "No file name was chosen. Ergo, no file will be saved.";
         return;
     }
-    printer.setOutputFileName(fileName);
-
-    QPainter painter;
-    if(!painter.begin(&printer))
+    QString fileName = fileDialog.selectedFiles().first();
+    if (fileName.endsWith(".pdf"))
     {
-//        qDebug() << "Error setting up printer.";
-        return;
+        QPrinter printer(QPrinter::HighResolution);
+        printer.setPageSize(QPrinter::A4);
+        printer.setOrientation(QPrinter::Landscape);
+        printer.setOutputFormat(QPrinter::PdfFormat);
+        printer.setOutputFileName(fileName);
+
+        QPainter painter;
+        if(!painter.begin(&printer))
+        {
+            //        qDebug() << "Error setting up printer.";
+            return;
+        }
+        painter.setRenderHint(QPainter::TextAntialiasing);
+        m_nodeEditors[m_nodeEditorWidget->currentIndex()]->printScene(painter);
+        painter.end();
     }
-    painter.setRenderHint(QPainter::TextAntialiasing);
-    m_nodeEditors[m_nodeEditorWidget->currentIndex()]->printScene(painter);
-    painter.end();
+    else if(fileName.endsWith(".svg"))
+    {
+        QSvgGenerator generator;
+        generator.setFileName(fileName);
+        generator.setTitle(fileName);
+        QRectF sceneSize = m_nodeEditors[m_nodeEditorWidget->currentIndex()]->sceneRect();
+        generator.setSize(sceneSize.size().toSize());
+        generator.setViewBox(QRect(0, 0, sceneSize.width(), sceneSize.height()));
+//        generator.setDescription();
+//        generator.setOutputDevice();
+//        generator.setResolution();
+
+        QPainter painter;
+        if(!painter.begin(&generator))
+        {
+            //        qDebug() << "Error setting up printer.";
+            return;
+        }
+        painter.setRenderHint(QPainter::TextAntialiasing);
+        m_nodeEditors[m_nodeEditorWidget->currentIndex()]->printScene(painter);
+        painter.end();
+    }
 }
 
 void MainWindow::newFile(
@@ -471,7 +504,7 @@ void MainWindow::createMenus()
     m_fileMenu->addAction(m_openAct);
     /// @todo Add 'open recent file' to the menu
     m_fileMenu->addAction(m_saveToJsonAct);
-    m_fileMenu->addAction(m_printAct);
+    m_fileMenu->addAction(m_exportAct);
     m_fileMenu->addSeparator();
     m_fileMenu->addAction(m_exitAct);
 
@@ -509,10 +542,10 @@ void MainWindow::createActions()
     m_saveToJsonAct->setStatusTip(tr("Save the document as XML-file to disk"));
     connect(m_saveToJsonAct, SIGNAL(triggered()), this, SLOT(saveFileToJson()));
 
-    m_printAct = new QAction(tr("Print..."), this);
-    m_printAct->setShortcuts(QKeySequence::Print);
-    m_printAct->setStatusTip(tr("Print the document"));
-    connect(m_printAct, SIGNAL(triggered()), this, SLOT(printFile()));
+    m_exportAct = new QAction(tr("Export as..."), this);
+    m_exportAct->setShortcuts(QKeySequence::Print);
+    m_exportAct->setStatusTip(tr("Export worflow"));
+    connect(m_exportAct, SIGNAL(triggered()), this, SLOT(exportFile()));
 
     m_loadNodesAct = new QAction(tr("Load Dictionary..."), this);
 //    m_loadNodesAct->setShortcuts(QKeySequence::);

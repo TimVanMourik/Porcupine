@@ -25,7 +25,7 @@
 #define NODEEDITOR_HPP
 
 //----------------------------------------------------------------------------------------------------------------------
-/// @file NodeEditor.h
+/// @file NodeEditor.hpp
 /// @author Tim van Mourik
 /// @date 8 January 2014
 /// @brief

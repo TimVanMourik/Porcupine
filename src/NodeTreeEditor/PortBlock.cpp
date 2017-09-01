@@ -25,6 +25,7 @@
 #include <QFile>
 #include <QInputDialog>
 #include <QJsonArray>
+#include <QLabel>
 #include <QLineEdit>
 #include <QMessageBox>
 #include <QFormLayout>
@@ -52,6 +53,15 @@ PortBlock::PortBlock(
     m_layout->setLabelAlignment(Qt::AlignBottom);
 
     addPortBlock(m_node->getPorts());
+    QLabel* baseNameLabel = new QLabel(m_node->getBaseName());
+    baseNameLabel->setStyleSheet("QLabel { color : rgb(0.7, 0.7, 0.7); }");
+    QFont labelFont;
+    labelFont.setItalic(true);
+    labelFont.setPixelSize(10);
+
+    baseNameLabel->setFont(labelFont);
+    layout()->addWidget(baseNameLabel);
+    layout()->setAlignment(baseNameLabel, Qt::AlignCenter);
     QPushButton* addPortButton = new QPushButton("Add port");
     layout()->addWidget(addPortButton);
     //This removes the ugly label background
@@ -146,7 +156,7 @@ void PortBlock::addPortRow(
         )
 {
     PortRow* row = new PortRow(port, this);
-    m_parameterNames[port->getName()] = row;
+    m_parameterNames[port->getCounter()] = row;
     m_layout->addRow(port->getName(), row);
 }
 
@@ -177,12 +187,12 @@ void PortBlock::saveToJson(
 }
 
 QString PortBlock::getParameterName(
-        const QString& _portName
+        unsigned int _portId
         ) const
 {
-    if(m_parameterNames[_portName])
+    if(m_parameterNames[_portId])
     {
-        return m_parameterNames[_portName]->getParameterName();
+        return m_parameterNames[_portId]->getParameterName();
     }
     else
     {

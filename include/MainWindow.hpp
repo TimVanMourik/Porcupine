@@ -86,7 +86,7 @@ private slots:
             );
     void newFile(
             );
-    void printFile(
+    void exportFile(
             );
     void loadNewNodes(
             );
@@ -153,7 +153,7 @@ private:
     QAction* m_newAct;
     QAction* m_openAct;
     QAction* m_saveToJsonAct;
-    QAction* m_printAct;
+    QAction* m_exportAct;
     QAction* m_loadNodesAct;
     QAction* m_exitAct;
     QAction* m_undoAct;

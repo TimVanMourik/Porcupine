@@ -25,7 +25,7 @@
 #define NODE_HPP
 
 //----------------------------------------------------------------------------------------------------------------------
-/// @file Node.h
+/// @file Node.hpp
 /// @author Tim van Mourik
 /// @date 8 January 2014
 /// @brief
@@ -86,11 +86,6 @@ public:
             PortPair* _port
             );
     //
-    void addPorts(
-            const QVector<Argument>& _arguments,
-            bool _initialiseWithDefault = false
-            );
-    //
     void paint(
             QPainter* _painter,
             const QStyleOptionGraphicsItem* _option,
@@ -112,6 +107,9 @@ public:
     const QString& getType(
             ) const;
     //
+    const QString& getBaseName(
+            ) const;
+    //
     const QString& getName(
             ) const;
     //
@@ -126,6 +124,11 @@ public:
     //
     void loadFromJson(
             const QJsonObject& _json,
+            QMap<quint64, Port*>& o_portMap
+            );
+    //
+    void loadPortsFromJson(
+            const QJsonArray& _json,
             QMap<quint64, Port*>& o_portMap
             );
     /// @brief returns an in-order list of descendants that are input-output connected via Links.
@@ -159,6 +162,8 @@ private:
     QJsonObject m_json;
     //
     QString m_name;
+    //
+    QString m_baseName;
     // As Node is not a QObject derivative, but we would still like to use signals and slots, transmissions go via an antenna
     // Another way to appraoch the problem is multiple inheritance.
     NodeAntenna m_antenna;

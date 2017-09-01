@@ -25,12 +25,10 @@
 
 NodeSetting::NodeSetting(
         const Argument& _title,
-        const QVector<Argument>& _ports,
         const QJsonObject& _json
         ) :
     m_title(_title),
-    m_json(_json),
-    m_ports(_ports)
+    m_json(_json)
 {
 }
 
@@ -45,12 +43,6 @@ const Argument& NodeSetting::getTitle(
         ) const
 {
     return m_title;
-}
-
-const QVector<Argument>& NodeSetting::getPorts(
-        ) const
-{
-    return m_ports;
 }
 
 const QJsonObject& NodeSetting::getJson(

@@ -42,7 +42,11 @@ def node2json(node, node_name=None, module=None, custom_node=False, module_path=
     all_outputs = _get_outputs(node, custom_node)
     descr = _get_descr(node, node_name, custom_node)
 
-    category = 'NiPype'
+    if custom_node:
+        category = 'Custom'
+    else:
+        category = 'Nipype'
+
     this_category = [category]
     if module.split('.')[0] == 'algorithms':
         this_category.append('algorithms')
@@ -68,7 +72,7 @@ def node2json(node, node_name=None, module=None, custom_node=False, module_path=
         'name': '%s.%s' % (interface_name[-1], node_name),
         'web_url': web_url,
         'code': [{
-            'language': category,
+            'language': 'Nipype',
             'comment': descr,
             'argument': {
                 "name": init_statement,
@@ -88,7 +92,7 @@ def node2json(node, node_name=None, module=None, custom_node=False, module_path=
 
     for inp in all_inputs:
         codeBlock = {
-            'language': category,
+            'language': 'Nipype',
             'argument': {
                 "name": inp
             }
@@ -112,7 +116,7 @@ def node2json(node, node_name=None, module=None, custom_node=False, module_path=
     for outp in all_outputs:
 
         codeBlock = {
-            'language': category,
+            'language': 'Nipype',
             'argument': {
                 "name": outp
             }
@@ -143,7 +147,7 @@ def _get_inputs(node, custom_node=True):
         TO_SKIP = ['function_str', 'trait_added', 'trait_modified',
                    'ignore_exception']
         all_inputs.extend([inp for inp in node.inputs.traits().keys()
-                           if not inp in TO_SKIP])
+                           if inp not in TO_SKIP])
         mandatory_inputs.extend(all_inputs)
     else:
         all_inputs.extend([inp for inp in node.input_spec().traits().keys()

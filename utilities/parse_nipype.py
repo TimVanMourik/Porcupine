@@ -33,7 +33,7 @@ for class_name in MODULES_TO_PARSE:
                  if n[0].isupper() or n[0].isdigit()]
     node_list = filter_nodes(node_list)
 
-    nodes_to_save = [node2json(node, module=class_name, custom_node=False, category=category)
+    nodes_to_save = [node2json(node, module=class_name, custom_node=False)
                      for node in node_list]
 
     with open(op.join(working_dir, class_name.split('.')[1] + '.JSON'), 'w') as outfile:
