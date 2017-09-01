@@ -29,12 +29,14 @@
 
 #include "NodeSetting.hpp"
 #include "NodeTreeItem.hpp"
+#include "Singleton.hpp"
 
 class CodeEditor;
 class Link;
 
-class CodeGenerator
+class CodeGenerator : public Singleton<CodeGenerator>
 {
+    friend class Singleton<CodeGenerator>;
 public:
     //
     CodeGenerator(
@@ -45,8 +47,17 @@ public:
             const QList<NodeTreeItem*>& _nodeList,
             const QVector<const Link*>& _linkList = QVector<const Link*>(0)
             ) = 0;
-    //
-    ~CodeGenerator();
+    /// @brief
+    CodeGenerator(
+            CodeGenerator const& _copy
+            ); //Not implemented
+    /// @brief
+    CodeGenerator& operator=(
+            CodeGenerator const& _copy
+            ); //Not implemented
+    /// @brief
+    ~CodeGenerator(
+            );
 protected:
     //
     CodeEditor* m_editor;

@@ -111,6 +111,7 @@ MainWindow::MainWindow(
     createActions();
     createMenus();
     loadDefaultNodes();
+//    installEventFilter(this);
 
     connect(buttonGenerate, SIGNAL(released()), this, SLOT(nodeToCode()));
     connect(buttonSave, SIGNAL(released()), this, SLOT(saveCode()));
