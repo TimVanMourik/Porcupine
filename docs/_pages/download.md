@@ -2,6 +2,7 @@
 title: "Download me here!"
 layout: splash
 author_profile: true
+permalink: /download/
 
 header:
   overlay_filter: "0.1"

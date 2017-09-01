@@ -2,6 +2,7 @@
 layout: splash
 author_profile: false
 title: Getting started
+permalink: /getting-started/
 
 header:
   overlay_color: "#000"
@@ -49,7 +50,7 @@ makes your pipeline completely reproducible from beginning to end.
  alt="this is a placeholder image" caption="Porcupine also generates a Dockerfile complementary to your pipeline." %}
 
 # Get started!
-To get started with building pipelines in Porcupine, [download](/_pages/download) and install
+To get started with building pipelines in Porcupine, [download](/download) and install
 Porcupine first. We provide installers for Windows, Linux, and Mac OS. Then,
 check out our [example gallery](/examples) for inspiration or check out our
 [documentation](/documentation) for more information on how to work with Porcupine.
