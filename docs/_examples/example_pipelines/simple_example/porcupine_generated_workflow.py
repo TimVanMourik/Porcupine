@@ -8,25 +8,25 @@ import nipype.interfaces.fsl as fsl
 WorkingDirectory = "~/Porcupipelines/ThisStudy"
 
 #Generic datagrabber module that wraps around glob in an
-NodeHash_2901d30 = pe.Node(io.S3DataGrabber(outfields=['outfiles']), name = 'NodeName_2901d30')
-NodeHash_2901d30.inputs.bucket = 'openneuro'
-NodeHash_2901d30.inputs.sort_filelist = True
-NodeHash_2901d30.inputs.template = 'sub-01/anat/sub-01_T1w.nii.gz'
-NodeHash_2901d30.inputs.anon = True
-NodeHash_2901d30.inputs.bucket_path = 'ds000101/ds000101_R2.0.0/uncompressed/'
-NodeHash_2901d30.inputs.local_directory = '/tmp'
+NodeHash_17c5c70 = pe.Node(io.S3DataGrabber(outfields=['outfiles']), name = 'NodeName_17c5c70')
+NodeHash_17c5c70.inputs.bucket = 'openneuro'
+NodeHash_17c5c70.inputs.sort_filelist = True
+NodeHash_17c5c70.inputs.template = 'sub-01/anat/sub-01_T1w.nii.gz'
+NodeHash_17c5c70.inputs.anon = True
+NodeHash_17c5c70.inputs.bucket_path = 'ds000101/ds000101_R2.0.0/uncompressed/'
+NodeHash_17c5c70.inputs.local_directory = '/tmp'
 
 #Wraps command **bet**
-NodeHash_3924700 = pe.Node(interface = fsl.BET(), name = 'NodeName_3924700')
+NodeHash_211a5f0 = pe.Node(interface = fsl.BET(), name = 'NodeName_211a5f0')
 
 #Generic datasink module to store structured outputs
-NodeHash_6110c20 = pe.Node(interface = io.DataSink(), name = 'NodeName_6110c20')
-NodeHash_6110c20.inputs.base_directory = '/tmp'
+NodeHash_236ab50 = pe.Node(interface = io.DataSink(), name = 'NodeName_236ab50')
+NodeHash_236ab50.inputs.base_directory = '/tmp'
 
 #Create a workflow to connect all those nodes
 analysisflow = nipype.Workflow('MyWorkflow')
-analysisflow.connect(NodeHash_3924700, 'out_file', NodeHash_6110c20, 'BET_results')
-analysisflow.connect(NodeHash_2901d30, 'outfiles', NodeHash_3924700, 'in_file')
+analysisflow.connect(NodeHash_211a5f0, 'out_file', NodeHash_236ab50, 'BET_results')
+analysisflow.connect(NodeHash_17c5c70, 'outfiles', NodeHash_211a5f0, 'in_file')
 
 #Run the workflow
 plugin = 'MultiProc' #adjust your desired plugin here

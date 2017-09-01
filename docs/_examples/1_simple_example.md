@@ -7,12 +7,18 @@ layout: single
 permalink: /simple-example
 ---
 
+{% assign example_path = 'examples/example_pipelines/simple_example/' %}
+{% assign caption = "A simple example pipeline performing skullstripping in Porcupine" %}
+
 This example pipeline showcases the some basic functionality of a (Nipype-based)
 Porcupine pipeline, which defines a T1-weighted structural scan as input,
 performs skullstripping on it, and writes the result to disk.
 
-{% include figure image_path="/examples/example_pipelines/simple_example/porcupine_graph.png"
-   caption="A simple example pipeline performing skullstripping in Porcupine" %}
+<figure>
+	<a href="{{ site.url }}{{ site.baseurl }}/{{ example_path }}/porcupine_graph.png"><img
+    src="{{ site.url }}{{ site.baseurl }}/{{ example_path }}/porcupine_graph.png"></a>
+	<figcaption>{{ caption }}</figcaption>
+</figure>
 
 This pipeline, like all the example pipelines we provide, defines the input-data
 as data from an [openneuro](https://openneuro.org/public/datasets) Amazon
@@ -33,13 +39,12 @@ BET node. The result of the skullstrip operation by the BET-node is then written
 to disk using the `DataSink` node from Nipype.
 
 Check out the Porcupine-generated Python-script, Porcupine-pipeline, and
-associated Dockerfile in our [Github repository](https://github.com/TimVanMourik/Porcupine/tree/example_workflows/docs/_examples/example_pipelines/simple_example)
-or download the files directly below.
+associated Dockerfile in our [Github repository](https://github.com/TimVanMourik/Porcupine/tree/example_workflows/docs/_{{ example_path }}) or download the files directly below.
 
 [<i class="fa fa-download"></i> Download .pork-file][1]{: .btn}
 [<i class="fa fa-download"></i> Download .py-file][2]{: .btn}
 [<i class="fa fa-download"></i> Download Dockerfile][3]{: .btn}
 
-[1]:{{ site.url }}{{ site.baseurl }}/examples/example_pipelines/simple_example/porcupine_pipeline.pork
-[2]:{{ site.url }}{{ site.baseurl }}/examples/example_pipelines/simple_example/porcupine_generated_workflow.py
-[3]:{{ site.url }}{{ site.baseurl }}/examples/example_pipelines/simple_example/Dockerfile
+[1]:{{ site.url }}{{ site.baseurl }}/{{ example_path }}/porcupine_pipeline.pork
+[2]:{{ site.url }}{{ site.baseurl }}/{{ example_path }}/porcupine_generated_workflow.py
+[3]:{{ site.url }}{{ site.baseurl }}/{{ example_path }}/Dockerfile
