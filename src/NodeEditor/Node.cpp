@@ -284,6 +284,7 @@ void Node::loadFromJson(
     Argument title(_json["title"].toObject());
     m_json = _json;
     m_name = title.m_argumentName;
+    m_baseName = title.m_baseName;
     m_nameLabel->setText(m_name);
     QJsonArray position = _json["position"].toArray();
     setPos(position.at(0).toDouble(0), position.at(1).toDouble(0));
@@ -332,6 +333,21 @@ void Node::loadPortsFromJson(
     }
     repositionPorts();
     updateJson();
+}
+
+unsigned int Node::generateId(
+        )
+{
+    int maxId = 0;
+    foreach(QJsonValue portValue, m_json["ports"].toArray())
+    {
+        QJsonObject o = portValue.toObject();
+        if(o.contains("id"))
+        {
+            maxId = maxId > o["id"].toInt() ? maxId : o["id"].toInt();
+        }
+    }
+    return maxId + 1;
 }
 
 void Node::updateJson(

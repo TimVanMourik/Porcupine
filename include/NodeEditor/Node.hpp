@@ -148,6 +148,9 @@ public:
             const QVariant& _value
             );
     //
+    unsigned int generateId(
+            );
+    //
     void initialize(
             );
     //

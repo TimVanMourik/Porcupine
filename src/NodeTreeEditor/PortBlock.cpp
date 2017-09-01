@@ -134,11 +134,13 @@ void PortBlock::addPort(
         return;
     }
 
-    portArgument.updateJson();
+    portArgument.m_id = m_node->generateId();
     PortPair* p = m_node->addPortPair(portArgument, false);
+    m_node->updateJson();
     m_node->repositionPorts();
     addPortRow(p);
 }
+
 
 void PortBlock::addPortBlock(
         const QVector<PortPair*>& _ports
