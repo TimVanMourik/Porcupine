@@ -27,8 +27,6 @@ writes the results to disk.
 Note that this pipeline includes Nipype-based nodes from three different
 major neuroimaging packages (ANTs, AFNI, and FSL).
 
-
-
 Check out the Porcupine-generated Python-script, Porcupine-pipeline, and
 associated Dockerfile in our [Github repository](https://github.com/TimVanMourik/Porcupine/tree/example_workflows/docs/_{{ example_path }}) or download the files directly below.
 

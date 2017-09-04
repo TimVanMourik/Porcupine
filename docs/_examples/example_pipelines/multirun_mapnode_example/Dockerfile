@@ -57,3 +57,8 @@ RUN apt-get update -qq && apt-get install -yq --no-install-recommends ed gsl-bin
     && /opt/afni/rPkgsInstall -pkgs ALL \
     && rm -rf /tmp/*
 
+#--------------------------------
+# Add custom analysis file as CMD
+#--------------------------------
+ADD /path/to/pipeline/script.py /somewhere/porcupipeline.py
+CMD['python', '/somewhere/porcupipeline.py']

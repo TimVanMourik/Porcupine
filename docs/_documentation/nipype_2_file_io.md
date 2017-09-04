@@ -5,6 +5,7 @@ layout: single
 author_profile : false
 categories:
   - 3. Nipype-pipelines
+permalink: /documentation/nipype/file-io
 ---
 
 Stuff on file I/O (SelectFiles, dynamic ports).

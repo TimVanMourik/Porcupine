@@ -5,6 +5,5 @@ layout: single
 author_profile : false
 categories:
   - 3. Nipype-pipelines
+permalink: /documentation/nipype/intro
 ---
-
-Info on how to build Nipype-pipelines.

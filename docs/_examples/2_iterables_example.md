@@ -4,7 +4,7 @@ excerpt: "An example using an iterable in Porcupine."
 header:
   teaser: /examples/example_pipelines/iterable_example/porcupine_graph.png
 layout: single
-permalink: /iterables-example
+permalink: /examples/iterables-example
 ---
 
 {% assign example_path = 'examples/example_pipelines/iterable_example/' %}

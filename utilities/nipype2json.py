@@ -10,7 +10,8 @@ import os.path as op
 from copy import copy
 
 
-def node2json(node, node_name=None, module=None, custom_node=False, module_path=None):
+def node2json(node, node_name=None, module=None, custom_node=False,
+              module_path=None):
     """ Converts nipype nodes to Porcupine-compatible json-files.
 
     This function takes a Nipype node from a Python module and
@@ -231,8 +232,12 @@ def _get_import_statement(node, module, module_path):
         importlib.import_module('nipype.' + module)
         import_statement = "import nipype.%s as %s" % (module, module.split('.')[-1])
     except ImportError:
-        import_statement = "sys.path.append('%s')\nimport %s"
-        import_statement = import_statement % (op.abspath(op.dirname(module_path)), module)
+
+        import_statement = ''
+        if module_path is not None:
+            import_statement += "sys.path.append('%s')\n" % (op.abspath(op.dirname(module_path)))
+
+        import_statement += 'import %s' % module
 
     return import_statement
 
