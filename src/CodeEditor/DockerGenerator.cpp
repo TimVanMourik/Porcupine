@@ -63,22 +63,31 @@ QString DockerGenerator::generateCode(
             }
         }
     }
-    if(dockerModuleFiles.length() != 0)
+    if(dockerModuleFiles.length() == 0)
     {
-        QString preambleFile(":/dictionaries/Neurodocker/preamble.txt");
-        QFile preamble(preambleFile);
-        preamble.open(QIODevice::ReadOnly);
-        code += preamble.readAll();
-        preamble.close();
-
-        foreach(QString module, dockerModuleFiles)
-        {
-            QFile file(module);
-            file.open(QIODevice::ReadOnly);
-            code += file.readAll();
-            file.close();
-        }
+        return code;
     }
+
+    QString preambleFile(":/dictionaries/Neurodocker/preamble.txt");
+    QFile preamble(preambleFile);
+    preamble.open(QIODevice::ReadOnly);
+    code += preamble.readAll();
+    preamble.close();
+
+    foreach(QString module, dockerModuleFiles)
+    {
+        QFile file(module);
+        file.open(QIODevice::ReadOnly);
+        code += file.readAll();
+        file.close();
+    }
+
+    QString postambleFile(":/dictionaries/Neurodocker/postamble.txt");
+    QFile postamble(postambleFile);
+    postamble.open(QIODevice::ReadOnly);
+    code += postamble.readAll();
+    postamble.close();
+
     return code;
 }
 
