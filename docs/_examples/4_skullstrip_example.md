@@ -5,7 +5,7 @@ excerpt: "An example of a skullstripping pipeline in Porcupine."
 header:
   teaser: /examples/example_pipelines/skullstrip_afni_ants_example/porcupine_graph.png
 layout: single
-permalink: /skullstrip-example
+permalink: /examples/skullstrip-example
 ---
 
 {% assign example_path = 'examples/example_pipelines/skullstrip_afni_ants_example' %}
