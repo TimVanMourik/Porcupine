@@ -6,6 +6,79 @@
         "firstlevelhelpers"
       ],
       "title": {
+        "name": "firstlevelhelpers.Find_fsl_mni_files",
+        "web_url": "",
+        "code": [
+          {
+            "language": "Nipype",
+            "comment": "Custom interface wrapping function Find_fsl_mni_files",
+            "argument": {
+              "name": "firstlevelhelpers.Find_fsl_mni_files",
+              "import": "import firstlevelhelpers"
+            }
+          },
+          {
+            "language": "Docker",
+            "argument": {
+              "name": "Custom, firstlevelhelpers"
+            }
+          }
+        ]
+      },
+      "ports": [
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "MNI_head",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "MNI_head"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "MNI_brain",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "MNI_brain"
+              }
+            }
+          ]
+        },
+        {
+          "input": false,
+          "output": true,
+          "visible": true,
+          "editable": false,
+          "name": "MNI_mask",
+          "code": [
+            {
+              "language": "Nipype",
+              "argument": {
+                "name": "MNI_mask"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": [
+        "Custom",
+        "firstlevelhelpers"
+      ],
+      "title": {
         "name": "firstlevelhelpers.Getinormscale",
         "web_url": "",
         "code": [
@@ -14,7 +87,7 @@
             "comment": "Custom interface wrapping function Getinormscale",
             "argument": {
               "name": "firstlevelhelpers.Getinormscale",
-              "import": "sys.path.append('/media/lukas/goliath/Porcupine/example_workflows/FEAT_fsl_complete_firstlevel_and_secondlevel')\nimport firstlevelhelpers"
+              "import": "import firstlevelhelpers"
             }
           },
           {
@@ -72,7 +145,7 @@
             "comment": "Custom interface wrapping function Getpercentthresh",
             "argument": {
               "name": "firstlevelhelpers.Getpercentthresh",
-              "import": "sys.path.append('/media/lukas/goliath/Porcupine/example_workflows/FEAT_fsl_complete_firstlevel_and_secondlevel')\nimport firstlevelhelpers"
+              "import": "import firstlevelhelpers"
             }
           },
           {
@@ -145,7 +218,7 @@
             "comment": "Custom interface wrapping function Getusan",
             "argument": {
               "name": "firstlevelhelpers.Getusan",
-              "import": "sys.path.append('/media/lukas/goliath/Porcupine/example_workflows/FEAT_fsl_complete_firstlevel_and_secondlevel')\nimport firstlevelhelpers"
+              "import": "import firstlevelhelpers"
             }
           },
           {
@@ -218,7 +291,7 @@
             "comment": "Custom interface wrapping function Tsv2subjectinfo",
             "argument": {
               "name": "firstlevelhelpers.Tsv2subjectinfo",
-              "import": "sys.path.append('/media/lukas/goliath/Porcupine/example_workflows/FEAT_fsl_complete_firstlevel_and_secondlevel')\nimport firstlevelhelpers"
+              "import": "import firstlevelhelpers"
             }
           },
           {

@@ -1,44 +1,44 @@
 {
     "links": [
         {
-            "from": "18d4c290",
-            "to": "1a234240"
+            "from": "203d9f0",
+            "to": "2310700"
         },
         {
-            "from": "18acec00",
-            "to": "17908020"
+            "from": "1d5b750",
+            "to": "26fe930"
         },
         {
-            "from": "15f3d470",
-            "to": "131c9470"
+            "from": "44a0760",
+            "to": "2b06170"
         },
         {
-            "from": "15f3d470",
-            "to": "18565fa0"
+            "from": "41f1640",
+            "to": "6b593e0"
         },
         {
-            "from": "15b196f0",
-            "to": "14d66210"
+            "from": "44a0760",
+            "to": "3bb1f00"
         },
         {
-            "from": "132bedb0",
-            "to": "11892160"
+            "from": "21f16d0",
+            "to": "3bb6200"
         },
         {
-            "from": "10c552d0",
-            "to": "1810ef20"
+            "from": "22b68a0",
+            "to": "50b3fe0"
         },
         {
-            "from": "132bedb0",
-            "to": "14cb1500"
+            "from": "22b68a0",
+            "to": "685d640"
         },
         {
-            "from": "10c51090",
-            "to": "10c67f70"
+            "from": "50c00a0",
+            "to": "739c400"
         },
         {
-            "from": "10a016c0",
-            "to": "11897250"
+            "from": "6865080",
+            "to": "7397fc0"
         }
     ],
     "nodes": [
@@ -49,6 +49,7 @@
             ],
             "ports": [
                 {
+                    "base": "anon",
                     "code": [
                         {
                             "argument": {
@@ -59,8 +60,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 1,
                     "input": true,
-                    "inputPort": "caec020",
+                    "inputPort": "270fb50",
                     "iterator": false,
                     "name": "anon",
                     "output": false,
@@ -69,6 +71,7 @@
                     "visible": true
                 },
                 {
+                    "base": "bucket",
                     "code": [
                         {
                             "argument": {
@@ -79,8 +82,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 2,
                     "input": true,
-                    "inputPort": "d3fe9d0",
+                    "inputPort": "24a0060",
                     "iterator": false,
                     "name": "bucket",
                     "output": false,
@@ -89,6 +93,7 @@
                     "visible": true
                 },
                 {
+                    "base": "bucket_path",
                     "code": [
                         {
                             "argument": {
@@ -99,8 +104,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 3,
                     "input": true,
-                    "inputPort": "90ad670",
+                    "inputPort": "3105e40",
                     "iterator": false,
                     "name": "bucket_path",
                     "output": false,
@@ -109,6 +115,7 @@
                     "visible": true
                 },
                 {
+                    "base": "ignore_exception",
                     "code": [
                         {
                             "argument": {
@@ -119,8 +126,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 4,
                     "input": true,
-                    "inputPort": "f970a00",
+                    "inputPort": "1d0a9d0",
                     "iterator": false,
                     "name": "ignore_exception",
                     "output": false,
@@ -129,6 +137,7 @@
                     "visible": false
                 },
                 {
+                    "base": "local_directory",
                     "code": [
                         {
                             "argument": {
@@ -139,8 +148,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 5,
                     "input": true,
-                    "inputPort": "e2189e0",
+                    "inputPort": "1cff0c0",
                     "iterator": false,
                     "name": "local_directory",
                     "output": false,
@@ -149,6 +159,7 @@
                     "visible": true
                 },
                 {
+                    "base": "outfiles",
                     "code": [
                         {
                             "argument": {
@@ -166,16 +177,18 @@
                         }
                     ],
                     "editable": true,
+                    "id": 6,
                     "input": false,
                     "inputPort": "0",
                     "iterator": false,
                     "name": "outfiles",
                     "output": true,
-                    "outputPort": "10a016c0",
+                    "outputPort": "203d9f0",
                     "value": "",
                     "visible": true
                 },
                 {
+                    "base": "raise_on_empty",
                     "code": [
                         {
                             "argument": {
@@ -186,8 +199,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 7,
                     "input": true,
-                    "inputPort": "118b96e0",
+                    "inputPort": "21d0550",
                     "iterator": false,
                     "name": "raise_on_empty",
                     "output": false,
@@ -196,6 +210,7 @@
                     "visible": false
                 },
                 {
+                    "base": "region",
                     "code": [
                         {
                             "argument": {
@@ -206,8 +221,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 8,
                     "input": true,
-                    "inputPort": "10766260",
+                    "inputPort": "3095fc0",
                     "iterator": false,
                     "name": "region",
                     "output": false,
@@ -216,6 +232,7 @@
                     "visible": false
                 },
                 {
+                    "base": "sort_filelist",
                     "code": [
                         {
                             "argument": {
@@ -226,8 +243,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 9,
                     "input": true,
-                    "inputPort": "851e450",
+                    "inputPort": "35d5560",
                     "iterator": false,
                     "name": "sort_filelist",
                     "output": false,
@@ -236,6 +254,7 @@
                     "visible": true
                 },
                 {
+                    "base": "template",
                     "code": [
                         {
                             "argument": {
@@ -246,8 +265,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 10,
                     "input": true,
-                    "inputPort": "db2dbb0",
+                    "inputPort": "2119dc0",
                     "iterator": false,
                     "name": "template",
                     "output": false,
@@ -256,6 +276,7 @@
                     "visible": true
                 },
                 {
+                    "base": "template_args",
                     "code": [
                         {
                             "argument": {
@@ -266,8 +287,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 11,
                     "input": true,
-                    "inputPort": "118b8ac0",
+                    "inputPort": "1e82920",
                     "iterator": false,
                     "name": "template_args",
                     "output": false,
@@ -277,8 +299,8 @@
                 }
             ],
             "position": [
-                -1388.2099004177737,
-                -90.44443858372944
+                -1370.4321236760863,
+                -92.66666067644034
             ],
             "title": {
                 "code": [
@@ -309,6 +331,7 @@
             ],
             "ports": [
                 {
+                    "base": "args",
                     "code": [
                         {
                             "argument": {
@@ -319,8 +342,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 1,
                     "input": true,
-                    "inputPort": "85a8b10",
+                    "inputPort": "1e59a50",
                     "iterator": false,
                     "name": "args",
                     "output": false,
@@ -329,6 +353,7 @@
                     "visible": false
                 },
                 {
+                    "base": "bias_image",
                     "code": [
                         {
                             "argument": {
@@ -339,16 +364,18 @@
                         }
                     ],
                     "editable": false,
+                    "id": 2,
                     "input": false,
                     "inputPort": "0",
                     "iterator": false,
                     "name": "bias_image",
                     "output": true,
-                    "outputPort": "10c552d0",
+                    "outputPort": "41f1640",
                     "value": "",
                     "visible": true
                 },
                 {
+                    "base": "bspline_fitting_distance",
                     "code": [
                         {
                             "argument": {
@@ -359,8 +386,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 3,
                     "input": true,
-                    "inputPort": "dfe66d0",
+                    "inputPort": "1b13df0",
                     "iterator": false,
                     "name": "bspline_fitting_distance",
                     "output": false,
@@ -369,6 +397,7 @@
                     "visible": false
                 },
                 {
+                    "base": "bspline_order",
                     "code": [
                         {
                             "argument": {
@@ -379,8 +408,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 4,
                     "input": true,
-                    "inputPort": "119c08c0",
+                    "inputPort": "44ac290",
                     "iterator": false,
                     "name": "bspline_order",
                     "output": false,
@@ -389,6 +419,7 @@
                     "visible": false
                 },
                 {
+                    "base": "convergence_threshold",
                     "code": [
                         {
                             "argument": {
@@ -399,8 +430,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 5,
                     "input": true,
-                    "inputPort": "121cc3d0",
+                    "inputPort": "2300b60",
                     "iterator": false,
                     "name": "convergence_threshold",
                     "output": false,
@@ -409,6 +441,7 @@
                     "visible": false
                 },
                 {
+                    "base": "copy_header",
                     "code": [
                         {
                             "argument": {
@@ -419,8 +452,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 6,
                     "input": true,
-                    "inputPort": "f943f00",
+                    "inputPort": "12e87d0",
                     "iterator": false,
                     "name": "copy_header",
                     "output": false,
@@ -429,6 +463,7 @@
                     "visible": true
                 },
                 {
+                    "base": "dimension",
                     "code": [
                         {
                             "argument": {
@@ -439,8 +474,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 7,
                     "input": true,
-                    "inputPort": "119c7d60",
+                    "inputPort": "12ebe60",
                     "iterator": false,
                     "name": "dimension",
                     "output": false,
@@ -449,6 +485,7 @@
                     "visible": true
                 },
                 {
+                    "base": "environ",
                     "code": [
                         {
                             "argument": {
@@ -459,8 +496,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 8,
                     "input": true,
-                    "inputPort": "85ac8e0",
+                    "inputPort": "1306aa0",
                     "iterator": false,
                     "name": "environ",
                     "output": false,
@@ -469,6 +507,7 @@
                     "visible": false
                 },
                 {
+                    "base": "ignore_exception",
                     "code": [
                         {
                             "argument": {
@@ -479,8 +518,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 9,
                     "input": true,
-                    "inputPort": "10c4d210",
+                    "inputPort": "41e89e0",
                     "iterator": false,
                     "name": "ignore_exception",
                     "output": false,
@@ -489,6 +529,7 @@
                     "visible": false
                 },
                 {
+                    "base": "input_image",
                     "code": [
                         {
                             "argument": {
@@ -499,8 +540,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 10,
                     "input": true,
-                    "inputPort": "11897250",
+                    "inputPort": "2310700",
                     "iterator": false,
                     "name": "input_image",
                     "output": false,
@@ -509,6 +551,7 @@
                     "visible": true
                 },
                 {
+                    "base": "mask_image",
                     "code": [
                         {
                             "argument": {
@@ -519,8 +562,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 11,
                     "input": true,
-                    "inputPort": "f964690",
+                    "inputPort": "41e3540",
                     "iterator": false,
                     "name": "mask_image",
                     "output": false,
@@ -529,6 +573,7 @@
                     "visible": false
                 },
                 {
+                    "base": "n_iterations",
                     "code": [
                         {
                             "argument": {
@@ -539,8 +584,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 12,
                     "input": true,
-                    "inputPort": "121c81f0",
+                    "inputPort": "39d7180",
                     "iterator": false,
                     "name": "n_iterations",
                     "output": false,
@@ -549,6 +595,7 @@
                     "visible": false
                 },
                 {
+                    "base": "num_threads",
                     "code": [
                         {
                             "argument": {
@@ -559,8 +606,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 13,
                     "input": true,
-                    "inputPort": "f94e0e0",
+                    "inputPort": "24c7910",
                     "iterator": false,
                     "name": "num_threads",
                     "output": false,
@@ -569,6 +617,7 @@
                     "visible": true
                 },
                 {
+                    "base": "output_image",
                     "code": [
                         {
                             "argument": {
@@ -579,16 +628,18 @@
                         }
                     ],
                     "editable": false,
+                    "id": 14,
                     "input": false,
                     "inputPort": "0",
                     "iterator": false,
                     "name": "output_image",
                     "output": true,
-                    "outputPort": "10c51090",
+                    "outputPort": "1d5b750",
                     "value": "",
                     "visible": true
                 },
                 {
+                    "base": "save_bias",
                     "code": [
                         {
                             "argument": {
@@ -599,8 +650,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 15,
                     "input": true,
-                    "inputPort": "f959a90",
+                    "inputPort": "12f5080",
                     "iterator": false,
                     "name": "save_bias",
                     "output": false,
@@ -609,6 +661,7 @@
                     "visible": true
                 },
                 {
+                    "base": "shrink_factor",
                     "code": [
                         {
                             "argument": {
@@ -619,8 +672,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 16,
                     "input": true,
-                    "inputPort": "10a209b0",
+                    "inputPort": "2721ad0",
                     "iterator": false,
                     "name": "shrink_factor",
                     "output": false,
@@ -629,6 +683,7 @@
                     "visible": false
                 },
                 {
+                    "base": "terminal_output",
                     "code": [
                         {
                             "argument": {
@@ -639,8 +694,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 17,
                     "input": true,
-                    "inputPort": "10c48fc0",
+                    "inputPort": "30ea220",
                     "iterator": false,
                     "name": "terminal_output",
                     "output": false,
@@ -649,6 +705,7 @@
                     "visible": false
                 },
                 {
+                    "base": "weight_image",
                     "code": [
                         {
                             "argument": {
@@ -659,8 +716,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 18,
                     "input": true,
-                    "inputPort": "10757610",
+                    "inputPort": "1edd750",
                     "iterator": false,
                     "name": "weight_image",
                     "output": false,
@@ -702,6 +760,7 @@
             ],
             "ports": [
                 {
+                    "base": "args",
                     "code": [
                         {
                             "argument": {
@@ -712,8 +771,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 1,
                     "input": true,
-                    "inputPort": "132aa910",
+                    "inputPort": "291c3d0",
                     "iterator": false,
                     "name": "args",
                     "output": false,
@@ -722,6 +782,7 @@
                     "visible": false
                 },
                 {
+                    "base": "environ",
                     "code": [
                         {
                             "argument": {
@@ -732,8 +793,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 2,
                     "input": true,
-                    "inputPort": "132ae850",
+                    "inputPort": "27149e0",
                     "iterator": false,
                     "name": "environ",
                     "output": false,
@@ -742,6 +804,7 @@
                     "visible": false
                 },
                 {
+                    "base": "epi",
                     "code": [
                         {
                             "argument": {
@@ -752,8 +815,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 3,
                     "input": true,
-                    "inputPort": "132a2e00",
+                    "inputPort": "3ad6b60",
                     "iterator": false,
                     "name": "epi",
                     "output": false,
@@ -762,6 +826,7 @@
                     "visible": false
                 },
                 {
+                    "base": "gm",
                     "code": [
                         {
                             "argument": {
@@ -772,8 +837,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 4,
                     "input": true,
-                    "inputPort": "13231480",
+                    "inputPort": "2047470",
                     "iterator": false,
                     "name": "gm",
                     "output": false,
@@ -782,6 +848,7 @@
                     "visible": false
                 },
                 {
+                    "base": "ignore_exception",
                     "code": [
                         {
                             "argument": {
@@ -792,8 +859,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 5,
                     "input": true,
-                    "inputPort": "132b6870",
+                    "inputPort": "24b9470",
                     "iterator": false,
                     "name": "ignore_exception",
                     "output": false,
@@ -802,6 +870,7 @@
                     "visible": false
                 },
                 {
+                    "base": "in_file",
                     "code": [
                         {
                             "argument": {
@@ -812,8 +881,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 6,
                     "input": true,
-                    "inputPort": "10c67f70",
+                    "inputPort": "26fe930",
                     "iterator": false,
                     "name": "in_file",
                     "output": false,
@@ -822,6 +892,7 @@
                     "visible": true
                 },
                 {
+                    "base": "no_duplo",
                     "code": [
                         {
                             "argument": {
@@ -832,8 +903,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 7,
                     "input": true,
-                    "inputPort": "1329e980",
+                    "inputPort": "22de810",
                     "iterator": false,
                     "name": "no_duplo",
                     "output": false,
@@ -842,6 +914,7 @@
                     "visible": false
                 },
                 {
+                    "base": "out_file",
                     "code": [
                         {
                             "argument": {
@@ -852,16 +925,18 @@
                         }
                     ],
                     "editable": false,
+                    "id": 8,
                     "input": false,
                     "inputPort": "0",
                     "iterator": false,
                     "name": "out_file",
                     "output": true,
-                    "outputPort": "132bedb0",
+                    "outputPort": "44a0760",
                     "value": "",
                     "visible": true
                 },
                 {
+                    "base": "outputtype",
                     "code": [
                         {
                             "argument": {
@@ -872,8 +947,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 9,
                     "input": true,
-                    "inputPort": "132a69b0",
+                    "inputPort": "2340790",
                     "iterator": false,
                     "name": "outputtype",
                     "output": false,
@@ -882,6 +958,7 @@
                     "visible": true
                 },
                 {
+                    "base": "scale_file",
                     "code": [
                         {
                             "argument": {
@@ -892,16 +969,18 @@
                         }
                     ],
                     "editable": false,
+                    "id": 10,
                     "input": false,
                     "inputPort": "0",
                     "iterator": false,
                     "name": "scale_file",
                     "output": true,
-                    "outputPort": "132ba950",
+                    "outputPort": "2344bc0",
                     "value": "",
                     "visible": true
                 },
                 {
+                    "base": "t2",
                     "code": [
                         {
                             "argument": {
@@ -912,8 +991,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 11,
                     "input": true,
-                    "inputPort": "db1de90",
+                    "inputPort": "24cb7c0",
                     "iterator": false,
                     "name": "t2",
                     "output": false,
@@ -922,6 +1002,7 @@
                     "visible": false
                 },
                 {
+                    "base": "terminal_output",
                     "code": [
                         {
                             "argument": {
@@ -932,8 +1013,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 12,
                     "input": true,
-                    "inputPort": "132b27a0",
+                    "inputPort": "21db960",
                     "iterator": false,
                     "name": "terminal_output",
                     "output": false,
@@ -942,6 +1024,7 @@
                     "visible": false
                 },
                 {
+                    "base": "urad",
                     "code": [
                         {
                             "argument": {
@@ -952,8 +1035,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 13,
                     "input": true,
-                    "inputPort": "132353a0",
+                    "inputPort": "309b310",
                     "iterator": false,
                     "name": "urad",
                     "output": false,
@@ -963,8 +1047,8 @@
                 }
             ],
             "position": [
-                -917.5062014235729,
-                -389.53086406671116
+                -885.9561316663593,
+                -426.56790247735336
             ],
             "title": {
                 "code": [
@@ -995,6 +1079,7 @@
             ],
             "ports": [
                 {
+                    "base": "args",
                     "code": [
                         {
                             "argument": {
@@ -1005,8 +1090,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 1,
                     "input": true,
-                    "inputPort": "15b09530",
+                    "inputPort": "22be240",
                     "iterator": false,
                     "name": "args",
                     "output": false,
@@ -1015,6 +1101,7 @@
                     "visible": false
                 },
                 {
+                    "base": "environ",
                     "code": [
                         {
                             "argument": {
@@ -1025,8 +1112,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 2,
                     "input": true,
-                    "inputPort": "15b0d470",
+                    "inputPort": "4bce530",
                     "iterator": false,
                     "name": "environ",
                     "output": false,
@@ -1035,6 +1123,7 @@
                     "visible": false
                 },
                 {
+                    "base": "ignore_exception",
                     "code": [
                         {
                             "argument": {
@@ -1045,8 +1134,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 3,
                     "input": true,
-                    "inputPort": "15b15570",
+                    "inputPort": "2b02510",
                     "iterator": false,
                     "name": "ignore_exception",
                     "output": false,
@@ -1055,6 +1145,7 @@
                     "visible": false
                 },
                 {
+                    "base": "in_file",
                     "code": [
                         {
                             "argument": {
@@ -1065,8 +1156,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 4,
                     "input": true,
-                    "inputPort": "14cb1500",
+                    "inputPort": "2b06170",
                     "iterator": false,
                     "name": "in_file",
                     "output": false,
@@ -1075,6 +1167,7 @@
                     "visible": true
                 },
                 {
+                    "base": "out_file",
                     "code": [
                         {
                             "argument": {
@@ -1085,16 +1178,18 @@
                         }
                     ],
                     "editable": false,
+                    "id": 5,
                     "input": false,
                     "inputPort": "0",
                     "iterator": false,
                     "name": "out_file",
                     "output": true,
-                    "outputPort": "15b196f0",
+                    "outputPort": "21f16d0",
                     "value": "",
                     "visible": true
                 },
                 {
+                    "base": "outputtype",
                     "code": [
                         {
                             "argument": {
@@ -1105,8 +1200,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 6,
                     "input": true,
-                    "inputPort": "15b05940",
+                    "inputPort": "21f5a10",
                     "iterator": false,
                     "name": "outputtype",
                     "output": false,
@@ -1115,6 +1211,7 @@
                     "visible": true
                 },
                 {
+                    "base": "terminal_output",
                     "code": [
                         {
                             "argument": {
@@ -1125,8 +1222,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 7,
                     "input": true,
-                    "inputPort": "15b113c0",
+                    "inputPort": "21f8ec0",
                     "iterator": false,
                     "name": "terminal_output",
                     "output": false,
@@ -1136,8 +1234,8 @@
                 }
             ],
             "position": [
-                -762.7531139572637,
-                -263.90123816543826
+                -732.5747863634069,
+                -165.13580240372573
             ],
             "title": {
                 "code": [
@@ -1168,6 +1266,7 @@
             ],
             "ports": [
                 {
+                    "base": "args",
                     "code": [
                         {
                             "argument": {
@@ -1178,8 +1277,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 1,
                     "input": true,
-                    "inputPort": "1323bed0",
+                    "inputPort": "4dcf4c0",
                     "iterator": false,
                     "name": "args",
                     "output": false,
@@ -1188,6 +1288,7 @@
                     "visible": false
                 },
                 {
+                    "base": "environ",
                     "code": [
                         {
                             "argument": {
@@ -1198,8 +1299,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 2,
                     "input": true,
-                    "inputPort": "1320f7e0",
+                    "inputPort": "4ecafc0",
                     "iterator": false,
                     "name": "environ",
                     "output": false,
@@ -1208,6 +1310,7 @@
                     "visible": false
                 },
                 {
+                    "base": "expr",
                     "code": [
                         {
                             "argument": {
@@ -1218,8 +1321,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 3,
                     "input": true,
-                    "inputPort": "14d7fc20",
+                    "inputPort": "4ece600",
                     "iterator": false,
                     "name": "expr",
                     "output": false,
@@ -1228,6 +1332,7 @@
                     "visible": true
                 },
                 {
+                    "base": "ignore_exception",
                     "code": [
                         {
                             "argument": {
@@ -1238,8 +1343,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 4,
                     "input": true,
-                    "inputPort": "1321a6d0",
+                    "inputPort": "3bad840",
                     "iterator": false,
                     "name": "ignore_exception",
                     "output": false,
@@ -1248,6 +1354,7 @@
                     "visible": false
                 },
                 {
+                    "base": "in_file_a",
                     "code": [
                         {
                             "argument": {
@@ -1258,8 +1365,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 5,
                     "input": true,
-                    "inputPort": "11892160",
+                    "inputPort": "3bb1f00",
                     "iterator": false,
                     "name": "in_file_a",
                     "output": false,
@@ -1268,6 +1376,7 @@
                     "visible": true
                 },
                 {
+                    "base": "in_file_b",
                     "code": [
                         {
                             "argument": {
@@ -1278,8 +1387,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 6,
                     "input": true,
-                    "inputPort": "14d66210",
+                    "inputPort": "3bb6200",
                     "iterator": false,
                     "name": "in_file_b",
                     "output": false,
@@ -1288,6 +1398,7 @@
                     "visible": true
                 },
                 {
+                    "base": "in_file_c",
                     "code": [
                         {
                             "argument": {
@@ -1298,8 +1409,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 7,
                     "input": true,
-                    "inputPort": "1321f7f0",
+                    "inputPort": "22ae260",
                     "iterator": false,
                     "name": "in_file_c",
                     "output": false,
@@ -1308,6 +1420,7 @@
                     "visible": false
                 },
                 {
+                    "base": "other",
                     "code": [
                         {
                             "argument": {
@@ -1318,8 +1431,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 8,
                     "input": true,
-                    "inputPort": "14cabd90",
+                    "inputPort": "22b2120",
                     "iterator": false,
                     "name": "other",
                     "output": false,
@@ -1328,6 +1442,7 @@
                     "visible": false
                 },
                 {
+                    "base": "out_file",
                     "code": [
                         {
                             "argument": {
@@ -1338,16 +1453,18 @@
                         }
                     ],
                     "editable": false,
+                    "id": 9,
                     "input": false,
                     "inputPort": "0",
                     "iterator": false,
                     "name": "out_file",
                     "output": true,
-                    "outputPort": "15f3d470",
+                    "outputPort": "22b68a0",
                     "value": "",
                     "visible": true
                 },
                 {
+                    "base": "outputtype",
                     "code": [
                         {
                             "argument": {
@@ -1358,8 +1475,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 10,
                     "input": true,
-                    "inputPort": "1322c9b0",
+                    "inputPort": "4104b60",
                     "iterator": false,
                     "name": "outputtype",
                     "output": false,
@@ -1368,6 +1486,7 @@
                     "visible": true
                 },
                 {
+                    "base": "single_idx",
                     "code": [
                         {
                             "argument": {
@@ -1378,8 +1497,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 11,
                     "input": true,
-                    "inputPort": "13226590",
+                    "inputPort": "4109f70",
                     "iterator": false,
                     "name": "single_idx",
                     "output": false,
@@ -1388,6 +1508,7 @@
                     "visible": false
                 },
                 {
+                    "base": "start_idx",
                     "code": [
                         {
                             "argument": {
@@ -1398,8 +1519,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 12,
                     "input": true,
-                    "inputPort": "14c616a0",
+                    "inputPort": "410e270",
                     "iterator": false,
                     "name": "start_idx",
                     "output": false,
@@ -1408,6 +1530,7 @@
                     "visible": false
                 },
                 {
+                    "base": "stop_idx",
                     "code": [
                         {
                             "argument": {
@@ -1418,8 +1541,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 13,
                     "input": true,
-                    "inputPort": "131da230",
+                    "inputPort": "1e96880",
                     "iterator": false,
                     "name": "stop_idx",
                     "output": false,
@@ -1428,6 +1552,7 @@
                     "visible": false
                 },
                 {
+                    "base": "terminal_output",
                     "code": [
                         {
                             "argument": {
@@ -1438,8 +1563,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 14,
                     "input": true,
-                    "inputPort": "13216600",
+                    "inputPort": "1e9a6e0",
                     "iterator": false,
                     "name": "terminal_output",
                     "output": false,
@@ -1449,8 +1575,8 @@
                 }
             ],
             "position": [
-                -627.8765596277274,
-                -394.02469443228335
+                -594.9547477071565,
+                -389.90946794221196
             ],
             "title": {
                 "code": [
@@ -1481,6 +1607,7 @@
             ],
             "ports": [
                 {
+                    "base": "args",
                     "code": [
                         {
                             "argument": {
@@ -1491,8 +1618,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 1,
                     "input": true,
-                    "inputPort": "18abea40",
+                    "inputPort": "49cfa40",
                     "iterator": false,
                     "name": "args",
                     "output": false,
@@ -1501,6 +1629,7 @@
                     "visible": true
                 },
                 {
+                    "base": "direction",
                     "code": [
                         {
                             "argument": {
@@ -1511,8 +1640,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 2,
                     "input": true,
-                    "inputPort": "18562050",
+                    "inputPort": "528b440",
                     "iterator": false,
                     "name": "direction",
                     "output": false,
@@ -1521,6 +1651,7 @@
                     "visible": false
                 },
                 {
+                    "base": "environ",
                     "code": [
                         {
                             "argument": {
@@ -1531,8 +1662,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 3,
                     "input": true,
-                    "inputPort": "18ac2980",
+                    "inputPort": "529c9d0",
                     "iterator": false,
                     "name": "environ",
                     "output": false,
@@ -1541,6 +1673,7 @@
                     "visible": false
                 },
                 {
+                    "base": "ignore_exception",
                     "code": [
                         {
                             "argument": {
@@ -1551,8 +1684,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 4,
                     "input": true,
-                    "inputPort": "18aca9a0",
+                    "inputPort": "52a0890",
                     "iterator": false,
                     "name": "ignore_exception",
                     "output": false,
@@ -1561,6 +1695,7 @@
                     "visible": false
                 },
                 {
+                    "base": "in_file",
                     "code": [
                         {
                             "argument": {
@@ -1571,8 +1706,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 5,
                     "input": true,
-                    "inputPort": "18565fa0",
+                    "inputPort": "50b3fe0",
                     "iterator": false,
                     "name": "in_file",
                     "output": false,
@@ -1581,6 +1717,7 @@
                     "visible": true
                 },
                 {
+                    "base": "internal_datatype",
                     "code": [
                         {
                             "argument": {
@@ -1591,8 +1728,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 6,
                     "input": true,
-                    "inputPort": "1888c410",
+                    "inputPort": "50b7800",
                     "iterator": false,
                     "name": "internal_datatype",
                     "output": false,
@@ -1601,6 +1739,7 @@
                     "visible": false
                 },
                 {
+                    "base": "nan2zeros",
                     "code": [
                         {
                             "argument": {
@@ -1611,8 +1750,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 7,
                     "input": true,
-                    "inputPort": "188942f0",
+                    "inputPort": "50bbcc0",
                     "iterator": false,
                     "name": "nan2zeros",
                     "output": false,
@@ -1621,6 +1761,7 @@
                     "visible": false
                 },
                 {
+                    "base": "out_file",
                     "code": [
                         {
                             "argument": {
@@ -1631,16 +1772,18 @@
                         }
                     ],
                     "editable": false,
+                    "id": 8,
                     "input": false,
                     "inputPort": "0",
                     "iterator": false,
                     "name": "out_file",
                     "output": true,
-                    "outputPort": "18acec00",
+                    "outputPort": "50c00a0",
                     "value": "",
                     "visible": true
                 },
                 {
+                    "base": "output_datatype",
                     "code": [
                         {
                             "argument": {
@@ -1651,8 +1794,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 9,
                     "input": true,
-                    "inputPort": "18890590",
+                    "inputPort": "50c42f0",
                     "iterator": false,
                     "name": "output_datatype",
                     "output": false,
@@ -1661,6 +1805,7 @@
                     "visible": false
                 },
                 {
+                    "base": "output_type",
                     "code": [
                         {
                             "argument": {
@@ -1671,8 +1816,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 10,
                     "input": true,
-                    "inputPort": "18abae90",
+                    "inputPort": "50c9490",
                     "iterator": false,
                     "name": "output_type",
                     "output": false,
@@ -1681,6 +1827,7 @@
                     "visible": false
                 },
                 {
+                    "base": "terminal_output",
                     "code": [
                         {
                             "argument": {
@@ -1691,8 +1838,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 11,
                     "input": true,
-                    "inputPort": "18ac68d0",
+                    "inputPort": "50cd2f0",
                     "iterator": false,
                     "name": "terminal_output",
                     "output": false,
@@ -1701,6 +1849,7 @@
                     "visible": false
                 },
                 {
+                    "base": "thresh",
                     "code": [
                         {
                             "argument": {
@@ -1711,8 +1860,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 12,
                     "input": true,
-                    "inputPort": "175869f0",
+                    "inputPort": "50d1770",
                     "iterator": false,
                     "name": "thresh",
                     "output": false,
@@ -1721,6 +1871,7 @@
                     "visible": true
                 },
                 {
+                    "base": "use_nonzero_voxels",
                     "code": [
                         {
                             "argument": {
@@ -1731,8 +1882,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 13,
                     "input": true,
-                    "inputPort": "188842f0",
+                    "inputPort": "586f280",
                     "iterator": false,
                     "name": "use_nonzero_voxels",
                     "output": false,
@@ -1741,6 +1893,7 @@
                     "visible": false
                 },
                 {
+                    "base": "use_robust_range",
                     "code": [
                         {
                             "argument": {
@@ -1751,8 +1904,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 14,
                     "input": true,
-                    "inputPort": "14d85f70",
+                    "inputPort": "5873760",
                     "iterator": false,
                     "name": "use_robust_range",
                     "output": false,
@@ -1794,6 +1948,7 @@
             ],
             "ports": [
                 {
+                    "base": "args",
                     "code": [
                         {
                             "argument": {
@@ -1804,8 +1959,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 1,
                     "input": true,
-                    "inputPort": "18d37840",
+                    "inputPort": "6a67d30",
                     "iterator": false,
                     "name": "args",
                     "output": false,
@@ -1814,6 +1970,7 @@
                     "visible": false
                 },
                 {
+                    "base": "environ",
                     "code": [
                         {
                             "argument": {
@@ -1824,8 +1981,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 2,
                     "input": true,
-                    "inputPort": "18d3b5b0",
+                    "inputPort": "5cc7760",
                     "iterator": false,
                     "name": "environ",
                     "output": false,
@@ -1834,6 +1992,7 @@
                     "visible": false
                 },
                 {
+                    "base": "epi",
                     "code": [
                         {
                             "argument": {
@@ -1844,8 +2003,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 3,
                     "input": true,
-                    "inputPort": "18cd42b0",
+                    "inputPort": "5ccbe70",
                     "iterator": false,
                     "name": "epi",
                     "output": false,
@@ -1854,6 +2014,7 @@
                     "visible": false
                 },
                 {
+                    "base": "gm",
                     "code": [
                         {
                             "argument": {
@@ -1864,8 +2025,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 4,
                     "input": true,
-                    "inputPort": "18cc3d40",
+                    "inputPort": "5cd00f0",
                     "iterator": false,
                     "name": "gm",
                     "output": false,
@@ -1874,6 +2036,7 @@
                     "visible": true
                 },
                 {
+                    "base": "ignore_exception",
                     "code": [
                         {
                             "argument": {
@@ -1884,8 +2047,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 5,
                     "input": true,
-                    "inputPort": "18d43970",
+                    "inputPort": "5cd4c90",
                     "iterator": false,
                     "name": "ignore_exception",
                     "output": false,
@@ -1894,6 +2058,7 @@
                     "visible": false
                 },
                 {
+                    "base": "in_file",
                     "code": [
                         {
                             "argument": {
@@ -1904,8 +2069,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 6,
                     "input": true,
-                    "inputPort": "131c9470",
+                    "inputPort": "685d640",
                     "iterator": false,
                     "name": "in_file",
                     "output": false,
@@ -1914,6 +2080,7 @@
                     "visible": true
                 },
                 {
+                    "base": "no_duplo",
                     "code": [
                         {
                             "argument": {
@@ -1924,8 +2091,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 7,
                     "input": true,
-                    "inputPort": "18cd0110",
+                    "inputPort": "6860ca0",
                     "iterator": false,
                     "name": "no_duplo",
                     "output": false,
@@ -1934,6 +2102,7 @@
                     "visible": false
                 },
                 {
+                    "base": "out_file",
                     "code": [
                         {
                             "argument": {
@@ -1944,16 +2113,18 @@
                         }
                     ],
                     "editable": false,
+                    "id": 8,
                     "input": false,
                     "inputPort": "0",
                     "iterator": false,
                     "name": "out_file",
                     "output": true,
-                    "outputPort": "18d4c290",
+                    "outputPort": "6865080",
                     "value": "",
                     "visible": true
                 },
                 {
+                    "base": "outputtype",
                     "code": [
                         {
                             "argument": {
@@ -1964,8 +2135,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 9,
                     "input": true,
-                    "inputPort": "18cd83b0",
+                    "inputPort": "686a040",
                     "iterator": false,
                     "name": "outputtype",
                     "output": false,
@@ -1974,6 +2146,7 @@
                     "visible": true
                 },
                 {
+                    "base": "scale_file",
                     "code": [
                         {
                             "argument": {
@@ -1984,16 +2157,18 @@
                         }
                     ],
                     "editable": false,
+                    "id": 10,
                     "input": false,
                     "inputPort": "0",
                     "iterator": false,
                     "name": "scale_file",
                     "output": true,
-                    "outputPort": "18d47c10",
+                    "outputPort": "686e380",
                     "value": "",
                     "visible": true
                 },
                 {
+                    "base": "t2",
                     "code": [
                         {
                             "argument": {
@@ -2004,8 +2179,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 11,
                     "input": true,
-                    "inputPort": "14c0d280",
+                    "inputPort": "68721c0",
                     "iterator": false,
                     "name": "t2",
                     "output": false,
@@ -2014,6 +2190,7 @@
                     "visible": false
                 },
                 {
+                    "base": "terminal_output",
                     "code": [
                         {
                             "argument": {
@@ -2024,8 +2201,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 12,
                     "input": true,
-                    "inputPort": "18d3f6c0",
+                    "inputPort": "6876480",
                     "iterator": false,
                     "name": "terminal_output",
                     "output": false,
@@ -2034,6 +2212,7 @@
                     "visible": false
                 },
                 {
+                    "base": "urad",
                     "code": [
                         {
                             "argument": {
@@ -2044,8 +2223,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 13,
                     "input": true,
-                    "inputPort": "18cc7e00",
+                    "inputPort": "6572970",
                     "iterator": false,
                     "name": "urad",
                     "output": false,
@@ -2055,8 +2235,8 @@
                 }
             ],
             "position": [
-                -492.59261869108815,
-                -220.9876660293354
+                -445.95338513694605,
+                -234.7050876629066
             ],
             "title": {
                 "code": [
@@ -2086,6 +2266,7 @@
             ],
             "ports": [
                 {
+                    "base": "_outputs",
                     "code": [
                         {
                             "argument": {
@@ -2096,8 +2277,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 1,
                     "input": true,
-                    "inputPort": "168a8a50",
+                    "inputPort": "77ecfd0",
                     "iterator": false,
                     "name": "_outputs",
                     "output": false,
@@ -2106,6 +2288,7 @@
                     "visible": false
                 },
                 {
+                    "base": "base_directory",
                     "code": [
                         {
                             "argument": {
@@ -2116,8 +2299,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 2,
                     "input": true,
-                    "inputPort": "14bd4960",
+                    "inputPort": "6b54f70",
                     "iterator": false,
                     "name": "base_directory",
                     "output": false,
@@ -2126,6 +2310,7 @@
                     "visible": true
                 },
                 {
+                    "base": "bias_image",
                     "code": [
                         {
                             "argument": {
@@ -2143,8 +2328,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 3,
                     "input": true,
-                    "inputPort": "1810ef20",
+                    "inputPort": "6b593e0",
                     "iterator": false,
                     "name": "bias_image",
                     "output": false,
@@ -2153,6 +2339,7 @@
                     "visible": true
                 },
                 {
+                    "base": "bucket",
                     "code": [
                         {
                             "argument": {
@@ -2163,8 +2350,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 4,
                     "input": true,
-                    "inputPort": "16793840",
+                    "inputPort": "6b5ca20",
                     "iterator": false,
                     "name": "bucket",
                     "output": false,
@@ -2173,6 +2361,7 @@
                     "visible": false
                 },
                 {
+                    "base": "container",
                     "code": [
                         {
                             "argument": {
@@ -2183,8 +2372,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 5,
                     "input": true,
-                    "inputPort": "16894770",
+                    "inputPort": "6b60d60",
                     "iterator": false,
                     "name": "container",
                     "output": false,
@@ -2193,6 +2383,7 @@
                     "visible": false
                 },
                 {
+                    "base": "creds_path",
                     "code": [
                         {
                             "argument": {
@@ -2203,8 +2394,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 6,
                     "input": true,
-                    "inputPort": "1678b7c0",
+                    "inputPort": "6b65060",
                     "iterator": false,
                     "name": "creds_path",
                     "output": false,
@@ -2213,6 +2405,7 @@
                     "visible": false
                 },
                 {
+                    "base": "encrypt_bucket_keys",
                     "code": [
                         {
                             "argument": {
@@ -2223,8 +2416,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 7,
                     "input": true,
-                    "inputPort": "1678f720",
+                    "inputPort": "6b69180",
                     "iterator": false,
                     "name": "encrypt_bucket_keys",
                     "output": false,
@@ -2233,6 +2427,7 @@
                     "visible": false
                 },
                 {
+                    "base": "ignore_exception",
                     "code": [
                         {
                             "argument": {
@@ -2243,8 +2438,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 8,
                     "input": true,
-                    "inputPort": "1679b6e0",
+                    "inputPort": "6b6d920",
                     "iterator": false,
                     "name": "ignore_exception",
                     "output": false,
@@ -2253,6 +2449,7 @@
                     "visible": false
                 },
                 {
+                    "base": "local_copy",
                     "code": [
                         {
                             "argument": {
@@ -2263,8 +2460,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 9,
                     "input": true,
-                    "inputPort": "16797780",
+                    "inputPort": "7392ab0",
                     "iterator": false,
                     "name": "local_copy",
                     "output": false,
@@ -2273,6 +2471,7 @@
                     "visible": false
                 },
                 {
+                    "base": "out_file",
                     "code": [
                         {
                             "argument": {
@@ -2290,8 +2489,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 10,
                     "input": true,
-                    "inputPort": "1a234240",
+                    "inputPort": "7397fc0",
                     "iterator": false,
                     "name": "out_file",
                     "output": false,
@@ -2300,6 +2500,7 @@
                     "visible": true
                 },
                 {
+                    "base": "out_mask",
                     "code": [
                         {
                             "argument": {
@@ -2317,8 +2518,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 11,
                     "input": true,
-                    "inputPort": "17908020",
+                    "inputPort": "739c400",
                     "iterator": false,
                     "name": "out_mask",
                     "output": false,
@@ -2327,6 +2529,7 @@
                     "visible": true
                 },
                 {
+                    "base": "parameterization",
                     "code": [
                         {
                             "argument": {
@@ -2337,8 +2540,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 12,
                     "input": true,
-                    "inputPort": "16898710",
+                    "inputPort": "73a0280",
                     "iterator": false,
                     "name": "parameterization",
                     "output": false,
@@ -2347,6 +2551,7 @@
                     "visible": false
                 },
                 {
+                    "base": "regexp_substitutions",
                     "code": [
                         {
                             "argument": {
@@ -2357,8 +2562,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 13,
                     "input": true,
-                    "inputPort": "168a4bc0",
+                    "inputPort": "73a4720",
                     "iterator": false,
                     "name": "regexp_substitutions",
                     "output": false,
@@ -2367,6 +2573,7 @@
                     "visible": false
                 },
                 {
+                    "base": "remove_dest_dir",
                     "code": [
                         {
                             "argument": {
@@ -2377,8 +2584,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 14,
                     "input": true,
-                    "inputPort": "168aca50",
+                    "inputPort": "73a8be0",
                     "iterator": false,
                     "name": "remove_dest_dir",
                     "output": false,
@@ -2387,6 +2595,7 @@
                     "visible": false
                 },
                 {
+                    "base": "strip_dir",
                     "code": [
                         {
                             "argument": {
@@ -2397,8 +2606,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 15,
                     "input": true,
-                    "inputPort": "1689c830",
+                    "inputPort": "73ac890",
                     "iterator": false,
                     "name": "strip_dir",
                     "output": false,
@@ -2407,6 +2617,7 @@
                     "visible": false
                 },
                 {
+                    "base": "substitutions",
                     "code": [
                         {
                             "argument": {
@@ -2417,8 +2628,9 @@
                         }
                     ],
                     "editable": true,
+                    "id": 16,
                     "input": true,
-                    "inputPort": "168a0790",
+                    "inputPort": "73b1ad0",
                     "iterator": false,
                     "name": "substitutions",
                     "output": false,
@@ -2464,7 +2676,7 @@
     "size": [
         0,
         0,
-        1230,
+        1274,
         697
     ]
 }

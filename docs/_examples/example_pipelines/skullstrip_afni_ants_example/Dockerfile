@@ -83,3 +83,8 @@ RUN echo "Downloading FSL ..." \
 ENV FSLDIR=/opt/fsl \
     PATH=/opt/fsl/bin:$PATH
 
+#--------------------------------
+# Add custom analysis file as CMD
+#--------------------------------
+ADD /path/to/pipeline/script.py /somewhere/porcupipeline.py
+CMD['python', '/somewhere/porcupipeline.py']
