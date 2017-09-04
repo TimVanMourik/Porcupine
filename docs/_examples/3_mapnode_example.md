@@ -4,7 +4,7 @@ excerpt: "An example using a MapNode in Porcupine."
 header:
   teaser: /examples/example_pipelines/multirun_mapnode_example/porcupine_graph.png
 layout: single
-permalink: /mapnode-example
+permalink: /examples/mapnode-example
 ---
 
 {% assign example_path = 'examples/example_pipelines/multirun_mapnode_example/' %}

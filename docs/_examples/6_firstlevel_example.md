@@ -4,7 +4,7 @@ excerpt: "An example of a first-level analysis (FSL-based) pipeline in Porcupine
 header:
   teaser: /examples/example_pipelines/firstlevel_fsl_and_custom_modules_example/porcupine_graph.png
 layout: single
-permalink: firstlevel-example
+permalink: examples/firstlevel-example
 ---
 
 {% assign example_path = 'examples/example_pipelines/firstlevel_fsl_and_custom_modules_example/' %}
@@ -26,7 +26,7 @@ More specifically, this pipeline leverages the FSL modelling interfaces (`fsl.Le
 `fsl.FEATModel`, and `fsl.FILMGLS`). Also, because Nipype does not provide
 an interface to load in BIDS-style event-files, we included a custom interface
 that converts the information in the event file to a format that the rest of
-the pipeline can work with. See the [section on custom interfaces](documentation/advanced_1_custom_nodes) in the documentation
+the pipeline can work with. See the [section on custom interfaces](/Porcupine/documentation/advanced_1_custom_nodes) in the documentation
 for more information on how to add your own interfaces/modules.
 
 Check out the Porcupine-generated Python-script, Porcupine-pipeline, and

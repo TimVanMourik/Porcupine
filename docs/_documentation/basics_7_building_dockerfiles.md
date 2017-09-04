@@ -4,7 +4,8 @@ excerpt: "How build and use Porcupine-generated Dockerfiles"
 layout: single
 author_profile : false
 categories:
-  - 2. Building pipelines
+  - 1. Basics
+permalink: /documentation/basics/building-dockerfiles
 ---
 
-Info on how to use the Porcupine-generated Dockerfiles.
+Coming soon!

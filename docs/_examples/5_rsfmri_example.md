@@ -4,7 +4,7 @@ excerpt: "An example a resting state fMRI preprocessing pipeline in Porcupine."
 header:
   teaser: /examples/example_pipelines/resting_preproc_fsl_example/porcupine_graph.png
 layout: single
-permalink: rs-fmri-preproc-example
+permalink: /examples/rs-fmri-preproc-example
 ---
 
 {% assign example_path = 'examples/example_pipelines/resting_preproc_fsl_example' %}

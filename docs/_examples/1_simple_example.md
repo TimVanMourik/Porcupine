@@ -4,7 +4,7 @@ excerpt: "An example showing Porcupine's basic features"
 header:
   teaser: /examples/example_pipelines/simple_example/porcupine_graph.png
 layout: single
-permalink: /simple-example
+permalink: /examples/simple-example
 ---
 
 {% assign example_path = 'examples/example_pipelines/simple_example/' %}

@@ -5,7 +5,7 @@ layout: single
 author_profile : false
 categories:
   - 1. Basics
-permalink: documentation/basics/intro
+permalink: /documentation/basics/intro
 ---
 
 Porcupine is software that allows you to create analysis pipelines visually

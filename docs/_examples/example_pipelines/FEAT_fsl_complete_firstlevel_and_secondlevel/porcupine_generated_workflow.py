@@ -338,6 +338,6 @@ analysisflow.connect(NodeHash_17173a00, 'anat', NodeHash_1e7cc750, 'in_file')
 
 #Run the workflow
 plugin = 'MultiProc' #adjust your desired plugin here
-plugin_args = {'n_procs': 1} #adjust to your number of cores
+plugin_args = {'n_procs': 10} #adjust to your number of cores
 analysisflow.write_graph(graph2use='flat', format='png', simple_form=False)
 analysisflow.run(plugin=plugin, plugin_args=plugin_args)
