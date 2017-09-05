@@ -14,8 +14,9 @@ In this example, we defined a simple motion-correction workflow, in which we
 load two functional MRI files (belong to two different runs) from two subjects
 each, perform motion-correction on them, and write the results to disk again.
 In addition to iteration over subjects using the two subjects as an iterable,
-we utilize MapNodes (a Nipype-specific pipeline object; see [link]()) to also
-"loop" our pipeline across the two different runs.
+we utilize MapNodes (a Nipype-specific pipeline object; see
+[the corresponding section on MapNodes in our docs](/Porcupine/documentation/nipype/iterables-and-mapnodes))
+to also "loop" our pipeline across the two different runs.
 
 <figure>
 	<a href="{{ site.url }}{{ site.baseurl }}/{{ example_path }}/porcupine_graph.png"><img

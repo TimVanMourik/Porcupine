@@ -21,10 +21,11 @@ pipeline such that it allows iteration ("looping") over different subjects.
 
 Using Nipype-interfaces again, we added an `IdentityInterface` node that contains
 an input-port `sub_id` that contains a list `["sub-01", "sub-02"]`. This input-port
-is set as an "iterable" (see [link]() for more info on iterables in Porcupine),
-such that it "feeds" each value in the `sub_id` input-port one-by-one into the
-skullstripping pipeline, effectively creating a skullstripping pipeline looped
-across the T1-weighted structural scans of two subjects.
+is set as an "iterable" (see [our docs](/Porcupine/documentation/nipype/iterables-and-mapnodes)
+for more info on iterables in Porcupine), such that it "feeds" each value in the
+`sub_id` input-port one-by-one into the skullstripping pipeline, effectively
+creating a skullstripping pipeline looped across the T1-weighted structural scans
+of two subjects.
 
 <figure>
 	<a href="{{ site.url }}{{ site.baseurl }}/{{ example_path }}/iterable_port.png"><img
