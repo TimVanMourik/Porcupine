@@ -39,6 +39,8 @@ def node2json(node, node_name=None, module=None, custom_node=False,
     if node_name is None:
         node_name = _get_node_name(node)
 
+    # node_name = node_name.replace('_', '\_')
+
     all_inputs, mandatory_inputs = _get_inputs(node, custom_node)
     all_outputs = _get_outputs(node, custom_node)
     descr = _get_descr(node, node_name, custom_node)
