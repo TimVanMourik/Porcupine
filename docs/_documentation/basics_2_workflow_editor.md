@@ -1,6 +1,6 @@
 ---
-title: "The workflow-editor"
-excerpt: "How to use the workflow-editor"
+title: "The workflow editor"
+excerpt: "How to use the workflow editor"
 layout: single
 author_profile : false
 categories:
@@ -15,11 +15,11 @@ your pipeline and draw connections between them.
 <figure>
 	<a href="{{ site.url }}{{ site.baseurl }}/documentation/images/workflow_editor.png"><img
     src="{{ site.url }}{{ site.baseurl }}/{{ example_path }}/documentation/images/workflow_editor.png"></a>
-	<figcaption>The "workflow-editor" in Porcupine.</figcaption>
+	<figcaption>The "workflow editor" in Porcupine.</figcaption>
 </figure>
 
 ### Nodes in Porcupine
-When you open Porcupine, you'll start with an empty workflow-editor. To begin
+When you open Porcupine, you'll start with an empty workflow editor. To begin
 building your pipeline, you'll have to initialize some nodes. A "node" represents
 a specific operation within your pipeline, ranging from neuroscience-specific
 operations like skullstripping or motion-correction to more generic operations
@@ -49,11 +49,11 @@ shows you all the available nodes from FSL's preprocessing suite (including
 <figure>
 	<a href="{{ site.url }}{{ site.baseurl }}/documentation/images/init_nodes.png"><img
     src="{{ site.url }}{{ site.baseurl }}/{{ example_path }}/documentation/images/init_nodes.png"></a>
-	<figcaption>The "workflow-editor" in Porcupine.</figcaption>
+	<figcaption>The "workflow editor" in Porcupine.</figcaption>
 </figure>
 
 Clicking on one of these nodes (e.g. `fsl.BET`), then, creates a node in the
-workflow-editor!
+workflow editor!
 
 ## Input-ports and output-ports
 Now, suppose you've created an `fsl.BET` and an `fsl.FAST` node as in the above
@@ -79,7 +79,7 @@ of nodes, and the output-ports correspond to the `outputs` attribute/traits.)
 
 Importantly, by default, the node *only* shows the **mandatory** input-ports,
 while it shows by default all output-ports. In the
-[next section on the node-editor](/Porcupine/documentation/basics/node-editor),
+[next section on the node editor](/Porcupine/documentation/basics/node-editor),
 you'll learn how to access the node's non-mandatory input-ports and
 how to control which output ports are shown and which are not (for example,
 to reduce the visual clutter in pipelines with nodes which have a lot of
@@ -94,6 +94,6 @@ from the BET-node (representing the skullstripped structural file) with the
 `in_files` input-port from FAST-node (representing the file(s) to be segmented).
 
 Now, there's more to building pipelines than initializing and connecting nodes.
-In the [next section on the node-editor](/Porcupine/documentation/basics/node-editor),
+In the [next section on the node editor](/Porcupine/documentation/basics/node-editor),
 you'll learn how to control the functionality and visualization of your ports
 in more detail.

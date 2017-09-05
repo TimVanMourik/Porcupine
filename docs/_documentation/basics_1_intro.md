@@ -15,10 +15,10 @@ windows (which we call "editors") in Porcupine. In the figure below (click to en
 you see an example pipeline and its representation in Porcupine, which is
 split up in four "editors":
 
-1. the **workflow**-editor
-2. the **node**-editor
-3. the **code**-editor
-4. the **parameter**-editor.
+1. the **workflow** editor
+2. the **node** editor
+3. the **code** editor
+4. the **parameter** editor.
 
 <figure>
 	<a href="{{ site.url }}{{ site.baseurl }}/documentation/images/porcupine_windows.png"><img

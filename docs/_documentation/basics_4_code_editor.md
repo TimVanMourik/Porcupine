@@ -1,6 +1,6 @@
 ---
-title: "The code-editor"
-excerpt: "How to use the code-editor"
+title: "The code editor"
+excerpt: "How to use the code editor"
 layout: single
 author_profile : false
 categories:
@@ -10,19 +10,19 @@ permalink: /documentation/basics/code-editor
 
 Perhaps Porcupine's coolest feature is that it automatically generates the code
 necessary to actually run your pipeline. This bring us to Porcupine's
-"code-editor", located below the workflow-editor. Once you have defined your
-pipeline using the workflow and node-editor, simply click the `Generate code`
-button left of the code-editor, and you're done!
+"code editor", located below the workflow editor. Once you have defined your
+pipeline using the workflow and node editor, simply click the `Generate code`
+button left of the code editor, and you're done!
 
 <figure>
 	<a href="{{ site.url }}{{ site.baseurl }}/documentation/images/code_editor.gif"><img
     src="{{ site.url }}{{ site.baseurl }}/{{ example_path }}/documentation/images/code_editor.gif"></a>
-	<figcaption>The "code-editor" in action (click to enlarge)</figcaption>
+	<figcaption>The "code editor" in action (click to enlarge)</figcaption>
 </figure>
 
 ### Generating Nipype-based Python scripts
 After pressing "Generate code", you'll see that Porcupine creates a Python
-script under the Nipype-tab in the code-editor. In this script, all the
+script under the Nipype-tab in the code editor. In this script, all the
 necessary imports, initialization of nodes, connection between nodes, and
 the actual call to execute the pipeline (or "workflow", in Nipype-terms) are
 properly defined. In other words, you can just save the script (using the "Save code"
@@ -58,7 +58,7 @@ For more information on Porcupine's Dockerfile generator, check out the
 section on [building dockerfiles]() in our documentation.
 
 By now, we've discussed the three major "editors" in Porcupine necessary to
-build your pipeline: the workflow-editor, the node-editor, and the code-editor.
-The next section of the documentation is about the "parameter-editor", a somewhat
+build your pipeline: the workflow editor, the node editor, and the code editor.
+The next section of the documentation is about the "parameter editor", a somewhat
 less "important" window in Porcupine, but which can help you organize the hard-coded
 variables in your pipeline.  

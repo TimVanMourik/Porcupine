@@ -38,7 +38,7 @@ iterfield, allowing to further "loop over" multiple inputs (here: two functional
 
 Note that the way you set an input-port to be *iterable* is exactly the same as
 the way you set *iterfield* in Porcupine, that is, by unchecking the circular
-arrow next to the input-port in the node-editor. Whether the input-port becomes
+arrow next to the input-port in the node editor. Whether the input-port becomes
 an iterable or an iterfield (converting the node into a MapNode object) depends
 entirely on whether the value of this specific input port is defined in the
 node itself (such as in the `sub_id` port in the `IdentityInterface` node) or

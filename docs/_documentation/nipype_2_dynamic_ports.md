@@ -73,7 +73,7 @@ Porcupine is able to set the values of *existing* input-ports, but cannot do
 so for ports that are dynamically generated. To circumvent this exception, we
 added the option to manually add input and/or output-ports yourself! As should
 become clear from the figure below, it's as easy as selecting "Add port" button
-(located at the very bottom of each node in the node-editor), choosing the port's
+(located at the very bottom of each node in the node editor), choosing the port's
 name, and indicating whether it will be an input, output, or both input/output
 port (as in the `IndentityInterface`):
 
@@ -84,7 +84,7 @@ port (as in the `IndentityInterface`):
 </figure>
 
 As you can see, after adding the input/output port `my_custom_port` in the above gif,
-both the node in the workflow-editor is updated and the `IdentityInterface` is
+both the node in the workflow editor is updated and the `IdentityInterface` is
 initialized correctly with the `fields` parameter, rendering valid Nipype-code.
 
 ### Another example: the `SelectFiles` interface

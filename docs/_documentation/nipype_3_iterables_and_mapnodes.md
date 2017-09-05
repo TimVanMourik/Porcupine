@@ -44,7 +44,7 @@ for more information on (the difference between) iterfields/MapNodes and iterabl
 
 ### Iterables/iterfields/MapNodes in Porcupine
 In Porcupine, you can set an input-port to an iterable or iterfield using the
-blue circular arrow-icon next to the input-port in the node-editor. Importantly,
+blue circular arrow-icon next to the input-port in the node editor. Importantly,
 whether the input-port will turn into an iterable or an iterfield *depends on
 whether the input-port's value is hard-coded or depends on a connection with
 another node*. If it's hard-coded, it'll turn into an iterable; it it receives

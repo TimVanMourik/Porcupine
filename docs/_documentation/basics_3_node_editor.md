@@ -1,6 +1,6 @@
 ---
-title: "The node-editor"
-excerpt: "How to use the node-editor"
+title: "The node editor"
+excerpt: "How to use the node editor"
 layout: single
 author_profile : false
 categories:
@@ -8,20 +8,20 @@ categories:
 permalink: /documentation/basics/node-editor
 ---
 
-Every node in the workflow editor is also represented in the node-editors.
+Every node in the workflow editor is also represented in the node editors.
 As shown in the screenshot below, each node in the workflow editor (here:
-`fsl.BET` and `fsl.FAST`) gets its own entry in the node-editor.
+`fsl.BET` and `fsl.FAST`) gets its own entry in the node editor.
 
 <figure>
 	<a href="{{ site.url }}{{ site.baseurl }}/documentation/images/node_editor1_edited.png"><img
     src="{{ site.url }}{{ site.baseurl }}/{{ example_path }}/documentation/images/node_editor1_edited.png"></a>
-	<figcaption>The "node-editor" in Porcupine.</figcaption>
+	<figcaption>The "node editor" in Porcupine.</figcaption>
 </figure>
 
-### Contents of entries in the node-editor
-Each entry in the node-editor consists of three parts:
+### Contents of entries in the node editor
+Each entry in the node editor consists of three parts:
 
-* the name of the node (which updates automatically when you edit the name in the workflow-editor)
+* the name of the node (which updates automatically when you edit the name in the workflow editor)
 * the URL to the documentation of the node/interface (e.g. the [Nipype documentation on `fsl.BET`](https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.fsl/preprocess.html#bet))
 represented by the blue globe-icon
 * the blue arrow-icon, which expands the entry to show all of the node's input
@@ -49,7 +49,7 @@ node may be hard-coded (like `some_structural_file.nii.gz`) *or* it may receive
 a connection from the `out_file` output-port from e.g. `fsl.BET` (but not both!).
 
 Note that, upon initialization, only fields from input-ports that are visible
-in the workflow-editor (like `in_file`, but not e.g. `mask` in `fsl.BET`) are
+in the workflow editor (like `in_file`, but not e.g. `mask` in `fsl.BET`) are
 editable. To visualize an input-port (e.g. `mask`), click on the blue eye-icon (which
 redraws the node in the workflow editor with the new input-port), which will
 automatically make the input-port's field editable.
@@ -79,6 +79,6 @@ for now, as they are explained in more detail in other parts of the documentatio
 for more info on manually created input ports, check the section on [file I/O]()).
 
 Now you know how to build pipelines by initializing and connecting nodes in the
-workflow-editor and further customizing/adapting your nodes in the node-editor.
+workflow editor and further customizing/adapting your nodes in the node editor.
 But this does not give you anything to really *execute* your pipeline; for this,
-we need to look at Porcupine's "code-editor" in more detail [in the next section](/Porcupine/documentation/basics/code-editor)!
+we need to look at Porcupine's "code editor" in more detail [in the next section](/Porcupine/documentation/basics/code-editor)!
