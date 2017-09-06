@@ -10,7 +10,9 @@ RUN apt-get update && \
                     #for creating C++ build environment
                     build-essential \
                     #for creating Qt build environment
-                    qtbase5-dev
+                    qtbase5-dev \
+					#for the SVG support that isn't included in the standard Qt
+					libqt5svg5*
 
 RUN apt-get update && \
     apt-get clean && \
