@@ -1,7 +1,7 @@
 ---
 title: "Download me here!"
 layout: splash
-author_profile: true
+author_profile: false
 permalink: /download/
 
 header:
