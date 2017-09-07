@@ -2,11 +2,10 @@
 title: "FEAT reconstruction"
 excerpt: "A Porcupine-pipeline reconstructing FSL FEAT's analysis pipeline."
 header:
-  teaser: assets/images/examples/FEAT_porcupine_graph.png
+  teaser: /examples/example_pipelines/FEAT_fsl_complete_firstlevel_and_secondlevel/porcupine_graph.png
 layout: single
 permalink: /examples/FEAT-example
 ---
-
 
 {% assign example_path = 'examples/example_pipelines/FEAT_fsl_complete_firstlevel_and_secondlevel/' %}
 {% assign caption = 'An example a full FSL-based first-level and second-level analysis' %}
