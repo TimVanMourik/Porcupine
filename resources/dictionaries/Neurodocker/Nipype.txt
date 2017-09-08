@@ -22,3 +22,4 @@ RUN conda install -y mkl=2017.0.1 mkl-service &&  \
 RUN chmod +x /usr/local/miniconda/bin/* && conda clean --all -y
 RUN echo 'export PATH=/usr/local/miniconda/bin:$PATH' >> /etc/profile
 RUN pip install nipype
+RUN apt-get update && apt-get install graphviz
