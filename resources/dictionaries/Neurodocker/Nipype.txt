@@ -1,5 +1,5 @@
 #---------------
-# Install NiPype
+# Install Nipype
 #---------------
 RUN curl -sSLO https://repo.continuum.io/miniconda/Miniconda3-4.3.11-Linux-x86_64.sh && \
     bash Miniconda3-4.3.11-Linux-x86_64.sh -b -p /usr/local/miniconda && \
@@ -22,4 +22,3 @@ RUN conda install -y mkl=2017.0.1 mkl-service &&  \
 RUN chmod +x /usr/local/miniconda/bin/* && conda clean --all -y
 RUN echo 'export PATH=/usr/local/miniconda/bin:$PATH' >> /etc/profile
 RUN pip install nipype
-
