@@ -1,8 +1,11 @@
 ---
-layout: single  
-title: "Contributing your pipeline"
-permalink: /examples/contributing
-author_profile: false
+title: "Add your own workflow to our gallery"
+excerpt: "How to contribute to our piggy bank of .pork files"
+layout: single
+author_profile : false
+categories:
+  - 4. Advanced usage
+permalink: /documentation/advanced/contributing
 ---
 
 We'd love to add your custom Porcupine pipeline to our website! To do so,
