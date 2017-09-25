@@ -20,7 +20,6 @@ RUN apt-get update -qq && apt-get install -yq --no-install-recommends  \
     && echo 'set +x' >> $ND_ENTRYPOINT \
     && echo 'if [ -z "$*" ]; then /usr/bin/env bash; else $*; fi' >> $ND_ENTRYPOINT \
     && chmod -R 777 /porcupine && chmod a+s /porcupine
-ENTRYPOINT ["/porcupine/startup.sh"]
 
 #---------------
 # Install Nipype
@@ -42,10 +41,12 @@ RUN conda install -y mkl=2017.0.1 mkl-service &&  \
                      pandas=0.19.2 \
                      libxml2=2.9.4 \
                      libxslt=1.1.29\
-                     traits=4.6.0
+                     traits=4.6.0 \
+                     boto
+
 RUN chmod +x /usr/local/miniconda/bin/* && conda clean --all -y
 RUN echo 'export PATH=/usr/local/miniconda/bin:$PATH' >> /etc/profile
-RUN pip install nipype boto
+RUN pip install nipype
 RUN apt-get update && apt-get install -y graphviz
 #-----------------------------------------------------------
 # Install FSL v5.0.10
@@ -67,5 +68,10 @@ ENV FSLDIR=/opt/fsl \
 #--------------------------------
 # Add custom analysis file as CMD
 #--------------------------------
-ADD porcupine_generated_workflow.py /run.py
-CMD ["python", "/run.py"]
+
+# THIS IS ONLY TEMPORARY (FIXES NIPYPE DEPENDENCY BUG)
+RUN pip install --upgrade networkx==1.11
+
+COPY run.py /run.py
+RUN chmod +x /run.py
+ENTRYPOINT ["/run.py"]
