@@ -18,8 +18,10 @@ RUN conda install -y mkl=2017.0.1 mkl-service &&  \
                      pandas=0.19.2 \
                      libxml2=2.9.4 \
                      libxslt=1.1.29\
-                     traits=4.6.0
+                     traits=4.6.0 \
+                     boto
+
 RUN chmod +x /usr/local/miniconda/bin/* && conda clean --all -y
 RUN echo 'export PATH=/usr/local/miniconda/bin:$PATH' >> /etc/profile
 RUN pip install nipype
-RUN apt-get update && apt-get install graphviz
+RUN apt-get update && apt-get install -y graphviz
