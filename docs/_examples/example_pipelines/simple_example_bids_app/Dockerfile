@@ -72,6 +72,5 @@ ENV FSLDIR=/opt/fsl \
 # THIS IS ONLY TEMPORARY (FIXES NIPYPE DEPENDENCY BUG)
 RUN pip install --upgrade networkx==1.11
 
-COPY run.py /run.py
-RUN chmod +x /run.py
-ENTRYPOINT ["/run.py"]
+ADD skullstrip.py /skullstrip.py
+ENTRYPOINT ["/skullstrip.py"]
