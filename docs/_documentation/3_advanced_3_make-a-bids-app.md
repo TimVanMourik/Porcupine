@@ -159,7 +159,7 @@ $ docker run --rm -v /home/user/bids_data_dir:/data:ro -v /home/user/outputs:/ou
 If you want to check out the Porcupine-pipeline and corresponding Python-script
 and Dockerfile, you can download them below!
 
-{% assign example_path = 'examples/example_pipelines/simple_bids_app' %}
+{% assign example_path = 'examples/example_pipelines/simple_example_bids_app' %}
 
 [<i class="fa fa-download"></i> Download .pork-file][1]{: .btn}
 [<i class="fa fa-download"></i> Download .py-file][2]{: .btn}
