@@ -129,6 +129,11 @@ $ python skullstrip.py /home/user/my_bids_data /home/user/outputs participant --
 However, this does not run your pipeline in a Docker container. To do so,
 we need to edit the Porcupine-generated Dockerfile slightly.
 
+**Warning!** Make sure you make your make your Python-script executable
+(i.e. on Linux/Mac: `chmod +x skullstrip.py`) before building your Docker image,
+otherwise you'll get a "permission denied" error when running your image!
+{: .notice--warning}
+
 ### Modifying your Dockerfile
 In Porcupine-generated Dockerfiles, you can adapt it to your pipeline by
 adding it to the Docker image (by the `ADD` command) and calling it during
@@ -161,5 +166,5 @@ and Dockerfile, you can download them below!
 [<i class="fa fa-download"></i> Download Dockerfile][3]{: .btn}
 
 [1]:{{ site.url }}{{ site.baseurl }}/{{ example_path }}/porcupine_pipeline.pork
-[2]:{{ site.url }}{{ site.baseurl }}/{{ example_path }}/run.py
+[2]:{{ site.url }}{{ site.baseurl }}/{{ example_path }}/skullstrip.py
 [3]:{{ site.url }}{{ site.baseurl }}/{{ example_path }}/Dockerfile
