@@ -173,6 +173,7 @@ void NipypeGenerator::writePreamble(
         )
 {
     ///@todo make module import dependent on scene nodes
+    io_code += "#!/usr/bin/env python\n";
     io_code += "import sys\n";
     io_code += "import nipype\n";
     io_code += "import nipype.pipeline as pe\n";
@@ -241,4 +242,3 @@ void NipypeGenerator::writePostamble(
 NipypeGenerator::~NipypeGenerator()
 {
 }
-

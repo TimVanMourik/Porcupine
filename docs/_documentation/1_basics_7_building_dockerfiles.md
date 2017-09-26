@@ -136,7 +136,7 @@ directory at `/data` inside the docker-image (with *read-only* permissions,
 which we set using `:ro`)!
 
 **Important**: Make sure your pipeline is adapted to running in a docker-image.
-Most of the times, you only have to adapted your file I/O operations such that
+Most of the times, you only have to adapt your file I/O operations such that
 they read/write files from the appropriate location. For example, in the above
 example, make sure your node that grabs data from disk (using the `SelectFiles`
 or `DataGrabber` interfaces, for example) points at the `/data` directory,

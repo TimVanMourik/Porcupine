@@ -20,7 +20,6 @@ RUN apt-get update -qq && apt-get install -yq --no-install-recommends  \
     && echo 'set +x' >> $ND_ENTRYPOINT \
     && echo 'if [ -z "$*" ]; then /usr/bin/env bash; else $*; fi' >> $ND_ENTRYPOINT \
     && chmod -R 777 /porcupine && chmod a+s /porcupine
-ENTRYPOINT ["/porcupine/startup.sh"]
 
 #---------------
 # Install Nipype
@@ -69,6 +68,9 @@ ENV FSLDIR=/opt/fsl \
 #--------------------------------
 # Add custom analysis file as CMD
 #--------------------------------
-ADD ./porcupine_generated_workflow.py /run.py
-ADD ./firstlevelhelpers.py /firstlevelhelpers.py
-CMD ["python", "/run.py"]
+
+# THIS IS ONLY TEMPORARY (FIXES NIPYPE DEPENDENCY BUG)
+RUN pip install --upgrade networkx==1.11
+
+ADD skullstrip.py /skullstrip.py
+ENTRYPOINT ["/skullstrip.py"]

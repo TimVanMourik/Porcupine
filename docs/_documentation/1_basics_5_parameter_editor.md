@@ -19,7 +19,7 @@ represents, well, the parameter value.
 	<figcaption>An example of how to use the parameter editor (click to enlarge)</figcaption>
 </figure>
 
-### How you can use the parameter editor works
+### How you can use the parameter editor
 In the example of the above screenshot, we for instance use the parameter editor
 to hard-code two variables: `input_for_BET`, representing input-file (a T1-weighted scan, for example) for our
 BET-node, and `frac_parameter_BET`, representing the fractional intensity threshold
