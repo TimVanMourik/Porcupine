@@ -53,6 +53,4 @@ makes your pipeline completely reproducible from beginning to end.
 To get started with building pipelines in Porcupine, [download](../download) and install
 Porcupine first. We provide installers for Windows, Linux, and Mac OS. Then,
 check out our [example gallery](../examples) for inspiration or check out our
-[documentation](../documentation) for more information on how to work with Porcupine.
-
-{% include feature_row id="climo" type="center" %}
+[documentation](../documentation) for more information on how to work with Porcupine. If you're interested in more background information of Porcupine, take a look at [this presentation](../assets/images/Porcupresentation.pdf)!
