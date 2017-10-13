@@ -4,7 +4,7 @@ excerpt: "How to convert your pipeline into a BIDS App"
 layout: single
 author_profile : false
 categories:
-  - 4. Advanced usage
+  - 3. Advanced usage
 permalink: /documentation/advanced/make-a-bids-app
 ---
 

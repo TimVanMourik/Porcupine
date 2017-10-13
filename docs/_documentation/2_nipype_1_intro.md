@@ -4,7 +4,7 @@ excerpt: "How to build Nipype-pipelines and generate Nipype-code using Porcupine
 layout: single
 author_profile : false
 categories:
-  - 3. Nipype-pipelines
+  - 2. Nipype-pipelines
 permalink: /documentation/nipype/intro
 ---
 
