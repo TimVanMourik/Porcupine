@@ -4,16 +4,11 @@ excerpt: "How to mimick Nipype's dynamic ports using manually added ports"
 layout: single
 author_profile : false
 categories:
-  - 3. Nipype-pipelines
+  - 2. Nipype-pipelines
 permalink: /documentation/nipype/dynamic-ports
 ---
 
-Most of Nipype nodes have prespecified input and output-ports. Nipype calls these
-ports "InputSpecs" and "OutputSpecs", which are Python objects whose attributes
-correspond to the interface's inputs and outputs. After initialization of an FSL
-BET interface for example, these inputs and outputs (as defined in the InputSpec and
-OutputSpec) are available from the interface's `input` and (after running
-the interface) the `output` attributes:
+In the previous chapter we already added some manual ports, and here we dive a little deeper in the underlying reason. Most of Nipype nodes have prespecified input and output-ports. Nipype calls these ports "InputSpecs" and "OutputSpecs", which are Python objects whose attributes correspond to the interface's inputs and outputs. After initialization of an FSL BET interface for example, these inputs and outputs (as defined in the InputSpec and OutputSpec) are available from the interface's `input` and (after running the interface) the `output` attributes:
 
 ```python
 >>> from nipype.interfaces.fsl import BET
@@ -86,39 +81,6 @@ port (as in the `IndentityInterface`):
 As you can see, after adding the input/output port `my_custom_port` in the above gif,
 both the node in the workflow editor is updated and the `IdentityInterface` is
 initialized correctly with the `fields` parameter, rendering valid Nipype-code.
-
-### Another example: the `SelectFiles` interface
-To showcase another example which critically depends on dynamically generated
-input and output-ports, let's take a closer look at the `SelectFiles` Nipype-interface --
-an interface often used at the start of pipelines as it is able to (intelligently)
-find files on disk.
-
-Like the `IdentityInterface`, the `SelectFiles` depends on the parameter `templates`
-upon initialization, which is (unlike the `fields` parameter in `IdentityInterface`)
-a dictionary. In this dictionary, values represent the search paths corresponding
-to the category as specified by the key. For example, a valid `templates` variable
-would be:
-
-```python
-templates = {'func_files': 'path/to/func/files/bold.nii.gz',
-             'anat_files': 'path/to/anat/files/T1w.nii.gz'}
-```
-
-Then, in Nipype, upon initialization two new output-ports are created --
-`func_files` and `anat_files` -- which will contain the result of their respective
-search paths.
-
-Now, as Porcupine does not allow to set initialization parameters (only prespecified
-input-ports), we made sure that you can solve this issue by manually adding ports.
-Specifically, you can mimick the `templates` dictionary by adding a new input/output port
-for each key; in turn, Porcupine will make sure to generate Nipype-code that conforms
-to the proper initialization. See the gif below for a demonstration:
-
-<figure>
-	<a href="{{ site.url }}{{ site.baseurl }}/documentation/images/select_files.gif"><img
-    src="{{ site.url }}{{ site.baseurl }}/{{ example_path }}/documentation/images/select_files.gif"></a>
-	<figcaption>How to use SelectFiles using manual ports (click to enlarge)</figcaption>
-</figure>
 
 ### Another example: the `Merge` interface
 The previous two examples (the `IdentityInterface` and `SelectFiles` interface)

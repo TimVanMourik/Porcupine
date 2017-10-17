@@ -4,7 +4,7 @@ excerpt: "How to convert and load custom Nipype-nodes"
 layout: single
 author_profile : false
 categories:
-  - 4. Advanced usage
+  - 3. Advanced usage
 permalink: /documentation/advanced/custom-nodes
 ---
 

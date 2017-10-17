@@ -4,7 +4,7 @@ excerpt: "How to implement iterables and MapNodes in Nipype-pipelines in Porcupi
 layout: single
 author_profile : false
 categories:
-  - 3. Nipype-pipelines
+  - 2. Nipype-pipelines
 permalink: /documentation/nipype/iterables-and-mapnodes
 ---
 

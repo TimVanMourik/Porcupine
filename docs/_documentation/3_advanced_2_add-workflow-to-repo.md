@@ -4,7 +4,7 @@ excerpt: "How to contribute to our piggy bank of .pork files"
 layout: single
 author_profile : false
 categories:
-  - 4. Advanced usage
+  - 3. Advanced usage
 permalink: /documentation/advanced/contributing
 ---
 
