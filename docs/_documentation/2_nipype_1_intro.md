@@ -1,6 +1,6 @@
 ---
-title: "How to leverage Nipype in Porcupine"
-excerpt: "How to build Nipype-pipelines and generate Nipype-code using Porcupine"
+title: "Nipype in Porcupine"
+excerpt: "Introduction to generating Nipype code using Porcupine"
 layout: single
 author_profile : false
 categories:

@@ -8,7 +8,7 @@ categories:
 permalink: /documentation/nipype/dynamic-ports
 ---
 
-In the previous chapter we already added some manual ports, and here we dive a little deeper in the underlying reason. Most of Nipype nodes have prespecified input and output-ports. Nipype calls these ports "InputSpecs" and "OutputSpecs", which are Python objects whose attributes correspond to the interface's inputs and outputs. After initialization of an FSL BET interface for example, these inputs and outputs (as defined in the InputSpec and OutputSpec) are available from the interface's `input` and (after running the interface) the `output` attributes:
+In the previous chapter we already added some manual ports, and here we dive a little deeper in the underlying reasons. Most of Nipype nodes have prespecified input and output-ports. Nipype calls these ports "InputSpecs" and "OutputSpecs", which are Python objects whose attributes correspond to the interface's inputs and outputs. After initialization of an FSL BET interface for example, these inputs and outputs (as defined in the InputSpec and OutputSpec) are available from the interface's `input` and (after running the interface) the `output` attributes:
 
 ```python
 >>> from nipype.interfaces.fsl import BET
@@ -112,7 +112,7 @@ as shown below:
 
 ### Another example: the `DataSink` interface
 As a last example of using manually added ports, let's look at the Nipype's
-`DataSink` interface. This interface is somewhat special because it creates
+`DataSink` interface. This is already covered a little bit in the [previous chapter](/documentation/nipype/select-files). This interface is somewhat special because it creates
 input-ports based on how connections to the `DataSink` node are defined.
 In other words, if I connect for example the `out_file` of an FSL BET-node to
 the `DataSink` interface using the default Nipype syntax ...

@@ -1,5 +1,5 @@
 ---
-title: "Selecting files"
+title: "Reading and writing files with Nipype"
 excerpt: "File I/O in Porcupine using the SelectFiles and DataSink"
 layout: single
 author_profile : false
@@ -10,12 +10,11 @@ permalink: /documentation/nipype/select-files
 
 The first thing you likely want to do in building a pipeline is selecting the files
 that you want to work with. Nipype has several interfaces that you could use for this,
-like the `SelectFiles`, the `DataGrabber`, or the `S3DataGrabber`. The first one
-gets data from disk directly, the second gets data from disk based on a _template_,
-the third one collects data from an online (Amazon) repository, a so-called s3-bucket.
+like the `SelectFiles`, the `DataGrabber`, or the `S3DataGrabber`. The first two
+get data from disk directly based on a _template_, the third one collects data from an online (Amazon) repository, a so-called s3-bucket.
 
 We highly recommend to use the `SelectFiles` interface to select files for
-your pipeline, because it is much easier (and intuitive) to use than the
+your pipeline, because it is easier (and more intuitive) to use than the
 `DataGrabber` interface. In this section, we'll showcase how to use `SelectFiles`
 nodes in your Porcupine pipeline to select files from disk and, at the end
 of your pipeline, how to use Nipype's `DataSink` interface to appropriately
@@ -149,7 +148,7 @@ the `roi_file` output-port from the preceding node!)
 
 Alright! Right now, we have a fully functioning registration-pipeline for a single subject that
 iterates over two functional files and registers them separately to a single
-T1-weighted file. Oftentimes, though, we want to further iterate our pipelines
+T1-weighted file. Oftentimes though, we want to further iterate our pipelines
 across subjects. For that, we'll use a little trick in the `SelectFiles` interface,
 as is explained next.
 
@@ -197,10 +196,7 @@ in our case the registration matrices for each file from each subject - to
 disk again.
 
 ## Writing outputs to disk using `DataSink`
-Well, actually, all results from your pipeline are actually (almost always) already
-on your hard-drive, but they're stored in an inconvenient place (somewhere buried deep in your 'temporary files' folder).
-You probably want to copy these files to a more convenient location. This you can do
-with Nipype's `DataSink` interface.
+Well, actually, all results from your pipeline are (almost always) already on your hard-drive, but they're stored in an inconvenient place (somewhere buried deep in your 'temporary files' folder). You probably want to copy these files to a more convenient location. This you can do with Nipype's `DataSink` interface.
 
 If you initialize a `DataSink` node in Porcupine, however, you'll see that it
 lacks any input-ports! To sink our results (i.e. the registration matrices) to
