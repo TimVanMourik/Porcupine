@@ -2879,13 +2879,13 @@
 			],
 			"title": {
 				"web_url": "https:\/\/github.com\/TimVanMourik\/OpenFmriAnalysis\/tree\/master\/Interface\/LaminarAnalysis",
-				"name": "tvm_potentialtoLayers",
+				"name": "tvm_potentialToLayers",
 				"code": [
 					{
 						"language": "TvM",
 						"comment": "",
 						"argument": {
-							"name": "tvm_potentialtoLayers"
+							"name": "tvm_potentialToLayers"
 						}
 					}
 				]
@@ -4212,102 +4212,6 @@
 			],
 			"title": {
 				"web_url": "https:\/\/github.com\/TimVanMourik\/OpenFmriAnalysis\/tree\/master\/Interface\/Registration",
-				"name": "tvm_basisFunctionBoundaryRegistration",
-				"code": [
-					{
-						"language": "TvM",
-						"comment": "",
-						"argument": {
-							"name": "tvm_basisFunctionBoundaryRegistration"
-						}
-					}
-				]
-			},
-			"ports": [
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_SubjectDirectory",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_SubjectDirectory"
-							}
-						}
-					]
-				},
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_ReferenceVolume",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_ReferenceVolume"
-							}
-						}
-					]
-				},
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_Boundaries",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_Boundaries"
-							}
-						}
-					]
-				},
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_Mask",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_Mask"
-							}
-						}
-					]
-				},
-				{
-					"input": false,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "o_Boundaries",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "o_Boundaries"
-							}
-						}
-					]
-				}
-			]
-		},
-		{
-			"category": [
-				"TvM",
-				"Registration"
-			],
-			"title": {
-				"web_url": "https:\/\/github.com\/TimVanMourik\/OpenFmriAnalysis\/tree\/master\/Interface\/Registration",
 				"name": "tvm_boundariesToObj",
 				"code": [
 					{
@@ -4613,117 +4517,6 @@
 							"language": "TvM",
 							"argument": {
 								"name": "o_CoregistrationMatrix"
-							}
-						}
-					]
-				}
-			]
-		},
-		{
-			"category": [
-				"TvM",
-				"Registration"
-			],
-			"title": {
-				"web_url": "https:\/\/github.com\/TimVanMourik\/OpenFmriAnalysis\/tree\/master\/Interface\/Registration",
-				"name": "tvm_fourierEnhanceRegistration",
-				"code": [
-					{
-						"language": "TvM",
-						"comment": "",
-						"argument": {
-							"name": "tvm_fourierEnhanceRegistration"
-						}
-					}
-				]
-			},
-			"ports": [
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_SubjectDirectory",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_SubjectDirectory"
-							}
-						}
-					]
-				},
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_ReferenceVolume",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_ReferenceVolume"
-							}
-						}
-					]
-				},
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_TransformStack",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_TransformStack"
-							}
-						}
-					]
-				},
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_Order",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_Order"
-							}
-						}
-					]
-				},
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_Dimensions",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_Dimensions"
-							}
-						}
-					]
-				},
-				{
-					"input": false,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "o_DisplacementMap",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "o_DisplacementMap"
 							}
 						}
 					]
@@ -5053,6 +4846,81 @@
 					]
 				},
 				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"editable": true,
+					"name": "i_MinimumVoxels",
+					"code": [
+						{
+							"language": "TvM",
+							"argument": {
+								"name": "i_MinimumVoxels"
+							}
+						}
+					]
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"editable": true,
+					"name": "i_MinimumVertices",
+					"code": [
+						{
+							"language": "TvM",
+							"argument": {
+								"name": "i_MinimumVertices"
+							}
+						}
+					]
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"editable": true,
+					"name": "i_CuboidElements",
+					"code": [
+						{
+							"language": "TvM",
+							"argument": {
+								"name": "i_CuboidElements"
+							}
+						}
+					]
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"editable": true,
+					"name": "i_Tetrahedra",
+					"code": [
+						{
+							"language": "TvM",
+							"argument": {
+								"name": "i_Tetrahedra"
+							}
+						}
+					]
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"editable": true,
+					"name": "i_NeighbourSmoothing",
+					"code": [
+						{
+							"language": "TvM",
+							"argument": {
+								"name": "i_NeighbourSmoothing"
+							}
+						}
+					]
+				},
+				{
 					"input": false,
 					"output": true,
 					"visible": true,
@@ -5063,6 +4931,21 @@
 							"language": "TvM",
 							"argument": {
 								"name": "o_Boundaries"
+							}
+						}
+					]
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"editable": true,
+					"name": "o_DisplacementMap",
+					"code": [
+						{
+							"language": "TvM",
+							"argument": {
+								"name": "o_DisplacementMap"
 							}
 						}
 					]
@@ -5394,294 +5277,6 @@
 			],
 			"title": {
 				"web_url": "https:\/\/github.com\/TimVanMourik\/OpenFmriAnalysis\/tree\/master\/Interface\/Registration",
-				"name": "tvm_sineEnhanceRegistration",
-				"code": [
-					{
-						"language": "TvM",
-						"comment": "",
-						"argument": {
-							"name": "tvm_sineEnhanceRegistration"
-						}
-					}
-				]
-			},
-			"ports": [
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_SubjectDirectory",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_SubjectDirectory"
-							}
-						}
-					]
-				},
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_ReferenceVolume",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_ReferenceVolume"
-							}
-						}
-					]
-				},
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_TransformStack",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_TransformStack"
-							}
-						}
-					]
-				},
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_Filter",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_Filter"
-							}
-						}
-					]
-				},
-				{
-					"input": false,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "o_DisplacementMap",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "o_DisplacementMap"
-							}
-						}
-					]
-				}
-			]
-		},
-		{
-			"category": [
-				"TvM",
-				"Registration"
-			],
-			"title": {
-				"web_url": "https:\/\/github.com\/TimVanMourik\/OpenFmriAnalysis\/tree\/master\/Interface\/Registration",
-				"name": "tvm_transFormStackToDisplacementMap",
-				"code": [
-					{
-						"language": "TvM",
-						"comment": "",
-						"argument": {
-							"name": "tvm_transFormStackToDisplacementMap"
-						}
-					}
-				]
-			},
-			"ports": [
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_SubjectDirectory",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_SubjectDirectory"
-							}
-						}
-					]
-				},
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_ReferenceVolume",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_ReferenceVolume"
-							}
-						}
-					]
-				},
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_TransformStack",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_TransformStack"
-							}
-						}
-					]
-				},
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_Filter",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_Filter"
-							}
-						}
-					]
-				},
-				{
-					"input": false,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "o_DisplacementMap",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "o_DisplacementMap"
-							}
-						}
-					]
-				}
-			]
-		},
-		{
-			"category": [
-				"TvM",
-				"Registration"
-			],
-			"title": {
-				"web_url": "https:\/\/github.com\/TimVanMourik\/OpenFmriAnalysis\/tree\/master\/Interface\/Registration",
-				"name": "tvm_transFormStackToSineDisplacementMap",
-				"code": [
-					{
-						"language": "TvM",
-						"comment": "",
-						"argument": {
-							"name": "tvm_transFormStackToSineDisplacementMap"
-						}
-					}
-				]
-			},
-			"ports": [
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_SubjectDirectory",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_SubjectDirectory"
-							}
-						}
-					]
-				},
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_ReferenceVolume",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_ReferenceVolume"
-							}
-						}
-					]
-				},
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_TransformStack",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_TransformStack"
-							}
-						}
-					]
-				},
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_Filter",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_Filter"
-							}
-						}
-					]
-				},
-				{
-					"input": false,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "o_DisplacementMap",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "o_DisplacementMap"
-							}
-						}
-					]
-				}
-			]
-		},
-		{
-			"category": [
-				"TvM",
-				"Registration"
-			],
-			"title": {
-				"web_url": "https:\/\/github.com\/TimVanMourik\/OpenFmriAnalysis\/tree\/master\/Interface\/Registration",
 				"name": "tvm_useBbregister",
 				"code": [
 					{
@@ -5855,207 +5450,6 @@
 							"language": "TvM",
 							"argument": {
 								"name": "o_CoregistrationMatrix"
-							}
-						}
-					]
-				}
-			]
-		},
-		{
-			"category": [
-				"TvM",
-				"Registration"
-			],
-			"title": {
-				"web_url": "https:\/\/github.com\/TimVanMourik\/OpenFmriAnalysis\/tree\/master\/Interface\/Registration",
-				"name": "tvm_volumeWithBoundariesToMovie",
-				"code": [
-					{
-						"language": "TvM",
-						"comment": "",
-						"argument": {
-							"name": "tvm_volumeWithBoundariesToMovie"
-						}
-					}
-				]
-			},
-			"ports": [
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_SubjectDirectory",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_SubjectDirectory"
-							}
-						}
-					]
-				},
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_ReferenceVolume",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_ReferenceVolume"
-							}
-						}
-					]
-				},
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_Boundaries",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_Boundaries"
-							}
-						}
-					]
-				},
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_Axis",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_Axis"
-							}
-						}
-					]
-				},
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_FramesPerSecond",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_FramesPerSecond"
-							}
-						}
-					]
-				},
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_MovieQuality",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_MovieQuality"
-							}
-						}
-					]
-				},
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_ContourColors",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_ContourColors"
-							}
-						}
-					]
-				},
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_RegionOfInterest",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_RegionOfInterest"
-							}
-						}
-					]
-				},
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_ColorLimits",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_ColorLimits"
-							}
-						}
-					]
-				},
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_Rotation",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_Rotation"
-							}
-						}
-					]
-				},
-				{
-					"input": true,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "i_Contrast",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "i_Contrast"
-							}
-						}
-					]
-				},
-				{
-					"input": false,
-					"output": true,
-					"visible": true,
-					"editable": true,
-					"name": "o_RegistrationMovie",
-					"code": [
-						{
-							"language": "TvM",
-							"argument": {
-								"name": "o_RegistrationMovie"
 							}
 						}
 					]
@@ -6992,6 +6386,207 @@
 							"language": "TvM",
 							"argument": {
 								"name": "o_OutputVolume"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"category": [
+				"TvM",
+				"Utilities"
+			],
+			"title": {
+				"web_url": "https:\/\/github.com\/TimVanMourik\/OpenFmriAnalysis\/tree\/master\/Interface\/Utilities",
+				"name": "tvm_volumeWithBoundariesToMovie",
+				"code": [
+					{
+						"language": "TvM",
+						"comment": "",
+						"argument": {
+							"name": "tvm_volumeWithBoundariesToMovie"
+						}
+					}
+				]
+			},
+			"ports": [
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"editable": true,
+					"name": "i_SubjectDirectory",
+					"code": [
+						{
+							"language": "TvM",
+							"argument": {
+								"name": "i_SubjectDirectory"
+							}
+						}
+					]
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"editable": true,
+					"name": "i_ReferenceVolume",
+					"code": [
+						{
+							"language": "TvM",
+							"argument": {
+								"name": "i_ReferenceVolume"
+							}
+						}
+					]
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"editable": true,
+					"name": "i_Boundaries",
+					"code": [
+						{
+							"language": "TvM",
+							"argument": {
+								"name": "i_Boundaries"
+							}
+						}
+					]
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"editable": true,
+					"name": "i_Axis",
+					"code": [
+						{
+							"language": "TvM",
+							"argument": {
+								"name": "i_Axis"
+							}
+						}
+					]
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"editable": true,
+					"name": "i_FramesPerSecond",
+					"code": [
+						{
+							"language": "TvM",
+							"argument": {
+								"name": "i_FramesPerSecond"
+							}
+						}
+					]
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"editable": true,
+					"name": "i_MovieQuality",
+					"code": [
+						{
+							"language": "TvM",
+							"argument": {
+								"name": "i_MovieQuality"
+							}
+						}
+					]
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"editable": true,
+					"name": "i_ContourColors",
+					"code": [
+						{
+							"language": "TvM",
+							"argument": {
+								"name": "i_ContourColors"
+							}
+						}
+					]
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"editable": true,
+					"name": "i_RegionOfInterest",
+					"code": [
+						{
+							"language": "TvM",
+							"argument": {
+								"name": "i_RegionOfInterest"
+							}
+						}
+					]
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"editable": true,
+					"name": "i_ColorLimits",
+					"code": [
+						{
+							"language": "TvM",
+							"argument": {
+								"name": "i_ColorLimits"
+							}
+						}
+					]
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"editable": true,
+					"name": "i_Rotation",
+					"code": [
+						{
+							"language": "TvM",
+							"argument": {
+								"name": "i_Rotation"
+							}
+						}
+					]
+				},
+				{
+					"input": true,
+					"output": true,
+					"visible": true,
+					"editable": true,
+					"name": "i_Contrast",
+					"code": [
+						{
+							"language": "TvM",
+							"argument": {
+								"name": "i_Contrast"
+							}
+						}
+					]
+				},
+				{
+					"input": false,
+					"output": true,
+					"visible": true,
+					"editable": true,
+					"name": "o_RegistrationMovie",
+					"code": [
+						{
+							"language": "TvM",
+							"argument": {
+								"name": "o_RegistrationMovie"
 							}
 						}
 					]
