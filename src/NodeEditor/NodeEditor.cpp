@@ -31,6 +31,7 @@
 #include <QGraphicsSceneMouseEvent>
 #include <QKeyEvent>
 #include <QScrollBar>
+#include <QTimer>
 
 #include "Link.hpp"
 #include "Node.hpp"
@@ -50,7 +51,9 @@ NodeEditor::NodeEditor(
     m_lastClickedPoint(QPointF(0, 0)),
     m_fileName(QString()),
 //    m_newSelection(0),
-    m_treeModel(0)
+    m_treeModel(0),
+    m_scrollTimerActive(false),
+    m_scrollDelta(0)
 {
     /// @todo when pressed 'backspace' in file name label, last clicked node is deleted #fix
     /// @todo info 'tooltip' options
@@ -257,16 +260,25 @@ void NodeEditor::wheelEvent(
         QWheelEvent* _event
         )
 {
-    float scalingStep = 0.9;
-    if(_event->delta() < 0)
-    {
-        this->scale(scalingStep, scalingStep);
-        m_scalingFactor *= scalingStep;
-    }
-    else
-    {
-        this->scale(1 / scalingStep, 1 / scalingStep);
-        m_scalingFactor /= scalingStep;
+    this->m_scrollDelta += _event->delta();
+    if (!m_scrollTimerActive) {
+        float scalingStep = 0.9;
+        if(this->m_scrollDelta < 0)
+        {
+            this->scale(scalingStep, scalingStep);
+            m_scalingFactor *= scalingStep;
+        }
+        else
+        {
+            this->scale(1 / scalingStep, 1 / scalingStep);
+            m_scalingFactor /= scalingStep;
+        }
+
+        this->m_scrollDelta = 0;
+        this->m_scrollTimerActive = true;
+        QTimer::singleShot(23, this, [=]() {
+            this->m_scrollTimerActive = false;
+        });
     }
     /// @todo pass on to selections
 //    foreach (SelectionBox* selection, m_selections)
