@@ -157,6 +157,10 @@ private:
 //    QList<SelectionBox*> m_selections;
     //
     NodeTreeEditor* m_treeModel;
+    //
+    bool m_scrollTimerActive;
+    //
+    int m_scrollDelta;
 };
 
 #endif // NODEEDITOR_HPP
