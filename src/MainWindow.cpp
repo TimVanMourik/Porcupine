@@ -84,6 +84,22 @@ MainWindow::MainWindow(
     mainWidget->addWidget(m_nodeTreeWidget);
     QSplitter* rightWidget = new QSplitter(Qt::Vertical, mainWidget);
 
+    // Create a widget containing the zoom buttons
+    QWidget* zoomWidget = new QWidget();
+    QHBoxLayout* buttonLayout = new QHBoxLayout(zoomWidget);
+    buttonLayout->setSpacing(0);
+    QPushButton* buttonZoomIn = new QPushButton("+");
+    QPushButton* buttonZoomOut = new QPushButton("—");
+    buttonLayout->addWidget(buttonZoomIn);
+    buttonLayout->addWidget(buttonZoomOut);
+
+    // Create a grid layout allowing for the placement of buttons on the node editor
+    QGridLayout* nodeEditorLayout = new QGridLayout();
+    nodeEditorLayout->addWidget(zoomWidget, 1, 0);
+    nodeEditorLayout->setRowStretch(0, 1);
+    nodeEditorLayout->setColumnStretch(1, 1);
+    m_nodeEditorWidget->setLayout(nodeEditorLayout);
+
     QSplitter* nodeEditor = new QSplitter(Qt::Horizontal, rightWidget);
     m_nodeEditorWidget->setTabsClosable(true);
     nodeEditor->addWidget(m_nodeEditorWidget);
@@ -115,6 +131,8 @@ MainWindow::MainWindow(
 
     connect(buttonGenerate, SIGNAL(released()), this, SLOT(nodeToCode()));
     connect(buttonSave, SIGNAL(released()), this, SLOT(saveCode()));
+    connect(buttonZoomIn, SIGNAL(released()), this, SLOT(zoomIn()));
+    connect(buttonZoomOut, SIGNAL(released()), this, SLOT(zoomOut()));
     connect(m_nodeEditorWidget, SIGNAL(currentChanged(int)), this, SLOT(setFileAt(int)));
     connect(m_nodeEditorWidget, SIGNAL(tabCloseRequested(int)), this, SLOT(closeTab(int)));
 
