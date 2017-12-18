@@ -51,9 +51,7 @@ NodeEditor::NodeEditor(
     m_lastClickedPoint(QPointF(0, 0)),
     m_fileName(QString()),
 //    m_newSelection(0),
-    m_treeModel(0),
-    m_scrollTimerActive(false),
-    m_scrollDelta(0)
+    m_treeModel(0)
 {
     /// @todo when pressed 'backspace' in file name label, last clicked node is deleted #fix
     /// @todo info 'tooltip' options
@@ -254,34 +252,6 @@ bool NodeEditor::eventFilter(
     }
     viewport()->update();
     return QObject::eventFilter(_object, _event);
-}
-
-void NodeEditor::wheelEvent(
-        QWheelEvent* _event
-        )
-{
-    //// @note Scrollwheel zoom disabled until upstream Qt bugs are fixed or suitable work-around is found
-    // When a wheelEvent is fired, a single-shot timer is created and delta values accumalated
-    // from all wheelEvents fired during that timer. When the timer is not active, the scroll is
-    // performed using the accumalated delta value. This is a temporary fix until QTBug-226 is fixed.
-    this->m_scrollDelta += _event->delta();
-    if (!m_scrollTimerActive) {
-        float scalingStep = 0.9;
-        if(this->m_scrollDelta < 0)
-        {
-            this->zoom(scalingStep);
-        }
-        else
-        {
-            this->zoom(1/scalingStep);
-        }
-
-        this->m_scrollDelta = 0;
-        this->m_scrollTimerActive = true;
-        QTimer::singleShot(23, this, [=]() {
-            this->m_scrollTimerActive = false;
-        });
-    }
 }
 
 void NodeEditor::keyPressEvent(
