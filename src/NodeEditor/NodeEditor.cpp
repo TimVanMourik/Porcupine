@@ -260,33 +260,27 @@ void NodeEditor::wheelEvent(
         QWheelEvent* _event
         )
 {
+    //// @note Scrollwheel zoom disabled until upstream Qt bugs are fixed or suitable work-around is found
     // When a wheelEvent is fired, a single-shot timer is created and delta values accumalated
     // from all wheelEvents fired during that timer. When the timer is not active, the scroll is
     // performed using the accumalated delta value. This is a temporary fix until QTBug-226 is fixed.
-    this->m_scrollDelta += _event->delta();
-    if (!m_scrollTimerActive) {
-        float scalingStep = 0.9;
-        if(this->m_scrollDelta < 0)
-        {
-            this->scale(scalingStep, scalingStep);
-            m_scalingFactor *= scalingStep;
-        }
-        else
-        {
-            this->scale(1 / scalingStep, 1 / scalingStep);
-            m_scalingFactor /= scalingStep;
-        }
+//    this->m_scrollDelta += _event->delta();
+//    if (!m_scrollTimerActive) {
+//        float scalingStep = 0.9;
+//        if(this->m_scrollDelta < 0)
+//        {
+//            this->zoom(scalingStep);
+//        }
+//        else
+//        {
+//            this->zoom(1/scalingStep);
+//        }
 
-        this->m_scrollDelta = 0;
-        this->m_scrollTimerActive = true;
-        QTimer::singleShot(23, this, [=]() {
-            this->m_scrollTimerActive = false;
-        });
-    }
-    /// @todo pass on to selections
-//    foreach (SelectionBox* selection, m_selections)
-//    {
-//        selection->updateOpacity(m_scalingFactor);
+//        this->m_scrollDelta = 0;
+//        this->m_scrollTimerActive = true;
+//        QTimer::singleShot(23, this, [=]() {
+//            this->m_scrollTimerActive = false;
+//        });
 //    }
 }
 
@@ -327,6 +321,17 @@ void NodeEditor::keyPressEvent(
         break;
     }
     }
+}
+
+void NodeEditor::zoom(float zoomFactor) {
+    this->scale(zoomFactor, zoomFactor);
+    m_scalingFactor *= zoomFactor;
+
+    /// @todo pass on to selections
+//    foreach (SelectionBox* selection, m_selections)
+//    {
+//        selection->updateOpacity(m_scalingFactor);
+//    }
 }
 
 const QGraphicsItem* NodeEditor::itemAt(

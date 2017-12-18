@@ -455,6 +455,20 @@ void MainWindow::pasteEdit(
     m_nodeEditors[m_currentFileIndex]->addNode(m_clipboard);
 }
 
+void MainWindow::zoomIn(
+        )
+{
+    float zoomFactor = 1 / 0.9;
+    m_nodeEditors[m_currentFileIndex]->zoom(zoomFactor);
+}
+
+void MainWindow::zoomOut(
+        )
+{
+    float zoomFactor = 0.9;
+    m_nodeEditors[m_currentFileIndex]->zoom(zoomFactor);
+}
+
 void MainWindow::addNode(
         const NodeSetting* _setting
         )
@@ -516,6 +530,10 @@ void MainWindow::createMenus()
     m_editMenu->addAction(m_cutAct);
     m_editMenu->addAction(m_copyAct);
     m_editMenu->addAction(m_pasteAct);
+
+    m_viewMenu = menuBar()->addMenu(tr("View"));
+    m_viewMenu->addAction(m_zoomInAct);
+    m_viewMenu->addAction(m_zoomOutAct);
 
     m_nodesMenu = menuBar()->addMenu(tr("Nodes"));
     m_nodesMenu->addAction(m_loadNodesAct);
@@ -582,6 +600,16 @@ void MainWindow::createActions()
     m_pasteAct->setShortcuts(QKeySequence::Paste);
     m_pasteAct->setStatusTip(tr("Paste the clipboard's contents into the current selection"));
     connect(m_pasteAct, SIGNAL(triggered()), this, SLOT(pasteEdit()));
+
+    m_zoomInAct = new QAction(tr("Zoom In"), this);
+    m_zoomInAct->setShortcuts(QKeySequence::ZoomIn);
+    m_zoomInAct->setStatusTip(tr("Zoom in the node editor"));
+    connect(m_zoomInAct, SIGNAL(triggered()), this, SLOT(zoomIn()));
+
+    m_zoomOutAct = new QAction(tr("Zoom out"), this);
+    m_zoomOutAct->setShortcuts(QKeySequence::ZoomOut);
+    m_zoomOutAct->setStatusTip(tr("Zoom out the node editor"));
+    connect(m_zoomOutAct, SIGNAL(triggered()), this, SLOT(zoomOut()));
 
     m_postitAct = new QAction(tr("Post-it"), this);
     connect(m_postitAct, SIGNAL(triggered()), this, SLOT(addPostIt()));

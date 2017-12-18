@@ -69,6 +69,10 @@ public:
             QKeyEvent* _event
             );
     //
+    void zoom(
+            float zoomFactor
+            );
+    //
     void saveToJson(
             QJsonObject& _json
             );
