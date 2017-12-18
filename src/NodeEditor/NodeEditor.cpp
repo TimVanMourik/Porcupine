@@ -264,24 +264,24 @@ void NodeEditor::wheelEvent(
     // When a wheelEvent is fired, a single-shot timer is created and delta values accumalated
     // from all wheelEvents fired during that timer. When the timer is not active, the scroll is
     // performed using the accumalated delta value. This is a temporary fix until QTBug-226 is fixed.
-//    this->m_scrollDelta += _event->delta();
-//    if (!m_scrollTimerActive) {
-//        float scalingStep = 0.9;
-//        if(this->m_scrollDelta < 0)
-//        {
-//            this->zoom(scalingStep);
-//        }
-//        else
-//        {
-//            this->zoom(1/scalingStep);
-//        }
+    this->m_scrollDelta += _event->delta();
+    if (!m_scrollTimerActive) {
+        float scalingStep = 0.9;
+        if(this->m_scrollDelta < 0)
+        {
+            this->zoom(scalingStep);
+        }
+        else
+        {
+            this->zoom(1/scalingStep);
+        }
 
-//        this->m_scrollDelta = 0;
-//        this->m_scrollTimerActive = true;
-//        QTimer::singleShot(23, this, [=]() {
-//            this->m_scrollTimerActive = false;
-//        });
-//    }
+        this->m_scrollDelta = 0;
+        this->m_scrollTimerActive = true;
+        QTimer::singleShot(23, this, [=]() {
+            this->m_scrollTimerActive = false;
+        });
+    }
 }
 
 void NodeEditor::keyPressEvent(
