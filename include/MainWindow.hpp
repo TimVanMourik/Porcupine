@@ -100,6 +100,10 @@ private slots:
             );
     void pasteEdit(
             );
+    void zoomIn(
+            );
+    void zoomOut(
+            );
     void nodeSlot(
             QAction* _action
             );
@@ -147,6 +151,7 @@ private:
 
     QMenu* m_fileMenu;
     QMenu* m_editMenu;
+    QMenu* m_viewMenu;
     QMenu* m_nodesMenu;
     QMenu* m_postitMenu;
 
@@ -161,6 +166,8 @@ private:
     QAction* m_cutAct;
     QAction* m_copyAct;
     QAction* m_pasteAct;
+    QAction* m_zoomInAct;
+    QAction* m_zoomOutAct;
     QAction* m_postitAct;
 
     QJsonObject m_clipboard;

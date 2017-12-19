@@ -61,12 +61,12 @@ public:
             QEvent* _event
             );
     //
-    void wheelEvent(
-            QWheelEvent* _event
-            );
-    //
     void keyPressEvent(
             QKeyEvent* _event
+            );
+    //
+    void zoom(
+            float zoomFactor
             );
     //
     void saveToJson(
@@ -157,10 +157,6 @@ private:
 //    QList<SelectionBox*> m_selections;
     //
     NodeTreeEditor* m_treeModel;
-    //
-    bool m_scrollTimerActive;
-    //
-    int m_scrollDelta;
 };
 
 #endif // NODEEDITOR_HPP

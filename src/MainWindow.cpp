@@ -84,6 +84,22 @@ MainWindow::MainWindow(
     mainWidget->addWidget(m_nodeTreeWidget);
     QSplitter* rightWidget = new QSplitter(Qt::Vertical, mainWidget);
 
+    // Create a widget containing the zoom buttons
+    QWidget* zoomWidget = new QWidget();
+    QHBoxLayout* buttonLayout = new QHBoxLayout(zoomWidget);
+    buttonLayout->setSpacing(0);
+    QPushButton* buttonZoomIn = new QPushButton("+");
+    QPushButton* buttonZoomOut = new QPushButton("—");
+    buttonLayout->addWidget(buttonZoomIn);
+    buttonLayout->addWidget(buttonZoomOut);
+
+    // Create a grid layout allowing for the placement of buttons on the node editor
+    QGridLayout* nodeEditorLayout = new QGridLayout();
+    nodeEditorLayout->addWidget(zoomWidget, 1, 0);
+    nodeEditorLayout->setRowStretch(0, 1);
+    nodeEditorLayout->setColumnStretch(1, 1);
+    m_nodeEditorWidget->setLayout(nodeEditorLayout);
+
     QSplitter* nodeEditor = new QSplitter(Qt::Horizontal, rightWidget);
     m_nodeEditorWidget->setTabsClosable(true);
     nodeEditor->addWidget(m_nodeEditorWidget);
@@ -115,6 +131,8 @@ MainWindow::MainWindow(
 
     connect(buttonGenerate, SIGNAL(released()), this, SLOT(nodeToCode()));
     connect(buttonSave, SIGNAL(released()), this, SLOT(saveCode()));
+    connect(buttonZoomIn, SIGNAL(released()), this, SLOT(zoomIn()));
+    connect(buttonZoomOut, SIGNAL(released()), this, SLOT(zoomOut()));
     connect(m_nodeEditorWidget, SIGNAL(currentChanged(int)), this, SLOT(setFileAt(int)));
     connect(m_nodeEditorWidget, SIGNAL(tabCloseRequested(int)), this, SLOT(closeTab(int)));
 
@@ -455,6 +473,20 @@ void MainWindow::pasteEdit(
     m_nodeEditors[m_currentFileIndex]->addNode(m_clipboard);
 }
 
+void MainWindow::zoomIn(
+        )
+{
+    float zoomFactor = 1 / 0.9;
+    m_nodeEditors[m_currentFileIndex]->zoom(zoomFactor);
+}
+
+void MainWindow::zoomOut(
+        )
+{
+    float zoomFactor = 0.9;
+    m_nodeEditors[m_currentFileIndex]->zoom(zoomFactor);
+}
+
 void MainWindow::addNode(
         const NodeSetting* _setting
         )
@@ -516,6 +548,10 @@ void MainWindow::createMenus()
     m_editMenu->addAction(m_cutAct);
     m_editMenu->addAction(m_copyAct);
     m_editMenu->addAction(m_pasteAct);
+
+    m_viewMenu = menuBar()->addMenu(tr("View"));
+    m_viewMenu->addAction(m_zoomInAct);
+    m_viewMenu->addAction(m_zoomOutAct);
 
     m_nodesMenu = menuBar()->addMenu(tr("Nodes"));
     m_nodesMenu->addAction(m_loadNodesAct);
@@ -582,6 +618,16 @@ void MainWindow::createActions()
     m_pasteAct->setShortcuts(QKeySequence::Paste);
     m_pasteAct->setStatusTip(tr("Paste the clipboard's contents into the current selection"));
     connect(m_pasteAct, SIGNAL(triggered()), this, SLOT(pasteEdit()));
+
+    m_zoomInAct = new QAction(tr("Zoom In"), this);
+    m_zoomInAct->setShortcuts(QKeySequence::ZoomIn);
+    m_zoomInAct->setStatusTip(tr("Zoom in the node editor"));
+    connect(m_zoomInAct, SIGNAL(triggered()), this, SLOT(zoomIn()));
+
+    m_zoomOutAct = new QAction(tr("Zoom out"), this);
+    m_zoomOutAct->setShortcuts(QKeySequence::ZoomOut);
+    m_zoomOutAct->setStatusTip(tr("Zoom out the node editor"));
+    connect(m_zoomOutAct, SIGNAL(triggered()), this, SLOT(zoomOut()));
 
     m_postitAct = new QAction(tr("Post-it"), this);
     connect(m_postitAct, SIGNAL(triggered()), this, SLOT(addPostIt()));
