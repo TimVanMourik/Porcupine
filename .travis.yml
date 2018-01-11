@@ -10,11 +10,15 @@ python:
   - '3.6'
 
 before_install:
-- sudo apt-get update && sudo apt-get install -y --no-install-recommends build-essential libgl1-mesa-dev libqt5svg5* qtbase5-dev
+- sudo apt-get update && sudo apt-get install -y --no-install-recommends build-essential
+- sudo add-apt-repository --yes ppa:beineri/opt-qt57-trusty
+- sudo apt-get install -qq g++-6 qt57-meta-full
 
-#install:
-#- qmake -qt=qt5
-#- make
+install:
+- QT_ENV_SCRIPT=$(find /opt -name 'qt*-env.sh')
+- source $QT_ENV_SCRIPT
+- qmake
+- make
 
 script:
     - qmake -v
