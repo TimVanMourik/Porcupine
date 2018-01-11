@@ -12,7 +12,7 @@ permalink: /examples/skullstrip-example
 {% assign caption = 'Skullstripping workflow including bias field correction and intensity harmonization' %}
 
 This example pipeline reconstructs the skullstripping-pipeline originally
-defined in the [niworkflows] Python package](https://github.com/poldracklab/niworkflows)
+defined in the [niworkflows Python package](https://github.com/poldracklab/niworkflows)
 from the [Poldrack-lab](https://poldracklab.stanford.edu/). This pipeline
 loads a T1-weighted structural scan, applies bias field correction (using ANTs)
 and intensity harmonization (using AFNI), skullstrips the image, and finally
