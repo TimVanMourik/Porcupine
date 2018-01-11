@@ -40,6 +40,7 @@
 #include <QPainter>
 #include <QPrinter>
 #include <QSvgGenerator>
+#include <QStylePainter>
 #include <QPushButton>
 #include <QSlider>
 #include <QSplitter>
@@ -106,15 +107,20 @@ MainWindow::MainWindow(
     nodeEditor->addWidget(m_parameterWidget);
 
     QPushButton* buttonGenerate = new QPushButton("Generate code");
+    buttonGenerate->setMaximumWidth(200);
     QPushButton* buttonSave = new QPushButton("Save code");
+    buttonSave->setMaximumWidth(200);
     QWidget* codeGroup = new QWidget();
-    QVBoxLayout* codeBox = new QVBoxLayout(codeGroup);
+    QHBoxLayout* codeBox = new QHBoxLayout(codeGroup);
 //    codeGroup->setLayout(codeBox);
     codeBox->addWidget(buttonGenerate);
     codeBox->addWidget(buttonSave);
+    codeGroup->setMaximumWidth(400);
+//    codeBox->setAlignment(buttonSave, Qt::AlignLeft);
+//    codeBox->setAlignment(buttonGenerate, Qt::AlignLeft);
 
     QWidget* codeEditor = new QWidget();
-    QHBoxLayout* codeLayout = new QHBoxLayout(codeEditor);
+    QVBoxLayout* codeLayout = new QVBoxLayout(codeEditor);
     codeLayout->addWidget(codeGroup);
     codeLayout->addWidget(m_codeEditorWidget);
 
@@ -136,7 +142,8 @@ MainWindow::MainWindow(
     connect(m_nodeEditorWidget, SIGNAL(currentChanged(int)), this, SLOT(setFileAt(int)));
     connect(m_nodeEditorWidget, SIGNAL(tabCloseRequested(int)), this, SLOT(closeTab(int)));
 
-    newFile();
+//    newFile();
+    openFile(":/examples/example.pork");
 }
 
 void MainWindow::closeTab(
@@ -341,28 +348,32 @@ void MainWindow::openFile()
 
     foreach (const QString& fileName, fileDialog.selectedFiles())
     {
-        QFile file(fileName);
-        QFileInfo fileInfo(file.fileName());
-        if (!file.open(QIODevice::ReadOnly))
-        {
-            std::cerr << "Error: cannot open file\n";
-            return;
-        }
-        QJsonDocument document(QJsonDocument::fromJson(file.readAll()));
-        file.close();
-
-        newFile();
-        m_nodeEditorWidget->setTabText(m_nodeEditorWidget->currentIndex(),  fileInfo.fileName());
-        m_nodeEditors     [m_nodeEditorWidget->currentIndex()]->setFileName(fileInfo.fileName());
-        m_nodeEditors     [m_nodeEditorWidget->currentIndex()]->loadFromJson(document.object());
-        m_parameterEditors[m_nodeEditorWidget->currentIndex()]->loadFromJson(document.object());
+        openFile(fileName);
     }
+}
+
+void MainWindow::openFile(const QString& _fileName)
+{
+    QFile file(_fileName);
+    QFileInfo fileInfo(file.fileName());
+    if (!file.open(QIODevice::ReadOnly))
+    {
+        std::cerr << "Error: cannot open file\n";
+        return;
+    }
+    QJsonDocument document(QJsonDocument::fromJson(file.readAll()));
+    file.close();
+
+    newFile();
+    m_nodeEditorWidget->setTabText(m_nodeEditorWidget->currentIndex(),  fileInfo.fileName());
+    m_nodeEditors     [m_nodeEditorWidget->currentIndex()]->setFileName(fileInfo.fileName());
+    m_nodeEditors     [m_nodeEditorWidget->currentIndex()]->loadFromJson(document.object());
+    m_parameterEditors[m_nodeEditorWidget->currentIndex()]->loadFromJson(document.object());
 }
 
 void MainWindow::exportFile(
         )
 {
-
     QString filters("PDF files (*.pdf);;SVG files (*.svg)");
     QString defaultFilter("PDF files (*.pdf)");
     QFileDialog fileDialog(0, "Export file", QDir::currentPath(), filters);

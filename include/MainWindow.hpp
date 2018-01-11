@@ -136,6 +136,9 @@ private:
 //            );
     void loadDefaultNodes(
             );
+    void openFile(
+            const QString& _fileName
+            );
 
     QTabWidget* m_nodeEditorWidget;
     QWidget* m_nodeTreeWidget;
