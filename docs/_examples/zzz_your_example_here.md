@@ -7,5 +7,5 @@ layout: single
 permalink: /examples/a-short-name-of-your-workflow
 ---
 
-Follow the instructions on the [examples](/Porcupine/examples/) page to add your pipeline
-to our example gallery!
+Follow the instructions in the [Contributing](/Porcupine/documentation/advanced/contributing)
+section in our documentation on how to add your pipeline to our example gallery!
