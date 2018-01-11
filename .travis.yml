@@ -14,7 +14,7 @@ python:
   - '3.6'
 
 before_install:
-- apt-get install -y --no-install-recommends build-essential libqt5svg5* qtbase5-dev
+- sudo apt-get install -y --no-install-recommends build-essential libqt5svg5* qtbase5-dev
 
 install:
 - qmake -qt=qt5 \
