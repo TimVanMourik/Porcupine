@@ -1,0 +1,30 @@
+language: python
+sudo: false
+
+branches:
+  only:
+    - master
+    - setup_ci
+
+env:
+  global:
+    - PIP_DEPS="pytest coveralls pytest-cov flake8"
+
+python:
+  - '3.6'
+
+before_install:
+- apt-get install -y --no-install-recommends build-essential \
+  # for the SVG support that isn't included in the standard Qt
+  libqt5svg5* \
+  qtbase5-dev
+install:
+- qmake -qt=qt5 \
+- make
+- apt-get purge -yq build-essential
+- apt-get -yq autoremove
+- apt-get clean
+- rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+#script:
+#- In the future: test integrity of workflow creation
