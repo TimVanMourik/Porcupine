@@ -15,8 +15,7 @@ before_install:
 - sudo apt-get update && sudo apt-get install -qq qt57-meta-full
 install:
 - source /opt/qt57/bin/qt57-env.sh
-- qmake
-- make
 
 script:
-- bin/Porcupine
+- qmake
+- make
