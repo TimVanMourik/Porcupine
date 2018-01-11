@@ -10,7 +10,7 @@ python:
   - '3.6'
 
 before_install:
-- sudo apt-get update && sudo apt-get install -y --no-install-recommends build-essential
+- sudo apt-get update && sudo apt-get install -y --no-install-recommends build-essential libqt5svg5*
 - sudo add-apt-repository --yes ppa:beineri/opt-qt571-trusty
 - sudo apt-get update && sudo apt-get install -qq qt57base
 install:
