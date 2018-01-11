@@ -75,6 +75,12 @@ $ docker build -t skullstripimage -f Dockerfile .
 Here, the `-t` flag specifies the name of your image and the `-f` flag specifies
 the Dockerfile that you want to use to build your image.
 
+**Beware**: Installing FSL in Docker images causes the image to become very large
+(>10GB), which may cause an error on Mac OS and Windows due to size restrictions
+("No space left on device" error). Check [this post](https://forums.docker.com/t/increase-docker-container-disk-space-on-os-x/26725/2)
+ on how to increase disk space for the Docker container.
+{: .notice--warning}
+
 ### Running your docker-image!
 Once you've built your docker-image, it's easy to actually run it. To do so,
 run the following in your terminal:
