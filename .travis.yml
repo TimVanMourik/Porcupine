@@ -6,10 +6,6 @@ branches:
     - master
     - setup_ci
 
-env:
-  global:
-    - PIP_DEPS="pytest coveralls pytest-cov flake8"
-
 python:
   - '3.6'
 
@@ -17,5 +13,5 @@ before_install:
 - sudo apt-get install -y --no-install-recommends build-essential libqt5svg5* qtbase5-dev
 
 install:
-- qmake -qt=qt5 \
+- qmake -qt=qt5 
 - make
