@@ -30,5 +30,5 @@ associated Dockerfile in our [Github repository](https://github.com/TimVanMourik
 [<i class="fa fa-download"></i> Download Dockerfile][3]{: .btn}
 
 [1]:{{ site.url }}{{ site.baseurl }}/{{ example_path }}/porcupine_pipeline.pork
-[2]:{{ site.url }}{{ site.baseurl }}/{{ example_path }}/porcupine_generated_workflow.py
+[2]:{{ site.url }}{{ site.baseurl }}/{{ example_path }}/porcupine_generated_pipeline.py
 [3]:{{ site.url }}{{ site.baseurl }}/{{ example_path }}/Dockerfile

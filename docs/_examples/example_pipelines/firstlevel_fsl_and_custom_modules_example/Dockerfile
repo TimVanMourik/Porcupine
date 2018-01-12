@@ -69,6 +69,6 @@ ENV FSLDIR=/opt/fsl \
 #--------------------------------
 # Add custom analysis file as CMD
 #--------------------------------
-ADD ./porcupine_generated_workflow.py /run.py
+ADD ./porcupine_generated_pipeline.py /run.py
 ADD ./firstlevelhelpers.py /firstlevelhelpers.py
 CMD ["python", "/run.py"]

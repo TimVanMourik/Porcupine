@@ -12,7 +12,7 @@ permalink: /examples/skullstrip-example
 {% assign caption = 'Skullstripping workflow including bias field correction and intensity harmonization' %}
 
 This example pipeline reconstructs the skullstripping-pipeline originally
-defined in the [niworkflows] Python package](https://github.com/poldracklab/niworkflows)
+defined in the [niworkflows Python package](https://github.com/poldracklab/niworkflows)
 from the [Poldrack-lab](https://poldracklab.stanford.edu/). This pipeline
 loads a T1-weighted structural scan, applies bias field correction (using ANTs)
 and intensity harmonization (using AFNI), skullstrips the image, and finally
@@ -35,5 +35,5 @@ associated Dockerfile in our [Github repository](https://github.com/TimVanMourik
 [<i class="fa fa-download"></i> Download Dockerfile][3]{: .btn}
 
 [1]:{{ site.url }}{{ site.baseurl }}/{{ example_path }}/porcupine_pipeline.pork
-[2]:{{ site.url }}{{ site.baseurl }}/{{ example_path }}/porcupine_generated_workflow.py
+[2]:{{ site.url }}{{ site.baseurl }}/{{ example_path }}/porcupine_generated_pipeline.py
 [3]:{{ site.url }}{{ site.baseurl }}/{{ example_path }}/Dockerfile

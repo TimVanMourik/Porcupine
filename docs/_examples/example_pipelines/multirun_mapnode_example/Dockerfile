@@ -87,5 +87,5 @@ RUN apt-get update -qq && apt-get install -yq --no-install-recommends ed gsl-bin
 #--------------------------------
 # Add custom analysis file as CMD
 #--------------------------------
-ADD ./porcupine_generated_workflow.py /run.py
+ADD ./porcupine_generated_pipeline.py /run.py
 CMD ["python", "/run.py"]

@@ -1,0 +1,22 @@
+build: false
+
+environment:
+  matrix:
+    - PYTHON: "C:\\Python35"
+      PYTHON_VERSION: "3.5.1"
+      PYTHON_ARCH: "32"
+      MINICONDA: C:\Miniconda35
+
+init:
+  - "ECHO %PYTHON% %PYTHON_VERSION% %PYTHON_ARCH% %MINICONDA%"
+
+install:
+  - set QTDIR=C:\Qt\5.5\mingw492_32
+  - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
+build_script:
+  - qmake Porcupine.pro
+  - mingw32-make
+
+#test_script:
+  #- In the future: test integrity of workflow creation
+ 

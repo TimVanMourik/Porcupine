@@ -1,0 +1,21 @@
+language: python
+sudo: required
+
+branches:
+  only:
+    - master
+    - setup_ci
+
+python:
+  - '3.6'
+
+before_install:
+- sudo apt-get update && sudo apt-get install -y --no-install-recommends build-essential
+- sudo add-apt-repository --yes ppa:beineri/opt-qt571-trusty
+- sudo apt-get update && sudo apt-get install -qq qt57-meta-full
+install:
+- source /opt/qt57/bin/qt57-env.sh
+
+script:
+- qmake
+- make
