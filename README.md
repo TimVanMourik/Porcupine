@@ -1,7 +1,6 @@
 # PORcupine Creates Ur PipelINE
 
 [![Build status](https://ci.appveyor.com/api/projects/status/2451r3j95fngau7r?svg=true)](https://ci.appveyor.com/project/lukassnoek/porcupine)
-
 [![Build Status](https://travis-ci.org/TimVanMourik/Porcupine.svg?branch=master)](https://travis-ci.org/TimVanMourik/Porcupine)
 
 
