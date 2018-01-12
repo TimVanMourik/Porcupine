@@ -2,6 +2,7 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/2451r3j95fngau7r?svg=true)](https://ci.appveyor.com/project/lukassnoek/porcupine)
 [![Build Status](https://travis-ci.org/TimVanMourik/Porcupine.svg?branch=master)](https://travis-ci.org/TimVanMourik/Porcupine)
+[![DOI](https://zenodo.org/badge/34963696.svg)](https://zenodo.org/badge/latestdoi/34963696)
 
 
 “PORcupine Creates Ur PipelINE, the worst recursive acronym with bad capitalisation and annoying use of slang.”
