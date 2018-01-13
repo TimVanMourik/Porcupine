@@ -100,6 +100,8 @@ private slots:
             );
     void pasteEdit(
             );
+    void deleteEdit(
+            );
     void zoomIn(
             );
     void zoomOut(
@@ -168,6 +170,7 @@ private:
     QAction* m_redoAct;
     QAction* m_cutAct;
     QAction* m_copyAct;
+    QAction* m_deleteAct;
     QAction* m_pasteAct;
     QAction* m_zoomInAct;
     QAction* m_zoomOutAct;

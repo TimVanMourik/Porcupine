@@ -471,6 +471,12 @@ void MainWindow::cutEdit(
     m_clipboard = m_nodeEditors[m_currentFileIndex]->getSelection(true);
 }
 
+void MainWindow::deleteEdit(
+        )
+{
+    m_nodeEditors[m_currentFileIndex]->deleteSelectedObject();
+}
+
 void MainWindow::copyEdit(
         )
 {
@@ -559,6 +565,7 @@ void MainWindow::createMenus()
     m_editMenu->addAction(m_cutAct);
     m_editMenu->addAction(m_copyAct);
     m_editMenu->addAction(m_pasteAct);
+    m_editMenu->addAction(m_deleteAct);
 
     m_viewMenu = menuBar()->addMenu(tr("View"));
     m_viewMenu->addAction(m_zoomInAct);
@@ -619,6 +626,11 @@ void MainWindow::createActions()
     m_cutAct->setShortcuts(QKeySequence::Cut);
     m_cutAct->setStatusTip(tr("Cut the current selection's contents to the clipboard"));
     connect(m_cutAct, SIGNAL(triggered()), this, SLOT(cutEdit()));
+
+    m_deleteAct = new QAction(tr("Delete"), this);
+    m_deleteAct->setShortcuts(QKeySequence::Delete);
+    m_deleteAct->setStatusTip(tr("Delete the currently selected object"));
+    connect(m_deleteAct, SIGNAL(triggered()), this, SLOT(deleteEdit()));
 
     m_copyAct = new QAction(tr("Copy"), this);
     m_copyAct->setShortcuts(QKeySequence::Copy);

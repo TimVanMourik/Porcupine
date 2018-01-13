@@ -261,35 +261,46 @@ void NodeEditor::keyPressEvent(
     QGraphicsView::keyPressEvent(_event);
     switch (_event->key())
     {
+    case Qt::Key_Backspace:
+    {
+        deleteSelectedObject();
+        break;
+    }
     case Qt::Key_Delete:
     {
-        foreach (QGraphicsItem* item, scene()->items())
-        {
-            if(item->isSelected())
-            {
-                if(item->type() == Node::Type)
-                {
-                    //remove node from list view
-                    if(m_treeModel)
-                    {
-                        m_treeModel->removeNode((const Node*) item);
-                    }
-                }
-//                else if(item->type() == SelectionBox::Type)
-//                {
-//                    m_selections.removeOne((SelectionBox*)item);
-//                }
-                delete item;
-                //if no break, program may crash when second deleted item was already deletted by first on cascade
-                break;
-            }
-        }
+        deleteSelectedObject();
         break;
     }
     default:
     {
         break;
     }
+    }
+}
+
+void NodeEditor::deleteSelectedObject(
+        )
+{
+    foreach (QGraphicsItem* item, scene()->items())
+    {
+        if(item->isSelected())
+        {
+            if(item->type() == Node::Type)
+            {
+                //remove node from list view
+                if(m_treeModel)
+                {
+                    m_treeModel->removeNode((const Node*) item);
+                }
+            }
+//                else if(item->type() == SelectionBox::Type)
+//                {
+//                    m_selections.removeOne((SelectionBox*)item);
+//                }
+            delete item;
+            //if no break, program may crash when second deleted item was already deletted by first on cascade
+            break;
+        }
     }
 }
 

@@ -77,6 +77,9 @@ public:
             QDataStream& _dataStream
             );
     //
+    void deleteSelectedObject(
+            );
+    //
     void loadFromJson(
             const QJsonObject& _json
             );
