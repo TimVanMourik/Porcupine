@@ -56,3 +56,4 @@ check out our [example gallery](../examples) for inspiration or check out our
 [documentation](../documentation) for more information on how to work with Porcupine. If you're interested in more background information of Porcupine, take a look at [this presentation](../assets/images/Porcupresentation.pdf)!
 
 **Beware!** On Mac, there is a chance that you can get a pop-up that Porcupine does not want to open straight away, depending on your security settings. Your Mac might not like apps that do not come straight out of the app store. You can eaily open Porcupine by going to 'System Preference' -> 'Security & Privacy' and click on 'Open Anyway'
+{: .notice--warning}
