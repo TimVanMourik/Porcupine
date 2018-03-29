@@ -20,4 +20,4 @@ Porcupine features interfaces to
 * NiPype https://github.com/nipy/nipype
 
 ## Web version
-Soon, Porcupine will move to the clouds! As a web application, it will be a **G**raphical **I**nterface for **R**eproducible **A**nalysis o**F** work**F**low **E**xperiments, giraffe!. Watch the progress in the repository (https://github.com/TimVanMourik/GiraffeTools) or the output on [www.giraffe.tools](www.giraffe.tools).
+Soon, Porcupine will move to the clouds! As a web application, it will be a **G**raphical **I**nterface for **R**eproducible **A**nalysis o**F** work**F**low **E**xperiments, giraffe. Watch the progress in the repository (https://github.com/TimVanMourik/GiraffeTools) or the output on [www.giraffe.tools](www.giraffe.tools).
