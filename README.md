@@ -18,3 +18,6 @@ After pulling this repository, it should readily compile with Qt Creator, provid
 Porcupine features interfaces to
 * My own fMRI analysis toolbox, including laminar fMRI https://github.com/TimVanMourik/OpenFmriAnalysis
 * NiPype https://github.com/nipy/nipype
+
+## Web version
+Soon, Porcupine will move to the clouds! As a web application, it will be a **G**raphical **I**nterface for **R**eproducible **A**nalysis o**F** work**F**low **E**xperiments, giraffe!. Watch the progress in the repository (https://github.com/TimVanMourik/GiraffeTools) or the output on [www.giraffe.tools](www.giraffe.tools).
