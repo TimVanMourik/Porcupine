@@ -5,6 +5,11 @@
 [![DOI](https://zenodo.org/badge/34963696.svg)](https://zenodo.org/badge/latestdoi/34963696)
 
 
+**This app has been superseded by a web version and is thus no longer under active development**
+
+Porcupine has moved to the clouds! As a web application, it will be a **G**raphical **I**nterface for **R**eproducible **A**nalysis o**F** work**F**low **E**xperiments, GiraffeTools. Read the introductory post on Medium [here](https://medium.com/@TimVanMourik/giraffetools-a-generic-online-workflow-editor-8e48e288a6c7) or check out the website: [https://giraffe.tools](https://giraffe.tools).
+
+
 “PORcupine Creates Ur PipelINE, the worst recursive acronym with bad capitalisation and annoying use of slang.”
 Please find all documentation, examples, and much more on https://timvanmourik.github.io/Porcupine
 
@@ -19,5 +24,3 @@ Porcupine features interfaces to
 * My own fMRI analysis toolbox, including laminar fMRI https://github.com/TimVanMourik/OpenFmriAnalysis
 * NiPype https://github.com/nipy/nipype
 
-## Web version
-Soon, Porcupine will move to the clouds! As a web application, it will be a **G**raphical **I**nterface for **R**eproducible **A**nalysis o**F** work**F**low **E**xperiments, giraffe. Watch the progress in the repository (https://github.com/TimVanMourik/GiraffeTools) or the output on [www.giraffe.tools](www.giraffe.tools).
