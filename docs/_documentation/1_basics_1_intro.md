@@ -17,8 +17,8 @@ split up in four "editors":
 
 1. the **workflow** editor
 2. the **node** editor
-3. the **code** editor
-4. the **parameter** editor.
+3. the **parameter** editor
+4. the **code** editor.
 
 <figure>
 	<a href="{{ site.url }}{{ site.baseurl }}/documentation/images/porcupine_windows.png"><img
