@@ -63,6 +63,10 @@ bool CodeEditor::isPresentInEditor(
 {
     foreach(const NodeTreeItem* item, _nodeList)
     {
+        if (item == nullptr) // Check for null pointer
+        {
+            continue;
+        }
         QJsonObject json = item->getJson();
         Argument title(json["title"].toObject());
         if(!title.getArgument(_language).isEmpty())
